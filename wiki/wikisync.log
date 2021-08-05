@@ -1,9 +1,9 @@
-2021-08-06 03:14:03,462 : INFO : iGEM_login : Already logged in.
-2021-08-06 03:14:03,474 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
-2021-08-06 03:14:03,475 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
-2021-08-06 03:14:03,475 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
-2021-08-06 03:14:03,480 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
-2021-08-06 03:14:03,480 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
-2021-08-06 03:14:03,480 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
-2021-08-06 03:14:03,480 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
-2021-08-06 03:14:03,481 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
+2021-08-06 03:16:37,615 : INFO : iGEM_login : Already logged in.
+2021-08-06 03:16:37,626 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
+2021-08-06 03:16:37,627 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
+2021-08-06 03:16:37,627 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
+2021-08-06 03:16:37,632 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
+2021-08-06 03:16:37,632 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
+2021-08-06 03:16:37,632 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
+2021-08-06 03:16:38,902 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/styleCSS&action=edit.
+2021-08-06 03:16:38,903 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
