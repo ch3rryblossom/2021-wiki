@@ -2,4 +2,12 @@ body {
     background-color: #3f56ce;
     color: white;
 }
+.container {
+    color: white;
+    font-family: Fixedsys;
+}
 
+@font-face {
+    font-family: 'Fixedsys';
+    src: url(../assets/fonts/FSEX300.ttf);
+}
