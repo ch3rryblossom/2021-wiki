@@ -4,6 +4,9 @@ assets:
     md5: 9de66fe4842edf59e46e15c90e686087
     upload_filename: T--IISER-Pune-India--fonts--FSEX300.ttf
 css:
+  css\SBcss\style.css:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
+    md5: 9236f7da19e2add4589d3d763f10a899
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -13,7 +16,10 @@ css:
 html:
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
-    md5: 3c220f1e5ca79ed22ce9bdb5fe708f43
+    md5: 25cdd2706206a56108e56b2d591b6f72
+  theming-kit.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/theming-kit
+    md5: 1f865fdbcc051f7a7f1b6b665428cb13
 js:
   js\main.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript
