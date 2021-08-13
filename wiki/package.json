@@ -1,0 +1,23 @@
+{
+  "name": "wiki-bootstrap-v5",
+  "version": "1.0.0",
+  "description": "Bootstrap-v5 and Sass for our wiki",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass scss:src/css/SBcss"
+  },
+  "keywords": [
+    "bootstrap-v5",
+    "sass",
+    "igem-wiki",
+    "IISERPune"
+  ],
+  "author": "ch3rryblossom",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  }
+}
