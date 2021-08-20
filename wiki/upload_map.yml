@@ -19,7 +19,7 @@ html:
     md5: 25cdd2706206a56108e56b2d591b6f72
   theming-kit.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/theming-kit
-    md5: 1f865fdbcc051f7a7f1b6b665428cb13
+    md5: c3359ae2facd34eaedf8209c5873023d
 js:
   js\main.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript

@@ -1,17 +1,15 @@
-2021-08-13 19:57:16,433 : INFO : iGEM_login : Already logged in.
-2021-08-13 19:57:16,447 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
-2021-08-13 19:57:16,461 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
-2021-08-13 19:57:16,462 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
-2021-08-13 19:57:16,462 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
-2021-08-13 19:57:16,462 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
-2021-08-13 19:57:17,792 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India&action=edit.
-2021-08-13 19:57:17,823 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-08-13 19:57:17,824 : INFO : iGEM_URL : /css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-08-13 19:57:17,825 : WARNING : iGEM_URL : src\assets\js\bootstrap.bundle.min.js is referenced in src\theming-kit.html but was not found.
-2021-08-13 19:57:17,825 : INFO : iGEM_URL : assets/js/bootstrap.bundle.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/assets/js/bootstrap-bundle-minJS?action=raw&ctype=text/javascript in theming-kit.html.
-2021-08-13 19:57:20,850 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/theming-kit&action=edit.
-2021-08-13 19:57:20,854 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
-2021-08-13 19:57:20,855 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
-2021-08-13 19:57:20,855 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
-2021-08-13 19:57:25,073 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/SBcss/styleCSS&action=edit.
-2021-08-13 19:57:25,073 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
+2021-08-20 22:43:46,074 : INFO : iGEM_login : Already logged in.
+2021-08-20 22:43:46,079 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
+2021-08-20 22:43:46,098 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
+2021-08-20 22:43:46,099 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
+2021-08-20 22:43:46,099 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
+2021-08-20 22:43:46,099 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
+2021-08-20 22:43:46,101 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
+2021-08-20 22:43:46,125 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-08-20 22:43:46,126 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-08-20 22:43:48,308 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/theming-kit&action=edit.
+2021-08-20 22:43:48,309 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
+2021-08-20 22:43:48,309 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
+2021-08-20 22:43:48,309 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
+2021-08-20 22:43:48,311 : INFO : build_and_upload : Contents of css\SBcss\style.css have been uploaded previously. Skipping.
+2021-08-20 22:43:48,311 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
