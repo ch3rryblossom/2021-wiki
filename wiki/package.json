@@ -4,7 +4,7 @@
   "description": "Bootstrap-v5 and Sass for our wiki",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass scss:src/css/SBcss"
+    "compile:sass": "sass --watch scss:src/css/SBcss"
   },
   "keywords": [
     "bootstrap-v5",
