@@ -3,10 +3,22 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf
     md5: 9de66fe4842edf59e46e15c90e686087
     upload_filename: T--IISER-Pune-India--fonts--FSEX300.ttf
+  assets\pngs\adb6862b5026e5fe00128d2997a48f13.png:
+    link_URL: https://2021.igem.org/wiki/images/0/0b/T--IISER-Pune-India--pngs--adb6862b5026e5fe00128d2997a48f13.png
+    md5: 96d4cca5600d39a069f503a9d4042cd3
+    upload_filename: T--IISER-Pune-India--pngs--adb6862b5026e5fe00128d2997a48f13.png
+  assets\svgs\SynBactory.svg:
+    link_URL: https://2021.igem.org/wiki/images/e/e3/T--IISER-Pune-India--svgs--SynBactory.svg
+    md5: 65d999139cafe645ca190b0deb1ca1c5
+    upload_filename: T--IISER-Pune-India--svgs--SynBactory.svg
+  assets\svgs\synbactory2.svg:
+    link_URL: https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg
+    md5: 737d922cb7a8711507202a329c1e9def
+    upload_filename: T--IISER-Pune-India--svgs--synbactory2.svg
 css:
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: 4da3765086ce78607bdc218265b895f0
+    md5: 5469101358fa769c564a89cf367e9c86
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -19,7 +31,7 @@ html:
     md5: 27688d0e720572e59694a1ce88c106db
   SB.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/SB
-    md5: 9ac54171f8866401761b6b8704c40f49
+    md5: 9c3b40f93b82d171dacac6c16c77ec42
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: ec302b140de2bb526cdbfd54cf9c0255
