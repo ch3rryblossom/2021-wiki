@@ -1,6 +1,7 @@
 @use "../custom" as *;
 
 .menu{
+	padding-top: 10px;
 	background: linear-gradient(to bottom, rgba($primary, 0.9), rgba($secondary, 0.9));
 
 	li {

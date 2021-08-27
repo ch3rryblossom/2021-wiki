@@ -11117,6 +11117,7 @@ textarea.form-control-lg {
   }
 }
 .menu {
+  padding-top: 10px;
   background: linear-gradient(to bottom, rgba(39, 102, 141, 0.9), rgba(40, 199, 155, 0.9));
 }
 .menu li {

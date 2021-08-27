@@ -22,7 +22,7 @@ assets:
 css:
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: 18ecdf7a0227890fab53265cf04015c2
+    md5: e9ac05945f738ec50a748b8569f42535
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
