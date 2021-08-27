@@ -1,0 +1,34 @@
+@use "../custom" as *;
+
+.header-section-wrapper{
+	.header-section{
+		position:relative;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 400px;
+		padding: 100px 20vw;
+	}
+	.section-1{
+		background-color: $light-green;
+	}
+}
+
+.spacer{
+	aspect-ratio: 960/300;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.layer1{
+	background-image: url('/src/assets/svgs/layered-waves-haikei-1.svg');
+}
+
+.view-border{
+	border-style: solid;
+	border-color: $purple-dark;
+	border-width: 1px;
+}

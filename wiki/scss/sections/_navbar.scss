@@ -1,7 +1,7 @@
 @use "../custom" as *;
 
 .menu{
-	background: linear-gradient(to right, rgba($primary, 0.9), rgba($secondary, 0.9));
+	background: linear-gradient(to bottom, rgba($primary, 0.9), rgba($secondary, 0.9));
 
 	li {
 		padding: 0 0.7rem;
@@ -20,7 +20,7 @@
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
-	.navbar .nav-item:hover .nav-link{   }
+	// .navbar .nav-item:hover .nav-link{   }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }	
