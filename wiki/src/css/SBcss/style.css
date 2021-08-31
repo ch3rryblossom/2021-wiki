@@ -11147,6 +11147,9 @@ textarea.form-control-lg {
   }
 }
 /* ============ desktop view .end// ============ */
+.header-section-wrapper {
+  background-color: #212529;
+}
 .header-section-wrapper .header-section {
   position: relative;
   display: flex;
@@ -11161,7 +11164,7 @@ textarea.form-control-lg {
 }
 
 .spacer {
-  aspect-ratio: 960/300;
+  aspect-ratio: 900/100;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -11169,13 +11172,19 @@ textarea.form-control-lg {
 }
 
 .layer1 {
-  background-image: url("../../assets/svgs/layered-waves-haikei-1.svg");
+  background-image: url("../../assets/svgs/layered-waves-haikei-2.svg");
 }
 
 .view-border {
   border-style: solid;
   border-color: #6829df;
   border-width: 1px;
+}
+
+.view-border-2 {
+  border-style: solid;
+  border-color: #fcf462;
+  border-width: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 @use "../custom" as *;
 
 .header-section-wrapper{
+	background-color: $gray-900;
 	.header-section{
 		position:relative;
 		display:flex;
@@ -16,7 +17,7 @@
 }
 
 .spacer{
-	aspect-ratio: 960/300;
+	aspect-ratio: 900/100;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -24,11 +25,17 @@
 }
 
 .layer1{
-	background-image: url('../../assets/svgs/layered-waves-haikei-1.svg');
+	background-image: url('../../assets/svgs/layered-waves-haikei-2.svg');
 }
 
 .view-border{
 	border-style: solid;
 	border-color: $purple-dark;
 	border-width: 1px;
+}
+
+.view-border-2{
+	border-style: solid;
+	border-color: $light-yellow;
+	border-width: 3px;
 }

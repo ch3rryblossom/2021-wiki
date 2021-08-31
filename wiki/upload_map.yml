@@ -15,6 +15,10 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/f/fa/T--IISER-Pune-India--svgs--layered-waves-haikei-1.svg
     md5: 720a890035686d279ae9d49925f44d19
     upload_filename: T--IISER-Pune-India--svgs--layered-waves-haikei-1.svg
+  assets\svgs\layered-waves-haikei-2.svg:
+    link_URL: https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg
+    md5: ff942ebcf4c2390d26ec43808f60cf99
+    upload_filename: T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg
   assets\svgs\synbactory2.svg:
     link_URL: https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg
     md5: 737d922cb7a8711507202a329c1e9def
@@ -22,7 +26,7 @@ assets:
 css:
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: e9ac05945f738ec50a748b8569f42535
+    md5: 0da68ec0f97b17ed9fc6861fe4fea5df
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -35,13 +39,13 @@ html:
     md5: 27688d0e720572e59694a1ce88c106db
   SB.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/SB
-    md5: 6eab298ceb799eb02548971cce369829
+    md5: daa60c97302a5f2fdaf18c566473d0c6
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: ec302b140de2bb526cdbfd54cf9c0255
   theming-kit.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/theming-kit
-    md5: 4dfb67c2f85247973a03b55fad3f7a71
+    md5: f6ffdd2c777593e6fa1d90f8ac10a8a7
 js:
   js\bootstrap-bundle.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript
