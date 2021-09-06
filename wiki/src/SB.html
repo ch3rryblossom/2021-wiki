@@ -7,71 +7,7 @@
 	<link rel="stylesheet" href="css/igem-reset.css">
 	<link rel="stylesheet" href="css/SBcss/style.css">
 	<link rel="stylesheet" href="css/styleSB.css">
-	<!-- back to top button -->
-	<style>
-		body {
-		  font-family: Arial, Helvetica, sans-serif;
-		  font-size: 20px;
-		}
-		
-		#myBtn {
-		  display: none;
-		  position: fixed;
-		  bottom: 20px;
-		  right: 30px;
-		  left: 1150px;
-		  z-index: 99;
-		  font-size: 18px;
-		  border: none;
-		  outline: none;
-		  background-color: rgba(0, 255, 234, 0.658);
-		  color: white;
-		  cursor: pointer;
-		  padding: 15px;
-		  border-radius: 4px;
-		  width: 60px;
-		}
-		
-		#myBtn:hover {
-		  background-color: #555;
-		}
-	</style>
-		<!--scroll indicator  -->
-	<style>
-		.header {
-			position: fixed;
-			top: 25%;
-			left: 20px;
-			z-index: 0.5;
-			width: 3px;
-			height: 51.4%;
-			background-color: #f1f1f1;
-		  }
-	</style>
-		
-	<style>
-			body {
-				margin: 0;
-			}
-		
-			.text {
-				font-size: 80px;
-				color: rgba(55, 0, 128, 0.774);
-				text-align: center;
-				line-height: 3em;
-			}
-		
-			.line {
-				background: rgba(160, 28, 248, 0.829);
-				height: 0%;
-				border-radius: 4px;
-				width: 3px;
-				z-index: 1;
-				position: fixed;
-				top: 25%;
-				left: 20px;
-			}
-	</style>
+
 </head>
 <body>
 	<!-- navbar section -->
@@ -210,63 +146,19 @@
 	</div>
 	</div>
 </div>
-<!-- scroll indicator script -->
+<!-- scroll indicator -->
 <div class="header"></div>
-
-
 <div class="line" id="scrollIndicator"></div>
 
-<script type="text/javascript">
-	window.addEventListener('scroll',
-			moveScrollIndicator);
-
-	const scrollIndicatorElt =
-		document.getElementById('scrollIndicator');
-
-	const maxHeight =
-		window.document.body.scrollHeight
-		- window.innerHeight;
-
-	function moveScrollIndicator(e) {
-		const percentage = 
-			((window.scrollY) / maxHeight) * 50;
-
-		scrollIndicatorElt.style.height
-			= percentage + '%';
-	}
-</script>
-
-
-<!-- back to top button script -->
+<!-- back to top button -->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 470 || document.documentElement.scrollTop > 470) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 450;
-  document.documentElement.scrollTop = 0;
-}
-</script>
 
 <div class="row">
 	<div class="col-6 view-border">Footer</div>
 	<div class="col-6 view-border">Section</div>
 </div>
 	<script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+
 </body>
 </html>

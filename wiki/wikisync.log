@@ -1,24 +1,26 @@
-2021-09-01 02:30:50,909 : INFO : iGEM_login : Already logged in.
-2021-09-01 02:30:50,922 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
-2021-09-01 02:30:52,575 : INFO : iGEM_upload_file : Uploaded T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg to https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg.
-2021-09-01 02:30:52,588 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
-2021-09-01 02:30:52,589 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
-2021-09-01 02:30:52,589 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
-2021-09-01 02:30:52,590 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
-2021-09-01 02:30:52,590 : INFO : iGEM_URL : SB.html was changed to https://2021.igem.org/Team:IISER-Pune-India/SB in index.html.
-2021-09-01 02:30:52,593 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
-2021-09-01 02:30:52,600 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in SB.html.
-2021-09-01 02:30:52,601 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in SB.html.
-2021-09-01 02:30:52,601 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in SB.html.
-2021-09-01 02:30:52,603 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in SB.html.
-2021-09-01 02:30:53,896 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/SB&action=edit.
-2021-09-01 02:30:53,951 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-09-01 02:30:53,951 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-09-01 02:30:55,586 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/theming-kit&action=edit.
-2021-09-01 02:30:55,587 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
-2021-09-01 02:30:55,588 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
-2021-09-01 02:30:55,588 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
-2021-09-01 02:30:55,590 : INFO : iGEM_URL : ../../assets/svgs/layered-waves-haikei-2.svg was changed to https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg in css\SBcss\style.css.
-2021-09-01 02:31:00,542 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/SBcss/styleCSS&action=edit.
-2021-09-01 02:31:00,548 : INFO : build_and_upload : Contents of js\bootstrap-bundle.js have been uploaded previously. Skipping.
-2021-09-01 02:31:00,549 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
+2021-09-06 23:21:26,758 : INFO : iGEM_login : Already logged in.
+2021-09-06 23:21:26,797 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
+2021-09-06 23:21:26,809 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
+2021-09-06 23:21:26,810 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
+2021-09-06 23:21:26,810 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
+2021-09-06 23:21:26,811 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
+2021-09-06 23:21:26,811 : INFO : iGEM_URL : SB.html was changed to https://2021.igem.org/Team:IISER-Pune-India/SB in index.html.
+2021-09-06 23:21:26,813 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
+2021-09-06 23:21:26,823 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in SB.html.
+2021-09-06 23:21:26,824 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in SB.html.
+2021-09-06 23:21:26,824 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in SB.html.
+2021-09-06 23:21:26,825 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in SB.html.
+2021-09-06 23:21:26,825 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in SB.html.
+2021-09-06 23:21:26,828 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in SB.html.
+2021-09-06 23:21:28,108 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/SB&action=edit.
+2021-09-06 23:21:28,136 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-09-06 23:21:28,136 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-09-06 23:21:28,154 : INFO : build_and_upload : Contents of theming-kit.html have been uploaded previously. Skipping.
+2021-09-06 23:21:28,156 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
+2021-09-06 23:21:28,156 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
+2021-09-06 23:21:29,410 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/styleCSS&action=edit.
+2021-09-06 23:21:30,675 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/styleSBCSS&action=edit.
+2021-09-06 23:21:30,676 : INFO : iGEM_URL : ../../assets/svgs/layered-waves-haikei-2.svg was changed to https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg in css\SBcss\style.css.
+2021-09-06 23:21:35,517 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/SBcss/styleCSS&action=edit.
+2021-09-06 23:21:35,519 : INFO : build_and_upload : Contents of js\bootstrap-bundle.js have been uploaded previously. Skipping.
+2021-09-06 23:21:36,775 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/js/mainJS&action=edit.

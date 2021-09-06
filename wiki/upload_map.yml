@@ -26,20 +26,23 @@ assets:
 css:
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: 0da68ec0f97b17ed9fc6861fe4fea5df
+    md5: 91135790e678cc515049ad0ef390a123
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
   css\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css
-    md5: bcd0d497cdf3bb644b236868a692112e
+    md5: feea2f9e8ca6b96becf5268a5030736b
+  css\styleSB.css:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
+    md5: 3125e5505480d7629869c0504302bf9e
 html:
   SB-index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: 27688d0e720572e59694a1ce88c106db
   SB.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/SB
-    md5: daa60c97302a5f2fdaf18c566473d0c6
+    md5: 808ad24ea6dcc7dce39c220f910ba806
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: ec302b140de2bb526cdbfd54cf9c0255
@@ -52,4 +55,4 @@ js:
     md5: 0aa8d64e726c4a57adb5c88f9115996b
   js\main.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript
-    md5: 24c300569c38e06594a115d7ede77789
+    md5: d54d239a91184f7c9e1bccae0e20b065
