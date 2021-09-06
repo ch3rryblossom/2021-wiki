@@ -1,0 +1,12 @@
+.navbar {
+  margin-top: 16px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav-link {
+  text-decoration: none !important;
+}
