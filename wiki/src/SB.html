@@ -13,7 +13,7 @@
 		  font-family: Arial, Helvetica, sans-serif;
 		  font-size: 20px;
 		}
-		
+
 		#myBtn {
 		  display: none;
 		  position: fixed;
@@ -31,7 +31,7 @@
 		  border-radius: 4px;
 		  width: 60px;
 		}
-		
+
 		#myBtn:hover {
 		  background-color: #555;
 		}
@@ -48,19 +48,19 @@
 			background-color: #f1f1f1;
 		  }
 	</style>
-		
+
 	<style>
 			body {
 				margin: 0;
 			}
-		
+
 			.text {
 				font-size: 80px;
 				color: rgba(55, 0, 128, 0.774);
 				text-align: center;
 				line-height: 3em;
 			}
-		
+
 			.line {
 				background: rgba(160, 28, 248, 0.829);
 				height: 0%;
@@ -77,10 +77,12 @@
 	<!-- navbar section -->
 
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
-		<div class="container">
+		<div class="nav-container">
 		  <a class="navbar-brand" href="#">
 			<img src="assets/svgs/synbactory2.svg">
 		  </a>
+			<div class="center-expand">
+			</div>
 		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -228,7 +230,7 @@
 		- window.innerHeight;
 
 	function moveScrollIndicator(e) {
-		const percentage = 
+		const percentage =
 			((window.scrollY) / maxHeight) * 50;
 
 		scrollIndicatorElt.style.height
