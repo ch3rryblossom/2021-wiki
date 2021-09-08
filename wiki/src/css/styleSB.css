@@ -34,7 +34,7 @@
 #myBtn:hover {
 		  background-color: #555;
 		}
-/* <!--scroll indicator  --> */
+		/* <!--scroll indicator  --> */
 	
 	.header {
 			position: fixed;
@@ -42,7 +42,7 @@
 			left: 20px;
 			z-index: 0.5;
 			width: 3px;
-			height: 50.85%;
+			height: 51.4%;
 			background-color: #f1f1f1;
 		  }
 		
@@ -63,49 +63,3 @@
 				top: 25%;
 				left: 20px;
 			}
-
-.nav-container {
-  display: flex;
-  width: calc(100% - 20px);
-  padding-left: 10px;
-  padding-right: 10px
-}
-
-.center-expand {
-  flex-grow: 1
-}
-
-.nav-link:hover, .nav-link:focus {
-  color: #1f5271;
-  background-color: #FFFFFFaa;
-}
-
-.nav-link {
-  border-radius: 4px;
-}
-
-.dropdown-menu {
-  background-color: #FFFFFFf0;
-}
-
-.dropdown-item {
-  background-color: inherit;
-  width: 100%;
-}
-
-.dropdown-item:hover {
-  background-color: #FFFFFFee;
-}
-
-.dropdown-menu>li {
-  padding: 0
-}
-
-.navbar-light .navbar-toggler {
-    color: rgba(255, 255, 255, 0.55);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
