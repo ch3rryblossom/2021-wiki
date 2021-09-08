@@ -18,7 +18,7 @@
 		  position: fixed;
 		  bottom: 20px;
 		  right: 30px;
-		  left: 1150px;
+		  left: 95%;
 		  z-index: 99;
 		  font-size: 18px;
 		  border: none;
@@ -42,7 +42,7 @@
 			left: 20px;
 			z-index: 0.5;
 			width: 3px;
-			height: 51.4%;
+			height: 50%;
 			background-color: #f1f1f1;
 		  }
 		
