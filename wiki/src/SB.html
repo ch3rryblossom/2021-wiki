@@ -111,7 +111,19 @@
 	<script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-		var backtotopheight=500
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+	<script>
+		var backtotopheight=pageheight/5 + 20
 	</script>
 
 </body>
