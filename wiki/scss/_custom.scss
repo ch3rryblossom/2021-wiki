@@ -50,6 +50,9 @@ $navbar-light-hover-color:          rgba($dark-green, .7) !important;
 $dropdown-link-hover-color:         shade-color($dark-yellow, 10%);
 $dropdown-link-hover-bg:            $dark-yellow;
 
+// BOOTSTRAP GRID GUTTERS
+$grid-gutter-width:           0rem;
+
 // IMPORT BOOTSTRAP 5
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

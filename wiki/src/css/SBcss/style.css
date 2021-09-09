@@ -622,8 +622,8 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: var(--bs-gutter-x, 0rem);
+  padding-left: var(--bs-gutter-x, 0rem);
   margin-right: auto;
   margin-left: auto;
 }
@@ -654,7 +654,7 @@ progress {
   }
 }
 .row {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 0rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -3835,6 +3835,7 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1rem;
   color: #27668d;
+  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4518,7 +4519,7 @@ textarea.form-control-lg {
 }
 
 .card-group > .card {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
 }
 @media (min-width: 576px) {
   .card-group {
@@ -5332,7 +5333,7 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 .toast-container > :not(:last-child) {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
 }
 
 .toast-header {
