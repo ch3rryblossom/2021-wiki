@@ -53,20 +53,20 @@
 #myBtn {
 		  display: none;
 		  position: fixed;
-		  bottom: 4.6vh;
+		  bottom: 6vh;
 		  right: 7.3vw;
-		  left: 92.8vw;
+		  left: 92.7vw;
 		  z-index: 99;
-		  font-size: 18px;
+		  font-size: 3vh;
 		  border: none;
 		  outline: none;
 		  background-color: rgba(0, 255, 234, 0.658);
 		  color: white;
 		  cursor: pointer;
-		  padding: 15px;
+		  padding: 3vh 2vh;
 		  border-radius: 4px;
 		  width: 4.6vw;
-		  height: 4.4vw;
+		  height: 10vh;
 		}
 		
 #myBtn:hover {
