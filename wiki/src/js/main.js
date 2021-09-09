@@ -53,7 +53,7 @@ function topFunction() {
 
 	function moveScrollIndicator(e) {
 		const percentage =
-			((window.scrollY) / maxHeight) * 50;
+			((window.scrollY) / (pageheight - screenheight))* 50;
 
 		scrollIndicatorElt.style.height
 			= percentage + '%';
