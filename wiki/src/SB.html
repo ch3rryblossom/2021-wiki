@@ -55,26 +55,24 @@
 
 	<!-- HEADER SECTION -->
 <div class="header-section-wrapper">
-		<!-- top button -->
-	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	<section class="header-section section-1">
 		<h1>Section 1</h1>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quod aliquam sint velit a natus vel, ipsum dicta aut similique est cupiditate perferendis, aliquid ipsa, repudiandae nostrum non sunt minima?</p>
 	</section>
-	<div class="spacer layer1 view-border"></div>
-
+	<div class="spacer layer1 view-border-2"></div>
+	<div class="container-fluid view-border-2">
 	<div class="row">
 
 	<!-- left-bar -->
-	<div class="col-3 d-none d-lg-block view-border-2">
+	<div class="col-3 d-none d-md-block d-xl-block d-xxl-block g-0">
 		<div class="row">
-			<div class="col-8 view-border-2">
+			<div class="col-8 offset-4 view-border">
 				<!-- bookmarks -->bookmarks
 			</div>
 		</div>
 	</div>
 	<!-- CONTENT -->
-	<div class="col-lg-auto view-border-2">
+	<div class="col-12 col-md-9 g-0">
 	<section class="header-section view-border">
 		<h1>Section 2</h1>
 		<p>Qui accusamus hic nihil nobis officiis laborum veritatis molestiae possimus dolor, minima tempore voluptate culpa quisquam voluptatem. Ratione, autem quis suscipit laborum natus, fugit, labore doloribus eum voluptates corporis neque?</p>
@@ -93,13 +91,14 @@
 	</section>
 	</div>
 	</div>
+	</div>
 </div>
 <!-- scroll indicator -->
 <div class="header"></div>
 <div class="line" id="scrollIndicator"></div>
 
 <!-- back to top button -->
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<img src="assets/svgs/arrow-up-square-fill.svg" onclick="topFunction()" id="myBtn" title="Go to top" width="30" height="30">
 
 <div class="row">
 	<div class="col-6 view-border">Footer</div>
@@ -120,7 +119,7 @@
                        		   html.clientHeight, html.scrollHeight, html.offsetHeight );
 	</script>
 	<script>
-		var backtotopheight=pageheight/5 + 20
+		var backtotopheight=pageheight/4.65
 	</script>
 
 </body>
