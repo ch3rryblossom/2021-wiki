@@ -1,0 +1,8 @@
+.body-of-text {
+    margin-left: 10;
+    padding-left: 10;
+}
+ol.a {
+    list-style-position: outside;
+    padding-left: 50;
+  }
