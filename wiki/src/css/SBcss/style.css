@@ -11163,6 +11163,13 @@ textarea.form-control-lg {
   margin-top: 16px;
   background-color: #28c79b;
 }
+.header-section-wrapper .leftbarsec {
+  background: linear-gradient(to bottom, #212529, #313233);
+}
+.header-section-wrapper .contentsec {
+  background-color: #212529;
+  box-shadow: #272626 -12px 0px 5px -2px;
+}
 
 .spacer {
   aspect-ratio: 900/100;

@@ -15,8 +15,19 @@
 		margin-top: 16px;
 		background-color: $light-green;
 	}
+	.leftbarsec{
+		background: linear-gradient(to bottom, #212529, #313233);
+	}
+	.contentsec{
+		background-color: #212529;
+		box-shadow: rgb(39, 38, 38) -12px 0px 5px -2px;
+	}
 }
-
+// $gray-600: #6c757d;
+// $gray-700: #495057;
+// $gray-800: #343a40;
+// $gray-900: #212529;
+// $black:    #000
 .spacer{
 	aspect-ratio: 900/100;
 	width: 100%;
