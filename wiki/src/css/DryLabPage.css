@@ -1,6 +1,7 @@
 .body-of-text {
-    margin-left: 10;
+    margin-left: -200;
     padding-left: 10;
+    margin-right: -200;
 }
 ol.a {
     list-style-position: outside;
