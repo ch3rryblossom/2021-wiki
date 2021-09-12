@@ -7,8 +7,11 @@
 	<link rel="stylesheet" href="css/igem-reset.css">
 	<link rel="stylesheet" href="css/SBcss/style.css">
 	<link rel="stylesheet" href="css/styleSB.css">
-
+	<link rel="stylesheet" href="css/DryLabPage.css">
 </head>
+
+
+
 <body>
 	<!-- NAVBAR SECTION -->
 
@@ -121,15 +124,86 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
 	<!-- CONTENT -->
 	<div class="col-12 col-md-9 g-0">
 	<section class="header-section view-border contentsec">
-		<h1>Section 2</h1>
-		<p>Qui accusamus hic nihil nobis officiis laborum veritatis molestiae possimus dolor, minima tempore voluptate culpa quisquam voluptatem. Ratione, autem quis suscipit laborum natus, fugit, labore doloribus eum voluptates corporis neque?</p>
+		<h1>Introduction</h1>
+		<section class="body-of-text">
+			<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+		</section>
 	</section>
 	<section class="header-section view-border">
-		<h1>Section 3</h1>
-		<p>In, quo veniam accusamus ea, accusantium repellat non reprehenderit ex architecto incidunt quas cupiditate assumenda fugiat sapiente vero molestias doloremque nostrum error sint nulla dolore illum nobis nemo? Saepe, praesentium.</p>
+		<h1>Modelling Cyanobacteria for optimum sucrose production</h1>
+		<section class="body-of-text">
+			<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+			<h2 class="h3"><strong>Assumptions:</strong></h2>
+			<ol class="a">
+				<li style="padding-left:1em;">sps and spp genes are a part of the UTEX 2973 Genome even though they weren’t part of the model *insert spp and sps reaction equations* </li>
+				<li style="padding-left:1em;">cscB exports are of constant efficiency </li>
+				<li style="padding-left:1em;">FBA is a steady-state analysis therefore the growth phase cannot be simulated (check <a href="Coculture.html">co-culture </a>for more information on this) </li>
+				<li style="padding-left:1em;">Coupling biomass and sucrose accumulation and restraining cscB export to less than 100% simulates salt stress </li>
+			</ol>
+			<br>
+			<h2 class="h3"><strong>Results: </strong></h2>
+			<ul class="b">
+				<li style="padding-left:1em;">Upon adding “SPP”, “SPS” and “cscB” and running FBA with an objective to maximise growth rate we obtained a maximum growth rate of <strong>0.3033 h-1</strong> and a sucrose production and transport flux of <strong>0</strong>. This value is very similar to the experimental growth rate of <strong>0.33 ± 0.05 h</strong> (paper insert) , which implies confidence in the model we’re using. </li>
+				<li style="padding-left:1em;">For the following conditions upon performing MoMA for optimised sucrose production we obtained a growth rate of <strong>0.2012 h−1</strong>  and a sucrose output flux of <strong>0.3079 mmol/gDW/h</strong>. </li>
+				<ul class="d">
+					<li style="padding-left:1em;">Conditions:</li>
+					<ul class="c">
+						<li style="padding-left:1em;">Salt stress of <strong>150mM</strong> simulated by coupling sucrose accumulation and biomass production </li>
+						<li style="padding-left:1em;">CO2 uptake rate of <strong>-12.2 mmol/gDW/h</strong> <a href="#">[27]</a> </li>
+						<li style="padding-left:1em;">cscB efficiency of <strong>90%</strong> <a href="#">[12]</a> </li>
+					</ul>
+				</ul>
+			</ul>
+			<br>
+			<strong>Upon performing MoMA for a range of values of CO2 uptakes and cscB efficiencies the following result was obtained:</strong>
+			<br><br><br><br>
+			<h2 class="h2"> <strong>Biomass vs CO2</strong></h2>
+			<br>
+			<img src="assets/graphs/Biomass vs CO_2.jpg" alt="Biomass vs CO_2 graph for different constant cscB efficiency values and a constant salt stress of 150mM. A linear pattern is observed" width=800>
+			<section class="image-footer">
+				<p> Fig 1: Relationship between Growth rate and CO2 uptake rates when run at a salt conc. 150mM under varying cscB efficiencies</p>
+			</section>
+			<p><strong>Observations: </strong></p>
+			<ol class="a">
+				<li style="padding-left:1em;">Biomass production rates decrease with decreasing CO2 uptake rates for a constant cscB efficiency </li>
+				<li style="padding-left:1em;">Biomass increases for a decreasing cscB efficiency at a given CO2 intake value. </li>
+				<li style="padding-left:1em;">The linear nature of the graph is due to the fact that FBA is generally a linear model and not a non-linear model. The assumption that cscB has a constant efficiency is also a contributing factor </li>
+			</ol>
+			<p><strong> Inference: </strong> </p>
+			<p style="padding-left: 40px;"> Carbon flux through the biomass reaction decreases as the efficiency of cscB increases. Since the objective function is to maximise sucrose production we can safely say cscB acts as a sucrose sink and therefore increases flux through sucrose production reaction at higher efficiencies.</p>
+			<br><br><br>
+			<h2 class="h2"> <strong>Biomass vs Sucrose</strong></h2>
+			<br>
+			<img src="assets/Graphs/Biomass vs Sucrose.jpg" alt="Biomass vs Sucrose graph for different CO_2 uptake rates. We observe a linear pattern yet again where sucrose production increases with decrease in growth rates" width=800>
+			<section class="image-footer"> 
+				<p>Fig 2: Relationship between sucrose production and growth rate under a varying CO2 uptake rates for a salt concentration of 150mM</p>
+			</section>
+			<p><strong>Observations: </strong></p>
+			<ol class="a">
+				<li style="padding-left:1em;">Sucrose production rates decrease with increasing biomass production rates </li>
+				<li style="padding-left:1em;">Both increase with increase in CO2 uptake </li>
+				<li style="padding-left:1em;">The linear nature is again, due to the linear nature of FBA and the fact that both of them share the same carbon source i.e. CO2 </li>
+			</ol>
+			<p><strong>Inference: </strong></p>
+			<p style="padding-left: 40px;">Since the objective function is sucrose production and both biomass and sucrose share the same carbon source one can easily say they’ll be inversely proportional. Therefore, our aim is to direct carbon flux through both the reactions in a fixed ratio such that the organism lives comfortably and produces ample amounts of sucrose. </p>
+			<br><br><br>
+			<h2 class="h2"> <strong>Sucrose production</strong></h2>
+			<p>This is a graphical representation of all the results and relations we have obtained from our attempts till now. We have eliminated all the metabolic states that do not agree with our MoMA results. The colour bar shows the sucrose production fluxes.</p>
+			<p>Observations for this are similar to the previous ones. This just helps us identify the region of conditions that we should be trying to replicate in the lab. Clearly sucrose production is maximum in the region with high cscB efficiency and high CO2 uptake rates.</p>
+			<br>
+			<img src="assets/Graphs/3 Variables.jpg" alt="A graph respresting varaition of sucrose production with increase in growth rates, CO_2 Uptake rates and cscB efficieny values" width=800>
+			<section class="image-footer">
+				<p>Fig 9: A graph showing the production of sucrose for varying CO2 uptake rates and cscB efficiencies <br> Note - the colour bar on the right shows the mmol/gDW/h values of sucrose</p>
+			</section>
+			<p>As you can see from the graph sucrose production is maximum when there is a higher intake of carbon dioxide (source) and a higher cscB efficiency (sink). Ideally we would be trying to re-create the above mentioned conditions for enhanced production of sucrose whilst maintaining a significant fraction of maximum growth rates, but amplifying something that is already at 90% efficiency (cscB) is hard and to some extend unnecessary. Therefore we went a step ahead to find out other possible ways to increase sucrose production without losing much growth rates.</p>
+		</section>
 	</section>
 	<section class="header-section view-border">
 		<h1>Section 4</h1>
@@ -143,6 +217,9 @@
 	</div>
 	</div>
 </div>
+
+
+
 <!-- scroll indicator -->
 <div class="header"></div>
 <div class="line" id="scrollIndicator"></div>

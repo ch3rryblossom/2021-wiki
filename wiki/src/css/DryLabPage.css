@@ -6,4 +6,31 @@
 ol.a {
     list-style-position: outside;
     padding-left: 50;
-  }
+}
+ul.b {
+    list-style-type: disc;
+    padding-left: 50;
+    list-style-position: outside;
+}
+ul.c{
+    list-style-type: circle;
+    padding-left: 50;
+    list-style-position: outside;
+}
+ul.d{
+    list-style-type: square;
+    padding-left: 50;
+    list-style-position: outside;
+}
+.h2{
+    font-size: 30;
+}
+.image-footer{
+    padding-top: 20px;
+    margin-left: auto;
+    font-style: italic;
+    font-size: small;
+}
+.h3{
+    font-size: 20;
+}
