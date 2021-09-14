@@ -1,4 +1,16 @@
 assets:
+  assets\Graphs\3 Variables.jpg:
+    link_URL: https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--3_Variables.jpg
+    md5: 28bb4d02fe10fc1e85445e9eb62fd0de
+    upload_filename: T--IISER-Pune-India--Graphs--3 Variables.jpg
+  assets\Graphs\Biomass vs CO_2.jpg:
+    link_URL: https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Biomass_vs_CO_2.jpg
+    md5: 64700f4ab8b0f5adc1539700af6b92c7
+    upload_filename: T--IISER-Pune-India--Graphs--Biomass vs CO_2.jpg
+  assets\Graphs\Biomass vs Sucrose.jpg:
+    link_URL: https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Graphs--Biomass_vs_Sucrose.jpg
+    md5: d032d46f23d50c726b8d8198a67a93af
+    upload_filename: T--IISER-Pune-India--Graphs--Biomass vs Sucrose.jpg
   assets\fonts\FSEX300.ttf:
     link_URL: https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf
     md5: 9de66fe4842edf59e46e15c90e686087
@@ -30,7 +42,7 @@ assets:
 css:
   css\DryLabPage.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css
-    md5: a60ee07a06bbad0a223ecba4f0bbff6f
+    md5: 189fd8fcd45ce1bed5cbbe3131146e86
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
     md5: aacbec19c7ddd65f9c3ec19c4dbcb438
@@ -56,6 +68,9 @@ html:
   EColi.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
     md5: 55c1c2290afb8d393e95e1eabc4c56a9
+  Model.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/Model
+    md5: 0f73130b7538e66e9dd7b8c6da13a755
   SB-index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: 27688d0e720572e59694a1ce88c106db
