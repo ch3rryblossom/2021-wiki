@@ -1,89 +1,86 @@
-2021-09-15 03:15:45,405 : INFO : iGEM_login : Already logged in.
-2021-09-15 03:15:45,407 : ERROR : cache_files : .DS_Store has an unsupported file extension. Skipping.
-2021-09-15 03:15:45,408 : ERROR : cache_files : assets\.DS_Store has an unsupported file extension. Skipping.
-2021-09-15 03:15:45,420 : ERROR : cache_files : assets\Graphs\.DS_Store has an unsupported file extension. Skipping.
-2021-09-15 03:15:45,478 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
-2021-09-15 03:15:47,681 : INFO : iGEM_upload_file : Uploaded T--IISER-Pune-India--Graphs--3 Variables.jpg to https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--3_Variables.jpg.
-2021-09-15 03:15:49,808 : INFO : iGEM_upload_file : Uploaded T--IISER-Pune-India--Graphs--Biomass vs CO_2.jpg to https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Biomass_vs_CO_2.jpg.
-2021-09-15 03:15:51,648 : INFO : iGEM_upload_file : Uploaded T--IISER-Pune-India--Graphs--Biomass vs Sucrose.jpg to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Graphs--Biomass_vs_Sucrose.jpg.
-2021-09-15 03:15:51,674 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Coculture.html.
-2021-09-15 03:15:51,675 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Coculture.html.
-2021-09-15 03:15:51,675 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Coculture.html.
-2021-09-15 03:15:51,676 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Coculture.html.
-2021-09-15 03:15:51,676 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Coculture.html.
-2021-09-15 03:15:51,677 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in Coculture.html.
-2021-09-15 03:15:51,678 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Coculture.html.
-2021-09-15 03:15:51,678 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Coculture.html.
-2021-09-15 03:15:51,678 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Coculture.html.
-2021-09-15 03:15:51,682 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Coculture.html.
-2021-09-15 03:15:51,682 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Coculture.html.
-2021-09-15 03:15:51,689 : INFO : build_and_upload : Contents of Coculture.html have been uploaded previously. Skipping.
-2021-09-15 03:15:51,689 : ERROR : build_and_upload : Could not open/read Cyanobacteria.html. Skipping.
-2021-09-15 03:15:51,712 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-09-15 03:15:51,713 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-09-15 03:15:51,713 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-09-15 03:15:51,714 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-09-15 03:15:51,714 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in DryLabOverview.html.
-2021-09-15 03:15:51,715 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in DryLabOverview.html.
-2021-09-15 03:15:51,716 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in DryLabOverview.html.
-2021-09-15 03:15:51,717 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in DryLabOverview.html.
-2021-09-15 03:15:51,717 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in DryLabOverview.html.
-2021-09-15 03:15:51,717 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in DryLabOverview.html.
-2021-09-15 03:15:51,723 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in DryLabOverview.html.
-2021-09-15 03:15:51,724 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in DryLabOverview.html.
-2021-09-15 03:15:51,735 : INFO : build_and_upload : Contents of DryLabOverview.html have been uploaded previously. Skipping.
-2021-09-15 03:15:51,747 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in EColi.html.
-2021-09-15 03:15:51,747 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in EColi.html.
-2021-09-15 03:15:51,748 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in EColi.html.
-2021-09-15 03:15:51,748 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in EColi.html.
-2021-09-15 03:15:51,749 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in EColi.html.
-2021-09-15 03:15:51,750 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in EColi.html.
-2021-09-15 03:15:51,750 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in EColi.html.
-2021-09-15 03:15:51,750 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in EColi.html.
-2021-09-15 03:15:51,751 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in EColi.html.
-2021-09-15 03:15:51,754 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in EColi.html.
-2021-09-15 03:15:51,755 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in EColi.html.
-2021-09-15 03:15:51,762 : INFO : build_and_upload : Contents of EColi.html have been uploaded previously. Skipping.
-2021-09-15 03:15:51,765 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
-2021-09-15 03:15:51,765 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
-2021-09-15 03:15:51,766 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
-2021-09-15 03:15:51,766 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
-2021-09-15 03:15:51,766 : INFO : iGEM_URL : SB.html was changed to https://2021.igem.org/Team:IISER-Pune-India/SB in index.html.
-2021-09-15 03:15:51,768 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
-2021-09-15 03:15:51,788 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Model.html.
-2021-09-15 03:15:51,788 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Model.html.
-2021-09-15 03:15:51,789 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Model.html.
-2021-09-15 03:15:51,789 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Model.html.
-2021-09-15 03:15:51,790 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Model.html.
-2021-09-15 03:15:51,790 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Model.html.
-2021-09-15 03:15:51,792 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in Model.html.
-2021-09-15 03:15:51,792 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Model.html.
-2021-09-15 03:15:51,793 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Model.html.
-2021-09-15 03:15:51,793 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Model.html.
-2021-09-15 03:15:51,799 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Model.html.
-2021-09-15 03:15:51,799 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Model.html.
-2021-09-15 03:15:53,523 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Model&action=edit.
-2021-09-15 03:15:53,534 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in SB.html.
-2021-09-15 03:15:53,535 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in SB.html.
-2021-09-15 03:15:53,535 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in SB.html.
-2021-09-15 03:15:53,535 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in SB.html.
-2021-09-15 03:15:53,536 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in SB.html.
-2021-09-15 03:15:53,536 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in SB.html.
-2021-09-15 03:15:53,537 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in SB.html.
-2021-09-15 03:15:53,537 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in SB.html.
-2021-09-15 03:15:53,537 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in SB.html.
-2021-09-15 03:15:53,540 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in SB.html.
-2021-09-15 03:15:53,541 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in SB.html.
-2021-09-15 03:15:53,547 : INFO : build_and_upload : Contents of SB.html have been uploaded previously. Skipping.
-2021-09-15 03:15:53,572 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-09-15 03:15:53,573 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-09-15 03:15:53,593 : INFO : build_and_upload : Contents of theming-kit.html have been uploaded previously. Skipping.
-2021-09-15 03:15:54,962 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/DryLabPageCSS&action=edit.
-2021-09-15 03:15:54,962 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
-2021-09-15 03:15:54,962 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
-2021-09-15 03:15:54,962 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
-2021-09-15 03:15:54,963 : INFO : build_and_upload : Contents of css\styleSB.css have been uploaded previously. Skipping.
-2021-09-15 03:15:54,964 : INFO : iGEM_URL : ../../assets/svgs/layered-waves-haikei-2.svg was changed to https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg in css\SBcss\style.css.
-2021-09-15 03:15:54,965 : INFO : build_and_upload : Contents of css\SBcss\style.css have been uploaded previously. Skipping.
-2021-09-15 03:15:54,965 : INFO : build_and_upload : Contents of js\bootstrap-bundle.js have been uploaded previously. Skipping.
-2021-09-15 03:15:54,966 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
+2021-09-15 03:18:26,601 : INFO : iGEM_login : Already logged in.
+2021-09-15 03:18:26,602 : ERROR : cache_files : .DS_Store has an unsupported file extension. Skipping.
+2021-09-15 03:18:26,603 : ERROR : cache_files : assets\.DS_Store has an unsupported file extension. Skipping.
+2021-09-15 03:18:26,605 : ERROR : cache_files : assets\Graphs\.DS_Store has an unsupported file extension. Skipping.
+2021-09-15 03:18:26,609 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
+2021-09-15 03:18:26,648 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Coculture.html.
+2021-09-15 03:18:26,648 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Coculture.html.
+2021-09-15 03:18:26,648 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Coculture.html.
+2021-09-15 03:18:26,649 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Coculture.html.
+2021-09-15 03:18:26,649 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Coculture.html.
+2021-09-15 03:18:26,650 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Coculture.html.
+2021-09-15 03:18:26,650 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Coculture.html.
+2021-09-15 03:18:26,650 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Coculture.html.
+2021-09-15 03:18:26,651 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Coculture.html.
+2021-09-15 03:18:26,654 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Coculture.html.
+2021-09-15 03:18:26,654 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Coculture.html.
+2021-09-15 03:18:27,931 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Coculture&action=edit.
+2021-09-15 03:18:27,949 : ERROR : build_and_upload : Could not open/read Cyanobacteria.html. Skipping.
+2021-09-15 03:18:27,966 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-09-15 03:18:27,966 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-09-15 03:18:27,967 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-09-15 03:18:27,967 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-09-15 03:18:27,968 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in DryLabOverview.html.
+2021-09-15 03:18:27,968 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in DryLabOverview.html.
+2021-09-15 03:18:27,969 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in DryLabOverview.html.
+2021-09-15 03:18:27,969 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in DryLabOverview.html.
+2021-09-15 03:18:27,970 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in DryLabOverview.html.
+2021-09-15 03:18:27,970 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in DryLabOverview.html.
+2021-09-15 03:18:27,975 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in DryLabOverview.html.
+2021-09-15 03:18:27,976 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in DryLabOverview.html.
+2021-09-15 03:18:27,985 : INFO : build_and_upload : Contents of DryLabOverview.html have been uploaded previously. Skipping.
+2021-09-15 03:18:28,005 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in EColi.html.
+2021-09-15 03:18:28,005 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in EColi.html.
+2021-09-15 03:18:28,006 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in EColi.html.
+2021-09-15 03:18:28,006 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in EColi.html.
+2021-09-15 03:18:28,006 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in EColi.html.
+2021-09-15 03:18:28,007 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in EColi.html.
+2021-09-15 03:18:28,007 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in EColi.html.
+2021-09-15 03:18:28,008 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in EColi.html.
+2021-09-15 03:18:28,008 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in EColi.html.
+2021-09-15 03:18:28,011 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in EColi.html.
+2021-09-15 03:18:28,011 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in EColi.html.
+2021-09-15 03:18:29,305 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/EColi&action=edit.
+2021-09-15 03:18:29,307 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
+2021-09-15 03:18:29,308 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
+2021-09-15 03:18:29,308 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
+2021-09-15 03:18:29,308 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
+2021-09-15 03:18:29,309 : INFO : iGEM_URL : SB.html was changed to https://2021.igem.org/Team:IISER-Pune-India/SB in index.html.
+2021-09-15 03:18:29,310 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
+2021-09-15 03:18:29,342 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Model.html.
+2021-09-15 03:18:29,342 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Model.html.
+2021-09-15 03:18:29,343 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Model.html.
+2021-09-15 03:18:29,343 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Model.html.
+2021-09-15 03:18:29,343 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Model.html.
+2021-09-15 03:18:29,344 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Model.html.
+2021-09-15 03:18:29,345 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Model.html.
+2021-09-15 03:18:29,345 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Model.html.
+2021-09-15 03:18:29,345 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Model.html.
+2021-09-15 03:18:29,345 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Model.html.
+2021-09-15 03:18:29,350 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Model.html.
+2021-09-15 03:18:29,350 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Model.html.
+2021-09-15 03:18:30,683 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Model&action=edit.
+2021-09-15 03:18:30,703 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in SB.html.
+2021-09-15 03:18:30,704 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in SB.html.
+2021-09-15 03:18:30,704 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in SB.html.
+2021-09-15 03:18:30,705 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in SB.html.
+2021-09-15 03:18:30,705 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in SB.html.
+2021-09-15 03:18:30,706 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in SB.html.
+2021-09-15 03:18:30,706 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in SB.html.
+2021-09-15 03:18:30,706 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in SB.html.
+2021-09-15 03:18:30,706 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in SB.html.
+2021-09-15 03:18:30,710 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in SB.html.
+2021-09-15 03:18:30,710 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in SB.html.
+2021-09-15 03:18:31,968 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/SB&action=edit.
+2021-09-15 03:18:31,992 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-09-15 03:18:31,992 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-09-15 03:18:32,014 : INFO : build_and_upload : Contents of theming-kit.html have been uploaded previously. Skipping.
+2021-09-15 03:18:32,015 : INFO : build_and_upload : Contents of css\DryLabPage.css have been uploaded previously. Skipping.
+2021-09-15 03:18:32,015 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
+2021-09-15 03:18:32,016 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
+2021-09-15 03:18:32,016 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
+2021-09-15 03:18:32,016 : INFO : build_and_upload : Contents of css\styleSB.css have been uploaded previously. Skipping.
+2021-09-15 03:18:32,017 : INFO : iGEM_URL : ../../assets/svgs/layered-waves-haikei-2.svg was changed to https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg in css\SBcss\style.css.
+2021-09-15 03:18:32,018 : INFO : build_and_upload : Contents of css\SBcss\style.css have been uploaded previously. Skipping.
+2021-09-15 03:18:32,019 : INFO : build_and_upload : Contents of js\bootstrap-bundle.js have been uploaded previously. Skipping.
+2021-09-15 03:18:32,019 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
