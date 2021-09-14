@@ -11150,15 +11150,6 @@ textarea.form-control-lg {
 .header-section-wrapper {
   background-color: #212529;
 }
-.header-section-wrapper .header-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
-  padding: 100px 20vw;
-}
 .header-section-wrapper .section-1 {
   margin-top: 16px;
   background-color: #28c79b;

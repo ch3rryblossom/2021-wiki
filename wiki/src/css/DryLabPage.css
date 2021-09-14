@@ -1,8 +1,20 @@
 .body-of-text {
+    margin-top: 20;
     margin-left: -200;
     padding-left: 10;
     margin-right: -150;
 }
+
+.header-section{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 50px 20vw;
+}
+
 ol.a {
     list-style-position: outside;
     padding-left: 50;
