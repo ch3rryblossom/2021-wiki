@@ -1,21 +1,19 @@
-.body-of-text {
+/* .body-of-text {
     margin-top: 20;
     margin-left: -200;
     padding-left: 10;
     margin-right: -150;
-}
+} */
 
-.header-section{
-    position:relative;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    padding: 50px 20vw;
-}
-
-ol.a {
+.section-1{
+    margin-top: 0px;
+    background-color: #28c79b;
+    text-align:center;
+    line-height:450px;
+    width:100%;
+    height:450px;
+  }
+/* ol.a {
     list-style-position: outside;
     padding-left: 50;
 }
@@ -45,4 +43,4 @@ ul.d{
 }
 .h3{
     font-size: 20;
-}
+} */

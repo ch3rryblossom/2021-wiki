@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -6,16 +7,18 @@
 	<title>Bootstrap and Sass Testing</title>
 	<link rel="stylesheet" href="css/igem-reset.css">
 	<link rel="stylesheet" href="css/SBcss/style.css">
+    <link rel="stylesheet" href="css/styleSB.css">
+    <link rel="stylesheet" href="css/DryLabPage.css">
 	<style>/* Reset CSS */
 
 		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
 		#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
-		body, html {background-color:white; width: 100%; height: 100%;}
+		body, html {background-color:#212529; width: 100%; height: 100%;}
 		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
-
-
+    </style>
+    <style> /* Sidenav */
 		.sidenav {
       height: auto;
       width: auto;
@@ -45,9 +48,8 @@
       border-radius: 20px!important;
     }
 
-
-
-
+    </style>
+    <style>/* Other */
 ul{
 list-style: none !important;
 
@@ -72,7 +74,7 @@ list-style:none !important;
 
 
 .dry-lab-second-div {
-      background-color: #e2e2e2 !important;
+      background-color: #212529 !important;
 
     }
 
@@ -100,17 +102,17 @@ list-style:none !important;
             html {
                 scroll-behavior: smooth;
                 }
-                body{
+                /* body{
                     padding-top:65px;
                     background:#edd1cb;
-                }
+                } */
 	</style>
 
 	<style>
 		body {
             position: relative;
             width: 100%;
-            padding-top: 40px;
+            padding-top: 0px;
         }
 	.content h3 {
             font-size: 3vmin;
@@ -120,7 +122,7 @@ list-style:none !important;
 	.content a {
             margin: auto;
             text-decoration: none;
-            color: #371D31;
+            color: greenyellow;
             position: relative;
             transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
             z-index: 0;
@@ -179,6 +181,105 @@ list-style:none !important;
 
 	</style>
 <body>
+
+    
+	<!-- NAVBAR SECTION -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+		<div class="nav-container">
+		  <a class="navbar-brand" href="#">
+			<img src="assets/svgs/synbactory2.svg">
+		  </a>
+		  <div class="center-expand">
+		</div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Home</a>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Team
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Members</a></li>
+			  <li><a class="dropdown-item" href="#">Attributions</a></li>
+			  <li><a class="dropdown-item" href="#">Collaborations</a></li>
+			  <li><a class="dropdown-item" href="#">Sponsors</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Project
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Design</a></li>
+			  <li><a class="dropdown-item" href="#">Description</a></li>
+			  <li><a class="dropdown-item" href="#">Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Contributions</a></li>
+			  <li><a class="dropdown-item" href="#">Engineering Success</a></li>
+			  <li><a class="dropdown-item" href="#">Future Implementation</a></li>
+			  <li><a class="dropdown-item" href="#">Safety</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Wet Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Experiments</a></li>
+			  <li><a class="dropdown-item" href="#">Constructs</a></li>
+			  <li><a class="dropdown-item" href="#">Measurement</a></li>
+			  <li><a class="dropdown-item" href="#">Lab Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Results</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Parts
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Overview</a></li>
+			  <li><a class="dropdown-item" href="#">Basic</a></li>
+			  <li><a class="dropdown-item" href="#">Composite</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Dry Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
+			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
+			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Human Practices
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">iHP</a></li>
+			  <li><a class="dropdown-item" href="#">Public Engagement</a></li>
+			  <li><a class="dropdown-item" href="#">Education</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="#">Judging Form</a>
+		      </li>
+		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
+		    </ul>
+		  </div>
+		</div>
+	      </nav>
+          <div class="section-1">
+            <h1><br><br><br><br>Dry Lab Overview</h1>
+          </div>
+        <div class="spacer layer1 view-border-2"></div>
     <div class="dry-lab-second-div container-fluid">
         <div class="row">
             <div class="col-lg-3 col-md-3">
