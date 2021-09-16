@@ -23,6 +23,7 @@
       height: auto;
       width: auto;
       padding-top: 60px;
+      padding-left: 10px;
 
       margin-top: 25%;
       margin-bottom: 20px;
@@ -682,4 +683,42 @@ list-style:none !important;
 
     </div>
 
-		</body>
+    <div class="header"></div>
+    <div class="line" id="scrollIndicator"></div>
+
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 80;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+
+	</script>
+</body>
