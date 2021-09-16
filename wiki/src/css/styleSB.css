@@ -73,31 +73,217 @@
 		}
 		/* <!--scroll indicator  --> */
 	
-	.header {
-			position: fixed;
-			top: 25vh;
-			left: 1.5vw;
-			z-index: 0.5;
-			width: 3px;
-			height: 50vh;
-			background-color: #f1f1f1;
-		  }
+.header {
+		position: fixed;
+		top: 25vh;
+		left: 1.5vw;
+		z-index: 0.5;
+		width: 3px;
+		height: 50vh;
+		background-color: #f1f1f1;
+	}
 		
-		.text {
-				font-size: 80px;
-				color: rgba(55, 0, 128, 0.774);
-				text-align: center;
-				line-height: 3em;
-			}
+.text {
+		font-size: 80px;
+		color: rgba(55, 0, 128, 0.774);
+		text-align: center;
+		line-height: 3em;
+	}
 		
-		.line {
-				background: rgba(160, 28, 248, 0.829);
-				height: 0%;
-				border-radius: 4px;
-				width: 3px;
-				z-index: 1;
-				position: fixed;
-				top: 25vh;
-				left: 1.5vw;
-			}
+.line {
+		background: rgba(160, 28, 248, 0.829);
+		height: 0%;
+		border-radius: 4px;
+		width: 3px;
+		z-index: 1;
+		position: fixed;
+		top: 25vh;
+		left: 1.5vw;
+	}
 /* Backtotop End */
+
+/* Sidenav Start */
+.sidenav {
+    
+	height: auto;
+	width: auto;
+	padding-top: 150px;
+	padding-left: 5px;
+	padding-right: 10px;
+  
+	margin-top: 25%;
+	margin-bottom: 20px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 10%!important;
+      }
+  
+  .sidenav #sidenav-id li{
+      background-color: #2b2d31;
+  }
+  
+  .sidenav a {
+	text-align: left;
+	color: #cc3333;
+	font-size: 2vmin!important;
+	  /* font-family: 'Titillium Web'!important; */
+    font-style: normal !important;
+    font-weight: 600 !important;
+      }
+  
+  .sidenav a:hover {
+	color: #ffffff;
+	background-color: #cc3333;
+	border-radius: 20px!important;
+      }
+  
+  @media (max-width: 900px) {
+	.sidenav {
+		  display: none;
+		  }
+      }
+/* Sidenav End */
+/* Second-div start */
+.second-div {
+	background-color: #212529 !important;
+      }
+  
+.second-div .content h1 {
+	text-align: left !important;
+	padding-top: 8%;
+	/* font-family: "Titillium Web" !important; */
+	  font-weight:700 !important;
+	   font-size: 6vmin !important;
+  
+      }
+  
+.second-div .content p {
+	padding-left: 5%;
+	padding-right: 5%;
+	/* font-family: "Titillium Web" !important; */
+	  font-weight:400 !important;
+	   font-size: 2.5vmin !important;
+      }
+  
+  
+  
+  
+  
+html {
+	  scroll-behavior: smooth;
+	}
+		  /* body{
+		      padding-top:65px;
+		      background:#edd1cb;
+		  } */
+/* Second-div End */
+
+/* .content start */
+/* ul, li is used in content section */
+ul  {
+        list-style: none !important;
+    }
+
+ul li   {
+            list-style:none !important;
+        }
+
+	.content h3 {
+            font-size: 3vmin;
+            font-weight: 600 !important;
+        }
+
+	.content a {
+            margin: auto;
+            text-decoration: none;
+            color: greenyellow;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            z-index: 0;
+            white-space: nowrap;
+        }
+    .content a:after {
+            content: '';
+            
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            right: 0rem;
+            left: 0rem;
+            background-color: #D3251B;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            transform-origin: bottom center;
+            z-index: -1;
+        }
+    .content a:hover {
+            color: #fff;
+        }
+    .content a:hover:after {
+            right: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        #content {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* #top_title {
+            display: none;
+        } */
+
+
+        /* .content * {
+        } */
+
+    .content p, .content li {
+            font-size: 2.5vmin !important;
+        }
+
+.content{
+    background-color: #2b2d31;
+    margin-right: 10px;
+}
+
+        /* #dry-lab {
+            width: 50%;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            margin: auto;
+            flex: 1;
+        } */
+
+/* .content end */
+
+/* Other */
+ul{
+	list-style: none !important;
+	
+	}
+	
+	ul li{
+	list-style:none !important;
+	}
+	
+	    /* @media (max-width: 768px) {
+	      .top-illus{
+		margin-top:0px;
+	      }
+	      
+	    }*/
+	body {
+		    position: relative;
+		    width: 100%;
+		    padding-top: 0px;
+		}
+	html {
+		scroll-behavior: smooth;
+		}
+			/* body{
+			    padding-top:65px;
+			    background:#edd1cb;
+			} */
+/* Other end */
