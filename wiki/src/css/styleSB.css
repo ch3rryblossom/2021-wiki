@@ -1,6 +1,10 @@
 /* iGEM Topbar Fixes */
 .navbar {
   margin-top: 16px;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px rgb(36, 35, 35);
+  /*  */
 }
 
 .row {
@@ -22,20 +26,23 @@
       }
       .nav-link:hover, .nav-link:focus {
 	color: #1f5271;
-	background-color: #FFFFFFaa;
+	background-color: #ffffff;
+	/*  */
 }
 .nav-link {
   border-radius: 4px;
 }
 .dropdown-menu {
-  background-color: #FFFFFFf0;
+  background-color:#212529;
+  /*  */
 }
 .dropdown-item {
   background-color: inherit;
   width: 100%;
 }
 .dropdown-item:hover {
-  background-color: #FFFFFFee;
+  background-color: #32363ae3;   
+  /*  */
 }
 .dropdown-menu>li {
   padding: 0
