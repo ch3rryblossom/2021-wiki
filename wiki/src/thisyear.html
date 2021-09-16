@@ -18,8 +18,8 @@
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
     </style>
-    <style> /* Sidenav */
-		.sidenav {
+    <style>/* Sidenav */
+.sidenav {
       height: auto;
       width: auto;
       padding-top: 60px;
@@ -34,7 +34,7 @@
 
 
 
-    .sidenav a {
+.sidenav a {
       text-align: left;
       color: #cc3333;
       font-size: 2vmin!important;
@@ -43,43 +43,26 @@
   font-weight: 600 !important;
     }
 
-    .sidenav a:hover {
+.sidenav a:hover {
       color: #ffffff;
       background-color: #cc3333;
       border-radius: 20px!important;
     }
 
-    </style>
-    <style>/* Other */
-ul{
-list-style: none !important;
-
-}
-
-ul li{
-list-style:none !important;
-}
-
-    @media (max-width: 900px) {
+@media (max-width: 900px) {
       .sidenav {
-        display: none;
-      }
+                display: none;
+                }
     }
 
-    @media (max-width: 768px) {
-      .top-illus{
-        margin-top:0px;
-      }
-      
-    }
-
-
-.dry-lab-second-div {
+    </style>
+    <style>/* Second-div */
+.second-div {
       background-color: #212529 !important;
 
     }
 
-    .dry-lab-second-div .content h1 {
+    .second-div .content h1 {
       text-align: left !important;
       padding-top: 8%;
       font-family: "Titillium Web" !important;
@@ -88,7 +71,7 @@ list-style:none !important;
 
     }
 
-    .dry-lab-second-div .content p {
+    .second-div .content p {
       padding-left: 5%;
       padding-right: 5%;
       font-family: "Titillium Web" !important;
@@ -109,12 +92,46 @@ list-style:none !important;
                 } */
 	</style>
 
-	<style>
-		body {
+    <style>/* Other */
+ul{
+list-style: none !important;
+
+}
+
+ul li{
+list-style:none !important;
+}
+
+    /* @media (max-width: 768px) {
+      .top-illus{
+        margin-top:0px;
+      }
+      
+    }*/
+body {
             position: relative;
             width: 100%;
             padding-top: 0px;
         }
+html {
+        scroll-behavior: smooth;
+        }
+                /* body{
+                    padding-top:65px;
+                    background:#edd1cb;
+                } */
+    </style>
+
+	<style>/* .content */
+/* ul, li is used in content section */
+ul  {
+        list-style: none !important;
+    }
+
+ul li   {
+            list-style:none !important;
+        }
+
 	.content h3 {
             font-size: 3vmin;
             font-weight: 600 !important;
@@ -129,7 +146,7 @@ list-style:none !important;
             z-index: 0;
             white-space: nowrap;
         }
-        .content a:after {
+    .content a:after {
             content: '';
             
             height: 2px;
@@ -142,10 +159,10 @@ list-style:none !important;
             transform-origin: bottom center;
             z-index: -1;
         }
-        .content a:hover {
+    .content a:hover {
             color: #fff;
         }
-        .content a:hover:after {
+    .content a:hover:after {
             right: 0;
             left: 0;
             height: 100%;
@@ -157,32 +174,34 @@ list-style:none !important;
             padding: 0px;
         }
 
-        #top_title {
+        /* #top_title {
             display: none;
-        }
+        } */
 
 
         /* .content * {
         } */
 
-        .content p, .content li {
+    .content p, .content li {
             font-size: 2.5vmin !important;
         }
 
 
 
-        #dry-lab {
+        /* #dry-lab {
             width: 50%;
             text-align: center;
             display: block;
             justify-content: center;
             margin: auto;
             flex: 1;
-        }
+        } */
 
 	</style>
-<body>
 
+
+
+<body>
     
 	<!-- NAVBAR SECTION -->
 
@@ -276,16 +295,25 @@ list-style:none !important;
 		    </ul>
 		  </div>
 		</div>
-	      </nav>
-          <div class="section-1">
-            <h1><br><br><br><br>Dry Lab Overview</h1>
-          </div>
-        <div class="spacer layer1 view-border-2"></div>
-    <div class="dry-lab-second-div container-fluid">
+	</nav>
+
+    <!-- TITLE SECTION -->
+    
+    <div class="section-1">
+        <h1><br><br><br><br>Dry Lab Overview</h1>
+    </div>
+        
+    <!-- WAVES SPACER -->
+
+    <div class="spacer layer1"></div>
+
+    <!-- CONTENT + SIDENAV SECTION -->
+
+    <div class="second-div container-fluid">
         <div class="row">
+            <!-- SIDENAV -->
             <div class="col-lg-3 col-md-3">
                 <div class="sidenav">
-                    <!-- <hr> -->
                     <nav>
                         <ul>
                             <li class="nav-item"><a class="nav-link" href="#1">Objectives</a></li>
@@ -318,8 +346,8 @@ list-style:none !important;
 
 
                 </div>
-
             </div>
+            <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
                     <h1 id="1">Objectives</h1>
