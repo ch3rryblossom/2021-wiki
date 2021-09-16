@@ -42,10 +42,10 @@ assets:
 css:
   css\DryLabPage.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css
-    md5: eeb8cf5d51522e2f756121376cb98fba
+    md5: 7f959ebd052ca01f88a8aed43cd9a7b7
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: 7214064f57f639ac2929ec0444628177
+    md5: 33b6d62fdef31e367a43acf2f2a11266
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -54,7 +54,7 @@ css:
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
-    md5: 85bdaf207219bcaa3dca307560e76104
+    md5: e5f9fd043bdf5ab5e13b5a7a42225f4f
 html:
   Coculture.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
@@ -80,9 +80,15 @@ html:
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: ec302b140de2bb526cdbfd54cf9c0255
+  lastyear.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/lastyear
+    md5: ''
   theming-kit.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/theming-kit
     md5: f6ffdd2c777593e6fa1d90f8ac10a8a7
+  thisyear.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/thisyear
+    md5: bacedf0c1e56630806b7c8faf583a109
 js:
   js\bootstrap-bundle.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript
