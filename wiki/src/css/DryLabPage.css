@@ -17,7 +17,7 @@
 .content{
     padding: 2% 5%;
 }
-/* ol.a {
+ ol.a {
     list-style-position: outside;
     padding-left: 50;
 }
@@ -43,8 +43,8 @@ ul.d{
     padding-top: 20px;
     margin-left: auto;
     font-style: italic;
-    font-size: small;
+    font-size: smaller;
 }
 .h3{
     font-size: 20;
-} */
+}
