@@ -19,22 +19,31 @@
 }
  ol.a {
     list-style-position: outside;
-    padding-left: 50;
+    padding-left: 5%;
+    margin-left: 5%;
+    padding-right: 5%;
 }
 ul.b {
     list-style-type: disc;
-    padding-left: 50;
+    padding-left: 5%;
     list-style-position: outside;
+    margin-left: 5%;
+    padding-right: 5%;
 }
 ul.c{
     list-style-type: circle;
-    padding-left: 50;
+    padding-left: 5%;
     list-style-position: outside;
+    margin-left: 5%;
+    padding-right: 5%;
 }
+
 ul.d{
     list-style-type: square;
-    padding-left: 50;
+    padding-left: 5%;
     list-style-position: outside;
+    margin-left: 5%;
+    padding-right: 5%;
 }
 .h2{
     font-size: 30;
