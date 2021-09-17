@@ -343,4 +343,34 @@
 		});
 
 	</script>
+	<script>
+		$(document).ready(function() {
+  $(window).scroll(function() {
+    var scroll_top = $(window).scrollTop();
+    var div_one_top = $("#1").offset().top;
+    var div_two_top = $("#2").offset().top;
+
+    if (scroll_top > div_one_top && scroll_top < div_two_top) {
+      //You are now past div one
+      if (!$('a[href="#1"]').hasClass('sidenav-active')) {
+        $('a[href="#1"]').addClass('sidenav-active');
+      }
+
+      if ($('a[href="#2"]').hasClass('sidenav-active')) {
+        $('a[href="#2"]').removeClass('sidenav-active');
+      }
+
+    } else if (scroll_top > div_two_top) {
+      if ($('a[href="#1"]').hasClass('sidenav-active')) {
+        $('a[href="#1"]').removeClass('sidenav-active');
+      }
+
+      if (!$('a[href="#2"]').hasClass('sidenav-active')) {
+        $('a[href="#2"]').addClass('sidenav-active');
+
+      }
+    }
+  });
+});
+	</script>
 </body>

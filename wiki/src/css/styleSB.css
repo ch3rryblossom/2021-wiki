@@ -147,7 +147,11 @@
 	background-color: #cc3333;
 	border-radius: 20px!important;
       }
-  
+ .sidenav-active{
+	color: #ffffff;
+	background-color: #d3c3c3b2;
+	border-radius: 20px!important;
+ } 
   @media (max-width: 900px) {
 	.sidenav {
 		  display: none;
