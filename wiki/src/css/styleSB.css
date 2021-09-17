@@ -66,7 +66,7 @@
 		  display: none;
 		  position: fixed;
 		  bottom: 6vh;
-		  right: 7.3vw;
+		  right: 3vw;
 		  z-index: 99;
 		  border: none;
 		  outline: none;
@@ -168,6 +168,7 @@
 .second-div .content h1 {
 	text-align: left !important;
 	padding-top: 8%;
+	padding-right: 5%;
 	/* font-family: "Titillium Web" !important; */
 	  font-weight:700 !important;
 	   font-size: 6vmin !important;
