@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/igem-reset.css">
+	<link rel="stylesheet" href="css/SBcss/style.css">
+   	<link rel="stylesheet" href="css/styleSB.css">
+    	<link rel="stylesheet" href="css/DryLabPage.css">
+	<style>/* Reset CSS */
+
+		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+		#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+		body, html {background-color:#212529; width: 100%; height: 100%;}
+		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+
+    	</style>
+	    <!-- <style>/* from Alexander Erlandsson */
+ /* .table-container {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%,-50%);
+} */
+ table {
+	 width: 800px;
+	 border-collapse: collapse;
+	 overflow: hidden;
+	 box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+ th, td {
+	 padding: 15px;
+	 background-color: rgba(255,255,255,0.2);
+	 color: #fff;
+}
+ th {
+	 text-align: left;
+}
+ thead th {
+	 background-color: #55608f;
+}
+ tbody tr:hover {
+	 background-color: rgba(255,255,255,0.3);
+}
+ tbody td {
+	 position: relative;
+}
+ tbody td:hover:before {
+	 content: "";
+	 position: absolute;
+	 left: 0;
+	 right: 0;
+	 top: -9999px;
+	 bottom: -9999px;
+	 background-color: rgba(255,255,255,0.2);
+	 z-index: -1;
+}
+ 
+	    </style> -->
+<!--
+	<style>/* Last year part table styles */
+		    table.pgrouptable {
+	font-family: arial;
+	background-color: #F0F0F0;
+	color: #000;
+	font-size:  11px;
+	line height: 11px;
+	width: 100%;
+	text-align:left;
+	border: 2px solid #222;
+	border-collapse: collapse;
+}
+table.pgrouptable thead th {
+	border: 1px solid rgb(61,61,61);
+	padding: 3px 5px 3px 3px;
+	background-color: #CCC;
+	text-align: left;
+}
+table.pgrouptable td {
+	border: 1px solid rgb(61,61,61);
+	background-color: #F0F0F0;
+	color: #000;
+	padding: 3px;
+	font-size: 11px;
+	line-height: 12px;
+}
+    /*Parts table */
+    #groupparts {
+      width: 90% !important;
+    }
+
+    table.pgrouptable {
+      background-color: #E2E2E2;
+    }
+
+    th {
+      text-align: center !important;
+    }
+
+    th:nth-child(4) {
+      border-top-left-radius: 12px;
+    }
+
+    th:nth-child(1),
+    th:nth-child(2),
+    th:nth-child(3) {
+      display: none !important;
+    }
+
+    tr>td:nth-child(1),
+    tr>td:nth-child(2),
+    tr>td:nth-child(3) {
+      display: none !important;
+    }
+
+    th:last-child {
+      font-size: 12px;
+      font-family: 'Titillium Web', sans-serif;
+      position: inherit;
+      border-top-right-radius: 12px;
+    }
+
+    th:last-child,
+    td:last-child {
+      width: 85px !important;
+    }
+
+    .tbody {
+      border: 1px solid #524848 !important;
+    }
+
+    .header {
+      position: inherit;
+    }
+
+    th {
+      position: inherit;
+      border: hidden !important;
+      font-size: 14px !important;
+      font-family: 'Titillium Web', sans-serif;
+      background-color: #524848 !important;
+      color: white !important;
+    }
+
+    tr {
+      border-color: #524848 !important;
+      font-size: 14px !important;
+      font-family: 'Titillium Web', sans-serif;
+
+    }
+
+    td {
+      border: hidden !important;
+      line-height: 18px !important;
+      font-size: 14px !important;
+      font-family: 'Titillium Web', sans-serif;
+      background-color: #E2E2E2 !important;
+
+    }
+
+
+    table {
+      border-collapse: collapse;
+      margin: 0 auto !important;
+    }
+
+    table th {
+      text-align: center !important;
+      color: #fff !important;
+      background-color: #f95950 !important;
+      padding: 4px 30px 4px 8px;
+    }
+
+    table td {
+      border: 1px solid #F7F7F7 !important;
+      padding: 4px 4px;
+    }
+
+
+
+    table tr:nth-child(odd) td {
+      background-color: #e7edf0 !important;
+    }
+
+    td,
+    th {
+      vertical-align: middle !important;
+    }
+
+    pre {
+      display: none !important;
+    }
+	</style>
+	-->
+<body>
+    
+	<!-- NAVBAR SECTION -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+		<div class="nav-container">
+		  <a class="navbar-brand" href="#">
+			<img src="assets/svgs/synbactory2.svg">
+		  </a>
+		  <div class="center-expand">
+		</div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Home</a>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Team
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Members</a></li>
+			  <li><a class="dropdown-item" href="#">Attributions</a></li>
+			  <li><a class="dropdown-item" href="#">Collaborations</a></li>
+			  <li><a class="dropdown-item" href="#">Sponsors</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Project
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Design</a></li>
+			  <li><a class="dropdown-item" href="#">Description</a></li>
+			  <li><a class="dropdown-item" href="#">Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Contributions</a></li>
+			  <li><a class="dropdown-item" href="#">Engineering Success</a></li>
+			  <li><a class="dropdown-item" href="#">Future Implementation</a></li>
+			  <li><a class="dropdown-item" href="#">Safety</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Wet Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Experiments</a></li>
+			  <li><a class="dropdown-item" href="#">Constructs</a></li>
+			  <li><a class="dropdown-item" href="#">Measurement</a></li>
+			  <li><a class="dropdown-item" href="#">Lab Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Results</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Parts
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Overview</a></li>
+			  <li><a class="dropdown-item" href="#">Basic</a></li>
+			  <li><a class="dropdown-item" href="#">Composite</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Dry Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
+			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
+			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Human Practices
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">iHP</a></li>
+			  <li><a class="dropdown-item" href="#">Public Engagement</a></li>
+			  <li><a class="dropdown-item" href="#">Education</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="#">Judging Form</a>
+		      </li>
+		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
+		    </ul>
+		  </div>
+		</div>
+	</nav>
+
+    <!-- TITLE SECTION -->
+    
+    <div class="section-1">
+        <h1><br><br><br><br>Basic Parts</h1>
+    </div>
+        
+    <!-- WAVES SPACER -->
+
+    <div class="spacer layer1"></div>
+
+    <!-- CONTENT + SIDENAV SECTION -->
+
+    <div class="second-div container-fluid">
+        <div class="row">
+            <!-- SIDENAV -->
+            <div class="col-lg-3 col-md-3">
+                <div class="sidenav">
+                    <nav>
+                        <ul id="sidenav-id">
+                            <li class="nav-item"><a class="nav-link" href="#1">Overview</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Parts Table v1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Parts Table v2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">References</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="col-lg-9 col-md-9">
+                <div class="content">
+                    <h1 id="1">Overview</h1>
+                    <hr><br><br><br>
+		    <p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+		    <br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    <p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+
+                    <h1 id="2">Parts Table v1</h1>
+                    <hr>
+		    <br>
+			<!-- <table>
+			  <thead>
+			    <tr>
+			      <th>Name</th>
+			      <th>Type</th>
+			      <th>Description</th>
+			      <th>Designer</th>
+			      <th>Length</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Cell 1</td>
+			      <td>Cell 2</td>
+			      <td>Cell 3</td>
+			      <td>Cell 4</td>
+			      <td>Cell 5</td>
+			    </tr>
+			    <tr>
+			      <td>Cell 1</td>
+			      <td>Cell 2</td>
+			      <td>Cell 3</td>
+			      <td>Cell 4</td>
+			      <td>Cell 5</td>
+			    </tr>
+			    <tr>
+			      <td>Cell 1</td>
+			      <td>Cell 2</td>
+			      <td>Cell 3</td>
+			      <td>Cell 4</td>
+			      <td>Cell 5</td>
+			    </tr>
+			    <tr>
+			      <td>Cell 1</td>
+			      <td>Cell 2</td>
+			      <td>Cell 3</td>
+			      <td>Cell 4</td>
+			      <td>Cell 5</td>
+			    </tr>
+			    <tr>
+			      <td>Cell 1</td>
+			      <td>Cell 2</td>
+			      <td>Cell 3</td>
+			      <td>Cell 4</td>
+			      <td>Cell 5</td>
+			    </tr>
+			  </tbody>
+			</table>
+		 -->
+		    <h1 id="3">Parts Table v2</h1>
+		    <hr>
+		    <br>
+		    <div class="table">
+    
+			<div class="table1-row table-header">
+			  <div class="cell">
+			    Name
+			  </div>
+			  <div class="cell">
+			    Age
+			  </div>
+			  <div class="cell">
+			    Occupation
+			  </div>
+			  <div class="cell">
+			    Location
+			  </div>
+			</div>
+			
+			<div class="table1-row">
+			  <div class="cell" data-title="Name">
+			    Luke Peters
+			  </div>
+			  <div class="cell" data-title="Age">
+			    25
+			  </div>
+			  <div class="cell" data-title="Occupation">
+			    Freelance Web Developer
+			  </div>
+			  <div class="cell" data-title="Location">
+			    Brookline, MA
+			  </div>
+			</div>
+			
+			<div class="table1-row">
+			  <div class="cell" data-title="Name">
+			    Joseph Smith
+			  </div>
+			  <div class="cell" data-title="Age">
+			    27
+			  </div>
+			  <div class="cell" data-title="Occupation">
+			    Project Manager
+			  </div>
+			  <div class="cell" data-title="Location">
+			    Somerville, MA
+			  </div>
+			</div>
+			
+			<div class="table1-row">
+			  <div class="cell" data-title="Name">
+			    Maxwell Johnson
+			  </div>
+			  <div class="cell" data-title="Age">
+			    26
+			  </div>
+			  <div class="cell" data-title="Occupation">
+			    UX Architect & Designer
+			  </div>
+			  <div class="cell" data-title="Location">
+			    Arlington, MA
+			  </div>
+			</div>
+			
+			<div class="table1-row">
+			  <div class="cell" data-title="Name">
+			    Harry Harrison
+			  </div>
+			  <div class="cell" data-title="Age">
+			    25
+			  </div>
+			  <div class="cell" data-title="Occupation">
+			    Front-End Developer
+			  </div>
+			  <div class="cell" data-title="Location">
+			    Boston, MA
+			  </div>
+			</div>
+			
+		      </div>
+
+		    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+                    <br>
+		    
+                    <h1 id="4">References</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
+                    <br>
+		    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
+			
+			</div>
+
+		</div>
+
+        </div>
+
+    </div>
+
+    <div class="header"></div>
+    <div class="line" id="scrollIndicator"></div>
+
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 80;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+
+	</script>
+</body>
