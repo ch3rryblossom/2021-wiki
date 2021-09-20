@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>E Coli</title>
+	<link rel="stylesheet" href="css/igem-reset.css">
+	<link rel="stylesheet" href="css/SBcss/style.css">
+   	<link rel="stylesheet" href="css/styleSB.css">
+    	<link rel="stylesheet" href="css/DryLabPage.css">
+	<style>/* Reset CSS */
+
+		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+		#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+		body, html {background-color:#212529; width: 100%; height: 100%;}
+		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+
+    </style>
+    <style>
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 66px;
+  margin: -10px 0 0 0;
+  transition: 0.4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, .7);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  line-height: 25px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, .07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: 1;
+  filter: blur(0px);
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, .5);
+  font-size: 13px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  border-left: 10px solid rgba(255, 255, 255, .5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 1;
+  right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, .5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 58px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, .5);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+.demo-footer {
+  padding: 60px 0;
+  text-align: center;
+}
+.demo-footer a {
+  color: #999;
+  display: inline-block;
+  font-family: Cardo;
+}
+    </style>
+<body>
+    
+	<!-- NAVBAR SECTION -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+		<div class="nav-container">
+		  <a class="navbar-brand" href="#">
+			<img src="assets/svgs/synbactory2.svg">
+		  </a>
+		  <div class="center-expand">
+		</div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Home</a>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Team
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Members</a></li>
+			  <li><a class="dropdown-item" href="#">Attributions</a></li>
+			  <li><a class="dropdown-item" href="#">Collaborations</a></li>
+			  <li><a class="dropdown-item" href="#">Sponsors</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Project
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Design</a></li>
+			  <li><a class="dropdown-item" href="#">Description</a></li>
+			  <li><a class="dropdown-item" href="#">Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Contributions</a></li>
+			  <li><a class="dropdown-item" href="#">Engineering Success</a></li>
+			  <li><a class="dropdown-item" href="#">Future Implementation</a></li>
+			  <li><a class="dropdown-item" href="#">Safety</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Wet Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Experiments</a></li>
+			  <li><a class="dropdown-item" href="#">Constructs</a></li>
+			  <li><a class="dropdown-item" href="#">Measurement</a></li>
+			  <li><a class="dropdown-item" href="#">Lab Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Results</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Parts
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Overview</a></li>
+			  <li><a class="dropdown-item" href="#">Basic</a></li>
+			  <li><a class="dropdown-item" href="#">Composite</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Dry Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
+			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
+			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Human Practices
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">iHP</a></li>
+			  <li><a class="dropdown-item" href="#">Public Engagement</a></li>
+			  <li><a class="dropdown-item" href="#">Education</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="#">Judging Form</a>
+		      </li>
+		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
+		    </ul>
+		  </div>
+		</div>
+	</nav>
+
+    <!-- TITLE SECTION -->
+    
+    <div class="section-1">
+        <h1><br><br><br><br>E Coli</h1>
+    </div>
+        
+    <!-- WAVES SPACER -->
+
+    <div class="spacer layer1"></div>
+
+    <!-- CONTENT + SIDENAV SECTION -->
+
+    <div class="second-div container-fluid">
+        <div class="row">
+            <!-- SIDENAV -->
+            <div class="col-lg-3 col-md-3">
+                <div class="sidenav">
+                    <nav>
+                        <ul id="sidenav-id">
+                            <li class="nav-item"><a class="nav-link" href="#1">Timeline</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="col-lg-9 col-md-9">
+                <div class="content">
+                    <h1 id="1">Timeline</h1>
+                    <hr><br><br><br>
+		    <div class="timeline-container" id="timeline-1">
+			<div class="timeline-header">
+			  <h2 class="timeline-header__title">Our iHP Timeline</h2>
+			  <h3 class="timeline-header__subtitle">Best and Amazing</h3>
+			</div>
+			<div class="timeline">
+				<div class="timeline-item" data-text="5th May 2021">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <p><a href="#">Read More</a></p>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="2nd Feb 2021">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="21st July 2021">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="20th August 2021">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <p><a href="#">Read More</a></p>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="NEW TIMELINE DESIGN">
+					<div class="timeline__content"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /><br><br><br>
+						<h3 class="timeline__content-title">Prof. Thomas Pucadyil</h3>
+						<p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then
+							an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber
+							merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and
+							strong-willed woman, raised him and his sister.</p> <a href="#">Read More</a>
+					</div>
+				</div>
+			</div>
+
+
+                    <h1 id="2">Section 2</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
+                    <br>
+		    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
+                    
+
+			</div>
+
+		</div>
+
+        </div>
+
+    </div>
+
+    <div class="header"></div>
+    <div class="line" id="scrollIndicator"></div>
+
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 80;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+
+	</script>
+	 <script>
+    
+		(function($) {
+	      $.fn.timeline = function() {
+		var selectors = {
+		  id: $(this),
+		  item: $(this).find(".timeline-item"),
+		  activeClass: "timeline-item--active",
+		  img: ".timeline__img"
+		};
+		selectors.item.eq(0).addClass(selectors.activeClass);
+		selectors.id.css(
+		  "background-image",
+		  "url(" +
+		    selectors.item
+		      .first()
+		      .find(selectors.img)
+		      .attr("src") +
+		    ")"
+		);
+		var itemLength = selectors.item.length;
+		$(window).scroll(function() {
+		  var max, min;
+		  var pos = $(this).scrollTop();
+		  selectors.item.each(function(i) {
+		    min = $(this).offset().top - 200;
+		    max = $(this).height() + $(this).offset().top;
+		    var that = $(this);
+		    if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+		      selectors.item.removeClass(selectors.activeClass);
+		      selectors.id.css(
+			"background-image",
+			"url(" +
+			  selectors.item
+			    .last()
+			    .find(selectors.img)
+			    .attr("src") +
+			  ")"
+		      );
+		      selectors.item.last().addClass(selectors.activeClass);
+		    } else if (pos <= max - 40 && pos >= min) {
+		      selectors.id.css(
+			"background-image",
+			"url(" +
+			  $(this)
+			    .find(selectors.img)
+			    .attr("src") +
+			  ")"
+		      );
+		      selectors.item.removeClass(selectors.activeClass);
+		      $(this).addClass(selectors.activeClass);
+		    }
+		  });
+		});
+	      };
+	    })(jQuery);
+	    
+	    $("#timeline-1").timeline();
+	    
+		</script>
+</body>

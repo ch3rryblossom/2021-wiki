@@ -1,4 +1,16 @@
 assets:
+  assets\Graphs\3 Variables.jpg:
+    link_URL: https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--3_Variables.jpg
+    md5: 28bb4d02fe10fc1e85445e9eb62fd0de
+    upload_filename: T--IISER-Pune-India--Graphs--3 Variables.jpg
+  assets\Graphs\Biomass vs CO_2.jpg:
+    link_URL: https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Biomass_vs_CO_2.jpg
+    md5: 64700f4ab8b0f5adc1539700af6b92c7
+    upload_filename: T--IISER-Pune-India--Graphs--Biomass vs CO_2.jpg
+  assets\Graphs\Biomass vs Sucrose.jpg:
+    link_URL: https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Graphs--Biomass_vs_Sucrose.jpg
+    md5: d032d46f23d50c726b8d8198a67a93af
+    upload_filename: T--IISER-Pune-India--Graphs--Biomass vs Sucrose.jpg
   assets\fonts\FSEX300.ttf:
     link_URL: https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf
     md5: 9de66fe4842edf59e46e15c90e686087
@@ -7,10 +19,18 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/0/0b/T--IISER-Pune-India--pngs--adb6862b5026e5fe00128d2997a48f13.png
     md5: 96d4cca5600d39a069f503a9d4042cd3
     upload_filename: T--IISER-Pune-India--pngs--adb6862b5026e5fe00128d2997a48f13.png
+  assets\pngs\avataaars.png:
+    link_URL: https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png
+    md5: f0a1263b1d388db55123e92e07f93b77
+    upload_filename: T--IISER-Pune-India--pngs--avataaars.png
   assets\svgs\SynBactory.svg:
     link_URL: https://2021.igem.org/wiki/images/e/e3/T--IISER-Pune-India--svgs--SynBactory.svg
     md5: 65d999139cafe645ca190b0deb1ca1c5
     upload_filename: T--IISER-Pune-India--svgs--SynBactory.svg
+  assets\svgs\arrow-up-square-fill.svg:
+    link_URL: https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg
+    md5: 32d77e30779ce88a3ae97ee5980a9fd5
+    upload_filename: T--IISER-Pune-India--svgs--arrow-up-square-fill.svg
   assets\svgs\layered-waves-haikei-1.svg:
     link_URL: https://2021.igem.org/wiki/images/f/fa/T--IISER-Pune-India--svgs--layered-waves-haikei-1.svg
     md5: 720a890035686d279ae9d49925f44d19
@@ -24,9 +44,12 @@ assets:
     md5: 737d922cb7a8711507202a329c1e9def
     upload_filename: T--IISER-Pune-India--svgs--synbactory2.svg
 css:
+  css\DryLabPage.css:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css
+    md5: 8f4ddcd79588db31abb922d8f274f533
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: 91135790e678cc515049ad0ef390a123
+    md5: 33b6d62fdef31e367a43acf2f2a11266
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -35,24 +58,48 @@ css:
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
-    md5: 3125e5505480d7629869c0504302bf9e
+    md5: a579a5e831d8ab72504f3cf039fd24da
 html:
+  Coculture.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
+    md5: c56cd32820435336e175499c38da79e5
+  Cyanobacteria.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria
+    md5: bacedf0c1e56630806b7c8faf583a109
+  DryLabOverview.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview
+    md5: 2f74d110cfa953132367540691fe8870
+  EColi.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
+    md5: ae2e1f54de1fb54e342520c05aa34e22
+  Model.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/Model
+    md5: 6b54ea8878b128a3baa667c66b06364d
   SB-index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: 27688d0e720572e59694a1ce88c106db
   SB.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/SB
-    md5: 808ad24ea6dcc7dce39c220f910ba806
+    md5: 781d00935a7468ff93d59af5514a62ca
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: ec302b140de2bb526cdbfd54cf9c0255
+  lastyear.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/lastyear
+    md5: ''
   theming-kit.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/theming-kit
     md5: f6ffdd2c777593e6fa1d90f8ac10a8a7
+  thisyear.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/thisyear
+    md5: 81364dd4a76436df6e61743b7d59f1d2
 js:
   js\bootstrap-bundle.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript
     md5: 0aa8d64e726c4a57adb5c88f9115996b
+  js\jquery.min.js:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript
+    md5: dc5e7f18c8d36ac1d3d4753a87c98d0a
   js\main.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript
-    md5: d54d239a91184f7c9e1bccae0e20b065
+    md5: 7a7c17397cb2d1018236b9d275aa7b2f
