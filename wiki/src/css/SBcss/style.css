@@ -11251,6 +11251,7 @@ textarea.form-control-lg {
 .cell {
   padding: 6px 12px;
   display: table-cell;
+  color: #212529;
 }
 
 @media screen and (max-width: 580px) {
