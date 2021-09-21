@@ -39,6 +39,10 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg
     md5: ff942ebcf4c2390d26ec43808f60cf99
     upload_filename: T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg
+  assets\svgs\layered-waves-haikei-3.svg:
+    link_URL: https://2021.igem.org/wiki/images/e/e5/T--IISER-Pune-India--svgs--layered-waves-haikei-3.svg
+    md5: 8eff97b67e7a32efa878752f89a9e84a
+    upload_filename: T--IISER-Pune-India--svgs--layered-waves-haikei-3.svg
   assets\svgs\synbactory2.svg:
     link_URL: https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg
     md5: 737d922cb7a8711507202a329c1e9def
@@ -46,10 +50,10 @@ assets:
 css:
   css\DryLabPage.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css
-    md5: 8f4ddcd79588db31abb922d8f274f533
+    md5: 5e13c6ee4cdf5bc4c8c9dddb47a5aba1
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: 33b6d62fdef31e367a43acf2f2a11266
+    md5: ce1f34694f847b54a6370ac26de87355
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -58,8 +62,11 @@ css:
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
-    md5: a579a5e831d8ab72504f3cf039fd24da
+    md5: 44093fc2a1f7055903bf79284c45180e
 html:
+  BasicParts.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/BasicParts
+    md5: c1694e0b19be24c083aa97fbe9577d53
   Coculture.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
     md5: c56cd32820435336e175499c38da79e5
@@ -74,7 +81,7 @@ html:
     md5: ae2e1f54de1fb54e342520c05aa34e22
   Model.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Model
-    md5: 6b54ea8878b128a3baa667c66b06364d
+    md5: 30f040bfcebfd985bb29dee7f7758745
   SB-index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: 27688d0e720572e59694a1ce88c106db
