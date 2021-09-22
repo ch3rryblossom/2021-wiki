@@ -151,6 +151,7 @@
                             <li class="nav-item"><a class="nav-link" href="#4">Biomass vs Sucrose</a></li>
                             <li class="nav-item"><a class="nav-link" href="#5">Sucrose Production</a></li>
                             <li class="nav-item"><a class="nav-link" href="#6">Identifying Over Expressions and Knockouts</a></li>
+							<li class="nav-item"><a class="nav-link" href="#7">References</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -269,8 +270,13 @@
 			        </ol>
 			        <br><br><br>
 
+
                     <!-- TARGETS FOR KNOCKOUTS-->
                     <h2 class="h2">Targets for Knockouts</h2>
+					<br><br><br><br><br><br><br><br><br><br>
+					<!-- REFERENCES -->
+					<h1 id="7">References</h1>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>		
                 </div>
             </div>        
 		</div>
@@ -318,4 +324,108 @@
 		});
 
 	</script>
+
+		<!-- SCRIPT FOR SCROLL AWARE SIDEBAR HIGHLIGHT -->
+		<script>
+		
+			$(document).ready(function() {
+				  $(window).scroll(function() {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#1").offset().top;
+					var div_two_top = $("#2").offset().top;
+					var div_three_top = $("#3").offset().top;
+					var div_four_top = $("#4").offset().top;
+					var div_five_top = $("#5").offset().top;
+					var div_six_top = $("#6").offset().top;
+					var div_seven_top = $("#7").offset().top;
+	
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#1"]').hasClass('sidenav-active')) {
+							$('a[href="#1"]').addClass('sidenav-active');
+						}
+	
+						if ($('a[href="#2"]').hasClass('sidenav-active')) {
+							$('a[href="#2"]').removeClass('sidenav-active');
+						}
+	
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#1"]').hasClass('sidenav-active')) {
+							$('a[href="#1"]').removeClass('sidenav-active');
+						}
+	
+						if ($('a[href="#3"]').hasClass('sidenav-active')) {
+							$('a[href="#3"]').removeClass('sidenav-active');
+						}
+	
+						if (!$('a[href="#2"]').hasClass('sidenav-active')) {
+							$('a[href="#2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#2"]').hasClass('sidenav-active')) {
+							$('a[href="#2"]').removeClass('sidenav-active');
+						}
+	
+						if ($('a[href="#4"]').hasClass('sidenav-active')) {
+							$('a[href="#4"]').removeClass('sidenav-active');
+						} 
+	
+						if (!$('a[href="#3"]').hasClass('sidenav-active')) {
+							$('a[href="#3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#3"]').hasClass('sidenav-active')) {
+							$('a[href="#3"]').removeClass('sidenav-active');
+						}
+	
+						if ($('a[href="#5"]').hasClass('sidenav-active')) {
+							$('a[href="#5"]').removeClass('sidenav-active');
+						} 
+	
+						if (!$('a[href="#4"]').hasClass('sidenav-active')) {
+							$('a[href="#4"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#4"]').hasClass('sidenav-active')) {
+							$('a[href="#4"]').removeClass('sidenav-active');
+						}
+	
+						if ($('a[href="#6"]').hasClass('sidenav-active')) {
+							$('a[href="#6"]').removeClass('sidenav-active');
+						} 
+	
+						if (!$('a[href="#5"]').hasClass('sidenav-active')) {
+							$('a[href="#5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#5"]').hasClass('sidenav-active')) {
+							$('a[href="#5"]').removeClass('sidenav-active');
+						}
+	
+						if ($('a[href="#7"]').hasClass('sidenav-active')) {
+							$('a[href="#7"]').removeClass('sidenav-active');
+						} 
+	
+						if (!$('a[href="#6"]').hasClass('sidenav-active')) {
+							$('a[href="#6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top) {
+						// You are in div 7
+						if ($('a[href="#6"]').hasClass('sidenav-active')) {
+							$('a[href="#6"]').removeClass('sidenav-active');
+						}
+	
+						if (!$('a[href="#7"]').hasClass('sidenav-active')) {
+							$('a[href="#7"]').addClass('sidenav-active');
+						}
+					}
+				  });
+			});
+			
+		</script>
 </body>
