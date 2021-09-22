@@ -50,10 +50,10 @@ assets:
 css:
   css\DryLabPage.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css
-    md5: 5e13c6ee4cdf5bc4c8c9dddb47a5aba1
+    md5: 8f4ddcd79588db31abb922d8f274f533
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: ce1f34694f847b54a6370ac26de87355
+    md5: d0064afce18671187593b8293a7cc426
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -62,7 +62,7 @@ css:
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
-    md5: 44093fc2a1f7055903bf79284c45180e
+    md5: 10f5229e5feedf218572dc6dd94711c7
 html:
   BasicParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/BasicParts
@@ -79,9 +79,12 @@ html:
   EColi.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
     md5: ae2e1f54de1fb54e342520c05aa34e22
+  Engineering.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/Engineering
+    md5: 45304f44f5dc0d4938e31ade98fc6da0
   Model.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Model
-    md5: 30f040bfcebfd985bb29dee7f7758745
+    md5: 4561cbbd552356b7ad6562c6044e4dd1
   SB-index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: 27688d0e720572e59694a1ce88c106db
