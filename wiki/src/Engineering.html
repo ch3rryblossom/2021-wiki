@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/igem-reset.css">
+	<link rel="stylesheet" href="css/SBcss/style.css">
+   	<link rel="stylesheet" href="css/styleSB.css">
+    	<link rel="stylesheet" href="css/DryLabPage.css">
+	<style>/* Reset CSS */
+
+		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+		#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+		body, html {background-color:#212529; width: 100%; height: 100%;}
+		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+
+    </style>
+    <style>
+	       .content a {
+
+margin: auto;
+
+text-decoration: none;
+color: #371d31;
+position: relative;
+transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+z-index: 0;
+}
+.content a:after {
+content: '';
+height: 2px;
+position: absolute;
+bottom: 0;
+right: 0rem;
+left: 0rem;
+background-color: #d3251b;
+transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+transform-origin: bottom center;
+z-index: -1;
+}
+	            /* Card Styling
+		    .card {
+            max-width: 1050px;
+            margin: auto;
+            min-height: 40em;
+        }
+
+        .card-header, .card-header .nav-tabs {
+            padding-bottom: 0!important;
+            padding-top: 10px;
+            padding-left: 0!important;
+        }
+
+        .card .nav-link {
+            padding-left: 30px;
+            padding-right: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-bottom: 0;
+        }
+
+        .card p {
+            font-size: 1.25em;
+        }
+
+        .card {
+            border-color: #A2B2B2;
+        }
+
+        .card .nav-link {
+            color: #cc3333;
+        }
+
+        .card .nav-link.active {
+            color: #333;
+        }
+
+        .card .nav-link:hover, .card .nav-link::after {
+            border: 0;
+            border-bottom: 1px solid #d3251b;
+        }
+
+        .card .nav-link.active:hover, .card .nav-link.active::after {
+            color: #333;
+            background-color: #E2E2E2!important;
+            border: 0;
+        }
+
+        .card, .card .nav-link.active {
+            background-color: #E2E2E2;
+        }
+
+        .card-header {
+            background-color: #CCCCCC;
+        }
+
+        ol {
+            list-style: decimal;
+        }
+
+        ol ul {
+            list-style: disc;
+        }
+
+        .card a.exp-button {
+            color: #D3251B;
+            background-color: #E2E2E2;
+            border: 1px solid !important;
+            padding: 10px!important;
+        }
+
+        .card a.exp-button:hover, .card a.exp-button::after {
+            color: white;
+        } */
+        .tabbable{
+		    margin:5px;
+	    }
+	    .boxed{
+		border-color: #A2B2B2;
+		border-style: solid;
+		border-radius: 6px;
+	    }
+	    .tabbable .nav-tabs{
+		padding: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		background-color:#A2B2B2;
+	    }
+	    .tabbable li{
+		    margin-left: 20px;
+	    }
+	    .tab-content p{
+		    margin-top: 15px;
+	    }
+
+    </style>
+<body>
+    
+	<!-- NAVBAR SECTION -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+		<div class="nav-container">
+		  <a class="navbar-brand" href="#">
+			<img src="assets/svgs/synbactory2.svg">
+		  </a>
+		  <div class="center-expand">
+		</div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Home</a>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Team
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Members</a></li>
+			  <li><a class="dropdown-item" href="#">Attributions</a></li>
+			  <li><a class="dropdown-item" href="#">Collaborations</a></li>
+			  <li><a class="dropdown-item" href="#">Sponsors</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Project
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Design</a></li>
+			  <li><a class="dropdown-item" href="#">Description</a></li>
+			  <li><a class="dropdown-item" href="#">Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Contributions</a></li>
+			  <li><a class="dropdown-item" href="#">Engineering Success</a></li>
+			  <li><a class="dropdown-item" href="#">Future Implementation</a></li>
+			  <li><a class="dropdown-item" href="#">Safety</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Wet Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Experiments</a></li>
+			  <li><a class="dropdown-item" href="#">Constructs</a></li>
+			  <li><a class="dropdown-item" href="#">Measurement</a></li>
+			  <li><a class="dropdown-item" href="#">Lab Notebook</a></li>
+			  <li><a class="dropdown-item" href="#">Results</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Parts
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">Overview</a></li>
+			  <li><a class="dropdown-item" href="#">Basic</a></li>
+			  <li><a class="dropdown-item" href="#">Composite</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Dry Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
+			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
+			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Human Practices
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="#">iHP</a></li>
+			  <li><a class="dropdown-item" href="#">Public Engagement</a></li>
+			  <li><a class="dropdown-item" href="#">Education</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="#">Judging Form</a>
+		      </li>
+		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
+		    </ul>
+		  </div>
+		</div>
+	</nav>
+
+    <!-- TITLE SECTION -->
+    
+    <div class="section-1">
+        <h1><br><br><br><br>Engineering</h1>
+    </div>
+        
+    <!-- WAVES SPACER -->
+
+    <div class="spacer layer1"></div>
+
+    <!-- CONTENT + SIDENAV SECTION -->
+
+    <div class="second-div container-fluid">
+        <div class="row">
+            <!-- SIDENAV -->
+            <div class="col-lg-3 col-md-3">
+                <div class="sidenav">
+                    <nav>
+                        <ul id="sidenav-id">
+                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="col-lg-9 col-md-9">
+                <div class="content">
+                    <h1 id="1">Introduction</h1>
+                    <hr><br><br><br>
+		<!--    <div class="card">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs" id="main-card-header">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#d" data-toggle="tab" role="tab">Design</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#e" data-toggle="tab" role="tab">Experiments</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#a" data-toggle="tab" role="tab">Assay</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#l" data-toggle="tab" role="tab">Learn</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#i" data-toggle="tab" role="tab">Improve</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="d">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#d-m" data-toggle="tab" role="tab">Modelling</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#d-b" data-toggle="tab" role="tab">Biobrick</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="d-m">
+                                                    <!-- <h2>Modelling</h2>
+                            
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <ul class="nav nav-tabs card-header-tabs">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link active" href="#d-m-d" data-toggle="tab" role="tab">Design</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-m-b" data-toggle="tab" role="tab">Build</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-m-t" data-toggle="tab" role="tab">Test</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-m-l" data-toggle="tab" role="tab">Learn</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-m-i" data-toggle="tab" role="tab">Improve</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane fade show active" id="d-m-d">
+                                                                    <!-- <h3>Modelling - Design</h3>
+                            
+                                                                    <p>We realised that to design a suitable inhibitor, we would require a computational approach, in order to shortlist possible interactions we could target. We contacted Dr Madhusudhan MS of IISER Pune and he generously offered to help us, and along with Tejashree Kanitkar, a PhD student from his lab, we designed the basic layout of our dry lab and modelling experiments.</p>
+
+                                                                    <p>Our modelling approach has the following steps:</p>
+
+                                                                    <ol>
+                                                                        <li>Extraction of available data from the Protein Data Bank<sup>[7]</sup> and further analysis and shortlisting of potential PDB IDs that could be used in our project</li>
+                                                                        <li>Identification of the interacting regions of the human protein and the parasite protein.</li>
+                                                                        <li>Computational mutagenesis of the interacting region</li>
+                                                                        <li>Scoring the mutants and doing some advanced studies for stability in silico</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-m-b">
+                                                                    <!-- <h3>Modelling - Build</h3> 
+                            
+                                                                    <p>We started with extracting data from the Protein Data Bank using advanced search and a custom web-parser script based on python and found over 400 hits which we narrowed down to 47 interactions.<sup>[8]</sup> We did literature studies and shortlisted 5 interactions to work with. We performed computational saturation mutagenesis for the identified interacting region using a custom python script built on top of Chimera and obtained mutants.<sup>[8]</sup> The mutants were scored based on their interacting energy using FoldX.<sup>[9]</sup> We shortlisted 3 mutant interactions with most negative interaction energy for further studies.</p>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-m-t">
+                                                                    <!-- <h3>Modelling - Test</h3>
+                            
+                                                                    <p>We ran Molecular Dynamics simulations for these inhibitors to study their interaction in silico. We got access to the PARAM BRAHMA facility under the National Supercomputing Mission, Government of India at IISER Pune for our computational needs. We performed the simulations as described in the <a href="https://2020.igem.org/Team:IISER-Pune-India/Model">Modelling</a> page of our project and analysed the results.</p>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-m-l">
+                                                                    <!-- <h3>Modelling - Learn</h3> 
+                            
+                                                                    <p>We found that some inhibitors did not interact with the parasite protein as expected. One reason may have been the small size which leads to structural instabilities. From the iBEC<sup>[10]</sup> proposal feedback we also learnt that the PfEMP1 interaction which we had targeted so far is highly variable. We also faced problems in doing homology modelling of cyclic peptides.</p>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-m-i">
+                                                                    <!-- <h3>Modelling - Improve</h3> 
+                            
+                                                                    <p>From our results, we realised that we needed to search for more non-variable interactions of the plasmodium and the human proteins. We analysed how the distance between the centroids of the interacting proteins evolved over time during the MD simulations and the intermolecular hydrogen bonds between them. As for the homology modelling for cyclic peptides, we contacted Dr David Norman, College of Life Sciences, University of Dundee, for help and he generously provided us with tutorials to build a cyclic peptide using homology MODELLER.<sup>[11]</sup></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                </div>
+            
+                                                <div class="tab-pane fade" id="d-b">
+                                                    <!-- <h2>Biobrick</h2> 
+                            
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <ul class="nav nav-tabs card-header-tabs">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link active" href="#d-b-d" data-toggle="tab" role="tab">Design</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-b-b" data-toggle="tab" role="tab">Build</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-b-t" data-toggle="tab" role="tab">Test</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-b-l" data-toggle="tab" role="tab">Learn</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="#d-b-i" data-toggle="tab" role="tab">Improve</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="tab-content">
+                            
+                                                                <div class="tab-pane fade show active" id="d-b-d">
+                                                                    <!-- <h3>Biobrick - Design</h3> --
+                            
+                                                                    <p>We conceptualized cyclotides to contain inhibitory peptides in a suitable loop to competitively inhibit the host-parasite interactions of interest. After extensive literature review, we finalised on the cyclotide Kalata B1 which is 29 amino acids long with 6 loops divided by 3 cysteines as a knot. Based on <em>in-silico</em> modelling, we decided on the insert sequence for potential competitive inhibition (in loop 6) to graft in pET28-a(+) vector.</p>
+                            
+                                                                    <p>We also planned to insert host and parasite proteins into the same vector to express and study their interaction in vitro and the effect of the cyclotide inhibitor on their binding affinity. For tagging the parasite and host proteins we planned to use polyhistidine and Strep tags respectively. This differential tagging is to prevent the host protein from non-specifically interacting with the stationary phase (Ni-NTA) and yielding a false positive interaction with 6xHis-tagged parasite protein immobilized on the stationary phase.</p>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-b-b">
+                                                                    <!-- <h3>Biobrick - Build</h3> --
+                            
+                                                                    <p>We obtained the cyclotide Kalata B1 precursor (OAK1) and competitive inhibitor sequences from the modelling team. We built 1-3 composite biobricks depending on the potential inhibitors. Codon-optimised inhibitors were grafted into loop 6 of OAK1 and loop 3 was replaced with the Strep tag for purification. We also obtained wild type protein sequences from PDB to build basic Biobrick parts.</p>
+                            
+                                                                    <strong>Building the inhibitor construct:</strong> <br>
+                                                                    <p>The sequence of nucleotides from the start to the stop codon was removed and the cyclotide construct containing the inhibitory peptide was inserted into the plasmid. A similar procedure was followed for the host and parasite protein.</p>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-b-t">
+                                                                    <!-- <h3>Biobrick - Test</h3> -
+                            
+                                                                    <p>Our Biobricks were built on the Benchling platform. Further analysis was done on various softwares including Geneious Prime, Snapgene and Benchling to check for RFC 10 criteria and this was cross checked with our mentors. We tested our Biobricks for the ORFs. The initial codon optimisation was done using the GeneSmart tool of genscript and was tested again with codon optimisation tool in Benchling for better results.</p>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-b-l">
+                                                                    <!-- <h3>Biobrick - Learn</h3> --
+                            
+                                                                    <p>While building Biobricks we encountered various problems. We learned that Biobricks for the split Intein approach needed to be tested for at least 3 loops. Even though we grafted our inhibitors in loop 6, the problem of circularisation still persisted. Another issue that we came across after building the ORF was breaking at both ends of the insert sequence. This problem occurred due to the 7th general nucleotide(N) present at the end of the BSA restriction site i.e (GGTCTCN).</p>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="d-b-i">
+                                                                    <!-- <h3>Biobrick - Improve</h3> --
+                            
+                                                                    <p>To solve the circularisation issue we took the circularisation construct (BBa_K1362000) and removed the RFP gene from it. We then grafted the Cyclotide KB 1 sequence into the construct which was subsequently grafted into pET 28-a(+). We made sure that ORFs were on a positive strand. The seventh nucleotide was removed from both strands to complete the ORF.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                </div>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab-pane fade" id="e">
+                                    <!-- <h2>Experiments</h2> -->
+            
+                                    <!-- <p>This is where we built the inhibitory proteins in the lab.</p> --
+            
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#e-d" data-toggle="tab" role="tab">Design</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#e-b" data-toggle="tab" role="tab">Build</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#e-t" data-toggle="tab" role="tab">Test</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#e-l" data-toggle="tab" role="tab">Learn</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#e-i" data-toggle="tab" role="tab">Improve</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="e-d">
+                                                    <!-- <h3>Experiments - Design</h3> --
+            
+                                                    <p>Designing the experiments was the complete second module of our project. During the synthesis of peptides in the lab we aimed to perform a wide variety of experiments from cell cultures, PCRs, gel electrophoresis, mass spectroscopy, and microscopy to accomplish cloning of the desired sequences, expression and purification of proteins. It would also involve a few experiments to validate the results such as SDS-PAGE.</p>
+            
+                                                    <p>For cloning we would use Gibson assembly techniques. Once cloning is successful, the next step is the expression of the cloned plasmid into the vector. Protein purification would be done by expressing Strep tag for the Host protein and 6Xhis tag for parasite proteins. The purified protein would then be run over SDS-PAGE to check for its purity.</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="e-b">
+                                                    <!-- <h3>Experiments - Build</h3> --
+            
+                                                    <p>The required plasmid was obtained from the lab and the gene of interest was ordered from IDT with the primers designed using Gibson. Once all the sequences are received, follow the Gibson assembly steps detailed in the Experiments Section.</p>
+            
+                                                    <p>Protein gene overexpression would be done in E.coli BL21(DE3) strain using the T7 promoter system. The module 2 of experiments involves Purification by 6xHis tag and Strep tag. 6xHis tag purification is done by preparation of lysates after cytoplasmic expression of His-tag protein under native conditions followed by batch purification under native conditions. Purification of strep tag proteins is done by gravity flow columns.</p>
+            
+                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
+                                                </div>
+                                                <div class="tab-pane fade" id="e-t">
+                                                    <!-- <h3>Experiments - Test</h3> --
+            
+                                                    <p>Cloning would be tested by Single restriction digestion based on length and number of fragments in reaction and PCR amplification using gibson primers and sequencing of the cloned plasmids. The positive control should yield ampicillin resistant colonies when transformed into E.Coli. Transformed E.coli BL21 DE3 culture for incubation and purified protein would be run over SDS-PAGE analysis.</p>
+            
+                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
+            
+                                                </div>
+                                                <div class="tab-pane fade" id="e-l">
+                                                    <!-- <h3>Experiments - Learn</h3> --
+            
+                                                    <p>
+                                                        During planning of the experiment design we also came up with the problems we might face while performing the experiments. The protein might not get expressed, it might be degraded or there could be insoluble protein in the column.
+                                                    </p>
+                                                    <p>General difficulties one might encounter in purification are no, or weak binding of proteins to the strep tag column, contamination of proteins, protein precipitation during purification. We have also listed possible solutions for the above problems.</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="e-i">
+                                                    <!-- <h3>Experiments - Improve</h3> --
+            
+                                                    <p>If we face any problems in Gibson cloning we have considered homologous cloning as an alternative which is very similar to Gibson. For the detailed troubleshooting of the individual sections refer to the respective experiments section on the project page.</p>
+            
+                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="a">
+                                    <!-- <h2>Assay</h2> --
+            
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#a-b" data-toggle="tab" role="tab">Build</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#a-t" data-toggle="tab" role="tab">Test</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#a-l" data-toggle="tab" role="tab">Learn</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#a-i" data-toggle="tab" role="tab">Improve</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="a-b">
+                                                    <!-- <h3>Assay - Build</h3> --
+            
+                                                    <p>After designing the drug, another essential step in our project would be to test its efficiency in combating the disease. Assay building is a molecular biology procedure for testing or measuring a drug's activity in an organic sample. Various molecular biology experiments and assays can be performed to test, verify, and incorporate the computational predictions. The goal is to select a method that requires the least amount of manipulation and pretreatment of the samples to accommodate substances that intervene with the assay.</p>
+            
+                                                    <p>In our project, the main focus was to develop experiments for testing the interaction between inhibitory drugs and the binding epitomes of the plasmodium proteins.</p>
+            
+                                                    <p>The following assays were employed for testing competitive binding of the designer cyclotide:</p>
+            
+                                                    <ol>
+                                                        <li>
+                                                            <h5>Solid-phase protein interaction assay</h5>
+                                                            <p><em>In vitro</em>  by performing affinity chromatography on a Ni-NTA column with the parasite protein immobilized to it and flowing the host protein through it with and without the cyclotides. The difference between the amount of protein left in the supernatant as compared to what was added indicates the bound fraction. This method assesses specific protein-protein interactions at physiological conditions, utilizes relatively small amounts of protein, is free of protein modification, does not require specialized instrumentation and results in quantitative measurements.</p>
+                                                        </li>
+                                                        <li>
+                                                            <h5>In vivo in <em>Plasmodium falciparum</em> parasite cultures</h5>
+                                                            <ul>
+                                                                <li><strong>Half maximal inhibitory concentration (IC50) assay</strong> is commonly used to measure the potency of a drug in pharmacological research. IC50 is a measure of the potency of a substance in inhibiting any specific biological or biochemical function. This assay is fast, relatively inexpensive with no involvement of radioactive isotopes. Due to high affinity towards DNA ,the assay is very sensitive and IC50 values of known drugs obtained were comparable.</li>
+                                                                <li><strong>RBC invasion assay</strong> is a flow cytometry-based assay for measuring invasion of RBC by <em>P. falciparum</em> merozoites. Although comparatively expensive, the key advantage of flow cytometry is that a very large number of particles can be evaluated in a very short time.</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ol>
+            
+                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
+                                                </div>
+                                                <div class="tab-pane fade" id="a-t">
+                                                    <!-- <h3>Assay - Test</h3> --
+            
+                                                    <h4>Assays Standardization</h4>
+                                                    <p>
+                                                        Standardization aims to ensure that assays of the same analyte in the same samples, done at different places or at different times or both, are readily comparable. Standardization is especially desirable because all external quality assessment surveys have shown that this type of method involves a much greater variability than traditional assays. In our project, we have three assays. The RBC invasion assay is a flow cytometry-based assay for which the general standardization protocol is available in <a href="https://2020.igem.org/Measurement/Protocols" target="_blank">IGEM’s standard measurement protocols</a>. We will contribute the standardization protocols for Solid-phase protein interaction assay and IC50 assay to the same as a part of our project.
+                                                    </p>
+                                                </div>
+                                                <div class="tab-pane fade" id="a-l">
+                                                    <!-- <h3>Assay - Learn</h3> --
+            
+                                                    <p>
+                                                        Assays can yield unexpected or failing results for a variety of reasons. Even simple assays include multiple steps where mistakes are likely to happen, which significantly increases the difficulty of finding the error sources.
+                                                    </p>
+                                                    <p>
+                                                        Some potential error sources could include: incorrect, contaminated or expired reagents, equipment error, technician error, and many more. Therefore, resolving the cause of unexpected results is often a time consuming and expensive task in laboratory research. After studying the protocols for each assay in detail, we found some possible errors listed below.
+                                                    </p>
+            
+                                                    <ol>
+                                                        <li>
+                                                            <strong>Solid-phase protein interaction assay</strong>
+                                                            <p>We need a particular concentration of proteins for proceeding to protocol 3 in this assay. But we might end up getting different concentration values for the bicinchoninic acid (BCA) assay.This has to be changed to the needed concentration for accurate results.</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>Half maximal inhibitory concentration (IC50) assay</strong>
+                                                            <p>Due to handling errors, we may get less growth in the zero drug well than in any well with some drug concentration. This might be due to the addition of more cells in a well or more dye in a well.Also,the solvent we use might contribute to the inhibition effect.Our results may contain some background noise which have to be deducted from readings for more accuracy.</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>RBC invasion assay</strong>
+                                                            <p>Treating infected erythrocytes with α-2-3,6,8– Vibrio cholera neuraminidase trypsin and chymotrypsin can give us unexpected results as these three chemicals can block invasion completely. Because of lack of standardization, there is a chance of FACS not giving promising results.Usage of sorbitol in synchronisation of ring stage in infected erythrocytes can affect reinvasion.</p>
+                                                        </li>
+                                                    </ol>
+            
+                                                </div>
+                                                <div class="tab-pane fade" id="a-i">
+                                                    <!-- <h3>Assay - Improve</h3> --
+            
+                                                    <p>One mode of decreasing assay failure is to ensure equipment errors are removed or at least minimised. This may be done by optimizing the equipment employed before running the assay. Analyzing the possible error sources that can hinder our assay process, we came up with some precautions and troubleshooting techniques that can be adapted to modify these assays.</p>
+            
+                                                    <ol>
+                                                        <li>
+                                                            <strong>Solid-phase protein interaction assay</strong>
+                                                            <p>Depending on what concentration we get in the BCA assay, we will      increase or decrease to attain the concentration we need.</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>Half maximal inhibitory concentration (IC50) assay</strong>
+                                                            <p>To avoid handling errors,this experiment is done in triplets and their average is taken. RPMI and DMSO control are done to check whether the drug solvent is responsible for any inhibition effect or not. DMSO is the drug solvent. If the fluorometer readings of DMSO control and RPMI control are similar then that means that the solvent is not contributing to the inhibition effect.A blank control with no parasites can be performed to deduct the background noise from all readings.To check if the proposed drug acts as an inhibitor we first select a broad drug concentration range and if the IC50 value is obtained then the experiment is performed again with a narrow drug concentration range to get a more accurate value.</p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>RBC invasion assay</strong>
+                                                            <p>Treatment of ring stage infected O+ erythrocytes with a solution of α-2-3,6,8– Vibrio cholera neuraminidase, trypsin and chymotrypsin can be done using lower concentrations and the relative effectiveness of different peptide inhibitors can be studied.If FACs fail to give promising results, fluorometry based analysis can be performed using a spectrophotometer, which will be speedier as well. To avoid sorbitol treatment as much as possible, fresh parasite cultures can be revived to grow in a synchronized manner for the initial cycles.</p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                                <div class="tab-pane fade" id="l">
+                                    <!-- <h2>Learn</h2> --
+                                    <p>We developed each inhibitor sequence after an intensive computational analysis of each interaction. Although, in the worst scenario, there might come a time when these inhibitors fail. We targeted crucial interactions between the host and parasite protein that would have the greatest possibility of successfully preventing entry and infection of the Plasmodium parasite.</p>
+                                </div>
+                                <div class="tab-pane fade" id="i">
+                                    <!-- <h2>Improve</h2> --
+                                    <p>Directed Evolution(DE), a method used in protein engineering that mimics natural selection, can be used as our last expedient if our inhibitors fail to provide results. DE generates random mutations in the gene of interest and can be used as an alternative to rationally designing modified proteins. Site-directed mutagenesis(SDM) is an invitro method used in DE for creating a specific mutation in a known sequence. In our project, we can use this method to select or screen for mutations with the desired property of inhibiting our studied interactions. The simplest and most broadly applicable SDM protocol is the QuickChange Site-Directed Mutagenesis System (QCM) developed by Stratagene, which we plan to use in our project.</p>
+            
+                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="tabbable boxed parentTabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#set1">Tab 1</a>
+                            </li>
+                            <li><a href="#set2">Tab 2</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="set1">
+                            <div class="tabbable">
+                                <ul class="nav nav-tabs">
+                                <li class="active"><a href="#sub11">Tab 1.1</a>
+                                </li>
+                                <li><a href="#sub12">Tab 1.2</a>
+                                </li>
+                                </ul>
+                                <div class="tab-content">
+                                <div class="tab-pane fade active in" id="sub11">
+                                    <p>Tab 1.1 content</p>
+                                </div>
+                                <div class="tab-pane fade" id="sub12">
+                                    <p>Tab 1.2 content</p>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, officia exercitationem earum maiores cumque dolores nobis corporis. Tenetur, voluptas voluptate exercitationem minima pariatur a harum amet eos accusantium fuga est.</p>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="set2">
+                            <div class="tabbable">
+                                <ul class="nav nav-tabs">
+                                <li class="active"><a href="#sub21">Tab 2.1</a>
+                                </li>
+                                <li><a href="#sub22">Tab 2.2</a>
+                                </li>
+                                </ul>
+                                <div class="tab-content">
+                                <div class="tab-pane fade active in" id="sub21">
+                                    <p>Tab 2.1 content</p>
+                                </div>
+                                <div class="tab-pane fade" id="sub22">
+                                    <p>Tab 2.2 content</p>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>   
+		    <p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+			<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    <p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+
+
+                    <figure>
+
+                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
+
+
+
+                    </figure>
+
+
+
+                    <h1 id="2">Section 2</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
+                    <br>
+		    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
+                    
+
+			</div>
+
+		</div>
+
+        </div>
+
+    </div>
+
+    <div class="header"></div>
+    <div class="line" id="scrollIndicator"></div>
+
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 80;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+
+	</script>
+	<script>    
+        $(function(){
+            $('#sidenav-content a.tab-link').click(function(){
+                var target = $(this).attr('href');
+                $('#main-card-header a[href="' + target+ '"]').tab('show');
+                
+                $('html, body').animate({
+                    scrollTop: $('#scroll-placeholder').offset().top - 70
+                }, 200);
+            });
+        });
+	</script>
+    	<script>
+            $("ul.nav-tabs a").click(function (e) {
+      e.preventDefault();  
+        $(this).tab('show');
+    });
+    
+        </script>
+</body>
