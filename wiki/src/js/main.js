@@ -19,6 +19,9 @@ if (window.location.href.includes('igem.org')) {
 
 //////////// Back to top button @Namasi22
 
+// var backtotopheight=pageheight/4.65
+// ^ in case we need
+
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
@@ -59,3 +62,21 @@ function topFunction() {
 			= percentage + '%';
 	}
 //////////// End scrollbar
+
+//////////// Carousel/Slideshow
+
+var total = $('.item').length;
+var actualtotal = 80;
+var currentIndex = $('div.active').index() + 1;
+$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+// This triggers after each slide change
+$('.carousel').on('slid.bs.carousel', function () {
+    currentIndex = $('div.active').index() + 1;
+
+  // Now display this wherever you want
+  var slideshowtext = currentIndex + '/' + actualtotal;
+    $('#slidetext').html(slideshowtext);
+});
+
+//////////// Slideshow end
