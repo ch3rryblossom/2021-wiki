@@ -85,7 +85,7 @@
 		z-index: 0.5;
 		width: 3px;
 		height: 35vh;
-		background-color: #f1f1f1;
+		background-color: #1f5e4c;
 	}
 		
 .text {
@@ -96,7 +96,7 @@
 	}
 		
 .line {
-		background: rgba(160, 28, 248, 0.829);
+		background:#28c79b;
 		height: 0%;
 		border-radius: 4px;
 		width: 3px;
@@ -142,7 +142,7 @@
       }
   
   .sidenav a:hover {
-	color: #ffffff;
+	color: #000;
 	background-color: #28c79b;
 	border-radius: 20px!important;
       }
