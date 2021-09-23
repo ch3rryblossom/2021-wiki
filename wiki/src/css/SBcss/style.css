@@ -11130,6 +11130,7 @@ textarea.form-control-lg {
 
 .dropdown-menu .dropdown-item {
   color: white !important;
+  text-decoration: none;
 }
 
 /* ============ desktop view ============ */
