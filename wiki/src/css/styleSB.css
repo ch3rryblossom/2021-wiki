@@ -135,7 +135,7 @@
   
   .sidenav a {
 	text-align: left;
-	color: #cc3333;
+	color: #fff;
 	font-size: 2vmin!important;
 	  /* font-family: 'Titillium Web'!important; */
     font-style: normal !important;
@@ -144,12 +144,12 @@
   
   .sidenav a:hover {
 	color: #ffffff;
-	background-color: #cc3333;
+	background-color: #28c79b;
 	border-radius: 20px!important;
       }
  .sidenav-active{
 	color: #ffffff;
-	background-color: #d3c3c3b2;
+	background-color: #28c79a4b;
 	border-radius: 20px!important;
  } 
   @media (max-width: 900px) {
@@ -271,7 +271,70 @@ html {
 /* .content end */
 
 
+/* Sponsor Bar */
+/* Footer bar */
+.footer {
+	width: 100%;
+	background-color: rgb(59, 59, 59);
+	border-top: solid 10px #49ccecb2;
+	display: block;
+}
 
+/* Region with logos */  
+.footer-wrapper {
+	height: fit-content;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+	justify-content: space-evenly;
+    padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+.teamlogo {
+	padding-right: 20px;
+	border-right: solid 2px #000
+}
+
+.vertical-stack {
+	display: grid;
+	grid-template-columns: auto;
+	align-items: inherit;
+	justify-content: inherit;
+	height: inherit;
+	padding: inherit;
+	color:#000
+}
+
+.footer-links {
+	transition: transform.3s;
+}
+.footer-links:hover {
+	transform: scale(1.1);
+}
+
+.footer-links-socials{
+	transition: transform.6s;
+}
+.footer-links-socials:hover{
+	transform: scale(2);
+}
+
+.footer-text {
+	color: #000;
+	display: block;
+	margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+
+/* END OF SPONSOR BAR */
 
 
 
