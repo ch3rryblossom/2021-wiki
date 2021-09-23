@@ -260,6 +260,113 @@
 	</script>
 
 
+	<!-- SCRIPT FOR SCROLL AWARE SIDEBAR HIGHLIGHT -->
+	<!-- ------------------------------------------------------------------------------------------------------------- -->
+	<!-- MAKE SURE YOU CHANGE THE NUMBER OF DIVISIONS -->
+	<script>
+		
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var scroll_top = $(window).scrollTop();
+				var div_one_top = $("#1").offset().top;
+				var div_two_top = $("#2").offset().top;
+				var div_three_top = $("#3").offset().top;
+				var div_four_top = $("#4").offset().top;
+				var div_five_top = $("#5").offset().top;
+				var div_six_top = $("#6").offset().top;
+				var div_seven_top = $("#7").offset().top;
+	
+				if (scroll_top > div_one_top && scroll_top < div_two_top) {
+					//Division 1
+					if (!$('a[href="#1"]').hasClass('sidenav-active')) {
+						$('a[href="#1"]').addClass('sidenav-active');
+					}
+	
+					if ($('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').removeClass('sidenav-active');
+					}
+	
+				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+					// Division 2
+					if ($('a[href="#1"]').hasClass('sidenav-active')) {
+						$('a[href="#1"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').removeClass('sidenav-active');
+					}
+	
+					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+					//Division 3
+					if ($('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+					// You are in div 4
+					if ($('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+					// You are in div 5
+					if ($('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+					// You are in div 6
+					if ($('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#7"]').hasClass('sidenav-active')) {
+						$('a[href="#7"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_seven_top) {
+					// You are in div 7
+					if ($('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').removeClass('sidenav-active');
+					}
+	
+					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
+						$('a[href="#7"]').addClass('sidenav-active');
+					}
+				}
+			});
+		});
+		
+	</script>	
+
+	
 	<!-- Script for the slideshow, wherever needed -->
 	<script>
 		var total = $('.item').length;
