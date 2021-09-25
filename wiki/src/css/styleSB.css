@@ -166,7 +166,7 @@
 /* Second-div start */
 .second-div {
 	background-color: #212529 !important;
-      }
+}
   
 .second-div .content h1 {
 	text-align: left !important;
@@ -177,7 +177,7 @@
 	font-size: 6vmin !important;
 	
   
-      }
+}
   
 .second-div .content p {
 	padding-left: 5%;
@@ -185,11 +185,11 @@
 	/* font-family: "Titillium Web" !important; */
 	font-weight:400 !important;
 	font-size: 2.5vmin !important;
-      }
+}
   
 html {
-	  scroll-behavior: smooth;
-	}
+	scroll-behavior: smooth;
+}
 		  /* body{
 		      padding-top:65px;
 		      background:#edd1cb;
@@ -269,7 +269,9 @@ html {
         } */
 
 .graph {
-	justify-content: centre;
+	justify-content: center;
+	font-style: italic;
+	text-align: center;
 }
 
 /* .content end */
