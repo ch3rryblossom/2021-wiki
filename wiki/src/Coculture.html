@@ -196,11 +196,14 @@
 		var slider = document.getElementById("myRange");
 		var output = document.getElementById("rangeValue");
 		var slideimage = document.getElementById("rangeImage");
+		const imagearray = ['3%20Variables','Biomass%20vs%20CO_2','Biomass%20vs%20Sucrose','Biomass%20vs%20CO_2','3%20Variables'];
+
 		output.innerHTML = slider.value;
-		
+		output.innerHTML = '10x10';
+		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/3%20Variables.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value] + '.jpg"';
 		slider.oninput = function() {
 		  output.innerHTML = this.value*10 + 'x' + this.value*10;
-		  slideimage.innerHTML = '<img src="http://placehold.it/' + this.value*10 + 'x' + this.value*10 + '" width="400px" height="150px">';
+		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value] + '.jpg"';
 		}
 		</script>
 	<script>
