@@ -145,7 +145,7 @@
             </div>
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
-                <div class="content">
+                < class="content">
                     <h1 id="1">Introduction</h1>
                     <hr><br><br><br>
 		    <p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
@@ -172,10 +172,13 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
                     <br>
 		    <input type="range" min="1" max="5" step="1" value="1" id="myRange"><br>
-		    Size of Image:
+		    Image Number:
 		    <span id="rangeValue"></span>
 		    <span id="rangeImage"></span>
-		    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
+		    <span id="rangeImage"></span><br><br><h4>Image description:
+		    <b><span id="ImageDesc"></span></h4></b><br>
+		    
+		    <br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
                     
 
 			</div>
@@ -196,13 +199,17 @@
 		var slider = document.getElementById("myRange");
 		var output = document.getElementById("rangeValue");
 		var slideimage = document.getElementById("rangeImage");
+		var imageDesc = document.getElementById("ImageDesc");
 		const imagearray = ['3%20Variables','Biomass%20vs%20CO_2','Biomass%20vs%20Sucrose','Biomass%20vs%20CO_2','3%20Variables'];
+		const descarray = ['me','me when','me when the','poopoo','peepee'];
 
 		output.innerHTML = slider.value;
-		output.innerHTML = '10x10';
+		output.innerHTML = '1';
+		imageDesc.innerHTML = 'me'
 		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/3%20Variables.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg"';
 		slider.oninput = function() {
-		  output.innerHTML = this.value*10 + 'x' + this.value*10;
+		  output.innerHTML = this.value;
+		  imageDesc.innerHTML = descarray[this.value-1]
 		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg"';
 		}
 		</script>
