@@ -200,10 +200,10 @@
 
 		output.innerHTML = slider.value;
 		output.innerHTML = '10x10';
-		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/3%20Variables.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value] + '.jpg"';
+		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/3%20Variables.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg"';
 		slider.oninput = function() {
 		  output.innerHTML = this.value*10 + 'x' + this.value*10;
-		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value] + '.jpg"';
+		  slideimage.innerHTML = '<img src="assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg" width="400px" height="400px">' + '"assets/Graphs/Cyano/Basic/' + imagearray[this.value-1] + '.jpg"';
 		}
 		</script>
 	<script>
