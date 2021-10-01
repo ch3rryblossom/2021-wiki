@@ -11134,19 +11134,6 @@ textarea.form-control-lg {
 }
 
 /* ============ desktop view ============ */
-@media all and (min-width: 992px) {
-  .navbar .nav-item .dropdown-menu {
-    display: none;
-  }
-
-  .navbar .nav-item:hover .dropdown-menu {
-    display: block;
-  }
-
-  .navbar .nav-item .dropdown-menu {
-    margin-top: 0;
-  }
-}
 /* ============ desktop view .end// ============ */
 .table-header-section-wrapper {
   background-color: #212529;
