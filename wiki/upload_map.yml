@@ -137,7 +137,7 @@ css:
     md5: 3c69df1510f61703da41151296dcd364
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
-    md5: f2067d3402ca118b62f495a8bec07bb6
+    md5: 1c2ce3aabf96bdb06e53b2a1069351a9
   css\igem-reset.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css
     md5: b1747f1f028648114f53e89033b95e89
@@ -183,7 +183,7 @@ html:
     md5: 2f74d110cfa953132367540691fe8870
   EColi.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
-    md5: ae2e1f54de1fb54e342520c05aa34e22
+    md5: 79466eaaefe79862683d4c25164259c0
   Education.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Education
     md5: 33daac80007ff06295a79eb1fa834eb7
@@ -199,6 +199,9 @@ html:
   Model.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Model
     md5: 4561cbbd552356b7ad6562c6044e4dd1
+  Partnership.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/Partnership
+    md5: fb20e52ed12de051e6a8f8577a188c29
   SB-index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: 27688d0e720572e59694a1ce88c106db
@@ -211,12 +214,15 @@ html:
   lastyear.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/lastyear
     md5: ''
+  navbar.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/navbar
+    md5: cc297a767fc814fd46e5c4177dcdf85e
   theming-kit.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/theming-kit
     md5: f6ffdd2c777593e6fa1d90f8ac10a8a7
   thisyear.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/thisyear
-    md5: 52527d50aa5f4a51cd7e5279f458d794
+    md5: fb20e52ed12de051e6a8f8577a188c29
 js:
   js\bootstrap-bundle.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript
