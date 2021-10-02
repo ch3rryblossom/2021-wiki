@@ -26,7 +26,7 @@
 	<!-- NAVBAR SECTION -->
 
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
-		<div class="nav-container">
+		<div class="container-fluid nav-container">
 		  <a class="navbar-brand" href="#">
 			<img src="assets/svgs/synbactory2.svg">
 		  </a>
@@ -148,8 +148,9 @@
                             <li class="nav-item"><a class="nav-link" href="#3">MoMA</a></li>
                             <li class="nav-item"><a class="nav-link" href="#4">FSEOF</a></li>
                             <li class="nav-item"><a class="nav-link" href="#5">OptKnock</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">SteadyCom and d-FBA</a></li>
-							<li class="nav-item"><a class="nav-link" href="#7">References</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">SteadyCom</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#7">Dynamic FBA</a></li>
+							<li class="nav-item"><a class="nav-link" href="#8">References</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -265,12 +266,39 @@
 			
 
 					<!-- STEADYCOM -->
-					<h1 id="6">SteadyCom and d-FBA</h1>
-					<p> ENTER YOUR TEXT HERE @NAMASI @ARYA</p>
-
+					<h1 id="6">SteadyCom</h1> <br>
+					<p>SteadyCom is an algorithm used to analyze steady state behaviours of co-cultures, microbiomes and host-microbe interactions. Similar to FBA, SteadyCom assumes that there is no accumulation of metabolites and only looks at the fluxes of reactions. Apart from this, the crux of SteadyCom is the assumption that - at steady state (if a steady state exists) the growth rates of all the organisms is the same, so that one organism does not dominate and take over the entire population. Based on the constraints in the model, SteadyCom tries to maximize this community growth rate, and provides results including the biomass ratios of the organisms at steady state growth and fluxes of various reactions of the multi-species metabolic network.
+					</p>
+					<h3>The Logic:</h3> <br>
+					<ol class="a">
+						<li style="padding-left:1em;">Create a joint model which has all the reactions of every organism’s GSM and a separate community space to allow for the transfer of common extracellular metabolites between the separate extracellular compartments of the individual models.</li>
+						<li style="padding-left:1em;">The algorithm predicts steady state fluxes which maximizes the community growth rate, such that all organisms grow at this rate.</li>
+						<li style="padding-left:1em;">The fluxes of reactions out of individual organisms are multiplied by their biomass, so that abundances of organisms are taken into account in the interactions.</li>
+					</ol>
+					
+					<!-- dFBA -->
+					<h1 id="7">Dynamic FBA</h1>
+					<h3>Method</h3><br>
+					<p>Dynamic modelling here involves solving ordinary differential equations involving fluxes in the genome models as the rate/differential terms to produce curves which represent the amounts of metabolites present in the bioreactor as a function of time.
+						For example, when we optimize a model using FBA, we get the fluxes of all the reactions that allow the model to optimize its objective function. These fluxes can be thought of as time-derivatives of the concentration of the metabolites in the reaction involved. So, given an initial concentration of a metabolite, the FBA flux gives the derivative of the concentration at that point. Using this derivative, we can calculate the concentration of the metabolite at the next time step, and use this as the new initial concentration. This process can be repeated iteratively within the required time frame. 
+						</p><br>
+					<h3>The Algorithm:</h3><br>
+					<ol class="a">
+						<li style="padding-left:1em;padding-top: 0.3em;">Set the flux restrictions of the cyanobacteria uptake rates, of co2 and light, based on concentration of these present in the bioreactor available for uptake. </li>
+						<li style="padding-left:1em;padding-top: 0.3em;">Optimize the cyanobacteria model with sucrose production as its objective using FBA. This will naturally make the biomass flux of the cyanobacteria set to its lower bound 0. Biomass flux set to zero, implies that the rate of growth of biomass is zero. Hence, the maximized sucrose flux obtained from this result is the theoretical maximum sucrose yield possible from the model within the given constraints.
+						</li>
+						<li style="padding-left:1em;padding-top: 0.3em;">It is known that reaching the theoretical maximum yields of sucrose production is not very biologically feasible. So it is assumed that the salt stress provided to force cyanobacteria to produce sucrose, allows it to export sucrose out at some fraction of the maximum sucrose yield calculated above. This is referred to as the percentage productivity of sucrose flux in the cyanobacteria.
+						</li>
+						<li style="padding-left:1em;padding-top: 0.3em;">This productivity rate, x% of max sucrose flux, is now set as the lower bound for the sucrose export reaction in the cyanobacteria model, and the objective function is changed to biomass flux. An FBA is performed to maximize the biomass flux given this new constraint of sucrose production.</li>
+						<li style="padding-left:1em;padding-top: 0.3em;">The final results from this FBA are taken as the fluxes of the cyanobacteria model.</li>
+						<li style="padding-left:1em;padding-top: 0.3em;">The same process is repeated for the E. coli model, where the available sucrose in the bioreactor comes from the cyanobacteria flux calculated above. Butanol production is first optimized to find the maximum flux possible, then as above, some productivity for this reaction is set and biomass is optimized. 
+						</li>
+						<li style="padding-left:1em;padding-top: 0.3em;">All the fluxes from both the models provide the time derivatives of the corresponding metabolites, which are integrated and plotted. </li>
+					</ol>
+					
 
 					<!-- REFERENCES -->
-					<h1 id="7">References</h1>
+					<h1 id="8">References</h1>
 					<p> ENTER TEXT HERE </p>
 
 					<!-- END OF CONTENT -->
@@ -365,6 +393,7 @@
 				var div_five_top = $("#5").offset().top;
 				var div_six_top = $("#6").offset().top;
 				var div_seven_top = $("#7").offset().top;
+				var div_eight_top = $("#8").offset().top;
 
 				if (scroll_top > div_one_top && scroll_top < div_two_top) {
 					//Division 1
@@ -441,14 +470,27 @@
 					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
 						$('a[href="#6"]').addClass('sidenav-active');
 					}
-				} else if (scroll_top > div_seven_top) {
+				} else if (scroll_top > div_seven_top && scroll_top < div_eight_top) {
 					// You are in div 7
 					if ($('a[href="#6"]').hasClass('sidenav-active')) {
 						$('a[href="#6"]').removeClass('sidenav-active');
 					}
 
+					if ($('a[href="#8"]').hasClass('sidenav-active')) {
+						$('a[href="#8"]').removeClass('sidenav-active');
+					} 
+
 					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
 						$('a[href="#7"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_eight_top) {
+					// You are in div 8
+					if ($('a[href="#7"]').hasClass('sidenav-active')) {
+						$('a[href="#7"]').removeClass('sidenav-active');
+					}
+
+					if (!$('a[href="#8"]').hasClass('sidenav-active')) {
+						$('a[href="#8"]').addClass('sidenav-active');
 					}
 				}
   			});
