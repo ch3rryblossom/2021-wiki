@@ -146,7 +146,7 @@ css:
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
-    md5: ba22b7b7866a3435d5ef820eb99f7658
+    md5: 8265d8e3b4a1bcf735efcd91dc4c4923
 html:
   Attributions.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Attributions
@@ -156,7 +156,7 @@ html:
     md5: 8ad3bae8d3213ae73bf10740a8446689
   Coculture.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
-    md5: 819338bc81a4e156478686cd107d5f2c
+    md5: f3b173ffb6c8a08b77eab510c11df4a7
   Collaborations.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Collaborations
     md5: f426bac0071118681703babb74427afa
@@ -208,6 +208,9 @@ html:
   SB.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/SB
     md5: 81086681d224f54a76bcf2e000438004
+  Team.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/Team
+    md5: 5fb63d4221c5957f6c38148f0ab121c2
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
     md5: ec302b140de2bb526cdbfd54cf9c0255
