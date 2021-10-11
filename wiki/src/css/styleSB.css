@@ -57,7 +57,10 @@
 
 
 
-
+img {
+	max-width: 100%;
+	height: auto;
+      }
 
 
 /* Scrollbar + Topbar from @namasi */
@@ -198,8 +201,13 @@ html {
 
 
 
+/* team page content */
 
 
+.team-content {
+	padding: 2% 5%;
+	background-color: #212529;
+}
 
 /* .content start */
 .content h3 {
