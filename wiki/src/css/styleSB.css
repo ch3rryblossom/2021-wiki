@@ -217,7 +217,7 @@ html {
 .content a {
     margin: auto;
     text-decoration: none;
-    color: greenyellow;
+    color: #28c79b;
     position: relative;
     transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
     z-index: 0;
@@ -230,7 +230,7 @@ html {
     bottom: 0;
     right: 0rem;
     left: 0rem;
-    background-color: #D3251B;
+    background-color:#28c79b;
     transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
     transform-origin: bottom center;
     z-index: -1;
