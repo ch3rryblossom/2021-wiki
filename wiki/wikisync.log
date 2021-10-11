@@ -1,418 +1,622 @@
-2021-10-02 01:07:39,572 : INFO : iGEM_login : Already logged in.
-2021-10-02 01:07:39,574 : ERROR : cache_files : .DS_Store has an unsupported file extension. Skipping.
-2021-10-02 01:07:39,577 : ERROR : cache_files : assets\.DS_Store has an unsupported file extension. Skipping.
-2021-10-02 01:07:39,592 : ERROR : cache_files : assets\Graphs\.DS_Store has an unsupported file extension. Skipping.
-2021-10-02 01:07:39,592 : ERROR : cache_files : assets\Graphs\Cyano\.DS_Store has an unsupported file extension. Skipping.
-2021-10-02 01:07:39,615 : ERROR : cache_files : assets\Graphs\Cyano\FSEOF\.DS_Store has an unsupported file extension. Skipping.
-2021-10-02 01:07:39,637 : ERROR : cache_files : assets\Logos\.DS_Store has an unsupported file extension. Skipping.
-2021-10-02 01:07:39,762 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
-2021-10-02 01:07:39,815 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Attributions.html.
-2021-10-02 01:07:39,815 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Attributions.html.
-2021-10-02 01:07:39,815 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Attributions.html.
-2021-10-02 01:07:39,816 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Attributions.html.
-2021-10-02 01:07:39,817 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Attributions.html.
-2021-10-02 01:07:39,817 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Attributions.html.
-2021-10-02 01:07:39,818 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Attributions.html.
-2021-10-02 01:07:39,820 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Attributions.html.
-2021-10-02 01:07:39,821 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Attributions.html.
-2021-10-02 01:07:39,821 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Attributions.html.
-2021-10-02 01:07:39,821 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Attributions.html.
-2021-10-02 01:07:39,832 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Attributions.html.
-2021-10-02 01:07:39,833 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Attributions.html.
-2021-10-02 01:07:39,833 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Attributions.html.
-2021-10-02 01:07:39,834 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Attributions.html.
-2021-10-02 01:07:39,834 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Attributions.html.
-2021-10-02 01:07:39,835 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Attributions.html.
-2021-10-02 01:07:39,835 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Attributions.html.
-2021-10-02 01:07:39,836 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Attributions.html.
-2021-10-02 01:07:39,836 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Attributions.html.
-2021-10-02 01:07:39,837 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Attributions.html.
-2021-10-02 01:07:39,837 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Attributions.html.
-2021-10-02 01:07:39,838 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Attributions.html.
-2021-10-02 01:07:39,838 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Attributions.html.
-2021-10-02 01:07:39,839 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Attributions.html.
-2021-10-02 01:07:39,857 : INFO : build_and_upload : Contents of Attributions.html have been uploaded previously. Skipping.
-2021-10-02 01:07:39,888 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in BasicParts.html.
-2021-10-02 01:07:39,888 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in BasicParts.html.
-2021-10-02 01:07:39,888 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in BasicParts.html.
-2021-10-02 01:07:39,889 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in BasicParts.html.
-2021-10-02 01:07:39,890 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in BasicParts.html.
-2021-10-02 01:07:39,890 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in BasicParts.html.
-2021-10-02 01:07:39,891 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in BasicParts.html.
-2021-10-02 01:07:39,892 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in BasicParts.html.
-2021-10-02 01:07:39,893 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in BasicParts.html.
-2021-10-02 01:07:39,893 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in BasicParts.html.
-2021-10-02 01:07:39,894 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in BasicParts.html.
-2021-10-02 01:07:39,903 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in BasicParts.html.
-2021-10-02 01:07:39,918 : INFO : build_and_upload : Contents of BasicParts.html have been uploaded previously. Skipping.
-2021-10-02 01:07:39,938 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Coculture.html.
-2021-10-02 01:07:39,938 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Coculture.html.
-2021-10-02 01:07:39,939 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Coculture.html.
-2021-10-02 01:07:39,939 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Coculture.html.
-2021-10-02 01:07:39,940 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Coculture.html.
-2021-10-02 01:07:39,941 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Coculture.html.
-2021-10-02 01:07:39,941 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Coculture.html.
-2021-10-02 01:07:39,942 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Coculture.html.
-2021-10-02 01:07:39,943 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Coculture.html.
-2021-10-02 01:07:39,943 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Coculture.html.
-2021-10-02 01:07:39,944 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Coculture.html.
-2021-10-02 01:07:39,949 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Coculture.html.
-2021-10-02 01:07:39,960 : INFO : build_and_upload : Contents of Coculture.html have been uploaded previously. Skipping.
-2021-10-02 01:07:39,986 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Collaborations.html.
-2021-10-02 01:07:39,986 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Collaborations.html.
-2021-10-02 01:07:39,986 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Collaborations.html.
-2021-10-02 01:07:39,987 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Collaborations.html.
-2021-10-02 01:07:39,987 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Collaborations.html.
-2021-10-02 01:07:39,988 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Collaborations.html.
-2021-10-02 01:07:39,988 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Collaborations.html.
-2021-10-02 01:07:39,989 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Collaborations.html.
-2021-10-02 01:07:39,989 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Collaborations.html.
-2021-10-02 01:07:39,990 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Collaborations.html.
-2021-10-02 01:07:39,990 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Collaborations.html.
-2021-10-02 01:07:39,996 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Collaborations.html.
-2021-10-02 01:07:39,997 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Collaborations.html.
-2021-10-02 01:07:39,997 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Collaborations.html.
-2021-10-02 01:07:39,997 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Collaborations.html.
-2021-10-02 01:07:39,998 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Collaborations.html.
-2021-10-02 01:07:39,998 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Collaborations.html.
-2021-10-02 01:07:39,998 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Collaborations.html.
-2021-10-02 01:07:39,998 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Collaborations.html.
-2021-10-02 01:07:39,999 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Collaborations.html.
-2021-10-02 01:07:39,999 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Collaborations.html.
-2021-10-02 01:07:39,999 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Collaborations.html.
-2021-10-02 01:07:40,000 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Collaborations.html.
-2021-10-02 01:07:40,000 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Collaborations.html.
-2021-10-02 01:07:40,000 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Collaborations.html.
-2021-10-02 01:07:40,012 : INFO : build_and_upload : Contents of Collaborations.html have been uploaded previously. Skipping.
-2021-10-02 01:07:40,033 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Communication.html.
-2021-10-02 01:07:40,033 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Communication.html.
-2021-10-02 01:07:40,034 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Communication.html.
-2021-10-02 01:07:40,034 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Communication.html.
-2021-10-02 01:07:40,035 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Communication.html.
-2021-10-02 01:07:40,035 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Communication.html.
-2021-10-02 01:07:40,035 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Communication.html.
-2021-10-02 01:07:40,040 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Communication.html.
-2021-10-02 01:07:40,040 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Communication.html.
-2021-10-02 01:07:40,041 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Communication.html.
-2021-10-02 01:07:40,041 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Communication.html.
-2021-10-02 01:07:40,046 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Communication.html.
-2021-10-02 01:07:40,046 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Communication.html.
-2021-10-02 01:07:40,047 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Communication.html.
-2021-10-02 01:07:40,047 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Communication.html.
-2021-10-02 01:07:40,047 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Communication.html.
-2021-10-02 01:07:40,048 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Communication.html.
-2021-10-02 01:07:40,048 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Communication.html.
-2021-10-02 01:07:40,048 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Communication.html.
-2021-10-02 01:07:40,049 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Communication.html.
-2021-10-02 01:07:40,049 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Communication.html.
-2021-10-02 01:07:40,049 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Communication.html.
-2021-10-02 01:07:40,049 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Communication.html.
-2021-10-02 01:07:40,050 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Communication.html.
-2021-10-02 01:07:40,050 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Communication.html.
-2021-10-02 01:07:40,062 : INFO : build_and_upload : Contents of Communication.html have been uploaded previously. Skipping.
-2021-10-02 01:07:40,077 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in CompositeParts.html.
-2021-10-02 01:07:40,077 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in CompositeParts.html.
-2021-10-02 01:07:40,078 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in CompositeParts.html.
-2021-10-02 01:07:40,078 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in CompositeParts.html.
-2021-10-02 01:07:40,079 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in CompositeParts.html.
-2021-10-02 01:07:40,079 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in CompositeParts.html.
-2021-10-02 01:07:40,079 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in CompositeParts.html.
-2021-10-02 01:07:40,080 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in CompositeParts.html.
-2021-10-02 01:07:40,081 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in CompositeParts.html.
-2021-10-02 01:07:40,081 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in CompositeParts.html.
-2021-10-02 01:07:40,081 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in CompositeParts.html.
-2021-10-02 01:07:40,085 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in CompositeParts.html.
-2021-10-02 01:07:40,094 : INFO : build_and_upload : Contents of CompositeParts.html have been uploaded previously. Skipping.
-2021-10-02 01:07:40,125 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Constructs.html.
-2021-10-02 01:07:40,125 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Constructs.html.
-2021-10-02 01:07:40,126 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Constructs.html.
-2021-10-02 01:07:40,126 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Constructs.html.
-2021-10-02 01:07:40,127 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Constructs.html.
-2021-10-02 01:07:40,127 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Constructs.html.
-2021-10-02 01:07:40,127 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Constructs.html.
-2021-10-02 01:07:40,129 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Constructs.html.
-2021-10-02 01:07:40,129 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Constructs.html.
-2021-10-02 01:07:40,129 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Constructs.html.
-2021-10-02 01:07:40,130 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Constructs.html.
-2021-10-02 01:07:40,138 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Constructs.html.
-2021-10-02 01:07:40,139 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Constructs.html.
-2021-10-02 01:07:40,139 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Constructs.html.
-2021-10-02 01:07:40,139 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Constructs.html.
-2021-10-02 01:07:40,140 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Constructs.html.
-2021-10-02 01:07:40,140 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Constructs.html.
-2021-10-02 01:07:40,140 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Constructs.html.
-2021-10-02 01:07:40,141 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Constructs.html.
-2021-10-02 01:07:40,141 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Constructs.html.
-2021-10-02 01:07:40,141 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Constructs.html.
-2021-10-02 01:07:40,142 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Constructs.html.
-2021-10-02 01:07:40,142 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Constructs.html.
-2021-10-02 01:07:40,142 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Constructs.html.
-2021-10-02 01:07:40,143 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Constructs.html.
-2021-10-02 01:07:40,159 : INFO : build_and_upload : Contents of Constructs.html have been uploaded previously. Skipping.
-2021-10-02 01:07:40,180 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Contribution.html.
-2021-10-02 01:07:40,181 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Contribution.html.
-2021-10-02 01:07:40,181 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Contribution.html.
-2021-10-02 01:07:40,181 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Contribution.html.
-2021-10-02 01:07:40,182 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Contribution.html.
-2021-10-02 01:07:40,183 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Contribution.html.
-2021-10-02 01:07:40,183 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Contribution.html.
-2021-10-02 01:07:40,184 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Contribution.html.
-2021-10-02 01:07:40,184 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Contribution.html.
-2021-10-02 01:07:40,184 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Contribution.html.
-2021-10-02 01:07:40,185 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Contribution.html.
-2021-10-02 01:07:40,191 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Contribution.html.
-2021-10-02 01:07:40,192 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Contribution.html.
-2021-10-02 01:07:40,192 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Contribution.html.
-2021-10-02 01:07:40,192 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Contribution.html.
-2021-10-02 01:07:40,192 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Contribution.html.
-2021-10-02 01:07:40,193 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Contribution.html.
-2021-10-02 01:07:40,193 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Contribution.html.
-2021-10-02 01:07:40,193 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Contribution.html.
-2021-10-02 01:07:40,194 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Contribution.html.
-2021-10-02 01:07:40,194 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Contribution.html.
-2021-10-02 01:07:40,195 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Contribution.html.
-2021-10-02 01:07:40,195 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Contribution.html.
-2021-10-02 01:07:40,196 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Contribution.html.
-2021-10-02 01:07:40,196 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Contribution.html.
-2021-10-02 01:07:40,209 : INFO : build_and_upload : Contents of Contribution.html have been uploaded previously. Skipping.
-2021-10-02 01:07:40,210 : ERROR : build_and_upload : Could not open/read Cyanobacteria.html. Skipping.
-2021-10-02 01:07:40,235 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Description.html.
-2021-10-02 01:07:40,236 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Description.html.
-2021-10-02 01:07:40,236 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Description.html.
-2021-10-02 01:07:40,236 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Description.html.
-2021-10-02 01:07:40,237 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Description.html.
-2021-10-02 01:07:40,238 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Description.html.
-2021-10-02 01:07:40,238 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Description.html.
-2021-10-02 01:07:40,239 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Description.html.
-2021-10-02 01:07:40,239 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Description.html.
-2021-10-02 01:07:40,240 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Description.html.
-2021-10-02 01:07:40,240 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Description.html.
-2021-10-02 01:07:40,250 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Description.html.
-2021-10-02 01:07:40,251 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Description.html.
-2021-10-02 01:07:40,251 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Description.html.
-2021-10-02 01:07:40,252 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Description.html.
-2021-10-02 01:07:40,252 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Description.html.
-2021-10-02 01:07:40,252 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Description.html.
-2021-10-02 01:07:40,253 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Description.html.
-2021-10-02 01:07:40,253 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Description.html.
-2021-10-02 01:07:40,254 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Description.html.
-2021-10-02 01:07:40,254 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Description.html.
-2021-10-02 01:07:40,254 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Description.html.
-2021-10-02 01:07:40,255 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Description.html.
-2021-10-02 01:07:40,255 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Description.html.
-2021-10-02 01:07:40,256 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Description.html.
-2021-10-02 01:07:40,272 : INFO : build_and_upload : Contents of Description.html have been uploaded previously. Skipping.
-2021-10-02 01:07:40,291 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-10-02 01:07:40,292 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-10-02 01:07:40,292 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-10-02 01:07:40,293 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in DryLabOverview.html.
-2021-10-02 01:07:40,293 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in DryLabOverview.html.
-2021-10-02 01:07:40,294 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in DryLabOverview.html.
-2021-10-02 01:07:40,295 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in DryLabOverview.html.
-2021-10-02 01:07:40,295 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in DryLabOverview.html.
-2021-10-02 01:07:40,295 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in DryLabOverview.html.
-2021-10-02 01:07:40,296 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in DryLabOverview.html.
-2021-10-02 01:07:40,302 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in DryLabOverview.html.
-2021-10-02 01:07:40,302 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in DryLabOverview.html.
-2021-10-02 01:07:40,313 : INFO : build_and_upload : Contents of DryLabOverview.html have been uploaded previously. Skipping.
-2021-10-02 01:07:40,335 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in EColi.html.
-2021-10-02 01:07:40,335 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in EColi.html.
-2021-10-02 01:07:40,335 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in EColi.html.
-2021-10-02 01:07:40,336 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in EColi.html.
-2021-10-02 01:07:40,336 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in EColi.html.
-2021-10-02 01:07:40,337 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in EColi.html.
-2021-10-02 01:07:40,337 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in EColi.html.
-2021-10-02 01:07:40,338 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in EColi.html.
-2021-10-02 01:07:40,338 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in EColi.html.
-2021-10-02 01:07:40,338 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in EColi.html.
-2021-10-02 01:07:40,339 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in EColi.html.
-2021-10-02 01:07:40,344 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in EColi.html.
-2021-10-02 01:07:40,345 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,345 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,345 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,346 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,346 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,346 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,347 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,347 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,347 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:40,348 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
-2021-10-02 01:07:42,191 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/EColi&action=edit.
-2021-10-02 01:07:42,210 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Education.html.
-2021-10-02 01:07:42,210 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Education.html.
-2021-10-02 01:07:42,211 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Education.html.
-2021-10-02 01:07:42,211 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Education.html.
-2021-10-02 01:07:42,212 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Education.html.
-2021-10-02 01:07:42,212 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Education.html.
-2021-10-02 01:07:42,212 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Education.html.
-2021-10-02 01:07:42,213 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Education.html.
-2021-10-02 01:07:42,214 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Education.html.
-2021-10-02 01:07:42,214 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Education.html.
-2021-10-02 01:07:42,214 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Education.html.
-2021-10-02 01:07:42,221 : WARNING : iGEM_URL : src\assets\pdfs\index.html is referenced in src\Education.html but was not found.
-2021-10-02 01:07:42,221 : INFO : iGEM_URL : assets/pdfs/... was changed to https://2021.igem.org/Team:IISER-Pune-India/assets/pdfs in Education.html.
-2021-10-02 01:07:42,223 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Education.html.
-2021-10-02 01:07:42,223 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Education.html.
-2021-10-02 01:07:42,223 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Education.html.
-2021-10-02 01:07:42,224 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Education.html.
-2021-10-02 01:07:42,224 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Education.html.
-2021-10-02 01:07:42,224 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Education.html.
-2021-10-02 01:07:42,224 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Education.html.
-2021-10-02 01:07:42,225 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Education.html.
-2021-10-02 01:07:42,225 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Education.html.
-2021-10-02 01:07:42,225 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Education.html.
-2021-10-02 01:07:42,226 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Education.html.
-2021-10-02 01:07:42,226 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Education.html.
-2021-10-02 01:07:42,226 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Education.html.
-2021-10-02 01:07:42,238 : INFO : build_and_upload : Contents of Education.html have been uploaded previously. Skipping.
-2021-10-02 01:07:42,260 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Engineering.html.
-2021-10-02 01:07:42,260 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Engineering.html.
-2021-10-02 01:07:42,261 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Engineering.html.
-2021-10-02 01:07:42,261 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Engineering.html.
-2021-10-02 01:07:42,262 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Engineering.html.
-2021-10-02 01:07:42,262 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Engineering.html.
-2021-10-02 01:07:42,262 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Engineering.html.
-2021-10-02 01:07:42,263 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Engineering.html.
-2021-10-02 01:07:42,264 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Engineering.html.
-2021-10-02 01:07:42,264 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Engineering.html.
-2021-10-02 01:07:42,264 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Engineering.html.
-2021-10-02 01:07:42,272 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Engineering.html.
-2021-10-02 01:07:42,284 : INFO : build_and_upload : Contents of Engineering.html have been uploaded previously. Skipping.
-2021-10-02 01:07:42,306 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Human_Practices.html.
-2021-10-02 01:07:42,307 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Human_Practices.html.
-2021-10-02 01:07:42,307 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Human_Practices.html.
-2021-10-02 01:07:42,307 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Human_Practices.html.
-2021-10-02 01:07:42,308 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Human_Practices.html.
-2021-10-02 01:07:42,308 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Human_Practices.html.
-2021-10-02 01:07:42,308 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Human_Practices.html.
-2021-10-02 01:07:42,309 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Human_Practices.html.
-2021-10-02 01:07:42,310 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Human_Practices.html.
-2021-10-02 01:07:42,310 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Human_Practices.html.
-2021-10-02 01:07:42,310 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Human_Practices.html.
-2021-10-02 01:07:42,317 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Human_Practices.html.
-2021-10-02 01:07:42,317 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,318 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Human_Practices.html.
-2021-10-02 01:07:42,318 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,318 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,318 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,319 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,319 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Human_Practices.html.
-2021-10-02 01:07:42,319 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,320 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,320 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,320 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Human_Practices.html.
-2021-10-02 01:07:42,320 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Human_Practices.html.
-2021-10-02 01:07:42,321 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Human_Practices.html.
-2021-10-02 01:07:42,333 : INFO : build_and_upload : Contents of Human_Practices.html have been uploaded previously. Skipping.
-2021-10-02 01:07:42,354 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Implementation.html.
-2021-10-02 01:07:42,354 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Implementation.html.
-2021-10-02 01:07:42,354 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Implementation.html.
-2021-10-02 01:07:42,355 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Implementation.html.
-2021-10-02 01:07:42,355 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Implementation.html.
-2021-10-02 01:07:42,356 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Implementation.html.
-2021-10-02 01:07:42,356 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Implementation.html.
-2021-10-02 01:07:42,357 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Implementation.html.
-2021-10-02 01:07:42,357 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Implementation.html.
-2021-10-02 01:07:42,357 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Implementation.html.
-2021-10-02 01:07:42,358 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Implementation.html.
-2021-10-02 01:07:42,364 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Implementation.html.
-2021-10-02 01:07:42,365 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Implementation.html.
-2021-10-02 01:07:42,365 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Implementation.html.
-2021-10-02 01:07:42,365 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Implementation.html.
-2021-10-02 01:07:42,365 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Implementation.html.
-2021-10-02 01:07:42,366 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Implementation.html.
-2021-10-02 01:07:42,366 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Implementation.html.
-2021-10-02 01:07:42,366 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Implementation.html.
-2021-10-02 01:07:42,366 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Implementation.html.
-2021-10-02 01:07:42,367 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Implementation.html.
-2021-10-02 01:07:42,367 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Implementation.html.
-2021-10-02 01:07:42,367 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Implementation.html.
-2021-10-02 01:07:42,368 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Implementation.html.
-2021-10-02 01:07:42,368 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Implementation.html.
-2021-10-02 01:07:42,379 : INFO : build_and_upload : Contents of Implementation.html have been uploaded previously. Skipping.
-2021-10-02 01:07:42,382 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
-2021-10-02 01:07:42,382 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
-2021-10-02 01:07:42,382 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
-2021-10-02 01:07:42,383 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
-2021-10-02 01:07:42,383 : INFO : iGEM_URL : SB.html was changed to https://2021.igem.org/Team:IISER-Pune-India/SB in index.html.
-2021-10-02 01:07:42,385 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
-2021-10-02 01:07:42,386 : ERROR : build_and_upload : Could not open/read lastyear.html. Skipping.
-2021-10-02 01:07:42,408 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Model.html.
-2021-10-02 01:07:42,409 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Model.html.
-2021-10-02 01:07:42,409 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Model.html.
-2021-10-02 01:07:42,410 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Model.html.
-2021-10-02 01:07:42,411 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Model.html.
-2021-10-02 01:07:42,411 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Model.html.
-2021-10-02 01:07:42,412 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Model.html.
-2021-10-02 01:07:42,413 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Model.html.
-2021-10-02 01:07:42,413 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Model.html.
-2021-10-02 01:07:42,413 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Model.html.
-2021-10-02 01:07:42,414 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Model.html.
-2021-10-02 01:07:42,419 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Model.html.
-2021-10-02 01:07:42,420 : INFO : iGEM_URL : assets/graphs/Biomass vs CO_2.jpg was changed to https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Biomass_vs_CO_2.jpg in Model.html.
-2021-10-02 01:07:42,420 : INFO : iGEM_URL : assets/Graphs/Biomass vs Sucrose.jpg was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Graphs--Biomass_vs_Sucrose.jpg in Model.html.
-2021-10-02 01:07:42,421 : INFO : iGEM_URL : assets/Graphs/3 Variables.jpg was changed to https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--3_Variables.jpg in Model.html.
-2021-10-02 01:07:42,421 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Model.html.
-2021-10-02 01:07:42,434 : INFO : build_and_upload : Contents of Model.html have been uploaded previously. Skipping.
-2021-10-02 01:07:42,445 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in navbar.html.
-2021-10-02 01:07:42,445 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in navbar.html.
-2021-10-02 01:07:42,446 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in navbar.html.
-2021-10-02 01:07:42,447 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in navbar.html.
-2021-10-02 01:07:42,447 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in navbar.html.
-2021-10-02 01:07:42,447 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in navbar.html.
-2021-10-02 01:07:42,448 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in navbar.html.
-2021-10-02 01:07:42,451 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in navbar.html.
-2021-10-02 01:07:43,718 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/navbar&action=edit.
-2021-10-02 01:07:43,772 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Partnership.html.
-2021-10-02 01:07:43,773 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Partnership.html.
-2021-10-02 01:07:43,773 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Partnership.html.
-2021-10-02 01:07:43,773 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Partnership.html.
-2021-10-02 01:07:43,774 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Partnership.html.
-2021-10-02 01:07:43,774 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Partnership.html.
-2021-10-02 01:07:43,774 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Partnership.html.
-2021-10-02 01:07:43,775 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Partnership.html.
-2021-10-02 01:07:43,776 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Partnership.html.
-2021-10-02 01:07:43,776 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Partnership.html.
-2021-10-02 01:07:43,776 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Partnership.html.
-2021-10-02 01:07:43,782 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Partnership.html.
-2021-10-02 01:07:43,782 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Partnership.html.
-2021-10-02 01:07:45,098 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Partnership&action=edit.
-2021-10-02 01:07:45,111 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in SB.html.
-2021-10-02 01:07:45,112 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in SB.html.
-2021-10-02 01:07:45,112 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in SB.html.
-2021-10-02 01:07:45,113 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in SB.html.
-2021-10-02 01:07:45,113 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in SB.html.
-2021-10-02 01:07:45,114 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in SB.html.
-2021-10-02 01:07:45,114 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in SB.html.
-2021-10-02 01:07:45,114 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in SB.html.
-2021-10-02 01:07:45,115 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in SB.html.
-2021-10-02 01:07:45,119 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in SB.html.
-2021-10-02 01:07:45,119 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in SB.html.
-2021-10-02 01:07:45,129 : INFO : build_and_upload : Contents of SB.html have been uploaded previously. Skipping.
-2021-10-02 01:07:45,155 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-10-02 01:07:45,155 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
-2021-10-02 01:07:45,187 : INFO : build_and_upload : Contents of theming-kit.html have been uploaded previously. Skipping.
-2021-10-02 01:07:45,208 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in thisyear.html.
-2021-10-02 01:07:45,208 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in thisyear.html.
-2021-10-02 01:07:45,209 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in thisyear.html.
-2021-10-02 01:07:45,209 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in thisyear.html.
-2021-10-02 01:07:45,209 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in thisyear.html.
-2021-10-02 01:07:45,210 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in thisyear.html.
-2021-10-02 01:07:45,210 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in thisyear.html.
-2021-10-02 01:07:45,211 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in thisyear.html.
-2021-10-02 01:07:45,212 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in thisyear.html.
-2021-10-02 01:07:45,212 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in thisyear.html.
-2021-10-02 01:07:45,212 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in thisyear.html.
-2021-10-02 01:07:45,221 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in thisyear.html.
-2021-10-02 01:07:45,222 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in thisyear.html.
-2021-10-02 01:07:46,780 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/thisyear&action=edit.
-2021-10-02 01:07:46,781 : INFO : build_and_upload : Contents of css\DryLabPage.css have been uploaded previously. Skipping.
-2021-10-02 01:07:46,782 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
-2021-10-02 01:07:46,782 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
-2021-10-02 01:07:46,783 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
-2021-10-02 01:07:46,783 : INFO : build_and_upload : Contents of css\styleSB.css have been uploaded previously. Skipping.
-2021-10-02 01:07:46,788 : INFO : iGEM_URL : ../../assets/svgs/layered-waves-haikei-2.svg was changed to https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg in css\SBcss\style.css.
-2021-10-02 01:07:51,611 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/SBcss/styleCSS&action=edit.
-2021-10-02 01:07:51,612 : INFO : build_and_upload : Contents of js\bootstrap-bundle.js have been uploaded previously. Skipping.
-2021-10-02 01:07:51,613 : INFO : build_and_upload : Contents of js\jquery.min.js have been uploaded previously. Skipping.
-2021-10-02 01:07:51,613 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
+2021-10-11 17:54:32,658 : INFO : iGEM_login : Already logged in.
+2021-10-11 17:54:32,664 : ERROR : cache_files : .DS_Store has an unsupported file extension. Skipping.
+2021-10-11 17:54:32,668 : ERROR : cache_files : assets\.DS_Store has an unsupported file extension. Skipping.
+2021-10-11 17:54:32,679 : ERROR : cache_files : assets\Graphs\.DS_Store has an unsupported file extension. Skipping.
+2021-10-11 17:54:32,679 : ERROR : cache_files : assets\Graphs\Cyano\.DS_Store has an unsupported file extension. Skipping.
+2021-10-11 17:54:32,694 : ERROR : cache_files : assets\Graphs\Cyano\FSEOF\.DS_Store has an unsupported file extension. Skipping.
+2021-10-11 17:54:32,710 : ERROR : cache_files : assets\Logos\.DS_Store has an unsupported file extension. Skipping.
+2021-10-11 17:54:32,768 : ERROR : cache_files : css\SBcss\style.css.map has an unsupported file extension. Skipping.
+2021-10-11 17:54:32,973 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Attributions.html.
+2021-10-11 17:54:32,974 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Attributions.html.
+2021-10-11 17:54:32,975 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Attributions.html.
+2021-10-11 17:54:32,975 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Attributions.html.
+2021-10-11 17:54:32,975 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Attributions.html.
+2021-10-11 17:54:32,980 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Attributions.html.
+2021-10-11 17:54:32,980 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Attributions.html.
+2021-10-11 17:54:32,980 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Attributions.html.
+2021-10-11 17:54:32,980 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Attributions.html.
+2021-10-11 17:54:32,980 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Attributions.html.
+2021-10-11 17:54:32,985 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Attributions.html.
+2021-10-11 17:54:32,997 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Attributions.html.
+2021-10-11 17:54:32,998 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Attributions.html.
+2021-10-11 17:54:32,999 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Attributions.html.
+2021-10-11 17:54:32,999 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Attributions.html.
+2021-10-11 17:54:33,000 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Attributions.html.
+2021-10-11 17:54:33,000 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Attributions.html.
+2021-10-11 17:54:33,000 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Attributions.html.
+2021-10-11 17:54:33,000 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Attributions.html.
+2021-10-11 17:54:33,000 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Attributions.html.
+2021-10-11 17:54:33,000 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Attributions.html.
+2021-10-11 17:54:33,005 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Attributions.html.
+2021-10-11 17:54:33,005 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Attributions.html.
+2021-10-11 17:54:33,006 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Attributions.html.
+2021-10-11 17:54:33,006 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Attributions.html.
+2021-10-11 17:54:33,007 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Attributions.html.
+2021-10-11 17:54:35,139 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Attributions&action=edit.
+2021-10-11 17:54:35,354 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in BasicParts.html.
+2021-10-11 17:54:35,355 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in BasicParts.html.
+2021-10-11 17:54:35,357 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in BasicParts.html.
+2021-10-11 17:54:35,357 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in BasicParts.html.
+2021-10-11 17:54:35,361 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in BasicParts.html.
+2021-10-11 17:54:35,362 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in BasicParts.html.
+2021-10-11 17:54:35,363 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in BasicParts.html.
+2021-10-11 17:54:35,368 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in BasicParts.html.
+2021-10-11 17:54:35,368 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in BasicParts.html.
+2021-10-11 17:54:35,370 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in BasicParts.html.
+2021-10-11 17:54:35,371 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in BasicParts.html.
+2021-10-11 17:54:35,397 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in BasicParts.html.
+2021-10-11 17:54:35,397 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in BasicParts.html.
+2021-10-11 17:54:35,397 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in BasicParts.html.
+2021-10-11 17:54:35,401 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in BasicParts.html.
+2021-10-11 17:54:35,403 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in BasicParts.html.
+2021-10-11 17:54:35,404 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in BasicParts.html.
+2021-10-11 17:54:35,405 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in BasicParts.html.
+2021-10-11 17:54:35,406 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in BasicParts.html.
+2021-10-11 17:54:35,407 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in BasicParts.html.
+2021-10-11 17:54:35,409 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in BasicParts.html.
+2021-10-11 17:54:35,410 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in BasicParts.html.
+2021-10-11 17:54:35,411 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in BasicParts.html.
+2021-10-11 17:54:35,412 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in BasicParts.html.
+2021-10-11 17:54:36,968 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/BasicParts&action=edit.
+2021-10-11 17:54:37,176 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Coculture.html.
+2021-10-11 17:54:37,176 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Coculture.html.
+2021-10-11 17:54:37,180 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Coculture.html.
+2021-10-11 17:54:37,182 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Coculture.html.
+2021-10-11 17:54:37,185 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Coculture.html.
+2021-10-11 17:54:37,187 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Coculture.html.
+2021-10-11 17:54:37,188 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Coculture.html.
+2021-10-11 17:54:37,188 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Coculture.html.
+2021-10-11 17:54:37,195 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Coculture.html.
+2021-10-11 17:54:37,197 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Coculture.html.
+2021-10-11 17:54:37,200 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Coculture.html.
+2021-10-11 17:54:37,227 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Coculture.html.
+2021-10-11 17:54:37,229 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Coculture.html.
+2021-10-11 17:54:37,231 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Coculture.html.
+2021-10-11 17:54:37,233 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Coculture.html.
+2021-10-11 17:54:37,235 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Coculture.html.
+2021-10-11 17:54:37,236 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Coculture.html.
+2021-10-11 17:54:37,237 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Coculture.html.
+2021-10-11 17:54:37,237 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Coculture.html.
+2021-10-11 17:54:37,237 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Coculture.html.
+2021-10-11 17:54:37,237 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Coculture.html.
+2021-10-11 17:54:37,237 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Coculture.html.
+2021-10-11 17:54:37,245 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Coculture.html.
+2021-10-11 17:54:37,246 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Coculture.html.
+2021-10-11 17:54:38,697 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Coculture&action=edit.
+2021-10-11 17:54:38,768 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Collaborations.html.
+2021-10-11 17:54:38,768 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Collaborations.html.
+2021-10-11 17:54:38,770 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Collaborations.html.
+2021-10-11 17:54:38,770 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Collaborations.html.
+2021-10-11 17:54:38,774 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Collaborations.html.
+2021-10-11 17:54:38,775 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Collaborations.html.
+2021-10-11 17:54:38,775 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Collaborations.html.
+2021-10-11 17:54:38,780 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Collaborations.html.
+2021-10-11 17:54:38,780 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Collaborations.html.
+2021-10-11 17:54:38,782 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Collaborations.html.
+2021-10-11 17:54:38,783 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Collaborations.html.
+2021-10-11 17:54:38,813 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Collaborations.html.
+2021-10-11 17:54:38,814 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Collaborations.html.
+2021-10-11 17:54:38,815 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Collaborations.html.
+2021-10-11 17:54:38,816 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Collaborations.html.
+2021-10-11 17:54:38,816 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Collaborations.html.
+2021-10-11 17:54:38,818 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Collaborations.html.
+2021-10-11 17:54:38,819 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Collaborations.html.
+2021-10-11 17:54:38,819 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Collaborations.html.
+2021-10-11 17:54:38,820 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Collaborations.html.
+2021-10-11 17:54:38,820 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Collaborations.html.
+2021-10-11 17:54:38,821 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Collaborations.html.
+2021-10-11 17:54:38,821 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Collaborations.html.
+2021-10-11 17:54:38,821 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Collaborations.html.
+2021-10-11 17:54:38,822 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Collaborations.html.
+2021-10-11 17:54:38,822 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Collaborations.html.
+2021-10-11 17:54:38,824 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Collaborations.html.
+2021-10-11 17:54:38,824 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Collaborations.html.
+2021-10-11 17:54:38,824 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Collaborations.html.
+2021-10-11 17:54:38,824 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Collaborations.html.
+2021-10-11 17:54:38,825 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Collaborations.html.
+2021-10-11 17:54:38,826 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Collaborations.html.
+2021-10-11 17:54:38,827 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Collaborations.html.
+2021-10-11 17:54:38,827 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Collaborations.html.
+2021-10-11 17:54:38,829 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Collaborations.html.
+2021-10-11 17:54:38,830 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Collaborations.html.
+2021-10-11 17:54:38,830 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Collaborations.html.
+2021-10-11 17:54:40,607 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Collaborations&action=edit.
+2021-10-11 17:54:40,778 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Communication.html.
+2021-10-11 17:54:40,781 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Communication.html.
+2021-10-11 17:54:40,783 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Communication.html.
+2021-10-11 17:54:40,787 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Communication.html.
+2021-10-11 17:54:40,788 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Communication.html.
+2021-10-11 17:54:40,788 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Communication.html.
+2021-10-11 17:54:40,788 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Communication.html.
+2021-10-11 17:54:40,802 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Communication.html.
+2021-10-11 17:54:40,803 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Communication.html.
+2021-10-11 17:54:40,804 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Communication.html.
+2021-10-11 17:54:40,806 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Communication.html.
+2021-10-11 17:54:40,850 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Communication.html.
+2021-10-11 17:54:40,853 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Communication.html.
+2021-10-11 17:54:40,855 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Communication.html.
+2021-10-11 17:54:40,856 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Communication.html.
+2021-10-11 17:54:40,857 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Communication.html.
+2021-10-11 17:54:40,858 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Communication.html.
+2021-10-11 17:54:40,858 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Communication.html.
+2021-10-11 17:54:40,859 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Communication.html.
+2021-10-11 17:54:40,859 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Communication.html.
+2021-10-11 17:54:40,860 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Communication.html.
+2021-10-11 17:54:40,861 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Communication.html.
+2021-10-11 17:54:40,862 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Communication.html.
+2021-10-11 17:54:40,863 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Communication.html.
+2021-10-11 17:54:40,866 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Communication.html.
+2021-10-11 17:54:40,869 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Communication.html.
+2021-10-11 17:54:40,871 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Communication.html.
+2021-10-11 17:54:40,872 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Communication.html.
+2021-10-11 17:54:40,873 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Communication.html.
+2021-10-11 17:54:40,873 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Communication.html.
+2021-10-11 17:54:40,874 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Communication.html.
+2021-10-11 17:54:40,875 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Communication.html.
+2021-10-11 17:54:40,875 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Communication.html.
+2021-10-11 17:54:40,875 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Communication.html.
+2021-10-11 17:54:40,876 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Communication.html.
+2021-10-11 17:54:40,877 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Communication.html.
+2021-10-11 17:54:40,877 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Communication.html.
+2021-10-11 17:54:42,382 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Communication&action=edit.
+2021-10-11 17:54:42,572 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in CompositeParts.html.
+2021-10-11 17:54:42,573 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in CompositeParts.html.
+2021-10-11 17:54:42,574 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in CompositeParts.html.
+2021-10-11 17:54:42,575 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in CompositeParts.html.
+2021-10-11 17:54:42,576 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in CompositeParts.html.
+2021-10-11 17:54:42,577 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in CompositeParts.html.
+2021-10-11 17:54:42,578 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in CompositeParts.html.
+2021-10-11 17:54:42,584 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in CompositeParts.html.
+2021-10-11 17:54:42,585 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in CompositeParts.html.
+2021-10-11 17:54:42,586 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in CompositeParts.html.
+2021-10-11 17:54:42,587 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in CompositeParts.html.
+2021-10-11 17:54:42,609 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in CompositeParts.html.
+2021-10-11 17:54:42,610 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,611 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in CompositeParts.html.
+2021-10-11 17:54:42,612 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,613 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,614 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,618 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,619 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in CompositeParts.html.
+2021-10-11 17:54:42,620 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,621 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,621 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in CompositeParts.html.
+2021-10-11 17:54:42,622 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in CompositeParts.html.
+2021-10-11 17:54:42,624 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in CompositeParts.html.
+2021-10-11 17:54:44,203 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/CompositeParts&action=edit.
+2021-10-11 17:54:44,361 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Constructs.html.
+2021-10-11 17:54:44,362 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Constructs.html.
+2021-10-11 17:54:44,363 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Constructs.html.
+2021-10-11 17:54:44,364 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Constructs.html.
+2021-10-11 17:54:44,371 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Constructs.html.
+2021-10-11 17:54:44,372 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Constructs.html.
+2021-10-11 17:54:44,373 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Constructs.html.
+2021-10-11 17:54:44,380 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Constructs.html.
+2021-10-11 17:54:44,381 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Constructs.html.
+2021-10-11 17:54:44,384 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Constructs.html.
+2021-10-11 17:54:44,386 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Constructs.html.
+2021-10-11 17:54:44,451 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Constructs.html.
+2021-10-11 17:54:44,455 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Constructs.html.
+2021-10-11 17:54:44,455 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Constructs.html.
+2021-10-11 17:54:44,457 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Constructs.html.
+2021-10-11 17:54:44,458 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Constructs.html.
+2021-10-11 17:54:44,461 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Constructs.html.
+2021-10-11 17:54:44,462 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Constructs.html.
+2021-10-11 17:54:44,464 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Constructs.html.
+2021-10-11 17:54:44,467 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Constructs.html.
+2021-10-11 17:54:44,469 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Constructs.html.
+2021-10-11 17:54:44,470 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Constructs.html.
+2021-10-11 17:54:44,470 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Constructs.html.
+2021-10-11 17:54:44,470 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Constructs.html.
+2021-10-11 17:54:44,476 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Constructs.html.
+2021-10-11 17:54:44,478 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Constructs.html.
+2021-10-11 17:54:44,481 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Constructs.html.
+2021-10-11 17:54:44,487 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Constructs.html.
+2021-10-11 17:54:44,491 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Constructs.html.
+2021-10-11 17:54:44,494 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Constructs.html.
+2021-10-11 17:54:44,496 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Constructs.html.
+2021-10-11 17:54:44,498 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Constructs.html.
+2021-10-11 17:54:44,500 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Constructs.html.
+2021-10-11 17:54:44,500 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Constructs.html.
+2021-10-11 17:54:44,500 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Constructs.html.
+2021-10-11 17:54:44,506 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Constructs.html.
+2021-10-11 17:54:44,508 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Constructs.html.
+2021-10-11 17:54:46,813 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Constructs&action=edit.
+2021-10-11 17:54:46,948 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Contribution.html.
+2021-10-11 17:54:46,950 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Contribution.html.
+2021-10-11 17:54:46,950 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Contribution.html.
+2021-10-11 17:54:46,952 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Contribution.html.
+2021-10-11 17:54:46,956 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Contribution.html.
+2021-10-11 17:54:46,956 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Contribution.html.
+2021-10-11 17:54:46,956 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Contribution.html.
+2021-10-11 17:54:46,966 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Contribution.html.
+2021-10-11 17:54:46,969 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Contribution.html.
+2021-10-11 17:54:46,969 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Contribution.html.
+2021-10-11 17:54:46,969 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Contribution.html.
+2021-10-11 17:54:47,009 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Contribution.html.
+2021-10-11 17:54:47,014 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Contribution.html.
+2021-10-11 17:54:47,015 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Contribution.html.
+2021-10-11 17:54:47,018 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Contribution.html.
+2021-10-11 17:54:47,020 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Contribution.html.
+2021-10-11 17:54:47,021 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Contribution.html.
+2021-10-11 17:54:47,024 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Contribution.html.
+2021-10-11 17:54:47,027 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Contribution.html.
+2021-10-11 17:54:47,030 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Contribution.html.
+2021-10-11 17:54:47,032 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Contribution.html.
+2021-10-11 17:54:47,034 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Contribution.html.
+2021-10-11 17:54:47,035 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Contribution.html.
+2021-10-11 17:54:47,037 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Contribution.html.
+2021-10-11 17:54:47,040 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Contribution.html.
+2021-10-11 17:54:47,041 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Contribution.html.
+2021-10-11 17:54:47,044 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Contribution.html.
+2021-10-11 17:54:47,047 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Contribution.html.
+2021-10-11 17:54:47,049 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Contribution.html.
+2021-10-11 17:54:47,050 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Contribution.html.
+2021-10-11 17:54:47,052 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Contribution.html.
+2021-10-11 17:54:47,053 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Contribution.html.
+2021-10-11 17:54:47,054 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Contribution.html.
+2021-10-11 17:54:47,056 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Contribution.html.
+2021-10-11 17:54:47,057 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Contribution.html.
+2021-10-11 17:54:47,058 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Contribution.html.
+2021-10-11 17:54:47,059 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Contribution.html.
+2021-10-11 17:54:49,935 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Contribution&action=edit.
+2021-10-11 17:54:49,935 : ERROR : build_and_upload : Could not open/read Cyanobacteria.html. Skipping.
+2021-10-11 17:54:50,111 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Description.html.
+2021-10-11 17:54:50,113 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Description.html.
+2021-10-11 17:54:50,114 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Description.html.
+2021-10-11 17:54:50,116 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Description.html.
+2021-10-11 17:54:50,121 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Description.html.
+2021-10-11 17:54:50,123 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Description.html.
+2021-10-11 17:54:50,125 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Description.html.
+2021-10-11 17:54:50,131 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Description.html.
+2021-10-11 17:54:50,133 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Description.html.
+2021-10-11 17:54:50,135 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Description.html.
+2021-10-11 17:54:50,137 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Description.html.
+2021-10-11 17:54:50,177 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Description.html.
+2021-10-11 17:54:50,180 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Description.html.
+2021-10-11 17:54:50,181 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Description.html.
+2021-10-11 17:54:50,184 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Description.html.
+2021-10-11 17:54:50,184 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Description.html.
+2021-10-11 17:54:50,187 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Description.html.
+2021-10-11 17:54:50,189 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Description.html.
+2021-10-11 17:54:50,190 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Description.html.
+2021-10-11 17:54:50,192 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Description.html.
+2021-10-11 17:54:50,193 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Description.html.
+2021-10-11 17:54:50,195 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Description.html.
+2021-10-11 17:54:50,198 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Description.html.
+2021-10-11 17:54:50,199 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Description.html.
+2021-10-11 17:54:50,200 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Description.html.
+2021-10-11 17:54:50,203 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Description.html.
+2021-10-11 17:54:50,205 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Description.html.
+2021-10-11 17:54:50,208 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Description.html.
+2021-10-11 17:54:50,210 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Description.html.
+2021-10-11 17:54:50,212 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Description.html.
+2021-10-11 17:54:50,214 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Description.html.
+2021-10-11 17:54:50,217 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Description.html.
+2021-10-11 17:54:50,218 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Description.html.
+2021-10-11 17:54:50,219 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Description.html.
+2021-10-11 17:54:50,219 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Description.html.
+2021-10-11 17:54:50,219 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Description.html.
+2021-10-11 17:54:50,228 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Description.html.
+2021-10-11 17:54:53,078 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Description&action=edit.
+2021-10-11 17:54:53,326 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-10-11 17:54:53,329 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-10-11 17:54:53,332 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-10-11 17:54:53,334 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in DryLabOverview.html.
+2021-10-11 17:54:53,339 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in DryLabOverview.html.
+2021-10-11 17:54:53,341 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in DryLabOverview.html.
+2021-10-11 17:54:53,353 : INFO : iGEM_URL : DryLabOverview.html was changed to https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview in DryLabOverview.html.
+2021-10-11 17:54:53,356 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in DryLabOverview.html.
+2021-10-11 17:54:53,357 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in DryLabOverview.html.
+2021-10-11 17:54:53,357 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in DryLabOverview.html.
+2021-10-11 17:54:53,407 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in DryLabOverview.html.
+2021-10-11 17:54:53,408 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in DryLabOverview.html.
+2021-10-11 17:54:55,180 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/DryLabOverview&action=edit.
+2021-10-11 17:54:55,448 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in EColi.html.
+2021-10-11 17:54:55,455 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in EColi.html.
+2021-10-11 17:54:55,457 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in EColi.html.
+2021-10-11 17:54:55,457 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in EColi.html.
+2021-10-11 17:54:55,457 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in EColi.html.
+2021-10-11 17:54:55,466 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in EColi.html.
+2021-10-11 17:54:55,467 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in EColi.html.
+2021-10-11 17:54:55,469 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in EColi.html.
+2021-10-11 17:54:55,469 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in EColi.html.
+2021-10-11 17:54:55,475 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in EColi.html.
+2021-10-11 17:54:55,476 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in EColi.html.
+2021-10-11 17:54:55,516 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in EColi.html.
+2021-10-11 17:54:55,517 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,518 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,518 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,518 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,518 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,518 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,526 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,528 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,529 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,530 : INFO : iGEM_URL : assets/pngs/avataaars.png was changed to https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--pngs--avataaars.png in EColi.html.
+2021-10-11 17:54:55,530 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in EColi.html.
+2021-10-11 17:54:55,534 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in EColi.html.
+2021-10-11 17:54:55,536 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in EColi.html.
+2021-10-11 17:54:55,537 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in EColi.html.
+2021-10-11 17:54:55,538 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in EColi.html.
+2021-10-11 17:54:55,538 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in EColi.html.
+2021-10-11 17:54:55,538 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in EColi.html.
+2021-10-11 17:54:55,538 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in EColi.html.
+2021-10-11 17:54:55,538 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in EColi.html.
+2021-10-11 17:54:55,546 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in EColi.html.
+2021-10-11 17:54:55,548 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in EColi.html.
+2021-10-11 17:54:55,549 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in EColi.html.
+2021-10-11 17:54:57,617 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/EColi&action=edit.
+2021-10-11 17:54:57,830 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Education.html.
+2021-10-11 17:54:57,832 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Education.html.
+2021-10-11 17:54:57,833 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Education.html.
+2021-10-11 17:54:57,835 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Education.html.
+2021-10-11 17:54:57,838 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Education.html.
+2021-10-11 17:54:57,839 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Education.html.
+2021-10-11 17:54:57,841 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Education.html.
+2021-10-11 17:54:57,847 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Education.html.
+2021-10-11 17:54:57,848 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Education.html.
+2021-10-11 17:54:57,848 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Education.html.
+2021-10-11 17:54:57,851 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Education.html.
+2021-10-11 17:54:57,876 : WARNING : iGEM_URL : src\assets\pdfs\index.html is referenced in src\Education.html but was not found.
+2021-10-11 17:54:57,876 : INFO : iGEM_URL : assets/pdfs/... was changed to https://2021.igem.org/Team:IISER-Pune-India/assets/pdfs in Education.html.
+2021-10-11 17:54:57,884 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Education.html.
+2021-10-11 17:54:57,885 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Education.html.
+2021-10-11 17:54:57,888 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Education.html.
+2021-10-11 17:54:57,889 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Education.html.
+2021-10-11 17:54:57,889 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Education.html.
+2021-10-11 17:54:57,892 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Education.html.
+2021-10-11 17:54:57,894 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Education.html.
+2021-10-11 17:54:57,895 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Education.html.
+2021-10-11 17:54:57,896 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Education.html.
+2021-10-11 17:54:57,898 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Education.html.
+2021-10-11 17:54:57,900 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Education.html.
+2021-10-11 17:54:57,902 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Education.html.
+2021-10-11 17:54:57,902 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Education.html.
+2021-10-11 17:54:57,905 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Education.html.
+2021-10-11 17:54:57,907 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Education.html.
+2021-10-11 17:54:57,908 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Education.html.
+2021-10-11 17:54:57,910 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Education.html.
+2021-10-11 17:54:57,913 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Education.html.
+2021-10-11 17:54:57,914 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Education.html.
+2021-10-11 17:54:57,915 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Education.html.
+2021-10-11 17:54:57,917 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Education.html.
+2021-10-11 17:54:57,919 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Education.html.
+2021-10-11 17:54:57,920 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Education.html.
+2021-10-11 17:54:57,922 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Education.html.
+2021-10-11 17:54:57,924 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Education.html.
+2021-10-11 17:55:01,098 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Education&action=edit.
+2021-10-11 17:55:01,336 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Engineering.html.
+2021-10-11 17:55:01,336 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Engineering.html.
+2021-10-11 17:55:01,336 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Engineering.html.
+2021-10-11 17:55:01,336 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Engineering.html.
+2021-10-11 17:55:01,336 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Engineering.html.
+2021-10-11 17:55:01,336 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Engineering.html.
+2021-10-11 17:55:01,345 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Engineering.html.
+2021-10-11 17:55:01,347 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Engineering.html.
+2021-10-11 17:55:01,347 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Engineering.html.
+2021-10-11 17:55:01,347 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Engineering.html.
+2021-10-11 17:55:01,347 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Engineering.html.
+2021-10-11 17:55:01,371 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Engineering.html.
+2021-10-11 17:55:01,371 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Engineering.html.
+2021-10-11 17:55:01,371 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Engineering.html.
+2021-10-11 17:55:01,375 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Engineering.html.
+2021-10-11 17:55:01,375 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Engineering.html.
+2021-10-11 17:55:01,376 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Engineering.html.
+2021-10-11 17:55:01,377 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Engineering.html.
+2021-10-11 17:55:01,377 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Engineering.html.
+2021-10-11 17:55:01,377 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Engineering.html.
+2021-10-11 17:55:01,380 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Engineering.html.
+2021-10-11 17:55:01,381 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Engineering.html.
+2021-10-11 17:55:01,381 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Engineering.html.
+2021-10-11 17:55:01,381 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Engineering.html.
+2021-10-11 17:55:04,901 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Engineering&action=edit.
+2021-10-11 17:55:05,048 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Human_Practices.html.
+2021-10-11 17:55:05,049 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Human_Practices.html.
+2021-10-11 17:55:05,049 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Human_Practices.html.
+2021-10-11 17:55:05,049 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Human_Practices.html.
+2021-10-11 17:55:05,058 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Human_Practices.html.
+2021-10-11 17:55:05,060 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Human_Practices.html.
+2021-10-11 17:55:05,062 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Human_Practices.html.
+2021-10-11 17:55:05,069 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Human_Practices.html.
+2021-10-11 17:55:05,069 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Human_Practices.html.
+2021-10-11 17:55:05,069 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Human_Practices.html.
+2021-10-11 17:55:05,069 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Human_Practices.html.
+2021-10-11 17:55:05,109 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Human_Practices.html.
+2021-10-11 17:55:05,112 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,114 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Human_Practices.html.
+2021-10-11 17:55:05,115 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,115 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Human_Practices.html.
+2021-10-11 17:55:05,117 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,125 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,125 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,126 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,126 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Human_Practices.html.
+2021-10-11 17:55:05,128 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,128 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,129 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,129 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Human_Practices.html.
+2021-10-11 17:55:05,129 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Human_Practices.html.
+2021-10-11 17:55:05,129 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Human_Practices.html.
+2021-10-11 17:55:06,779 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Human_Practices&action=edit.
+2021-10-11 17:55:06,976 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Implementation.html.
+2021-10-11 17:55:06,978 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Implementation.html.
+2021-10-11 17:55:06,984 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Implementation.html.
+2021-10-11 17:55:06,985 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Implementation.html.
+2021-10-11 17:55:06,990 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Implementation.html.
+2021-10-11 17:55:06,990 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Implementation.html.
+2021-10-11 17:55:06,990 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Implementation.html.
+2021-10-11 17:55:07,000 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Implementation.html.
+2021-10-11 17:55:07,001 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Implementation.html.
+2021-10-11 17:55:07,003 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Implementation.html.
+2021-10-11 17:55:07,003 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Implementation.html.
+2021-10-11 17:55:07,052 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Implementation.html.
+2021-10-11 17:55:07,052 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Implementation.html.
+2021-10-11 17:55:07,054 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Implementation.html.
+2021-10-11 17:55:07,055 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Implementation.html.
+2021-10-11 17:55:07,057 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Implementation.html.
+2021-10-11 17:55:07,058 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Implementation.html.
+2021-10-11 17:55:07,059 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Implementation.html.
+2021-10-11 17:55:07,060 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Implementation.html.
+2021-10-11 17:55:07,062 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Implementation.html.
+2021-10-11 17:55:07,065 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Implementation.html.
+2021-10-11 17:55:07,068 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Implementation.html.
+2021-10-11 17:55:07,068 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Implementation.html.
+2021-10-11 17:55:07,071 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Implementation.html.
+2021-10-11 17:55:07,072 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Implementation.html.
+2021-10-11 17:55:07,074 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Implementation.html.
+2021-10-11 17:55:07,076 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Implementation.html.
+2021-10-11 17:55:07,078 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Implementation.html.
+2021-10-11 17:55:07,080 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Implementation.html.
+2021-10-11 17:55:07,082 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Implementation.html.
+2021-10-11 17:55:07,084 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Implementation.html.
+2021-10-11 17:55:07,086 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Implementation.html.
+2021-10-11 17:55:07,087 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Implementation.html.
+2021-10-11 17:55:07,088 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Implementation.html.
+2021-10-11 17:55:07,088 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Implementation.html.
+2021-10-11 17:55:07,090 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Implementation.html.
+2021-10-11 17:55:07,090 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Implementation.html.
+2021-10-11 17:55:08,924 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Implementation&action=edit.
+2021-10-11 17:55:08,940 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in index.html.
+2021-10-11 17:55:08,940 : INFO : iGEM_URL : css/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css in index.html.
+2021-10-11 17:55:08,944 : INFO : iGEM_URL : ./js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in index.html.
+2021-10-11 17:55:08,947 : INFO : iGEM_URL : theming-kit.html was changed to https://2021.igem.org/Team:IISER-Pune-India/theming-kit in index.html.
+2021-10-11 17:55:08,949 : INFO : iGEM_URL : SB.html was changed to https://2021.igem.org/Team:IISER-Pune-India/SB in index.html.
+2021-10-11 17:55:08,964 : INFO : build_and_upload : Contents of index.html have been uploaded previously. Skipping.
+2021-10-11 17:55:08,968 : ERROR : build_and_upload : Could not open/read lastyear.html. Skipping.
+2021-10-11 17:55:09,184 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Model.html.
+2021-10-11 17:55:09,185 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Model.html.
+2021-10-11 17:55:09,186 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Model.html.
+2021-10-11 17:55:09,187 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Model.html.
+2021-10-11 17:55:09,190 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Model.html.
+2021-10-11 17:55:09,192 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Model.html.
+2021-10-11 17:55:09,193 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Model.html.
+2021-10-11 17:55:09,197 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Model.html.
+2021-10-11 17:55:09,197 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Model.html.
+2021-10-11 17:55:09,197 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Model.html.
+2021-10-11 17:55:09,197 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Model.html.
+2021-10-11 17:55:09,241 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Model.html.
+2021-10-11 17:55:09,242 : INFO : iGEM_URL : assets/graphs/Biomass vs CO_2.jpg was changed to https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Biomass_vs_CO_2.jpg in Model.html.
+2021-10-11 17:55:09,244 : INFO : iGEM_URL : assets/Graphs/Biomass vs Sucrose.jpg was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Graphs--Biomass_vs_Sucrose.jpg in Model.html.
+2021-10-11 17:55:09,247 : INFO : iGEM_URL : assets/Graphs/3 Variables.jpg was changed to https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--3_Variables.jpg in Model.html.
+2021-10-11 17:55:09,248 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Model.html.
+2021-10-11 17:55:09,250 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Model.html.
+2021-10-11 17:55:09,250 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Model.html.
+2021-10-11 17:55:09,250 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Model.html.
+2021-10-11 17:55:09,254 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Model.html.
+2021-10-11 17:55:09,255 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Model.html.
+2021-10-11 17:55:09,256 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Model.html.
+2021-10-11 17:55:09,257 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Model.html.
+2021-10-11 17:55:09,258 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Model.html.
+2021-10-11 17:55:09,260 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Model.html.
+2021-10-11 17:55:09,262 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Model.html.
+2021-10-11 17:55:09,264 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Model.html.
+2021-10-11 17:55:09,267 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Model.html.
+2021-10-11 17:55:11,593 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Model&action=edit.
+2021-10-11 17:55:11,623 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in navbar.html.
+2021-10-11 17:55:11,624 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in navbar.html.
+2021-10-11 17:55:11,626 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in navbar.html.
+2021-10-11 17:55:11,628 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in navbar.html.
+2021-10-11 17:55:11,629 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in navbar.html.
+2021-10-11 17:55:11,629 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in navbar.html.
+2021-10-11 17:55:11,631 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in navbar.html.
+2021-10-11 17:55:11,645 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in navbar.html.
+2021-10-11 17:55:11,669 : INFO : build_and_upload : Contents of navbar.html have been uploaded previously. Skipping.
+2021-10-11 17:55:11,721 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in Partnership.html.
+2021-10-11 17:55:11,721 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in Partnership.html.
+2021-10-11 17:55:11,722 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in Partnership.html.
+2021-10-11 17:55:11,722 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in Partnership.html.
+2021-10-11 17:55:11,724 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in Partnership.html.
+2021-10-11 17:55:11,725 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in Partnership.html.
+2021-10-11 17:55:11,725 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in Partnership.html.
+2021-10-11 17:55:11,728 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in Partnership.html.
+2021-10-11 17:55:11,728 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in Partnership.html.
+2021-10-11 17:55:11,728 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in Partnership.html.
+2021-10-11 17:55:11,728 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in Partnership.html.
+2021-10-11 17:55:11,743 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in Partnership.html.
+2021-10-11 17:55:11,743 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in Partnership.html.
+2021-10-11 17:55:11,745 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in Partnership.html.
+2021-10-11 17:55:11,745 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in Partnership.html.
+2021-10-11 17:55:11,746 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in Partnership.html.
+2021-10-11 17:55:11,746 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in Partnership.html.
+2021-10-11 17:55:11,747 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in Partnership.html.
+2021-10-11 17:55:11,747 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in Partnership.html.
+2021-10-11 17:55:11,748 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in Partnership.html.
+2021-10-11 17:55:11,748 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in Partnership.html.
+2021-10-11 17:55:11,749 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in Partnership.html.
+2021-10-11 17:55:11,749 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in Partnership.html.
+2021-10-11 17:55:11,750 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in Partnership.html.
+2021-10-11 17:55:11,750 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in Partnership.html.
+2021-10-11 17:55:13,484 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/Partnership&action=edit.
+2021-10-11 17:55:13,593 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in SB.html.
+2021-10-11 17:55:13,595 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in SB.html.
+2021-10-11 17:55:13,598 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in SB.html.
+2021-10-11 17:55:13,602 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in SB.html.
+2021-10-11 17:55:13,604 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in SB.html.
+2021-10-11 17:55:13,612 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in SB.html.
+2021-10-11 17:55:13,615 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in SB.html.
+2021-10-11 17:55:13,617 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in SB.html.
+2021-10-11 17:55:13,618 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in SB.html.
+2021-10-11 17:55:13,651 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in SB.html.
+2021-10-11 17:55:13,653 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in SB.html.
+2021-10-11 17:55:15,096 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/SB&action=edit.
+2021-10-11 17:55:15,225 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-10-11 17:55:15,226 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in theming-kit.html.
+2021-10-11 17:55:15,295 : INFO : build_and_upload : Contents of theming-kit.html have been uploaded previously. Skipping.
+2021-10-11 17:55:15,430 : INFO : iGEM_URL : css/igem-reset.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/igem-resetCSS?action=raw&ctype=text/css in thisyear.html.
+2021-10-11 17:55:15,432 : INFO : iGEM_URL : css/SBcss/style.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css in thisyear.html.
+2021-10-11 17:55:15,432 : INFO : iGEM_URL : css/styleSB.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css in thisyear.html.
+2021-10-11 17:55:15,433 : INFO : iGEM_URL : css/DryLabPage.css was changed to https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css in thisyear.html.
+2021-10-11 17:55:15,437 : INFO : iGEM_URL : js/bootstrap-bundle.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript in thisyear.html.
+2021-10-11 17:55:15,438 : INFO : iGEM_URL : js/main.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript in thisyear.html.
+2021-10-11 17:55:15,438 : INFO : iGEM_URL : js/jquery.min.js was changed to https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript in thisyear.html.
+2021-10-11 17:55:15,441 : INFO : iGEM_URL : Model.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Model in thisyear.html.
+2021-10-11 17:55:15,442 : INFO : iGEM_URL : EColi.html was changed to https://2021.igem.org/Team:IISER-Pune-India/EColi in thisyear.html.
+2021-10-11 17:55:15,443 : INFO : iGEM_URL : Cyanobacteria.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Cyanobacteria in thisyear.html.
+2021-10-11 17:55:15,443 : INFO : iGEM_URL : Coculture.html was changed to https://2021.igem.org/Team:IISER-Pune-India/Coculture in thisyear.html.
+2021-10-11 17:55:15,468 : INFO : iGEM_URL : assets/svgs/synbactory2.svg was changed to https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--svgs--synbactory2.svg in thisyear.html.
+2021-10-11 17:55:15,469 : INFO : iGEM_URL : assets/Logos/IISER-Pune-iGEM_logo.png was changed to https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Logos--IISER-Pune-iGEM_logo.png in thisyear.html.
+2021-10-11 17:55:15,469 : INFO : iGEM_URL : assets/Logos/Instagram_logo.jpg was changed to https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Logos--Instagram_logo.jpg in thisyear.html.
+2021-10-11 17:55:15,469 : INFO : iGEM_URL : assets/Logos/linkedin_logo.png was changed to https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png in thisyear.html.
+2021-10-11 17:55:15,469 : INFO : iGEM_URL : assets/Logos/Twitter_logo.png was changed to https://2021.igem.org/wiki/images/6/69/T--IISER-Pune-India--Logos--Twitter_logo.png in thisyear.html.
+2021-10-11 17:55:15,472 : INFO : iGEM_URL : assets/Logos/Facebook_logo.png was changed to https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png in thisyear.html.
+2021-10-11 17:55:15,473 : INFO : iGEM_URL : assets/Logos/Youtube_logo.png was changed to https://2021.igem.org/wiki/images/e/ec/T--IISER-Pune-India--Logos--Youtube_logo.png in thisyear.html.
+2021-10-11 17:55:15,474 : INFO : iGEM_URL : assets/Logos/Sai_logo.jpg was changed to https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Logos--Sai_logo.jpg in thisyear.html.
+2021-10-11 17:55:15,475 : INFO : iGEM_URL : assets/Logos/IDT_logo.png was changed to https://2021.igem.org/wiki/images/7/73/T--IISER-Pune-India--Logos--IDT_logo.png in thisyear.html.
+2021-10-11 17:55:15,476 : INFO : iGEM_URL : assets/Logos/Geneious_logo.png was changed to https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Logos--Geneious_logo.png in thisyear.html.
+2021-10-11 17:55:15,476 : INFO : iGEM_URL : assets/Logos/Notion_logo.png was changed to https://2021.igem.org/wiki/images/f/fb/T--IISER-Pune-India--Logos--Notion_logo.png in thisyear.html.
+2021-10-11 17:55:15,476 : INFO : iGEM_URL : assets/Logos/IISER Pune Logo.png was changed to https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Logos--IISER_Pune_Logo.png in thisyear.html.
+2021-10-11 17:55:15,478 : INFO : iGEM_URL : assets/Logos/Zoho_logo.png was changed to https://2021.igem.org/wiki/images/4/41/T--IISER-Pune-India--Logos--Zoho_logo.png in thisyear.html.
+2021-10-11 17:55:15,479 : INFO : iGEM_URL : assets/svgs/arrow-up-square-fill.svg was changed to https://2021.igem.org/wiki/images/7/75/T--IISER-Pune-India--svgs--arrow-up-square-fill.svg in thisyear.html.
+2021-10-11 17:55:17,528 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Team:IISER-Pune-India/thisyear&action=edit.
+2021-10-11 17:55:17,528 : INFO : build_and_upload : Contents of css\DryLabPage.css have been uploaded previously. Skipping.
+2021-10-11 17:55:17,528 : INFO : build_and_upload : Contents of css\igem-reset.css have been uploaded previously. Skipping.
+2021-10-11 17:55:17,528 : INFO : iGEM_URL : ../assets/fonts/FSEX300.ttf was changed to https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf in css\style.css.
+2021-10-11 17:55:17,528 : INFO : build_and_upload : Contents of css\style.css have been uploaded previously. Skipping.
+2021-10-11 17:55:18,911 : INFO : iGEM_upload_page : Uploaded to https://2021.igem.org/wiki/index.php?title=Template:IISER-Pune-India/css/styleSBCSS&action=edit.
+2021-10-11 17:55:18,917 : INFO : iGEM_URL : ../../assets/svgs/layered-waves-haikei-2.svg was changed to https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--svgs--layered-waves-haikei-2.svg in css\SBcss\style.css.
+2021-10-11 17:55:18,917 : INFO : build_and_upload : Contents of css\SBcss\style.css have been uploaded previously. Skipping.
+2021-10-11 17:55:18,917 : INFO : build_and_upload : Contents of js\bootstrap-bundle.js have been uploaded previously. Skipping.
+2021-10-11 17:55:18,917 : INFO : build_and_upload : Contents of js\jquery.min.js have been uploaded previously. Skipping.
+2021-10-11 17:55:18,917 : INFO : build_and_upload : Contents of js\main.js have been uploaded previously. Skipping.
