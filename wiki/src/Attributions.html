@@ -20,6 +20,38 @@
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
     </style>
+    <style>
+	table{
+		table-layout: fixed;
+	}
+/* Dark Style */
+[data-table-theme*=dark] {
+  color: #ddd;
+  background: #333;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+[data-table-theme*=dark] thead th,
+[data-table-theme*=dark] tfoot th {
+  color: #aaa;
+  background: rgba(0255,255,255,.15);
+}
+[data-table-theme*=dark] caption {
+  padding:.5em;
+}
+[data-table-theme*=dark] th,
+[data-table-theme*=dark] td {
+  padding: .5em;
+  border: 1px solid grey;
+}
+.tdgreen {
+	background: #27668d;
+}
+.tdyellow {
+	background: #ffd73a;
+	color: black;
+}
+    </style>
 <body>
     
 
@@ -175,6 +207,108 @@
 
                     <h1 id="2">Section 2</h1>
                     <hr>
+		    <div style="overflow-x:auto;">
+<!-- Dark Theme -->
+<table data-table-theme="dark zebra">
+  <caption>Attributions</caption>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Akash</th>
+      <th>&nbsp;Arsh&nbsp;</th>
+      <th>Arya&nbsp;</th>
+      <th>Ashli&nbsp;</th>
+      <th>Ashwin</th>
+      <th>Jason&nbsp;</th>
+      <th>Likhith</th>
+      <th>Misaal</th>
+      <th>Namasi</th>
+      <th>Sanjana</th>
+      <th>Soorya</th>
+      <th>Vidisha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name 1</td>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+      <td class="tdgreen">Cell 3</td>
+      <td>Cell 4</td>
+      <td>Cell 5</td>
+      <td>Cell 6</td>
+      <td>Cell 7</td>
+      <td>Cell 8</td>
+      <td>Cell 9</td>
+      <td>Cell 10</td>
+      <td>Cell 11</td>
+      <td>Cell 12</td>
+	</tr>
+      <tr>
+	<td>Name 2</td>
+	<td>Cell 1</td>
+	<td class="tdyellow">Cell 2</td>
+	<td>Cell 3</td>
+	<td>Cell 4</td>
+	<td>Cell 5</td>
+	<td>Cell 6</td>
+	<td>Cell 7</td>
+	<td>Cell 8</td>
+	<td>Cell 9</td>
+	<td>Cell 10</td>
+	<td>Cell 11</td>
+	<td>Cell 12</td>
+	</tr>
+      <tr>
+	<td>Name 3</td>
+	<td>Cell 1</td>
+	<td class="tdyellow">Cell 2</td>
+	<td class="tdgreen">Cell 3</td>
+	<td>Cell 4</td>
+	<td>Cell 5</td>
+	<td>Cell 6</td>
+	<td>Cell 7</td>
+	<td>Cell 8</td>
+	<td>Cell 9</td>
+	<td>Cell 10</td>
+	<td>Cell 11</td>
+	<td>Cell 12</td>
+	</tr>
+      <tr>
+	<td>Name 4</td>
+	<td>Cell 1</td>
+	<td>Cell 2</td>
+	<td class="tdgreen">Cell 3</td>
+	<td>Cell 4</td>
+	<td>Cell 5</td>
+	<td>Cell 6</td>
+	<td>Cell 7</td>
+	<td>Cell 8</td>
+	<td>Cell 9</td>
+	<td>Cell 10</td>
+	<td>Cell 11</td>
+	<td>Cell 12</td>
+	</tr>
+      <tr>
+	<td>Name 5</td>
+	<td>Cell 1</td>
+	<td class="tdyellow">Cell 2</td>
+	<td>Cell 3</td>
+	<td>Cell 4</td>
+	<td>Cell 5</td>
+	<td>Cell 6</td>
+	<td>Cell 7</td>
+	<td>Cell 8</td>
+	<td>Cell 9</td>
+	<td>Cell 10</td>
+	<td>Cell 11</td>
+	<td>Cell 12</td>
+	</tr>
+
+      </tbody>
+      </table>
+      </div>
+
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
                     <br>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
