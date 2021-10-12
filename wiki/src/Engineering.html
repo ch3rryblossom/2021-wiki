@@ -254,7 +254,7 @@ z-index: -1;
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Planned pipeline of experiments</a></li>
                             <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
                             <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
                             <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
@@ -267,7 +267,7 @@ z-index: -1;
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Introduction</h1>
+                    <h1 id="1">Planned pipeline of experiments: production of sucrose and butanol</h1>
                     <hr><br><br><br>
 		<!--    <div class="card">
                         <div class="card-header">
@@ -673,30 +673,120 @@ z-index: -1;
                             </div>
                         </div>
                         </div>   
-		    <p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-			<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    <p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+                        <br><br><br>
+                        <p>
+                            <ul class="a">
+                                <li style="padding-left:1em;padding-top: 0.3em;">Purify DNA and PCR-verify presence of genes in all strains/plasmids.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Revive ordered bacteria from stocks. Streak new plates and prepare stocks.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Pellet down KJK01 and check the supernatant for butanol via NMR.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Make E. coli competent for transformation</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Transform E. coli with pCscX. </li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Take growth measurements of our E. coli over time.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Use MegaZyme’s sucrose assay kit to test for sucrose consumption by KJK01 (sample successive supernatants) over time.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Grow S. elongatus UTEX 2973 (from Pakrasi lab) and test for sucrose production.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Genomically integrate native promoters and carry out fluorescence measurement assays for promoter activity, under high and low light intensities, and high and low carbon dioxide concentrations.</li>
+                            </ul><br>
+                            Due to the second wave of the pandemic in India, our wet lab work was considerably delayed, effectively leaving us with a mere month and a half in the lab. We utilised our time working remotely to devise a thorough plan of experiments, incorporating a Design-Test-Build cycle:
+                        </p>
 
-
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-
-
-                    </figure>
-
-
+<style>
+.engcycle{
+    display: flex;
+    flex-direction: column;
+}
+.engcy-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+        .engcy-title{
+            text-align: center;
+            width: 8rem;
+            padding: 1px 10px;
+            font-size: 1.5rem;
+            box-shadow: 5px 4px 1px #000000;
+                    }
+.engcy-content{
+        padding: 20px 20px;
+        margin: 0px 50px;
+        border-style: solid;
+        border-radius: 5px;
+        border-width: 3px;
+        background-color:beige;
+        color: black;
+        text-align: center;
+        box-shadow: 5px 4px #000000;
+}
+#engcy-design{
+    background: yellowgreen;
+    border-radius: 0.4em 0.4em 0px 0px;
+}
+#engcy-build{
+    background: yellow;
+    color: black;
+}
+#engcy-test{
+    background: orange;
+}
+</style>
 
                     <h1 id="2">Section 2</h1>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+                    <div class="engcycle">
+                        <div class="engcy-header">
+                            <div class="engcy-title" id="engcy-design">
+                                Design
+                            </div>
+                        </div>
+                        <div class="engcy-content" style="border-color: yellowgreen;">
+                            Design constructs via overlap PCR of various native promoters upstream of fluorescent reporters
+                        </div>
+                        <div class="engcy-header">
+                            <div class="engcy-title" id="engcy-build">
+                                Build
+                            </div>
+                        </div>
+                        <div class="engcy-content" style="border-color: yellow;">
+                            Incorporate constructs via homology directed repair into Neutral Site I of the genome
+                        </div>
+                        <div class="engcy-header">
+                            <div class="engcy-title" id="engcy-test">
+                                Test
+                            </div>
+                        </div>
+                        <div class="engcy-content" style="border-color: orange;">
+                            Vary light intensity and concentration of carbon dioxide and study fluorescence to characterise promoter activity (strength and response)
+                        </div>
+                    </div>
                     <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
                     <br>
-		    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
+                    <div class="engcycle">
+                        <div class="engcy-header">
+                            <div class="engcy-title" id="engcy-design">
+                                Design
+                            </div>
+                        </div>
+                        <div class="engcy-content" style="border-color: yellowgreen;">
+                            Constructs with strong/tunable promoters from previous round, with cscB and with sps and spp
+                        </div>
+                        <div class="engcy-header">
+                            <div class="engcy-title" id="engcy-build">
+                                Build
+                            </div>
+                        </div>
+                        <div class="engcy-content" style="border-color: yellow;">
+                            The former are incorporated via HDR into NSI; the latter into NSIII
+                        </div>
+                        <div class="engcy-header">
+                            <div class="engcy-title" id="engcy-test">
+                                Test
+                            </div>
+                        </div>
+                        <div class="engcy-content" style="border-color: orange;">
+                            Collect supernatant samples over time to estimate sucrose production; use Pakrasi lab’s strains as a reference
+                        </div>
+                    </div>
+                <p>We were unfortunately unable to carry out most of these experiments in the little time remaining to us. We instead acquired sucrose-secreting strains of <i>S. elongatus</i> UTEX 2973 from the Pakrasi lab, to measure their sucrose production rates. We have also acquired everything we need for future experiments according to our original plan.</p>
                     
 
 			</div>
