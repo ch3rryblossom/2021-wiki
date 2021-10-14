@@ -424,7 +424,8 @@
 		var imageDesc1 = document.getElementById("ImageDesc1");
 		const imagearray1 = ['95','90','80','70','60','40','20','10'];
 		const descarray1 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
-
+		const igemarray1 = [''];
+		const correctorder1 = [''];
 		output1.innerHTML = slider1.value;
 		output1.innerHTML = '95%';
 		imageDesc1.innerHTML = 'me'
@@ -480,7 +481,10 @@
 	var imageDesc4 = document.getElementById("ImageDesc4");
 	const imagearray4 = ['181','121','101','81','61','41','31','21','11','5'];
 	const descarray4 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
-
+	const igemarraybut1 = ['https://2021.igem.org/wiki/images/9/97/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--101.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--11.png', 'https://2021.igem.org/wiki/images/3/35/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--121.png', 'https://2021.igem.org/wiki/images/6/6c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--181.png', 'https://2021.igem.org/wiki/images/d/d5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--21.png', 'https://2021.igem.org/wiki/images/1/12/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--31.png', 'https://2021.igem.org/wiki/images/3/32/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--41.png', 'https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--5.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--61.png', 'https://2021.igem.org/wiki/images/9/9f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--81.png'];
+	const igemarraycoc1 = ['https://2021.igem.org/wiki/images/2/2e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--101.png', 'https://2021.igem.org/wiki/images/c/c1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--11.png', 'https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--121.png', 'https://2021.igem.org/wiki/images/f/f1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--181.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--21.png', 'https://2021.igem.org/wiki/images/8/8d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--31.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--41.png', 'https://2021.igem.org/wiki/images/5/51/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--5.png', 'https://2021.igem.org/wiki/images/5/50/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--61.png', 'https://2021.igem.org/wiki/images/d/d1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--81.png'];
+	const igemarraysuc1 = ['https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--101.png', 'https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--11.png', 'https://2021.igem.org/wiki/images/4/4b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--121.png', 'https://2021.igem.org/wiki/images/f/f0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--181.png', 'https://2021.igem.org/wiki/images/9/94/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--21.png', 'https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--31.png', 'https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--41.png', 'https://2021.igem.org/wiki/images/6/6b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--5.png', 'https://2021.igem.org/wiki/images/8/81/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--61.png', 'https://2021.igem.org/wiki/images/7/7d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--81.png'];
+	const correctorder1 = ['5', '4', '1', '11', '10', '8', '7', '6', '3', '9'];
 	output4.innerHTML = slider4.value;
 	output4.innerHTML = '181';
 	imageDesc4.innerHTML = 'me'
@@ -488,7 +492,7 @@
 	slider4.oninput = function() {
 	  output4.innerHTML = imagearray4[this.value - 1] + '%';
 	  imageDesc4.innerHTML = descarray4[this.value-1]
-	  slideimage4.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/' + imagearray4[this.value-1] + '.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/' + imagearray4[this.value-1] + '.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/' + imagearray4[this.value-1] + '.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/' + imagearray4[this.value-1] + '.png"';
+	  slideimage4.innerHTML = '<div><img src="' + igemarraycoc1[correctorder1[this.value-1]] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc1[correctorder1[this.value-1]] + '" width="450px" height="450px">' + '<img src="' + igemarraybut1[correctorder1[this.value-1]] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc1[correctorder1[this.value-1]] + '" width="450px" height="450px"';
 	}
 	</script>
 	<script>
