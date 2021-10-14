@@ -305,22 +305,24 @@
 			<h3>Varying sucrose productivity of the cyanobacteria
 			</h3>
 			<br><p>Hypothesis: As SteadyCom predicts there to be an optimum sucrose productivity which gives the maximum butanol yield, the dynamic model is expected to give similar results.<br><br>Observations: The dynamic simulation was performed at aerobic conditions for 60% butanol productivity of E. coli. Initially as sucrose productivity of cyanobacteria was increased, the total butanol yield also increased. However, when increasing sucrose productivity beyond 70%, the butanol yield starts decreasing. <br>
+				<!-- SLIDER 2 VARYING SUCROSE PROD -->
 				<div class="rangeImage" id="rangeImage2"></div><br><br>
 				<div class="range-slider">
 				    <input type="range" min="1" max="8" step="1" value="1" class="myRange"id="myRange2">
 				  </div>
-				<div class="rangeOutput" id="rangeValue2"></div><div class="rangeOutput">Sucrose Value</div><br>   
+				<div class="rangeOutput" id="rangeValue2"></div><div class="rangeOutput">Sucrose Productivity</div><br>   
 				<br><h4>Image description:
 				<b><div id="ImageDesc2"></div></h4></b><br><br>Conclusion: This can be explained because the total amount of sucrose produced is both proportional to the biomass of cyanobacteria and the sucrose productivity of the cyanobacteria. But, increasing the sucrose productivity, diverts carbon flux away from growth. This causes the biomass of cyanobacteria to grow slower, but each individual is producing sucrose more efficiently. Since such a trade-off exists, the optimum sucrose yield ends up being around 70% sucrose productivity of cyanobacteria, which in turn gives maximum butanol yield.</p>
 			<br>
 			<h3>Varying butanol productivity of E. coli</h3><br>
 			<p>Hypothesis: As butanol efficiency increases, total butanol yield will increase.<br><br>
 				Observation: The dynamic simulation was done at 60% sucrose productivity from cyanobacteria, at aerobic conditions. The simulations suggest that as butanol productivity increases, varying from 10% to 95%, the butanol yield keeps increasing. <br>
+				<!-- SLIDER 1  -->
 				<div class="rangeImage" id="rangeImage1"></div><br><br>
 				<div class="range-slider">
 				    <input type="range" min="1" max="8" step="1" value="1" class="myRange" id="myRange1">
 				  </div>
-				<div class="rangeOutput" id="rangeValue1"></div><div class="rangeOutput">Sucrose Value</div><br>   
+				<div class="rangeOutput" id="rangeValue1"></div><div class="rangeOutput">Butanol Productivity</div><br>   
 				<br><h4>Image description:
 				<b><div id="ImageDesc1"></div></h4></b><br><br>
 				Conclusion: Methods to increase butanol productivity will help increase butanol yield. However, it is not biologically realistic to reach 95% butanol yield as shown in the simulation. This would divert too much flux away from growth of the E. coli, which is not feasible in real life. 
@@ -328,6 +330,7 @@
 			<h3>Varying Oxygen levels to test aerobic vs micro aerobic vs anaerobic</h3><br>
 			<p>Hypothesis: SteadyCom suggests that micro aerobic conditions are ideal for butanol productivity. The results are expected to match in the dynamic model as well.<br><br>
 				Observation: The simulations were run at 60% productivity of sucrose and butanol aerobically. The oxygen uptake flux of E. coli was already well below the oxygen produced by the cyanobacteria. This is because at the sucrose flux available to the E. coli, high oxygen consumption was not required for optimal growth and productivity. <br>However, as we decrease the oxygen uptake of E. coli, we notice that initially butanol productivity increases. This could be explained by the fact that E. coli starts switching some of its flux to a different anaerobic pathway, where growth rate is low. This in turn implies that there is more carbon flux available to produce butanol efficiently. <br>This trend does not sustain as oxygen uptake is further decreased. This could be explained because as oxygen uptake is decreased, the growth rate of the E coli goes down significantly which brings down the total butanol yield.<br><br>
+				<!-- SLIDER 3 -->
 				<div class="rangeImage" id="rangeImage3"></div><br><br>
 				<div class="range-slider">
 				    <input type="range" min="1" max="11" step="1" value="1" class="myRange" id="myRange3">
@@ -339,6 +342,7 @@
 			<h3>Effect of CO2 </h3><br>
 			<p>Hypothesis: As co2 input increases in the bioreactor, the productivity of the entire consortium as a system is improved. Increasing the productivity of co2 sequestration by cyanobacteria should have similar effects.<br><br>
 				Observation: As co2 input is increased, the butanol yield, as well as the growth rates of both the organisms increase.<br>Similar effects are observed as co2 uptake rate is increased in the cyanobacteria.<br><br>
+				<!-- SLIDER 4 -->
 				<div class="rangeImage" id="rangeImage4"></div><br><br>
 				<div class="range-slider">
 				    <input type="range" min="1" max="10" step="1" value="1" class="myRange" id="myRange4">
@@ -417,82 +421,94 @@
     <script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
+
+	<!-- slider 4 -->
 	<script>
-		var slider1 = document.getElementById("myRange1");
-		var output1 = document.getElementById("rangeValue1");
-		var slideimage1 = document.getElementById("rangeImage1");
-		var imageDesc1 = document.getElementById("ImageDesc1");
-		const imagearray1 = ['95','90','80','70','60','40','20','10'];
-		const descarray1 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
-		const igemarray1 = [''];
-		const correctorder1 = [''];
-		output1.innerHTML = slider1.value;
-		output1.innerHTML = '95%';
-		imageDesc1.innerHTML = 'me'
-		  slideimage1.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/culture/95_.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/sucrose/95_.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/butanol/95_.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/sucrose/95_.png"';
-		slider1.oninput = function() {
-		  output1.innerHTML = imagearray1[this.value - 1] + '%';
-		  imageDesc1.innerHTML = descarray1[this.value-1]
-		  slideimage1.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/culture/' + imagearray1[this.value-1] + '_.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/sucrose/' + imagearray1[this.value-1] + '_.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/butanol/' + imagearray1[this.value-1] + '_.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/varying%20butanol%20productivity/sucrose/' + imagearray1[this.value-1] + '_.png"';
+		var slider4 = document.getElementById("myRange4");
+		var output4 = document.getElementById("rangeValue4");
+		var slideimage4 = document.getElementById("rangeImage4");
+		var imageDesc4 = document.getElementById("ImageDesc4");
+		const imagearray4 = ['181','121','101','81','61','41','31','21','11','5'];
+		const descarray4 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+		const igemarraybut4 = ['https://2021.igem.org/wiki/images/9/97/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--101.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--11.png', 'https://2021.igem.org/wiki/images/3/35/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--121.png', 'https://2021.igem.org/wiki/images/6/6c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--181.png', 'https://2021.igem.org/wiki/images/d/d5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--21.png', 'https://2021.igem.org/wiki/images/1/12/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--31.png', 'https://2021.igem.org/wiki/images/3/32/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--41.png', 'https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--5.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--61.png', 'https://2021.igem.org/wiki/images/9/9f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--81.png'];
+		const igemarraycoc4 = ['https://2021.igem.org/wiki/images/2/2e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--101.png', 'https://2021.igem.org/wiki/images/c/c1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--11.png', 'https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--121.png', 'https://2021.igem.org/wiki/images/f/f1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--181.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--21.png', 'https://2021.igem.org/wiki/images/8/8d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--31.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--41.png', 'https://2021.igem.org/wiki/images/5/51/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--5.png', 'https://2021.igem.org/wiki/images/5/50/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--61.png', 'https://2021.igem.org/wiki/images/d/d1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--81.png'];
+		const igemarraysuc4 = ['https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--101.png', 'https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--11.png', 'https://2021.igem.org/wiki/images/4/4b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--121.png', 'https://2021.igem.org/wiki/images/f/f0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--181.png', 'https://2021.igem.org/wiki/images/9/94/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--21.png', 'https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--31.png', 'https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--41.png', 'https://2021.igem.org/wiki/images/6/6b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--5.png', 'https://2021.igem.org/wiki/images/8/81/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--61.png', 'https://2021.igem.org/wiki/images/7/7d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--81.png'];
+		const correctorder4 = ['4', '3', '1', '10', '9', '7', '6', '5', '2', '8'];
+		output4.innerHTML = slider4.value;
+		output4.innerHTML = '181';
+		imageDesc4.innerHTML = 'me'
+		  slideimage4.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+		slider4.oninput = function() {
+		  output4.innerHTML = imagearray4[this.value - 1] + '%';
+		  imageDesc4.innerHTML = igemarraycoc4[correctorder4[this.value-1]-1]
+		  slideimage4.innerHTML = '<div><img src="' + igemarraycoc4[correctorder4[this.value-1]-1] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc4[correctorder4[this.value-1]-1] + '" width="450px" height="450px">' + '<img src="' + igemarraybut4[correctorder4[this.value-1]-1] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc4[correctorder4[this.value-1]-1] + '" width="450px" height="450px"';
 		}
 		</script>
-	<script>
-		var slider2 = document.getElementById("myRange2");
+
+	<!-- slider 2 -->
+		<script>
+			var slider2 = document.getElementById("myRange2");
 		var output2 = document.getElementById("rangeValue2");
 		var slideimage2 = document.getElementById("rangeImage2");
 		var imageDesc2 = document.getElementById("ImageDesc2");
 		const imagearray2 = ['95','90','80','70','60','40','20','10'];
 		const descarray2 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
-
-		output2.innerHTML = slider2.value;
+			const igemarraybut2 = ['https://2021.igem.org/wiki/images/7/78/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--10_.png', 'https://2021.igem.org/wiki/images/9/9e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--20_.png', 'https://2021.igem.org/wiki/images/2/2b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--40_.png', 'https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--60_.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--70_.png', 'https://2021.igem.org/wiki/images/a/a8/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--80_.png', 'https://2021.igem.org/wiki/images/8/82/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--90_.png', 'https://2021.igem.org/wiki/images/d/df/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--95_.png'];
+			const igemarraycoc2 = ['https://2021.igem.org/wiki/images/6/6f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--10_.png', 'https://2021.igem.org/wiki/images/c/c6/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--20_.png', 'https://2021.igem.org/wiki/images/0/07/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--40_.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--60_.png', 'https://2021.igem.org/wiki/images/6/63/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--70_.png', 'https://2021.igem.org/wiki/images/8/89/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--80_.png', 'https://2021.igem.org/wiki/images/7/72/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--90_.png', 'https://2021.igem.org/wiki/images/0/0a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--95_.png'];
+			const igemarraysuc2 = ['https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--10_.png', 'https://2021.igem.org/wiki/images/5/57/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--20_.png', 'https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--40_.png', 'https://2021.igem.org/wiki/images/f/fc/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--60_.png', 'https://2021.igem.org/wiki/images/e/ef/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--70_.png', 'https://2021.igem.org/wiki/images/4/4d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--80_.png', 'https://2021.igem.org/wiki/images/e/e7/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--90_.png', 'https://2021.igem.org/wiki/images/1/1b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--95_.png'];
+			const correctorder2 = ['8', '7', '6', '5', '4', '3', '2', '1'];
+			output2.innerHTML = slider2.value;
 		output2.innerHTML = '95%';
 		imageDesc2.innerHTML = 'me'
-		  slideimage2.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/culture/95_.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/sucrose/95_.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/butanol/95_.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/sucrose/95_.png"';
-		slider2.oninput = function() {
-		  output2.innerHTML = imagearray2[this.value - 1] + '%';
-		  imageDesc2.innerHTML = descarray2[this.value-1]
-		  slideimage2.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/culture/' + imagearray2[this.value-1] + '_.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/sucrose/' + imagearray2[this.value-1] + '_.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/butanol/' + imagearray2[this.value-1] + '_.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/varying%20sucrose%20productivity/sucrose/' + imagearray2[this.value-1] + '_.png"';
-		}
-		</script>
-
-<script>
-	var slider3 = document.getElementById("myRange3");
+			  slideimage2.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+			slider2.oninput = function() {
+			  output2.innerHTML = imagearray2[this.value - 1] + '%';
+			  imageDesc2.innerHTML = igemarraycoc2[correctorder2[this.value-1]-1]
+			  slideimage2.innerHTML = '<div><img src="' + igemarraycoc2[correctorder2[this.value-1]-1] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc2[correctorder2[this.value-1]-1] + '" width="450px" height="450px">' + '<img src="' + igemarraybut2[correctorder2[this.value-1]-1] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc2[correctorder2[this.value-1]-1] + '" width="450px" height="450px"';
+			}
+			</script>
+	<!-- slider 3 -->
+	<script>
+		var slider3 = document.getElementById("myRange3");
 	var output3 = document.getElementById("rangeValue3");
 	var slideimage3 = document.getElementById("rangeImage3");
 	var imageDesc3 = document.getElementById("ImageDesc3");
-	const imagearray3 = ['-4','-3','-2','-1','-1.75','-1.25','-1.5','-0.75','-0.5','-0.25','0'];
+	const imagearray3 = ['-4','-3','-2','-1.75','-1.25','-1.5','-1','-0.75','-0.5','-0.25','0'];
 	const descarray3 = ['me','me when','me when the','poopoo','peepee','6','7','8','0','0','0','0','0','0'];
-
-	output3.innerHTML = slider3.value;
+		const igemarraybut3 = ['https://2021.igem.org/wiki/images/f/f0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---0.25.png', 'https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---0.5.png', 'https://2021.igem.org/wiki/images/c/c3/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---0.75.png', 'https://2021.igem.org/wiki/images/1/15/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.25.png', 'https://2021.igem.org/wiki/images/8/84/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.5.png', 'https://2021.igem.org/wiki/images/c/c8/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.75.png', 'https://2021.igem.org/wiki/images/9/93/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.png', 'https://2021.igem.org/wiki/images/9/98/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---2.png', 'https://2021.igem.org/wiki/images/8/8b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---3.png', 'https://2021.igem.org/wiki/images/0/07/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---4.png', 'https://2021.igem.org/wiki/images/4/4b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol--0.png'];
+		const igemarraycoc3 = ['https://2021.igem.org/wiki/images/a/a7/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---0.25.png', 'https://2021.igem.org/wiki/images/0/06/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---0.5.png', 'https://2021.igem.org/wiki/images/8/87/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---0.75.png', 'https://2021.igem.org/wiki/images/8/82/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.25.png', 'https://2021.igem.org/wiki/images/a/a4/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.5.png', 'https://2021.igem.org/wiki/images/6/61/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.75.png', 'https://2021.igem.org/wiki/images/e/e9/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.png', 'https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---2.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---3.png', 'https://2021.igem.org/wiki/images/5/51/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---4.png', 'https://2021.igem.org/wiki/images/5/50/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture--0.png'];
+		const igemarraysuc3 = ['https://2021.igem.org/wiki/images/c/cf/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---0.25.png', 'https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---0.5.png', 'https://2021.igem.org/wiki/images/0/0a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---0.75.png', 'https://2021.igem.org/wiki/images/7/7e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.25.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.5.png', 'https://2021.igem.org/wiki/images/a/a2/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.75.png', 'https://2021.igem.org/wiki/images/7/72/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.png', 'https://2021.igem.org/wiki/images/b/b0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---2.png', 'https://2021.igem.org/wiki/images/4/49/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---3.png', 'https://2021.igem.org/wiki/images/8/82/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---4.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose--0.png'];
+		const correctorder3 = ['10', '9', '8', '6', '5', '4', '7', '3', '2', '1', '11'];
+		output3.innerHTML = slider3.value;
 	output3.innerHTML = '-4';
 	imageDesc3.innerHTML = 'me'
-	  slideimage3.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/culture/-4.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/sucrose/-4.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/butanol/-4.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/sucrose/-4.png"';
-	slider3.oninput = function() {
-	  output3.innerHTML = imagearray3[this.value - 1] + '%';
-	  imageDesc3.innerHTML = descarray3[this.value-1]
-	  slideimage3.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/culture/' + imagearray3[this.value-1] + '.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/sucrose/' + imagearray3[this.value-1] + '.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/butanol/' + imagearray3[this.value-1] + '.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/varying%20o2%20uptake/sucrose/' + imagearray3[this.value-1] + '.png"';
-	}
-	</script>
-
+		  slideimage3.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+		slider3.oninput = function() {
+		  output3.innerHTML = imagearray3[this.value - 1] + '%';
+		  imageDesc3.innerHTML = igemarraycoc3[correctorder3[this.value-1]-1]
+		  slideimage3.innerHTML = '<div><img src="' + igemarraycoc3[correctorder3[this.value-1]-1] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc3[correctorder3[this.value-1]-1] + '" width="450px" height="450px">' + '<img src="' + igemarraybut3[correctorder3[this.value-1]-1] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc3[correctorder3[this.value-1]-1] + '" width="450px" height="450px"';
+		}
+		</script>
+	<!-- slider 1 -->
 <script>
-	var slider4 = document.getElementById("myRange4");
-	var output4 = document.getElementById("rangeValue4");
-	var slideimage4 = document.getElementById("rangeImage4");
-	var imageDesc4 = document.getElementById("ImageDesc4");
-	const imagearray4 = ['181','121','101','81','61','41','31','21','11','5'];
-	const descarray4 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
-	const igemarraybut1 = ['https://2021.igem.org/wiki/images/9/97/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--101.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--11.png', 'https://2021.igem.org/wiki/images/3/35/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--121.png', 'https://2021.igem.org/wiki/images/6/6c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--181.png', 'https://2021.igem.org/wiki/images/d/d5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--21.png', 'https://2021.igem.org/wiki/images/1/12/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--31.png', 'https://2021.igem.org/wiki/images/3/32/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--41.png', 'https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--5.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--61.png', 'https://2021.igem.org/wiki/images/9/9f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--81.png'];
-	const igemarraycoc1 = ['https://2021.igem.org/wiki/images/2/2e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--101.png', 'https://2021.igem.org/wiki/images/c/c1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--11.png', 'https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--121.png', 'https://2021.igem.org/wiki/images/f/f1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--181.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--21.png', 'https://2021.igem.org/wiki/images/8/8d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--31.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--41.png', 'https://2021.igem.org/wiki/images/5/51/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--5.png', 'https://2021.igem.org/wiki/images/5/50/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--61.png', 'https://2021.igem.org/wiki/images/d/d1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--81.png'];
-	const igemarraysuc1 = ['https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--101.png', 'https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--11.png', 'https://2021.igem.org/wiki/images/4/4b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--121.png', 'https://2021.igem.org/wiki/images/f/f0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--181.png', 'https://2021.igem.org/wiki/images/9/94/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--21.png', 'https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--31.png', 'https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--41.png', 'https://2021.igem.org/wiki/images/6/6b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--5.png', 'https://2021.igem.org/wiki/images/8/81/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--61.png', 'https://2021.igem.org/wiki/images/7/7d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--81.png'];
-	const correctorder1 = ['5', '4', '1', '11', '10', '8', '7', '6', '3', '9'];
-	output4.innerHTML = slider4.value;
-	output4.innerHTML = '181';
-	imageDesc4.innerHTML = 'me'
-	  slideimage4.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
-	slider4.oninput = function() {
-	  output4.innerHTML = imagearray4[this.value - 1] + '%';
-	  imageDesc4.innerHTML = descarray4[this.value-1]
-	  slideimage4.innerHTML = '<div><img src="' + igemarraycoc1[correctorder1[this.value-1]] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc1[correctorder1[this.value-1]] + '" width="450px" height="450px">' + '<img src="' + igemarraybut1[correctorder1[this.value-1]] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc1[correctorder1[this.value-1]] + '" width="450px" height="450px"';
+	var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("rangeValue1");
+var slideimage1 = document.getElementById("rangeImage1");
+var imageDesc1 = document.getElementById("ImageDesc1");
+const imagearray1 = ['95','90','80','70','60','40','20','10'];
+const descarray1 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarraybut1 = ['https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--10_.png', 'https://2021.igem.org/wiki/images/f/f7/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--20_.png', 'https://2021.igem.org/wiki/images/d/d3/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--40_.png', 'https://2021.igem.org/wiki/images/6/6a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--60_.png', 'https://2021.igem.org/wiki/images/1/1a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--70_.png', 'https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--80_.png', 'https://2021.igem.org/wiki/images/0/0e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--90_.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--95_.png'];
+	const igemarraycoc1 = ['https://2021.igem.org/wiki/images/3/30/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--10_.png', 'https://2021.igem.org/wiki/images/1/1a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--20_.png', 'https://2021.igem.org/wiki/images/d/d2/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--40_.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--60_.png', 'https://2021.igem.org/wiki/images/1/1d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--70_.png', 'https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--80_.png', 'https://2021.igem.org/wiki/images/9/9b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--90_.png', 'https://2021.igem.org/wiki/images/5/54/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--95_.png'];
+	const igemarraysuc1 = ['https://2021.igem.org/wiki/images/6/6a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--10_.png', 'https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--20_.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--40_.png', 'https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--60_.png', 'https://2021.igem.org/wiki/images/e/e9/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--70_.png', 'https://2021.igem.org/wiki/images/6/65/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--80_.png', 'https://2021.igem.org/wiki/images/b/bd/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--90_.png', 'https://2021.igem.org/wiki/images/8/8f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--95_.png'];
+	const correctorder1 = ['8', '7', '6', '5', '4', '3', '2', '1'];
+	output1.innerHTML = slider1.value;
+output1.innerHTML = '95';
+imageDesc1.innerHTML = 'me'
+	  slideimage1.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+	slider1.oninput = function() {
+	  output1.innerHTML = imagearray1[this.value - 1] + '%';
+	  imageDesc1.innerHTML = igemarraycoc1[correctorder1[this.value-1]-1]
+	  slideimage1.innerHTML = '<div><img src="' + igemarraycoc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px">' + '<img src="' + igemarraybut1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"';
 	}
 	</script>
 	<script>
