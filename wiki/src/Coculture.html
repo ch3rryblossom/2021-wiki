@@ -77,6 +77,43 @@
   border: 1px solid #f4f4f4;
 }
     </style>
+     <style>
+	table{
+		table-layout: fixed;
+	}
+/* Dark Style */
+[data-table-theme*=dark] {
+  color: #ddd;
+  background: #333;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+[data-table-theme*=dark] thead th,
+[data-table-theme*=dark] tfoot th {
+  color: #aaa;
+  background: rgba(0255,255,255,.15);
+}
+[data-table-theme*=dark] caption {
+  padding:.5em;
+}
+[data-table-theme*=dark] th,
+[data-table-theme*=dark] td {
+  padding: .5em;
+  border: 1px solid grey;
+}
+.tdgreen {
+	background: #27668d;
+}
+.tdyellow {
+	background: #ffd73a;
+	color: black;
+}
+[data-table-theme*=dark] th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+    </style>
 <body>
     
 	<!-- NAVBAR SECTION -->
@@ -228,6 +265,58 @@
 		    <h3>Identifying Key metabolites controlling interactions in the Co-culture</h3>
 		    <br>
 		    <p>We knew that sucrose secreted by the cyanobacteria would play an important role in the interaction between the two species of the co culture as there is no other carbon source available for the E coli. Apart from sucrose, we ran SteadyCom FVA to identify other metabolites that could play crucial roles in the interactions of the consortium. SteadyCom FVA (Flux Variability Analysis) calculates the maximum and minimum values of flux through a set of reactions while upholding the optimal growth rate at steady state. By running FVA on the set of shuttle reactions of metabolites between the individual species and the community space, we identified those metabolites that are required to be taken up or given out by each species to maintain optimal community growth rate. </p> <br>
+		    <div style="overflow-x:auto; overflow-y: auto; max-height: 400px;">
+		    <table data-table-theme="dark zebra">
+		    <thead><tr><th>Metabolite</th><th>Min Flux Through E coli</th><th>Max Flux Through E coli</th><th>Min Flux Through Cyanobacteria</th><th>Max Flux Through Cyanobacteria</th></tr></thead><tbody>
+			<tr><td>Carbon Dioxide</td><td>2.015443068</td><td>2.035662892</td><td>-16.26443278</td><td>-16.25798452</td></tr>
+			<tr><td>2-Oxoglutarate</td><td>0</td><td>0.002524686123</td><td>0</td><td>0.0003069649685</td></tr>
+			<tr><td>L-Glutamine</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Calcium</td><td>-0.0002535389119</td><td>-0.0002527589119</td><td>-0.0008734307167</td><td>-0.0008730069524</td></tr>
+			<tr><td>L-Alanine</td><td>0</td><td>0.00351260678</td><td>0</td><td>0</td></tr>
+			<tr><td>Copper</td><td>-0.00003453577675</td><td>-0.00003442960011</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
+			<tr><td>Zinc</td><td>-0.00001661027106</td><td>-0.00001655922939</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
+			<tr><td>L-Lysine</td><td>0</td><td>0.001346499266</td><td>0</td><td>0</td></tr>
+			<tr><td>Cobalt</td><td>-0.000001217611619</td><td>-0.00000121401975</td><td>-0.000629578617</td><td>-0.000629273163</td></tr>
+			<tr><td>L-Arginine</td><td>0</td><td>0.001392930275</td><td>0</td><td>0</td></tr>
+			<tr><td>Spermidine</td><td>0</td><td>0.0004583827288</td><td>0</td><td>0</td></tr>
+			<tr><td>D-Fructose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Pyruvate</td><td>0</td><td>0.004367024646</td><td>0</td><td>0.0005116099794</td></tr>
+			<tr><td>Acetate</td><td>0</td><td>0.00734454145</td><td>0</td><td>0.0007674099084</td></tr>
+			<tr><td>Potassium</td><td>-0.009508031033</td><td>-0.009478726281</td><td>-0.03275365187</td><td>-0.03273776072</td></tr>
+			<tr><td>L-Proline</td><td>0</td><td>0.001775603427</td><td>0</td><td>0</td></tr>
+			<tr><td>Citrate</td><td>0</td><td>0.002154398825</td><td>0</td><td>0.000255805484</td></tr>
+			<tr><td>L-Leucine</td><td>0</td><td>0.001405042712</td><td>0</td><td>0</td></tr>
+			<tr><td>Ferrous</td><td>-82.06087069</td><td>0.01653009055</td><td>-0.00144900646</td><td>-0.001448303442</td></tr>
+			<tr><td>Cyanate</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Manganese</td><td>-0.00003365910169</td><td>-0.00003355550589</td><td>-0.000586352314</td><td>-0.0005860678322</td></tr>
+			<tr><td>Hydrogen</td><td>0</td><td>0</td><td>0</td><td>0.02517654629</td></tr>
+			<tr><td>H+ (Proton)</td><td>-81.61311372</td><td>0.4666523263</td><td>0</td><td>0.067976675</td></tr>
+			<tr><td>Glycine</td><td>0</td><td>0.00619155825</td><td>0</td><td>0</td></tr>
+			<tr><td>Magnesium</td><td>-0.0004225644492</td><td>-0.0004212648532</td><td>-0.005271671263</td><td>-0.005269789665</td></tr>
+			<tr><td>Sulfate</td><td>-0.01566625436</td><td>-0.01222838389</td><td>-0.05225928733</td><td>-0.0514761878</td></tr>
+			<tr><td>L-Glutamate</td><td>0</td><td>0.002244165443</td><td>0</td><td>0.0003069581424</td></tr>
+			<tr><td>L-Histidine</td><td>0</td><td>0.00141117827</td><td>0</td><td>0</td></tr>
+			<tr><td>Sodium</td><td>0</td><td>0</td><td>-0.0007330855771</td><td>-0.0007327299045</td></tr>
+			<tr><td>D-Glucose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Molybdate</td><td>-0.0000003428730538</td><td>-0.00000033992553</td><td>-0.0005864103878</td><td>-0.0005861258779</td></tr>
+			<tr><td>Ammonium</td><td>-0.5348762349</td><td>-0.5244517244</td><td>0</td><td>0</td></tr>
+			<tr><td>Oxygen (O2)</td><td>-21.97422024</td><td>-1.452113566</td><td>21.9447781</td><td>21.97422024</td></tr>
+			<tr><td>Succinate</td><td>0</td><td>0.002992220591</td><td>0</td><td>0.0003837110398</td></tr>
+			<tr><td>L-Serine</td><td>0</td><td>0.00375767237</td><td>0</td><td>0</td></tr>
+			<tr><td>Nitrate</td><td>0</td><td>0</td><td>-2.449057669</td><td>-2.447438726</td></tr>
+			<tr><td>Nickel</td><td>-0.00001573345878</td><td>-0.00001568513517</td><td>0</td><td>0</td></tr>
+			<tr><td>Putrescine</td><td>0</td><td>0.001615799119</td><td>0</td><td>0</td></tr>
+			<tr><td>Sucrose</td><td>-0.4133693967</td><td>-0.4124306025</td><td>0.4131517121</td><td>0.4133693967</td></tr>
+			<tr><td>Urea </td><td>0</td><td>0.005212255223</td><td>0</td><td>0</td></tr>
+			<tr><td>Phosphate</td><td>-0.04850780168</td><td>-0.04684202939</td><td>-0.06041753101</td><td>-0.06036884354</td></tr>
+			<tr><td>Ferric</td><td>-0.0173100254</td><td>82.06008939</td><td>-0.001319437891</td><td>-0.001318797737</td></tr>
+			<tr><td>L-Malate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110398</td></tr>
+			<tr><td>Fumarate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110399</td></tr>
+			<tr><td>Water (H20)</td><td>2.651858043</td><td>43.69752008</td><td>-13.54056988</td><td>-13.50658154</td></tr>
+</tbody>
+</table>
+</div>
+
 		    <p>Results: Apart from sucrose, two other metabolites that were required to be given out by one organism and taken in by the other to grow optimally were carbon dioxide and oxygen. Carbon dioxide is given out by E coli and taken in by the cyanobacteria and is already an integral patt of the production process acting as the main carbon source for the entire process. Oxygen given out by the cyanobacteria could act as an important source for e coli, who prefer aerobic conditions for growth. </p>
 		 <br>
 		 <h3>Varying sucrose productivity of the cyanobacteria</h3>  
