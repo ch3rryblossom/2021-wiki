@@ -209,7 +209,7 @@
                     <h2 class="h2"> <strong>Biomass vs CO2</strong></h2>
                     <br>
 					<div class="graph">
-						<img src="assets/Graphs/Cyano/Basic/Biomass vs CO_2.jpg" alt="Biomass vs CO_2 graph for different constant cscB efficiency values and a constant salt stress of 150mM. A linear pattern is observed" width=800>
+						<img src="assets/Graphs/Cyano/Basic/Biomass vs CO2.jpg" alt="Biomass vs CO_2 graph for different constant cscB efficiency values and a constant salt stress of 150mM. A linear pattern is observed" width=800>
 						<p style="padding-top: 15px;"> Fig 1: Relationship between Growth rate and CO2 uptake rates when run at a salt conc. 150mM under varying cscB efficiencies</p>
 					</div>
 					<br>
@@ -248,7 +248,7 @@
                     <p>Observations for this are similar to the previous ones. This just helps us identify the region of conditions that we should be trying to replicate in the lab. Clearly sucrose production is maximum in the region with high cscB efficiency and high CO2 uptake rates.</p>
                     <br>
 					<div class="graph">
-						<img src="assets/Graphs/Cyano/Basic/3 Variables.jpg" alt="A graph respresting varaition of sucrose production with increase in growth rates, CO_2 Uptake rates and cscB efficieny values" width=800>
+						<img src="assets/Graphs/Cyano/Basic/3_Variables.jpg" alt="A graph respresting varaition of sucrose production with increase in growth rates, CO_2 Uptake rates and cscB efficieny values" width=800>
 						<p style="padding-top: 15px;">Fig 9: A graph showing the production of sucrose for varying CO2 uptake rates and cscB efficiencies <br> Note - the colour bar on the right shows the mmol/gDW/h values of sucrose</p>
 					</div>
 					<p>As you can see from the graph sucrose production is maximum when there is a higher intake of carbon dioxide (source) and a higher cscB efficiency (sink). Ideally we would be trying to re-create the above mentioned conditions for enhanced production of sucrose whilst maintaining a significant fraction of maximum growth rates, but amplifying something that is already at 90% efficiency (cscB) is hard and to some extend unnecessary. Therefore we went a step ahead to find out other possible ways to increase sucrose production without losing much growth rates.</p>
@@ -258,20 +258,46 @@
 
                     <!-- OVER EXPRESSIONS AND KNOCKOUTS -->
                     <a id="6"></a>
-                    <h1>Identifying Over-expressions and Knockouts for enhance sucrose production</h1>
+                    <h1>Identifying Over-expressions and Knockouts for enhanced sucrose production</h1>
 			        <p>We have used OptKnock to identify knockout targets and FSEOF to identify over-expression targets.</p>
-			        
+			        <br><br>
 
 
                     <!-- TARGETS FOR OVER EXPRESSION-->
                     <h2 class="h2">Targets for Over-expression</h2>
 			        <p>FSEOF is the go to algorithm to identify targets for amplification. Upon running FSEOF under the following conditions we obtained a few targets for over-expression.</p>
-			        <h2 class="h3">Assumptions: </h2>
+					<br>
+
+					<h2 class="h3">Assumptions: </h2>
 			        <ol class="a">
 				        <li style="padding-left:1em;">Carbon Dioxide uptake rate is -12.2mmol/gDW/hr (Max value from literature) </li>
-				        <li style="padding-left:1em;">Salt stress is at 150mM </li>
-				        <li style="padding-left:1em;">cscB efficiency is 90% </li>
+				        <li style="padding-left:1em;">We have neglected salt stress because we were getting insensible results because of it </li>
 			        </ol>
+					<br>
+
+					<h2 class="h3">Sources of inaccuraies: </h2>
+					<ol class="a">
+						<li style="padding-left:1em;"> The model is not complete </li>
+						<li style="padding-left:1em;"> The geens have no names</li>
+						<li style="padding-left:1em;"> Some reactions have no gene-protein-relations. Gene-protein-relations (GPRs) are rules that bind reactions in the organism to particular genes or combination of genes. For example, if reaction R1 requires both genes G1 and G2 then in the absence of either one of the genes the reaction seizes to work</li>
+					</ol>
+					<br>
+
+					<h2 class="h3">Results: </h2>
+					<ol class="a"> 
+						<li style="padding-left: 1em;"> We have obtained a total of 80 reactions that can be overexpressed</li>
+						<li style="padding-left: 1em;"> We have obtained a total gene count of 87. This number is a bit misleading because if we were to over express all these 80 reactions we wouldn’t have to over express all the 87 genes because  some of the Gene-Protein-Relations do not require the entire set of genes that govern them</li>
+						<li style="padding-left: 1em;"> These 87 genes are responsible for a total of 555 reactions in the organism. Few of them are the same reaction but in different parts of the organism, for example if the cytoplasm and periplasm both contain a reaction X, the reaction X is counted twice</li>
+						<li style="padding-left: 1em;"> If we were to count X only once then we have 107 reactions  governed by these 87 genes but this is not of much importance because over expressing any gene will over express all its reactions whether it is in cytoplasm or periplasm</li>
+						<li style="padding-left: 1em;"> 25 out of the 80 target reactions have no gene-protein-relations so we cannot test these out in the lab</li>
+						<li style="padding-left: 1em;"> Although the sucrose production reaches the theoretical maximum, the biomass flux slowly dies as this happens therefore the higher is not always the better</li>
+						<li style="padding-left: 1em;"> Almost all of them follow linear behaviour</li>					
+					</ol>
+					<br>
+				
+					<p>Given below are 4 graphs each with 5 reactions plotted against varying sucrose production fluxes. This is just to give a comparison of the various results we obtained. If you would like to download the entire set of interactive graphs representing these results <a>click here</a>. We also have graphs which depict the variations of biomass along with sucrose and these reactions (<a>click here</a>)</p>
+					<br>
+					<!-- Slideshow of graphs-->
 					<div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
 						<div class="carousel-indicators">
 						  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -304,10 +330,1148 @@
 						  </div>
 						  <h3 id="slidetext"></h3>
 			        <br><br><br>
+					<!-- END OF SLIDESHOW -->
+					
+					<p>We searched through literature to find a way to represent the data we have collected, but we found no proven way to do so. Therefore this can utmost be considered as a qualitative analysis of potential targets for over expression as opposed to being a quantitative and conclusive result of targets for overexpression.</p>
+					<p><strong> These still need in-laboratory proof for us to confirm these over expression targets.</strong></p>
+					<p>Since we could not just leave the results as is, we ranked them in order of decreasing slope because we believe that the ones with higher slopes have a higher flux handling capacity i.e., they can hold more flux for the desired purpose. In terms of the analogy between FSEOF and traffic in a city, these are the roads that can take a good chunk of traffic away from other smaller roads and still not get jammed. </p>
+					<p> These targets of overexpression are in terms of reactions, but in wet lab we can not selectively overexpress reactions. What we can overexpress in the lab are genes. So naturally, we looked into how other reactions in the model get affected if and when we overexpress one of the above genes.
+						The table below shows how the genes responsible for the above reactions will affect other reactions in the organism. We have generated a <strong>reaction flux vs sucrose flux graph</strong> and a <strong>reaction vs sucrose vs biomass graph</strong> for each over expression target, all of which can be downloaded <a href="#">here</a>.
+					</p>
+					<p><strong>Note - the “fig x” in each row indicates which graph in the folder corresponds to the said reaction</strong></p>
+					<br>
+		
+					<!-- Start of Table -->
+					<h1 id="2">Over-expression Table</h1>
+					<hr>
+					<br>
+					<div class="table">
+						<!-- Headers -->
+						<div class="table1-row table-header">
+							<div class="cell">
+								Target Reaction
+							</div>
+							<div class="cell">
+								Gene-Protein-Relation
+							</div>
+							<div class="cell">
+								Other reactions controlled by the gene
+							</div>
+						</div>
+						<!--End of headers -->
+
+						<!-- Other rows -->
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Proton exchange (Fig 1)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+					
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Water transport pp (Fig 2)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_08900
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Water transport ltr
+							</div>
+						</div>
+						
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Water transport ext (Fig 3)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+							 	-
+							</div>
+						</div>
 
 
-                    <!-- TARGETS FOR KNOCKOUTS-->
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								ChorismateL-glutamine aminotransferase (Fig 4)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_14170 or M744_09950
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_14170</strong> - Xanthosine-5'-phosphateL-glutamine amido-ligase (AMP-forming) <br>
+								<strong>M744_09950</strong> - NA
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Pyrophosphate phosphohydrolase (Fig 5)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_09680
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Triphosphate phosphohydrolase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Asp-tRNA(Asn)L-glutamine amido-ligase (ADP-forming) (Fig 6)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_02485 and M744_04675 and M744_05790
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_02485</strong> - Glu-tRNA(Gln)L-glutamine amido-ligase(ADP-forming) <br>
+								<strong>M744_04675</strong> - Glu-tRNA(Gln)L-glutamine amido-ligase(ADP-forming) <br>
+								<strong>M744_05790</strong> - Glu-tRNA(Gln)L-glutamine amido-ligase(ADP-forming)
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-AsparaginetRNA(Asn) ligase (AMP-forming) (Fig 7)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_12600
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-Aspartateammonia ligase (AMP-forming) (Fig 8)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								ATPAMP phosphotransferase (Fig 9)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_05275
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Cytochrome b6/f complex periplasm (Fig 10)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_10480
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Cytochrome b6/f complex, Plastoquinone Oxidized-plastocyanin oxidoreductase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								NAD(P)H dehydrogenase (plastoquinone-8 & 3 protons) (periplasm) (Fig 11)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_06540 and M744_06535 and <br> M744_09900 and M744_09515 and <br> M744_10750 and M744_09885 and <br> M744_09890 and M744_07765 and <br> M744_09895 and M744_10740 <br> and M744_10745 and M744_06510 <br> and M744_05170 and M744_01630 and <br> M744_01625 and M744_03420 or <br> M744_09385 and M744_06535 and <br> M744_09900 and M744_09515 and <br> M744_10750 and M744_09885 and <br> M744_09890 and M744_07765 and <br> M744_09895 and M744_10740 and <br> M744_10745 and M744_06510 and <br> M744_05170 and M744_01630 and <br> M744_01625 and M744_03420
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_06540, M744_06535, M744_09385, M744_06535</strong> - NAD(P)H dehydrogenase (plastoquinone-8 & 3 protons) (tilacoide) <br>
+
+								<strong>M744_09900, M744_09515, M744_09885, M744_06510, M744_05170, M744_09900, M744_09515, M744_09885, M744_06510, M744_05170</strong>  - NAD(P)H dehydrogenase (plastoquinone-8 & 3 protons) (tilacoide), 
+								Active co2 transporter facilitator (tilacoide), 
+								Active co2 transporter facilitator (periplasm) <br>
+								
+								<strong>M744_10750, M744_09890, M744_07765, M744_09895, M744_10740, M744_10745, M744_10750, M744_09890, M744_07765, M744_09895, M744_10740, M744_10745</strong> - NADPHp-benzoquinone oxidoreductase,
+								NADHquinone oxidoreductase, 
+								NAD(P)H dehydrogenase (plastoquinone-8 & 3 protons) (tilacoide), 
+								Active co2 transporter facilitator (tilacoide), 
+								Active co2 transporter facilitator (periplasm) <br>
+								
+								
+								<strong>M744_01630, M744_01625, M744_03420, M744_01630, M744_01625, M744_03420</strong>  - Bidirectional [NiFe] Hydrogenase,
+								NAD(P)H dehydrogenase (plastoquinone-8 & 3 protons) (tilacoide), 
+								Active co2 transporter facilitator (tilacoide), 
+								Active co2 transporter facilitator (periplasm) <br>
+							
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Cytochrome C Oxidase, Synechocystis (2 protons) (Fig 12)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_02050 or ( M744_03160 and M744_03155 and M744_03150 )
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_02050, M744_03160, M744_03155, M744_03150</strong>  - cytochrome c oxidase, synechocystis (2 protons periplasm)
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								2,3,4,5-TetrahydrodipicolinateNAD+ oxidoreductase (Fig 13)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_05690
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								2,3,4,5-TetrahydrodipicolinateNADP+ oxidoreductase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								2,3,4,5-TetrahydrodipicolinateNADP+ oxidoreductase (Fig 14)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_05690
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								2,3,4,5-TetrahydrodipicolinateNAD+ oxidoreductase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase (Fig 15)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_09355
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								D-Fructose 1-phosphate D-glyceraldehyde-3-phosphate-lyase, <br>
+								D-Fructose-1,6-bisphosphate D-glyceraldehyde-3-phosphate-lyase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								FerredoxinNADP+ oxidoreductase (Fig 16)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_11820
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Oxygen transport ext (Fig 17)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								ATP synthase (four protons for one ATP) (periplasm) (Fig 18)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_01360 and M744_01350 and M744_01345 and M744_01335 and M744_01340 and M744_01330 and M744_04715 and M744_04710 and M744_01355 and M744_01365
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>ALL</strong> - ATP synthetase(u)
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								2-Phospho-D-glycerate 2,3-phosphomutase (Fig 19)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00620 and M744_06000 and M744_00535 and M744_08585
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_00620</strong> - 3-Phospho-D-glyceroylphosphate 2,3-phosphomutase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Carbonic acid hydro-lyase (Fig 21)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_09475 or M744_09655 or M744_09335 or M744_14040
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_09335</strong> - Carbonic anhydrase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Nitrate exchange (Fig 22)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								ATPnucleoside-diphosphate phosphatransferase (Fig 23)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_03750
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								D-Ribulose-5-phosphate 3-epimerase (Fig 24)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_13820
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Acetyl-CoAenzyme N6-(dihydrolipoyl)lysine S-acetyltransferase (Fig 25)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_11335
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								PyruvateNAD+ 2-oxidoreductase (CoA-acetylating)
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-Valinepyruvate aminotransferase (Fig 26)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_05030
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Sucrose exchange (Fig 27)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								SPS (Fig 28)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								SPP (Fig 29)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								cscB (Fig 30)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								UTP-glucose-1-phosphate uridylyltransferase (Fig 31)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								ATPnucleoside-diphosphate phosphate transferase (Fig 32)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_03750
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-Aspartate2-oxoglutarate aminotransferase (Fig 33)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_03485
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								L-Phenylalanine2-oxoglutarate aminotransferase,
+								L-Tyrosine2-oxoglutarate aminotransferase,
+								L-Cysteine2-oxoglutarate aminotransferase,
+								4-Hydroxy-L-glutamate2-oxoglutarate aminotransferase								
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-Phenylalanine2-oxoglutarate aminotransferase (Fig 56)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_03485 or M744_12480
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_03485</strong> - Same as above <br>
+
+								<strong>M744_12480</strong> - L-Tyrosine2-oxoglutarate aminotransferase,
+								LL-2,6-diaminoheptanedioate2-oxoglutarate aminotransferase
+								
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-Tyrosine2-oxoglutarate aminotransferase (Fig 58)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_03485 or M744_12480
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								(S)-Malate hydro-lyase (Fig 34)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_11660
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-HomoserineNAD+ oxidoreductase (Fig 35)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_05930
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								(3R)-3-Hydroxyhexanoyl-[acyl-carrier-protein]NADP+ oxidoreductase (Fig 36)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_13375 or M744_08910
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_13375, M744_08910</strong> - (3R)-3-Hydroxybutanoyl-[acyl-carrier protein]NADP+ oxidoreductase,
+								(3R)-3-Hydroxytetradecanoyl-[acyl-carrier-protein]NADP+,
+								3oxoacyl-acp reductase (c180),
+								(3R)-3-Hydroxyoctanoyl-[acyl-carrier-protein]NADP+ oxidoreductase,
+								3-oxoacyl-[acyl-carrier-protein] reductase (n-C121),
+								3-oxoacyl-[acyl-carrier-protein] reductase (n-C141),
+								3-oxoacyl-[acyl-carrier-protein] reductase (n-C161),
+								3-oxoacyl-[acyl-carrier-protein] reductase (n-C181)
+								
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								(3R)-3-Hydroxybutanoyl-[acyl-carrier protein]NADP+ oxidoreductase (Fig 37)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_13375 or M744_08910
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								(3R)-3-Hydroxydodecanoyl-[acyl-carrier-protein]NADP+ oxidoreductase (Fig 38)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_13375 or M744_08910
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+							 	ame as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								(3R)-3-Hydroxyoctanoyl-[acyl-carrier-protein]NADP+ oxidoreductase (Fig 39)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_13375 or M744_08910
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								(3R)-3-Hydroxypalmitoyl-[acyl-carrier-protein]NADP+ oxidoreductase (Fig 42)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_13375 or M744_08910
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+							 	Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-Leucine2-oxoglutarate aminotransferase (Fig 40)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_09945 or M744_11540
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_09945</strong> - ​​L-Valine2-oxoglutarate aminotransferase,
+								L-Isoleucine2-oxoglutarate aminotransferase,
+								4-amino-4-deoxychorismate pyruvate-lyase
+								
+								<strong>M744_11540</strong> - ​​L-Valine2-oxoglutarate aminotransferase,
+								L-Isoleucine2-oxoglutarate aminotransferase
+							</div>
+						</div>
+
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								3-Isopropylmalate hydro-lyase (Fig 41)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_06945 and M744_03470
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_06945, M744_03470</strong> - (R)-2-Methylmalate hydro-lyase,
+								2-Isopropylmalate hydro-lyase,
+								3-Isopropylmalate hydro-lyase
+								
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-Isoleucine2-oxoglutarate aminotransferase (Fig 49)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_09945 or M744_11540
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								IMP 1,2-hydrolase (decyclizing) (Fig 43)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_01000
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								10-Formyltetrahydrofolate5'-phosphoribosyl-5-amino-4
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								5,6,7,8-TetrahydrofolateNADP+ oxidoreductase (Fig 44)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_07375
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								N2-Acetyl-L-ornithine2-oxoglutarate aminotransferase (Fig 45)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_02940 or M744_11990
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								<strong>M744_02490</strong> - S-Adenosyl-L-methionine8-amino-7-oxononanoate aminotransferase,
+								N-Succinyl-L-2,6-diaminoheptanedioate2-ocoglytarate
+								
+								<strong>M744_11990</strong> - L-Alanine3-oxopropanoate aminotransferase,
+								4-Aminobutanoate2-oxoglutarate aminotransferase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								N-Succinyl-L-2,6-diaminoheptanedioate2-ocoglytarate (Fig 50)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_02940
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								N-Acetyl-L-glutamate-5-semialdehydeNADP+ 5-oxidoreductase (Fig 46)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_09420
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								5,10-methylenetetrahydrofolate,FADH2dUMP C-methyltransferase (Fig 47)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								1-(5-Phospho-D-ribosyl)-5-amino-4-imidazolecarboxylate carboxy-lyase (Fig 48)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00760 and M744_09450
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								sn-Glycerol-3-phosphateNADP+ 2-oxidoreductase (Fig 51)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_03610
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Phosphate exchange (Fig 52)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Orotidine-5'-phosphatepyrophosphate phosphoribosyltransferase (Fig 53)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_03215
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								(S)-Dihydroorotate amidohydrolase (Fig 54)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00530 and M744_00520
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								L-1-Pyrroline-5-carboxylateNAD+ oxidoreductase (Fig 55) 
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00515
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								3-OxopropanoateNAD+ oxidoreductase (decarboxylating), <br>
+								AcetaldehydeNAD+ oxidoreductase,<br>
+								beta-Aminopropion aldehydeNAD+ oxidoreductase,<br>						
+								glycolaldehydeNAD+ oxidoreductase,<br>								
+								D-GlyceraldehydeNAD+ oxidoreductase,<br>								
+								4-AminobutyraldehydeNAD+ oxidoreductase,<br>								
+								Propane-1,2-diolNAD+ oxidoreductase,<br>								
+								PhenylacetaldehydeNAD+ oxidoreductase,<br>								
+								4-aminobutanalNAD+ 1-oxidoreductase,<br>								
+								midazole acetaldehydeNAD+ oxidoreductase,<br>								
+								N4-AcetylaminobutanalNAD+ oxidoreductase,<br>
+								Methylmalonate - semialdehyde dehydrogenase (propanol),<br>						
+								Indole-3-acetaldehydeNAD+ oxidoreductase,<br>
+								L-1-Pyrroline-5-carboxylateNAD+ oxidoreductase <br>
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								3-OxopropanoateNAD+ oxidoreductase (decarboxylating) (Fig 77)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00515
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Sulfate exchange (Fig 57)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Potassium exchange (Fig 59)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								diacylglycerol kinase (n-C160) (Fig 60)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00975
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								diacylglycerol kinase (n-C120),<br>
+								diacylglycerol kinase (n-C161),<br>								
+								diacylglycerol kinase (n-C180),<br>								
+								diacylglycerol kinase (n-C181),<br>
+								diacylglycerol kinase (n-C160)	
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+							  diacylglycerol kinase (n-C161) (Fig 62)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00975
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								diacylglycerol kinase (n-C181) (Fig 78)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00975
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								diacylglycerol kinase (n-C180) (Fig 80)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_00975
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								Same as above
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								D-Glucosamine 1-phosphate 1,6-phosphomutase (Fig 61)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_05710
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								D-Ribose 1,5-phosphomutase
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Magnesium exchange (Fig 63)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								UDP-N-acetylmuramate NADP+ oxidoreductase (Fig 64)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_07780
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Fe2+ exchange (Fig 65)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Fe3+ exchange (Fig 66)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Calcium exchange (Fig 67)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Calcium (Ca+2) transport out via proton antiport (periplasm) (Fig 68)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_02980
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Sodium exchange (Fig 69)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Sodium transport out via proton antiport (cytoplasm to periplasm) (Fig 70)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								(M744_12695 or M744_10315) and M744_04470
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Co2+ exchange (Fig 71)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Molybdate exchange (Fig 72)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Mn2+ exchange (Fig 73)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Cu2+ exchange (Fig74)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Zinc exchange (Fig 75)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Nicotinate-nucleotide pyrophosphatase
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_11945
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								Phosphoribosyltransferase (Fig 76)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								-
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+					</div>
+
+
+						<div class="table1-row">
+							<div class="cell" data-title="Target Reaction">
+								ATPpolyphosphate phosphotransferase (Fig 79)
+							</div>
+							<div class="cell" data-title="Gene-Protein-Relation">
+								M744_08870
+							</div>
+							<div class="cell" data-title="Other reactions controlled by the gene">
+								-
+							</div>
+						</div>
+					</div>	
+
+					<br><br><br>
+
+
+					<!-- TARGETS FOR KNOCKOUTS-->
                     <h2 class="h2">Targets for Knockouts</h2>
+					<P>We ran Optknock like we did for e coli, but we were unable to obtain any sensible result. All our runs gave a <strong>0 growth rate</strong>. We believe the problem is with the model, as it is still incomplete and not verified, and therefore have concluded nothing further can be done to produce Knockout results.</P>
 					<br><br><br><br><br><br><br><br><br><br>
 					<!-- REFERENCES -->
 					<h1 id="7">References</h1>
@@ -317,6 +1481,9 @@
 		</div>
     </div>
 
+
+
+<!-- -----------------------END OF CONTECT ----------------------------------- -->
 	
 	<!-- SPONSORS BAR -->
 	<div class="footer">
