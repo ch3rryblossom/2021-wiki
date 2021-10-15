@@ -1,0 +1,21 @@
+body {
+    background-color: #3f56ce;
+    color: white;
+}
+h1, h2, h3{
+    color: white;
+    font-family: Fixedsys;
+}
+ul{
+    color: white;
+    font-family: Fixedsys;
+}
+.container {
+    color: white;
+    font-family: Fixedsys;
+}
+
+@font-face {
+    font-family: 'Fixedsys';
+    src: url(../assets/fonts/FSEX300.ttf);
+}

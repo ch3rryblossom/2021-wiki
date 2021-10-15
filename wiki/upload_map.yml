@@ -15,13 +15,21 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/6/63/T--IISER-Pune-India--Graphs--Cyano--Basic--3_Variables.jpg
     md5: 28bb4d02fe10fc1e85445e9eb62fd0de
     upload_filename: T--IISER-Pune-India--Graphs--Cyano--Basic--3 Variables.jpg
+  assets\Graphs\Cyano\Basic\3_Variables.jpg:
+    link_URL: https://2021.igem.org/wiki/images/6/63/T--IISER-Pune-India--Graphs--Cyano--Basic--3_Variables.jpg
+    md5: b88875ab264aa488f3f4002a7efa0684
+    upload_filename: T--IISER-Pune-India--Graphs--Cyano--Basic--3_Variables.jpg
+  assets\Graphs\Cyano\Basic\Biomass vs CO2.jpg:
+    link_URL: https://2021.igem.org/wiki/images/f/f4/T--IISER-Pune-India--Graphs--Cyano--Basic--Biomass_vs_CO2.jpg
+    md5: 48dbf4abf6d4cdd7816a3aa66007a1a7
+    upload_filename: T--IISER-Pune-India--Graphs--Cyano--Basic--Biomass vs CO2.jpg
   assets\Graphs\Cyano\Basic\Biomass vs CO_2.jpg:
     link_URL: https://2021.igem.org/wiki/images/3/33/T--IISER-Pune-India--Graphs--Cyano--Basic--Biomass_vs_CO_2.jpg
     md5: 64700f4ab8b0f5adc1539700af6b92c7
     upload_filename: T--IISER-Pune-India--Graphs--Cyano--Basic--Biomass vs CO_2.jpg
   assets\Graphs\Cyano\Basic\Biomass vs Sucrose.jpg:
     link_URL: https://2021.igem.org/wiki/images/a/a1/T--IISER-Pune-India--Graphs--Cyano--Basic--Biomass_vs_Sucrose.jpg
-    md5: d032d46f23d50c726b8d8198a67a93af
+    md5: 4516d36afaf301c1324cdc9332bcbb24
     upload_filename: T--IISER-Pune-India--Graphs--Cyano--Basic--Biomass vs Sucrose.jpg
   assets\Graphs\Cyano\FSEOF\Cyano_FSEOF_1-5.jpg:
     link_URL: https://2021.igem.org/wiki/images/e/ee/T--IISER-Pune-India--Graphs--Cyano--FSEOF--Cyano_FSEOF_1-5.jpg
@@ -547,6 +555,102 @@ assets:
     md5: 20a729e17c844f849e0c7987b99a30d6
     upload_filename: T--IISER-Pune-India--Graphs--Dynamic Graphs--varying sucrose
       productivity--sucrose--95_.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph1.png:
+    link_URL: https://2021.igem.org/wiki/images/5/5d/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph1.png
+    md5: 7b7cc54096bbb1283669640bc079355d
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph1.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph10_aaerobic.png:
+    link_URL: https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png
+    md5: 3eaf4f45a585973ac6bdbee3e625d4fc
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph10_aaerobic.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph10_b8.png:
+    link_URL: https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_b8.png
+    md5: 7032b4fc72df41a91cd96ab0bb3aeed5
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph10_b8.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph10_c4.png:
+    link_URL: https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_c4.png
+    md5: 4dd6e858e9e446a33e860d0a67bee736
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph10_c4.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph10_d2.png:
+    link_URL: https://2021.igem.org/wiki/images/5/55/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_d2.png
+    md5: 78d6af24a7cdf3d6f800823e4fe59f24
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph10_d2.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph10_e1.png:
+    link_URL: https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_e1.png
+    md5: 86c6b1606dd3855053f767c62f1f0dda
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph10_e1.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph10_f0.png:
+    link_URL: https://2021.igem.org/wiki/images/b/b7/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_f0.png
+    md5: 27d3d3e11cbf67ccca9f2884d541602c
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph10_f0.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph11.png:
+    link_URL: https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph11.png
+    md5: de7a1bbbac3602b392cde29f2341288b
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph11.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph12.png:
+    link_URL: https://2021.igem.org/wiki/images/a/af/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph12.png
+    md5: 4b0d01ed0e9e179f8a0e6a6810fcca9b
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph12.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph13.png:
+    link_URL: https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph13.png
+    md5: 3bbe89c162e4e076d97dd2dbc651a36b
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph13.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph14_a.png:
+    link_URL: https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png
+    md5: 4a42ebaf1c11a1c1f1d979fff4a9dde6
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph14_a.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph14_b.png:
+    link_URL: https://2021.igem.org/wiki/images/c/cb/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_b.png
+    md5: 018f687f08b3140cfe8372b964b1dc10
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph14_b.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph14_c.png:
+    link_URL: https://2021.igem.org/wiki/images/6/62/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_c.png
+    md5: 3f4d322241aa3a221b46b632e5c94dca
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph14_c.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph14_d.png:
+    link_URL: https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_d.png
+    md5: 18fe926457dba34062c28d3ba056d75a
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph14_d.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph14_e.png:
+    link_URL: https://2021.igem.org/wiki/images/2/25/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_e.png
+    md5: cb1772e0c6510c56939566d527f59bbf
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph14_e.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph14_f.png:
+    link_URL: https://2021.igem.org/wiki/images/a/af/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_f.png
+    md5: 1e8b149b112af324af8d2dba24eb3cc0
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph14_f.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph2.png:
+    link_URL: https://2021.igem.org/wiki/images/3/3f/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph2.png
+    md5: 5ffa0615acdd96affc396dfc6d13b295
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph2.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph3.png:
+    link_URL: https://2021.igem.org/wiki/images/b/be/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph3.png
+    md5: 09717e64f8d013fb0377f0a55d44c013
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph3.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph4.png:
+    link_URL: https://2021.igem.org/wiki/images/c/c7/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph4.png
+    md5: 9a3dc16078b46e4bbb7865907e56657f
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph4.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph5.png:
+    link_URL: https://2021.igem.org/wiki/images/7/71/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph5.png
+    md5: 2f7776282110fd53f277e2d159cad209
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph5.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph6.png:
+    link_URL: https://2021.igem.org/wiki/images/3/31/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph6.png
+    md5: 36977c7c60447498a685c406705aca7d
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph6.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph7.png:
+    link_URL: https://2021.igem.org/wiki/images/c/c6/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph7.png
+    md5: 712fe6212be26b7f40989cb8fb732fb5
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph7.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph8.png:
+    link_URL: https://2021.igem.org/wiki/images/5/54/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph8.png
+    md5: 0c6f93c366016960607db20bdd94ae3e
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph8.png
+  assets\Graphs\SteadyCom Graphs\Steadycomgraph9.png:
+    link_URL: https://2021.igem.org/wiki/images/4/48/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph9.png
+    md5: 9f8c2ec5f68d04de4f63bba55623fd61
+    upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph9.png
   assets\Logos\Facebook_logo.png:
     link_URL: https://2021.igem.org/wiki/images/e/e4/T--IISER-Pune-India--Logos--Facebook_logo.png
     md5: 5e2884ad1e69d3d428d7e173f91f3656
@@ -651,6 +755,9 @@ css:
     md5: b1747f1f028648114f53e89033b95e89
   css\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleCSS?action=raw&ctype=text/css
+    md5: 89c4681cf879e673aad73210567d2cd4
+  css\style1.css:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/style1CSS?action=raw&ctype=text/css
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
@@ -664,7 +771,7 @@ html:
     md5: 8ad3bae8d3213ae73bf10740a8446689
   Coculture.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
-    md5: b13201f4acf12de38ec5aa3e448578f2
+    md5: 2f88ac53ead03908223a42fe4cc2ae23
   Collaborations.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Collaborations
     md5: f426bac0071118681703babb74427afa
@@ -724,7 +831,7 @@ html:
     md5: 65f779ad0134c4291ad26adbb9742493
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
-    md5: ec302b140de2bb526cdbfd54cf9c0255
+    md5: 14b151fd1fa9adf9a45b7d5d8cd278d7
   lastyear.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/lastyear
     md5: ''
@@ -750,3 +857,6 @@ js:
   js\main.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript
     md5: 2e23b4445ef4e663f2385f7a66ab5971
+  js\scrollreveal.min.js:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/scrollreveal-minJS?action=raw&ctype=text/javascript
+    md5: 9c650e3a1c128deeb82ccc4db4a31885

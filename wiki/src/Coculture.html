@@ -77,6 +77,43 @@
   border: 1px solid #f4f4f4;
 }
     </style>
+     <style>
+	table{
+		table-layout: fixed;
+	}
+/* Dark Style */
+[data-table-theme*=dark] {
+  color: #ddd;
+  background: #333;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+[data-table-theme*=dark] thead th,
+[data-table-theme*=dark] tfoot th {
+  color: #aaa;
+  background: rgba(0255,255,255,.15);
+}
+[data-table-theme*=dark] caption {
+  padding:.5em;
+}
+[data-table-theme*=dark] th,
+[data-table-theme*=dark] td {
+  padding: .5em;
+  border: 1px solid grey;
+}
+.tdgreen {
+	background: #27668d;
+}
+.tdyellow {
+	background: #ffd73a;
+	color: black;
+}
+[data-table-theme*=dark] th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+    </style>
 <body>
     
 	<!-- NAVBAR SECTION -->
@@ -228,6 +265,58 @@
 		    <h3>Identifying Key metabolites controlling interactions in the Co-culture</h3>
 		    <br>
 		    <p>We knew that sucrose secreted by the cyanobacteria would play an important role in the interaction between the two species of the co culture as there is no other carbon source available for the E coli. Apart from sucrose, we ran SteadyCom FVA to identify other metabolites that could play crucial roles in the interactions of the consortium. SteadyCom FVA (Flux Variability Analysis) calculates the maximum and minimum values of flux through a set of reactions while upholding the optimal growth rate at steady state. By running FVA on the set of shuttle reactions of metabolites between the individual species and the community space, we identified those metabolites that are required to be taken up or given out by each species to maintain optimal community growth rate. </p> <br>
+		    <div style="overflow-x:auto; overflow-y: auto; max-height: 400px;">
+		    <table data-table-theme="dark zebra">
+		    <thead><tr><th>Metabolite</th><th>Min Flux Through E coli</th><th>Max Flux Through E coli</th><th>Min Flux Through Cyanobacteria</th><th>Max Flux Through Cyanobacteria</th></tr></thead><tbody>
+			<tr><td>Carbon Dioxide</td><td>2.015443068</td><td>2.035662892</td><td>-16.26443278</td><td>-16.25798452</td></tr>
+			<tr><td>2-Oxoglutarate</td><td>0</td><td>0.002524686123</td><td>0</td><td>0.0003069649685</td></tr>
+			<tr><td>L-Glutamine</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Calcium</td><td>-0.0002535389119</td><td>-0.0002527589119</td><td>-0.0008734307167</td><td>-0.0008730069524</td></tr>
+			<tr><td>L-Alanine</td><td>0</td><td>0.00351260678</td><td>0</td><td>0</td></tr>
+			<tr><td>Copper</td><td>-0.00003453577675</td><td>-0.00003442960011</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
+			<tr><td>Zinc</td><td>-0.00001661027106</td><td>-0.00001655922939</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
+			<tr><td>L-Lysine</td><td>0</td><td>0.001346499266</td><td>0</td><td>0</td></tr>
+			<tr><td>Cobalt</td><td>-0.000001217611619</td><td>-0.00000121401975</td><td>-0.000629578617</td><td>-0.000629273163</td></tr>
+			<tr><td>L-Arginine</td><td>0</td><td>0.001392930275</td><td>0</td><td>0</td></tr>
+			<tr><td>Spermidine</td><td>0</td><td>0.0004583827288</td><td>0</td><td>0</td></tr>
+			<tr><td>D-Fructose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Pyruvate</td><td>0</td><td>0.004367024646</td><td>0</td><td>0.0005116099794</td></tr>
+			<tr><td>Acetate</td><td>0</td><td>0.00734454145</td><td>0</td><td>0.0007674099084</td></tr>
+			<tr><td>Potassium</td><td>-0.009508031033</td><td>-0.009478726281</td><td>-0.03275365187</td><td>-0.03273776072</td></tr>
+			<tr><td>L-Proline</td><td>0</td><td>0.001775603427</td><td>0</td><td>0</td></tr>
+			<tr><td>Citrate</td><td>0</td><td>0.002154398825</td><td>0</td><td>0.000255805484</td></tr>
+			<tr><td>L-Leucine</td><td>0</td><td>0.001405042712</td><td>0</td><td>0</td></tr>
+			<tr><td>Ferrous</td><td>-82.06087069</td><td>0.01653009055</td><td>-0.00144900646</td><td>-0.001448303442</td></tr>
+			<tr><td>Cyanate</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Manganese</td><td>-0.00003365910169</td><td>-0.00003355550589</td><td>-0.000586352314</td><td>-0.0005860678322</td></tr>
+			<tr><td>Hydrogen</td><td>0</td><td>0</td><td>0</td><td>0.02517654629</td></tr>
+			<tr><td>H+ (Proton)</td><td>-81.61311372</td><td>0.4666523263</td><td>0</td><td>0.067976675</td></tr>
+			<tr><td>Glycine</td><td>0</td><td>0.00619155825</td><td>0</td><td>0</td></tr>
+			<tr><td>Magnesium</td><td>-0.0004225644492</td><td>-0.0004212648532</td><td>-0.005271671263</td><td>-0.005269789665</td></tr>
+			<tr><td>Sulfate</td><td>-0.01566625436</td><td>-0.01222838389</td><td>-0.05225928733</td><td>-0.0514761878</td></tr>
+			<tr><td>L-Glutamate</td><td>0</td><td>0.002244165443</td><td>0</td><td>0.0003069581424</td></tr>
+			<tr><td>L-Histidine</td><td>0</td><td>0.00141117827</td><td>0</td><td>0</td></tr>
+			<tr><td>Sodium</td><td>0</td><td>0</td><td>-0.0007330855771</td><td>-0.0007327299045</td></tr>
+			<tr><td>D-Glucose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+			<tr><td>Molybdate</td><td>-0.0000003428730538</td><td>-0.00000033992553</td><td>-0.0005864103878</td><td>-0.0005861258779</td></tr>
+			<tr><td>Ammonium</td><td>-0.5348762349</td><td>-0.5244517244</td><td>0</td><td>0</td></tr>
+			<tr><td>Oxygen (O2)</td><td>-21.97422024</td><td>-1.452113566</td><td>21.9447781</td><td>21.97422024</td></tr>
+			<tr><td>Succinate</td><td>0</td><td>0.002992220591</td><td>0</td><td>0.0003837110398</td></tr>
+			<tr><td>L-Serine</td><td>0</td><td>0.00375767237</td><td>0</td><td>0</td></tr>
+			<tr><td>Nitrate</td><td>0</td><td>0</td><td>-2.449057669</td><td>-2.447438726</td></tr>
+			<tr><td>Nickel</td><td>-0.00001573345878</td><td>-0.00001568513517</td><td>0</td><td>0</td></tr>
+			<tr><td>Putrescine</td><td>0</td><td>0.001615799119</td><td>0</td><td>0</td></tr>
+			<tr><td>Sucrose</td><td>-0.4133693967</td><td>-0.4124306025</td><td>0.4131517121</td><td>0.4133693967</td></tr>
+			<tr><td>Urea </td><td>0</td><td>0.005212255223</td><td>0</td><td>0</td></tr>
+			<tr><td>Phosphate</td><td>-0.04850780168</td><td>-0.04684202939</td><td>-0.06041753101</td><td>-0.06036884354</td></tr>
+			<tr><td>Ferric</td><td>-0.0173100254</td><td>82.06008939</td><td>-0.001319437891</td><td>-0.001318797737</td></tr>
+			<tr><td>L-Malate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110398</td></tr>
+			<tr><td>Fumarate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110399</td></tr>
+			<tr><td>Water (H20)</td><td>2.651858043</td><td>43.69752008</td><td>-13.54056988</td><td>-13.50658154</td></tr>
+</tbody>
+</table>
+</div>
+<br>
 		    <p>Results: Apart from sucrose, two other metabolites that were required to be given out by one organism and taken in by the other to grow optimally were carbon dioxide and oxygen. Carbon dioxide is given out by E coli and taken in by the cyanobacteria and is already an integral patt of the production process acting as the main carbon source for the entire process. Oxygen given out by the cyanobacteria could act as an important source for e coli, who prefer aerobic conditions for growth. </p>
 		 <br>
 		 <h3>Varying sucrose productivity of the cyanobacteria</h3>  
@@ -237,6 +326,13 @@
 		 <p>Currently according to the salt stress model, cyanobacteria is producing about 0.3 mmol of sucrose per hour per gDW. But we decided to vary the sucrose productivity of cyanobacteria and model its effects on the butanol yield of the co culture. This was done by changing the flux of sucrose given out by cyanobacteria per gDW.</p>
 		 <br>
 		 INSERT GRAPH 1,2,3 here<br>
+		 
+		 <div style="display:flex; flex-direction: column; justify-content:space-around;">
+			 <div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph1.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph2.png" width="400px" height="400px"></div>
+			 <div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph3.png" width="400px" height="400px"></div>
+		 </div>
+		 
+		 <br>
 		 <p>Observations: <br>
 		 As the sucrose productivity of cyanobacteria increases:
 		 <ol class="a">
@@ -254,6 +350,7 @@
 		<p>Hypothesis: Increase in the butanol productivity of E coli will result in an increase of the butanol yield of the co culture.</p>
 		<p>Apart from the sucrose productivity of Cyanobacteria, the butanol productivity of E coli is another important factor that will determine the amount of butanol produced by the co culture. As per how induction by IPTG is simulated in the model, a higher butanol productivity is correlated with the e coli growing at a lower percentage of its optimal/maximum growth rate at the given conditions. In reality, increasing butanol productivity could be achieved by a higher IPTG concentration, or by increasing the efficiency of the butanol pathway. This would redirect carbon flux away from growth and towards producing butanol. </p>
 		<br>Insert Graphs 7,8,9<br>
+		<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph7.png" width="400px" height="400px"></div><br>
 		<p>Observations: <br>
 			As butanol productivity of E coli increases:
 			<ol class="a">
@@ -270,12 +367,23 @@
 		<p>
 			Increasing the butanol productivity of e coli does increase the butanol productivity of the co culture. This is as each the E coli are now diverting more flux into the butanol producing pathway and hence are converting a higher fraction of the sucrose given out by the cyanobacteria into butanol. However, this comes at the cost of decreasing relative abundance of E coli in the co culture. While running steadycom, it was not possible for the E coli to grow below around 50% of its optimal growth rate. From which we can infer that the butanol productivity cannot be arbitrarily increased as after a point the co culture would not be able to maintain a steady state. 
 		</p>
+		<div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph8.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph9.png" width="400px" height="400px"></div><br>
 
 		 <h3>
 			Varying Oxygen levels to test aerobic vs micro aerobic vs anaerobic
 		 </h3><br>
 		 <p>Hypothesis: Decreasing oxygen levels will result in an increase of the butanol yield of the co culture.</p>
 		 <p>As seen in the FVA results above, oxygen was one of the important metabolites being exchanged by the cyanobacteria and E coli. It is to be noted that cyanobacteria are producing more oxygen than the E coli need and the co culture as a whole would have a positive production of oxygen (see appendix for more). This means that our simulations would be in an aerobic environment as far as the E coli are concerned. However, based on discussions with experts and FBA results for E coli, we realised that anaerobic or even microaerobic conditions might result in a higher butanol yield. Thus we decided to look at how lowering oxygen levels in the co culture would affect butanol yield. We did this by setting decreasing bounds to how much oxygen the E coli could take up per gDW.</p>
+		 <!-- SLIDER 5  -->
+		 <div class="rangeImage" id="rangeImage5"></div><br><br>
+		 <div class="range-slider">
+		     <input type="range" min="1" max="6" step="1" value="1" class="myRange" id="myRange5">
+		   </div>
+		 <div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">Butanol Productivity</div><br>   
+		 <br><h4>Image description:
+		 <b><div id="ImageDesc5"></div></h4></b><br><br>
+
+		 <div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph11.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph12.png" width="400px" height="400px"></div><br>
 		 <p>Observations: <br>
 			As the oxygen levels in the co culture environment is brought down:
 			<ol class="a">
@@ -292,6 +400,7 @@
 				<li style="padding-left:1em;padding-top: 0.3em;"></li>
 			</ol>
 			</p>
+			<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph13.png" width="400px" height="400px"></div><br>
 			<p>Conclusions: <br><br>
 				Butanol yield does increase as the oxygen levels are brought down, however at very low levels of oxygen, the E coli is not able to sustain growth with the current levels of sucrose production from the cyanobacteria. Further, the butanol yield at low oxygen levels does not increase significantly unless sucrose productivity of the cyanobacteria is increased to a very large extent. <br>
 				Thus we can say that using oxygen quenchers to bring the oxygen levels down is a good idea upto a certain extent. This suggests that a microaerobic condition would be best for the butanol yield. This matches what was told to us by Dr. Yazdani, who said that at aerobic conditions, the E coli would divert most of its flux towards growth and hence butanol yield would be low, whereas at anaerobic conditions the E coli would grow too slowly.
@@ -300,6 +409,15 @@
 			</p>
 			<h3>Increasing CO2 uptake rate of cyanobacteria</h3><br>
 			<p>Hypothesis: Increasing the Co2 uptake efficiency of cyanobacteria will increase the butanol yield of the co culture.</p>
+			<br>
+			<!-- SLIDER 6 -->
+			<div class="rangeImage" id="rangeImage6"></div><br><br>
+			<div class="range-slider">
+			    <input type="range" min="1" max="6" step="1" value="1" class="myRange"id="myRange6">
+			  </div>
+			<div class="rangeOutput" id="rangeValue6"></div><div class="rangeOutput">Sucrose Productivity</div><br>   
+			<br><h4>Image description:
+			<b><div id="ImageDesc6"></div></h4></b><br><br>
 			<br>
 			<h1 id="3">Dynamic Modelling</h1><hr><br>
 			<h3>Varying sucrose productivity of the cyanobacteria
@@ -509,6 +627,46 @@ imageDesc1.innerHTML = 'me'
 	  output1.innerHTML = imagearray1[this.value - 1] + '%';
 	  imageDesc1.innerHTML = igemarraycoc1[correctorder1[this.value-1]-1]
 	  slideimage1.innerHTML = '<div><img src="' + igemarraycoc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px">' + '<img src="' + igemarraybut1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"';
+	}
+	</script>
+<!-- slider 5 -->
+<script>
+	var slider5 = document.getElementById("myRange5");
+var output5 = document.getElementById("rangeValue5");
+var slideimage5 = document.getElementById("rangeImage5");
+var imageDesc5 = document.getElementById("ImageDesc5");
+const imagearray5 = ['95','90','80','70','60','40','20','10'];
+const descarray5 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarray5 = ['https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png', 'https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_b8.png', 'https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_c4.png', 'https://2021.igem.org/wiki/images/5/55/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_d2.png', 'https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_e1.png', 'https://2021.igem.org/wiki/images/b/b7/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_f0.png'];
+	const correctorder5 = ['1', '2', '3', '4', '5', '6'];
+	output5.innerHTML = slider5.value;
+output5.innerHTML = '1';
+imageDesc5.innerHTML = 'me'
+	  slideimage5.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png" width="450px" height="450px"></div>';
+	slider5.oninput = function() {
+	  output5.innerHTML = imagearray5[this.value - 1] + '%';
+	  imageDesc5.innerHTML = igemarray5[this.value-1];
+	  slideimage5.innerHTML = '<div><img src="' + igemarray5[this.value-1] + '" width="450px" height="450px"></div>';
+	}
+	</script>
+<!-- slider 6 -->
+<script>
+	var slider6 = document.getElementById("myRange6");
+var output6 = document.getElementById("rangeValue6");
+var slideimage6 = document.getElementById("rangeImage6");
+var imageDesc6 = document.getElementById("ImageDesc6");
+const imagearray6 = ['95','90','80','70','60','40','20','10'];
+const descarray6 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarray6 = ['https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png', 'https://2021.igem.org/wiki/images/c/cb/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_b.png', 'https://2021.igem.org/wiki/images/6/62/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_c.png', 'https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_d.png', 'https://2021.igem.org/wiki/images/2/25/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_e.png', 'https://2021.igem.org/wiki/images/a/af/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_f.png'];
+	const correctorder6 = ['1', '2', '3', '4', '5', '6'];
+	output6.innerHTML = slider6.value;
+output6.innerHTML = '1';
+imageDesc6.innerHTML = 'me'
+	  slideimage6.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png" width="450px" height="450px"></div>';
+	slider6.oninput = function() {
+	  output6.innerHTML = imagearray6[this.value - 1] + '%';
+	  imageDesc6.innerHTML = igemarray6[this.value-1];
+	  slideimage6.innerHTML = '<div><img src="' + igemarray6[this.value-1] + '" width="450px" height="450px"></div>';
 	}
 	</script>
 	<script>
