@@ -374,6 +374,14 @@
 		 </h3><br>
 		 <p>Hypothesis: Decreasing oxygen levels will result in an increase of the butanol yield of the co culture.</p>
 		 <p>As seen in the FVA results above, oxygen was one of the important metabolites being exchanged by the cyanobacteria and E coli. It is to be noted that cyanobacteria are producing more oxygen than the E coli need and the co culture as a whole would have a positive production of oxygen (see appendix for more). This means that our simulations would be in an aerobic environment as far as the E coli are concerned. However, based on discussions with experts and FBA results for E coli, we realised that anaerobic or even microaerobic conditions might result in a higher butanol yield. Thus we decided to look at how lowering oxygen levels in the co culture would affect butanol yield. We did this by setting decreasing bounds to how much oxygen the E coli could take up per gDW.</p>
+		 <!-- SLIDER 5  -->
+		 <div class="rangeImage" id="rangeImage5"></div><br><br>
+		 <div class="range-slider">
+		     <input type="range" min="1" max="6" step="1" value="1" class="myRange" id="myRange5">
+		   </div>
+		 <div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">Butanol Productivity</div><br>   
+		 <br><h4>Image description:
+		 <b><div id="ImageDesc5"></div></h4></b><br><br>
 
 		 <div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph11.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph12.png" width="400px" height="400px"></div><br>
 		 <p>Observations: <br>
@@ -401,6 +409,15 @@
 			</p>
 			<h3>Increasing CO2 uptake rate of cyanobacteria</h3><br>
 			<p>Hypothesis: Increasing the Co2 uptake efficiency of cyanobacteria will increase the butanol yield of the co culture.</p>
+			<br>
+			<!-- SLIDER 6 -->
+			<div class="rangeImage" id="rangeImage6"></div><br><br>
+			<div class="range-slider">
+			    <input type="range" min="1" max="6" step="1" value="1" class="myRange"id="myRange6">
+			  </div>
+			<div class="rangeOutput" id="rangeValue6"></div><div class="rangeOutput">Sucrose Productivity</div><br>   
+			<br><h4>Image description:
+			<b><div id="ImageDesc6"></div></h4></b><br><br>
 			<br>
 			<h1 id="3">Dynamic Modelling</h1><hr><br>
 			<h3>Varying sucrose productivity of the cyanobacteria
@@ -610,6 +627,46 @@ imageDesc1.innerHTML = 'me'
 	  output1.innerHTML = imagearray1[this.value - 1] + '%';
 	  imageDesc1.innerHTML = igemarraycoc1[correctorder1[this.value-1]-1]
 	  slideimage1.innerHTML = '<div><img src="' + igemarraycoc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px">' + '<img src="' + igemarraybut1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"></div>' + 'img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="450px" height="450px"';
+	}
+	</script>
+<!-- slider 5 -->
+<script>
+	var slider5 = document.getElementById("myRange5");
+var output5 = document.getElementById("rangeValue5");
+var slideimage5 = document.getElementById("rangeImage5");
+var imageDesc5 = document.getElementById("ImageDesc5");
+const imagearray5 = ['95','90','80','70','60','40','20','10'];
+const descarray5 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarray5 = ['https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png', 'https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_b8.png', 'https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_c4.png', 'https://2021.igem.org/wiki/images/5/55/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_d2.png', 'https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_e1.png', 'https://2021.igem.org/wiki/images/b/b7/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_f0.png'];
+	const correctorder5 = ['1', '2', '3', '4', '5', '6'];
+	output5.innerHTML = slider5.value;
+output5.innerHTML = '1';
+imageDesc5.innerHTML = 'me'
+	  slideimage5.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png" width="450px" height="450px"></div>';
+	slider5.oninput = function() {
+	  output5.innerHTML = imagearray5[this.value - 1] + '%';
+	  imageDesc5.innerHTML = igemarray5[this.value-1];
+	  slideimage5.innerHTML = '<div><img src="' + igemarray5[this.value-1] + '" width="450px" height="450px"></div>';
+	}
+	</script>
+<!-- slider 6 -->
+<script>
+	var slider6 = document.getElementById("myRange6");
+var output6 = document.getElementById("rangeValue6");
+var slideimage6 = document.getElementById("rangeImage6");
+var imageDesc6 = document.getElementById("ImageDesc6");
+const imagearray6 = ['95','90','80','70','60','40','20','10'];
+const descarray6 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarray6 = ['https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png', 'https://2021.igem.org/wiki/images/c/cb/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_b.png', 'https://2021.igem.org/wiki/images/6/62/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_c.png', 'https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_d.png', 'https://2021.igem.org/wiki/images/2/25/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_e.png', 'https://2021.igem.org/wiki/images/a/af/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_f.png'];
+	const correctorder6 = ['1', '2', '3', '4', '5', '6'];
+	output6.innerHTML = slider6.value;
+output6.innerHTML = '1';
+imageDesc6.innerHTML = 'me'
+	  slideimage6.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png" width="450px" height="450px"></div>';
+	slider6.oninput = function() {
+	  output6.innerHTML = imagearray6[this.value - 1] + '%';
+	  imageDesc6.innerHTML = igemarray6[this.value-1];
+	  slideimage6.innerHTML = '<div><img src="' + igemarray6[this.value-1] + '" width="450px" height="450px"></div>';
 	}
 	</script>
 	<script>
