@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Results</title>
+	<link rel="stylesheet" href="css/igem-reset.css">
+	<link rel="stylesheet" href="css/SBcss/style.css">
+   	<link rel="stylesheet" href="css/styleSB.css">
+    	<link rel="stylesheet" href="css/DryLabPage.css">
+	<style>/* Reset CSS */
+
+		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+		#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+		body, html {background-color:#212529; width: 100%; height: 100%;}
+		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+
+    </style>
+<body>
+    
+
+	
+	<!-- NAVBAR SECTION -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+		<div class="container-fluid nav-container">
+		  <a class="navbar-brand" href="#">
+			<img src="assets/svgs/synbactory2.svg">
+		  </a>
+		  <div class="center-expand">
+		</div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Home</a>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Team
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Team.html">Members</a></li>
+			  <li><a class="dropdown-item" href="Attributions.html">Attributions</a></li>
+			  <li><a class="dropdown-item" href="Collaborations.html">Collaborations</a></li>
+			  <li><a class="dropdown-item" href="Sponsors.html">Sponsors</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Project
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Description.html">Description</a></li>
+			  <li><a class="dropdown-item" href="Design.html">Design</a></li>
+			  <li><a class="dropdown-item" href="Notebook.html">Notebook</a></li>
+			  <li><a class="dropdown-item" href="Contribution.html">Contributions</a></li>
+			  <li><a class="dropdown-item" href="Engineering.html">Engineering Success</a></li>
+			  <li><a class="dropdown-item" href="Implementation.html">Future Implementation</a></li>
+			  <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Wet Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Experiments.html">Experiments</a></li>
+			  <li><a class="dropdown-item" href="Constructs.html">Constructs</a></li>
+			  <li><a class="dropdown-item" href="Measurement.html">Measurement</a></li>
+			  <li><a class="dropdown-item" href="LabNotebook.html">Lab Notebook</a></li>
+			  <li><a class="dropdown-item" href="Results.html">Results</a></li>
+			  <li><a class="dropdown-item" href="FutureWork.html">Future Work</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Parts
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <!-- <li><a class="dropdown-item" href="#">Overview</a></li> -->
+			  <li><a class="dropdown-item" href="BasicParts.html">Basic</a></li>
+			  <li><a class="dropdown-item" href="CompositeParts.html">Composite</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Dry Lab
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
+			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
+			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Human Practices
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Human_Practices.html">iHP</a></li>
+			  <li><a class="dropdown-item" href="#">Public Engagement</a></li>
+			  <li><a class="dropdown-item" href="Communication.html">Education</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="#">Judging Form</a>
+		      </li>
+		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
+		    </ul>
+		  </div>
+		</div>
+	</nav>
+
+
+
+    <!-- TITLE SECTION -->
+    
+    <div class="section-1">
+        <h1><br><br><br><br>Results</h1>
+    </div>
+        
+
+
+    <!-- WAVES SPACER -->
+
+    <div class="spacer layer1"></div>
+	<a id="top"></a>
+
+
+
+    <!-- CONTENT + SIDENAV SECTION -->
+
+    <div class="second-div container-fluid">
+        <div class="row">
+            <!-- SIDENAV -->
+            <div class="col-lg-3 col-md-3">
+                <div class="sidenav">
+                    <nav>
+                        <ul id="sidenav-id">
+                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="col-lg-9 col-md-9">
+                <div class="content">
+                    <h1 id="1">Introduction</h1>
+                    <hr><br><br><br>
+		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+
+
+                    <figure>
+
+                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
+
+                    </figure>
+
+
+                    <h1 id="2">Section 2</h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
+                    <br>
+		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
+                
+
+					<h1 id="3">Introduction</h1>
+                    <hr><br><br><br>
+		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+
+
+					<h1 id="4">Introduction</h1>
+                    <hr><br><br><br>
+		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+
+
+					<h1 id="5">Introduction</h1>
+                    <hr><br><br><br>
+		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+
+
+					<h1 id="6">Introduction</h1>
+                    <hr><br><br><br>
+		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+
+
+					<h1 id="7">Introduction</h1>
+                    <hr><br><br><br>
+		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
+				</div>
+			</div>
+        </div>
+    </div>
+
+<!-- SPONSORS BAR -->
+	<div class="footer">
+		<div class="footer-wrapper">
+			<!-- <div id="not-sponsors" class="footer-wrapper">	 -->
+				<div id="Team", class="footer-wrapper">
+					<img class="teamlogo" src="assets/Logos/IISER-Pune-iGEM_logo.png" alt="iGEM IISER Pune Logo" width="170">
+				</div>
+				<div id="socials" class="vertical-stack">
+					<div><h3>Team IISER Pune India</h3></div>
+					<div id="logos" class ="footer-wrapper ">
+						<a href="https://www.instagram.com/igem_iiserp/"><img class="footer-links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="20"></a>
+						<a href="https://www.linkedin.com/in/igem-iiser-pune-2021/"><img class="footer-links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30"></a>
+						<a href="https://twitter.com/igem_iiserpune"><img class="footer-links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35"></a>
+						<a href="https://www.facebook.com/igemiiserpune"><img class="footer-links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25"></a>
+						<a href="https://www.youtube.com/channel/UCyo6NMLvM58sSh_tnxht36w"><img class="footer-links-socials" src="assets/Logos/Youtube_logo.png" alt="Youtube" width="35"></a>
+					</div>
+				</div>
+			<!-- </div> -->
+			<div id="sponsors" class="footer-wrapper">
+				<div id="main-sponsor", class="">
+					<a href="https://www.sailife.com/"><img class="footer-links" src="assets/Logos/Sai_logo.jpg" alt="Sai Life Sciences" width="280"></a>
+				</div>
+				<div class="vertical-stack">
+					<a href="https://sg.idtdna.com/pages"><img class="footer-links" src="assets/Logos/IDT_logo.png" alt="IDT" width="220"></a>
+					<a href="https://www.geneious.com/"><img class="footer-links" src="assets/Logos/Geneious_logo.png" alt="Geneious" width="220"></a>
+				</div>
+				<div class="vertical-stack">
+					<div id="horizontal stack">
+						<a href="https://www.notion.so/"><img class="footer-links" src="assets/Logos/Notion_logo.png" alt="Notion" width="70"></a>
+						<img src="assets/Logos/IISER Pune Logo.png" alt="IISER Pune" width="80" style="padding-left: 1em;">
+					</div>
+					<a href="https://www.zoho.com/"><img class="footer-links" src="assets/Logos/Zoho_logo.png" alt="Zoho" width="150"></a>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- END OF SPONSOR BAR--> 
+
+<!-- ACTUAL SCROLLING BAR-->
+	<div class="header"></div>
+    <div class="line" id="scrollIndicator"></div>
+
+
+    <!-- back to top button -->
+    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
+
+	
+	<!-- LINKING MAIN JS FILES-->
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+
+	<!-- Gets the screenheight of each page for Scrollbar? -->
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+
+
+	<!-- Scrollbar stuff again, only @Namasi22 knows :) -->
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+
+
+	<!-- To make the button appear -->
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+
+
+	<!-- SCRIPT FOR SCROLL AWARE SIDEBAR HIGHLIGHT -->
+	<!-- ------------------------------------------------------------------------------------------------------------- -->
+	<!-- MAKE SURE YOU CHANGE THE NUMBER OF DIVISIONS -->
+	<script>
+		
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var scroll_top = $(window).scrollTop();
+				var div_one_top = $("#1").offset().top;
+				var div_two_top = $("#2").offset().top;
+				var div_three_top = $("#3").offset().top;
+				var div_four_top = $("#4").offset().top;
+				var div_five_top = $("#5").offset().top;
+				var div_six_top = $("#6").offset().top;
+				var div_seven_top = $("#7").offset().top;
+	
+				if (scroll_top > div_one_top && scroll_top < div_two_top) {
+					//Division 1
+					if (!$('a[href="#1"]').hasClass('sidenav-active')) {
+						$('a[href="#1"]').addClass('sidenav-active');
+					}
+	
+					if ($('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').removeClass('sidenav-active');
+					}
+	
+				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+					// Division 2
+					if ($('a[href="#1"]').hasClass('sidenav-active')) {
+						$('a[href="#1"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').removeClass('sidenav-active');
+					}
+	
+					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+					//Division 3
+					if ($('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+					// You are in div 4
+					if ($('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+					// You are in div 5
+					if ($('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+					// You are in div 6
+					if ($('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').removeClass('sidenav-active');
+					}
+	
+					if ($('a[href="#7"]').hasClass('sidenav-active')) {
+						$('a[href="#7"]').removeClass('sidenav-active');
+					} 
+	
+					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_seven_top) {
+					// You are in div 7
+					if ($('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').removeClass('sidenav-active');
+					}
+	
+					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
+						$('a[href="#7"]').addClass('sidenav-active');
+					}
+				}
+			});
+		});
+		
+	</script>	
+
+	
+	<!-- Script for the slideshow, wherever needed -->
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 80;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+
+	</script>
+</body>
