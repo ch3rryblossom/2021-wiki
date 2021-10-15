@@ -771,7 +771,7 @@ html:
     md5: 8ad3bae8d3213ae73bf10740a8446689
   Coculture.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
-    md5: 2f88ac53ead03908223a42fe4cc2ae23
+    md5: 5e67dac3c5ca32b14f0911039f03010c
   Collaborations.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Collaborations
     md5: f426bac0071118681703babb74427afa
@@ -798,7 +798,7 @@ html:
     md5: 109fdb7c2487d3010ca16de26547b794
   EColi.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
-    md5: 38cfc9c306be93c314b84df52bfafb03
+    md5: 4d77c9cd49d766154cf13521fe7c5007
   Education.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Education
     md5: 6848b49032de9e3e60b9b8cc5c1566f4
@@ -831,7 +831,7 @@ html:
     md5: 65f779ad0134c4291ad26adbb9742493
   index.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India
-    md5: 14b151fd1fa9adf9a45b7d5d8cd278d7
+    md5: 414dc378f0c14b96f96db80a9280f59f
   lastyear.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/lastyear
     md5: ''
@@ -851,6 +851,9 @@ js:
   js\bootstrap-bundle.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript
     md5: 0aa8d64e726c4a57adb5c88f9115996b
+  js\index-main.js:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/index-mainJS?action=raw&ctype=text/javascript
+    md5: 51899e3c56e3b7ffa947543b42329604
   js\jquery.min.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/jquery-minJS?action=raw&ctype=text/javascript
     md5: dc5e7f18c8d36ac1d3d4753a87c98d0a
