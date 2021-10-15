@@ -316,7 +316,7 @@
 </tbody>
 </table>
 </div>
-
+<br>
 		    <p>Results: Apart from sucrose, two other metabolites that were required to be given out by one organism and taken in by the other to grow optimally were carbon dioxide and oxygen. Carbon dioxide is given out by E coli and taken in by the cyanobacteria and is already an integral patt of the production process acting as the main carbon source for the entire process. Oxygen given out by the cyanobacteria could act as an important source for e coli, who prefer aerobic conditions for growth. </p>
 		 <br>
 		 <h3>Varying sucrose productivity of the cyanobacteria</h3>  
@@ -326,6 +326,13 @@
 		 <p>Currently according to the salt stress model, cyanobacteria is producing about 0.3 mmol of sucrose per hour per gDW. But we decided to vary the sucrose productivity of cyanobacteria and model its effects on the butanol yield of the co culture. This was done by changing the flux of sucrose given out by cyanobacteria per gDW.</p>
 		 <br>
 		 INSERT GRAPH 1,2,3 here<br>
+		 
+		 <div style="display:flex; flex-direction: column; justify-content:space-around;">
+			 <div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph1.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph2.png" width="400px" height="400px"></div>
+			 <div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph3.png" width="400px" height="400px"></div>
+		 </div>
+		 
+		 <br>
 		 <p>Observations: <br>
 		 As the sucrose productivity of cyanobacteria increases:
 		 <ol class="a">
@@ -343,6 +350,7 @@
 		<p>Hypothesis: Increase in the butanol productivity of E coli will result in an increase of the butanol yield of the co culture.</p>
 		<p>Apart from the sucrose productivity of Cyanobacteria, the butanol productivity of E coli is another important factor that will determine the amount of butanol produced by the co culture. As per how induction by IPTG is simulated in the model, a higher butanol productivity is correlated with the e coli growing at a lower percentage of its optimal/maximum growth rate at the given conditions. In reality, increasing butanol productivity could be achieved by a higher IPTG concentration, or by increasing the efficiency of the butanol pathway. This would redirect carbon flux away from growth and towards producing butanol. </p>
 		<br>Insert Graphs 7,8,9<br>
+		<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph7.png" width="400px" height="400px"></div><br>
 		<p>Observations: <br>
 			As butanol productivity of E coli increases:
 			<ol class="a">
@@ -359,12 +367,15 @@
 		<p>
 			Increasing the butanol productivity of e coli does increase the butanol productivity of the co culture. This is as each the E coli are now diverting more flux into the butanol producing pathway and hence are converting a higher fraction of the sucrose given out by the cyanobacteria into butanol. However, this comes at the cost of decreasing relative abundance of E coli in the co culture. While running steadycom, it was not possible for the E coli to grow below around 50% of its optimal growth rate. From which we can infer that the butanol productivity cannot be arbitrarily increased as after a point the co culture would not be able to maintain a steady state. 
 		</p>
+		<div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph8.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph9.png" width="400px" height="400px"></div><br>
 
 		 <h3>
 			Varying Oxygen levels to test aerobic vs micro aerobic vs anaerobic
 		 </h3><br>
 		 <p>Hypothesis: Decreasing oxygen levels will result in an increase of the butanol yield of the co culture.</p>
 		 <p>As seen in the FVA results above, oxygen was one of the important metabolites being exchanged by the cyanobacteria and E coli. It is to be noted that cyanobacteria are producing more oxygen than the E coli need and the co culture as a whole would have a positive production of oxygen (see appendix for more). This means that our simulations would be in an aerobic environment as far as the E coli are concerned. However, based on discussions with experts and FBA results for E coli, we realised that anaerobic or even microaerobic conditions might result in a higher butanol yield. Thus we decided to look at how lowering oxygen levels in the co culture would affect butanol yield. We did this by setting decreasing bounds to how much oxygen the E coli could take up per gDW.</p>
+
+		 <div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph11.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph12.png" width="400px" height="400px"></div><br>
 		 <p>Observations: <br>
 			As the oxygen levels in the co culture environment is brought down:
 			<ol class="a">
@@ -381,6 +392,7 @@
 				<li style="padding-left:1em;padding-top: 0.3em;"></li>
 			</ol>
 			</p>
+			<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph13.png" width="400px" height="400px"></div><br>
 			<p>Conclusions: <br><br>
 				Butanol yield does increase as the oxygen levels are brought down, however at very low levels of oxygen, the E coli is not able to sustain growth with the current levels of sucrose production from the cyanobacteria. Further, the butanol yield at low oxygen levels does not increase significantly unless sucrose productivity of the cyanobacteria is increased to a very large extent. <br>
 				Thus we can say that using oxygen quenchers to bring the oxygen levels down is a good idea upto a certain extent. This suggests that a microaerobic condition would be best for the butanol yield. This matches what was told to us by Dr. Yazdani, who said that at aerobic conditions, the E coli would divert most of its flux towards growth and hence butanol yield would be low, whereas at anaerobic conditions the E coli would grow too slowly.
