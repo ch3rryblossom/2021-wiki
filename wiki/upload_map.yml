@@ -769,6 +769,14 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf
     md5: 9de66fe4842edf59e46e15c90e686087
     upload_filename: T--IISER-Pune-India--fonts--FSEX300.ttf
+  assets\fonts\LEMONMILK-Regular.otf:
+    link_URL: https://2021.igem.org/wiki/images/2/2f/T--IISER-Pune-India--fonts--LEMONMILK-Regular.otf
+    md5: be29f3c5ccd30b97f9c394a02c9ce5d7
+    upload_filename: T--IISER-Pune-India--fonts--LEMONMILK-Regular.otf
+  assets\fonts\Proxima-Nova.otf:
+    link_URL: https://2021.igem.org/wiki/images/d/d3/T--IISER-Pune-India--fonts--Proxima-Nova.otf
+    md5: bf9f5d50c1b928ff21436517a1a95ad9
+    upload_filename: T--IISER-Pune-India--fonts--Proxima-Nova.otf
   assets\pngs\adb6862b5026e5fe00128d2997a48f13.png:
     link_URL: https://2021.igem.org/wiki/images/0/0b/T--IISER-Pune-India--pngs--adb6862b5026e5fe00128d2997a48f13.png
     md5: 96d4cca5600d39a069f503a9d4042cd3
@@ -819,7 +827,7 @@ css:
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
-    md5: 55e3e61c6c522d4a2227059715d6151d
+    md5: 6e01d8d3fb611140b457fdb91c89ae8d
 html:
   Attributions.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Attributions
@@ -853,7 +861,7 @@ html:
     md5: c747d89cfa04e702f2fe751ef7f91011
   Design.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Design
-    md5: 8969a5e2f4d88ef25bc8847ac66a0c68
+    md5: 9df79277b713034dc6dc5d83a16545fb
   DryLabOverview.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview
     md5: 88239b91b189a9f6de684ad6dff95d93
