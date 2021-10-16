@@ -20,6 +20,23 @@
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
     </style>
+
+	<!-- ADDED SUPERIOR STLYING :BIGNUS:-->
+	<style>
+	.sidenav {
+		height: auto;
+		width: auto;
+		padding-top: 150px;
+		padding-left: 5px;
+		padding-right: 10px;
+	
+		margin-top: 25%;
+		margin-bottom: 20px;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 10%!important;
+	}
+	</style>
     
 <body>
     
@@ -140,9 +157,10 @@
                             <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
                             <li class="nav-item"><a class="nav-link" href="#2">Model Construction</a></li>
                             <li class="nav-item"><a class="nav-link" href="#3">Modelling E coli for optimum Butanol production</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">OptKnock</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">FSEOF</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+							<li class="nav-item"><a class="nav-link" href="#4">Results</a></li>
+							<li class="nav-item"><a class="nav-link" href="#5">OptKnock</a></li>
+							<li class="nav-item"><a class="nav-link" href="#6">FSEOF</a></li>
+							<li class="nav-item"><a class="nav-link" href="#7">References</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -152,18 +170,21 @@
                 <div class="content">
 
 					<!-- INTRODUCTION -->
-                    <h1 id="1">Introduction</h1>
+					<a id="1"></a>					
+                    <h1>Introduction</h1>
                     <p>The economic value of our co-culture heavily depends on butanol production by E. coli, making it important to model its growth and butanol production. We used Flux Balance Analysis (FBA) to study the growth dynamics and butanol production in E.coli. We also aimed to optimize the strain by identifying gene targets for overexpression and knockouts in order to improve butanol yields using OptKnock and FSEOF.</p>
+					<a id="2"></a>
+					<br>
 					<!-- END OF INTRODUCTION -->
 
 
 					
 
 					<!-- MODEL CONSTRUCTION-->
-                    <h1 id="2">Model Construction</h1>
+                    <h1>Model Construction</h1>
                     <p>We aimed to replicate the KJK01 butanol-producing strain in silico that we received from Dr. ‪Syed Shams Yazdani‬ at ICGEB, Delhi.</p>
-                    <p>We used the iML1515 model from the BIGG database1 which is a metabolic flux model of E.coli MG1655 that contains 1516 genes. This model was the base strain that we further modified to replicate the KJK01 strain. All modifications were made using the COBRA Toolbox in MATLAB and all optimization problems were solved using the gurobi solver<a>2</a>.</p>
-                    <p>We first deleted the reactions corresponding to the following genes  that were deleted in the KJK01 strain3, by setting the fluxes through those reactions to zero. The reactions corresponding to the genes in the model were taken from the EcoCyc database<a>4</a>.</p>
+					<p>We used the iML1515 model from the BIGG database<a href="#ref1"><sup>1</sup></a> which is a metabolic flux model of E.coli MG1655 that contains 1516 genes. This model was the base strain that we further modified to replicate the KJK01 strain. All modifications were made using the COBRA Toolbox in MATLAB and all optimization problems were solved using the gurobi solver<a href="ref2"><sup>2</sup></a>.</p>
+                    <p>We first deleted the reactions corresponding to the following genes  that were deleted in the KJK01 strain<a href="#ref3"><sup>3</sup></a>, by setting the fluxes through those reactions to zero. The reactions corresponding to the genes in the model were taken from the EcoCyc database<a href="#ref4"><sup>4</sup></a>.</p>
 					<ul class="b">
 						<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=EG20173">pta</a> - codes for an enzyme that catalyses the conversion of acetyl-CoA to acetate. </li>
 						<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=EG10031">adhE</a> - codes for an enzyme that catalyses the conversion of acetyl-CoA to ethanol. </li>
@@ -171,7 +192,7 @@
 						<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=G592">ldhA</a> - codes for an enzyme that catalyses the conversion of pyruvate to lactate. </li>
 					</ul>
 					<p>These genes catalyze reactions that direct flux away from the butanol producing pathway and produce acetate,  ethanol, succinate and lactate respectively, which impact butanol yields. Thus their deletion will reroute flux back into the butanol producing pathway and increase yields.</p>
-					<p>We then added reactions catalyzed by the heterologous genes expressed in E.coli in order to construct a butanol-producing pathway in the KJK01 strain. We added the reactions using the MetaCyc5 database and the KEGG6,7,8 database.</p>
+					<p>We then added reactions catalyzed by the heterologous genes expressed in E.coli in order to construct a butanol-producing pathway in the KJK01 strain. We added the reactions using the MetaCyc<a href="#ref5"><sup>5</sup></a> database and the KEGG<a href="#ref6"><sup>6</sup></a><sup>,</sup><a href="#ref7"><sup>7</sup></a><sup>,</sup><a href="#ref8"><sup>8</sup></a> database.</p>
 					<p>These were reactions catalyzed by the following genes:</p>
 					<ul class="b">
 						<li style="padding-left: 1em;">From Clostridium acetobutylicum: </li>
@@ -191,18 +212,20 @@
 					</ul>
 					<p>We also added the reactions catalyzed by the cscA (invertase), cscB (sucrose permease), cscK (fructokinase) genes from E.coli W to allow the strain to be able to consume and metabolize sucrose<a>9</a>.</p>
 					<p>However, we noticed that some of the heterologous gene reactions corresponding to the hbd, crt, cscK, and atoB genes already existed in the base iML1515 strain, and upon consultation with our advisors, we decided to consider the flux through those reactions as overexpressions of the corresponding genes.</p>
+					<a id="3"></a>
+					<br>
 					<!-- end of model construction -->
 
 
 
-
-					<h1 id="3">Modelling E coli for Optimum Butanol production</h1>
+					<!-- Modelling E Coli For Optimum Butanol -->
+					<h1>Modelling E coli for Optimum Butanol production</h1>
 					<p>After adding the relevant genes and reactions to our model, the next step was to enforce additional flux through the reactions corresponding to the genes hbd, crt, atoB and cscK. While these genes were added in KJK01, in a metabolic model, we do not add duplicate reactions but rather increase flux through the existing reaction. The issue here is that fluxes through individual reactions are usually not available in literature.</p>
-					<p>On suggestion from our PI, we used a computational way to create a model with suitable over expression levels for such reactions which goes as follows:</p>
+					<p>On suggestion from our PI, Indumathy, we used a computational way to create a model with suitable over expression levels. She suggested proceeding as follows:</p>
 					<ol class="a">
-						<li style="padding-left: 1em;"> We added all the reactions necessary for butanol synthesis</li>
-						<li style="padding-left: 1em;">We made the appropriate deletions and set realistic bounds for our exchange reactions</li>
-						<li style="padding-left: 1em;">We then optimized the model for growth and obtained the base value fluxes for all the reactions that were to be overexpressed <br> 
+						<li style="padding-left: 1em;"> Add all the reactions necessary for butanol synthesis</li>
+						<li style="padding-left: 1em;">Make the appropriate deletions and set realistic bounds for our exchange reactions</li>
+						<li style="padding-left: 1em;">Optimize the model for growth and obtain the base value fluxes for all the reactions that were to be overexpressed <br> 
 							Some important fluxes are mentioned in the table below: <br><br>
 
 						<!-- Table -->
@@ -278,18 +301,24 @@
 						<br>
 						<li class="padding-left: 1em;">We then developed a nested loop designed as follows:</li>
 						<ul class="c">
-							<li style="padding-left: 1em;"> We forced flux in the range 12 to 15 (with a step size of 0.5) through the hbd reaction</li>
+							<li style="padding-left: 1em;"> We force flux in the range 12 to 15 (with a step size of 0.5) through the hbd reaction</li>
 							<li style="padding-left: 1em;"> For each flux value of hbd we had a loop forcing flux in the same range through the reaction CRT1</li>
 							<li style="padding-left: 1em;"> For each flux value for CRT1 we had a loop forcing the same range of fluxes through the CRT 2 reaction</li>
 							<li style="padding-left: 1em;"> For each flux value of CRT2 reaction, we had a loop forcing flux in the range 20 to 24 (for a step size of 1) through the cscK gene reaction</li>
 						</ul>
-						<li style="padding-left: 1em;"> We then optimized the model with growth as the objective function for each set of flux values and checked for growth and butanol production. We thus generated a table (Supplementary material [ecoli_ovrxps_fluxes_v2]) of enforced flux distributions with their effects on growth and butanol production.</li>
+						<li style="padding-left: 1em;"> We then optimize the model with growth as the objective function for each set of flux values and check for growth and butanol production</li>
 					</ol>
-					<br><br>
-
+					<br>
+					<p>We thus generated a table (<a>Supplementary material [ecoli_ovrxps_fluxes_v2]</a>) of enforced flux distributions with their effects on growth and butanol production.</p>
+					<br>
+					<div class="graph">
+						<img src="assets/Graphs/E coli graphs/optimizing_model_for_butanol_2.png" alt=" A graph showing the overexpression of the genes and the growth and butanol production resulting from the overexpression" width=800>
+						<p style="padding-top: 15px;">Figure 1: A graph showing the overexpression of the genes and the growth and butanol production resulting from the overexpression. Note that we have plotted hbd as a representative of the hbd, crt_2 and atoB reactions since they all have the same fluxes through them. CRT 1 is not shown as it does not directly participate in butanol synthesis. The selected data point has been pointed out. The flux values are as follows; hbd - 14, crt_1 - 12, crt_2 - 14, atoB - 14, cscK - 20, biomass - 0.136 , butanol flux - 2.</p>
+					</div>
+					<br>
 					<p>Out of the 12,005 expected data points, only 133 showed viable growth. We observed that the fluxes through the reactions of the genes hbd, crt_2, and atoB were the same whenever growth was observed, which is to be expected given that these fractions follow one after the other in the metabolic pathway. We set a cutoff of 60% for the biomass reaction and selected the datapoint showing the highest butanol production. This lead to the following flux distribution for the reactions to be overexpressed:</p>
 					<!-- Table -->
-					<div class="table">
+					<div class="table" style="padding-left: 5%;">
 						<!-- Headers -->
 						<div class="table1-row table-header">
 							<div class="cell">
@@ -327,22 +356,18 @@
 							</div>
 						</div>
 					</div>
+					<br>
 					<!-- END OF TABLE -->
-
 					<p>At this value of overexpression we observed a growth of 0.136 and butanol production of 2.</p>
-					<div class="graph">
-						<img >
-						<p style="padding-top: 15px;">Figure 1: A graph showing the overexpression of the genes and the growth and butanol production resulting from the overexpression. Note that we have plotted hbd as a representative of the hbd, crt_2 and atoB reactions since they all have the same fluxes through them. CRT 1 is not shown as it does not directly participate in butanol synthesis. The selected data point has been pointed out. The flux values are as follows; hbd - 14, crt_1 - 12, crt_2 - 14, atoB - 14, cscK - 20, biomass - 0.136 , butanol flux - 2.</p>
-					</div>
 					<p>The final model with the overexpression fluxes is available here <a>(Supplementary material)</a></p>
 					<br> <br>
 
 					<h2 class="h2">Flux Variability Analysis for Overexpression Targets</h2>
-					<p>We used flux variability analysis (FVA)<a>11</a> to find the range of possible fluxes through the reactions of the crt_1, crt_2, atoB, cscK genes and the butanol exchange reaction.</p>
+					<p>We used flux variability analysis (FVA)<a href="#ref11"><sup>11</sup></a> to find the range of possible fluxes through the reactions of the crt_1, crt_2, atoB, cscK genes and the butanol exchange reaction.</p>
 					<p>FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. The FVA for these reactions were performed in anaerobic conditions, when growth was set to 60% of its optimal value.</p>
 					<br>
 					<!-- Table -->
-					<div class="table">
+					<div class="table" style="padding-left: 5%;">
 						<!-- Headers -->
 						<div class="table1-row table-header">
 							<div class="cell">
@@ -432,12 +457,16 @@
 					<!-- END OF TABLE -->
 					<br>
 					<p>Thus we can see what optimal overexpression fluxes are required to maximize butanol yields, even when growth is not optimal.</p>
-					<br><br>
+					<a id="4"></a>
+					<br>
+					<!-- END OF MODELLING FOR BUTANOL -->
 
-					<h2 class="h2"> Results</h2>
+
+					<!-- RESULTS -->
+					<h1> Results</h1>
 					<h2 class="h3">Growth Rate v/s Sucrose</h2>
 					<div class="graph">
-						<img>
+						<img src="assets/Graphs/E coli graphs/growthratevsucrose.jpg" alt="A graph representing the relation between varying sucrose uptaek values and growth rates. We obsereve a linear relation between the two, where growth rate increases with increase in sucrose uptake value for both aerobic and anaerobic scenario. The aerobic system has a steeper rise " width =800>
 						<p>Fig 12: Relationship between sucrose uptake and growth rate.</p>
 					</div>
 					<br>
@@ -453,7 +482,7 @@
 					<h2 class="h3">Butanol Production vs Growth Rate</h2>
 					<p>The objective function was first set to maximize the growth rate of the model. Butanol production was then set as the objective function for different percentages of the optimal growth rate at a sucrose uptake rate of 10 mmol/gDW/h to obtain the theoretical maximum yield of butanol if E.coli were growing at X% of its optimal growth rate.</p>
 					<div class="graph">
-						<img>
+						<img src="assets/Graphs/E coli graphs/maxbutvgrowth.jpg" alt="A graph showing the relation between butanol production and growth rate. Growth rate decreases linearly with increase in butanol production, for both aerobic and anaerobic systems. The line for aerobic system has a steeper decline than the anaerobic system" width=800>
 						<p>Figure 3: Relationship between maximum butanol production and growth rate.</p>
 					</div>
 					<br>
@@ -464,14 +493,14 @@
 						<li style="padding-left: 1em;"> Optimal growth rate (100% on the graph) leads to zero butanol production in both aerobic and anaerobic conditions</li>
 					</ol>
 					<p><strong>Inferences: </strong></p>
-					<p style="padding-left: 10%;"> If E.coli grows at its optimal growth rate, butanol production is zero as would be expected, since it is a secondary metabolite that takes carbon flux away from the growth and has no role in the physiology of the cell as it is a heterologous compound in the E.coli metabolic network</p>
+					<p style="padding-left: 12%;"> If E.coli grows at its optimal growth rate, butanol production is zero as would be expected, since it is a secondary metabolite that takes carbon flux away from the growth and has no role in the physiology of the cell as it is a heterologous compound in the E.coli metabolic network</p>
 					<p style="padding-left: 12%;">As the growth rate is decreased from its optimal value, the maximal theoretical yield of butanol increases implying that carbon flux is rerouted to the butanol producing pathway in the network.</p>
-					<p style="padding-left: 12%;"> This confirms that the butanol production pathway in the model is functional. Butanol production happens under anaerobic or microaerobic conditions10. We wanted to thus test the effect of oxygenation on butanol production in the model, and as expected found that butanol production was significantly higher in anaerobic conditions as compared to aerobic conditions at all growth rates.</p>
+					<p style="padding-left: 12%;"> This confirms that the butanol production pathway in the model is functional. Butanol production happens under anaerobic or microaerobic conditions<a href="#ref10"><sup>10</sup></a>. We wanted to thus test the effect of oxygenation on butanol production in the model, and as expected found that butanol production was significantly higher in anaerobic conditions as compared to aerobic conditions at all growth rates.</p>
 					<br><br><br>
 
 					<h2 class="h3">Butanol Production vs Sucrose Uptake</h2>
 					<div class="graph">
-						<img>
+						<img src="assets/Graphs/E coli graphs/butanolvsucrose.jpg", alt="A grpah depicting the relation between the maximum butanol production given a sucrose uptaek rate. We observe a linear pattern with the max butanol production increasing with increase in sucrose uptake values for both aerobic and anaerobic systems. The anaerobic line has a steeper rise." width=800>
 						<p>Figure 4: Relationship between maximum butanol production and sucrose uptake when growth is 60% of its optimal value</p>
 					</div>
 					<br>
@@ -487,7 +516,7 @@
 					<h2 class="h3">Butanol Production vs Oxygen Uptake</h2>
 					<p>Our co-culture modelling results indicated that butanol production in the co-culture is optimum i microaerobic conditions as compared to anaerobic conditions and we wanted to test whether that would hold true for a monoculture as well, by testing the maximum butanol production at varying oxygen uptake rates, when growth was set to 60% of the optimal value</p>
 					<div class="graph">
-						<img>
+						<img src="assets/Graphs/E coli graphs/butanolvoxygen.jpg" alt="A graph depicting the relation between butanol production and oxygen uptaek rates. We observe a linear relation between the two, where as the oxygen uptaek value increases, the butanol production value decreases" width=800>
 						<p>Figure 5: Relationship between maximum butanol production and oxygen uptake when growth is 60% of its optimal value</p>
 					</div>
 					<br>
@@ -500,18 +529,18 @@
 					<br><br><br>
 
 					<h2 class="h2">Side Products</h2>
-					<p>Abdelaal el. al<a>2</a> observed pyruvate, ethanol and butyrate to be the major side products in the KJK01 butanol producing strain, which divert flux away from the butanol production pathway and reduce yields. Pyruvate was the major side product which indicated a redox imbalance, while ethanol was produced in equal quantities even after the deletion of the endogenous alcohol dehydrogenase gene (adhE).</p>
-					<p>We wanted to estimate the maximal side product formation at different growth levels in anaerobic and aerobic conditions and see whether our results matched with those reported by Abdelaal el. al<a>2</a>.</p>
-					<p>We used flux variability analysis (FVA)<a>11</a> to find the maximum possible fluxes through the side product reactions under a growth rate constraint. FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. For example, it can be used to find the minimum and maximum fluxes for a reaction such that X% of the optimal growth rate is maintained.</p>
+					<p>Abdelaal el. al<a href="#ref3"><sup>3</sup></a> observed pyruvate, ethanol and butyrate to be the major side products in the KJK01 butanol producing strain, which divert flux away from the butanol production pathway and reduce yields. Pyruvate was the major side product which indicated a redox imbalance, while ethanol was produced in equal quantities even after the deletion of the endogenous alcohol dehydrogenase gene (adhE).</p>
+					<p>We wanted to estimate the maximal side product formation at different growth levels in anaerobic and aerobic conditions and see whether our results matched with those reported by Abdelaal el. al<a href="#ref3"><sup>3</sup></a>.</p>
+					<p>We used flux variability analysis (FVA)<a href="#ref11"><sup>11</sup></a> to find the maximum possible fluxes through the side product reactions under a growth rate constraint. FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. For example, it can be used to find the minimum and maximum fluxes for a reaction such that X% of the optimal growth rate is maintained.</p>
 					<p>We obtained the optimal growth rates for aerobic and anaerobic conditions and for a particular percentage of that growth rate, FVA was performed for the exchange reactions of butanol, ethanol, pyruvate, butyrate and sucrose uptake to find the maximal fluxes through those reactions. The minimum fluxes for these reactions will be zero since all the carbon flux will be directed toward growth.</p>
 					<br>
 					<div class="graph">
-						<img>
+						<img src="assets/Graphs/E coli graphs/sideproductsanaerobicblack.jpg" alt="" width=800>
 						<p>Fig 13: Maximal side product formation as a function of growth in anaerobic conditions</p>
 					</div>
-					<br>
+					<br><br>
 					<div class="graph">
-						<img>
+						<img src="assets/Graphs/E coli graphs/sideproductsaerobicblack.jpg" alt="" width=800>
 						<p>Fig 14: Maximal side product formation as a function of growth in aerobic conditions</p>
 					</div>
 					<br>
@@ -522,12 +551,14 @@
 						<li style="padding-left: 1em;"> Sucrose consumption in both anaerobic and aerobic conditions is quite similar</li>
 					</ol>
 					<p><strong>Inferences</strong></p>
-					<p style="padding-left: 12%;">Consistent with the observations of Abdelaal el. al<a>3</a>, pyruvate was a major byproduct which indicates a redox imbalance in the network. Ethanol was zero, which is to be expected since there is only one gene (adhE) that produces ethanol from acetyl-coA, whose flux we set to zero to duplicate the KJK01 strain knockout of adhE. Given that the flux through pyruvate and butyrate production is equal or greater than that of butanol, these present alternate possible targets to increase butanol production</p>
-					<br><br><br>
+					<p style="padding-left: 12%;">Consistent with the observations of Abdelaal el. al<a href="#ref3"><sup>3</sup></a>, pyruvate was a major byproduct which indicates a redox imbalance in the network. Ethanol was zero, which is to be expected since there is only one gene (adhE) that produces ethanol from acetyl-coA, whose flux we set to zero to duplicate the KJK01 strain knockout of adhE. Given that the flux through pyruvate and butyrate production is equal or greater than that of butanol, these present alternate possible targets to increase butanol production</p>
+					<a id="5"></a>
+					<br>
+					<!-- END OF RESULTS -->
 
 
-
-					<h2 class="h2">OptKnock</h2>
+					<!-- OptKnock -->
+					<h1>OptKnock</h1>
 					<p>We ran OptKnock on our base model without the knockouts but with the overexpressions to identify the possible knockouts that could help increase butanol production. Our constructed model had 4 knockouts, so for OptKnock, we set the total number of knockouts to 5. Since the metabolic pathway for butanol production is linked to the TCA cycle in E. coli, we decided to look for knockouts in this cycle. Thus, we looked for knockouts in the glycolytic pathway plus the TCA cycle. We were hoping to find the same deletions as in our constructed model, plus some additional ones. We selected the top 5 knockouts. The results are summarized in the table below</p>
 					<br>					
 					<!-- Table -->
@@ -647,30 +678,35 @@
 					<!-- END OF TABLE -->
 					<br><br>
 					<p>We observed that all the deletions (except ‘ACLD19’) we made in our constructed model showed up in some or the other combination of the OptKnock results. We observed a growth rate of 0.17 and butanol production of 18.6 in our suggested deletions. Furthermore, D-lactate dehydrogenase (LDH_D) and Triose-phosphate isomerase (TPI) were suggested in all the top 5 OptKnock deletions. While the suggested reactions have been knocked out in our constructed model, TPI is a new deletion suggested by OptKnock. TPI catalyzes the conversion of Dihydroxyacetone phosphate (DHAP) to 3-Phosphoglyceraldehyde (PGAL). It isn’t clear how this helps in butanol production yet. Experimental validation might be needed.</p>
-					<br><br><br>
+					<a id="6"></a>
+					<br>
+					<!-- END OF OPTKNOCK -->
 
-
-
-					<h2 class="h2">FSEOF</h2>
+					<!-- FSEOF -->
+					<h1>FSEOF</h1>
 					<p>We ran FSEOF on our constructed model without the overexpressions to identify reactions whose fluxes increased with increase in the enforced flux through the butanol exchange reactions. The fluxes through a total of 65 reactions showed a strict increase with increase in enforced butanol flux. Some of the reactions showing large increase in flux include proton transfer, CO2 exchange, etc. but also reactions of genes like pyruvate dehydrogenase, pyruvate kinase, Acyl-CoA dehydrogenase, 3-hydroxyacylCoA dehydratase, 3-hydroxyacylCoA dehydrogenase. Apart from the transport and exchange reactions of butanol, we did not observe any increase in flux in the reactions added by us. The full list of reactions is available </p>
-					<br><br><br>
+					<a id ="7"></a>
+
+					<br><a id="ref1"></a><br><a id="ref2"></a><br><a id="ref3"></a><br>
+					<!-- END OF FSEOF -->
 
 
+					<!-- REFRENCES-->
 					<h2 class="h2">References</h2>
 					<ol class="a">
-						<li style="padding-left: 1em;"> King, Z. A., Lu, J., Dräger, A., Miller, P., Federowicz, S., Lerman, J. A., ... & Lewis, N. E. (2016). BiGG Models: A platform for integrating, standardizing and sharing genome-scale models. Nucleic acids research, 44(D1), D515-D522.</li>
-						<li style="padding-left: 1em;"> Gurobi Optimization, L.. (2021). Gurobi Optimizer Reference Manual.</li>
-						<li style="padding-left: 1em;"> Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
-						<li style="padding-left: 1em;"> Keseler, I. M., Collado-Vides, J., Santos-Zavaleta, A., Peralta-Gil, M., Gama-Castro, S., Muñiz-Rascado, L., ... & Karp, P. D. (2010). EcoCyc: a comprehensive database of Escherichia coli biology. Nucleic acids research, 39(suppl_1), D583-D590.</li>
-						<li style="padding-left: 1em;"> Caspi, R., Altman, T., Billington, R., Dreher, K., Foerster, H., Fulcher, C. A., ... & Karp, P. D. (2014). The MetaCyc database of metabolic pathways and enzymes and the BioCyc collection of Pathway/Genome Databases. Nucleic acids research, 42(D1), D459-D471.</li>
-						<li style="padding-left: 1em;"> Kanehisa, M., & Goto, S. (2000). KEGG: kyoto encyclopedia of genes and genomes. Nucleic acids research, 28(1), 27-30.</li>
-						<li style="padding-left: 1em;"> Kanehisa, M. (2019). Toward understanding the origin and evolution of cellular organisms. Protein Science, 28(11), 1947-1951.</li>
-						<li style="padding-left: 1em;"> Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., & Tanabe, M. (2021). KEGG: integrating viruses and cellular organisms. Nucleic acids research, 49(D1), D545-D551.</li>
+						<li style="padding-left: 1em;" id="ref4"> King, Z. A., Lu, J., Dräger, A., Miller, P., Federowicz, S., Lerman, J. A., ... & Lewis, N. E. (2016). BiGG Models: A platform for integrating, standardizing and sharing genome-scale models. Nucleic acids research, 44(D1), D515-D522.</li>
+						<li style="padding-left: 1em;" id="ref5"> Gurobi Optimization, L.. (2021). Gurobi Optimizer Reference Manual.</li>
+						<li style="padding-left: 1em;" id="ref6"> Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
+						<li style="padding-left: 1em;" id="ref7"> Keseler, I. M., Collado-Vides, J., Santos-Zavaleta, A., Peralta-Gil, M., Gama-Castro, S., Muñiz-Rascado, L., ... & Karp, P. D. (2010). EcoCyc: a comprehensive database of Escherichia coli biology. Nucleic acids research, 39(suppl_1), D583-D590.</li>
+						<li style="padding-left: 1em;" id="ref8"> Caspi, R., Altman, T., Billington, R., Dreher, K., Foerster, H., Fulcher, C. A., ... & Karp, P. D. (2014). The MetaCyc database of metabolic pathways and enzymes and the BioCyc collection of Pathway/Genome Databases. Nucleic acids research, 42(D1), D459-D471.</li>
+						<li style="padding-left: 1em;" id="ref9"> Kanehisa, M., & Goto, S. (2000). KEGG: kyoto encyclopedia of genes and genomes. Nucleic acids research, 28(1), 27-30.</li>
+						<li style="padding-left: 1em;" id="ref10"> Kanehisa, M. (2019). Toward understanding the origin and evolution of cellular organisms. Protein Science, 28(11), 1947-1951.</li>
+						<li style="padding-left: 1em;" id="ref11"> Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., & Tanabe, M. (2021). KEGG: integrating viruses and cellular organisms. Nucleic acids research, 49(D1), D545-D551.</li>
 						<li style="padding-left: 1em;"> Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001-1010.</li>
 						<li style="padding-left: 1em;"> Wu, P., Wang, G., Wang, G., Børresen, B. T., Liu, H., & Zhang, J. (2016). Butanol production under microaerobic conditions with a symbiotic system of Clostridium acetobutylicum and Bacillus cereus. Microbial cell factories, 15(1), 1-11.</li>						
 						<li style="padding-left: 1em;"> Mahadevan, R., & Schilling, C. H. (2003). The effects of alternate optimal solutions in constraint-based genome-scale metabolic models. Metabolic engineering, 5(4), 264-276.</li>
 					</ol>
-
+					<!-- END OF REFERECNES -->
 				</div>
 			</div>
 
@@ -783,94 +819,104 @@
 	<!-- MAKE SURE YOU CHANGE THE NUMBER OF DIVISIONS -->
 	<script>
 		
-			$(document).ready(function() {
-				$(window).scroll(function() {
-					var scroll_top = $(window).scrollTop();
-					var div_one_top = $("#1").offset().top;
-					var div_two_top = $("#2").offset().top;
-					var div_three_top = $("#3").offset().top;
-					var div_four_top = $("#4").offset().top;
-					var div_five_top = $("#5").offset().top;
-					var div_six_top = $("#6").offset().top;
-	
-					if (scroll_top > div_one_top && scroll_top < div_two_top) {
-						//Division 1
-						if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-							$('a[href="#1"]').addClass('sidenav-active');
-						}
-	
-						if ($('a[href="#2"]').hasClass('sidenav-active')) {
-							$('a[href="#2"]').removeClass('sidenav-active');
-						}
-	
-					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-						// Division 2
-						if ($('a[href="#1"]').hasClass('sidenav-active')) {
-							$('a[href="#1"]').removeClass('sidenav-active');
-						}
-	
-						if ($('a[href="#3"]').hasClass('sidenav-active')) {
-							$('a[href="#3"]').removeClass('sidenav-active');
-						}
-	
-						if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-							$('a[href="#2"]').addClass('sidenav-active');
-						}
-					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-						//Division 3
-						if ($('a[href="#2"]').hasClass('sidenav-active')) {
-							$('a[href="#2"]').removeClass('sidenav-active');
-						}
-	
-						if ($('a[href="#4"]').hasClass('sidenav-active')) {
-							$('a[href="#4"]').removeClass('sidenav-active');
-						} 
-	
-						if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-							$('a[href="#3"]').addClass('sidenav-active');
-						}
-					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-						// You are in div 4
-						if ($('a[href="#3"]').hasClass('sidenav-active')) {
-							$('a[href="#3"]').removeClass('sidenav-active');
-						}
-	
-						if ($('a[href="#5"]').hasClass('sidenav-active')) {
-							$('a[href="#5"]').removeClass('sidenav-active');
-						} 
-	
-						if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-							$('a[href="#4"]').addClass('sidenav-active');
-						}
-					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-						// You are in div 5
-						if ($('a[href="#4"]').hasClass('sidenav-active')) {
-							$('a[href="#4"]').removeClass('sidenav-active');
-						}
-	
-						if ($('a[href="#6"]').hasClass('sidenav-active')) {
-							$('a[href="#6"]').removeClass('sidenav-active');
-						} 
-	
-						if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-							$('a[href="#5"]').addClass('sidenav-active');
-						}
-					} else if (scroll_top > div_six_top)
-						// You are in div 6
-						if ($('a[href="#5"]').hasClass('sidenav-active')) {
-							$('a[href="#5"]').removeClass('sidenav-active');
-						}
-	
-						if ($('a[href="#7"]').hasClass('sidenav-active')) {
-							$('a[href="#7"]').removeClass('sidenav-active');
-						} 
-	
-						if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-							$('a[href="#6"]').addClass('sidenav-active');
-						}
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var scroll_top = $(window).scrollTop();
+				var div_one_top = $("#1").offset().top;
+				var div_two_top = $("#2").offset().top;
+				var div_three_top = $("#3").offset().top;
+				var div_four_top = $("#4").offset().top;
+				var div_five_top = $("#5").offset().top;
+				var div_six_top = $("#6").offset().top;
+				var div_seven_top = $("#7").offset().top;
+
+				if (scroll_top > div_one_top && scroll_top < div_two_top) {
+					//Division 1
+					if (!$('a[href="#1"]').hasClass('sidenav-active')) {
+						$('a[href="#1"]').addClass('sidenav-active');
 					}
-				});
+
+					if ($('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').removeClass('sidenav-active');
+					}
+
+				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+					// Division 2
+					if ($('a[href="#1"]').hasClass('sidenav-active')) {
+						$('a[href="#1"]').removeClass('sidenav-active');
+					}
+
+					if ($('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').removeClass('sidenav-active');
+					}
+
+					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+					//Division 3
+					if ($('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').removeClass('sidenav-active');
+					}
+
+					if ($('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').removeClass('sidenav-active');
+					} 
+
+					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+					// You are in div 4
+					if ($('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').removeClass('sidenav-active');
+					}
+
+					if ($('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').removeClass('sidenav-active');
+					} 
+
+					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+					// You are in div 5
+					if ($('a[href="#4"]').hasClass('sidenav-active')) {
+						$('a[href="#4"]').removeClass('sidenav-active');
+					}
+
+					if ($('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').removeClass('sidenav-active');
+					} 
+
+					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+					// You are in div 6
+					if ($('a[href="#5"]').hasClass('sidenav-active')) {
+						$('a[href="#5"]').removeClass('sidenav-active');
+					}
+
+					if ($('a[href="#7"]').hasClass('sidenav-active')) {
+						$('a[href="#7"]').removeClass('sidenav-active');
+					} 
+
+					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').addClass('sidenav-active');
+					}
+				} else if (scroll_top > div_seven_top) {
+					// You are in div 7
+					if ($('a[href="#6"]').hasClass('sidenav-active')) {
+						$('a[href="#6"]').removeClass('sidenav-active');
+					}
+
+					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
+						$('a[href="#7"]').addClass('sidenav-active');
+					}
+				}
 			});
-			
+		});
+		
 	</script>
 </body>
