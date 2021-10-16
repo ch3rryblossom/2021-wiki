@@ -1,9 +1,9 @@
-*{
-	font-family: ProximaNova;
+/* *{
+	font-family: ProximaNova !important
 }
 .section-1 h1{
-	font-family: LemonMilk;
-}
+	font-family: LemonMilk !important
+} */
 @font-face {
 	font-family: 'LemonMilk';
 	src: url(../assets/fonts/LEMONMILK-Regular.otf);
