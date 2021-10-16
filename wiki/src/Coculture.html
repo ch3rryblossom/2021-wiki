@@ -242,7 +242,7 @@
             </div>
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
-                <div class="content">
+                < class="content">
                     <h1 id="1">Introduction</h1>
                     <hr><br>
 		    <p>
@@ -319,7 +319,9 @@
 </div>
 <br>
 		    <p>Results: Apart from sucrose, two other metabolites that were required to be given out by one organism and taken in by the other to grow optimally were carbon dioxide and oxygen. Carbon dioxide is given out by E coli and taken in by the cyanobacteria and is already an integral patt of the production process acting as the main carbon source for the entire process. Oxygen given out by the cyanobacteria could act as an important source for e coli, who prefer aerobic conditions for growth. </p>
-		 <br>
+		 <p>Apart from these, there were other metabolites such as sulfate, magnesium, phosphate, etc that both bacteria require to be supplied in the medium. This would imply that a shortage of these nutrients could lead to competition between the two species and de-stability of the co culture. 
+		</p>
+		    <br>
 		 <h3>Varying sucrose productivity of the cyanobacteria</h3>  
 		 <br>
 		 <p>Hypothesis: Increasing sucrose productivity of cyanobacteria will result in the increase of butanol yield from the co culture.</p> 
@@ -338,7 +340,7 @@
 		 As the sucrose productivity of cyanobacteria increases:
 		 <ol class="a">
 			<li style="padding-left:1em;padding-top: 0.3em;">The max growth rate of the co culture comes down.</li>
-			<li style="padding-left:1em;padding-top: 0.3em;">The relative abundance of E coli in the co culture goes up and that of the cyanobacteria comes down</li>
+			<li style="padding-left:1em;padding-top: 0.3em;">The relative abundance of the cyanobacteria in the co culture goes down and that of the E coli goes up.</li>
 			<li style="padding-left:1em;padding-top: 0.3em;">The butanol produced per gDW of the co culture initially increases but after an optimal value of sucrose, it comes down
 			</li>
 		</ol>
@@ -394,7 +396,7 @@
 			<p>However at very low oxygen levels, close to anaerobic conditions:</p>
 			<ol class="a">
 				<li style="padding-left:1em;padding-top: 0.3em;">The E coli cannot grow at low sucrose productivity of the cyanobacteria, including the current productivity predicted by our salt stress</li>
-				<li style="padding-left:1em;padding-top: 0.3em;">For sucrose productivity in the range ____, the butanol yields do not change much with a further decrease in oxygen levels</li>
+				<li style="padding-left:1em;padding-top: 0.3em;">For sucrose productivity in the range 0.3 - 0.5 mmol/hr/gDW, the butanol yields do not change much with a further decrease in oxygen levels</li>
 			</ol>
 			<ol class="a">
 				<li style="padding-left:1em;padding-top: 0.3em;"></li>
@@ -410,6 +412,8 @@
 			</p>
 			<h3>Increasing CO2 uptake rate of cyanobacteria</h3><br>
 			<p>Hypothesis: Increasing the Co2 uptake efficiency of cyanobacteria will increase the butanol yield of the co culture.</p>
+			<p>In a meeting with Dr Malathy, Dr. Dube and Dr. Lobo, we were told to look into increasing the Co2 uptake efficiency of the cyanobacteria from a perspective of making our production process gaining advantage over others and interesting stakeholders. We decided to model the effect of this on the butanol yield as well. We expected that if CO2 uptake efficiency increases, cyanobacteria biomass and sucrose would be produced at a higher rate, resulting in butanol being produced at a higher rate as well. This was done by increasing the max Co2 allowed for the cyanobacteria to take in per hour.
+			</p>
 			<br>
 			<!-- SLIDER 6 -->
 			<div class="rangeImage" id="rangeImage6"></div><br><br>
@@ -419,6 +423,18 @@
 			<div class="rangeOutput" id="rangeValue6"></div><div class="rangeOutput">Sucrose Productivity</div><br>   
 			<br><h4>Image description:
 			<b><div id="ImageDesc6"></div></h4></b><br><br>
+			<p>Observations:
+				<ol class="a">
+					<li style="padding-left:1em;padding-top: 0.3em;">As the Co2 uptake rate of the cyanobacteria is increased, the butanol yield of the co culture given in mmol/h/gDW increases</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">The co culture is stable at much higher rates of sucrose productivity of cyanobacteria
+					</li>
+				</ol>
+			</p>
+			<p>
+				Conclusion: <br>
+Increasing the Co2 uptake efficiency of cyanobacteria will result not only in more Co2 being captured by the co culture every hour, it will also increase the butanol being produced per hour by the co culture. This is as a higher CO2 uptake rate would result in a higher sucrose productivity (as is also predicted from FBA and MOMA) which would naturally result in an increased butanol yield.
+
+			</p>
 			<br>
 			<h1 id="3">Dynamic Modelling</h1><hr><br>
 			<h3>Varying sucrose productivity of the cyanobacteria
@@ -481,10 +497,31 @@
 				</ol>
 			</p>
 			<h1 id="4">Appendix</h1><hr><br>
-			<h3>Forcing out Butanol </h3><br>
-			<p>So how to force out butanol? It was suggested to us that we could just set relevant lower bounds for butanol (for eg st growth rate is 60% of maximum) similar to how it is done in FBA.<br><br>Method 1: Explain the steps involved. Say that now even though butanol is produced, the GR max for each sucrose output value is the same. Instead the e coli has brought down its biomass abundance in the co culture such that now it can take up more sucrose per gram dry weight such that it can match the cyano growth rate while producing butanol as well. This means that assuming a steady state condition, the GR max is controlled by the cyanobacteria and is mainly a function of the CO2 uptake rate and the sucrose production rate.<br><br>This also means that now we’re not simulating e coli growing at the previously set percentage of optimum butanol again, since it's taking up more sucrose. We can calculate at what percentage of max growth it is growing by once again comparing with FBA. <br></p>
+			<h3>Simulating IPTG Induction for the production of Butanol</h3><br>
+			<p>
+				Similar to how it was done in FBA, IPTG was induced by setting a bound for E coli to grow at a certain percentage of its optimal growth rate and diverting flux through the butanol production pathway. However due to the nature of the SteadCom algorithm, this is not as simple to do as in FBA. One cannot optimize for butanol within steadycom as the objective function is set to be the community growth rate, and further the sucrose intake by E coli, on which the optimal growth rate depends, varies. The method we used to overcome the problem was the following:
+				<ol class="a">
+					<li style="padding-left:1em;padding-top: 0.3em;">SteadyCom is run on the joint model while simulating salt stress but not IPTG. The butanol production in this case is usually 0 as growth is being optimized</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Sucrose intake by the E coli per gDW from the SteadyCom result is used as the lower bound for an FBA with the E coli model</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Growth rate is set to a percent of optimal at this level of sucrose intake and butanol is optimized for using FBA
+					</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Butanol flux gotten from FBA in this manner is set as a lower bound in the joint model and SteadyCom is run once again
+					</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">This would lead to the production of butanol even though community growth rate is still being optimized for
+					</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">The true percent of optimal growth rate the E coli is growing at can be found by comparing the results from the final SteadyCom run to FBA
+					</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">This can be done at different percentages of optimal growth (relating inversely to butanol productivity) as well as different levels of sucrose productivity, oxygen, etc.
+					</li>
+				</ol>
+			</p>
 			<h3>Detailed explanation for optimal sucrose productivity</h3><br>
-			<p>For high values of sucrose productivity, the max growth rate values are very low. This is because the cyanobacteria cannot grow fast while producing so much sucrose per gDW. In turn, due to steady state conditions, the E coli too cannot grow at a high growth rate. In reality, if the e coli do grow at a high growth rate, they will quickly deplete the sucrose in the medium. Hence to maintain a steady state at higher values of sucrose productivity, the biomass of the E coli in the co culture has to be higher so that per gDW of E coli, there is not much sucrose available and the E coli is constrained to grow at a lower growth rate. This also makes sense biologically, initially the E coli will grow fast and deplete the sucrose until it has to slow its growth rate down, but at this point it will have a high biomass abundance already. <br>This means that as sucrose productivity increases the actual butanol produced per gDW of E coli is decreasing, but its relative biomass in the co culture is increasing. These two competing effects lead to an optimum of sucrose productivity for the butanol productivity per gDW of the co culture. </p>
+			<p>For high values of sucrose productivity, the max specific growth rate values of the co culture are low. This is as the cyanobacteria cannot grow fast while producing high amounts of sucrose per gDW. In turn, due to the steady state conditions, the E coli is also constrained to grow at a low growth rate. (In reality, if the E coli do grow at a higher growth rate, they will quickly deplete the sucrose in the medium.) To maintain this condition, the relative abundance of the E coli in the co culture must be higher such that per gDW of E coli, there is not much sucrose available and the E coli is constrained to grow at a lower growth rate. <br>
+				This makes sense biologically as well. Initially the E coli will grow fast and deplete the sucrose until it has to slow its growth rate down, but this results in it having a high abundance at steady state.<br><br>
+				As sucrose productivity increases the actual butanol produced per gDW of E coli is decreasing, but its relative biomass in the co culture is increasing. These two competing effects lead to an optimum of sucrose productivity for the butanol productivity per gDW of the co culture. <br><br>
+			</p>
+			<h3>Allowing Oxygen into the Co culture</h3><br>
+			<p>The two following graphs show net oxygen flux per gDW of the co culture in two different conditions. The first allows only exchange of oxygen between the two species but extra oxygen is not allowed from the environment. The second allows both exchange of oxygen as well as for the E coli to take up more oxygen from the environment if it requires as well. </p>
 		    <br><br>
 		    <br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
                     
