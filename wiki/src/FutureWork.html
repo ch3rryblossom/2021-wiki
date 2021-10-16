@@ -158,73 +158,48 @@
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <h1 id="1"><i>E Coli</i></h1>
+                    <hr><br><br>
+		 <h3>Bidirectional Promoter Characterization</h3>   
+		    <br>
+		<p>We plan to characterize the native bidirectional promoter of the csc operon which we submitted as the part <a href="">BBa_K3971006</a>. Since the cscK and cscB genes are transcribed from the opposite strand to cscA, a bidirectional promoter jointly regulates both sets of genes in the operon. We will characterize the activity of the promoter using fluorescent reporters (a yellow and blue fluorescent protein) which flank the promoter and their relative fluorescence will inform us about the strength of transcription in both directions. The characterization cassette for the promoter has been submitted as the composite part _.<br> Characterization of this promoter will allow us to experiment with other promoters based on the results and potentially increase sucrose consumption and consequently increase growth rate and butanol yields.</p>	
+		    <br>
+                    <h3>Genetic engineering based on modeling results</h3><br>
+		    		<p>Our dry lab team used OptKnock and flux scanning based on enforced objective flux (FSEOF) in order to identify potential candidate genes and reactions to target in order to increase sucrose and butanol yields. In the future, we aim to perform these modifications in the lab and hope to optimize the co-culture and final yields to make the process industrially viable.</p>
                     <br>
+		    <h3>Increasing butanol tolerance</h3>
+		    <p></p>
 
 
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
-
-                    <h1 id="2">Section 2</h1>
+                    <h1 id="2"><i>
+			S. elongatus
+			</i></h1>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+		    <br>
+		    <h3>Characterising native promoters</h3>
+		    <h3>I) Construct assembly</h3><br>
+                    <p>We have shortlisted the native promoters - PcpcB-m6, PpsbA2 and PpsbA3 along with the well-characterised J23119 promoter (from the iGEM kit) and the lacUV5 promoter used by Dr Pakrasi’s lab as standard reference promoters.<br><br>
+			We intend to incorporate a promoter into a cassette upstream of the fluorescent reporter sYFP2 and a terminator. This cassette is itself flanked by two sequences NS1A and NS1B (reference construct __) which are homologous to the first genomic neutral site of <i>Synechococcus elongatus</i> UTEX 2973, intended for homology-directed repair. We will prepare this composite part via extension and overlap PCR using primers we have designed. This part will be integrated into the pSL2680 plasmid. Note that the promoter will be flanked by restriction sites, allowing us to excise and replace it with other promoters without repeating the complicated assembly step.<br><br>
+			On the other side of the plasmid is the gene <i>Cpf</i>1 coding for the Cas12a enzyme. Downstream on the gene are various spacers, and a <i>lacZ</i> cassette, flanked by <i>Aar</i>1 restriction sites. We will synthesise a short stretch of DNA (via overlap PCR of two oligos) to bind to a protospacer in NS1 of the genome. This sequence will be introduced into the plasmid in place of the <i>lacZ</i> cassette, and will allow for a CRISPR-Cas12a-mediated targeted break of the genomic DNA. The homology arms NS1A and B will then allow for HDR of the genome to include our composite part.<br><br>
+			A very similar principle applies to the overexpression of native sps and spp genes (previous work has expressed sps and spp genes from <i>Synechocystis</i> PCC 6803 in <i>Synechococcus elongatus</i> UTEX 2973). These genes will be incorporated into the ____ plasmid, which already contains homology arms for neutral site 3 of the <i>S. elongatus</i> genome. 
+		</p>
+		<h3>II) Triparental Mating</h3><br>
+		<p>   The UTEX 2973 strain is unfortunately not naturally transformable, posing a challenge to genetic engineering work. To characterise the promoters and <i>sps</i> and <i>spp</i>, we will need to introduce the plasmids via conjugation from <i>E. coli</i> DH5&#945;. The plasmids of interest - pSL2680 and _____ - will be transformed into this strain, which will then undergo <b>Kanamycin screening</b> and <b>blue-white screening</b> to select for <i>transformants</i> with <i>lacZ</i> replaced.<br><br> 
+			For biosecurity reasons, DH5&#945; is typically not capable of forming a conjugation pilus. It thus needs to acquire an F-plasmid from a helper strain (for this purpose, we will use <i>E. coli</i> HB101). This will carry not only the F-plasmid, but also other helper and mobiliser plasmids (pRL443  and pRL623) needed for safe conjugative transfer of pSL2680 and ___ (our plasmids of interest) into UTEX 2973.
+		</p>
                     <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
-
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+		    <h3>III) Fluorescence-based characterisation</h3><br>
+		    		<p>We will grow the cyanobacteria at different light intensities (100-1500 microeinsteins) and different carbon dioxide concentrations (0.04%-5%). Under each such pair of conditions, we will characterise the promoter activity by measuring the fluorescence of sYFP.  We will also simulate a day-night cycle,  in accordance with the cyanobacteria’s natural circadian rhythm, to see if it impacts the sustainability and stability of (i) the axenic culture and its sucrose production and (ii) the co-culture and its butanol production. This is of particular interest in the case of PpsbAII and PpsbAIII, which are promoters associated with the circadian rhythm. We will select a promoter yielding optimum performance and use it to express <i>cscB</i> in UTEX 2973.</p>
+				    <br>
+		<h3>Sucrose Assay</h3><br>
+		<p> We will use Megazyme’s sucrose assay kit to quantify the concentration of sucrose in supernatant samples of our axenic cultures and our co-culture. By taking serial measurements using this colorimeteric assay, we can estimate the increase in sucrose production with time in a cyanobacterial culture (UTEX 2793-<i>cscB</i>).<br><br>
+			The same procedure can be repeated to assay for sucrose consumption in an E. coli culture, in which sucrose is initially added to a culture of <i>E. coli</i> without any other carbon source, and serial measurements of sucrose in the supernatant are taken.<br><br>
+			This experiment is performed with small volumes of each supernatant in a 96-well plate and its reader. This is necessary as the controls and standards associated are also numerous. (If you do the experiment in triplicate, you will have 6 samples for each reading - i.e, 2x3 including the controls).
+		</p>  
+		<h3>Characterising O2 evolution by cyanobacteria using redox indicators </h3><br>
+		<p>Since anaerobic conditions are vital for maximizing butanol yields, we also aim to monitor oxygen levels in the culture to ensure that the cultures are as close to anaerobic as possible, given the oxygen evolution by cyanobacteria which might make the culture microaerobic. To do this we plan to either use The Oxoid Anaerobic Indicator by ThermoFischer Scientific. It consists of a redox indicator solution in a laminated foil envelope that turns white from red under anaerobic conditions. We initially considered other redox indicators such as resazurin, however based on inputs from our mentors we chose the Oxoid indicator, given that resazurin was unlikely to work under microaerobic conditions and required highly anaerobic conditions.<br>
+			The results of this experiment will also inform us of the need to use oxygen scavengers such as ascorbic acid in order to main near anaerobic conditions in the culture. 
+			</p>              
                     <br>
 				</div>
 			</div>
