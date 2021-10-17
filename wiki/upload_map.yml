@@ -765,6 +765,10 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png
     md5: 07f346967c54232d1442589927c8f7dd
     upload_filename: T--IISER-Pune-India--Logos--linkedin_logo.png
+  assets\collabs\Aiim1.png:
+    link_URL: https://2021.igem.org/wiki/images/c/c1/T--IISER-Pune-India--collabs--Aiim1.png
+    md5: 604105f89e93e05ae1803f97019312f4
+    upload_filename: T--IISER-Pune-India--collabs--Aiim1.png
   assets\fonts\FSEX300.ttf:
     link_URL: https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf
     md5: 9de66fe4842edf59e46e15c90e686087
@@ -812,7 +816,7 @@ assets:
 css:
   css\DryLabPage.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css
-    md5: 3c69df1510f61703da41151296dcd364
+    md5: 3879cba434499516d6068b4ea367e667
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
     md5: 1c2ce3aabf96bdb06e53b2a1069351a9
@@ -840,7 +844,7 @@ html:
     md5: 69fb6ad08c8e2bc1607b902c30efdd79
   Collaborations.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Collaborations
-    md5: 88faae8b7e2e9355d4a4cb300cf279d4
+    md5: 62a3734d2a35af27256c5fdfe9ff5c89
   Communication.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Communication
     md5: d37a2d7295c33e0e87762866b426a294
@@ -864,7 +868,7 @@ html:
     md5: 9df79277b713034dc6dc5d83a16545fb
   DryLabOverview.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview
-    md5: 88239b91b189a9f6de684ad6dff95d93
+    md5: 3d8a053b68de214bd1be9ff6892b3966
   EColi.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
     md5: 39aab113583460365319ddb4f120ad00
@@ -894,7 +898,7 @@ html:
     md5: 02f9839fceaf45e95ed9cb448874a428
   Model.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Model
-    md5: f91e3019371dae2d7c475686e8c7d09b
+    md5: 88239b91b189a9f6de684ad6dff95d93
   Notebook.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Notebook
     md5: 065664a5ae50d2d1172fc9dfd87c0454
