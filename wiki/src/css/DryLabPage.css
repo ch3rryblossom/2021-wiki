@@ -49,9 +49,9 @@ ul.d{
     margin-left: 5%;
     padding-right: 5%;
 }
-.h2{
-    font-size: 30;
+h2.h2{
+    font-size: 60;
 }
-.h3{
+h2.h3{
     font-size: 20;
 }

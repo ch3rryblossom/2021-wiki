@@ -259,7 +259,7 @@ html {
     z-index: -1;
 }
 .content a:hover {
-    color: #fff;
+    color: #000;
 }
 .content a:hover:after {
     right: 0;
