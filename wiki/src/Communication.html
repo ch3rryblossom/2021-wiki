@@ -106,12 +106,12 @@
 			</a>
 			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
 			  <li><a class="dropdown-item" href="Human_Practices.html">iHP</a></li>
-			  <li><a class="dropdown-item" href="#">Public Engagement</a></li>
+			  <li><a class="dropdown-item" href="Inclusivity.html">Inclusivity</a></li>
 			  <li><a class="dropdown-item" href="Communication.html">Education</a></li>
 			</ul>
 		      </li>
 		      <li class="nav-item">
-			<a class="nav-link" href="#">Judging Form</a>
+			<a class="nav-link" href="https://igem.org/2021_Judging_Form?id=3971">Judging Form</a>
 		      </li>
 		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
 		    </ul>
@@ -159,9 +159,10 @@
             <div class="col-lg-9 col-md-9">
                 <div class="content">
                     <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
+                    <hr><br>
+		<div id="container" style="height: 600px; margin:auto;"></div>
+
+<br><br>
                     <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
 		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
                     <br>
@@ -231,47 +232,6 @@
         </div>
     </div>
 
-
-
-	<!-- SPONSORS BAR -->
-	<div class="footer">
-		<div class="footer-wrapper">
-			<div id="not-sponsors" class="footer-wrapper">	
-				<div id="Team", class="footer-wrapper">
-					<img class="teamlogo" src="assets/Logos/IISER-Pune-iGEM_logo.png" alt="iGEM IISER Pune Logo" width="170">
-				</div>
-				<div id="socials" class="vertical-stack">
-					<div><h3>Team IISER Pune India</h3></div>
-					<div id="logos" class ="footer-wrapper ">
-						<a href="https://www.instagram.com/igem_iiserp/"><img class="footer-links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="20"></a>
-						<a href="https://www.linkedin.com/in/igem-iiser-pune-2021/"><img class="footer-links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30"></a>
-						<a href="https://twitter.com/igem_iiserpune"><img class="footer-links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35"></a>
-						<a href="https://www.facebook.com/igemiiserpune"><img class="footer-links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25"></a>
-						<a href="https://www.youtube.com/channel/UCyo6NMLvM58sSh_tnxht36w"><img class="footer-links-socials" src="assets/Logos/Youtube_logo.png" alt="Youtube" width="35"></a>
-					</div>
-				</div>
-			</div>
-			<div id="sponsors" class="footer-wrapper">
-				<div id="main-sponsor", class="footer-wrapper">
-					<a href="https://www.sailife.com/"><img class="footer-links" src="assets/Logos/Sai_logo.jpg" alt="Sai Life Sciences" width="280"></a>
-				</div>
-				<div class="vertical-stack">
-					<a href="https://sg.idtdna.com/pages"><img class="footer-links" src="assets/Logos/IDT_logo.png" alt="IDT" width="220"></a>
-					<a href="https://www.geneious.com/"><img class="footer-links" src="assets/Logos/Geneious_logo.png" alt="Geneious" width="220"></a>
-				</div>
-				<div class="vertical-stack">
-					<div id="horizontal stack">
-						<a href="https://www.notion.so/"><img class="footer-links" src="assets/Logos/Notion_logo.png" alt="Notion" width="70"></a>
-						<img src="assets/Logos/IISER Pune Logo.png" alt="IISER Pune" width="80" style="padding-left: 1em;">
-					</div>
-					<a href="https://www.zoho.com/"><img class="footer-links" src="assets/Logos/Zoho_logo.png" alt="Zoho" width="150"></a>
-				</div>
-			</div>	
-		</div>
-	</div>
-	<!-- END OF SPONSOR BAR-->
-
-
 	<!-- SPONSORS BAR -->
 	<div class="footer">
 		<div class="footer-wrapper">
@@ -324,8 +284,72 @@
     <script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/anychart-core.min.js"></script>
+	<script src="js/anychart-data-adapter.min.js"></script>
+	<script src="js/anychart-graph.min.js"></script>
 
+	<script>
+		// create data
+	var data = {
+	  nodes: [
+	    {id: "Richard"},
+	    {id: "Larry"},
+	    {id: "Marta"},
+	    {id: "Jane"},
+	    {id: "Norma"},
+	    {id: "Frank"},
+	    {id: "Brett"}
+	  ],
+	  edges: [
+	    {from: "Richard", to: "Larry"},
+	    {from: "Richard", to: "Marta"},
+	    {from: "Larry",   to: "Marta"},
+	    {from: "Marta",   to: "Jane"},
+	    {from: "Jane",    to: "Norma"},
+	    {from: "Jane",    to: "Frank"},
+	    {from: "Jane",    to: "Brett"},
+	    {from: "Brett",   to: "Frank"}
+	  ]
+	};
+	
+	// create a chart and set the data
+	var chart = anychart.graph(data);
+	
+	// set the container id
+	chart.container("container");
+	var credits = chart.credits();
+	credits.enabled(false);
+	 // access nodes
+	 var nodes = chart.nodes();
 
+// set the size of nodes
+nodes.normal().height(30);
+nodes.hovered().height(45);
+nodes.selected().height(45);
+
+// set the fill of nodes
+nodes.normal().fill("#28c79b");
+nodes.hovered().fill("white");
+nodes.selected().fill("#27668D");
+
+// set the stroke of nodes
+nodes.normal().stroke(null);
+nodes.hovered().stroke("#333333", 3);
+nodes.selected().stroke("#333333", 3);
+
+chart.nodes().labels().enabled(true);
+// configure the labels of nodes
+chart.nodes().labels().format("{%id}");
+chart.nodes().labels().fontSize(12);
+chart.nodes().labels().fontWeight(600);
+
+chart.edges().normal().stroke("#ffd73a");
+chart.edges().hovered().stroke("#FFFFFF");
+chart.edges().selected().stroke("#FFFFFF");
+	chart.background().fill("#2b2d31");
+	// initiate drawing the chart
+	chart.draw();
+	</script>
 	<!-- Gets the screenheight of each page for Scrollbar? -->
 	<script>
 		var screenheight = window.innerHeight,

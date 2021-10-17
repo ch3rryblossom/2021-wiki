@@ -1,12 +1,11 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Design</title>
+	<title>Inclusivity</title>
 	<link rel="stylesheet" href="css/igem-reset.css">
 	<link rel="stylesheet" href="css/SBcss/style.css">
    	<link rel="stylesheet" href="css/styleSB.css">
@@ -124,7 +123,7 @@
     <!-- TITLE SECTION -->
     
     <div class="section-1">
-        <h1><br><br><br><br>Design</h1>
+        <h1><br><br><br><br>Inclusivity</h1>
     </div>
         
 
@@ -145,7 +144,7 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Cyanobacteria</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
                             <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
                             <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
                             <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
@@ -158,19 +157,20 @@
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Cyanobacteria - the autotrophic module </h1>
+                    <h1 id="1">Introduction</h1>
                     <hr><br><br><br>
-		    		<p>Cyanobacteria strains, like Synechococcus elongatus, naturally accumulate sucrose intracellularly as an osmoprotectant against salt stress [1]. We aimed to engineer S. elongatus UTEX 2973, a fast growing strain of cyanobacteria, to continually produce and secrete the sucrose it accumulates. To accomplish this, we intended to overexpress cscB in our cyanobacterium. CscB,  native to E. coli W, is a gene that codes for sucrose permease, a symporter that can transport sucrose and protons across the membrane of bacterial cells [2]. <br><br>
-
-					Once the symporter is present, it acts as a ‘sucrose sink’, continually transporting sucrose into the medium along the pH gradient, compelling the cyanobacterial cells to continually produce more sucrose to maintain their tonicity under salt stress [2]. <br><br>
-					
-					We planned to culture the cyanobacteria in an alkaline, carbon-free, saline medium, to enable it to fix gaseous carbon dioxide as sucrose, and secrete it out. To maximise the yield of sucrose generated, we wished to express cscB under a range of native and non-native constitutively expressed, strong promoters - including Pcpc560 (native to Synechocystis PCC 6803), J23119 (native to E coli), PcpcB m6 (a synthetic mutant variant of the native PcpcB) and native promoters PpsbA2 and PpsbA3. <br><br>
-					
-					Since S. elongatus UTEX 2973 is not naturally transformable, it can only be modified using bacterial conjugation via triparental mating [3]. We opted for a CRISPR/Cas 12a (also known as CRISPR/Cpf1) based mechanism to integrate cscB into the Neutral Site 1 of its genome. Cas 9  has been found to be toxic to cyanobacteria and cannot be used to modify it [4]. <br><br>
-					
-					Additionally, we also wished to look into the possible overexpression of the rate limiting enzymes, sucrose phosphate synthase and sucrose phosphate phosphatase (coded for by sps and spp) respectively [5]. A similar CRISPR/Cas 12a based approach would allow for the genomic integration of sps and spp into the Neutral Site 3 of UTEX 2973’s genome. </p>
+		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
 					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <br>
 
+
+                    <figure>
+
+                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
+
+                    </figure>
 
 
                     <h1 id="2">Section 2</h1>
