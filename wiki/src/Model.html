@@ -196,7 +196,7 @@
 						<li style="padding-left:1em">Identify the important interactive metabolites in the co culture</li>
 						<li style="padding-left:1em">Identify targets to over express or knockout in each organism for improved yields of sucrose and butanol</li>
 					</ol>
-					<p>The core technique of our modelling attempts is a constraint based modelling technique called Flux Balance Analysis, in short FBA. We have used the COBRA package in MATLAB<a href="#ref1"><sup>1</sup></a> for almost all our models.</p>
+					<p>The core technique of our modelling attempts is a constraint based modelling technique called Flux Balance Analysis, in short FBA. We have used the COBRA package in MATLAB<sup><a href="#ref1">1</a></sup> for almost all our models.</p>
 					<a id="2"></a>
 					<br>
 
@@ -204,8 +204,8 @@
 					<!-- FLUX BALANCE ANALYSIS -->
 					
 					<h1>Flux Balance Analysis</h1>
-					<p>FBA is a steady state analysis algorithm that is widely used in metabolic predictions and optimisations. FBA assumes the organism to be in a metabolically steady state i.e., there is no accumulation of metabolites within the organism.<a href="#ref2"><sup>2</sup></a> To perform FBA we require a metabolic model of the organism. A metabolic model of an organism contains information on all (or most) reactions in an organism, the metabolites involved, the genes present in the organism, the Gene-Reaction-Relation, and a calculated biomass production reaction (growth rate reaction) that gives the growth rate when analysed.</p>
-					<strong>The core elements of FBA are<a href="#ref2"><sup>2</sup></a>:</strong>
+					<p>FBA is a steady state analysis algorithm that is widely used in metabolic predictions and optimisations. FBA assumes the organism to be in a metabolically steady state i.e., there is no accumulation of metabolites within the organism.<sup><a href="#ref2">2</a></sup> To perform FBA we require a metabolic model of the organism. A metabolic model of an organism contains information on all (or most) reactions in an organism, the metabolites involved, the genes present in the organism, the Gene-Reaction-Relation, and a calculated biomass production reaction (growth rate reaction) that gives the growth rate when analysed.</p>
+					<strong>The core elements of FBA are<sup><a href="#ref2">2</a></sup>:</strong>
 					<ol class="a">
 						<li style="padding-left:1em">S Matrix or the stoichiometric matrix - This is a matrix of the order (number of metabolites) * (number of reactions)</li>
 						<li style="padding-left:1em">The objective function or c - This is a column vector that holds the information to attain the aim of the analysis, for example biomass optimisation</li>								
@@ -214,7 +214,7 @@
 					</ol>
 					<p>In an organism, it is normal to have the same metabolites participating in multiple reactions, and therefore it is safe to assume the number of reactions will be more than the number of metabolites. This can be compared to a system of linear equations with more equations than variables. Without constraints the solution space is infinite, so we introduce constraints in the form of bounds.</p>
 					<br>
-					<strong>Equations of FBA and their solutions<a href="#ref2"><sup>2</sup></a></strong>
+					<strong>Equations of FBA and their solutions<sup><a href="#ref2">2</a></sup></strong>
 					<strong>Constraints:</strong>
 					<ul>
 						<li style="padding-left:1em;">Sv = 0</li>
@@ -222,17 +222,17 @@
 						<li style="padding-left:1em;">Upper Bounds</li>
 					</ul>
 					<br>
-					<strong>Objective Function<a href="#ref2"><sup>2</sup></a>:</strong>
+					<strong>Objective Function<sup><a href="#ref2">2</a></sup>:</strong>
 					<ul>
 						<li style="padding-left:1em;">C(transpose)v</li>
 					</ul>
 					<br>
-					<strong>Objective<a href="#ref2"><sup>2</sup></a>:</strong>
+					<strong>Objective<sup><a href="#ref2">2</a></sup>:</strong>
 					<ul>
 						<li style="padding-left:1em;">Minimise or Maximise Objective function</li>
 					</ul>
 					<br>
-					<strong>Solution<a href="#ref2"><sup>2</sup></a>:</strong>
+					<strong>Solution<sup><a href="#ref2">2</a></sup>:</strong>
 					<ul>
 						<li style="padding-left:1em;">Plausible flux distributions for the above mentioned objective function</li>
 					</ul>
@@ -243,9 +243,9 @@
 
 					<!-- MoMA -->
 					<h1>Minimisation of Metabolic Adjustments</h1>
-					<p>MoMA is an extension of Flux Balance Analysis that imposes more constraints to make the model as close to reality as possible, albeit it isn’t the best at doing so. The logic of MoMA is very simple - minimise the euclidean distance (L2 norm) between the wild-type flux distribution and the flux distribution of the modified organism in the flux vector space<a href="#ref3"><sup>3</sup></a>.</p>
+					<p>MoMA is an extension of Flux Balance Analysis that imposes more constraints to make the model as close to reality as possible, albeit it isn’t the best at doing so. The logic of MoMA is very simple - minimise the euclidean distance (L2 norm) between the wild-type flux distribution and the flux distribution of the modified organism in the flux vector space<sup><a href="#ref3">3</a></sup>.</p>
 					<br>
-					<p><strong>The algorithm<a href="#ref3"><sup>3</sup></a>:</strong></p>
+					<p><strong>The algorithm<sup><a href="#ref3">3</a></sup>:</strong></p>
 					<ol class="a">
 						<li style="padding-left:1em;">Find the wild-type/base strain flux distribution using FBA for maximized growth rates</li>
 						<li style="padding-left:1em;">Simulate the deletion, over-expression or any stress</li>
@@ -264,7 +264,7 @@
 					<p>This algorithm was developed to identify gene targets that can be amplified for increased production of selected metabolites or even increased growth rates. We have used this technique to identify the reactions and further genes that we can over-express to increase sucrose production in cyanobacteria and butanol production in E. coli.</p>
 					<p>To understand FSEOF imagine the whole organism as a big city, the reactions as roads, and the flux through the reactions as the traffic in each road. Now consider evacuating this city as our objective, then the roads which lead to the exits will start carrying more traffic. If we can widen these roads we can in theory get more people out. If evacuating this city was another way of saying - maximise the production of a particular metabolite, then widen the roads can be considered as amplifying the corresponding reactions.</p>
 					<br>
-					<p>In the form of an algorithm it would look something like this<a href="#ref4"><sup>4</sup></a>:</p>
+					<p>In the form of an algorithm it would look something like this<sup><a href="#ref4">4</a></sup>:</p>
 					<ol class="a">
 						<li style="padding-left:1em;">Find maximum growth under media conditions using FBA </li>
 						<li style="padding-left:1em;">Find the maximum production of the metabolite using FBA </li>
@@ -281,7 +281,7 @@
 
 					<!-- OptKnock -->
 					<h1>OptKnock</h1>
-					<p>OptKnock is an algorithm that find and suggests which set of reactions to remove from a metabolic network to obtain a mutant that will produce a particular target of interest at a higher rate than the wild-type strain<a href="#ref5"><sup>5</sup></a>. The logic is pretty simple -</p>
+					<p>OptKnock is an algorithm that find and suggests which set of reactions to remove from a metabolic network to obtain a mutant that will produce a particular target of interest at a higher rate than the wild-type strain<sup><a href="#ref5">5</a></sup>. The logic is pretty simple -</p>
 					<ol class="a">
 						<li style="padding-left:1em;">You find the set of reactions that you want to get knockouts from </li>
 						<li style="padding-left:1em;">Change their bounds to 0 (this is how you simulate deletion in models) either one by one or in pairs or triplets </li>
