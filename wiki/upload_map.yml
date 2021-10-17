@@ -851,7 +851,7 @@ html:
     md5: 16dbab27c391977a53e7c3184d1f50c4
   Communication.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Communication
-    md5: ef2f8cb8379cd51c5912497f89a90387
+    md5: ed95cd96b23a124a48f76965064f1e9d
   CompositeParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/CompositeParts
     md5: 45394b2fe64ecec5d5c714ae974b1065
@@ -944,8 +944,17 @@ html:
     md5: 34acf98a876cdeb7a82f7795dd082cba
   trial.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/trial
-    md5: 20698961c93545991cc8e94ccd1755aa
+    md5: e6235db55b06439f10452b5bb3371f10
 js:
+  js\anychart-core.min.js:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/anychart-core-minJS?action=raw&ctype=text/javascript
+    md5: f9f705a63c712bbd55df1e05184e8e9d
+  js\anychart-data-adapter.min.js:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/anychart-data-adapter-minJS?action=raw&ctype=text/javascript
+    md5: fe79b58ff564eda25e318a56be819571
+  js\anychart-graph.min.js:
+    link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/anychart-graph-minJS?action=raw&ctype=text/javascript
+    md5: 1ed62d76230e11481c3bc650931ce6c7
   js\bootstrap-bundle.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/bootstrap-bundleJS?action=raw&ctype=text/javascript
     md5: 0aa8d64e726c4a57adb5c88f9115996b
