@@ -765,6 +765,54 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png
     md5: 07f346967c54232d1442589927c8f7dd
     upload_filename: T--IISER-Pune-India--Logos--linkedin_logo.png
+  assets\WetlabPhotos\Glycerol_stocks_1.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/a/a1/T--IISER-Pune-India--WetlabPhotos--Glycerol_stocks_1.jpeg
+    md5: 8d8361afc65ea54eb32d9a1d594901d6
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--Glycerol_stocks_1.jpeg
+  assets\WetlabPhotos\Glycerol_stocks_2.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/e/e5/T--IISER-Pune-India--WetlabPhotos--Glycerol_stocks_2.jpeg
+    md5: d9def73e5f84e3ebfe249f091cc3044b
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--Glycerol_stocks_2.jpeg
+  assets\WetlabPhotos\Glycerol_stocks_3.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/9/9c/T--IISER-Pune-India--WetlabPhotos--Glycerol_stocks_3.jpeg
+    md5: f7c733f396cd0364317f36256d8ecda4
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--Glycerol_stocks_3.jpeg
+  assets\WetlabPhotos\MIC_1.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/2/29/T--IISER-Pune-India--WetlabPhotos--MIC_1.jpeg
+    md5: d5bc490efff68c36da300b166d797104
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--MIC_1.jpeg
+  assets\WetlabPhotos\MIC_2.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/d/d4/T--IISER-Pune-India--WetlabPhotos--MIC_2.jpeg
+    md5: 87028bc283e5d059a6a4934f1a468d3b
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--MIC_2.jpeg
+  assets\WetlabPhotos\MIC_3.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--WetlabPhotos--MIC_3.jpeg
+    md5: 58425b373107d5a546485ac53d196275
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--MIC_3.jpeg
+  assets\WetlabPhotos\MIC_4.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/6/6e/T--IISER-Pune-India--WetlabPhotos--MIC_4.jpeg
+    md5: a06bd61d21e84ce4c44634e9fc99f488
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--MIC_4.jpeg
+  assets\WetlabPhotos\NMR_confirmation.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/4/40/T--IISER-Pune-India--WetlabPhotos--NMR_confirmation.jpeg
+    md5: 22e3b39a5a9c94d710f64ee378289776
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--NMR_confirmation.jpeg
+  assets\WetlabPhotos\Tranformation_1.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/6/61/T--IISER-Pune-India--WetlabPhotos--Tranformation_1.jpeg
+    md5: be3e09bbbeb1c91950bc716dd30830b5
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--Tranformation_1.jpeg
+  assets\WetlabPhotos\Tranformation_4.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/d/dd/T--IISER-Pune-India--WetlabPhotos--Tranformation_4.jpeg
+    md5: ff54a7e4750ae506103de9693f2087bb
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--Tranformation_4.jpeg
+  assets\WetlabPhotos\Transformation_2.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/6/63/T--IISER-Pune-India--WetlabPhotos--Transformation_2.jpeg
+    md5: 1624b8d00b71145dc248bf5e182cc5bb
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--Transformation_2.jpeg
+  assets\WetlabPhotos\Transformation_3.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/2/22/T--IISER-Pune-India--WetlabPhotos--Transformation_3.jpeg
+    md5: 4f43708b9a98ae96c13fd6496431f9f9
+    upload_filename: T--IISER-Pune-India--WetlabPhotos--Transformation_3.jpeg
   assets\collabs\Aiim1.png:
     link_URL: https://2021.igem.org/wiki/images/c/c1/T--IISER-Pune-India--collabs--Aiim1.png
     md5: 604105f89e93e05ae1803f97019312f4
@@ -820,7 +868,7 @@ assets:
 css:
   css\DryLabPage.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/DryLabPageCSS?action=raw&ctype=text/css
-    md5: 3879cba434499516d6068b4ea367e667
+    md5: 227d798cd35cbef08825f7cbc489953a
   css\SBcss\style.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/SBcss/styleCSS?action=raw&ctype=text/css
     md5: 1c2ce3aabf96bdb06e53b2a1069351a9
@@ -835,14 +883,14 @@ css:
     md5: feea2f9e8ca6b96becf5268a5030736b
   css\styleSB.css:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/css/styleSBCSS?action=raw&ctype=text/css
-    md5: 6e01d8d3fb611140b457fdb91c89ae8d
+    md5: be4a35964af25029bba05c5cd10a8d73
 html:
   Attributions.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Attributions
     md5: e35967a6b98772fadf55829a0c9319cf
   BasicParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/BasicParts
-    md5: 258a25c74117fcbccd596672470f0295
+    md5: fdd9998ce18b017e8da52a0aaaba315d
   Coculture.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
     md5: 6cfc928f94cef3dc5a9737846362aa9f
@@ -872,10 +920,10 @@ html:
     md5: 183a5133d2c71bae96e8ba9f642f0ecc
   DryLabOverview.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview
-    md5: a5a929fdb06875592dc8d38a88f140a3
+    md5: c93c8babd9daeeb474101c15d1740c18
   EColi.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
-    md5: 88d3d228a9c6738ef24d1b6d87c0159f
+    md5: aaa3be91d6153deba226fc3e0f44237b
   Education.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Education
     md5: 69e2c7e33e2c0dc06c8e80cad92ba785
@@ -884,7 +932,7 @@ html:
     md5: 2d54b9ca6ba9ca66540fd75e3ebadffe
   Experiments.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Experiments
-    md5: 38bb297a1b1231003f1bc3881d1f130c
+    md5: 827ce01f2627864e70c4ee3d14c1038c
   FutureWork.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/FutureWork
     md5: 67b859d96cf9cf514676cd1adfeadf25
