@@ -23,6 +23,10 @@
     margin-left: 5%;
     padding-right: 5%;
 }
+ol.a .li {
+    padding-left: 1em;
+    padding-top: 0.3em;
+}
 ul.b {
     list-style-type: disc;
     padding-left: 5%;
