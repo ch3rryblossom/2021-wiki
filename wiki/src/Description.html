@@ -146,12 +146,14 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Background</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Problem</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">A way forward</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Our solution</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Why a co-culture?</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">Project Inspiration</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#7">Covid-19</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#8">References</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -159,74 +161,111 @@
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+                    <h1 id="1">Background - <b>The Climate Crisis</b></h1>
+                    <hr><br>
+		    <p>
+			Carbon dioxide concentration levels in the atmosphere are higher now than at any other time in human history, and they are only projected to rise due to human activities.[1] Carbon dioxide is a greenhouse gas, which plays a crucial role in regulating the surface temperature of the planet.[1] As CO2 accumulates in the atmosphere, it leads to a net increase in average global surface temperatures.[1]<br><br>
+			We are already beginning to experience the effects of climate change due to global warming - from more extreme rainfall, droughts, cyclones, and wildfires, to the extinction of numerous plant and animal species.[2] The globe has already warmed by over 1°C above pre-industrial levels.[1] In order to limit global warming to 1.5°C above pre-industrial levels, greenhouse gas emissions must fall by 45% by 2030, and we must achieve net-zero emissions by 2050.[2]
+		    </p>
+                    <h1 id="2">Problem - <b>Petrochemical Synthesis</b></h1>
+                    <hr><br>
+                    <p>A carbon feedstock is a source of carbon that can be used as a raw material for manufacturing. Most carbon-based industrial chemicals rely on fossil fuels, like coal and crude oil, as raw material for their manufacture.[3] However, the use of coal and oil for the production of these chemicals emits large amounts of carbon dioxide and other greenhouse gases that warm the atmosphere and oceans. The chemical and petrochemical industry is the third-largest source of industrial CO2 emissions, generating 1.5 gigatonnes of CO2  annually and accounting for 18% of the direct industrial CO2 emissions.[3] <br><br>
 
-
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
-
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
+			A sustainable alternative to fossil fuel-based carbon feedstocks is to make use of biomass as a carbon feedstock. Heterotrophic bacteria can be engineered to consume carbohydrates from biomass and convert them into industrially important metabolites. However, relying on plant-based biomass like corn and sugarcane as raw material for industrial-scale chemical synthesis could compete with food production and advance environmental degradation[4][5]. Plant cultivation is often resource-intensive, requiring a lot of land, water, and fertilizers.[6]<br><br>
+			
+			A truly sustainable carbon source would need to be far more efficient.
+			</p>
                 
+                    <h1 id="3">A way forward - <b>Photosynthesis</b></h1>
+                    <hr><br>
+                    <p>Cyanobacteria are photosynthetic prokaryotes that are far more efficient than plants at using sunlight to fix atmospheric CO2 into biomass; they can convert as much as 9% of solar energy received into biomass compared with only 0.5–3% for higher plants.[7] They also require a fraction of the space and resources needed to cultivate plants.[7] Cyanobacteria are more amenable to genetic manipulation than eukaryotic algae or plants[8] and can be grown conveniently in a photobioreactor, on unproductive land,  wastewater, and flue gas.[8]</p>
+                
+                    <h1 id="4">Our solution - <b>SynBactory</b></h1>
+                    <hr><br>
+                    <p>We have designed a sustainable biomanufacturing method to synthesize biobutanol from light and carbon dioxide, using a co-culture of two bacteria, <i>Synechococcus elongatus</i> UTEX 2973 and <i>E. coli</i>. <br><br>
 
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+			Our solution would minimize carbon emissions by not only capturing existing carbon emissions present in the atmosphere but will also prevent new emissions from being generated at the source by reducing the current reliance on carbon-emitting petrochemical feedstocks.<br><br>
+			
+			<i>S. elongatus</i> UTEX 2973 is a fast-growing strain of cyanobacteria, which accumulates sucrose intracellularly on exposure to salt stress.[9] This sucrose is obtained from atmospheric carbon dioxide fixed by the bacterium during photosynthesis. When engineered to express a non-native sucrose transporter, <i>cscB</i>, the cyanobacterium can continually secrete the sucrose it generates.[10] <i>S. elongatus</i> UTEX 2973 can secrete nearly 90% of its absorbed carbon as sucrose, as opposed to just 15% in sugarcane.[10][11] This secreted sucrose can function as a renewable carbon feedstock for chemical synthesis via <i>E. coli</i>.<br><br>
+			
+			<i>E. coli</i> can be made to consume the sucrose generated by the cyanobacteria as its sole carbon source through the heterologous expression of the <i>cscABK</i> gene cluster, which facilitates the import and breakdown of sucrose.[12] With an appropriate set of modifications, <i>E. coli</i> can be made to produce a desired metabolic product. <br><br>
+			
+			The system is inherently modular, in that one <i>E. coli</i> strain engineered to produce a particular metabolite, can be swapped with another microbial strain engineered to produce a different product.<br><br>
+			
+			As a proof of concept, we aimed to produce butanol through our co-culture by making use of the pre-engineered butanol producing <i>E. coli</i> KJK01 strain[13] that we received from Dr. ‪Syed Shams Yazdani‬ at ICGEB, New Delhi, and a pre-engineered <i>cscB</i> expressing <i>S. elongatus</i> strain[9] that we received from Dr. Himadri Pakrasi at Washington University in St. Louis.<br><br>
+			
+			We also designed <i>in silico</i> models to probe the stability and dynamics of the co-culture system to identify optimal conditions for the production of butanol. We used genome-scale metabolic models to identify key gene deletion and overexpression targets to improve butanol and sucrose yields. Furthermore, we designed constructs to characterize the strengths of native promoters to boost sucrose secretion in cyanobacteria. </p>
+                
+                    <h1 id="5">Why a co-culture?</h1>
+                    <hr><br>
+                    <p>A co-culture is a cell cultivation setup in which two or more different populations of cells are grown with some degree of contact between them. <br><br>
+
+			Our <i>S. elongatus</i> and <i>E. coli</i> co-culture facilitates a single pot, direct conversion of CO2 into the desired final product. A co-culture is more cost-effective and less wasteful since the requirements to recover and transport sucrose are eliminated because the <i>E. coli</i> would consume the sucrose directly.<br><br>
+			
+			A co-culture is mutually beneficial to both species; <i>E. coli</i> relies on <i>S. elongatus</i> for sucrose, and also benefits from the oxygen released by <i>S. elongatus</i> during photosynthesis. <i>S. elongatus</i> has been shown to grow better in the presence of <i>E. coli</i>, which are suspected of relieving oxidative stress by quenching reactive oxygen species.[14]</p>
+                
+                    <h1 id="6">Project Inspiration</h1>
+                    <hr><br>
+                    <p>During our initial brainstorming sessions for a project idea, we created a rubric to decide how to pick a project. We all agreed that we wanted it to help solve a pressing, real-world problem and were heavily guided by the United Nations Sustainable Development Goals in our quest.<br><br>
+
+			We explored ideas such as extracting metals from e-waste, engineering bacteria to ameliorate coral bleaching, implementing a machine learning algorithm in populations of <i>E. coli</i>, making biosurfactants, using RNA interference to fight plant diseases, amongst many others.<br><br>
+			
+			As we went about exploring wikis and finding pressing problems, we came upon the IPCC 2018 Special Report on Global Warming of 1.5 &#176;C (SR15).[2] The climate crisis and its far-reaching implications gripped us. At about the same time, we came across previous work done on cyanobacteria and discovered its excellent photosynthetic efficiency, robustness, and amenability to manipulation. We found the 2018 Stony Brooke University iGEM team’s work on sucrose synthesis from <i>S. elongatus</i>, which helped us develop our idea of using secreted cyanobacterial sucrose to synthesize chemicals. We first decided to try and produce succinic acid from sucrose in <i>E. coli</i> by engineering it to consume sucrose and to redirect its carbon flux towards the accumulation of succinic acid, an intermediary step in the TCA cycle.[15] Succinic acid is a platform chemical and an essential raw material for manufacturing polybutylene succinate (PBS), a biodegradable bioplastic.[16][17] <br><br>
+			
+			We also discovered the fast-growing strain of <i>S. elongatus</i> UTEX 2973, which had a significantly higher doubling time (comparable to yeast at optimal conditions) and produced the highest sucrose yields.[9][18] </p>
+                
+                    <h1 id="7">COVID-19</h1>
+                    <hr><br>
+                    <p>However, with the devastating second wave of the COVID-19 pandemic that hit India in early April, particularly in the state of Maharashtra, where our institute is located, our hopes of returning to the lab were delayed significantly. We no longer had the time to engineer <i>S. elongatus</i> and <i>E. coli</i> from scratch, and given the number of modifications we would need to make in E.coli to produce succinic acid, we looked to switch to another metabolite as a proof of concept of our co-culture system. <br><br>
+
+			We were fortunate to receive help from two labs in providing us with pre-engineered strains to help us fast forward to performing assays and measurements. Dr. Yazdani from ICGEB provided us with his butanol-producing KJK01 strain of <i>E. coli</i>, and Prof. Pakrasi provided us with his sucrose exporting strains of <i>S. elongatus</i> UTEX 2973. <br><br>
+			
+			After months of anxious waiting, we finally managed to get back to campus and to our labs by mid-August when the second wave began to wane. We could finally work together in person instead of interacting over Discord or Google Meet from different parts of the country. Having been in the lab for just short of two months, we picked up a tremendous amount of lab skills and experience, even if we didn’t obtain all the results we hoped for. <br><br>
+			
+			Cyanobacteria are a challenging chassis to work with, and just a handful of labs across India work with them. We were lucky to find our mentors, Prem Pritam and Virmal Jain, from IIT Bombay, who have experience working with <i>S. elongatus</i> and guided us remotely over the phone. Since our institute has no equipment and material designed to cultivate cyanobacteria, we had to do quite a bit of <i>jugaad</i>* to get around our constraints. We had to drive down to Mumbai to borrow BG-11 medium from Prem in IIT Bombay, use rubber bands to fasten our flasks to the incubator shakers due to an absence of appropriately sized holders, create our own regulatable light source for the incubator, and use added bicarbonate to the medium as a substitute for a regulated carbon dioxide supply, which our incubator could not support. We have described some of the difficulties with working cyanobacteria in our <i>Cyanobacteria: Tips and Tricks</i> document that we have submitted as a contribution.<br><br> 
+			
+			Being located in India, shipments of strains, plasmids, reagents, and DNA from Europe and America can take up to two or more months to arrive, which greatly affects the amount of lab work that can be done during the iGEM cycle. With the pandemic, these delays are often longer than expected. We are still waiting for some of our enzymes and plasmids to arrive. <br><br>
+			
+			In our case, the first shipment of <i>S. elongatus</i> UTEX 2973 strains from Prof. Pakrasi’s lab in St. Louis, had gotten caught up at customs due to some errors in paperwork. When the strains did eventually arrive, the plates they were streaked on were damaged, and the agar had fallen off. We were unable to revive them. The Pakrasi lab generously offered to send us the strains once again; they arrived in perfect condition on 23rd August.<br><br>
+		
+			There are a number of constraints that are unique to this chassis such as: <br>
+
+			<ul class="a">
+				<li style="padding-left: 1em;">High doubling times </li>
+				<li style="padding-left: 1em;">Sensitivity to media composition, light intensity, and carbon dioxide concentrations </li>
+				<li style="padding-left: 1em;">Density-dependent growth </li>
+				<li style="padding-left: 1em;">Specific requirements for the ratio between the surface area of media and volume of the flask to minimize evaporation</li>
+			</ul>
+			</p>
+			<p>
+				The aforementioned constraints make it necessary to passage cyanobacteria inoculums periodically from low to high volumes over 3-4 days, before one can actually begin any work on them - whether it is plating, preparing stocks for cryopreservation, or performing growth assays. This is why most of our time in the lab went into the same, preventing us from further engineering and experimenting with the strains. <br><br><br>
 
 
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+				*<i>Jugaad</i> is a Hindi word that has no accurate translation to English but roughly translates to a quick, creative, non-conventional hack or fix to unforeseen problems. 
+			</p>
+		
+                    <h1 id="8">References</h1>
+                    <hr><br>
+                    <ol class="a">
+			<li style="padding-left: 1em;" id="ref1"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref2"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref3"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref4"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref5"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref6"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref8"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref9"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref10"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref11"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref12"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref13"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref14"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref15"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref16"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref17"><a href=""></a></li> 
+			<li style="padding-left: 1em;" id="ref18"><a href=""></a></li> 
+		    </ol>
+		   
 				</div>
 			</div>
         </div>
