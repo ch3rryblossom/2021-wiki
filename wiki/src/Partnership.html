@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Title</title>
+	<title>Partnership</title>
 	<link rel="stylesheet" href="css/igem-reset.css">
 	<link rel="stylesheet" href="css/SBcss/style.css">
    	<link rel="stylesheet" href="css/styleSB.css">
@@ -49,7 +49,6 @@
 			  <li><a class="dropdown-item" href="Team.html">Members</a></li>
 			  <li><a class="dropdown-item" href="Attributions.html">Attributions</a></li>
 			  <li><a class="dropdown-item" href="Collaborations.html">Collaborations</a></li>
-			  <li><a class="dropdown-item" href="Partnership.html">Partnership</a></li>
 			  <li><a class="dropdown-item" href="Partnership.html">Partnership</a></li>
 			  <li><a class="dropdown-item" href="Sponsors.html">Sponsors</a></li>
 			</ul>
@@ -126,7 +125,7 @@
     <!-- TITLE SECTION -->
     
     <div class="section-1">
-        <h1><br><br><br><br>Page Title Here</h1>
+        <h1><br><br><br><br>Partnership</h1>
     </div>
         
 
@@ -147,9 +146,9 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Initial Meetings</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Furthering our Drylab Partnership</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Wetlab </a></li>
                             <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
                             <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
                             <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
@@ -160,74 +159,69 @@
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+                    <h1 id="1">Initial Meetings</h1>
+                    <hr><br>
+		    		<p>After we unveiled our project idea on our social media, Team INSA-UPS from Toulouse reached out to us, having noticed that our project ideas were very similar. Both our teams were working on designing a co-culture of cyanobacteria engineered to secrete sucrose into the extracellular medium, with heterotrophic organisms engineered to consume that sucrose and produce a metabolite of interest, which was <i>E.coli</i> engineered to produce butanol in our case, and yeast engineered to produce a violet scent in theirs.<br><br>
+
+					Our collaboration ultimately resulted in a very fruitful partnership on multiple fronts, including Modeling, Wet Lab and Human Practices.
+					</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <h3>May 29th</h3><br>
+		    		<p>We had our first meeting on 29th May, where we presented our ideas and discussed possible ways of collaborating with each other given the similarities in our projects. We also realized that since both our projects make use of <i>S.elongatus</i> UTEX 2973 as the autotrophic sucrose producing module, but with different heterotrophs engineered to produce different products, we could potentially demonstrate the modularity of the co-culture system, i.e. a variety of heterotrophs engineered to consume sucrose produced by <i>S.elongatus</i> could be swapped in the system to produce a metabolite of choice. <br><br>
+					They also informed us that they had spoken to Dr. Himadri Pakrasi to receive the wildtype and engineered sucrose secreting S.elongatus UTEX 2973 strains. We were facing issues acquiring the strains and the team offered to help facilitate the process of requesting the strains from Dr. Pakrasi.
+					</p>
+					IMAGE HERE
                     <br>
+		    <h3>June 25th</h3><br>
+		    <p>The dry lab divisions of both our teams met this time and briefed each other about our modeling plans. At that time, our team was using Flux Balance Analysis (FBA) to model the individual strains, and was planning to perform strain optimization <i>in silico</i> to optimize butanol and sucrose yields. We had not settled on a concrete technique to model the co-culture, and were reading up on dynamic FBA (d-FBA), SteadyCom and Optcom at the time, and had even consulted a few experts on these during our Integrated Human Practices interactions. <br><br>
 
+			The INSA-UPS team mentioned that they would be using a dynamic model using differential equations to model their co-culture. They were particularly interested in our strain optimization modeling and wanted to integrate it into their modeling workflow for the S.elongatus UTEX 2973 strain. <br><br>
+			
+			We discussed that it would be a good idea for both our teams to use different techniques to model the co-culture so that we could exchange our code with each other, and reinforce each other’s results using different techniques.
+			</p>
+                    <h1 id="2">Furthering our Drylab Partnership</h1>
+                    <hr><br>
+                    <p>A big contributing factor that led to us choosing to work with SteadyCom to model the co-culture was the fact that it would complement the INSA-UPS team’s dynamic model very well. As both our teams had decided to exchange  and collaborate on our code, we thought that these two techniques, built on different assumptions, could together give us a wide range of insights and possibly even reinforce some of our results.<br><br>
 
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
-
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
+			After we updated them with our choice of SteadyCom, both our teams decided to hold fortnightly meetings, to update each other on our progress and help with any troubleshooting we might need. We also built a discord server to communicate efficiently and share code and other information regularly.<br><br>
+			
+			The INSA-UPS team shared their code for dynamic modeling with us early in the iGEM cycle, which gave us sufficient time to understand their workflow and modify it according to our needs, to model the <i>E. coli</i> component with <i>S. elongatus</i>. They continuously updated us with improvements that they were making to their model and made sure to promptly address any questions we had about the process.<br><br>
+			
+			Due to the devastating second wave of the COVID-19 pandemic in India, we were not able to access the lab until mid-August, and the INSA-UPS team was very helpful in providing us with parameters they had obtained from the lab that we needed to run our co-culture simulations.<br><br>
+			
+			The dynamic model became a crucial part of our modeling analysis. Even though SteadyCom and the dynamic model have a different set of assumptions about the co-culture, we found that most of the results from both simulations seemed to agree with each other, which only served to increase our confidence and act as a crucial benchmarking for our co-culture modeling analysis.
+			</p>
+			TWO IMAGES HERE
                     <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
+                    <p>While setting up our joint community metabolic model for SteadyCom, we realized that due to the lack of standardization and documentation on the topic, this was not as easy a process as we expected. This in fact led us to make a checklist laying out steps to build and troubleshoot a joint community model for SteadyCom, which we also submitted as a contribution that you can read about <a href="Contribution.html">here</a>. <br>
+			We put to use what we learned in the process to set up the joint model of <i>S. elongatus</i> and <i>S. cerevisiae</i> that would model the INSA-UPS team’s co-culture. We discovered that due to a different naming convention being used in the yeast model, many of the exchange reactions weren’t being recognized and had to be manually added. <br><br>
+			
+			We then ran SteadyCom using this joint model and were able to show that the yeast and cyanobacteria were able to grow together in a co-culture with CO2 as the only carbon source and produce the target chemicals in steady-state conditions. <br><br>
+			
+			We also simulated how varying sucrose productivity of cyanobacteria would affect the production of their end products using the SteadyCom model, and confirmed their result that increasing the sucrose production in cyanobacteria would not increase the yield of their target products from the co culture. <br><br>
+			
+			We had also planned on running simulations to optimize sucrose and butanol yields <i>in silico</i> in <i>S. elongatus</i> and <i>E. coli</i> respectively, by finding genes that upon either overexpression or deletion, gave a better yield of the target product. We provided the Toulouse team with the code for FSEOF (Flux Scanning based on Enforced Objective Flux) and OptKnock, customized for the incomplete S.elongatus UTEX 2973 model. We also provided them with the results we obtained from our cycles of runs of FSEOF and OptKnock, both of which you can find here.  (link cyano page to optimization bookmark). The results we obtained from our strain optimization models would be incredibly helpful to both teams if and when they go beyond the iGEM cycle to work on their projects further. </p>
                     <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
-
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+			<h1 id="3">Wetlab</h1>
+                    <hr><br>
+		    		<p>
+					Team INSA-UPS helped us get in touch with Dr. Michelle Liberton at Prof. Pakrasi’s Lab at the Washington University in St. Louis, who generously agreed to send us their wild-type and sucrose-exporting strains of S. elongatus UTEX 2973. <br><br>
+					
+					Acquiring these strains was crucial to the experimental aspect of our project. Due to COVID-19 pandemic, we had insufficient time in the lab to be able to both engineer our cyanobacteria and perform assays. Thus, it was very beneficial to us to have received pre-engineered strains of cyanobacteria to work with and make measurements.  <br><br>
+					
+					Over the course of our two months in the lab, we exchanged protocols on cryopreserving cyanobacteria, reviving them, and preparing BG-11 growth media with the INSA-UPS team. We also exchanged insights from the results of our respective preliminary growth curve assays and shared tips on how best to efficiently cultivate our cyanobacteria.
+					</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+					INSERT IMAGE
 
+					<h1 id="4">Human Practices</h1>
+                    <hr><br>
+		    		<p>We also collaborated with the INSA-UPS team on organizing the Cyanobacteria Symposium along with Team Stony Brook and Hong Kong HKU. The Symposium was a 2-day event with the aim of bringing together iGEM teams working on cyanobacteria along with the experts in the field so that teams could clarify their concerns about working with the chassis and get valuable feedback on their project ideas. The symposium included project presentations to judges, a wiki workshop hosted by our team, fun online games hosted by the INSA-UPS team, and much more. <br><br>
 
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					You can read more about the event on our collaborations page <a href="Collaborations.html">here</a>.
+					</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+					INSERT IMAGE
 				</div>
 			</div>
         </div>
