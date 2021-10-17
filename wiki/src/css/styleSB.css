@@ -1,3 +1,18 @@
+/* *{
+	font-family: ProximaNova !important
+}
+.section-1 h1{
+	font-family: LemonMilk !important
+} */
+@font-face {
+	font-family: 'LemonMilk';
+	src: url(../assets/fonts/LEMONMILK-Regular.otf);
+    }
+@font-face {
+	font-family: 'ProximaNova';
+	src: url(../assets/fonts/Proxima-Nova.otf);
+    }
+
 /* iGEM Topbar Fixes */
 .navbar {
   margin-top: 16px;
