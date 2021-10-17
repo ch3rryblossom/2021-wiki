@@ -4,6 +4,12 @@
 .section-1 h1{
 	font-family: LemonMilk;
 }
+
+h1 h2 h3 h4 h5 h6{
+	color: white !important;
+	font-family: ProximaNova !important;
+}
+
 @font-face {
 	font-family: 'LemonMilk';
 	src: url(../assets/fonts/LEMONMILK-Regular.otf);
