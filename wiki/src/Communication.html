@@ -161,25 +161,52 @@
                 <div class="content">
                     <h1 id="1">Introduction</h1>
                     <hr><br>
-		<div id="container" style="height: 600px; margin:auto;
-		border: solid 3px #6e7491;
-		border-top-left-radius: 37px 140px;
-		border-top-right-radius: 23px 130px;
-		border-bottom-left-radius: 110px 19px;
-		border-bottom-right-radius: 120px 24px;"></div>
 
 <br><br>
                     <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
 		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
                     <br>
-
-
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
+		    <style>
+			div.gallery{
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+			div.gallery a{
+			    margin: 20px 5px;
+			    transition: none;
+			    color: #2b2d31;
+			}
+			div.gallery a:after{
+			    background-color: #2b2d31;
+			}
+			div.gallery img{
+			    border-radius: 8%;
+			    max-width:230px;
+  max-height:200px;
+  width: auto;
+  height: auto;
+			}
+			div.gallery img:hover {
+      box-shadow: 0 0 11px rgba(230, 230, 230, 0.418); 
+    }
+		</style>
+		    <div class="gallery">
+			<a href="assets/HP/Selected art iGEM/20211010_195307 - Manvi Kapoor.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/20211010_195307___Manvi_Kapoor-ZCa2YHgs.jpg"></a>
+			<a href="assets/HP/Selected art iGEM/20210926_212117 - Darshan Patel.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/20210926_212117___Darshan_Patel-R5b2YHgs.jpg"></a>
+			<a href="assets/HP/Selected art iGEM/78739EE9-FFB6-43F6-8B80-4CCB32B261AA - Aarohi Joshi.jpeg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/78739EE9_FFB6_43F6_8B80_4CCB32B261AA___Aarohi_Joshi-web2YHgs.jpeg"></a>
+			<a href="assets/HP/Selected art iGEM/combating climate change and protecting the earth - Anshika Yadav.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/combating_climate_change_and_protecting_the_earth___Anshika_Yadav-6OU1YHgs.jpg"></a>
+			<a href="assets/HP/Selected art iGEM/IMG_20210915_171723_3 - Uday Parmar.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/IMG_20210915_171723_3___Uday_Parmar-77w1YHgs.jpg"></a>
+			<a href="assets/HP/Selected art iGEM/4981726f-fedd-4a45-9318-5e7a141f9171 - Navya jain.png"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/4981726f_fedd_4a45_9318_5e7a141f9171___Navya_jain-Z411YHgs.png"></a>
+			<a href="assets/HP/Selected art iGEM/final artwork rishab - Sidharth Babani.JPG"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/final_artwork_rishab___Sidharth_Babani-J9S1YHgs.JPG"></a>
+			<a href="assets/HP/Selected art iGEM/IMG_20210919_143919 - Diva Shah.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/IMG_20210919_143919___Diva_Shah-jeW1YHgs.jpg"></a>
+			<a href="assets/HP/Selected art iGEM/IMG_20210927_212248 - Tia Manghwani.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/IMG_20210927_212248___Tia_Manghwani-1421YHgs.jpg"></a>
+			<a href="assets/HP/Selected art iGEM/Screenshot_2021-09-29-22-30-20-1 - aksha Tetwala.png"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/Screenshot_2021_09_29_22_30_20_1___aksha_Tetwala-vE01YHgs.png"></a>
+			<a href="assets/HP/Selected art iGEM/Screenshot_20210927-134457_WhatsApp - Bushra Hawa.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/Screenshot_20210927_134457_WhatsApp___Bushra_Hawa-9py1YHgs.jpg"></a>
+			<a href="assets/HP/Selected art iGEM/Aarya Khandekar_G.K. Gurukul -7th - Aarya Khandekar.jpg"><img loading="lazy" src="assets/HP/Compressed-Selected art iGEM/Aarya_Khandekar_G.K._Gurukul__7th___Aarya_Khandekar-CKQ1YHgs.jpg"></a>
+		</div>
 
                     <h1 id="2">Section 2</h1>
                     <hr>
@@ -290,99 +317,7 @@
     <script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
-	<script src="js/anychart-core.min.js"></script>
-	<script src="js/anychart-data-adapter.min.js"></script>
-	<script src="js/anychart-graph.min.js"></script>
 
-	<script>
-		// create data
-	var data = {
-	  nodes: [
-	    {id: "Human Practices",
-		
-		},
-	    {id: "SDGs"},
-	    {id: "Stakeholders"},
-	    {id: "Experts"},
-	    {id: "Public Engagement"},
-	    {id: "Challenges"},
-	    {id: "Education"},
-	    {id: "Values"},
-	    {id: "Social"},
-	    {id: "Environmental"},
-	    {id: "Moral"},
-	    {id: "Scientific"},
-	    {id: "Communities"},
-	    {id: "Safety"},
-	    {id: "Impact"},
-	    {id: "Investigate"},
-	    {id: "Implement"}
-	  ],
-	  edges: [
-	    {from: "Human Practices", to: "SDGs"},
-	    {from: "Human Practices", to: "Stakeholders"},
-	    {from: "Human Practices", to: "Experts"},
-	    {from: "Human Practices", to: "Public Engagement"},
-	    {from: "Human Practices", to: "Challenges"},
-	    {from: "Human Practices", to: "Education"},
-	    {from: "Human Practices", to: "Values"},
-	    {from: "Human Practices", to: "Communities"},
-	    {from: "Human Practices", to: "Safety"},
-	    {from: "Human Practices", to: "Impact"},
-	    {from: "Human Practices", to: "Investigate"},
-	    {from: "Human Practices", to: "Investigate"},
-	    {from: "Human Practices", to: "Implement"},
-	    {from: "Values", to: "Social"},
-	    {from: "Values", to: "Environmental"},
-	    {from: "Values", to: "Moral"},
-	    {from: "Values", to: "Scientific"}
-	  ]
-	};
-	
-	// create a chart and set the data
-	var chart = anychart.graph(data);
-	
-	// set the container id
-	chart.container("container");
-	var credits = chart.credits();
-	credits.enabled(false);
-	 // access nodes
-	 var nodes = chart.nodes();
-
-// set the size of nodes
-nodes.normal().height(30);
-nodes.hovered().height(45);
-nodes.selected().height(45);
-
-// set the fill of nodes
-nodes.normal().fill("#28c79b");
-nodes.hovered().fill("white");
-nodes.selected().fill("#27668D");
-
-// set the stroke of nodes
-nodes.normal().stroke(null);
-nodes.hovered().stroke("#333333", 3);
-nodes.selected().stroke("#333333", 3);
-
-chart.nodes().labels().enabled(true);
-// configure the labels of nodes
-chart.nodes().labels().format("{%id}");
-chart.nodes().labels().fontSize(12);
-chart.nodes().labels().fontWeight(600);
-
-chart.edges().normal().stroke("#ffd73a");
-chart.edges().hovered().stroke("#FFFFFF");
-chart.edges().selected().stroke("#FFFFFF");
-
-chart.labels().fontColor("#FFFFFF");
-chart.labels().fontFamily("LemonMilk");
-
-chart.interactivity().scrollOnMouseWheel(false);
-chart.interactivity().zoomOnMouseWheel(false);
-	chart.background().fill("#2b2d31");
-	// initiate drawing the chart
-	chart.draw();
-	</script>
 	<!-- Gets the screenheight of each page for Scrollbar? -->
 	<script>
 		var screenheight = window.innerHeight,

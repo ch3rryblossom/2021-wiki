@@ -156,32 +156,15 @@
                     </nav>
                 </div>
             </div>
-	    <style>
-		    div.gallery{
-			    display: flex;
-			    flex-direction: row;
-			    flex-wrap: wrap;
-			    justify-content: space-around;
-			    align-items: center;
-		    }
-		    div.gallery a{
-			margin: 20px 5px;
-			transition: none;
-			color: #2b2d31;
-		    }
-		    div.gallery a:after{
-			background-color: #2b2d31;
-		    }
-		    div.gallery img{
-			border-radius: 8%;
-		    }
-		    div.gallery img:hover {
-  box-shadow: 0 0 11px rgba(230, 230, 230, 0.418); 
-}
-	    </style>
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
+			<div id="container" style="height: 600px; margin:auto;
+			border: solid 3px #6e7491;
+			border-top-left-radius: 37px 140px;
+			border-top-right-radius: 23px 130px;
+			border-bottom-left-radius: 110px 19px;
+			border-bottom-right-radius: 120px 24px;"></div>
                     <h1 id="1">Introduction</h1>
                     <hr><br><br><br>
 		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
@@ -189,15 +172,6 @@
                     <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
 		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
                     <br>
-		    <div class="gallery">
-			    <a href="http://placekitten.com/400/600"><img src="http://placekitten.com/200/300"></a>
-			    <a href="http://placekitten.com/400/600"><img src="http://placekitten.com/200/300"></a>
-			    <a href="http://placekitten.com/400/600"><img src="http://placekitten.com/200/300"></a>
-			    <a href="http://placekitten.com/400/600"><img src="http://placekitten.com/200/300"></a>
-			    <a href="http://placekitten.com/400/600"><img src="http://placekitten.com/200/300"></a>
-			    <a href="http://placekitten.com/400/600"><img src="http://placekitten.com/200/300"></a>
-		    </div>
-
 
                     <figure>
 
@@ -356,6 +330,99 @@
     <script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/anychart-core.min.js"></script>
+	<script src="js/anychart-data-adapter.min.js"></script>
+	<script src="js/anychart-graph.min.js"></script>
+
+	<script>
+		// create data
+	var data = {
+	  nodes: [
+	    {id: "Human Practices",
+		
+		},
+	    {id: "SDGs"},
+	    {id: "Stakeholders"},
+	    {id: "Experts"},
+	    {id: "Public Engagement"},
+	    {id: "Challenges"},
+	    {id: "Education"},
+	    {id: "Values"},
+	    {id: "Social"},
+	    {id: "Environmental"},
+	    {id: "Moral"},
+	    {id: "Scientific"},
+	    {id: "Communities"},
+	    {id: "Safety"},
+	    {id: "Impact"},
+	    {id: "Investigate"},
+	    {id: "Implement"}
+	  ],
+	  edges: [
+	    {from: "Human Practices", to: "SDGs"},
+	    {from: "Human Practices", to: "Stakeholders"},
+	    {from: "Human Practices", to: "Experts"},
+	    {from: "Human Practices", to: "Public Engagement"},
+	    {from: "Human Practices", to: "Challenges"},
+	    {from: "Human Practices", to: "Education"},
+	    {from: "Human Practices", to: "Values"},
+	    {from: "Human Practices", to: "Communities"},
+	    {from: "Human Practices", to: "Safety"},
+	    {from: "Human Practices", to: "Impact"},
+	    {from: "Human Practices", to: "Investigate"},
+	    {from: "Human Practices", to: "Investigate"},
+	    {from: "Human Practices", to: "Implement"},
+	    {from: "Values", to: "Social"},
+	    {from: "Values", to: "Environmental"},
+	    {from: "Values", to: "Moral"},
+	    {from: "Values", to: "Scientific"}
+	  ]
+	};
+	
+	// create a chart and set the data
+	var chart = anychart.graph(data);
+	
+	// set the container id
+	chart.container("container");
+	var credits = chart.credits();
+	credits.enabled(false);
+	 // access nodes
+	 var nodes = chart.nodes();
+
+// set the size of nodes
+nodes.normal().height(30);
+nodes.hovered().height(45);
+nodes.selected().height(45);
+
+// set the fill of nodes
+nodes.normal().fill("#28c79b");
+nodes.hovered().fill("white");
+nodes.selected().fill("#27668D");
+
+// set the stroke of nodes
+nodes.normal().stroke(null);
+nodes.hovered().stroke("#333333", 3);
+nodes.selected().stroke("#333333", 3);
+
+chart.nodes().labels().enabled(true);
+// configure the labels of nodes
+chart.nodes().labels().format("{%id}");
+chart.nodes().labels().fontSize(12);
+chart.nodes().labels().fontWeight(600);
+
+chart.edges().normal().stroke("#ffd73a");
+chart.edges().hovered().stroke("#FFFFFF");
+chart.edges().selected().stroke("#FFFFFF");
+
+chart.labels().fontColor("#FFFFFF");
+chart.labels().fontFamily("LemonMilk");
+
+chart.interactivity().scrollOnMouseWheel(false);
+chart.interactivity().zoomOnMouseWheel(false);
+	chart.background().fill("#2b2d31");
+	// initiate drawing the chart
+	chart.draw();
+	</script>
 
 
 	<!-- Gets the screenheight of each page for Scrollbar? -->
