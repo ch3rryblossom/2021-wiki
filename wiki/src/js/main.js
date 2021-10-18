@@ -44,23 +44,19 @@ function topFunction() {
 
 //////////// Scroll Indicator @Namasi22
 
-	window.addEventListener('scroll',
-			moveScrollIndicator);
+window.addEventListener('scroll',
+moveScrollIndicator);
 
-	const scrollIndicatorElt =
-		document.getElementById('scrollIndicator');
+const scrollIndicatorElt =
+document.getElementById('scrollIndicator');
 
-	const maxHeight =
-		window.document.body.scrollHeight
-		- window.innerHeight;
+function moveScrollIndicator(e) {
+  const percentage =
+  ((window.scrollY) / (pageheight - screenheight))* 35;
 
-	function moveScrollIndicator(e) {
-		const percentage =
-			((window.scrollY) / (pageheight - screenheight))* 35;
-
-		scrollIndicatorElt.style.height
-			= percentage + '%';
-	}
+scrollIndicatorElt.style.height
+= percentage + '%';
+}
 //////////// End scrollbar
 
 //////////// Carousel/Slideshow
