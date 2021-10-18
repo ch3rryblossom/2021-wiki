@@ -51,12 +51,27 @@ const scrollIndicatorElt =
 document.getElementById('scrollIndicator');
 
 function moveScrollIndicator(e) {
-  const percentage =
-  ((window.scrollY) / (pageheight - screenheight))* 35;
-
-scrollIndicatorElt.style.height
-= percentage + '%';
-}
+  if($('#cyano').hasClass('active')) {
+    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 15;
+    scrollIndicatorElt.style.height = percentage + '%';
+  }
+  else if($('#ecoli').hasClass('active')) {
+    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 20;
+    scrollIndicatorElt.style.height = percentage + '%';
+  }
+  else if($('#Coculture').hasClass('active')) {
+    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 20;
+    scrollIndicatorElt.style.height = percentage + '%';
+  }
+  else if($('#overview').hasClass('active')) {
+    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
+    scrollIndicatorElt.style.height = percentage + '%';
+  }
+  else {
+    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
+    scrollIndicatorElt.style.height = percentage + '%';
+  }
+};
 //////////// End scrollbar
 
 //////////// Carousel/Slideshow

@@ -2627,7 +2627,7 @@
 						<!-------------------------------------- END OF E . COLI TAB --------------------------------------->
 
 
-						
+
 
 						<!------------------------------------------- CO CULTURE TAB ------------------------------------------------->
 						<div class="tab-pane fade" id="Coculture" role="tabpanel" aria-labelledby="coculture-tab">
@@ -3139,34 +3139,6 @@
 						<script>
 							var backtotopheight=pageheight/4.65
 						</script>
-
-
-						<script>
-							window.addEventListener('scroll',
-								moveScrollIndicator);
-
-							const scrollIndicatorElt = document.getElementById('scrollIndicator');
-
-							function moveScrollIndicator(e) {
-								if($('#cyano').hasClass('active')) {
-									const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 15;
-									scrollIndicatorElt.style.height = percentage + '%';
-								}
-								else if($('#ecoli').hasClass('active')) {
-									const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 20;
-									scrollIndicatorElt.style.height = percentage + '%';
-								}
-								else if($('#Coculture').hasClass('active')) {
-									const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 20;
-									scrollIndicatorElt.style.height = percentage + '%';
-								}
-								else if($('#overview').hasClass('active')) {
-									const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
-									scrollIndicatorElt.style.height = percentage + '%';
-								}
-							}
-						</script>
-
 
 						<!-- END OF SCROLL BAR -->
 
