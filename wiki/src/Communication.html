@@ -161,7 +161,12 @@
                 <div class="content">
                     <h1 id="1">Introduction</h1>
                     <hr><br>
-		<div id="container" style="height: 600px; margin:auto;"></div>
+		<div id="container" style="height: 600px; margin:auto;
+		border: solid 3px #6e7491;
+		border-top-left-radius: 37px 140px;
+		border-top-right-radius: 23px 130px;
+		border-bottom-left-radius: 110px 19px;
+		border-bottom-right-radius: 120px 24px;"></div>
 
 <br><br>
                     <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
@@ -293,23 +298,44 @@
 		// create data
 	var data = {
 	  nodes: [
-	    {id: "Richard"},
-	    {id: "Larry"},
-	    {id: "Marta"},
-	    {id: "Jane"},
-	    {id: "Norma"},
-	    {id: "Frank"},
-	    {id: "Brett"}
+	    {id: "Human Practices",
+		
+		},
+	    {id: "SDGs"},
+	    {id: "Stakeholders"},
+	    {id: "Experts"},
+	    {id: "Public Engagement"},
+	    {id: "Challenges"},
+	    {id: "Education"},
+	    {id: "Values"},
+	    {id: "Social"},
+	    {id: "Environmental"},
+	    {id: "Moral"},
+	    {id: "Scientific"},
+	    {id: "Communities"},
+	    {id: "Safety"},
+	    {id: "Impact"},
+	    {id: "Investigate"},
+	    {id: "Implement"}
 	  ],
 	  edges: [
-	    {from: "Richard", to: "Larry"},
-	    {from: "Richard", to: "Marta"},
-	    {from: "Larry",   to: "Marta"},
-	    {from: "Marta",   to: "Jane"},
-	    {from: "Jane",    to: "Norma"},
-	    {from: "Jane",    to: "Frank"},
-	    {from: "Jane",    to: "Brett"},
-	    {from: "Brett",   to: "Frank"}
+	    {from: "Human Practices", to: "SDGs"},
+	    {from: "Human Practices", to: "Stakeholders"},
+	    {from: "Human Practices", to: "Experts"},
+	    {from: "Human Practices", to: "Public Engagement"},
+	    {from: "Human Practices", to: "Challenges"},
+	    {from: "Human Practices", to: "Education"},
+	    {from: "Human Practices", to: "Values"},
+	    {from: "Human Practices", to: "Communities"},
+	    {from: "Human Practices", to: "Safety"},
+	    {from: "Human Practices", to: "Impact"},
+	    {from: "Human Practices", to: "Investigate"},
+	    {from: "Human Practices", to: "Investigate"},
+	    {from: "Human Practices", to: "Implement"},
+	    {from: "Values", to: "Social"},
+	    {from: "Values", to: "Environmental"},
+	    {from: "Values", to: "Moral"},
+	    {from: "Values", to: "Scientific"}
 	  ]
 	};
 	
@@ -347,6 +373,9 @@ chart.nodes().labels().fontWeight(600);
 chart.edges().normal().stroke("#ffd73a");
 chart.edges().hovered().stroke("#FFFFFF");
 chart.edges().selected().stroke("#FFFFFF");
+
+chart.labels().fontColor("#FFFFFF");
+chart.labels().fontFamily("LemonMilk");
 	chart.background().fill("#2b2d31");
 	// initiate drawing the chart
 	chart.draw();
