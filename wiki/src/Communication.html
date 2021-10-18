@@ -377,7 +377,8 @@ chart.edges().selected().stroke("#FFFFFF");
 chart.labels().fontColor("#FFFFFF");
 chart.labels().fontFamily("LemonMilk");
 
-chart.interactivity().enabled(false);
+chart.interactivity().scrollOnMouseWheel(false);
+chart.interactivity().zoomOnMouseWheel(false);
 	chart.background().fill("#2b2d31");
 	// initiate drawing the chart
 	chart.draw();
