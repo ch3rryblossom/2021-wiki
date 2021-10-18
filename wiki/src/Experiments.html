@@ -141,784 +141,896 @@
 
     <div class="second-div container-fluid">
         <div class="row">
+
+
             <!-- SIDENAV -->
             <div class="col-lg-3 col-md-3">
-                <div class="sidenav">
+
+				<!-- E COLI SIDEBAR -->
+                <div class="sidenav" id="ecoli-wet-side" style="top: 4%">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#e1">Glycerol stocks of KJK01</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#e2">Genomic DNA extraction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#e3">Confirmation of butanol producing genes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#e4">Gradient PCR</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#e5">NMR confirmation of butanol production</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#e6">Making KJK01 cells electrocompetent</a></li>
+							<li class="nav-item"><a class="nav-link" href="#e7">Transformation of KJK01 with pCSCX plasmid</a></li>
+							<li class="nav-item"><a class="nav-link" href="#e8">Glycerol stocks of pCSCX-KJK01</a></li>
+							<li class="nav-item"><a class="nav-link" href="#e9">MIC Assay for KJK01</a></li>
+							<li class="nav-item"><a class="nav-link" href="#e10">Growth curve in LB</a></li>
                         </ul>
                     </nav>
                 </div>
+				<!-- END OF E COLI SIDEBAR-->
+
+
+				<!-- CYANOBACTERIA SIDEBAR-->
+				<div class="sidenav" id="cyano-wet-side" style="visibility: hidden;">
+					<nav>
+						<ul id="sidenav-id">
+							<li class="nav-item"><a class="nav-link" href="c1">Preparation of BG-11</a></li>
+							<li class="nav-item"><a class="nav-link" href="c2">Revival of cyanobacteria strains</a></li>
+							<li class="nav-item"><a class="nav-link" href="c3">Making glycerol and DMSO stocks</a></li>
+							<li class="nav-item"><a class="nav-link" href="c4">Making plates from DMSO stocks</a></li>
+							<li class="nav-item"><a class="nav-link" href="c5">Cyanobacteria growth curve under salt stress</a></li>
+							<li class="nav-item"><a class="nav-link" href="c6">Sucrose assay</a></li>
+							<li class="nav-item"><a class="nav-link" href="c7">Cyanobacteria growth curve under high carbon</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- END OF CYANOBACTERIA SIDEBAR -->
+
+
+				<!-- CO CULTURE SIDEBAR -->
+				<div class="sidenav" id="coculture-wet-side" style="visibility: hidden;">
+					<nav>
+						<ul id="sidenav-id">
+							<li class="nav-item"><a class="nav-link" href="cc1">Transformation of MG1655 with pKD4</a></li>
+							<li class="nav-item"><a class="nav-link" href="cc2">Preparation of CoBG-11</a></li>
+							<li class="nav-item"><a class="nav-link" href="cc3">Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose</a></li>
+							<li class="nav-item"><a class="nav-link" href="cc4">Sucrose assay</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- END OF CO CULTURE SIDEBAR -->
+
+
             </div>
+			<!-- END OF SIDENAV -->
+
+
+
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-					<br><br>
-					<p>Given below are the experiments we performed in our wet lab cycle of iGEM 2021</p>
 
-					<!-- START OF E COLI-->
-                    <h1><i>E. coli</i></h1>
-                    <hr><br><br><br>
-
-					<!-- GLYCEROL STOCKS OF KJK01 -->
-					<h2 class="h2">Glycerol stocks of KJK01</h2>
-					<br><br>
-					<h3 class="h3"> Objective </h2>
-					<p>Preparation of glycerol stocks of the E. coli KJK01 strain.</p>
-					<br>
-					<h3 class="h3">Working Principle</h2>
-					<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4°C. Long term storage is best at temperatures of the range of -80°C. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures some percentage of glycerol is added to the media. Cells covered in glycerol are safe to be stored at such temperatures because glycerol is an anti-freezing agent.</p>
-					<br>
-					<h3 class="h3">Key Reagents/Apparatus</h2>
-					<ul class="b">
-						<li style="padding-left: 1em;"> 1X autoclaved LB</li>
-						<li style="padding-left: 1em;"> 50% autoclaved glycerol</li>
-						<br>
-						<li style="padding-left: 1em;">Cryovials</li> 
+					<!-- Tabs -->
+					<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="ecoli-wet-tab" data-bs-toggle="tab" data-bs-target="#ecoli-wet" type="button" role="tab" aria-controls="ecoli-wet" aria-selected="true">E. coli</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="cyano-wet-tab" data-bs-toggle="tab" data-bs-target="#cyano-wet" type="button" role="tab" aria-controls="cyano-wet" aria-selected="false">Cyanobacteria</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="coculture-wet-tab" data-bs-toggle="tab" data-bs-target="#coculture-wet"  type="button" role="tab" aria-controls="coculture-wet" aria-selected="false">Co-culture</button>
+						</li>
+					<a id="e1"></a> <a id="c1"></a> <a id="cc1"></a>
 					</ul>
-					<br>
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/glycerol-stock-preparation-byyppxvn">here</a></p>
-					<br><br>
-
-					<!-- SLIDE SHOW-->
-					<div id="gylcerolkjk01slides" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-indicators" style="bottom:-50px;">
-						  <button type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						  <button type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide-to="1" aria-label="Slide 2"></button>
-						  <button type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide-to="2" aria-label="Slide 3"></button>
-						</div>
-						<div style= "margin-bottom:50px; display:flex; flex-direction:row; align-items: center;" class="carousel-inner">
-							<div class="carousel-item active graph"> 
-								<img src="assets/WetlabPhotos/Glycerol_stocks_1.jpeg" alt="Best 5 over-expression targets in one graph" width=300>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/Glycerol_stocks_1.jpeg" alt="Next best 5 over-expression targets in one graph" width=300>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/Glycerol_stocks_3.jpeg" alt="Third best 5 over-expression targets in one graph" width=535>
-							</div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide="prev">
-						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide="next">
-						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Next</span>
-						</button>
-					</div>
-					<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
-						<h3 id="slidetext"></h3>
-					</div>
-					<!-- END OF SLIDE SHOW -->
-					<br><hr width="50%"><br><br>
-					<!-- END OF GLYCEROL STOCKS OF KJK01-->
+					<!-- End of Tabs -->
 
 
+					<div class="tab-content" id="myTabContent">
 
-					<!-- GDNA EXTRACTION -->
-					<h2 class="h2">Genomic DNA extraction</h2>
-					<h3>HAVE TO ADD</h3>
-					<br><br>
-					<h3>Objective</h3>
-					<p> </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p> </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;"> </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width="50%"><br><br>
-					<!--END OF GDNA-->
-
-
-
-
-					<!-- BUTANOL PRODUCING GENES -->
-					<h2 class="h2">Confirmation of butanol producing genes</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Confirmation of presence of butanol producing genes in KJK01 strain using PCR and gel electrophoresis </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p> Butanol producing ability of KJK01 is due to the presence of the cassette of genes inserted into the genome of the strain. Since the cassette has been added as one single component, verification of any component from the cassette will verify the presence of the butanol producing genes in KJK01.</p>
-					<p>Primers against the HBD-CRT genes (sequence provided by Dr. Syed Shams Yazdani, ICGEB, Delhi) were used to check for the presence of these 2 genes from the genomic DNA of KJK01.</p>
-					<p>An amplicon of length of ~750bp from the PCR would verify the presence of HBD-CRT genes.</p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">Pfu polymerase </li>
-						<li style="padding-left: 1em;">Pfu buffer </li>
-						<li style="padding-left: 1em;">dNTP mix </li>
-						<li style="padding-left: 1em;">Primers </li>
-						<li style="padding-left: 1em;">Agarose </li>
-						<li style="padding-left: 1em;">1X TAE </li>
-						<li style="padding-left: 1em;">EtBr solution </li>
-						<br>
-						<li style="padding-left: 1em;">Thermocycler </li>
-						<li style="padding-left: 1em;">Gel electrophoresis apparatus </li>
-						<li style="padding-left: 1em;">Gel dock </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/pcr-and-gel-electropheresis-bxempjc6">here</a></p>
-					<br><hr width="50%"><br><br>
-					<!-- END OF BUTANOL PRODUCING GENES-->	
-					
-
-
-
-					<!-- GPCR -->
-					<h2 class="h2">Gradient PCR</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p> </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;"> </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- END OF GPCR -->
-
-
-
-
-					<!-- NMR -->
-					<h2 class="h2">NMR confirmation of butanol production</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Confirmation of production of butanol by E. coli KJK01 using NMR spectroscopy </p>
-					<br>
-
-					<h3>Working principle <a href=""><sup>[1]</sup></a></h3>
-					<p>Nuclear magnetic resonance (NMR) spectroscopy, is a spectroscopic technique to observe local magnetic fields around atomic nuclei based on their absorption of electromagnetic radiation in the radio-frequency region 4 to 900 MHz. The principle behind NMR is that many nuclei have a spin and all nuclei are electrically charged. If an external magnetic field is applied, energy transfer is possible between the base energy to a higher energy level (generally a single energy gap). The energy transfer takes place at a wavelength that corresponds to appropriate radio frequencies and when the spin returns to its base level, energy is emitted at the same frequency. The signal that matches this transfer is measured and processed in order to yield an NMR spectrum for the nucleus concerned. Fields are highly characteristic of individual compounds. NMR also provides detailed information about the structure, dynamics, reaction state, and chemical environment of molecules. </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">Supernatants of IPTG induced E. coli KJK01 2o culture </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<ol class="a">
-						<li style="padding-left: 1em;">Inoculate 1° culture of KJK01 in 10 mL 1X LB and leave it overnight in an incubator at 37°C and 180 rpm.</li>
-						<li style="padding-left: 1em;">The next morning, inoculate 2° cultures of KJK01 in 1X LB and 1X TB and place in the incubator at 37°C and 180 rpm until it hits 0.6 OD<sub>600</sub>.</li>
-						<ul class="c">
-							<li style="padding-left: 1em;">We inoculated 6 2° cultures (3 LB and 3 TB) to confirm if KJK01 grew better in LB or TB (The secondary culture was originally cultured in TB expecting better growth<a href=""><sup>[1]</sup></a>)</li>
-						</ul>
-						<li style="padding-left: 1em;"> At OD 0.6, induce cultures with appropriate concentrations of IPTG and leave it in the incubator overnight at 37°C and 180 rpm.</li>
-						<ul class="c">
-							<li style="padding-left: 1em;">The 6 cultures are:</li>
-							<ul class="d">
-								<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X LB + 0 IPTG </li> 
-								<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X LB + 1 µL (0.1 mM) IPTG </li> 
-								<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X LB + 2 µL (0.2 mM) IPTG </li> 
-								<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X TB + 0 IPTG </li> 
-								<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X TB + 1 µL (0.1 mM) IPTG </li> 
-								<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X TB + 2 µL (0.2 mM) IPTG </li> 
+						<!------------------------------------- START OF E COLI------------------------------------------>
+						<div class="tab-pane fade show active" id="ecoli-wet" role="tabpanel" aria-labelledby="ecoli-wet-tab">
+							
+							<!-- GLYCEROL STOCKS OF KJK01 -->
+							<br><br><br>
+							<h2 class="h2">Glycerol stocks of KJK01</h2>
+							<br><br>
+							<h3 class="h3"> Objective </h2>
+							<p>Preparation of glycerol stocks of the E. coli KJK01 strain.</p>
+							<br>
+							<h3 class="h3">Working Principle</h2>
+								<p></p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4oC. Long term storage is best at temperatures of the range of -80oC. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures some percentage of glycerol is added to the media. Cells covered in glycerol are safe to be stored at such temperatures because glycerol is an anti-freezing agent.  (<a href="https://www.addgene.org/protocols/create-glycerol-stock/">https://www.addgene.org/protocols/create-glycerol-stock/</a>)
+							<br>
+							<h3 class="h3">Key Reagents/Apparatus</h2>
+							<ul class="b">
+								<li style="padding-left: 1em;"> 1X autoclaved LB</li>
+								<li style="padding-left: 1em;"> 50% autoclaved glycerol</li>
+								<br>
+								<li style="padding-left: 1em;">Cryovials</li> 
 							</ul>
-						</ul>
-						<li style="padding-left: 1em;"> The next morning, draw 1 mL sample from each culture and centrifuge at 4oC and 5000 rpm for 15 minutes.</li>
-						<li style="padding-left: 1em;">Decant the solution and submit supernatant for NMR analysis.</li>
-					</ol>
-					<br>
-					<p>Soumya Sahoo, a PhD student at the NMR Lab of IISER Pune helped us with the NMR analysis of our samples.</p>
-					<br><hr width="50%"><br><br>
-					<!--END OF NMR -->
+							<br>
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/glycerol-stock-preparation-byyppxvn">here</a></p>
+							<br><br>
+
+							<!-- SLIDE SHOW-->
+							<div id="gylcerolkjk01slides" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-indicators" style="bottom:-50px;">
+								<button type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+								</div>
+								<div style= "margin-bottom:50px; display:flex; flex-direction:row; align-items: center;" class="carousel-inner">
+									<div class="carousel-item active graph"> 
+										<img src="assets/WetlabPhotos/Glycerol_stocks_1.jpeg" alt="Best 5 over-expression targets in one graph" width=300>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/Glycerol_stocks_1.jpeg" alt="Next best 5 over-expression targets in one graph" width=300>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/Glycerol_stocks_3.jpeg" alt="Third best 5 over-expression targets in one graph" width=535>
+									</div>
+								</div>
+								<button class="carousel-control-prev" type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button" data-bs-target="#gylcerolkjk01slides" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
+								<h3 id="slidetext"></h3>
+							</div>
+							<!-- END OF SLIDE SHOW -->
+							<a id="e2"></a><br><hr width="50%"><br><br>
+							<!-- END OF GLYCEROL STOCKS OF KJK01-->
+
+
+
+							<!-- GDNA EXTRACTION -->
+							<h2 class="h2">Genomic DNA extraction</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>To extract the genomic DNA of E. coli KJK01 to verify the presence of the butanol production pathway genes, HBD-CRT. </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>To extract the genomic DNA from the E. coli cells, the cell membrane is first lysed using SDS to release cellular contents. Proteins and RNA from the cells are destroyed using Proteinase K and RNase A respectively. This leaves behind only DNA, which is precipitated in isopropanol. </p>
+							<p>Once the gDNA has been extracted, it can be run on an agarose gel to verify its presence.</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">Sodium dodecyl sulfate (SDS) </li>
+								<li style="padding-left: 1em;">Proteinase K </li>
+								<li style="padding-left: 1em;">RNase A </li>
+								<li style="padding-left: 1em;">Isopropanol </li>
+								<li style="padding-left: 1em;">Ethanol </li>
+								<li style="padding-left: 1em;">Phenol-chloroform </li>
+								<li style="padding-left: 1em;">Double distilled water (MilliQ water)</li>
+								<li style="padding-left: 1em;">Sodium Acetate </li>								
+								<li style="padding-left: 1em;">TAE buffer </li>
+								<li style="padding-left: 1em;">Ethidium Bromide </li>
+								<br>
+								<li style="padding-left: 1em;">DNA Ladder </li>
+								<li style="padding-left: 1em;">Centrifuge</li>
+								<li style="padding-left: 1em;">Thermocycler </li>
+								<li style="padding-left: 1em;">Gel Electrophoresis Machine </li>
+								<li style="padding-left: 1em;">Gel imager </li>
+								<li style="padding-left: 1em;">NanoDrop </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="http://dx.doi.org/10.17504/protocols.io.bxeupjew">here</a></p>
+							<a id="e3"></a><br><hr width="50%"><br><br>
+							<!--END OF GDNA-->
 
 
 
 
-					<!-- ELECTROCOMPETENT -->
-					<h2 class="h2">Making KJK01 cells electrocompetent</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> Preparation of electro-competent cells of KJK01</p>
-					<br>
+							<!-- BUTANOL PRODUCING GENES -->
+							<h2 class="h2">Confirmation of butanol producing genes</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Confirmation of presence of butanol producing genes in KJK01 strain using PCR and gel electrophoresis </p>
+							<br>
 
-					<h3>Working principle</h3>
-					<p> To perform transformation on any cells i.e. for cells to take up DNA from the outside environment, the cells need to be competent. Without competence the cells won’t be able to take in DNA. Competent cells can be chemically or electrically stimulated to open up the cell pores and intake the DNA.</p>
-					<p> Electro-competent cells can be transformed using an electrical pulse. When electro-competent cells are pulsed, the pulse will rearrange the lipid bilayer to form a gap for the intake of the plasmid [<a href="https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells">https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells</a>].</p>
-					<p>Electrocompetent cells preparation involves washing the grown cells serially using water and glycerol multiple times. These washes are important to remove all the salts around the cells otherwise while providing a pulse it will spark and damage the apparatus and the cells as well. Finally competent cells are mixed in dilute glycerol solution, flash frozen and stored at -80°C.</p>
-					<br>
+							<h3>Working principle</h3>
+							<p>Butanol producing ability of KJK01 is due to the presence of the cassette of genes inserted into the genome of the strain. Since the cassette has been added as one single component, verification of any component from the cassette will verify the presence of the butanol producing genes in KJK01.</p>
+							<p>Primers against the HBD-CRT genes (sequence provided by Dr. Syed Shams Yazdani, ICGEB, Delhi) were used to check for the presence of these 2 genes from the genomic DNA of KJK01.</p>
+							<p>An amplicon of length of ~750bp from the PCR would verify the presence of HBD-CRT genes.</p>
+							<p>An amplicon of length of ~750bp from the PCR would verify the presence of HBD-CRT genes.</p>
+							<br>
 
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">2X autoclaved LB </li>
-						<li style="padding-left: 1em;">10% autoclaved glycerol </li>
-						<br>
-						<li style="padding-left: 1em;">Centrifuge</li>
-						<li style="padding-left: 1em;">Liq. Nitrogen </li>
-					</ul>
-					<br>
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">Pfu polymerase </li>
+								<li style="padding-left: 1em;">Pfu buffer </li>
+								<li style="padding-left: 1em;">dNTP mix </li>
+								<li style="padding-left: 1em;">Primers </li>
+								<li style="padding-left: 1em;">Agarose </li>
+								<li style="padding-left: 1em;">1X TAE </li>
+								<li style="padding-left: 1em;">EtBr solution </li>
+								<br>
+								<li style="padding-left: 1em;">Thermocycler </li>
+								<li style="padding-left: 1em;">Gel electrophoresis apparatus </li>
+								<li style="padding-left: 1em;">Gel dock </li>
+							</ul>
+							<br>
 
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/making-electro-competent-cells-bxxhppj6">here</a></p>
-					<br><hr width="50%"><br><br>
-					<!--END OF ELECTROCOMPETENT -->
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/pcr-and-gel-electropheresis-bxempjc6">here</a></p>
+							<a id="e4"></a><br><hr width="50%"><br><br>
+							<!-- END OF BUTANOL PRODUCING GENES-->	
+							
 
 
 
-					<!-- KJK01 PCSCX -->
-					<h2 class="h2">Transformation of KJK01 with pCSCX plasmid</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Transformation of E. coli KJK01 with pCSCX plasmid and then transformation of MG1655 with pKD4 </p>
-					<br>
+							<!-- GPCR -->
+							<h2 class="h2">Gradient PCR</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>To perform a gradient PCR to find the best annealing temperature as well as the best amount of DMSO to add to obtain proper amplification of the gene of interest. </p>
+							<br>
 
-					<h3>Working principle <a><sup>[2]</sup></a></h3>
-					<p>Transformation via electroporation is a physical transformation method that uses an electrical pulse to create temporary pores in cell membranes through which substances like nucleic acids can pass into cells. Host cells and nucleic acids are suspended in a conductive solution, and an electrical circuit is closed around the mixture. An electrical pulse at an optimized voltage lasting a few microseconds to a millisecond is discharged through the cell suspension, which disturbs the phospholipid bilayer of the membrane and results in the formation of temporary pores. The electric potential across the cell membrane simultaneously rises to allow charged molecules like DNA to be driven across the membrane through the pores. This method can transform a large number of cells in a short period of time as it is easy and rapid. </p>
-					<br>
+							<h3>Working principle</h3>
+							<p>It is an addition to the principles of PCR. The newer thermo cyclers have the ability to provide different temperatures to different tubes in the same run. This is exploited to vary the annealing temperature and observe which of the set temperatures is best suited for annealing and thus gives best amplification.</p>
+							<p>So, when this gradient of temperatures is set up, each column in the thermocycler would have a different temperature and the tubes can be kept in the columns that correspond to the required temperatures. This is performed to avoid running 5 different PCRs and obtain results for all the different temperatures together in the same run.</p>
+							<p>DMSO is a reagent which prevents the renaturation of the denatured single strands of DNA. Thus, it helps in amplification of the gene of interest.</p>
+							<br>
 
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">Electrocompetent cells </li>
-						<li style="padding-left: 1em;">Plasmid DNA </li>
-						<li style="padding-left: 1em;">2X LB </li>
-						<li style="padding-left: 1em;">MilliQ water </li>
-						<br>
-						<li style="padding-left: 1em;">BioRad Pulser </li>
-					</ul>
-					<br>
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;"> </li>
+							</ul>
+							<br>
 
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/transformation-of-e-coli-with-plasmid-byz3px8n">here</a></p>
-					<br><br>
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://dx.doi.org/10.17504/protocols.io.by6kpzcw">here</a></p>
+							<a id="e5"></a><br><hr width=50%><br><br>
+							<!-- END OF GPCR -->
 
-					<!-- SLIDE SHOW -->
-					<div id="transformationslides" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-indicators" style="bottom:-50px;">
-						  <button type="button" data-bs-target="#transformationslides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						  <button type="button" data-bs-target="#transformationslides" data-bs-slide-to="1" aria-label="Slide 2"></button>
-						  <button type="button" data-bs-target="#transformationslides" data-bs-slide-to="2" aria-label="Slide 3"></button>
-						  <button type="button" data-bs-target="#transformationslides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+
+
+							<!-- NMR -->
+							<h2 class="h2">NMR confirmation of butanol production</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Confirmation of production of butanol by E. coli KJK01 using NMR spectroscopy </p>
+							<br>
+
+							<h3>Working principle <a href=""><sup>[1]</sup></a></h3>
+							<p>Nuclear magnetic resonance (NMR) spectroscopy, is a spectroscopic technique to observe local magnetic fields around atomic nuclei based on their absorption of electromagnetic radiation in the radio-frequency region 4 to 900 MHz. The principle behind NMR is that many nuclei have a spin and all nuclei are electrically charged. If an external magnetic field is applied, energy transfer is possible between the base energy to a higher energy level (generally a single energy gap). The energy transfer takes place at a wavelength that corresponds to appropriate radio frequencies and when the spin returns to its base level, energy is emitted at the same frequency. The signal that matches this transfer is measured and processed in order to yield an NMR spectrum for the nucleus concerned. Fields are highly characteristic of individual compounds. NMR also provides detailed information about the structure, dynamics, reaction state, and chemical environment of molecules.</p>
+							<p>We used proton NMR for the detection of butanol in the supernatant of our E. coli KJK01 cultures, alongside PCR confirmation of butanol producing genes.</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">Supernatants of IPTG induced E. coli KJK01 2° culture </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<ol class="a">
+								<li style="padding-left: 1em;">Inoculate 1° culture of KJK01 in 10 mL 1X LB and leave it overnight in an incubator at 37°C and 180 rpm.</li>
+								<li style="padding-left: 1em;">The next morning, inoculate 2° cultures of KJK01 in 1X LB and 1X TB and place in the incubator at 37°C and 180 rpm until it hits 0.6 OD<sub>600</sub>.</li>
+								<ul class="c">
+									<li style="padding-left: 1em;">We inoculated 6 2° cultures (3 LB and 3 TB) to confirm if KJK01 grew better in LB or TB (The secondary culture was originally cultured in TB expecting better growth<a href=""><sup>[1]</sup></a>)</li>
+								</ul>
+								<li style="padding-left: 1em;"> At OD 0.6, induce cultures with appropriate concentrations of IPTG and leave it in the incubator overnight at 37°C and 180 rpm.</li>
+								<ul class="c">
+									<li style="padding-left: 1em;">The 6 cultures are:</li>
+									<ul class="d">
+										<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X LB + 0 IPTG </li> 
+										<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X LB + 1 µL (0.1 mM) IPTG </li> 
+										<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X LB + 2 µL (0.2 mM) IPTG </li> 
+										<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X TB + 0 IPTG </li> 
+										<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X TB + 1 µL (0.1 mM) IPTG </li> 
+										<li style="padding-left: 1em;">100 µL 1° culture + 10 mL 1X TB + 2 µL (0.2 mM) IPTG </li> 
+									</ul>
+								</ul>
+								<li style="padding-left: 1em;"> The next morning, draw 1 mL sample from each culture and centrifuge at 4oC and 5000 rpm for 15 minutes.</li>
+								<li style="padding-left: 1em;">Decant the solution and submit supernatant for NMR analysis.</li>
+							</ol>
+							<br>
+							<p>Soumya Sahoo, a PhD student at the NMR Lab of IISER Pune helped us with the NMR analysis of our samples.</p>
+							<a id="e6"></a><br><hr width="50%"><br><br>
+							<!--END OF NMR -->
+
+
+
+
+							<!-- ELECTROCOMPETENT -->
+							<h2 class="h2">Making KJK01 cells electrocompetent</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p> Preparation of electro-competent cells of KJK01</p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p> To perform transformation on any cells i.e. for cells to take up DNA from the outside environment, the cells need to be competent. Without competence the cells won’t be able to take in DNA. Competent cells can be chemically or electrically stimulated to open up the cell pores and intake the DNA.</p>
+							<p> Electro-competent cells can be transformed using an electrical pulse. When electro-competent cells are pulsed, the pulse will rearrange the lipid bilayer to form a gap for the intake of the plasmid [<a href="https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells">https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells</a>].</p>
+							<p>Electrocompetent cells preparation involves washing the grown cells serially using water and glycerol multiple times. These washes are important to remove all the salts around the cells otherwise while providing a pulse it will spark and damage the apparatus and the cells as well. Finally competent cells are mixed in dilute glycerol solution, flash frozen and stored at -80°C.</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">2X autoclaved LB </li>
+								<li style="padding-left: 1em;">10% autoclaved glycerol </li>
+								<br>
+								<li style="padding-left: 1em;">Centrifuge</li>
+								<li style="padding-left: 1em;">Liq. Nitrogen </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/making-electro-competent-cells-bxxhppj6">here</a></p>
+							<a id="e7"></a><br><hr width="50%"><br><br>
+							<!--END OF ELECTROCOMPETENT -->
+
+
+
+							<!-- KJK01 PCSCX -->
+							<h2 class="h2">Transformation of KJK01 with pCSCX plasmid</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Transformation via electroporation is a physical transformation method that uses an electrical pulse to create temporary pores in cell membranes through which substances like nucleic acids can pass into cells. Host cells and nucleic acids are suspended in a conductive solution, and an electrical circuit is closed around the mixture. An electrical pulse at an optimized voltage lasting a few microseconds to a millisecond is discharged through the cell suspension, which disturbs the phospholipid bilayer of the membrane and results in the formation of temporary pores. The electric potential across the cell membrane simultaneously rises to allow charged molecules like DNA to be driven across the membrane through the pores. This method can transform a large number of cells in a short period of time as it is easy and rapid.</p>
+							<p>The pCSCX gene contains cscABK genes from E. coli W that help in transport and metabolism of sucrose. E. coli strains that have been transformed with this plasmid have shown to be able to survive with sucrose as their sole carbon source<sup><a href="">[3]</a></sup>. By transforming our KJK01 strain with the pCSCX plasmid, we hope to be able to achieve the same.</p>
+							<br>
+
+							<h3>Working principle <a><sup>[2]</sup></a></h3>
+							<p>Transformation via electroporation is a physical transformation method that uses an electrical pulse to create temporary pores in cell membranes through which substances like nucleic acids can pass into cells. Host cells and nucleic acids are suspended in a conductive solution, and an electrical circuit is closed around the mixture. An electrical pulse at an optimized voltage lasting a few microseconds to a millisecond is discharged through the cell suspension, which disturbs the phospholipid bilayer of the membrane and results in the formation of temporary pores. The electric potential across the cell membrane simultaneously rises to allow charged molecules like DNA to be driven across the membrane through the pores. This method can transform a large number of cells in a short period of time as it is easy and rapid. </p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">Electrocompetent cells </li>
+								<li style="padding-left: 1em;">Plasmid DNA </li>
+								<li style="padding-left: 1em;">2X LB </li>
+								<li style="padding-left: 1em;">MilliQ water </li>
+								<br>
+								<li style="padding-left: 1em;">BioRad Pulser </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/transformation-of-e-coli-with-plasmid-byz3px8n">here</a></p>
+							<br><br>
+
+							<!-- SLIDE SHOW -->
+							<div id="transformationslides" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-indicators" style="bottom:-50px;">
+								<button type="button" data-bs-target="#transformationslides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#transformationslides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#transformationslides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+								<button type="button" data-bs-target="#transformationslides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+								</div>
+								<div style= "margin-bottom:50px; display:flex; flex-direction:row; align-items: center;" class="carousel-inner">
+									<div class="carousel-item active graph"> 
+										<img src="assets/WetlabPhotos/Tranformation_1.jpeg" alt="Best 5 over-expression targets in one graph" width=500>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/Transformation_2.jpeg" alt="Next best 5 over-expression targets in one graph" width=500>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/Transformation_3.jpeg" alt="Third best 5 over-expression targets in one graph" width=500>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/Tranformation_4.jpeg" alt="Fourth best 5 over-expression targets in one graph" width=500>
+									</div>
+								</div>
+								<button class="carousel-control-prev" type="button" data-bs-target="#transformationslides" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button" data-bs-target="#transformationslides" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
+								<h3 id="slidetext"></h3>
+							</div>
+							<!-- END OF SLIDESHOW -->
+							<br><br><br>
+							<a id="e8"></a><br><hr width=50%><br><br>
+							<!--END OF KJK01 PCSCX -->
+
+
+
+							<!-- STOCKS OF KJK01 AND PCSCX -->
+							<h2 class="h2">Glycerol stocks of pCSCX-KJK01</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Preparation of glycerol stocks of the E. coli KJK01 strain transformed with the cscABK gene containing pCSCX plasmid. </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4°C. Long term storage is best at temperatures of the range of -80oC. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures some percentage of glycerol is added to the media. Cells covered in glycerol are safe to be stored at such temperatures because glycerol is an anti-freezing agent.  (<a href="https://www.addgene.org/protocols/create-glycerol-stock/">https://www.addgene.org/protocols/create-glycerol-stock/</a>)</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">1X autoclaved LB </li>
+								<li style="padding-left: 1em;">50% autoclaved glycerol </li>
+								<br>
+								<li style="padding-left: 1em;">Cryovials </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/glycerol-stock-preparation-byyppxvn">here</a></p>
+							<a id="e9"></a><br><hr width="50%"><br><br>
+							<!--END OF STOCKS OF KJK01 AND PCSCX -->
+							
+							
+
+							<!-- MIC KJK01 -->
+							<h2 class="h2">MIC Assay for KJK01</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Determination of the minimum inhibitory concentration of butanol and ethanol for our E coli KJK01 strain. </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>Minimum inhibitory concentrations (MICs) are defined as the lowest concentration of an antimicrobial that will inhibit the visible growth of a microorganism after overnight incubation (<a href="https://pubmed.ncbi.nlm.nih.gov/11420333/">https://pubmed.ncbi.nlm.nih.gov/11420333/</a>"). Determination of MIC involves obtaining a growth curve of the strain at varying concentrations of the antimicrobial and identifying the least concentration at which growth is inhibited.</p>
+							<p>This experiment will help us calculate the optimum extraction frequency of products from the bioreactor medium in order to maximise yield from the cells.</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">MG1655 2° culture (Control strain) </li>
+								<li style="padding-left: 1em;">KJK01 2° cultures (uninduced and induced with IPTG) </li>
+								<li style="padding-left: 1em;">1X LB </li>
+								<li style="padding-left: 1em;">MilliQ </li>
+								<br>
+								<li style="padding-left: 1em;">96-well plates </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/minimum-inhibitory-concentration-of-butanol-for-e-byz8px9w">here</a></p>
+							<br><br>
+
+							<!-- SLIDE SHOW -->
+							<div id="ecolimicslides" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-indicators" style="bottom:-50px;">
+								<button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+								<button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+								</div>
+								<div style= "margin-bottom:50px; display:flex; flex-direction:row; align-items: center;" class="carousel-inner">
+									<div class="carousel-item active graph"> 
+										<img src="assets/WetlabPhotos/MIC_1.jpeg" alt="Best 5 over-expression targets in one graph" width=280>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/MIC_2.jpeg" alt="Next best 5 over-expression targets in one graph" width=500>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/MIC_3.jpeg" alt="Third best 5 over-expression targets in one graph" width=500>
+									</div>
+									<div class="carousel-item graph">
+										<img src="assets/WetlabPhotos/MIC_4.jpeg" alt="Fourth best 5 over-expression targets in one graph" width=500>
+									</div>
+								</div>
+								<button class="carousel-control-prev" type="button" data-bs-target="#ecolimicslides" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button" data-bs-target="#ecolimicslides" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
+								<h3 id="slidetext"></h3>
+							</div>
+							<!-- END OF SLIDE SHOW -->
+
+							<a id="e10"></a><br><hr width="50%"><br><br>
+							<!--END OF OF MIC KJK01 -->
+
+
+
+							<!-- GROWTH CURVE -->
+							<h2 class="h2">Growth Curve in LB</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Obtaining growth curves of KJK01 and pCSCX-KJK01 in LB and characterizing their growth </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>When bacteria are inoculated into a liquid medium and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the growth of cells over time. It shows four distinct phases of growth. </p>
+							<ul class="b">
+								<li style="padding-left: 1em;">Lag phase: Slow growth or lack of growth due to physiological adaptation of cells to culture conditions or dilution of exoenzymes due to initial low cell densities. </li>
+								<li style="padding-left: 1em;">Log or exponential phase: Optimal growth rates, during which cell numbers double at discrete time intervals known as the mean generation time. </li>
+								<li style="padding-left: 1em;">Stationary phase: Growth (cell division) and death of cells counterbalance each other resulting in no net increase in cell numbers. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents. </li>
+								<li style="padding-left: 1em;">Decline or death phase: Death rate exceeds growth rate resulting in a net loss of viable cells. </li>
+							</ul>
+							<br>
+							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">2° cultures of KJK01 and pCSCX-KJK01 in LB </li>
+								<li style="padding-left: 1em;">Photospectrometer </li>
+								<li style="padding-left: 1em;">Quartz/plastic (disposable) cuvette </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/growth-rate-determination-of-e-coli-bxa2pige">here</a></p>
+							<br><br><br>
+							<!--END OF GROWTH CURVE -->
 						</div>
-						<div style= "margin-bottom:50px; display:flex; flex-direction:row; align-items: center;" class="carousel-inner">
-							<div class="carousel-item active graph"> 
-								<img src="assets/WetlabPhotos/Tranformation_1.jpeg" alt="Best 5 over-expression targets in one graph" width=500>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/Transformation_2.jpeg" alt="Next best 5 over-expression targets in one graph" width=500>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/Transformation_3.jpeg" alt="Third best 5 over-expression targets in one graph" width=500>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/Tranformation_4.jpeg" alt="Fourth best 5 over-expression targets in one graph" width=500>
-							</div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#transformationslides" data-bs-slide="prev">
-						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#transformationslides" data-bs-slide="next">
-						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Next</span>
-						</button>
-					</div>
-					<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
-						<h3 id="slidetext"></h3>
-					</div>
-					<!-- END OF SLIDESHOW -->
-			        <br><br><br>
-					<br><hr width=50%><br><br>
-					<!--END OF KJK01 PCSCX -->
-
-
-
-					<!-- STOCKS OF KJK01 AND PCSCX -->
-					<h2 class="h2">Glycerol stocks of pCSCX-KJK01</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Preparation of glycerol stocks of the E. coli KJK01 strain transformed with the cscABK gene containing pCSCX plasmid. </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4°C. Long term storage is best at temperatures of the range of -80°C. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures some percentage of glycerol is added to the media. Cells covered in glycerol are safe to be stored at such temperatures because glycerol is an anti-freezing agent. </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">1X autoclaved LB </li>
-						<li style="padding-left: 1em;">50% autoclaved glycerol </li>
-						<br>
-						<li style="padding-left: 1em;">Cryovials </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/glycerol-stock-preparation-byyppxvn">here</a></p>
-					<br><hr width="50%"><br><br>
-					<!--END OF STOCKS OF KJK01 AND PCSCX -->
-					
-					
-
-					<!-- MIC KJK01 -->
-					<h2 class="h2">MIC Assay for KJK01</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Determination of the minimum inhibitory concentration of butanol and ethanol for our E coli KJK01 strain. </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>Minimum inhibitory concentrations (MICs) are defined as the lowest concentration of an antimicrobial that will inhibit the visible growth of a microorganism after overnight incubation (<a href="https://pubmed.ncbi.nlm.nih.gov/11420333/">https://pubmed.ncbi.nlm.nih.gov/11420333/</a>). Determination of MIC involves obtaining a growth curve of the strain at varying concentrations of the antimicrobial and identifying the least concentration at which growth is inhibited. </p>
-					<p>This experiment will help us calculate the optimum extraction frequency of products from the bioreactor medium in order to maximise yield from the cells.</p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">MG1655 2° culture (Control strain) </li>
-						<li style="padding-left: 1em;">KJK01 2° cultures (uninduced and induced with IPTG) </li>
-						<li style="padding-left: 1em;">1X LB </li>
-						<li style="padding-left: 1em;">MilliQ </li>
-						<br>
-						<li style="padding-left: 1em;">96-well plates </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/minimum-inhibitory-concentration-of-butanol-for-e-byz8px9w">here</a></p>
-					<br><br>
-
-					<!-- SLIDE SHOW -->
-					<div id="ecolimicslides" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-indicators" style="bottom:-50px;">
-						  <button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						  <button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="1" aria-label="Slide 2"></button>
-						  <button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="2" aria-label="Slide 3"></button>
-						  <button type="button" data-bs-target="#ecolimicslides" data-bs-slide-to="3" aria-label="Slide 4"></button>
-						</div>
-						<div style= "margin-bottom:50px; display:flex; flex-direction:row; align-items: center;" class="carousel-inner">
-							<div class="carousel-item active graph"> 
-								<img src="assets/WetlabPhotos/MIC_1.jpeg" alt="Best 5 over-expression targets in one graph" width=280>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/MIC_2.jpeg" alt="Next best 5 over-expression targets in one graph" width=500>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/MIC_3.jpeg" alt="Third best 5 over-expression targets in one graph" width=500>
-							</div>
-							<div class="carousel-item graph">
-								<img src="assets/WetlabPhotos/MIC_4.jpeg" alt="Fourth best 5 over-expression targets in one graph" width=500>
-							</div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#ecolimicslides" data-bs-slide="prev">
-						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#ecolimicslides" data-bs-slide="next">
-						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-						  <span class="visually-hidden">Next</span>
-						</button>
-					</div>
-					<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
-						<h3 id="slidetext"></h3>
-					</div>
-					<!-- END OF SLIDE SHOW -->
-
-					<br><hr width="50%"><br><br>
-					<!--END OF OF MIC KJK01 -->
-
-
-
-					<!-- GROWTH CURVE -->
-					<h2 class="h2">Growth Curve in LB</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Obtaining growth curves of KJK01 and pCSCX-KJK01 in LB and characterizing their growth </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>When bacteria are inoculated into a liquid medium and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the growth of cells over time. It shows four distinct phases of growth. </p>
-					<ul class="b">
-						<li style="padding-left: 1em;">Lag phase: Slow growth or lack of growth due to physiological adaptation of cells to culture conditions or dilution of exoenzymes due to initial low cell densities. </li>
-						<li style="padding-left: 1em;">Log or exponential phase: Optimal growth rates, during which cell numbers double at discrete time intervals known as the mean generation time. </li>
-						<li style="padding-left: 1em;">Stationary phase: Growth (cell division) and death of cells counterbalance each other resulting in no net increase in cell numbers. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents. </li>
-						<li style="padding-left: 1em;">Decline or death phase: Death rate exceeds growth rate resulting in a net loss of viable cells. </li>
-					</ul>
-					<br>
-					<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">2° cultures of KJK01 and pCSCX-KJK01 in LB </li>
-						<li style="padding-left: 1em;">Photospectrometer </li>
-						<li style="padding-left: 1em;">Quartz/plastic (disposable) cuvette </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/growth-rate-determination-of-e-coli-bxa2pige">here</a></p>
-					<br><br><br>
-					<!--END OF GROWTH CURVE -->
-
-					<!--------------------------------- END OF E COLI ----------------------------------->
-
-
-
-					<!-------------------------------- CYANOBACTERIA --------------------------------------->
-					<h1> Cyanobaceteria </h1>
-					<hr><br><br><br>
-
-					<!-- Preparation of BG-11-->
-					<h2>Preparation of BG-11</h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Preparation of BG-11 media for culturing of cyanobacteria </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>BG-11 media is a mix of macronutrients and micronutrients without essentially a consumable carbon source. Since this media is used for culturing cyanobacteria which are capable of photosynthesizing, a consumable carbon source is not required. </p>
-					<p>BG-11 mix has: sodium nitrate, dipotassium hydrogen phosphate, magnesium sulphate heptahydrate, calcium chloride dihydrate, citric acid, sodium carbonate, sodium EDTA, ferric ammonium citrate and micronutrients (trace metals) mix.</p>
-					<p>Adjusting the pH of the media according to the optimal growth pH of the cyanobacteria is crucial for BG-11. It also so happens that post autoclaving the pH might change. In such cases it is always good to check the pH of an aliquot of sterile media before using.</p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">BG-11 powder </li>
-						<li style="padding-left: 1em;">Trace metal mix </li>
-						<li style="padding-left: 1em;">1N HCl </li>
-						<li style="padding-left: 1em;">1N NaOH </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Preparation of BG-11-->
-
-
-
-					<!-- Revival of cyanobacteria strains -->
-					<h2>Revival of Cyanobacteria strains </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Reviving UTEX 2973 (wild type, cscB, cscB-sps, cscB-sps-spp) from the plates received from Prof. Himadri Pakrasi’s lab. </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>Bacterial stocks can be streaked onto agar plates and stored at 4°C for regular use or for transporting samples. Plates should be wrapped with parafilm and stored upside down(such that the streaked part faces the bottom) to minimise contamination and condensation onto the culture.Individual colonies are then selected from the plates as and when required. </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">UTEX 2973 agar plates(Wild Type, cscB, cscB-sps,cscB-sps-spp) </li>
-						<br>
-						<li style="padding-left: 1em;">50 mL flasks</li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Revival of cyanobacteria strains -->
-
-
-
-					<!-- Making glycerol and DMSO stocks -->
-					<h2>Making Glycerol and DMSO stocks </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> Preparation of glycerol and DMSO stocks of the cyanobacteria UTEX 2973 wild type and cscB gene containing strain.</p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4°C. Long term storage is best at temperatures of the range of -80°C. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures, some percentage of glycerol/DMSO is added to the media. Cells covered in glycerol/DMSO are safe to be stored at such temperatures because glycerol and DMSO are anti-freezing agents. </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">UTEX 2973 WT and cscB 100 mL cultures </li>
-						<li style="padding-left: 1em;">BG-11 Media (with micronutrients) </li>
-						<li style="padding-left: 1em;">7% DMSO </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Making glycerol and DMSO stocks-->
-
-
-
-					<!--Making plates from DMSO stocks-->
-					<h2>Making plates from DMSO stocks </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Streaking UTEX 2973 WT and cscB onto plates from the DMSO stocks </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>Bacterial cultures are stored in the form of stocks at a temperature range of  -80°C. This is because plates or liquid cultures are not amenable to freezing as cells possess a risk of rupturing.These stocks can then be revived at any time as per the requirement and the revived stocks can be used to make plates or liquid cultures. </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">BG-11 agar plates (BG-11 + Kanf for cscB) </li>
-						<li style="padding-left: 1em;">WT and cscB DMSO stocks </li>
-						<br>
-						<li style="padding-left: 1em;">1 mL micropipette tips </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Making plates from DMSO stocks -->
-
-
-
-					<!-- Cyanobacteria growth curve under salt stress -->
-					<h2>Cyanobacteria growth curve under salt stress </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Performing a growth curve of UTEX 2973 and validating sucrose production with respect to the OD. </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>When bacteria are inoculated into a liquid medium and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the growth of cells over time. It shows four distinct phases of growth. </p>
-					<ul class="b">
-						<li style="padding-left: 1em;">Lag phase: Slow growth or lack of growth due to physiological adaptation of cells to culture conditions or dilution of exoenzymes due to initial low cell densities. </li>
-						<li style="padding-left: 1em;">Log or exponential phase: Optimal growth rates, during which cell numbers double at discrete time intervals known as the mean generation time. </li>
-						<li style="padding-left: 1em;">Stationary phase: Growth (cell division) and death of cells counterbalance each other resulting in no net increase in cell numbers. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents. </li>
-						<li style="padding-left: 1em;">Decline or death phase: Death rate exceeds growth rate resulting in a net loss of viable cells. </li>
-					</ul>
-					<br>
-					<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
-					<p>Growth curves for certain freshwater cyanobacterial species are carried out under salt stress to account for sucrose production in the particular strain. This is because sucrose is naturally produced as an osmoprotectant in these strains and an increase in Optical Density with time shows a linear relationship with sucrose concentration.</p>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">2° cyanobacteria cultures </li>
-						<li style="padding-left: 1em;">5 mL of 150 mM NaCl </li>
-						<li style="padding-left: 1em;">Distilled water </li>
-						<br>
-						<li style="padding-left: 1em;">Photospectrometer </li>
-						<li style="padding-left: 1em;">Quartz/plastic (disposable) cuvette </li>
-						<li style="padding-left: 1em;">1 mL microcentrifuge tubes </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Cyanobacteria growth curve under salt stress -->
-
-
-
-					<!-- Sucrose assay -->
-					<h2> </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p> </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;"> </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Sucrose assay -->
-
-
-
-					<!-- Cyanobacteria growth curve under high carbon -->
-					<h2> </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p> </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;"> </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><br><br>
-					<!-- End of Cyanobacteria growth curve under high carbon -->
-
-
-					<!---------------------------------- END OF CYANOBACTERIA--------------------------------------->
-
-
-
-
-
-					<!---------------------------------------- CO CULTURE ------------------------------------------------>
-					<h1> Co-culture</h1>
-					<hr><br><br><br>
-
-					<!-- Transformation of KJK01 with pKD4 -->
-					<h2>Transformation of KJK01 with pKD4 </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p>Transformation of E. coli KJK01 with plasmid pKD4 </p>
-					<br>
-
-					<h3>Working principle<a href=""><sup>[1]</sup></a></h3>
-					<p>Transformation via electroporation is a physical transformation method that uses an electrical pulse to create temporary pores in cell membranes through which substances like nucleic acids can pass into cells. Host cells and nucleic acids are suspended in a conductive solution, and an electrical circuit is closed around the mixture. An electrical pulse at an optimized voltage lasting a few microseconds to a millisecond is discharged through the cell suspension, which disturbs the phospholipid bilayer of the membrane and results in the formation of temporary pores. The electric potential across the cell membrane simultaneously rises to allow charged molecules like DNA to be driven across the membrane through the pores. This method can transform a large number of cells in a short period of time as it is easy and rapid. </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;">Electrocompetent cells </li>
-						<li style="padding-left: 1em;">Plasmid DNA </li>
-						<li style="padding-left: 1em;">2X LB </li>
-						<li style="padding-left: 1em;">MilliQ water </li>
-						<br>
-						<li style="padding-left: 1em;">BioRad Pulser </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/transformation-of-e-coli-with-plasmid-byz3px8n">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Transformation of MG1655 with pKD4 -->
-
-
-
-					<!-- Preparation of CoBG-11 -->
-					<h2> </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p> </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;"> </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Preparation of CoBG-11 -->
-
-
-
-					<!-- Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose -->
-					<h2>Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> Obtaining growth curves of KJK01 and pCSCX-KJK01 in BG-11 + sucrose and characterizing their growth, as well as determining the rate of sucrose consumption and rate of butanol production by both strains.</p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p>When bacteria are inoculated into a liquid medium and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the growth of cells over time. It shows four distinct phases of growth. </p>
-					<ul class="b">
-						<li style="padding-left: 1em;"> Lag phase: Slow growth or lack of growth due to physiological adaptation of cells to culture conditions or dilution of exoenzymes due to initial low cell densities.</li>
-						<li style="padding-left: 1em;"> Log or exponential phase: Optimal growth rates, during which cell numbers double at discrete time intervals known as the mean generation time.</li>
-						<li style="padding-left: 1em;"> Stationary phase: Growth (cell division) and death of cells counterbalance each other resulting in no net increase in cell numbers. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents.</li>
-						<li style="padding-left: 1em;"> Decline or death phase: Death rate exceeds growth rate resulting in a net loss of viable cells.</li>
-					</ul>
-					<br>
-					<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
-					<p> Here we carry out the growth curve in BG-11 + sucrose as a co-culture proxy. We want to check if the pCSCX plasmid allows the E. coli to survive when sucrose is the only carbon source available, as BG-11 does not contain any carbon source of its own. The concentration of sucrose used in the experiment is 250 mg/L, which is more than the maximum concentration secreted by the cyanobacteria in Zhang et al, 2020<sup>[1]</sup>. After two failed attempts, we carried out the experiment using CoBG-1<sup>[1]</sup> from the same paper. The medium contains salts that aid the growth of E. coli.</p>
-					<!-- Links need to be inserted in next <p>-->
-					<p> The supernatants of the sample taken for OD measurement were reserved for sucrose assay (insert link Jason Joby), to determine the rate of sucrose consumption, as well as NMR analysis (insert link Jason Joby), to determine the rate of butanol production. Thus, this assay serves three purposes.
-
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;"> 1° cultures of KJK01 and pCSCX-KJK01</li>
-						<li style="padding-left: 1em;"> BG-11/CoBG-11</li>
-						<li style="padding-left: 1em;"> 250 mg/100 mL sucrose solution</li>
-						<li style="padding-left: 1em;"> IPTG</li>
-						<li style="padding-left: 1em;"> Kan50 and Amp100</li>
-						<br>
-						<li style="padding-left: 1em;"> Photospectrometer</li>
-						<li style="padding-left: 1em;"> Quartz/plastic (disposable) cuvette</li>
-						<li style="padding-left: 1em;"> Centrifuge</li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="https://www.protocols.io/view/e-coli-growth-curve-assay-in-bg-11-sucrose-by5apy2e">here</a></p>
-					<br><hr width=50%><br><br>
-					<!-- End of Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose -->
-
-
-
-					<!-- Sucrose assay -->
-					<h2> </h2>
-					<br><br>
-					<h3>Objective</h3>
-					<p> </p>
-					<br>
-
-					<h3>Working principle</h3>
-					<p> </p>
-					<br>
-
-					<h3>Key Reagents/Apparatus</h3>
-					<ul class="a">
-						<li style="padding-left: 1em;"> </li>
-					</ul>
-					<br>
-
-					<h3>Protocol</h3>
-					<p> Can be found <a href="">here</a></p>
-					<br><br><br>
-					<!-- End of Sucrose assay -->
-
-					<!------------------------------------- END OF CO CULTURE --------------------------------------------->
+						<!--------------------------------- END OF E COLI ----------------------------------->
 
 					
+
+						<!-------------------------------- START OF CYANOBACTERIA --------------------------------------->
+						<div class="tab-pane fade" id="cyano-wet" role="tabpanel" aria-labelledby="cyano-wet-tab">
+							<br><br><br>
+							<!-- Preparation of BG-11-->
+							<h2>Preparation of BG-11</h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Preparation of BG-11 media for culturing of cyanobacteria </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>BG-11 media is a mix of macronutrients and micronutrients without essentially a consumable carbon source. Since this media is used for culturing cyanobacteria which are capable of photosynthesizing, a consumable carbon source is not required. </p>
+							<p>BG-11 mix has: sodium nitrate, dipotassium hydrogen phosphate, magnesium sulphate heptahydrate, calcium chloride dihydrate, citric acid, sodium carbonate, sodium EDTA, ferric ammonium citrate and micronutrients (trace metals) mix.</p>
+							<p>Adjusting the pH of the media according to the optimal growth pH of the cyanobacteria is crucial for BG-11. It also so happens that post autoclaving the pH might change. In such cases it is always good to check the pH of an aliquot of sterile media before using.</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">BG-11 powder </li>
+								<li style="padding-left: 1em;">Trace metal mix </li>
+								<li style="padding-left: 1em;">1N HCl </li>
+								<li style="padding-left: 1em;">1N NaOH </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<a id="c2"></a><br><hr width=50%><br><br>
+							<!-- End of Preparation of BG-11-->
+
+
+
+							<!-- Revival of cyanobacteria strains -->
+							<h2>Revival of Cyanobacteria strains </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Reviving UTEX 2973 (wild type, cscB, cscB-sps, cscB-sps-spp) from the plates received from Prof. Himadri Pakrasi’s lab. </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>Bacterial stocks can be streaked onto agar plates and stored at 4°C for regular use or for transporting samples. Plates should be wrapped with parafilm and stored upside down(such that the streaked part faces the bottom) to minimise contamination and condensation onto the culture.Individual colonies are then selected from the plates as and when required. </p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">UTEX 2973 agar plates(Wild Type, cscB, cscB-sps,cscB-sps-spp) </li>
+								<br>
+								<li style="padding-left: 1em;">50 mL flasks</li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<a id="c3"></a><br><hr width=50%><br><br>
+							<!-- End of Revival of cyanobacteria strains -->
+
+
+
+							<!-- Making glycerol and DMSO stocks -->
+							<h2>Making Glycerol and DMSO stocks </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p> Preparation of glycerol and DMSO stocks of the cyanobacteria UTEX 2973 wild type and cscB gene containing strain.</p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4°C. Long term storage is best at temperatures of the range of -80°C. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures, some percentage of glycerol/DMSO is added to the media. Cells covered in glycerol/DMSO are safe to be stored at such temperatures because glycerol and DMSO are anti-freezing agents. </p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">UTEX 2973 WT and cscB 100 mL cultures </li>
+								<li style="padding-left: 1em;">BG-11 Media (with micronutrients) </li>
+								<li style="padding-left: 1em;">7% DMSO </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<a id="c4"></a><br><hr width=50%><br><br>
+							<!-- End of Making glycerol and DMSO stocks-->
+
+
+
+							<!--Making plates from DMSO stocks-->
+							<h2>Making plates from DMSO stocks </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Streaking UTEX 2973 WT and cscB onto plates from the DMSO stocks </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>Bacterial cultures are stored in the form of stocks at a temperature range of  -80°C. This is because plates or liquid cultures are not amenable to freezing as cells possess a risk of rupturing.These stocks can then be revived at any time as per the requirement and the revived stocks can be used to make plates or liquid cultures. </p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">BG-11 agar plates (BG-11 + Kanf for cscB) </li>
+								<li style="padding-left: 1em;">WT and cscB DMSO stocks </li>
+								<br>
+								<li style="padding-left: 1em;">1 mL micropipette tips </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<a id="c5"></a><br><hr width=50%><br><br>
+							<!-- End of Making plates from DMSO stocks -->
+
+
+
+							<!-- Cyanobacteria growth curve under salt stress -->
+							<h2>Cyanobacteria growth curve under salt stress </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Performing a growth curve of UTEX 2973 and validating sucrose production with respect to the OD. </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>When bacteria are inoculated into a liquid medium and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the growth of cells over time. It shows four distinct phases of growth. </p>
+							<ul class="b">
+								<li style="padding-left: 1em;">Lag phase: Slow growth or lack of growth due to physiological adaptation of cells to culture conditions or dilution of exoenzymes due to initial low cell densities. </li>
+								<li style="padding-left: 1em;">Log or exponential phase: Optimal growth rates, during which cell numbers double at discrete time intervals known as the mean generation time. </li>
+								<li style="padding-left: 1em;">Stationary phase: Growth (cell division) and death of cells counterbalance each other resulting in no net increase in cell numbers. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents. </li>
+								<li style="padding-left: 1em;">Decline or death phase: Death rate exceeds growth rate resulting in a net loss of viable cells. </li>
+							</ul>
+							<br>
+							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
+							<p>Growth curves for certain freshwater cyanobacterial species are carried out under salt stress to account for sucrose production in the particular strain. This is because sucrose is naturally produced as an osmoprotectant in these strains and an increase in Optical Density with time shows a linear relationship with sucrose concentration.</p>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">2° cyanobacteria cultures </li>
+								<li style="padding-left: 1em;">5 mL of 150 mM NaCl </li>
+								<li style="padding-left: 1em;">Distilled water </li>
+								<br>
+								<li style="padding-left: 1em;">Photospectrometer </li>
+								<li style="padding-left: 1em;">Quartz/plastic (disposable) cuvette </li>
+								<li style="padding-left: 1em;">1 mL microcentrifuge tubes </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<a id="c6"></a><br><hr width=50%><br><br>
+							<!-- End of Cyanobacteria growth curve under salt stress -->
+
+
+
+							<!-- Sucrose assay -->
+							<h2> </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p> </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p> </p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;"> </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<a id="c7"></a><br><hr width=50%><br><br>
+							<!-- End of Sucrose assay -->
+
+
+
+							<!-- Cyanobacteria growth curve under high carbon -->
+							<h2> </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p> </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p> </p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;"> </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<br><br><br>
+							<!-- End of Cyanobacteria growth curve under high carbon -->
+
+						</div>
+						<!--------------------------------------------- END OF CYANOBACTERIA --------------------------------------------------->
+
+
+						
+						<!----------------------------------- START OF CO CULTURE ------------------------------------------>
+						<div class="tab-pane fade" id="coculture-wet" role="tabpanel" aria-labelledby="coculture-wet-tab">
+							<br><br><br>
+							<!-- Transformation of KJK01 with pKD4 -->
+							<h2>Transformation of KJK01 with pKD4 </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Transformation of E. coli KJK01 with plasmid pKD4 </p>
+							<br>
+
+							<h3>Working principle<sup><a href="">[1]</a></sup></h3>
+							<p>Transformation via electroporation is a physical transformation method that uses an electrical pulse to create temporary pores in cell membranes through which substances like nucleic acids can pass into cells. Host cells and nucleic acids are suspended in a conductive solution, and an electrical circuit is closed around the mixture. An electrical pulse at an optimized voltage lasting a few microseconds to a millisecond is discharged through the cell suspension, which disturbs the phospholipid bilayer of the membrane and results in the formation of temporary pores. The electric potential across the cell membrane simultaneously rises to allow charged molecules like DNA to be driven across the membrane through the pores. This method can transform a large number of cells in a short period of time as it is easy and rapid. </p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">Electrocompetent cells </li>
+								<li style="padding-left: 1em;">Plasmid DNA </li>
+								<li style="padding-left: 1em;">2X LB </li>
+								<li style="padding-left: 1em;">MilliQ water </li>
+								<br>
+								<li style="padding-left: 1em;">BioRad Pulser </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/transformation-of-e-coli-with-plasmid-byz3px8n">here</a></p>
+							<a id="cc2"></a><br><hr width=50%><br><br>
+							<!-- End of Transformation of MG1655 with pKD4 -->
+
+
+
+							<!-- Preparation of CoBG-11 -->
+							<h2>Preparation of CoBG-11 </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Preparation of CoBG-11 media for coculture experiments of cyanobacteria and E.coli </p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>CoBG-11 media is a mix of BG-11 with some salts whose concentrations have been optimized for E coli growth by Zhang et al. </p>
+							<p>CoBG-11 has the following composition:</p>
+							<ol class="a">
+								<li style="padding-left: 1em;">150 mM NaCl </li>
+								<li style="padding-left: 1em;">4 mM NH<sub>4</sub>Cl </li>
+								<li style="padding-left: 1em;">3 g/L 2-[[1,3-dihydroxy-2-(hydroxymethyl) propan-2-yl] amino] ethanesulfonic acid (TES</li>
+							</ul>
+							<p> The pH value is adjusted with NaOH to 8.3.</p>
+							<p>Note that it is not advisable to use TESNa as a replacement for TES because, in the event that the pH of your solution is higher than 8.3, you will need to add HCl to reduce the pH. This, in turn, adds more chloride to the medium. However, while preparing CoBG-11 in bulk, only a small amount of HCl might be needed and it shall not affect the chloride concentration much.</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">BG-11 medium </li>
+								<li style="padding-left: 1em;">150mM NaCl </li>
+								<li style="padding-left: 1em;">4 mM NH<sub>4</sub>Cl </li>
+								<li style="padding-left: 1em;">3 g/L (TES) </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="">here</a></p>
+							<a id="cc3"></a><br><hr width=50%><br><br>
+							<!-- End of Preparation of CoBG-11 -->
+
+
+
+							<!-- Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose -->
+							<h2>Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p> Obtaining growth curves of KJK01 and pCSCX-KJK01 in BG-11 + sucrose and characterizing their growth, as well as determining the rate of sucrose consumption and rate of butanol production by both strains.</p>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>When bacteria are inoculated into a liquid medium and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the growth of cells over time. It shows four distinct phases of growth. </p>
+							<ul class="b">
+								<li style="padding-left: 1em;"> Lag phase: Slow growth or lack of growth due to physiological adaptation of cells to culture conditions or dilution of exoenzymes due to initial low cell densities.</li>
+								<li style="padding-left: 1em;"> Log or exponential phase: Optimal growth rates, during which cell numbers double at discrete time intervals known as the mean generation time.</li>
+								<li style="padding-left: 1em;"> Stationary phase: Growth (cell division) and death of cells counterbalance each other resulting in no net increase in cell numbers. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents.</li>
+								<li style="padding-left: 1em;"> Decline or death phase: Death rate exceeds growth rate resulting in a net loss of viable cells.</li>
+							</ul>
+							<br>
+							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
+							<p> Here we carry out the growth curve in BG-11 + sucrose as a co-culture proxy. We want to check if the pCSCX plasmid allows the E. coli to survive when sucrose is the only carbon source available, as BG-11 does not contain any carbon source of its own. The concentration of sucrose used in the experiment is 250 mg/L, which is more than the maximum concentration secreted by the cyanobacteria in Zhang et al, 2020<sup>[1]</sup>. After two failed attempts, we carried out the experiment using CoBG-1<sup>[1]</sup> from the same paper. The medium contains salts that aid the growth of E. coli.</p>
+							<!-- Links need to be inserted in next <p>-->
+							<p> The supernatants of the sample taken for OD measurement were reserved for sucrose assay (insert link Jason Joby), to determine the rate of sucrose consumption, as well as NMR analysis (insert link Jason Joby), to determine the rate of butanol production. Thus, this assay serves three purposes.
+
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;"> 1° cultures of KJK01 and pCSCX-KJK01</li>
+								<li style="padding-left: 1em;"> BG-11/CoBG-11</li>
+								<li style="padding-left: 1em;"> 250 mg/100 mL sucrose solution</li>
+								<li style="padding-left: 1em;"> IPTG</li>
+								<li style="padding-left: 1em;"> Kan50 and Amp100</li>
+								<br>
+								<li style="padding-left: 1em;"> Photospectrometer</li>
+								<li style="padding-left: 1em;"> Quartz/plastic (disposable) cuvette</li>
+								<li style="padding-left: 1em;"> Centrifuge</li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="https://www.protocols.io/view/e-coli-growth-curve-assay-in-bg-11-sucrose-by5apy2e">here</a></p>
+							<a id="cc4"></a><br><hr width=50%><br><br>
+							<!-- End of Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose -->
+
+
+
+							<!-- Sucrose assay -->
+							<h2>E. coli and cyanobacteria Sucrose Assay </h2>
+							<br><br>
+							<h3>Objective</h3>
+							<p>Measuring</p>
+							<ul class="b">
+								<li style="padding-left: 1em;">The amount of sucrose secreted by engineered strains of S.elongatus </li>
+								<li style="padding-left: 1em;">The amount of sucrose consumed by engineered strains of E.coli </li>
+							</ul>
+							<br>
+
+							<h3>Working principle</h3>
+							<p>Free D-glucose in the sample extract is determined by conversion to a red coloured quinoneimine dye compound through the action of glucose oxidase (Fig 1) and peroxidase (Fig 2) at pH 7.4, and employing p-hydroxybenzoic acid and 4-aminoantipyrine. The D-glucose contents is estimated by measuring the absorbance of the dye at 510 nm.  </p>
+							<p>At pH 4.6, sucrose is hydrolysed by the enzyme β-fructosidase to D-glucose and D-fructose (Fig 3). The determination of D-glucose after inversion by β-fructosidase (total D-glucose) is carried out simultaneously according to the principle outlined above. The sucrose content is calculated from the difference of the D-glucose concentrations before and after enzymatic inversion.</p>
+							<br>
+
+							<h3>Key Reagents/Apparatus</h3>
+							<ul class="a">
+								<li style="padding-left: 1em;">Distilled water </li>
+								<li style="padding-left: 1em;">D-Glucose standard solution (5 mL, 1.0 mg/mL) in 0.2% (w/v) benzoic acid </li>
+								<li style="padding-left: 1em;">GOPOD Reagent Enzymes. Glucose oxidase plus peroxidase and 4-aminoantipyrine. Freeze-dried powder </li>
+								<li style="padding-left: 1em;">GOPOD Reagent Buffer. p-hydroxybenzoic acid and sodium azide (0.095% w/v) </li>
+								<li style="padding-left: 1em;">β-Fructosidase (invertase) solution </li>
+								<li style="padding-left: 1em;">Acetate buffer</li>
+								<br>
+								<li style="padding-left: 1em;">96 well plate </li>
+								<li style="padding-left: 1em;">1 mL Eppendorf tubes </li>
+								<li style="padding-left: 1em;">Spectrophotometer set at 510 nm </li>
+								<li style="padding-left: 1em;">Vortex mixer </li>
+								<li style="padding-left: 1em;">Thermostated water bath </li>
+							</ul>
+							<br>
+
+							<h3>Protocol</h3>
+							<p> Can be found <a href="http://dx.doi.org/10.17504/protocols.io.by5xpy7n">here</a></p>
+							<br><br><br>
+							<!-- End of Sucrose assay -->
+
+
+						</div>
+
+						<!-------------------------------- END OF CO CULTURE ----------------------------------------------->
+
 				</div>
 			</div>
         </div>
     </div>
+	<!----------------------------------------------------- END OF CONTENT ---------------------------------------------->
 
-<!-- SPONSORS BAR -->
+
+
+
+	<!------------------------------------------------------------ SPONSORS BAR ----------------------------------------->
 	<div class="footer">
 		<div class="footer-wrapper">
 			<!-- <div id="not-sponsors" class="footer-wrapper">	 -->
@@ -954,22 +1066,14 @@
 			</div>	
 		</div>
 	</div>
-	<!-- END OF SPONSOR BAR--> 
+	<!------------------------------------------------- END OF SPONSOR BAR------------------------------------------------> 
 
-<!-- ACTUAL SCROLLING BAR-->
+
+
+
+	<!-------------------------------------------- ACTUAL SCROLLING BAR------------------------------------------------->
 	<div class="header"></div>
     <div class="line" id="scrollIndicator"></div>
-
-
-    <!-- back to top button -->
-    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
-
-	
-	<!-- LINKING MAIN JS FILES-->
-    <script src="js/bootstrap-bundle.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/jquery.min.js"></script>
-
 
 	<!-- Gets the screenheight of each page for Scrollbar? -->
 	<script>
@@ -995,6 +1099,54 @@
 	</script>
 
 
+
+    <!------------------------------------------------- back to top button ------------------------------------------->
+    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
+
+	
+	<!------------------------------------------- LINKING MAIN JS FILES ----------------------------------------------->
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+
+
+
+	<!------------------------------------------ Displaying sidebar depending on the tab ------------------------------->
+	<script>
+		$(document).ready(function() {
+			$('#myTab').on('click', sidebar);
+
+			function sidebar(){
+				if($('#cyano-wet').hasClass('active')) {
+					$('#ecoliside').css({visibility: "hidden"});
+					$('#cocultureside').css({visibility: "hidden"});
+					$('#cyanoside').css({visibility: "visible"});
+					$('.sidenav').css({top: "11%"})
+					console.log('cyano')
+				}
+				else if($('#ecoli-wet').hasClass('active')) {
+					$('#cyanoside').css({visibility: "hidden"});
+					$('#cocultureside').css({visibility: "hidden"});
+					$('#ecoliside').css({visibility: "visible"});
+					$('.sidenav').css({top: "4%"})
+					console.log('ecoli')
+				}
+				else if($('#coculture-wet').hasClass('active')) {
+					$('#cyanoside').css({visibility: "hidden"});
+					$('#ecoliside').css({visibility: "hidden"});
+					$('#cocultureside').css({visibility: "visible"});
+					$('.sidenav').css({top: "11%"})
+					console.log('coculture')
+				}
+			}
+		});
+	</script>
+	<!------------------------------------------ End of display script ------------------------------------------>
+
+
+
+
 	<!-- SCRIPT FOR SCROLL AWARE SIDEBAR HIGHLIGHT -->
 	<!-- ------------------------------------------------------------------------------------------------------------- -->
 	<!-- MAKE SURE YOU CHANGE THE NUMBER OF DIVISIONS -->
@@ -1002,106 +1154,302 @@
 		
 		$(document).ready(function() {
 			$(window).scroll(function() {
-				var scroll_top = $(window).scrollTop();
-				var div_one_top = $("#1").offset().top;
-				var div_two_top = $("#2").offset().top;
-				var div_three_top = $("#3").offset().top;
-				var div_four_top = $("#4").offset().top;
-				var div_five_top = $("#5").offset().top;
-				var div_six_top = $("#6").offset().top;
-				var div_seven_top = $("#7").offset().top;
-	
-				if (scroll_top > div_one_top && scroll_top < div_two_top) {
-					//Division 1
-					if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').addClass('sidenav-active');
+
+				if($('#ecoli-wet').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#e1").offset().top;
+					var div_two_top = $("#e2").offset().top;
+					var div_three_top = $("#e3").offset().top;
+					var div_four_top = $("#e4").offset().top;
+					var div_five_top = $("#e5").offset().top;
+					var div_six_top = $("#e6").offset().top;
+					var div_seven_top = $("#e7").offset().top;
+					var div_eight_top = $("e8").offset().top;
+					var div_nine_top = $("e9").offset().top;
+					var div_ten_top = $("e10").offset().top;
+		
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#e1"]').hasClass('sidenav-active')) {
+							$('a[href="#e1"]').addClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').removeClass('sidenav-active');
+						}
+		
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#e1"]').hasClass('sidenav-active')) {
+							$('a[href="#e1"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top && scroll_top < div_eight_top) {
+						// You are in div 7
+						if ($('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').addClass('sidenav-active');
+						}
+
+						if (!$('a[href="#e8"]').hasClass('sidenav-active')) {
+							$('a[href="#e8"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_eight_top && scroll_top < div_nine_top) {
+						//Division 8
+						if ($('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e8"]').hasClass('sidenav-active')) {
+							$('a[href="#e8"]').addClass('sidenav-active');
+						}
+
+						if (!$('a[href="#e9"]').hasClass('sidenav-active')) {
+							$('a[href="#e9"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_nine_top && scroll_top < div_ten_top) {
+						//Divison 9 
+						if ($('a[href="#e8"]').hasClass('sidenav-active')) {
+							$('a[href="#e8"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e9"]').hasClass('sidenav-active')) {
+							$('a[href="#e9"]').addClass('sidenav-active');
+						}
+
+						if (!$('a[href="#e10"]').hasClass('sidenav-active')) {
+							$('a[href="#e10"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_ten_top) {
+						if ($('a[href="#e9"]').hasClass('sidenav-active')) {
+							$('a[href="#e9"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e10"]').hasClass('sidenav-active')) {
+							$('a[href="#e10"]').addClass('sidenav-active');
+						}
 					}
-	
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-					// Division 2
-					if ($('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-					//Division 3
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-					// You are in div 4
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-					// You are in div 5
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-					// You are in div 6
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_seven_top) {
-					// You are in div 7
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').addClass('sidenav-active');
+				} 
+				else if ($('#cyano-wet').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#c1").offset().top;
+					var div_two_top = $("#c2").offset().top;
+					var div_three_top = $("#c3").offset().top;
+					var div_four_top = $("#c4").offset().top;
+					var div_five_top = $("#c5").offset().top;
+					var div_six_top = $("#c6").offset().top;
+					var div_seven_top = $("#c7").offset().top;
+		
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#c1"]').hasClass('sidenav-active')) {
+							$('a[href="#c1"]').addClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').removeClass('sidenav-active');
+						}
+		
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#c1"]').hasClass('sidenav-active')) {
+							$('a[href="#c1"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c7"]').hasClass('sidenav-active')) {
+							$('a[href="#c7"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top) {
+						// You are in div 7
+						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#c7"]').hasClass('sidenav-active')) {
+							$('a[href="#c7"]').addClass('sidenav-active');
+						}
 					}
 				}
+				else if ($('#coculture-wet').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#cc1").offset().top;
+					var div_two_top = $("#cc2").offset().top;
+					var div_three_top = $("#cc3").offset().top;
+					var div_four_top = $("#cc4").offset().top;
+		
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#cc1"]').hasClass('sidenav-active')) {
+							$('a[href="#cc1"]').addClass('sidenav-active');
+						}
+		
+						if ($('a[href="#cc2"]').hasClass('sidenav-active')) {
+							$('a[href="#cc2"]').removeClass('sidenav-active');
+						}
+		
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#cc1"]').hasClass('sidenav-active')) {
+							$('a[href="#cc1"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#cc3"]').hasClass('sidenav-active')) {
+							$('a[href="#cc3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#cc2"]').hasClass('sidenav-active')) {
+							$('a[href="#cc2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#cc2"]').hasClass('sidenav-active')) {
+							$('a[href="#cc2"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#cc4"]').hasClass('sidenav-active')) {
+							$('a[href="#cc4"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#cc3"]').hasClass('sidenav-active')) {
+							$('a[href="#cc3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top) {
+						// You are in div 4
+						if ($('a[href="#cc3"]').hasClass('sidenav-active')) {
+							$('a[href="#cc3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#cc4"]').hasClass('sidenav-active')) {
+							$('a[href="#cc4"]').addClass('sidenav-active');
+						} 
+					}
+				}	
 			});
 		});
 		
 	</script>	
-
+	<!-------------------------------------------- END OF SCROLL AWARE HIGHLIGHT --------------------------------------->
 	
+
+
 	<!-- Script for the slideshow, wherever needed -->
 	<script>
 		var total = $('.item').length;

@@ -148,7 +148,7 @@
             <div class="col-lg-3 col-md-3">
 
 				<!-- Overview sidebar-->
-                <div class="sidenav" style="visibility: visible;" style="top: 7%" id="overviewside">
+                <div class="sidenav" style="visibility: visible;" style="top: 9.5%" id="overviewside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#o1">Introduction</a></li>
@@ -393,12 +393,7 @@
 							</ol>
 							<br><br>
 						</div>
-						<!-- END OF CONTENT -->
-
-
 						<!------------------------------------ END OF OVERVIEW TAB ------------------------------------------>
-
-
 
 
 
@@ -1737,7 +1732,6 @@
 
 
 
-
 						<!----------------------------------------- E COLI TAB -------------------------------------------->
 						<div class="tab-pane fade" id="ecoli" role="tabpanel" aria-labelledby="ecoli-tab">
 							<!-- INTRODUCTION -->
@@ -2280,115 +2274,7 @@
 							<!-- END OF REFERECNES -->
 						</div>
 						<!-- END OF CONTENT -->									
-
-
-						<!-- SCROLL AWARE HIHGLIGHT -->
-						<script>
-		
-							$(document).ready(function() {
-								$(window).scroll(function() {
-									var scroll_top = $(window).scrollTop();
-									var div_one_top = $("#e1").offset().top;
-									var div_two_top = $("#e2").offset().top;
-									var div_three_top = $("#e3").offset().top;
-									var div_four_top = $("#e4").offset().top;
-									var div_five_top = $("#e5").offset().top;
-									var div_six_top = $("#e6").offset().top;
-									var div_seven_top = $("#e7").offset().top;
-					
-									if (scroll_top > div_one_top && scroll_top < div_two_top) {
-										//Division 1
-										if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-											$('a[href="#1"]').addClass('sidenav-active');
-										}
-					
-										if ($('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').removeClass('sidenav-active');
-										}
-					
-									} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-										// Division 2
-										if ($('a[href="#1"]').hasClass('sidenav-active')) {
-											$('a[href="#1"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').removeClass('sidenav-active');
-										}
-					
-										if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-										//Division 3
-										if ($('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-										// You are in div 4
-										if ($('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-										// You are in div 5
-										if ($('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-										// You are in div 6
-										if ($('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#7"]').hasClass('sidenav-active')) {
-											$('a[href="#7"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_seven_top) {
-										// You are in div 7
-										if ($('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').removeClass('sidenav-active');
-										}
-					
-										if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-											$('a[href="#7"]').addClass('sidenav-active');
-										}
-									}
-								});
-							});
-							
-						</script>
-						<!-- END OF SCROLL AWARE HIGHLIGHT-->
-
 						<!-------------------------------------- END OF E . COLI TAB --------------------------------------->
-
 
 
 
@@ -2811,26 +2697,15 @@
 							<p>The two following graphs show net oxygen flux per gDW of the co culture in two different conditions. The first allows only exchange of oxygen between the two species but extra oxygen is not allowed from the environment. The second allows both exchange of oxygen as well as for the E coli to take up more oxygen from the environment if it requires as well. </p>
 							<br>
 						</div>
-
-						<!-- SCROLL AWARE HIGHLIGHT -->
-
-						<!-- END OF SCROLL AWARE HIGHLIGHT -->
-
 						<!------------------------------------- END OF CO CULTURE TAB----------------------------------------->
 
 
 					</div>
 				</div>
-				<!-- END OF CONTENT -->
-
-
 			</div>
 		</div>
 	</div>
-
-	
-
-	<!-- -----------------------END OF CONTENT ----------------------------------- -->
+	<!-- -----------------------------------------END OF CONTENT -------------------------------------------------------->
 	
 
 
@@ -2876,7 +2751,7 @@
 	
 
 
-	
+
 	<!--------------------------------------------- ACTUAL SCROLLING BAR--------------------------------------------->
 	<div class="header"></div>
 	<div class="line" id="scrollIndicator"></div>
