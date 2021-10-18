@@ -163,7 +163,7 @@
             <div class="col-lg-3 col-md-3">
 
 				<!-- Overview sidebar-->
-                <div class="sidenav fade active" id="overviewside">
+                <div class="sidenav" id="overviewside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#o1">Introduction</a></li>
@@ -180,7 +180,7 @@
 
 				
 				<!-- Cyano Sidebar-->
-				<div class="sidenav fade" id="cyanoside">
+				<div class="sidenav" style="visibility: hidden;" id="cyanoside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#c1">Introduction</a></li>
@@ -195,7 +195,7 @@
                 </div>
 
 				<!-- E coli Sidebar-->
-				<div class="sidenav fade" id="ecoliside">
+				<div class="sidenav" style="visibility: hidden;" id="ecoliside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#e1">Introduction</a></li>
@@ -211,7 +211,7 @@
 
 
 				<!-- Co Culture Sidebar-->
-				<div class="sidenav fade" id="cocultureside">
+				<div class="sidenav" style="visibility: hidden;"id="cocultureside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#cc1">Introduction</a></li>
@@ -247,6 +247,7 @@
 							<button class="nav-link" id="coculture-tab" data-bs-toggle="tab" data-bs-target="#Coculture" data-bs-target ="#cocultureside" type="button" role="tab" aria-controls="cyano" aria-selected="false">Co-culture</button>
 						</li>
 					</ul>
+
 					<div class="tab-content" id="myTabContent">
 
 						<!-------------------------------------------- OVERVIEW TAB ---------------------------------------------------->
@@ -533,7 +534,7 @@
 
 
 						<!------------------------------------- CYANO TAB ---------------------------------------------------->
-						<div class="tab-pane fade" id="cyano" role="tabpanel" aria-labelledby="cyano-tab">
+						<div class="tab-pane fade show " id="cyano" role="tabpanel" aria-labelledby="cyano-tab">
 							<!-- INTRODUCTION -->
 							<a id="c1"></a>
 							<h1>Introduction</h1>
@@ -1969,7 +1970,6 @@
 						</script>
 						<!--  END OF SCROLL AWARE HIGHLIGHT -->
 
-
 						<!-------------------------------------- END OF CYANO TAB ------------------------------------------>
 
 
@@ -3049,6 +3049,10 @@
 							<br>
 						</div>
 
+						<!-- SCROLL AWARE HIGHLIGHT -->
+
+						<!-- END OF SCROLL AWARE HIGHLIGHT -->
+
 						<!------------------------------------- END OF CO CULTURE TAB----------------------------------------->
 
 
@@ -3068,10 +3072,7 @@
 
 
 
-
-
-
-	<!-- SPONSORS BAR -->
+	<!--------------------------------------------- SPONSORS BAR ------------------------------------------------------->
 	<div class="footer">
 		<div class="footer-wrapper">
 			<!-- <div id="not-sponsors" class="footer-wrapper">	 -->
@@ -3107,45 +3108,87 @@
 			</div>	
 		</div>
 	</div>
-	<!-- END OF SPONSOR BAR-->
+	<!--------------------------------------------- END OF SPONSOR BAR--------------------------------------------->
 
 	
-						<!-- SCROLL BAR -->
-						<!-- ACTUAL SCROLLING BAR-->
-						<div class="header"></div>
-						<div class="line" id="scrollIndicator"></div>
+	<!--------------------------------------------- ACTUAL SCROLLING BAR--------------------------------------------->
+	<div class="header"></div>
+	<div class="line" id="scrollIndicator"></div>
 
-						<!-- back to top button -->
-						<a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
+	<!-- Gets the screenheight of each page for Scrollbar? -->
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+
+
+	<!-- Scrollbar stuff again, only @Namasi22 knows :) -->
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+			var pageheight = Math.max(body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight);
+	</script>
+	
+
+	<!-- Scrollbar stuff again, only @Namasi22 knows :) -->
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+
+
+	<!--------------------------------------------- back to top button --------------------------------------------->
+	<a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
 
 						
-						<!-- LINKING MAIN JS FILES-->
-						<script src="js/bootstrap-bundle.js"></script>
-						<script src="js/main.js"></script>
-						<script src="js/jquery.min.js"></script>
+	<!--------------------------------------------- LINKING MAIN JS FILES--------------------------------------------->
+	<script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
 
+	
+	<!----------------------------------------Sidenav list activation script -------------------------------------------------->
+	<script>
+		document.getElementById("myTab").addEventListener('click', sidebar);
 
-						<!-- Scrollbar stuff again, only @Namasi22 knows :) -->
-						<script>
-							var body = document.body,
-								html = document.documentElement;
-
-								var pageheight = Math.max(body.scrollHeight, body.offsetHeight, 
-												html.clientHeight, html.scrollHeight, html.offsetHeight);
-						</script>
-						
-
-						<!-- Scrollbar stuff again, only @Namasi22 knows :) -->
-						<script>
-							var backtotopheight=pageheight/4.65
-						</script>
-
-						<!-- END OF SCROLL BAR -->
-
-
-
-
-	<!-- Script for the slideshow, wherever needed -->	
+		function sidebar(){
+			if($('#cyano').hasClass('active')) {
+				$('#ecoliside').css({visibility: "hidden"});
+				$('#cocultureside').css({visibility: "hidden"});
+				$('#overviewside').css({visibility: "hidden"});
+				$('#cyanoside').css({visibility: "visible"});
+				console.log('cyano')
+			}
+			else if($('#ecoli').hasClass('active')) {
+				$('#cyanoside').css({visibility: "hidden"});
+				$('#cocultureside').css({visibility: "hidden"});
+				$('#overviewside').css({visibility: "hidden"});
+				$('#ecoliside').css({visibility: "visible"});
+				console.log('cyanoq')
+			}
+			else if($('#Coculture').hasClass('active')) {
+				$('#cyanoside').css({visibility: "hidden"});
+				$('#ecoliside').css({visibility: "hidden"});
+				$('#overviewside').css({visibility: "hidden"});
+				$('#cocultureside').css({visibility: "visible"});
+				console.log('cyanof')
+			}
+			else if($('#overview').hasClass('active')) {
+				$('#ecoliside').css({visibility: "hidden"});
+				$('#cocultureside').css({visibility: "hidden"});
+				$('#cyanoside').css({visibility: "hidden"});
+				$('#overviewside').css({visibility: "visible"});
+				console.log('cyawno')
+			}
+		}
+	</script>
+	<!----------------------------------------- End of Sidenav list activation script --------------------------------------->
+	
+	
+	
+	<!--------------------------------------------- Script for the slideshow, wherever needed --------------------------------------------->	
 	<script>
 		var total = $('.item').length;
 		var actualtotal = 4;

@@ -52,23 +52,23 @@ document.getElementById('scrollIndicator');
 
 function moveScrollIndicator(e) {
   if($('#cyano').hasClass('active')) {
-    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 15;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.3275;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else if($('#ecoli').hasClass('active')) {
-    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 20;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.4275;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else if($('#Coculture').hasClass('active')) {
-    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 20;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 13.845;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else if($('#overview').hasClass('active')) {
-    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else {
-    const percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
     scrollIndicatorElt.style.height = percentage + '%';
   }
 };
