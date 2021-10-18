@@ -21,21 +21,6 @@
 </head>
 
 <!-- Superior styling KEKW-->
-<style>
-	.sidenav {
-		height: auto;
-		width: auto;
-		padding-top: 150px;
-		padding-left: 5px;
-		padding-right: 10px;
-	
-		margin-top: 25%;
-		margin-bottom: 20px;
-		position: -webkit-sticky;
-		position: sticky;
-		top: 7%!important;
-	}
-</style>
 
 <body>
     
@@ -163,7 +148,7 @@
             <div class="col-lg-3 col-md-3">
 
 				<!-- Overview sidebar-->
-                <div class="sidenav" id="overviewside">
+                <div class="sidenav" style="visibility: visible;" style="top: 7%" id="overviewside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#o1">Introduction</a></li>
@@ -180,7 +165,7 @@
 
 				
 				<!-- Cyano Sidebar-->
-				<div class="sidenav" style="visibility: hidden;" id="cyanoside">
+				<div class="sidenav" style="visibility: hidden;" style="top: 11%;" id="cyanoside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#c1">Introduction</a></li>
@@ -195,7 +180,7 @@
                 </div>
 
 				<!-- E coli Sidebar-->
-				<div class="sidenav" style="visibility: hidden;" id="ecoliside">
+				<div class="sidenav" style="visibility: hidden;" style="top: 12%" id="ecoliside">
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#e1">Introduction</a></li>
@@ -410,122 +395,6 @@
 						</div>
 						<!-- END OF CONTENT -->
 
-
-						<!-- SCROLL AWARE HIGHLIGHT-->
-						<script>
-				
-							$(document).ready(function() {
-								$(window).scroll(function() {
-									var scroll_top = $(window).scrollTop();
-									var div_one_top = $("#o1").offset().top;
-									var div_two_top = $("#o2").offset().top;
-									var div_three_top = $("#o3").offset().top;
-									var div_four_top = $("#o4").offset().top;
-									var div_five_top = $("#o5").offset().top;
-									var div_six_top = $("#o6").offset().top;
-									var div_seven_top = $("#o7").offset().top;
-									var div_eight_top =$("#o8").offset().top;
-					
-									if (scroll_top > div_one_top && scroll_top < div_two_top) {
-										//Division 1
-										if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-											$('a[href="#1"]').addClass('sidenav-active');
-										}
-						
-										if ($('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').removeClass('sidenav-active');
-										}
-					
-									} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-										// Division 2
-										if ($('a[href="#1"]').hasClass('sidenav-active')) {
-											$('a[href="#1"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').removeClass('sidenav-active');
-										}
-						
-										if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-										//Division 3
-										if ($('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-									// You are in div 4
-										if ($('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').removeClass('sidenav-active');
-										}
-						
-										if ($('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-										// You are in div 5
-										if ($('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').removeClass('sidenav-active');
-										}
-						
-										if ($('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').removeClass('sidenav-active');
-										} 
-						
-										if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-										// You are in div 6
-										if ($('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#7"]').hasClass('sidenav-active')) {
-											$('a[href="#7"]').removeClass('sidenav-active');
-										} 
-						
-										if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_seven_top && scroll_top < div_eight_top) {
-										// You are in div 7
-										if ($('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').removeClass('sidenav-active');
-										}
-						
-										if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-											$('a[href="#7"]').addClass('sidenav-active');
-										}
-										if ($('a[href="#8"]').hasClass('sidenav-active')) {
-											$('a[href="#8"]').removeClass('sidenav-active');
-										}
-									} else if (scroll_top > div_eight_top) {
-										if ($('a[href="#7"]').hasClass('sidenav-active')) {
-											$('a[href="#7"]').removeClass('sidenav-active');
-										}
-						
-										if (!$('a[href="#8"]').hasClass('sidenav-active')) {
-											$('a[href="#8"]').addClass('sidenav-active');
-										}
-									}
-								});
-							});
-						</script>
-						<!-- END OF SCROLL AWARE HIGHLIGHT -->
 
 						<!------------------------------------ END OF OVERVIEW TAB ------------------------------------------>
 
@@ -1864,112 +1733,6 @@
 						<!-- END OF CONTENT -->
 
 
-
-						<!-- SCROLL AWARE HIGHLIGHT -->
-						<script>
-		
-							$(document).ready(function() {
-								$(window).scroll(function() {
-									var scroll_top = $(window).scrollTop();
-									var div_one_top = $("#c1").offset().top;
-									var div_two_top = $("#c2").offset().top;
-									var div_three_top = $("#c3").offset().top;
-									var div_four_top = $("#c4").offset().top;
-									var div_five_top = $("#c5").offset().top;
-									var div_six_top = $("#c6").offset().top;
-									var div_seven_top = $("#c7").offset().top;
-					
-									if (scroll_top > div_one_top && scroll_top < div_two_top) {
-										//Division 1
-										if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-											$('a[href="#1"]').addClass('sidenav-active');
-										}
-						
-										if ($('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').removeClass('sidenav-active');
-										}
-					
-									} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-										// Division 2
-										if ($('a[href="#1"]').hasClass('sidenav-active')) {
-											$('a[href="#1"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').removeClass('sidenav-active');
-										}
-						
-										if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-										//Division 3
-										if ($('a[href="#2"]').hasClass('sidenav-active')) {
-											$('a[href="#2"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-									// You are in div 4
-										if ($('a[href="#3"]').hasClass('sidenav-active')) {
-											$('a[href="#3"]').removeClass('sidenav-active');
-										}
-						
-										if ($('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').removeClass('sidenav-active');
-										} 
-					
-										if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-										// You are in div 5
-										if ($('a[href="#4"]').hasClass('sidenav-active')) {
-											$('a[href="#4"]').removeClass('sidenav-active');
-										}
-						
-										if ($('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').removeClass('sidenav-active');
-										} 
-						
-										if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-										// You are in div 6
-										if ($('a[href="#5"]').hasClass('sidenav-active')) {
-											$('a[href="#5"]').removeClass('sidenav-active');
-										}
-					
-										if ($('a[href="#7"]').hasClass('sidenav-active')) {
-											$('a[href="#7"]').removeClass('sidenav-active');
-										} 
-						
-										if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').addClass('sidenav-active');
-										}
-									} else if (scroll_top > div_seven_top) {
-										// You are in div 7
-										if ($('a[href="#6"]').hasClass('sidenav-active')) {
-											$('a[href="#6"]').removeClass('sidenav-active');
-										}
-						
-										if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-											$('a[href="#7"]').addClass('sidenav-active');
-										}
-									}
-								});
-							});
-								
-						</script>
-						<!--  END OF SCROLL AWARE HIGHLIGHT -->
-
 						<!-------------------------------------- END OF CYANO TAB ------------------------------------------>
 
 
@@ -3111,6 +2874,9 @@
 	<!--------------------------------------------- END OF SPONSOR BAR--------------------------------------------->
 
 	
+
+
+	
 	<!--------------------------------------------- ACTUAL SCROLLING BAR--------------------------------------------->
 	<div class="header"></div>
 	<div class="line" id="scrollIndicator"></div>
@@ -3139,6 +2905,9 @@
 	</script>
 
 
+
+
+
 	<!--------------------------------------------- back to top button --------------------------------------------->
 	<a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
 
@@ -3148,46 +2917,375 @@
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
 
-	
-	<!----------------------------------------Sidenav list activation script -------------------------------------------------->
-	<script>
-		document.getElementById("myTab").addEventListener('click', sidebar);
 
-		function sidebar(){
-			if($('#cyano').hasClass('active')) {
-				$('#ecoliside').css({visibility: "hidden"});
-				$('#cocultureside').css({visibility: "hidden"});
-				$('#overviewside').css({visibility: "hidden"});
-				$('#cyanoside').css({visibility: "visible"});
-				console.log('cyano')
+
+
+
+	
+	<!--------------------------------Sidenav list activation based on tabs script --------------------------------------->
+	<script>
+		$('cyano-tab').click();
+		console.log('first click done');
+	</script>
+	
+	<script>
+		$(document).ready(function() {
+			$('#myTab').on('click', sidebar);
+
+			function sidebar(){
+				if($('#cyano').hasClass('active')) {
+					$('#ecoliside').css({visibility: "hidden"});
+					$('#cocultureside').css({visibility: "hidden"});
+					$('#overviewside').css({visibility: "hidden"});
+					$('#cyanoside').css({visibility: "visible"});
+					$('.sidenav').css({top: "11%"})
+					console.log('cyano')
+				}
+				else if($('#ecoli').hasClass('active')) {
+					$('#cyanoside').css({visibility: "hidden"});
+					$('#cocultureside').css({visibility: "hidden"});
+					$('#overviewside').css({visibility: "hidden"});
+					$('#ecoliside').css({visibility: "visible"});
+					$('.sidenav').css({top: "12%"})
+					console.log('ecoli')
+				}
+				else if($('#Coculture').hasClass('active')) {
+					$('#cyanoside').css({visibility: "hidden"});
+					$('#ecoliside').css({visibility: "hidden"});
+					$('#overviewside').css({visibility: "hidden"});
+					$('#cocultureside').css({visibility: "visible"});
+					$('.sidenav').css({top: "11%"})
+					console.log('coculture')
+				}
+				else if($('#overview').hasClass('active')) {
+					$('#ecoliside').css({visibility: "hidden"});
+					$('#cocultureside').css({visibility: "hidden"});
+					$('#cyanoside').css({visibility: "hidden"});
+					$('#overviewside').css({visibility: "visible"});
+					$('.sidenav').css({top: "9.5%"})
+					console.log('overview')
+				}
 			}
-			else if($('#ecoli').hasClass('active')) {
-				$('#cyanoside').css({visibility: "hidden"});
-				$('#cocultureside').css({visibility: "hidden"});
-				$('#overviewside').css({visibility: "hidden"});
-				$('#ecoliside').css({visibility: "visible"});
-				console.log('cyanoq')
-			}
-			else if($('#Coculture').hasClass('active')) {
-				$('#cyanoside').css({visibility: "hidden"});
-				$('#ecoliside').css({visibility: "hidden"});
-				$('#overviewside').css({visibility: "hidden"});
-				$('#cocultureside').css({visibility: "visible"});
-				console.log('cyanof')
-			}
-			else if($('#overview').hasClass('active')) {
-				$('#ecoliside').css({visibility: "hidden"});
-				$('#cocultureside').css({visibility: "hidden"});
-				$('#cyanoside').css({visibility: "hidden"});
-				$('#overviewside').css({visibility: "visible"});
-				console.log('cyawno')
-			}
-		}
+		});
+			
 	</script>
 	<!----------------------------------------- End of Sidenav list activation script --------------------------------------->
 	
+
+
+
+	<!---------------------------------------------- SCROLL AWARE HIHGLIGHTS --------------------------------------->
+	<script>
+		$(document).ready(function() {
+			$(window).scroll(function() {
+
+				if($('#overview').hasClass('active')){
+					console.log('scroll overview')
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#o1").offset().top;
+					var div_two_top = $("#o2").offset().top;
+					var div_three_top = $("#o3").offset().top;
+					var div_four_top = $("#o4").offset().top;
+					var div_five_top = $("#o5").offset().top;
+					var div_six_top = $("#o6").offset().top;
+					var div_seven_top = $("#o7").offset().top;
+					var div_eight_top =$("#o8").offset().top;
+						
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+					//Division 1
+						if (!$('a[href="#o1"]').hasClass('sidenav-active')) {
+							$('a[href="#o1"]').addClass('sidenav-active');
+						}
+							
+						if ($('a[href="#o2"]').hasClass('sidenav-active')) {
+							$('a[href="#o2"]').removeClass('sidenav-active');
+						}	
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#o1"]').hasClass('sidenav-active')) {
+							$('a[href="#o1"]').removeClass('sidenav-active');
+						}
+						
+						if ($('a[href="#o3"]').hasClass('sidenav-active')) {
+							$('a[href="#o3"]').removeClass('sidenav-active');
+						}
+							
+						if (!$('a[href="#o2"]').hasClass('sidenav-active')) {
+							$('a[href="#o2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#o2"]').hasClass('sidenav-active')) {
+							$('a[href="#o2"]').removeClass('sidenav-active');
+						}
+						
+						if ($('a[href="#o4"]').hasClass('sidenav-active')) {
+							$('a[href="#o4"]').removeClass('sidenav-active');
+						} 
+						
+						if (!$('a[href="#o3"]').hasClass('sidenav-active')) {
+							$('a[href="#o3"]').addClass('sidenav-active');
+						}					
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#o3"]').hasClass('sidenav-active')) {
+							$('a[href="#o3"]').removeClass('sidenav-active');
+						}
+							
+						if ($('a[href="#o5"]').hasClass('sidenav-active')) {
+							$('a[href="#o5"]').removeClass('sidenav-active');
+						} 
+						
+						if (!$('a[href="#o4"]').hasClass('sidenav-active')) {
+							$('a[href="#o4"]').addClass('sidenav-active');
+						}				
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#o4"]').hasClass('sidenav-active')) {
+							$('a[href="#o4"]').removeClass('sidenav-active');
+						}
+							
+						if ($('a[href="#o6"]').hasClass('sidenav-active')) {
+							$('a[href="#o6"]').removeClass('sidenav-active');
+						} 
+							
+						if (!$('a[href="#o5"]').hasClass('sidenav-active')) {
+							$('a[href="#o5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#o5"]').hasClass('sidenav-active')) {
+							$('a[href="#o5"]').removeClass('sidenav-active');
+						}
+						
+						if ($('a[href="#o7"]').hasClass('sidenav-active')) {
+							$('a[href="#o7"]').removeClass('sidenav-active');
+						} 
+							
+						if (!$('a[href="#o6"]').hasClass('sidenav-active')) {
+							$('a[href="#o6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top && scroll_top < div_eight_top) {
+						// You are in div 7
+						if ($('a[href="#o6"]').hasClass('sidenav-active')) {
+							$('a[href="#o6"]').removeClass('sidenav-active');
+						}
+							
+						if (!$('a[href="#o7"]').hasClass('sidenav-active')) {
+							$('a[href="#o7"]').addClass('sidenav-active');
+						}
+						if ($('a[href="#o8"]').hasClass('sidenav-active')) {
+							$('a[href="#o8"]').removeClass('sidenav-active');
+						}
+					} else if (scroll_top > div_eight_top) {
+						if ($('a[href="#o7"]').hasClass('sidenav-active')) {
+							$('a[href="#o7"]').removeClass('sidenav-active');
+						}
+							
+						if (!$('a[href="#o8"]').hasClass('sidenav-active')) {
+							$('a[href="#o8"]').addClass('sidenav-active');
+						}
+					}
+				} else if ($('#cyano').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#c1").offset().top;
+					var div_two_top = $("#c2").offset().top;
+					var div_three_top = $("#c3").offset().top;
+					var div_four_top = $("#c4").offset().top;
+					var div_five_top = $("#c5").offset().top;
+					var div_six_top = $("#c6").offset().top;
+					var div_seven_top = $("#c7").offset().top;
+					
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#c1"]').hasClass('sidenav-active')) {
+							$('a[href="#c1"]').addClass('sidenav-active');
+						}
+						
+						if ($('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').removeClass('sidenav-active');
+						}
+					
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#c1"]').hasClass('sidenav-active')) {
+							$('a[href="#c1"]').removeClass('sidenav-active');
+						}
+					
+						if ($('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').removeClass('sidenav-active');
+						}
+						
+						if (!$('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').removeClass('sidenav-active');
+						}
+					
+						if ($('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').removeClass('sidenav-active');
+						} 
+					
+						if (!$('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').removeClass('sidenav-active');
+						}
+						
+						if ($('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').removeClass('sidenav-active');
+						} 
+					
+						if (!$('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').removeClass('sidenav-active');
+						}
+						
+						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').removeClass('sidenav-active');
+						} 
+						
+						if (!$('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').removeClass('sidenav-active');
+						}
+					
+						if ($('a[href="#c7"]').hasClass('sidenav-active')) {
+							$('a[href="#c7"]').removeClass('sidenav-active');
+						} 
+						
+						if (!$('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top) {
+						// You are in div 7
+						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').removeClass('sidenav-active');
+						}
+						
+						if (!$('a[href="#c7"]').hasClass('sidenav-active')) {
+							$('a[href="#c7"]').addClass('sidenav-active');
+						}
+					} 
+				} else if($('#ecoli').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#e1").offset().top;
+					var div_two_top = $("#e2").offset().top;
+					var div_three_top = $("#e3").offset().top;
+					var div_four_top = $("#e4").offset().top;
+					var div_five_top = $("#e5").offset().top;
+					var div_six_top = $("#e6").offset().top;
+					var div_seven_top = $("#e7").offset().top;
+
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#e1"]').hasClass('sidenav-active')) {
+							$('a[href="#e1"]').addClass('sidenav-active');
+						}
+
+						if ($('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').removeClass('sidenav-active');
+						}
+
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#e1"]').hasClass('sidenav-active')) {
+							$('a[href="#e1"]').removeClass('sidenav-active');
+						}
+
+						if ($('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').removeClass('sidenav-active');
+						}
+
+						if (!$('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').removeClass('sidenav-active');
+						}
+
+						if ($('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').removeClass('sidenav-active');
+						} 
+
+						if (!$('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').removeClass('sidenav-active');
+						}
+
+						if ($('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').removeClass('sidenav-active');
+						} 
+
+						if (!$('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').removeClass('sidenav-active');
+						}
+
+						if ($('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').removeClass('sidenav-active');
+						} 
+
+						if (!$('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').removeClass('sidenav-active');
+						}
+
+						if ($('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').removeClass('sidenav-active');
+						} 
+
+						if (!$('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top) {
+						// You are in div 7
+						if ($('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').removeClass('sidenav-active');
+						}
+
+						if (!$('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').addClass('sidenav-active');
+						}
+					}
+				}
+			});
+		});		
+	</script>
+	<!--------------------------------------------- END OF SCROLL AWARE HIGHLIGHTS ---------------------------------->
 	
-	
+
+
+
+
 	<!--------------------------------------------- Script for the slideshow, wherever needed --------------------------------------------->	
 	<script>
 		var total = $('.item').length;
