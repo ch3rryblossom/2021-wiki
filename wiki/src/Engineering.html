@@ -788,8 +788,144 @@ z-index: -1;
                             Collect supernatant samples over time to estimate sucrose production; use Pakrasi lab’s strains as a reference
                         </div>
                     </div>
+
+
+
                 <p>We were unfortunately unable to carry out most of these experiments in the little time remaining to us. We instead acquired sucrose-secreting strains of <i>S. elongatus</i> UTEX 2973 from the Pakrasi lab, to measure their sucrose production rates. We have also acquired everything we need for future experiments according to our original plan.</p>
-                    
+          <style>
+              .cycle-container{
+                  display:flex;
+                  flex-direction: column;
+                  align-items:center;
+              }
+              .cycle {
+                min-width: 50em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content:center;
+              }
+              .cycle-left{
+                border-radius: 5% 0 0 5%;
+                font-size: 2rem;
+                flex:1;
+                text-align: center;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+              }
+              .cycle-right{
+                flex:5;
+                text-align: center;
+                border-bottom: 1px solid;
+                border-top: 1px solid;
+                box-shadow: rgba(240, 46, 170, 0.4) 5px 0px, rgba(240, 46, 170, 0.3) 10px 1px, rgba(240, 46, 170, 0.2) 15px 2px, rgba(240, 46, 170, 0.1) 20px 3px, rgba(240, 46, 170, 0.05) 25px 4px;
+              }
+              .cycle-container svg {
+  height: 5rem;
+}
+              .cycle-container svg line {
+  stroke: #39dd91;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-dasharray: 2px 20px;
+  animation: animateline 5s linear both infinite;
+}
+@-moz-keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}
+@-webkit-keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}
+@-o-keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}
+@keyframes animateline {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -5rem;
+  }
+}
+              
+              @media screen and (max-width: 800px) {
+  .cycle {
+    flex-direction: column;
+  }
+  .cycle-left{
+      border-radius: 5% 5% 0 0;
+  }
+}
+
+              #design {
+    background: linear-gradient(270deg, #476f65, #933708);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+          </style>          
+<div class="cycle-container">
+    <div class="cycle">
+        <div class="cycle-left" id="design"><div><i>Design</i></div></div>
+        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
+    </div>
+    <svg viewbox="0 0 10 100">
+        <line x1="5" x2="5" y1="0" y2="100"/>
+    </svg>
+    <div class="cycle">
+        <div class="cycle-left" id="design"><div><i>Build</i></div></div>
+        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
+    </div>
+    <svg viewbox="0 0 10 100">
+        <line x1="5" x2="5" y1="0" y2="100"/>
+    </svg>
+    <div class="cycle">
+        <div class="cycle-left" id="design"><div><i>Learn</i></div></div>
+        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
+    </div>
+    <svg viewbox="0 0 10 100">
+        <line x1="5" x2="5" y1="0" y2="100"/>
+    </svg>
+    <div class="cycle">
+        <div class="cycle-left" id="design"><div><i>Test</i></div></div>
+        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
+    </div>
+</div>
+
 
 			</div>
 
