@@ -266,7 +266,7 @@
 								<li style="padding-left:1em">Identify the important interactive metabolites in the co culture</li>
 								<li style="padding-left:1em">Identify targets to over express or knockout in each organism for improved yields of sucrose and butanol</li>
 							</ol>
-							<p>The core technique of our modelling attempts is a constraint based modelling technique called Flux Balance Analysis, in short FBA. We have used the COBRA package in MATLAB<sup><a href="#ref1">1</a></sup> for almost all our models.</p>
+							<p>The core technique of our modelling attempts is a constraint based modelling technique called Flux Balance Analysis, in short FBA. We have used the COBRA package in MATLAB<sup><a href="#oref1">1</a></sup> for almost all our models.</p>
 							<a id="o2"></a><br>
 
 
@@ -275,9 +275,9 @@
 							
 							<h1>Flux Balance Analysis</h1>
 							<hr><br><br><br>
-							<p>FBA is a steady state analysis algorithm that is widely used in metabolic predictions and optimisations. FBA assumes the organism to be in a metabolically steady state i.e., there is no accumulation of metabolites within the organism.<sup><a href="#ref2">2</a></sup> To perform FBA we require a metabolic model of the organism. A metabolic model of an organism contains information on all (or most) reactions in an organism, the metabolites involved, the genes present in the organism, the Gene-Reaction-Relation, and a calculated biomass production reaction (growth rate reaction) that gives the growth rate when analysed.</p>
+							<p>FBA is a steady state analysis algorithm that is widely used in metabolic predictions and optimisations. FBA assumes the organism to be in a metabolically steady state i.e., there is no accumulation of metabolites within the organism.<sup><a href="#oref2">2</a></sup> To perform FBA we require a metabolic model of the organism. A metabolic model of an organism contains information on all (or most) reactions in an organism, the metabolites involved, the genes present in the organism, the Gene-Reaction-Relation, and a calculated biomass production reaction (growth rate reaction) that gives the growth rate when analysed.</p>
 							<br>
-							<h4>The core elements of FBA are<sup><a href="#ref2">2</a></sup>:</h4>
+							<h4>The core elements of FBA are<sup><a href="#oref2">2</a></sup>:</h4>
 							<ol class="a">
 								<li style="padding-left:1em">S Matrix or the stoichiometric matrix - This is a matrix of the order (number of metabolites) * (number of reactions)</li>
 								<li style="padding-left:1em">The objective function or c - This is a column vector that holds the information to attain the aim of the analysis, for example biomass optimisation</li>								
@@ -287,7 +287,7 @@
 							<p>In an organism, it is normal to have the same metabolites participating in multiple reactions, and therefore it is safe to assume the number of reactions will be more than the number of metabolites. This can be compared to a system of linear equations with more equations than variables. Without constraints the solution space is infinite, so we introduce constraints in the form of bounds.</p>
 							<br>
 
-							<h4>Equations of FBA and their solutions<sup><a href="#ref2">2</a></sup></h4>
+							<h4>Equations of FBA and their solutions<sup><a href="#oref2">2</a></sup></h4>
 							<br>
 
 							<h4>Constraints:</h4>
@@ -298,19 +298,19 @@
 							</ul>
 							<br>
 
-							<h4>Objective Function<sup><a href="#ref2">2</a></sup>:</h4>
+							<h4>Objective Function<sup><a href="#oref2">2</a></sup>:</h4>
 							<ul>
 								<li style="padding-left:1em;">C(transpose)v</li>
 							</ul>
 							<br>
 
-							<h4>Objective<sup><a href="#ref2">2</a></sup></a>:</h4>
+							<h4>Objective<sup><a href="#oref2">2</a></sup></a>:</h4>
 							<ul>
 								<li style="padding-left:1em;">Minimise or Maximise Objective function</li>
 							</ul>
 							<br>
 
-							<h4>Solution<sup><a href="#ref2">2</a></sup>:</h4>
+							<h4>Solution<sup><a href="#oref2">2</a></sup>:</h4>
 							<ul>
 								<li style="padding-left:1em;">Plausible flux distributions for the above mentioned objective function</li>
 							</ul>
@@ -324,9 +324,9 @@
 							<!-- MoMA -->
 							<h1>Minimisation of Metabolic Adjustments</h1>
 							<hr><br><br><br>
-							<p>MoMA is an extension of Flux Balance Analysis that imposes more constraints to make the model as close to reality as possible, albeit it isn’t the best at doing so. The logic of MoMA is very simple - minimise the euclidean distance (L2 norm) between the wild-type flux distribution and the flux distribution of the modified organism in the flux vector space<a href="#ref3"><sup>3</sup></a>.</p>
+							<p>MoMA is an extension of Flux Balance Analysis that imposes more constraints to make the model as close to reality as possible, albeit it isn’t the best at doing so. The logic of MoMA is very simple - minimise the euclidean distance (L2 norm) between the wild-type flux distribution and the flux distribution of the modified organism in the flux vector space<a href="#oref3"><sup>3</sup></a>.</p>
 							<br>
-							<h4>The algorithm<sup><a href="#ref3">3</a></sup>:</h4>
+							<h4>The algorithm<sup><a href="#oref3">3</a></sup>:</h4>
 							<ol class="a">
 								<li style="padding-left:1em;">Find the wild-type/base strain flux distribution using FBA for maximized growth rates</li>
 								<li style="padding-left:1em;">Simulate the deletion, over-expression or any stress</li>
@@ -346,7 +346,7 @@
 							<hr><br><br><br>
 							<p>This algorithm was developed to identify gene targets that can be amplified for increased production of selected metabolites or even increased growth rates. We have used this technique to identify the reactions and further genes that we can over-express to increase sucrose production in cyanobacteria and butanol production in <i>E. coli</i>. <p>To understand FSEOF imagine the whole organism as a big city, the reactions as roads, and the flux through the reactions as the traffic in each road. Now consider evacuating this city as our objective, then the roads which lead to the exits will start carrying more traffic. If we can widen these roads we can in theory get more people out. If evacuating this city was another way of saying - maximise the production of a particular metabolite, then widen the roads can be considered as amplifying the corresponding reactions.</p>
 							<br>
-							<p>In the form of an algorithm it would look something like this<sup><a href="#ref4">4</a></sup>:</p>
+							<p>In the form of an algorithm it would look something like this<sup><a href="#oref4">4</a></sup>:</p>
 							<ol class="a">
 								<li style="padding-left:1em;">Find maximum growth under media conditions using FBA </li>
 								<li style="padding-left:1em;">Find the maximum production of the metabolite using FBA </li>
@@ -364,7 +364,7 @@
 							<!-- OptKnock -->
 							<h1>OptKnock</h1>
 							<hr><br><br><br>
-							<p>OptKnock is an algorithm that find and suggests which set of reactions to remove from a metabolic network to obtain a mutant that will produce a particular target of interest at a higher rate than the wild-type strain<sup><a href="#ref5">5</a></sup>. The logic is pretty simple -</p>
+							<p>OptKnock is an algorithm that find and suggests which set of reactions to remove from a metabolic network to obtain a mutant that will produce a particular target of interest at a higher rate than the wild-type strain<sup><a href="#oref5">5</a></sup>. The logic is pretty simple -</p>
 							<ol class="a">
 								<li style="padding-left:1em;">You find the set of reactions that you want to get knockouts from </li>
 								<li style="padding-left:1em;">Change their bounds to 0 (this is how you simulate deletion in models) either one by one or in pairs or triplets </li>
@@ -408,15 +408,15 @@
 								<li style="padding-left: 1em;"> All the fluxes from both the models provide the time derivatives of the corresponding metabolites, which are integrated and plotted</li>
 							</ol>
 							<a id="o8"></a>
-							<br><a id="ref1"></a><br><a id="ref2"></a><br><a id="ref3"></a><br><br>
+							<br><a id="oref1"></a><br><a id="oref2"></a><br><a id="oref3"></a><br><br>
 
 
 							<!-- References -->
 							<hr>
 							<h3> References</h3>
 							<ol class="a">
-								<li style="padding-left: 1em;" id="ref4"> Heirendt, L., Arreckx, S., Pfau, T. et al. Creation and analysis of biochemical constraint-based models using the COBRA Toolbox v.3.0. Nat Protoc 14, 639–702 (2019). <a href="https://doi.org/10.1038/s41596-018-0098-2">https://doi.org/10.1038/s41596-018-0098-2</a></li> 
-								<li style="padding-left: 1em;" id="ref5"> Orth, J. D., Thiele, I., & Palsson, B. Ø. (2010). What is flux balance analysis?. Nature biotechnology, 28(3), 245–248.<a href="https://doi.org/10.1038/nbt.1614">https://doi.org/10.1038/nbt.1614</a></li> 
+								<li style="padding-left: 1em;" id="oref4"> Heirendt, L., Arreckx, S., Pfau, T. et al. Creation and analysis of biochemical constraint-based models using the COBRA Toolbox v.3.0. Nat Protoc 14, 639–702 (2019). <a href="https://doi.org/10.1038/s41596-018-0098-2">https://doi.org/10.1038/s41596-018-0098-2</a></li> 
+								<li style="padding-left: 1em;" id="oref5"> Orth, J. D., Thiele, I., & Palsson, B. Ø. (2010). What is flux balance analysis?. Nature biotechnology, 28(3), 245–248.<a href="https://doi.org/10.1038/nbt.1614">https://doi.org/10.1038/nbt.1614</a></li> 
 								<li style="padding-left: 1em;"> 25 Segrè, D., Vitkup, D., & Church, G. M. (2002). Analysis of optimality in natural and perturbed metabolic networks. Proceedings of the National Academy of Sciences of the United States of America, 99(23), 15112–15117. <a href="https://doi.org/10.1073/pnas.232349399">https://doi.org/10.1073/pnas.232349399</a></li> 
 								<li style="padding-left: 1em;"> Choi, H. S., Lee, S. Y., Kim, T. Y., & Woo, H. M. (2010). In silico identification of gene amplification targets for improvement of lycopene production. Applied and environmental microbiology, 76(10), 3097–3105. <a href="https://doi.org/10.1128/AEM.00115-10">https://doi.org/10.1128/AEM.00115-10</a></li> 
 								<li style="padding-left: 1em;"> Burgard, A. P., Pharkya, P., & Maranas, C. D. (2003). Optknock: a bilevel programming framework for identifying gene knockout strategies for microbial strain optimization. Biotechnology and bioengineering, 84(6), 647–657. <a href="https://doi.org/10.1002/bit.10803">https://doi.org/10.1002/bit.10803</a></li> 
@@ -433,7 +433,7 @@
 							<a id="c1"></a>
 							<h1>Introduction</h1>
 							<hr><br><br><br>
-							<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for <i>Synechococcus elongatus</i> UTEX 2973 from Mueller et al., 2017<sup><a href="#ref1">1</a></sup>.</p>
+							<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for <i>Synechococcus elongatus</i> UTEX 2973 from Mueller et al., 2017<sup><a href="#cref1">1</a></sup>.</p>
 							<br>
 							<a id="c2"></a><br>
 							<!-- END OF INTRODUCTION-->
@@ -455,14 +455,14 @@
 							<br>
 							<h4>Results: </h4>
 							<ul class="b">
-								<li style="padding-left:1em;">Upon adding “SPP”, “SPS” and “cscB” and running FBA with an objective to maximise growth rate we obtained a maximum growth rate of <strong>0.3033 h-1</strong> and a sucrose production and transport flux of <strong>0</strong>. This value is very similar to the experimental growth rate of <strong>0.33 ± 0.05 h</strong> Abernathy et al.<sup><a href="#ref2">2</a></sup> , which implies confidence in the model we’re using. </li>
+								<li style="padding-left:1em;">Upon adding “SPP”, “SPS” and “cscB” and running FBA with an objective to maximise growth rate we obtained a maximum growth rate of <strong>0.3033 h-1</strong> and a sucrose production and transport flux of <strong>0</strong>. This value is very similar to the experimental growth rate of <strong>0.33 ± 0.05 h</strong> Abernathy et al.<sup><a href="#oref2">2</a></sup> , which implies confidence in the model we’re using. </li>
 								<li style="padding-left:1em;">For the following conditions upon performing MoMA for optimised sucrose production we obtained a growth rate of <strong>0.2012 h−1</strong>  and a sucrose output flux of <strong>0.3079 mmol/gDW/h</strong>. </li>
 								<ul class="d">
 									<li style="padding-left:1em;">Conditions:</li>
 										<ul class="c">
-											<li style="padding-left:1em;">Salt stress of <strong>150mM</strong><sup><a href="#ref4">4</a></sup> simulated by coupling sucrose accumulation and biomass production </li>
-											<li style="padding-left:1em;">CO<sub>2</sub> uptake rate of <strong>-12.2 mmol/gDW/h</strong> <sup><a href="#ref2">2</a></sup> </li>
-											<li style="padding-left:1em;">cscB efficiency of <strong>90%</strong> <sup><a href="#ref3">3</a></sup> </li>
+											<li style="padding-left:1em;">Salt stress of <strong>150mM</strong><sup><a href="#cref4">4</a></sup> simulated by coupling sucrose accumulation and biomass production </li>
+											<li style="padding-left:1em;">CO<sub>2</sub> uptake rate of <strong>-12.2 mmol/gDW/h</strong> <sup><a href="#cref2">2</a></sup> </li>
+											<li style="padding-left:1em;">cscB efficiency of <strong>90%</strong> <sup><a href="#cref3">3</a></sup> </li>
 										</ul>
 								</ul>
 							</ul>
@@ -1760,13 +1760,13 @@
 							<h2>Targets for Knockouts</h2><br>
 							<P>We ran Optknock like we did for e coli, but we were unable to obtain any sensible result. All our runs gave a <strong>0 growth rate</strong>. We believe the problem is with the model, as it is still incomplete and not verified, and therefore have concluded nothing further can be done to produce Knockout results.</P>
 							<a id="c7"></a>
-							<br><a id="ref1"></a><br><a id="ref2"></a><br><a id="ref3"></a><br><br>
+							<br><a id="cref1"></a><br><a id="cref2"></a><br><a id="cref3"></a><br><br>
 
 							<!-- REFERENCES -->
 							<hr>
 							<h3>References</h3><br>
 							<ol class="a">
-								<li style="padding-left: 1em;" id="ref4"> Mueller, T., Ungerer, J., Pakrasi, H. et al. Identifying the Metabolic Differences of a Fast-Growth Phenotype in Synechococcus UTEX 2973. Sci Rep 7, 41569 (2017). <a href="https://doi.org/10.1038/srep41569">https://doi.org/10.1038/srep41569</a></li>
+								<li style="padding-left: 1em;" id="cref4"> Mueller, T., Ungerer, J., Pakrasi, H. et al. Identifying the Metabolic Differences of a Fast-Growth Phenotype in Synechococcus UTEX 2973. Sci Rep 7, 41569 (2017). <a href="https://doi.org/10.1038/srep41569">https://doi.org/10.1038/srep41569</a></li>
 								<li style="padding-left: 1em;">Abernathy, M.H., Yu, J., Ma, F. et al. Deciphering cyanobacterial phenotypes for fast photoautotrophic growth via isotopically nonstationary metabolic flux analysis. Biotechnol Biofuels 10, 273 (2017). <a href="https://doi.org/10.1186/s13068-017-0958-y">https://doi.org/10.1186/s13068-017-0958-y</a></li>
 								<li style="padding-left: 1em;">Song K, Tan X, Liang Y, Lu X. The potential of <i>Synechococcus elongatus</i> UTEX 2973 for sugar feedstock production. Appl Microbiol Biotechnol. 2016 Sep;100(18):7865-75. Epub 2016 Apr 14. PMID: 27079574. <a href="https://doi.org/10.1007/s00253-016-7510-z">https://doi.org/10.1007/s00253-016-7510-z</a></li>
 								<li style="padding-left: 1em;">Lin, PC., Zhang, F. & Pakrasi, H.B. Enhanced production of sucrose in the fast-growing cyanobacterium <i>Synechococcus elongatus</i> UTEX 2973. Sci Rep 10, 390 (2020). <a href="https://doi.org/10.1038/s41598-019-57319-5">https://doi.org/10.1038/s41598-019-57319-5</a></li>
@@ -1797,10 +1797,10 @@
 							<p>We aimed to replicate the KJK01 butanol-producing strain in silico that we received from Dr. ‪Syed Shams Yazdani‬ at ICGEB, Delhi.</p>
 							<br>
 
-							<p>We used the iML1515 model from the BIGG database<sup><a href="#ref1">1</a></sup> which is a metabolic flux model of E.coli MG1655 that contains 1516 genes. This model was the base strain that we further modified to replicate the KJK01 strain. All modifications were made using the COBRA Toolbox in MATLAB and all optimization problems were solved using the gurobi solver<sup><a href="#ref2">2</a></sup>.</p>
+							<p>We used the iML1515 model from the BIGG database<sup><a href="#eref1">1</a></sup> which is a metabolic flux model of E.coli MG1655 that contains 1516 genes. This model was the base strain that we further modified to replicate the KJK01 strain. All modifications were made using the COBRA Toolbox in MATLAB and all optimization problems were solved using the gurobi solver<sup><a href="#eref2">2</a></sup>.</p>
 							<br>
 
-							<p>We first deleted the reactions corresponding to the following genes  that were deleted in the KJK01 strain<sup><a href="#ref3">3</a></sup>, by setting the fluxes through those reactions to zero. The reactions corresponding to the genes in the model were taken from the EcoCyc database<sup><a href="#ref4">4</a></sup>.</p>
+							<p>We first deleted the reactions corresponding to the following genes  that were deleted in the KJK01 strain<sup><a href="#eref3">3</a></sup>, by setting the fluxes through those reactions to zero. The reactions corresponding to the genes in the model were taken from the EcoCyc database<sup><a href="#eref4">4</a></sup>.</p>
 							<ul class="b">
 								<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=EG20173">pta</a> - codes for an enzyme that catalyses the conversion of acetyl-CoA to acetate. </li>
 								<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=EG10031">adhE</a> - codes for an enzyme that catalyses the conversion of acetyl-CoA to ethanol. </li>
@@ -1812,7 +1812,7 @@
 							<p>These genes catalyze reactions that direct flux away from the butanol producing pathway and produce acetate,  ethanol, succinate and lactate respectively, which impact butanol yields. Thus their deletion will reroute flux back into the butanol producing pathway and increase yields.</p>
 							<br>
 
-							<p>We then added reactions catalyzed by the heterologous genes expressed in E.coli in order to construct a butanol-producing pathway in the KJK01 strain. We added the reactions using the MetaCyc<sup><a href="#ref5">5</a></sup> database and the KEGG<sup><a href="#ref6">6</a></sup><sup>,</sup><sup><a href="#ref7">7</a></sup><sup>,</sup><sup><a href="#ref8">8</a></sup> database.</p>
+							<p>We then added reactions catalyzed by the heterologous genes expressed in E.coli in order to construct a butanol-producing pathway in the KJK01 strain. We added the reactions using the MetaCyc<sup><a href="#eref5">5</a></sup> database and the KEGG<sup><a href="#eref6">6</a></sup><sup>,</sup><sup><a href="#eref7">7</a></sup><sup>,</sup><sup><a href="#eref8">8</a></sup> database.</p>
 							<p>These were reactions catalyzed by the following genes:</p>
 							<ul class="b">
 								<li style="padding-left: 1em;">From Clostridium acetobutylicum: </li>
@@ -1991,7 +1991,7 @@
 							<br> <br><br>
 
 							<h2>Flux Variability Analysis for Overexpression Targets</h2><br>
-							<p>We used flux variability analysis (FVA)<sup><a href="#ref11">11</a></sup> to find the range of possible fluxes through the reactions of the crt_1, crt_2, atoB, cscK genes and the butanol exchange reaction.</p>
+							<p>We used flux variability analysis (FVA)<sup><a href="#eref11">11</a></sup> to find the range of possible fluxes through the reactions of the crt_1, crt_2, atoB, cscK genes and the butanol exchange reaction.</p>
 							<br>
 
 							<p>FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. The FVA for these reactions were performed in anaerobic conditions, when growth was set to 60% of its optimal value.</p>
@@ -2133,7 +2133,7 @@
 							<h4>Inferences: </h4>
 							<p style="padding-left: 12%;"> If E.coli grows at its optimal growth rate, butanol production is zero as would be expected, since it is a secondary metabolite that takes carbon flux away from the growth and has no role in the physiology of the cell as it is a heterologous compound in the E.coli metabolic network</p>
 							<p style="padding-left: 12%;">As the growth rate is decreased from its optimal value, the maximal theoretical yield of butanol increases implying that carbon flux is rerouted to the butanol producing pathway in the network.</p>
-							<p style="padding-left: 12%;"> This confirms that the butanol production pathway in the model is functional. Butanol production happens under anaerobic or microaerobic conditions <sup><a href="#ref10">10</a></sup>. We wanted to thus test the effect of oxygenation on butanol production in the model, and as expected found that butanol production was significantly higher in anaerobic conditions as compared to aerobic conditions at all growth rates.</p>
+							<p style="padding-left: 12%;"> This confirms that the butanol production pathway in the model is functional. Butanol production happens under anaerobic or microaerobic conditions <sup><a href="#eref10">10</a></sup>. We wanted to thus test the effect of oxygenation on butanol production in the model, and as expected found that butanol production was significantly higher in anaerobic conditions as compared to aerobic conditions at all growth rates.</p>
 							<br><br><br>
 
 							<h2>Butanol Production vs Sucrose Uptake</h2>
@@ -2176,13 +2176,13 @@
 							<br><br><br>
 
 							<h2>Side Products</h2>
-							<p>Abdelaal el. al<sup><a href="#ref3">3</a></sup> observed pyruvate, ethanol and butyrate to be the major side products in the KJK01 butanol producing strain, which divert flux away from the butanol production pathway and reduce yields. Pyruvate was the major side product which indicated a redox imbalance, while ethanol was produced in equal quantities even after the deletion of the endogenous alcohol dehydrogenase gene (adhE).</p>
+							<p>Abdelaal el. al<sup><a href="#eref3">3</a></sup> observed pyruvate, ethanol and butyrate to be the major side products in the KJK01 butanol producing strain, which divert flux away from the butanol production pathway and reduce yields. Pyruvate was the major side product which indicated a redox imbalance, while ethanol was produced in equal quantities even after the deletion of the endogenous alcohol dehydrogenase gene (adhE).</p>
 							<br>
 
-							<p>We wanted to estimate the maximal side product formation at different growth levels in anaerobic and aerobic conditions and see whether our results matched with those reported by Abdelaal el. al<sup><a href="#ref3">3</a></sup>.</p>
+							<p>We wanted to estimate the maximal side product formation at different growth levels in anaerobic and aerobic conditions and see whether our results matched with those reported by Abdelaal el. al<sup><a href="#eref3">3</a></sup>.</p>
 							<br>
 
-							<p>We used flux variability analysis (FVA)<sup><a href="#ref11">11</a></sup> to find the maximum possible fluxes through the side product reactions under a growth rate constraint. FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. For example, it can be used to find the minimum and maximum fluxes for a reaction such that X% of the optimal growth rate is maintained.</p>
+							<p>We used flux variability analysis (FVA)<sup><a href="#eref11">11</a></sup> to find the maximum possible fluxes through the side product reactions under a growth rate constraint. FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. For example, it can be used to find the minimum and maximum fluxes for a reaction such that X% of the optimal growth rate is maintained.</p>
 							<br>
 
 							<p>We obtained the optimal growth rates for aerobic and anaerobic conditions and for a particular percentage of that growth rate, FVA was performed for the exchange reactions of butanol, ethanol, pyruvate, butyrate and sucrose uptake to find the maximal fluxes through those reactions. The minimum fluxes for these reactions will be zero since all the carbon flux will be directed toward growth.</p>
@@ -2209,7 +2209,7 @@
 							<br>
 
 							<h4>Inferences</h4>
-							<p style="padding-left: 12%;">Consistent with the observations of Abdelaal el. al<sup><a href="#ref3">3</a></sup>, pyruvate was a major byproduct which indicates a redox imbalance in the network. Ethanol was zero, which is to be expected since there is only one gene (adhE) that produces ethanol from acetyl-coA, whose flux we set to zero to duplicate the KJK01 strain knockout of adhE. Given that the flux through pyruvate and butyrate production is equal or greater than that of butanol, these present alternate possible targets to increase butanol production</p>
+							<p style="padding-left: 12%;">Consistent with the observations of Abdelaal el. al<sup><a href="#eref3">3</a></sup>, pyruvate was a major byproduct which indicates a redox imbalance in the network. Ethanol was zero, which is to be expected since there is only one gene (adhE) that produces ethanol from acetyl-coA, whose flux we set to zero to duplicate the KJK01 strain knockout of adhE. Given that the flux through pyruvate and butyrate production is equal or greater than that of butanol, these present alternate possible targets to increase butanol production</p>
 							<a id="e5"></a>
 							<br>
 							<!-- END OF RESULTS -->
@@ -2347,7 +2347,7 @@
 							<p>We ran FSEOF on our constructed model without the overexpressions to identify reactions whose fluxes increased with increase in the enforced flux through the butanol exchange reactions. The fluxes through a total of 65 reactions showed a strict increase with increase in enforced butanol flux. Some of the reactions showing large increase in flux include proton transfer, CO<sub>2</sub> exchange, etc. but also reactions of genes like pyruvate dehydrogenase, pyruvate kinase, Acyl-CoA dehydrogenase, 3-hydroxyacylCoA dehydratase, 3-hydroxyacylCoA dehydrogenase. Apart from the transport and exchange reactions of butanol, we did not observe any increase in flux in the reactions added by us. The full list of reactions is available </p>
 							<a id ="e7"></a>
 
-							<br><a id="ref1"></a><br><a id="ref2"></a><br><a id="ref3"></a><br>
+							<br><a id="eref1"></a><br><a id="eref2"></a><br><a id="eref3"></a><br>
 							<!-- END OF FSEOF -->
 
 
@@ -2355,14 +2355,14 @@
 							<hr>
 							<h3>References</h3>
 							<ol class="a">
-								<li style="padding-left: 1em;" id="ref4"> King, Z. A., Lu, J., Dräger, A., Miller, P., Federowicz, S., Lerman, J. A., ... & Lewis, N. E. (2016). BiGG Models: A platform for integrating, standardizing and sharing genome-scale models. Nucleic acids research, 44(D1), D515-D522.</li>
-								<li style="padding-left: 1em;" id="ref5"> Gurobi Optimization, L.. (2021). Gurobi Optimizer Reference Manual.</li>
-								<li style="padding-left: 1em;" id="ref6"> Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
-								<li style="padding-left: 1em;" id="ref7"> Keseler, I. M., Collado-Vides, J., Santos-Zavaleta, A., Peralta-Gil, M., Gama-Castro, S., Muñiz-Rascado, L., ... & Karp, P. D. (2010). EcoCyc: a comprehensive database of Escherichia coli biology. Nucleic acids research, 39(suppl_1), D583-D590.</li>
-								<li style="padding-left: 1em;" id="ref8"> Caspi, R., Altman, T., Billington, R., Dreher, K., Foerster, H., Fulcher, C. A., ... & Karp, P. D. (2014). The MetaCyc database of metabolic pathways and enzymes and the BioCyc collection of Pathway/Genome Databases. Nucleic acids research, 42(D1), D459-D471.</li>
-								<li style="padding-left: 1em;" id="ref9"> Kanehisa, M., & Goto, S. (2000). KEGG: kyoto encyclopedia of genes and genomes. Nucleic acids research, 28(1), 27-30.</li>
-								<li style="padding-left: 1em;" id="ref10"> Kanehisa, M. (2019). Toward understanding the origin and evolution of cellular organisms. Protein Science, 28(11), 1947-1951.</li>
-								<li style="padding-left: 1em;" id="ref11"> Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., & Tanabe, M. (2021). KEGG: integrating viruses and cellular organisms. Nucleic acids research, 49(D1), D545-D551.</li>
+								<li style="padding-left: 1em;" id="eref4"> King, Z. A., Lu, J., Dräger, A., Miller, P., Federowicz, S., Lerman, J. A., ... & Lewis, N. E. (2016). BiGG Models: A platform for integrating, standardizing and sharing genome-scale models. Nucleic acids research, 44(D1), D515-D522.</li>
+								<li style="padding-left: 1em;" id="eref5"> Gurobi Optimization, L.. (2021). Gurobi Optimizer Reference Manual.</li>
+								<li style="padding-left: 1em;" id="eref6"> Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
+								<li style="padding-left: 1em;" id="eref7"> Keseler, I. M., Collado-Vides, J., Santos-Zavaleta, A., Peralta-Gil, M., Gama-Castro, S., Muñiz-Rascado, L., ... & Karp, P. D. (2010). EcoCyc: a comprehensive database of Escherichia coli biology. Nucleic acids research, 39(suppl_1), D583-D590.</li>
+								<li style="padding-left: 1em;" id="eref8"> Caspi, R., Altman, T., Billington, R., Dreher, K., Foerster, H., Fulcher, C. A., ... & Karp, P. D. (2014). The MetaCyc database of metabolic pathways and enzymes and the BioCyc collection of Pathway/Genome Databases. Nucleic acids research, 42(D1), D459-D471.</li>
+								<li style="padding-left: 1em;" id="eref9"> Kanehisa, M., & Goto, S. (2000). KEGG: kyoto encyclopedia of genes and genomes. Nucleic acids research, 28(1), 27-30.</li>
+								<li style="padding-left: 1em;" id="eref10"> Kanehisa, M. (2019). Toward understanding the origin and evolution of cellular organisms. Protein Science, 28(11), 1947-1951.</li>
+								<li style="padding-left: 1em;" id="eref11"> Kanehisa, M., Furumichi, M., Sato, Y., Ishiguro-Watanabe, M., & Tanabe, M. (2021). KEGG: integrating viruses and cellular organisms. Nucleic acids research, 49(D1), D545-D551.</li>
 								<li style="padding-left: 1em;"> Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001-1010.</li>
 								<li style="padding-left: 1em;"> Wu, P., Wang, G., Wang, G., Børresen, B. T., Liu, H., & Zhang, J. (2016). Butanol production under microaerobic conditions with a symbiotic system of Clostridium acetobutylicum and Bacillus cereus. Microbial cell factories, 15(1), 1-11.</li>						
 								<li style="padding-left: 1em;"> Mahadevan, R., & Schilling, C. H. (2003). The effects of alternate optimal solutions in constraint-based genome-scale metabolic models. Metabolic engineering, 5(4), 264-276.</li>
