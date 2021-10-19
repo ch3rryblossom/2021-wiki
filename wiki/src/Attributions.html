@@ -51,6 +51,11 @@
 	background: #ffd73a;
 	color: black;
 }
+[data-table-theme*=dark] th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
     </style>
 <body>
     
@@ -178,12 +183,14 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Team Attributions</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Mentors</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Experts</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Outreach</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Logistics/Other Wet Lab</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">Collaborations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#7">Special Thanks</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#8">Volunteers</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -191,30 +198,23 @@
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
-
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-		    <div style="overflow-x:auto;">
+                    <h1 id="1">Team Attributions</h1>
+                    <hr><br>
+		    <style>
+			    td:nth-child(odd)[data-yes="yes"] {
+				    background: red;
+			     }
+			     td:nth-child(even)[data-yes="yes"] {
+				    background: blue;
+			     }
+		    </style>
+		    <div style="overflow-x:auto; overflow-y: auto; max-height: 800px;">
 <!-- Dark Theme -->
 <table data-table-theme="dark zebra">
   <caption>Attributions</caption>
   <thead>
     <tr>
+      <th>&nbsp;</th>
       <th>&nbsp;</th>
       <th>Akash</th>
       <th>&nbsp;Arsh&nbsp;</th>
@@ -230,110 +230,1569 @@
       <th>Vidisha</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>Name 1</td>
-      <td>Cell 1</td>
-      <td>Cell 2</td>
-      <td class="tdgreen">Cell 3</td>
-      <td>Cell 4</td>
-      <td>Cell 5</td>
-      <td>Cell 6</td>
-      <td>Cell 7</td>
-      <td>Cell 8</td>
-      <td>Cell 9</td>
-      <td>Cell 10</td>
-      <td>Cell 11</td>
-      <td>Cell 12</td>
+  <tbody><tr>
+	<td>Human Practices</td>
+	<td>Integrated Human Practices</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
 	</tr>
-      <tr>
-	<td>Name 2</td>
-	<td>Cell 1</td>
-	<td class="tdyellow">Cell 2</td>
-	<td>Cell 3</td>
-	<td>Cell 4</td>
-	<td>Cell 5</td>
-	<td>Cell 6</td>
-	<td>Cell 7</td>
-	<td>Cell 8</td>
-	<td>Cell 9</td>
-	<td>Cell 10</td>
-	<td>Cell 11</td>
-	<td>Cell 12</td>
+	<tr>
+	<td> </td>
+	<td>Youtube Videos</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
 	</tr>
-      <tr>
-	<td>Name 3</td>
-	<td>Cell 1</td>
-	<td class="tdyellow">Cell 2</td>
-	<td class="tdgreen">Cell 3</td>
-	<td>Cell 4</td>
-	<td>Cell 5</td>
-	<td>Cell 6</td>
-	<td>Cell 7</td>
-	<td>Cell 8</td>
-	<td>Cell 9</td>
-	<td>Cell 10</td>
-	<td>Cell 11</td>
-	<td>Cell 12</td>
+	<tr>
+	<td> </td>
+	<td>Social Media</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
 	</tr>
-      <tr>
-	<td>Name 4</td>
-	<td>Cell 1</td>
-	<td>Cell 2</td>
-	<td class="tdgreen">Cell 3</td>
-	<td>Cell 4</td>
-	<td>Cell 5</td>
-	<td>Cell 6</td>
-	<td>Cell 7</td>
-	<td>Cell 8</td>
-	<td>Cell 9</td>
-	<td>Cell 10</td>
-	<td>Cell 11</td>
-	<td>Cell 12</td>
+	<tr>
+	<td> </td>
+	<td>Newspaper Articles</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
 	</tr>
-      <tr>
-	<td>Name 5</td>
-	<td>Cell 1</td>
-	<td class="tdyellow">Cell 2</td>
-	<td>Cell 3</td>
-	<td>Cell 4</td>
-	<td>Cell 5</td>
-	<td>Cell 6</td>
-	<td>Cell 7</td>
-	<td>Cell 8</td>
-	<td>Cell 9</td>
-	<td>Cell 10</td>
-	<td>Cell 11</td>
-	<td>Cell 12</td>
+	<tr>
+	<td> </td>
+	<td>Activity Book</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
 	</tr>
-
-      </tbody>
-      </table>
+	<tr>
+	<td> </td>
+	<td>Survey</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Disha Webinar</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>SynBio Webinar</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Audio Webinar</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>SynBio Talk - Prof. Pawan Dhar</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria Symposium</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Comic Book</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Drama Club Silent Film</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Art and Essay Competition</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Attribution Table</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Wet Lab</td>
+	<td>Constructs</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Parts</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Assay Design </td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Protocols</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Wet Lab Logistics</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria cell revival</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria stock preparation</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria Growth curve BG-11+ Sucrose sample collection</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria Growth curve coBG-11+ Sucrose sample collection</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria Sucrose Assay</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli stock preparation</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli cell revival</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli PCR + gel</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli gradient PCR +  gel</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli plasmid extraction pcscX</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli competent cell preparation</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli cell transformation with pcscX</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>MIC</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Growth curve + sucrose sample collection + butanol sample collection in LB</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Growth curve + sucrose sample collection + butanol sample collection in co BG11</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli sucrose assay</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Dry Lab</td>
+	<td>Initial cyanobacteria model making </td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria FBA</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria FSEOF</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria OptKnock</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria MoMA</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria Strain Optimization for Toulouse</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli FBA</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli FSEOF</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli OptKnock</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>E coli FVA</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>SteadyCom for Toulouse</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Dynamic FBA </td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>SteadyCom</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Collaborations</td>
+	<td>All India iGEM Meet </td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Cyanobacteria Symposium </td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>GMO Survey </td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Toulouse </td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Guelph</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>SZU China</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Linkoping</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Administrative Work</td>
+	<td>Sponsorship</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Finance Management</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Ordering strains, parts and reagents </td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Managing Discord</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Managing Notion</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Managing mails and calendar</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Meeting Notes</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Volunteer Handling</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Wiki</td>
+	<td>Design</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Coding</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Documentation</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Home Page</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Editing Documentation</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Safety</td>
+	<td> </td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Deliverables</td>
+	<td>Promotion Video</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Presentation Video</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Scientific Proposal</td>
+	<td> </td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td> </td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td>Design</td>
+	<td>Social Media Posts</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Posters</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Mascot Design</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Merchandise</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Presentation Slides</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	</tr>
+	<tr>
+	<td> </td>
+	<td>Sponsorship Brochure</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	<td>0</td>
+	<td data-yes="yes">1</td>
+	<td data-yes="yes">1</td>
+	<td>0</td>
+	</tr>
+	</tbody></table>
       </div>
+      <br><br>
+                <h1 id="2">Mentors</h1>
+		<hr><br>
+		<p><strong>Dr. Thomas Pucadyil - </strong>Our PI, without whom this project would not have been possible. He managed the administrative side of things and facilitated all our interactions with our institute to make sure our project progressed as smoothly as possible!</p>
+		<p><strong>Prem Pritam - </strong>Prem was invaluable to the cyanobacterial front of our project. She guided us through every step of the cyanobacteria work, from setting up the lights in our incubator, supplying us with BG - 11 media, instructing us over phone calls about basic techniques to handle cyanobacteria (reviving, inoculating, plating, cryopreserving, etc.) to helping us design our growth curve assays, and our composite parts. She met with us regularly almost every week to get updates on our progress and guided us through the project. We are immensely grateful to her for all her time and effort, this project would not have been what it is without her!</p>
+		<p><strong>Virmal Jain - </strong>Virmal too was invaluable to the cyanobacterial front of the project, helping us with the conceptualization of our experiments, designing assays and constructs, solving any queries we had, and helping us troubleshoot our experiments. He met with us regularly along with Prem, almost every week to get updates on our progress and guided us through the project. We are immensely grateful to him for all his time and effort, this project would not have been what it is without him!</p>
+		<p><strong>Indumathi P - </strong>Indumathi mentored us through every aspect of our dry lab. She verified our methods and techniques used for our analysis. She was especially helpful whenever we ran into issues and showed us various approaches to troubleshooting. She also helped us reach out to her colleagues and mentors who worked closely on niche topics we needed help with. Indumathi has been crucial to our dry lab modeling and we are extremely thankful to her!</p>
+		<p><strong>Rushik Bhatti - </strong>Rushik helped us plan out our <em>E. coli</em> growth assays, and guided us through genomic DNA extraction, plasmid purification, making electrocompetent cells, transformation, and cryopreserving our <em>E. coli</em> stocks. He helped us brainstorm project ideas, design experiments and plan a workflow for our experimental work, and helped troubleshoot our experiments. We are extremely grateful to him for all his help!</p>
+		<p><strong>Devatrisha Purkayastha - </strong>Trisha familiarised us with using the biospectrometer for OD measurements, and helped troubleshoot PCR and the sucrose assay. She also helped us brainstorm project ideas, design experiments, and plan our experimental workflow. We are very thankful for all the help she provided us with!</p>
+		<p><strong>Mukundan S - </strong>Mukundan was part of our early brainstorming sessions, giving us valuable feedback that helped us choose our project topic, and initially guided us with questions we had about modeling.</p>
+		<p><strong>Mohit Mantri - </strong>Mohit helped us with autoclaving our glassware and preparing micronutrient solutions for our BG-11 growth medium, and was also a part of our early brainstorming sessions.</p>
+		<p><strong>Chinmay Patwardhan - </strong>Chinmay helped us in the process of securing sponsorship and reaching out to our Ph.D. mentors, checked in with us from time to time to get updates on our project, and gave us advice on navigating the iGEM cycle and IISER administration.</p>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
+					<h1 id="3">Experts</h1>
+                    <hr><br>
+<p><strong>Dr. Syed Shams Yazdani -</strong></p>
+<p><strong>Dr. Himadri Pakrasi -</strong></p>
+<p><strong>Dr. Nishad Matange -</strong></p>
+<p><strong>Dr. Richa Rikhy -</strong></p>
+<p><strong>Dr. Amrita Hazra -</strong></p>
+<p><strong>Dr. Shireesh Srivatsava -</strong></p>
+<p><strong>Dr. Chhavi Mathur -</strong></p>
+<p><strong>Dr. Anamma Odaneth -</strong></p>
+<p><strong>Dr. Anand Ghosalkar -</strong></p>
+<p><strong>Dr Anil Zankar -</strong></p>
+<p><strong>Dr Richard Lobo -</strong></p>
+<p><strong>Dr Ashok Dubey -</strong></p>
+<p><strong>Dr Malathy V -</strong></p>
+<p><strong>Dr Santanu Dasgupta -</strong></p>
+<p><strong>Dr Shashi Kumar Rhode -</strong></p>
+<p><strong>Dr. Drawak Ravikumar -</strong></p>
+<p><strong>Ms Manisha Kamal -</strong></p>
+<p><strong>Dr. Maziya Ibrahim -</strong></p>
+<p><strong>Dr. Reena Pandit -</strong></p>
+<br><br>
 
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+					<h1 id="4">Outreach</h1>
+                    <hr><br>
+		    <p><strong>Dr. Shanti Kalipatnapu</strong> for helping us engage with the general public about our project through publishing articles in the media as a part of science communication.</p>
+<p><strong>Dr. LS Shashidhara</strong></p>
+<p><strong>Ms Aparna Joshi </strong>who helped us circulate the survey among various high school students</p>
+<p><strong>Ms Gayatri Kshirsagar </strong>who helped us circulate the survey among various high school students</p>
+<p><strong>Vaishnavi Pratap (@doodlesane) </strong>for helping us bring the story of Kalpana to life through her captivating illustrations</p>
+<p><strong>Soumyodeep Mukhopadhyay </strong>for collaborating with us to record &lsquo;How Would the World Be&rsquo;</p>
+<p>Ipsa Bezbarua&nbsp;</p>
+<p>Manisha Kamal</p>
+<p>Aarti Takawane</p>
+<p>Zainab</p>
+<p><strong>Dr. Pooja Sancheti </strong>for giving us valuable feedback on our survey for high school students</p>
+<p><strong>Dr. Aurnab Ghose </strong>for going through our survey for high school students and&nbsp;</p>
+<p><strong>Disha</strong></p>
+<p><strong>Drama Club</strong></p>
+<p><strong>Science Club, IISER Pune </strong>for helping us organise the talk by Prof Pawan K Dhar&nbsp;</p>
+<p><strong>Dr. Pushkar Sohoni </strong>for judging entries for kalakriti - the art and essay competition for school students</p>
+<p><strong>Dr. Sudha Rajamani</strong> for judging entries for kalakriti - the art and essay competition for school students</p>
+<p><strong>Dr. Suhita Nadkarni</strong> for judging entries for kalakriti - the art and essay competition for school students</p>
+<p><strong>Dr. Kalika Prasad</strong> for judging entries for kalakriti - the art and essay competition for school students</p>
 
 
 					<h1 id="5">Introduction</h1>
