@@ -709,6 +709,10 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/4/48/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph9.png
     md5: 9f8c2ec5f68d04de4f63bba55623fd61
     upload_filename: T--IISER-Pune-India--Graphs--SteadyCom Graphs--Steadycomgraph9.png
+  assets\HP\CONNECTIONS1.png:
+    link_URL: https://2021.igem.org/wiki/images/2/2e/T--IISER-Pune-India--HP--CONNECTIONS1.png
+    md5: 7fb0030c7a89bd2efe0373e880b3096e
+    upload_filename: T--IISER-Pune-India--HP--CONNECTIONS1.png
   assets\HP\Compressed-Selected art iGEM\20210926_212117___Darshan_Patel-R5b2YHgs.jpg:
     link_URL: https://2021.igem.org/wiki/images/1/17/T--IISER-Pune-India--HP--Compressed-Selected_art_iGEM--20210926_212117_Darshan_Patel-R5b2YHgs.jpg
     md5: 968b6816f343af21e352b29cae440cd1
@@ -1063,6 +1067,70 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/c/c1/T--IISER-Pune-India--collabs--Aiim1.png
     md5: 604105f89e93e05ae1803f97019312f4
     upload_filename: T--IISER-Pune-India--collabs--Aiim1.png
+  assets\collabs\Copy of 360-hour-c.png:
+    link_URL: https://2021.igem.org/wiki/images/a/ad/T--IISER-Pune-India--collabs--Copy_of_360-hour-c.png
+    md5: 834445153e12c89bff550421fd9da5e7
+    upload_filename: T--IISER-Pune-India--collabs--Copy of 360-hour-c.png
+  assets\collabs\CyanoSym2.png:
+    link_URL: https://2021.igem.org/wiki/images/c/c9/T--IISER-Pune-India--collabs--CyanoSym2.png
+    md5: aa962ddca696d3485e9d8b01ead8905c
+    upload_filename: T--IISER-Pune-India--collabs--CyanoSym2.png
+  assets\collabs\CyanoSym3.png:
+    link_URL: https://2021.igem.org/wiki/images/8/8b/T--IISER-Pune-India--collabs--CyanoSym3.png
+    md5: 547b1d0a7f1c4c252a546d9bebb707f6
+    upload_filename: T--IISER-Pune-India--collabs--CyanoSym3.png
+  assets\collabs\IMG-20211017-WA0026.jpg:
+    link_URL: https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--collabs--IMG-20211017-WA0026.jpg
+    md5: 741b4dc30ce4bbe8b163d470dee34496
+    upload_filename: T--IISER-Pune-India--collabs--IMG-20211017-WA0026.jpg
+  assets\collabs\IMG_1123(1).png:
+    link_URL: https://2021.igem.org/wiki/images/b/b2/T--IISER-Pune-India--collabs--IMG_1123%281%29.png
+    md5: bd4925e063b64cbb9a1c3d4c98607f68
+    upload_filename: T--IISER-Pune-India--collabs--IMG_1123(1).png
+  assets\collabs\Screenshot_26.png:
+    link_URL: https://2021.igem.org/wiki/images/5/5d/T--IISER-Pune-India--collabs--Screenshot_26.png
+    md5: 3956660d88d1389e79f693b33095000b
+    upload_filename: T--IISER-Pune-India--collabs--Screenshot_26.png
+  assets\collabs\Toulouse-pune-wetlab-img1.jpeg:
+    link_URL: https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--collabs--Toulouse-pune-wetlab-img1.jpeg
+    md5: c54b6ad861f7c9cf458cf722090bbc1e
+    upload_filename: T--IISER-Pune-India--collabs--Toulouse-pune-wetlab-img1.jpeg
+  assets\collabs\aiim2.png:
+    link_URL: https://2021.igem.org/wiki/images/6/6a/T--IISER-Pune-India--collabs--aiim2.png
+    md5: 9ffa5899d6e1f4d653d591c119336db7
+    upload_filename: T--IISER-Pune-India--collabs--aiim2.png
+  assets\collabs\aiim4.png:
+    link_URL: https://2021.igem.org/wiki/images/2/25/T--IISER-Pune-India--collabs--aiim4.png
+    md5: 451132e05a4a5e95e7ab44595a7585ce
+    upload_filename: T--IISER-Pune-India--collabs--aiim4.png
+  assets\collabs\album_2021-08-15_19-26-30.gif:
+    link_URL: https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--collabs--album_2021-08-15_19-26-30.gif
+    md5: 0f38db04aa6cf075258c93b2cc6b609c
+    upload_filename: T--IISER-Pune-India--collabs--album_2021-08-15_19-26-30.gif
+  assets\collabs\graphtoulouse1.png:
+    link_URL: https://2021.igem.org/wiki/images/c/c5/T--IISER-Pune-India--collabs--graphtoulouse1.png
+    md5: 0a6658cc690dbb2eeefad585ddb1946d
+    upload_filename: T--IISER-Pune-India--collabs--graphtoulouse1.png
+  assets\collabs\reu_pune2.png:
+    link_URL: https://2021.igem.org/wiki/images/8/86/T--IISER-Pune-India--collabs--reu_pune2.png
+    md5: 58aa90bc24aac41f3aa7a1ce6b1698ec
+    upload_filename: T--IISER-Pune-India--collabs--reu_pune2.png
+  assets\collabs\szuchina1.jpg:
+    link_URL: https://2021.igem.org/wiki/images/c/c3/T--IISER-Pune-India--collabs--szuchina1.jpg
+    md5: 4bb08fa8578b7b07040a07c00589a38a
+    upload_filename: T--IISER-Pune-India--collabs--szuchina1.jpg
+  assets\collabs\szuchina2.jpg:
+    link_URL: https://2021.igem.org/wiki/images/2/23/T--IISER-Pune-India--collabs--szuchina2.jpg
+    md5: 6b7fcbdc8208464d58e59cc5c250caa8
+    upload_filename: T--IISER-Pune-India--collabs--szuchina2.jpg
+  assets\collabs\szuchina3.jpg:
+    link_URL: https://2021.igem.org/wiki/images/0/01/T--IISER-Pune-India--collabs--szuchina3.jpg
+    md5: 0c6f4b0806abcb4fb4ea2bc5c3597125
+    upload_filename: T--IISER-Pune-India--collabs--szuchina3.jpg
+  assets\collabs\szuchina4.jpg:
+    link_URL: https://2021.igem.org/wiki/images/0/0d/T--IISER-Pune-India--collabs--szuchina4.jpg
+    md5: f4885e876419cb646ddfae1e876e615b
+    upload_filename: T--IISER-Pune-India--collabs--szuchina4.jpg
   assets\fonts\FSEX300.ttf:
     link_URL: https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--fonts--FSEX300.ttf
     md5: 9de66fe4842edf59e46e15c90e686087
@@ -1136,19 +1204,19 @@ html:
     md5: 94ef944f7b0749bed72bf8b19a310dca
   BasicParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/BasicParts
-    md5: d07830f2a170b7e4c32c6a7b16f1d4cb
+    md5: 8a46b7bd12f0b9f9903e12114cc13607
   Coculture.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Coculture
     md5: dc9068c65e41b8ef7c16e406d2ddaaed
   Collaborations.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Collaborations
-    md5: 08da97ba36f53b90097c5beb1c316988
+    md5: d6fcb7507e90130d164089a8a2e00d26
   Communication.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Communication
     md5: 0d81a471d6e1d6ffb9f06d448878d71c
   CompositeParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/CompositeParts
-    md5: fc823b8425aa57f68c8c7f5920e09169
+    md5: 120acf11d5f5406508231f11e5f2ff72
   Constructs.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Constructs
     md5: 90ec6e859bb975adedf5060a3c208de1
@@ -1167,6 +1235,9 @@ html:
   DryLabOverview.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview
     md5: 60f39eaba9f4b68438572e9edb6120e6
+  DryLabOverview2.html:
+    link_URL: https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview2
+    md5: ''
   EColi.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/EColi
     md5: 8fb8b590500e2bcd3170821e016a99b2
@@ -1178,13 +1249,13 @@ html:
     md5: eb776672981e653cf0f6b16fab6e4745
   Experiments.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Experiments
-    md5: f5d98805acfba205f236cb66d86d2b6a
+    md5: bdb9f2fda2d4b8019b7bc5394d5b2ded
   FutureWork.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/FutureWork
     md5: 5cf38821fb6e792c39783ff5ac9f80ce
   Human_Practices.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Human_Practices
-    md5: 23bf6fec11e5b7c1b54207dabb73667a
+    md5: 29d26cd5b5171bff0e4a63150c21f450
   Implementation.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Implementation
     md5: f61b36844fe028987b2d7bc60a66c94c
@@ -1205,7 +1276,7 @@ html:
     md5: 25f40e8c19c0e79c3da9916b0e717af1
   Partnership.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Partnership
-    md5: 36e0a26e095578ec1482a0d92ee1b8c4
+    md5: c10682f55ea9e7bde3da3ad1d9b581cc
   Results.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Results
     md5: c4240e945e2bd675d12e1944a325c0b1
@@ -1241,7 +1312,7 @@ html:
     md5: 481dbdb71eda4ef3bc00463f357f60b7
   trial.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/trial
-    md5: 6c96c323f7697aea72a7b46c37dca436
+    md5: b9d38bba962c07239254dd4bb508ff14
 js:
   js\anychart-core.min.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/anychart-core-minJS?action=raw&ctype=text/javascript
