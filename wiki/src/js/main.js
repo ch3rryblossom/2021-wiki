@@ -51,20 +51,20 @@ const scrollIndicatorElt =
 document.getElementById('scrollIndicator');
 
 function moveScrollIndicator(e) {
-  if($('#cyano').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.3275;
+  if($('#content-cyano').hasClass('active')) {
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.4;
     scrollIndicatorElt.style.height = percentage + '%';
   }
-  else if($('#ecoli').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.4275;
+  else if($('#content-ecoli').hasClass('active')) {
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.45;
     scrollIndicatorElt.style.height = percentage + '%';
   }
-  else if($('#Coculture').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 13.845;
+  else if($('#content-coculture').hasClass('active')) {
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 12.6;
     scrollIndicatorElt.style.height = percentage + '%';
   }
-  else if($('#overview').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
+  else if($('#content-overview').hasClass('active')) {
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 34;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else {

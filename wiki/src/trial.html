@@ -142,110 +142,120 @@
         <div class="row">
             <!-- SIDENAV -->
             <div class="col-lg-3 col-md-3">
-               				<!-- Overview sidebar-->
-                <div class="sidenav" style="top: 9.5%" id="overviewside">
-                    <nav>
-                        <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#o1">Overview</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#o2">Flux Overview Analysis</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#o3">Overview of Metabolic Adjustment</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#o4">Overview Scanning based on Enforced Objective Flux</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#o5"> Overview</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#o6">SteadyCom</a></li>
-							<li class="nav-item"><a class="nav-link" href="#o7">Dynamic Modelling</a></li>
-			    			<li class="nav-item"><a class="nav-link" href="#o8">References</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-				
-				<!-- Cyano Sidebar-->
-		<div class="sidenav" style="top: 11%;" id="cyanoside">
-                    <nav>
-                        <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#c1">Cyano</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#c2">Cyanobacteria for Sucrose Production</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#c3">Cyano vs CO2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#c4">Cyano vs Sucrose</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#c5">Sucrose Production</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#c6">Identifying Over Expressions and Knockouts</a></li>
-			    			<li class="nav-item"><a class="nav-link" href="#c7">References</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-				<!-- E coli Sidebar-->
-		<div class="sidenav" style="top: 12%" id="ecoliside">
-                    <nav>
-                        <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#e1">E coli</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#e2">E coli Model Construction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#e3"> E coli for optimum Butanol production</a></li>
-							<li class="nav-item"><a class="nav-link" href="#e4">E coli Results</a></li>
-							<li class="nav-item"><a class="nav-link" href="#e5">OptKnock</a></li>
-							<li class="nav-item"><a class="nav-link" href="#e6">FSEOF</a></li>
-							<li class="nav-item"><a class="nav-link" href="#e7">References</a></li>
-                        </ul>
-                    </nav>
-                </div>
+				<div class="tab-content" id="sidenavTabs">
+					<div class="tab-pane fade show active overview" id="sidenav_overview" role="tabpanel" aria-labelledby="overview-tab">  
+						<div class="sidenav" style="top: 9.5%" id="overviewside">
+							<nav>
+								<ul id="sidenav-id">
+									<li class="nav-item"><a class="nav-link" href="#o1">Overview</a></li>
+									<li class="nav-item"><a class="nav-link" href="#o2">Flux Overview Analysis</a></li>
+									<li class="nav-item"><a class="nav-link" href="#o3">Overview of Metabolic Adjustment</a></li>
+									<li class="nav-item"><a class="nav-link" href="#o4">Overview Scanning based on Enforced Objective Flux</a></li>
+									<li class="nav-item"><a class="nav-link" href="#o5">Overview</a></li>
+									<li class="nav-item"><a class="nav-link" href="#o6">SteadyCom</a></li>
+									<li class="nav-item"><a class="nav-link" href="#o7">Dynamic Modelling</a></li>
+									<li class="nav-item"><a class="nav-link" href="#o8">References</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+			
+			
+				<div class="tab-pane fade cyano" id="sidenav_cyano" role="tabpanel" aria-labelledby="cyano-tab"> 
+					<div class="sidenav" style="top: 11%;" id="cyanoside">
+						<nav>
+							<ul id="sidenav-id">
+								<li class="nav-item"><a class="nav-link" href="#c1">Cyano</a></li>
+								<li class="nav-item"><a class="nav-link" href="#c2">Cyanobacteria for Sucrose Production</a></li>
+								<li class="nav-item"><a class="nav-link" href="#c3">Cyano vs CO2</a></li>
+								<li class="nav-item"><a class="nav-link" href="#c4">Cyano vs Sucrose</a></li>
+								<li class="nav-item"><a class="nav-link" href="#c5">Sucrose Production</a></li>
+								<li class="nav-item"><a class="nav-link" href="#c6">Identifying Over Expressions and Knockouts</a></li>
+								<li class="nav-item"><a class="nav-link" href="#c7">References</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+            
+		
+				<div class="tab-pane fade ecoli" id="sidenav_ecoli" role="tabpanel" aria-labelledby="ecoli-tab">
+					<!-- E coli Sidebar-->
+					<div class="sidenav" id="ecoliside">
+						<nav>
+							<ul id="sidenav-id">
+								<li class="nav-item"><a class="nav-link" href="#e1">E coli</a></li>
+								<li class="nav-item"><a class="nav-link" href="#e2">E coli Model Construction</a></li>
+								<li class="nav-item"><a class="nav-link" href="#e3"> E coli for optimum Butanol production</a></li>
+								<li class="nav-item"><a class="nav-link" href="#e4">E coli Results</a></li>
+								<li class="nav-item"><a class="nav-link" href="#e5">OptKnock</a></li>
+								<li class="nav-item"><a class="nav-link" href="#e6">FSEOF</a></li>
+								<li class="nav-item"><a class="nav-link" href="#e7">References</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
 
 
 				<!-- Co Culture Sidebar-->
-		<div class="sidenav" id="cocultureside">
-                    <nav>
-                        <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#cc1">Co Culture</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#cc2">Co Culture</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#cc3">Co Culture</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#cc4">Co Culture</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#cc5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#cc6">References</a></li>
-                        </ul>
-                    </nav>
-                </div>
+				<div class="tab-pane fade coculture" id="sidenav_coculture" role="tabpanel" aria-labelledby="coculture-tab">
+					<div class="sidenav" id="cocultureside">
+						<nav>
+							<ul id="sidenav-id">
+								<li class="nav-item"><a class="nav-link" href="#cc1">Co Culture</a></li>
+								<li class="nav-item"><a class="nav-link" href="#cc2">Co Culture</a></li>
+								<li class="nav-item"><a class="nav-link" href="#cc3">Co Culture</a></li>
+								<li class="nav-item"><a class="nav-link" href="#cc4">Co Culture</a></li>
+								<li class="nav-item"><a class="nav-link" href="#cc5">Section 5</a></li>
+								<li class="nav-item"><a class="nav-link" href="#cc6">References</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
             </div>
+
+
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
                     <h1 id="1">Introduction</h1>
                     <hr><br>	 
-	<ul class="nav nav-tabs" id="content-sec-Tabs" role="tablist">
-	    <li class="nav-item"><button class="nav-link active" id="overview-tab" data-bs-target=".overview" data-bs-toggle="tab" role="tab" aria-controls="overview" aria-selected="true">overview</button></li>
-	    <li class="nav-item"><button class="nav-link" id="cyano-tab" data-bs-target=".cyano" data-bs-toggle="tab" role="tab" aria-controls="cyano" aria-selected="false">cyano</button></li>
-	    <li class="nav-item"><button class="nav-link" id="ecoli-tab" data-bs-target=".ecoli" data-bs-toggle="tab" role="tab" aria-controls="ecoli" aria-selected="false">ecoli</button></li>
-	    <li class="nav-item"><button class="nav-link" id="coculture-tab" data-bs-target=".coculture" data-bs-toggle="tab" role="tab" aria-controls="coculture" aria-selected="false">ecoli</button></li>
-	</ul>
-	<div class="tab-content" id="TabsContent">
-	    <div class="tab-pane fade show active overview" id="content_overview" role="tabpanel" aria-labelledby="overview-tab"> Content overview </div>
-	    <div class="tab-pane fade cyano" id="content_cyano" role="tabpanel" aria-labelledby="cyano-tab"> Content cyano </div>
-	    <div class="tab-pane fade ecoli" id="content_ecoli" role="tabpanel" aria-labelledby="ecoli-tab"> Content ecoli </div>
-	    <div class="tab-pane fade coculture" id="content_coculture" role="tabpanel" aria-labelledby="coculture-tab"> Content coculture </div>
+					<ul class="nav nav-tabs" id="content-sec-Tabs" role="tablist">
+						<li class="nav-item"><button class="nav-link active" id="overview-tab" data-bs-target=".overview" data-bs-toggle="tab" role="tab" aria-controls="overview" aria-selected="true">overview</button></li>
+						<li class="nav-item"><button class="nav-link" id="cyano-tab" data-bs-target=".cyano" data-bs-toggle="tab" role="tab" aria-controls="cyano" aria-selected="false">cyano</button></li>
+						<li class="nav-item"><button class="nav-link" id="ecoli-tab" data-bs-target=".ecoli" data-bs-toggle="tab" role="tab" aria-controls="ecoli" aria-selected="false">ecoli</button></li>
+						<li class="nav-item"><button class="nav-link" id="coculture-tab" data-bs-target=".coculture" data-bs-toggle="tab" role="tab" aria-controls="coculture" aria-selected="false">ecoli</button></li>
+					</ul>
+					<div class="tab-content" id="TabsContent">
+						<div class="tab-pane fade show active overview" id="content_overview" role="tabpanel" aria-labelledby="overview-tab"> Content overview </div>
+						<div class="tab-pane fade cyano" id="content_cyano" role="tabpanel" aria-labelledby="cyano-tab"> Content cyano </div>
+						<div class="tab-pane fade ecoli" id="content_ecoli" role="tabpanel" aria-labelledby="ecoli-tab"> Content ecoli </div>
+						<div class="tab-pane fade coculture" id="content_coculture" role="tabpanel" aria-labelledby="coculture-tab"> Content coculture </div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<br><br>
     
-    <div class="tab-content" id="sidenavTabs">
-	<div class="tab-pane fade show active overview" id="sidenav_overview" role="tabpanel" aria-labelledby="overview-tab"> Sidenav overview </div>
-	<div class="tab-pane fade cyano" id="sidenav_cyano" role="tabpanel" aria-labelledby="cyano-tab"> Sidenav cyano </div>
-	<div class="tab-pane fade ecoli" id="sidenav_ecoli" role="tabpanel" aria-labelledby="ecoli-tab"> Sidenav ecoli </div>
-	<div class="tab-pane fade coculture" id="sidenav_coculture" role="tabpanel" aria-labelledby="coculture-tab"> Sidenav coculture </div>
+    <!--
     </div>
-
-    <script>
+-->
+<script>
 	    
-document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((t,i)=>{
-    t.addEventListener('show.bs.tab', function (e) {
-        let targetClass = t.dataset.bsTarget
-        var pane = document.querySelector('#sidenavTabs '+targetClass)
-        var sibling = document.querySelector('#sidenavTabs .tab-pane.active')
-        // hide 2nd pane sibling
-        sibling.classList.remove('show')
-        sibling.classList.remove('active')
-        // show 2nd pane
-        pane.classList.add('show')
-        pane.classList.add('active')
-    })  
-})
+	document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((t,i)=>{
+    	t.addEventListener('show.bs.tab', function (e) {
+        	let targetClass = t.dataset.bsTarget
+        	var pane = document.querySelector('#sidenavTabs '+targetClass)
+        	var sibling = document.querySelector('#sidenavTabs .tab-pane.active')
+        	// hide 2nd pane sibling
+        	sibling.classList.remove('show')
+        	sibling.classList.remove('active')
+        	// show 2nd pane
+        	pane.classList.add('show')
+        	pane.classList.add('active')
+    	})  
+	})
     </script>
 
 
