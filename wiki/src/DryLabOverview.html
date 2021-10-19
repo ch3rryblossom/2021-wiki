@@ -230,31 +230,35 @@
 			
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
-		    <style>
-			    .content .nav-link{
-				    /* how it looks by default */
-				    color:white !important;
-				    font-size: 1.5rem;
-			    }
-			    .content .nav-link:hover{
-				    color:black !important;
-				    background-color: #28c79b;
-			    }
-			    .content .nav-link.active{
-				color: white;
-    				background-color: #27668D;
-			    }
-			    .content .nav-item .nav-link,
-.content .nav-tabs .nav-link {
-    -webkit-transition: all 250ms ease 0s;
-    -moz-transition: all 250ms ease 0s;
-    -o-transition: all 250ms ease 0s;
-    -ms-transition: all 250ms ease 0s;
-    transition: all 250ms ease 0s;
-}
-			    /* #28c79b;light
-			    #27668D dark */
-		    </style>
+
+
+				<!--------------------------------- STYLING FOR THE TABS ------------------------------------>
+				<style>
+					.content .nav-link{
+						/* how it looks by default */
+						color:white !important;
+						font-size: 1.5rem;
+					}
+					.content .nav-link:hover{
+						color:black !important;
+						background-color: #28c79b;
+					}
+					.content .nav-link.active{
+						color: white;
+						background-color: #1f5e4c;
+					}
+					.content .nav-item .nav-link,
+					content .nav-tabs .nav-link {
+						-webkit-transition: all 250ms ease 0s;
+						-moz-transition: all 250ms ease 0s;
+						-o-transition: all 250ms ease 0s;
+						-ms-transition: all 250ms ease 0s;
+						transition: all 250ms ease 0s;
+					}
+				</style>
+				<!--------------------------------- END OF STYLING FOR THE TABS ------------------------------------>
+
+
                 <div class="content">
 					<ul class="nav nav-tabs nav-fill" id="content-sec-tabs" role="tablist">
 						<li class="nav-item" role="presentation">
@@ -2956,7 +2960,7 @@
 
 
 	
-	<!--------------------------------Sidenav list activation based on tabs script --------------------------------------->
+	<!--------------------------------Sidenav list/content tab activation based on tabs script ---------------------------->
 	<script>
 		document.querySelectorAll('button[data-bs-toggle="tab"]').forEach((t,i)=>{
 			t.addEventListener('show.bs.tab', function (e) {
@@ -2995,7 +2999,7 @@
 			})  
 		})
 	</script>
-	<!----------------------------------------- End of Sidenav list activation script --------------------------------------->
+	<!------------------------------- Sidenav list/content tab activation based on tabs script ----------------------------->
 	
 
 

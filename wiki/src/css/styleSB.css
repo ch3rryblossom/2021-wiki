@@ -310,6 +310,9 @@ html {
 	font-style: italic;
 	text-align: center;
 }
+.graph p{
+	font-size: xx-small !important;
+}
 
 /* .content end */
 

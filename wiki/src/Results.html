@@ -141,391 +141,463 @@
 
     <div class="second-div container-fluid">
         <div class="row">
-            <!-- SIDENAV -->
-            <div class="col-lg-3 col-md-3">
-                <div class="sidenav">
-                    <nav>
-                        <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <!-- CONTENT -->
-            <div class="col-lg-9 col-md-9">
-                <div class="content">
-                    <h1><i>E. coli</i></h1>
-                    <hr><br><br>
-
-					<!-------------------------------------- E COLI RESULTS --------------------------------------->
-					<!-- PCR FOR BUTANOL GENES -->
-					<h2>PCR and gel electrophoresis for confirmation of butanol producing genes</h2>
-					<p>To confirm whether the E. coli KJK01 strain contained the butanol producing genes, we extracted the genomic DNA of the cells and subjected it to PCR amplification using primers we received from Dr Yazdani’s lab. Since the cassette has been added as one single component, verification of any component from the cassette will verify the presence of the butanol producing genes in KJK01. We received primers against the hbd-crt genes. An amplicon of the length of ~750bp from the PCR would verify the presence of those genes.</p>
-					<br>
 
 
-					<!-- GDNA EXTRACTION -->
-					<h3>Genomic DNA extraction</h3>
-					<p><u>Expected Result:</u> Large band above the DNA ladder, as gDNA is very large in size and cannot traverse through the gel</p>
-					<p><u>Result:</u>
-					<ul class="b">
-						<li style="padding-left: 1em;">In the first genomic DNA extraction, we obtained fragmented DNA which showed up in multiple bands when we ran our gels with the PCR product.</li>
-						<li style="padding-left: 1em;">The second (?) genomic DNA extraction yielded a single band above the DNA ladder along with a large bright band at the bottom of the ladder</li>
-					</ul>
-					<br><br>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<p>The first band is the gDNA of KJK01 and the bright band is probably RNA contamination due to improper addition of RNase</p>
-					<br><br>
-					<!-- END OF GDNA-->
+			<!-- SIDE NAV BAR -->
+			<div class="col-lg-3 col-md-3">
 
+				<div class="tab-content sidenav" id="SidenavTabs" style="top: -28">
 
-
-					<!-- PCR amplification of hbd-crt cassette and gel electrophoresis -->
-					<h3>PCR amplification of hbd-crt cassette and gel electrophoresis</h3>
-					<br>
-					<p><u>Expected Results:</u> Amplicon of length ~750bp showing up on the gel</p>
-					<p><u>Results:</u> The gel failed multiple times. We did not get any bands on the gel.</p>
-					<br><br>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<!-- END OF PCR amplification of hbd-crt cassette and gel electrophoresis -->
-					
-					
-
-					<!-- TROUBLESHOOTING (READ MORE) -->
-					<h3> Troubleshooting</h3>
-					<br>
-					<p>Despite running the gel multiple times, we failed to obtain a positive result. The modifications we made to our protocol to get the desired results were -</p>
-					<ul class="b">
-						<li style="padding-left: 1em;"> Reduce dNTP: Our mentor advised us to reduce the amount of dNTP added because the amount could be deleterious to the reaction. The concentration was reduced to 100-500 ng/µl.</li>
-						<li style="padding-left: 1em;"> Reduce gDNA concentration: With the same logic as of dNTP, genomic DNA concentration was reduced to 100 ng/µl.</li>
-						<li style="padding-left: 1em;"> Compare primer with negative control: To find whether the primers were binding rightly or non-specifically or binding at all, a test was compared with negative control wherein the negative control was devoid of just the gDNA. If the primer dimer band has reduced intensity in the test, it means that the primer is binding to the DNA. If the band is not of the right size, then it is binding non-specifically.</li>
-					</ul>
-					<br>
-					<!-- END OF TROUBLE SHOOTING-->
-					<p>But we were unable to see the primer dimer bands at all in the test lanes.</p>
-					<br><br>
-
-
-					<!-- GRADIENT PCR-->
-					<h3>Gradient PCR</h3><br>
-					<p>As none of our troubleshooting worked, we spoke to our PI, Prof Pucadyil, from whose lab we borrowed the Pfu polymerase used in the PCR reaction. He pointed out that we hadn’t used DMSO in any of the previous runs when the protocol especially called for it. We had been following the PCR protocol of another lab. He suggested that we perform a gradient PCR at different concentrations of DMSO and different temperatures.</p>
-					<p>We obtained 20 amplified products after the PCR</p>
-					
-					<!-- Table 1 -->
-					<div class="table" style="padding-left: 5%;">
-						<!-- Headers -->
-						<div class="table1-row table-header">
-							<div class="cell">
-								Conditions
-							</div>
-							<div class="cell">
-								Negative Control
-							</div>
-							<div class="cell">
-								0% DMSO
-							</div>
-							<div class="cell">
-								5% DMSO
-							</div>
-							<div class="cell">
-								10% DMSO
-							</div>
-						</div>
-						<!-- End of headers -->
-
-						<!-- Other rows --->
-						<div class="table1-row">
-							<div class="cell" data-title="Conditions">
-								50°C
-							</div>
-							<div class="cell" data-title="Negative Control">
-								Gel 1
-							</div>
-							<div class="cell" data-title="0% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="5% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="10% DMSO">
-								Gel 2
-							</div>
-						</div>
-
-						<div class="table1-row">
-							<div class="cell" data-title="Conditions">
-								52°C
-							</div>
-							<div class="cell" data-title="Negative Control">
-								Gel 1
-							</div>
-							<div class="cell" data-title="0% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="5% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="10% DMSO">
-								Gel 2
-							</div>
-						</div>
-
-						<div class="table1-row">
-							<div class="cell" data-title="Conditions">
-								54°C
-							</div>
-							<div class="cell" data-title="Negative Control">
-								Gel 1
-							</div>
-							<div class="cell" data-title="0% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="5% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="10% DMSO">
-								Gel 2
-							</div>
-						</div>
-
-						<div class="table1-row">
-							<div class="cell" data-title="Conditions">
-								56°C
-							</div>
-							<div class="cell" data-title="Negative Control">
-								Gel 1
-							</div>
-							<div class="cell" data-title="0% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="5% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="10% DMSO">
-								Gel 2
-							</div>
-						</div>
-
-						<div class="table1-row">
-							<div class="cell" data-title="Conditions">
-								60°C
-							</div>
-							<div class="cell" data-title="Negative Control">
-								Gel 1
-							</div>
-							<div class="cell" data-title="0% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="5% DMSO">
-								Gel 2
-							</div>
-							<div class="cell" data-title="10% DMSO">
-								Gel 2
-							</div>
+					<!-- Ecoli sidebar-->
+					<div class="tab-pane fade show active ecoli-wet" id="ecoli-wet-side" role="tabpanel" aria-labelledby="ecoli-wet-tab"> 
+						
+						<div class="sidenav">
+							<nav>
+								<ul id="sidenav-id">
+									<li class="nav-item"><a class="nav-link" href="#e1">PCR and gel electrophoresis for confirmation of butanol producing genes</a></li>
+									<li class="nav-item"><a class="nav-link" href="#e2">NMR confirmation of butanol production</a></li>
+									<li class="nav-item"><a class="nav-link" href="#e3">Transformation of KJK01 with pCSCX plasmid</a></li>
+									<li class="nav-item"><a class="nav-link" href="#e4">Growth curve assay for KJK01 and pCSCX-KJK01</a></li>
+									<li class="nav-item"><a class="nav-link" href="#e5">MIC assay of butanol and ethanol for KJK01</a></li>
+									<li class="nav-item"><a class="nav-link" href="#e6">Sucrose assay for KJK01 in LB</a></li>
+									<li class="nav-item"><a class="nav-link" href="#e7">References</a></li>
+								</ul>
+							</nav>
 						</div>
 					</div>
-					<br><br>
-					<!-- End of Table -->
+						
+					<!-- Cyano Sidebar-->
+					<div class="tab-pane fade cyano-wet" id="cyano-wet-side" role="tabpanel" aria-labelledby="cyano-wet-tab"> 
+						
+						<div class="sidenav">
+							<nav>
+								<ul id="sidenav-id">
+									<li class="nav-item"><a class="nav-link" href="c1">Growth Curve</a></li>
+									<li class="nav-item"><a class="nav-link" href="c2">Sucrose Assay</a></li>
+									<li class="nav-item"><a class="nav-link" href="c3">References</a></li>
+		
+								</ul>
+							</nav>
+						</div>
+					</div>
 
-					<p><u>Result:</u></p>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<ul>
-						<li style="padding-left: 1em;"> Bands found at ~750bp in the 5% and 10% DMSO bands</li>
-						<li style="padding-left: 1em;"> Gel 2 was left on for too long and ran out.</li>
+					<!-- Coculture Sidebar-->
+					<div class="tab-pane fade coculture-wet" id="coculture-wet-side" role="tabpanel" aria-labelledby="coculture-wet-tab"> 
+						
+						<div class="sidenav">
+							<nav>
+								<ul id="sidenav-id">
+									<li class="nav-item"><a class="nav-link" href="cc1">Growth curve assay for KJK01 and pCSCX-KJK01 in BG-11 + sucrose</a></li>
+									<li class="nav-item"><a class="nav-link" href="cc2">Transformation of KJK01 with pKD4 plasmid</a></li>
+									<li class="nav-item"><a class="nav-link" href="cc3">Growth curve assay for KJK01 and pCSCX-KJK01 in CoBG-11 + sucrose</a></li>
+									<li class="nav-item"><a class="nav-link" href="cc4">Sucrose assay</a></li>
+									<li class="nav-item"><a class="nav-link" href="cc5">References</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END OF SIDENAV BAR -->
+
+
+
+            <!-------------------------------------------------- CONTENT ----------------------------------------------->
+            <div class="col-lg-9 col-md-9">
+                <div class="content">
+
+
+					<!-- Tabs -->
+					<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="ecoli-wet-res-tab" data-bs-toggle="tab" data-bs-target="#ecoli-wet-res" type="button" role="tab" aria-controls="ecoli-wet-res" aria-selected="true">E. coli</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="cyano-wet-res-tab" data-bs-toggle="tab" data-bs-target="#cyano-wet-res" type="button" role="tab" aria-controls="cyano-wet-res" aria-selected="false">Cyanobacteria</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="coculture-wet-res-tab" data-bs-toggle="tab" data-bs-target="#coculture-wet-res"  type="button" role="tab" aria-controls="coculture-wet-res" aria-selected="false">Co-culture</button>
+						</li>
+					<a id="e1"></a> <a id="c1"></a> <a id="cc1"></a>
 					</ul>
-					<p>This confirmed the presence of butanol producing genes in KJK01.</p>
-					<br><br>
-					<!-- END OF PCR FOR BUTANOL GENES -->
+					<!-- End of Tabs -->
+
+					<div class="tab-content" id="myTabContent">
+						<!--------------------------------------- start of e coli ---------------------------------------->
+						<div class="tab-pane fade show active" id="ecoli-wet-res" role="tabpanel" aria-labelledby="ecoli-wet-res-tab">
+							<br><br><br>
+							<!-- PCR FOR BUTANOL GENES -->
+							<h1>PCR and gel electrophoresis for confirmation of butanol producing genes</h1>
+							<hr><br><br><br>
+							<p>To confirm whether the E. coli KJK01 strain contained the butanol producing genes, we extracted the genomic DNA of the cells and subjected it to PCR amplification using primers we received from Dr Yazdani’s lab. Since the cassette has been added as one single component, verification of any component from the cassette will verify the presence of the butanol producing genes in KJK01. We received primers against the hbd-crt genes. An amplicon of the length of ~750bp from the PCR would verify the presence of those genes.</p>
+							<br>
 
 
-					<!-- NMR FOR BUTANOL -->
-					<h2> NMR confirmation of butanol production</h2>
-					<p>As PCR confirmation of the presence of the butanol producing genes was taking too long, we simultaneously started culturing KJK01 in Luria–Bertani (LB) broth as well as Terrific Broth (TB). Abdelaal et al cultured the strain in TB as E. coli has been shown to produce maximum butanol in that medium. Making TB is a rather time-consuming process for us, hence we decided to check if we could perform the rest of the quantification of butanol production in LB cultures.</p>
-					<p>We inoculated 6 2° cultures as follows:</p>
-					<ul class="b">
-						<li style="padding-left: 1em;"> LB (0 IPTG)</li>
-						<li style="padding-left: 1em;"> LB (0.1 mM IPTG)</li>
-						<li style="padding-left: 1em;"> LB (0.2 mM IPTG)</li>
-						<li style="padding-left: 1em;"> TB (0 IPTG)</li>
-						<li style="padding-left: 1em;"> TB (0.1 mM IPTG)</li>
-						<li style="padding-left: 1em;"> TB (0.2 mM IPTG)</li>
-					</ul>
-					<br>
-					<p><u>Expected results:</u> The TB cultures are expected to produce more butanol than the LB cultures. The IPTG induced cultures are expected to produce more butanol than the ones with 0 IPTG.</p>
-					<p><u>Results:</u></p>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<ul class="b">
-						<li style="padding-left: 1em;"> The spectrum contains peaks characteristic of butanol, which indicates that butanol is present in the supernatant and produced by KJK01</li>
-						<li style="padding-left: 1em;"> The LB culture produced ~1.5 times the amount of butanol produced by the TB cultures</li>
-						<li style="padding-left: 1em;"> The supernatants of cultures that were not induced with IPTG showed little butanol content, suggesting leaky expression of the promoter the genes are under</li>
-						<li style="padding-left: 1em;"> The supernatants of cultures induced with 0.1 mM IPTG contained slightly more butanol than the ones induced with 0.2 mM IPTG</li>
-						<li style="padding-left: 1em;"> KJK01 has been shown to produce equal amounts of ethanol, but due to time constraints we could not analyse the spectrum for ethanol peaks</li>
-					</ul>
-					<br><br>
-					<!-- END OF NMR FOR BUTANOL-->
-
-
-					<!-- TRANSFORMATION OF KJK01-->
-					<h2>Transformation of KJK01 with pCSCX plasmid</h2>
-					<p>KJK01 was transformed with the pCSCX plasmid that would enable it to survive with sucrose as its sole carbon source. The cells were transformed via electroporation and transformed cells were streaked onto LB agar plates containing Kanamycin and Ampicillin.</p>
-					<p><u>Results:</u>After overnight incubation, many colonies were seen on the plates, indicating that transformation was successful. Glycerol stocks were made from these plates immediately.</p>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br><br>
-
-					<!-- END OF TRANSFORMATION-->
-
-
-					<!-- Growth curve assay for KJK01 and pCSCX-KJK01 -->
-					<h2>Growth curve assay for KJK01 and pCSCX-KJK01 </h2>
-					<p>We aimed to grow KJK01 and pCSCX-KJK01 in LB and characterize their growth. Due to lack of time in the lab in accordance with COVID-19 restrictions in India, we could perform only one assay and hence could not calculate the growth rates.</p>
-					<p><u>Expected Result:</u> We expect a sigmoid growth curve for both strains. pCSCX-KJK01 is expected to grow slower than KJK01 due to the metabolic burden of carrying an extra plasmid.</p>
-					<p><u>Results:</u></p><br>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<ul class="b">
-						<li style="padding-left: 1em;">Both strains grow much slower than WT MG1655, probably due to all the modifications made to their genome </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 grew slower than KJK01, as expected </li>
-						<li style="padding-left: 1em;">The OD<sub>600</sub> of the KJK01 strain increased rapidly to 3, above which our spectrophotometer did not show any reading, causing us to dilute our samples to 50% of the original concentration </li>
-						<ul class="c">
-							<li style="padding-left: 1em;">In a certain range, the relationship between OD and concentration is linear, which is why we can double the reading values obtained after dilution </li>
-							<li style="padding-left: 1em;">We decided to stop taking readings when the cultures reached an OD<sub>600</sub> of ~6, as our spectrophotometer stopped showing readings again</li>
-							<li style="padding-left: 1em;">The spectrophotometer in our lab does not give accurate readings above OD600 1, which is why readings from our experiment above that limit are not very reliable </li>
-						</ul>
-						<li style="padding-left: 1em;">We took 5 readings per sample, but the standard deviation was rather small. This lead to error bars smaller than the point size in our graphs, which is why they are not clearly visible, but are certainly present. </li>
-					</ul>
-					<br><br>
-					<!-- END OF GROWTH CURVE ASSAY -->
-
-
-					<!-- MIC Assay -->
-					<h2>MIC Assay</h2>
-
-					<br><br>
-					<!-- END OF MIC ASSAY-->
-
-
-					<!-- Sucrose Assay in LB -->
-					<h2>Sucrose assay for KJK01 in LB</h2>
-					<p>E.coli KJK01 wild type strain showed very promising results with respect to sucrose consumption. Over time, it was shown to actively take up almost all the sucrose from the media. However,  pCSCx-KJK01 transformed E.coli did not show similar results, due to an unknown error. Our team plans to rectify these errors in the future.</p>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-
-					<!-- END OF SUCROSE ASSAY IN LB-->
-					
-					<!---------------------------------------END OF E COLI RESULTS---------------------------------------->
+							<!-- GDNA EXTRACTION -->
+							<h2>Genomic DNA extraction</h2>
+							<br>
+							<h4>Expected Result:</h4> 
+							<p>Large band above the DNA ladder, as gDNA is very large in size and cannot traverse through the gel</p>
+							<h4>Result:</h4>
+							<ul class="b">
+								<li style="padding-left: 1em;">In the first genomic DNA extraction, we obtained fragmented DNA which showed up in multiple bands when we ran our gels with the PCR product.</li>
+								<li style="padding-left: 1em;">The second (?) genomic DNA extraction yielded a single band above the DNA ladder along with a large bright band at the bottom of the ladder</li>
+							</ul>
+							<br><br>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<p>The first band is the gDNA of KJK01 and the bright band is probably RNA contamination due to improper addition of RNase</p>
+							<br><br>
+							<!-- END OF GDNA-->
 
 
 
+							<!-- PCR amplification of hbd-crt cassette and gel electrophoresis -->
+							<h2>PCR amplification of hbd-crt cassette and gel electrophoresis</h2>
+							<br>
+							<h4>Expected Results:</h4> 
+							<p>Amplicon of length ~750bp showing up on the gel</p>
+							<h4>Results:</h4> 
+							<p>The gel failed multiple times. We did not get any bands on the gel.</p>
+							<br><br>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<!-- END OF PCR amplification of hbd-crt cassette and gel electrophoresis -->
+							
+							
 
-					<!-------------------------------------- CYANO RESULTS----------------------------------------------->
-					<h1>Cyanobacteria</h1>
-					<hr><br><br><br>
-					
-					<!-- GROWTH CURVE -->
-					<h2>Growth Curve</h2>
-					<p>We aimed to characterise the growth of our S. elongatus UTEX 2973 wild type and engineered strain. The population density of our culture is measured in terms of the optical density/absorbance of the culture measured at 730 nm (a wavelength at which there is no absorbance due to photosynthetic or other pigments). After setting up the culture, a 1 mL sample was taken every 3 hours and its absorbance was measured in a biophotometer. The experiment was carried out once without bicarbonate flashing and is currently being repeated with bicarbonate.</p>
-					<p>We carried out this experiment with two replicates of WT and two of the cscB-incorporated strain. The data were fit to a logistic growth curve, and K- and r-values were estimated.. Standard deviation was estimated from the difference between the mean of the two replicates and either value; a smaller source of error was the instrumental error, which was added in quadrature as a correction to the former estimate.</p>
-					<p>At OD<sub>730</sub> values above 0.6, we began seeing fluctuations in the second decimal digit of our biophotometer reading. As these were larger fluctuations, we began diluting the samples for measurements in the more precise range, and calculating the OD of the original culture from our measured value.</p>
-					<p>Results at 0.04% CO2 (zero bicarbonate) and low light (around 100 E):</p>
-					<br>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<!-- End of Growth Curve-->
-
-
-					<!-- Sucrose Assay -->
-					<h2> Sucrose Assay</h2>
-					<p>We used Megazyme’s colorimetric assay to estimate sucrose concentration. The assay kit involve lysing sucrose to produce glucose and fructose, oxidising the glucose to produce peroxide and quantifying the peroxide colorimetrically (which is used up to produce a quinoneimine fluorescent dye). We first prepared standard graphs of absorbance versus sucrose concentration, to identify the linear range. We then used the slope of this curve to estimate the sucrose concentration in our ambient-carbon cultures of S. elongatus UTEX 2973.</p>
-					<p>In accordance with theory, the wild type produced no sucrose. The cscB strain, however, produced sucrose over time.</p>
-					<br>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<!-- END OF SUCROSE ASSAY -->
-
-
-					<!---------------------------------------- END OF CYANO RESULTS------------------------------------->
-
+							<!-- TROUBLESHOOTING (READ MORE) -->
+							<h2> Troubleshooting</h2>
+							<br>
+							<p>Despite running the gel multiple times, we failed to obtain a positive result. The modifications we made to our protocol to get the desired results were -</p>
+							<ul class="b">
+								<li style="padding-left: 1em;"> Reduce dNTP: Our mentor advised us to reduce the amount of dNTP added because the amount could be deleterious to the reaction. The concentration was reduced to 100-500 ng/µl.</li>
+								<li style="padding-left: 1em;"> Reduce gDNA concentration: With the same logic as of dNTP, genomic DNA concentration was reduced to 100 ng/µl.</li>
+								<li style="padding-left: 1em;"> Compare primer with negative control: To find whether the primers were binding rightly or non-specifically or binding at all, a test was compared with negative control wherein the negative control was devoid of just the gDNA. If the primer dimer band has reduced intensity in the test, it means that the primer is binding to the DNA. If the band is not of the right size, then it is binding non-specifically.</li>
+							</ul>
+							<br>
+							<!-- END OF TROUBLE SHOOTING-->
+							<p>But we were unable to see the primer dimer bands at all in the test lanes.</p>
+							<br><br>
 
 
+							<!-- GRADIENT PCR-->
+							<h2>Gradient PCR</h2><br>
+							<p>As none of our troubleshooting worked, we spoke to our PI, Prof Pucadyil, from whose lab we borrowed the Pfu polymerase used in the PCR reaction. He pointed out that we hadn’t used DMSO in any of the previous runs when the protocol especially called for it. We had been following the PCR protocol of another lab. He suggested that we perform a gradient PCR at different concentrations of DMSO and different temperatures.</p>
+							<p>We obtained 20 amplified products after the PCR</p>
+							
+							<!-- Table 1 -->
+							<div class="table" style="padding-left: 5%;">
+								<!-- Headers -->
+								<div class="table1-row table-header">
+									<div class="cell">
+										Conditions
+									</div>
+									<div class="cell">
+										Negative Control
+									</div>
+									<div class="cell">
+										0% DMSO
+									</div>
+									<div class="cell">
+										5% DMSO
+									</div>
+									<div class="cell">
+										10% DMSO
+									</div>
+								</div>
+								<!-- End of headers -->
 
-					<!--------------------------------------------- CO CULTURE-------------------------------------------->
-					<h1>Co-culture</h1>
-					<hr><br><br><br>
+								<!-- Other rows --->
+								<div class="table1-row">
+									<div class="cell" data-title="Conditions">
+										50°C
+									</div>
+									<div class="cell" data-title="Negative Control">
+										Gel 1
+									</div>
+									<div class="cell" data-title="0% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="5% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="10% DMSO">
+										Gel 2
+									</div>
+								</div>
 
-					<!-- Growth curve assay for KJK01 and pCSCX-KJK01 in BG-11 + sucrose -->
-					<h2>Growth curve assay for KJK01 and pCSCX-KJK01 in BG-11 + sucrose</h2>
-					<p>We aimed to grow KJK01 and pCSCX-KJK01 in BG-11 + sucrose and characterize their growth. BG-11 does not have any carbon source [add ref] as it is meant for photosynthetic organisms. pCSCX is a plasmid containing the cscABK cluster that helps in the transport and metabolism of sucrose [ref]. In the mixture of BG-11 + sucrose, sucrose is the sole carbon source for E. coli. If the strain manages to grow in this mixture, it means that it has the genes necessary for sucrose consumption.</p>
-					<p>This experiment served as a proxy for our co-culture, as it indicated that our E. coli strains were able to subsist on plain sucrose. The next step would be to grow the strains in BG-11 + supernatant of the cyanobacterial culture in order to see how the additional compounds secreted by the cyanobacteria affect the growth of the E. coli, and finally moving on actually culturing the two organisms together.</p>
-					<p>We inoculated 3 cultures:</p>
-					<ul class="b">
-						<li style="padding-left: 1em;">KJK01 (negative control) </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 + antibiotics (uninduced) </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 + antibiotics + 0.1 mM IPTG (induced) </li>
-					</ul>
-					<br>
+								<div class="table1-row">
+									<div class="cell" data-title="Conditions">
+										52°C
+									</div>
+									<div class="cell" data-title="Negative Control">
+										Gel 1
+									</div>
+									<div class="cell" data-title="0% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="5% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="10% DMSO">
+										Gel 2
+									</div>
+								</div>
+
+								<div class="table1-row">
+									<div class="cell" data-title="Conditions">
+										54°C
+									</div>
+									<div class="cell" data-title="Negative Control">
+										Gel 1
+									</div>
+									<div class="cell" data-title="0% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="5% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="10% DMSO">
+										Gel 2
+									</div>
+								</div>
+
+								<div class="table1-row">
+									<div class="cell" data-title="Conditions">
+										56°C
+									</div>
+									<div class="cell" data-title="Negative Control">
+										Gel 1
+									</div>
+									<div class="cell" data-title="0% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="5% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="10% DMSO">
+										Gel 2
+									</div>
+								</div>
+
+								<div class="table1-row">
+									<div class="cell" data-title="Conditions">
+										60°C
+									</div>
+									<div class="cell" data-title="Negative Control">
+										Gel 1
+									</div>
+									<div class="cell" data-title="0% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="5% DMSO">
+										Gel 2
+									</div>
+									<div class="cell" data-title="10% DMSO">
+										Gel 2
+									</div>
+								</div>
+							</div>
+							<br><br>
+							<!-- End of Table -->
+
+							<h4>Result:</h4>
+							<br>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<ul>
+								<li style="padding-left: 1em;"> Bands found at ~750bp in the 5% and 10% DMSO bands</li>
+								<li style="padding-left: 1em;"> Gel 2 was left on for too long and ran out.</li>
+							</ul>
+							<p>This confirmed the presence of butanol producing genes in KJK01.</p>
+							<!-- END OF PCR FOR BUTANOL GENES -->
 
 
-					<p>The supernatants would simultaneously be used for sucrose consumption and NMR quantification assays as well, to obtain sucrose consumption rates and butanol production rates for the three cultures.</p>
-					<p><u>Expected Results:</u></p>
-					<ul class="b">
-						<li style="padding-left: 1em;">KJK01 (negative control) - This culture is expected to show negligible/no growth and no butanol production. </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 (uninduced) - This culture is expected to show fastest growth and low butanol production. </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 (induced with 0.1 mM IPTG) - This culture is expected to show slow growth and maximum butanol production. </li>
-					</ul>
-					<br>
-					<p><u>Results:</u></p>
-					<p>We repeated this experiment twice and obtained two growth curves for each of the three strains.</p>
-					<p>Growth Curve 1:</p>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<ul class="b">
-						<li style="padding-left: 1em;">KJK01 - This culture showed good growth, reaching OD600 0.3 in 24 hours </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 (uninduced) - This culture showed no growth in 24 hours </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 (induced with 0.1 mM IPTG) - This culture showed no growth in 24 hours </li>
-					</ul>
-					<br>
-					<p>This was a rather unexpected result and the complete opposite of what we thought would happen. We suspected that the first culture might have been contaminated, and the contaminants were able to survive on sucrose. We could have confirmed if the KJK01 was growing if we had submitted our supernatants for NMR analysis, but the slots were already full. </p>
-					<br>
+							<!-- NMR FOR BUTANOL -->
+							<h1> NMR confirmation of butanol production</h1>
+							<hr><br><br><br>
+							<p>As PCR confirmation of the presence of the butanol producing genes was taking too long, we simultaneously started culturing KJK01 in Luria–Bertani (LB) broth as well as Terrific Broth (TB). Abdelaal et al cultured the strain in TB as E. coli has been shown to produce maximum butanol in that medium. Making TB is a rather time-consuming process for us, hence we decided to check if we could perform the rest of the quantification of butanol production in LB cultures.</p>
+							<p>We inoculated 6 2° cultures as follows:</p>
+							<ul class="b">
+								<li style="padding-left: 1em;"> LB (0 IPTG)</li>
+								<li style="padding-left: 1em;"> LB (0.1 mM IPTG)</li>
+								<li style="padding-left: 1em;"> LB (0.2 mM IPTG)</li>
+								<li style="padding-left: 1em;"> TB (0 IPTG)</li>
+								<li style="padding-left: 1em;"> TB (0.1 mM IPTG)</li>
+								<li style="padding-left: 1em;"> TB (0.2 mM IPTG)</li>
+							</ul>
+							<br>
+							<h4>Expected results:</h4>
+							<p>The TB cultures are expected to produce more butanol than the LB cultures. The IPTG induced cultures are expected to produce more butanol than the ones with 0 IPTG.</p>
+							<h4>Results:</h4>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<ul class="b">
+								<li style="padding-left: 1em;"> The spectrum contains peaks characteristic of butanol, which indicates that butanol is present in the supernatant and produced by KJK01</li>
+								<li style="padding-left: 1em;"> The LB culture produced ~1.5 times the amount of butanol produced by the TB cultures</li>
+								<li style="padding-left: 1em;"> The supernatants of cultures that were not induced with IPTG showed little butanol content, suggesting leaky expression of the promoter the genes are under</li>
+								<li style="padding-left: 1em;"> The supernatants of cultures induced with 0.1 mM IPTG contained slightly more butanol than the ones induced with 0.2 mM IPTG</li>
+								<li style="padding-left: 1em;"> KJK01 has been shown to produce equal amounts of ethanol, but due to time constraints we could not analyse the spectrum for ethanol peaks</li>
+							</ul>
+							<!-- END OF NMR FOR BUTANOL-->
 
 
-					<p>Growth Curve 2:</p>
-					<p>We repeated the same experiment as in growth curve 1, but took readings every two hours instead of one hour, as taking 6 samples, measuring their OD, centrifuging them and freezing the supernatants every hour was simply not practical. We made sure to UV the hood and clean it thoroughly with 70% ethanol in order to minimize chances of contaminating the wild type culture which did not have any antibiotics.</p>
-					<img src="assets/WetlabPhotos/MIC_4.jpeg">
-					<br><br>
-					<ul class="b">
-						<li style="padding-left: 1em;">KJK01 - This culture showed good growth, reaching OD<sub>600</sub> 0.17 in 40 hours </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 (uninduced) - This culture showed no growth in 40 hours </li>
-						<li style="padding-left: 1em;">pCSCX-KJK01 (induced with 0.1 mM IPTG) - This culture showed no growth in 40 hours </li>
-					</ul>
-					<br>
-					<p>The results were the same as the previous growth curve. We suspected contamination yet again, but maybe the WT KJK01 had genes that let it metabolize sucrose and the pCSCX plasmid was not as effective, although this was mere speculation. We could not say anything for sure as the culture had no antibiotics. There was also construction going on next to our lab, and the area near our hood remained dusty constantly despite our best attempts to clean it. Contamination seemed to be the most likely possibility. Our mentor told us that we did not have the right control for the above growth curves, hence we chose to redo it and not submit the samples for NMR analysis.</p>
-					<!-- END OF GROWTH CURVE IN BG11 + SUCROSE-->
+							<!-- TRANSFORMATION OF KJK01-->
+							<h1>Transformation of KJK01 with pCSCX plasmid</h1>
+							<hr><br><br><br>
+							<p>KJK01 was transformed with the pCSCX plasmid that would enable it to survive with sucrose as its sole carbon source. The cells were transformed via electroporation and transformed cells were streaked onto LB agar plates containing Kanamycin and Ampicillin.</p>
+							<p><u>Results:</u>After overnight incubation, many colonies were seen on the plates, indicating that transformation was successful. Glycerol stocks were made from these plates immediately.</p>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br>
+
+							<!-- END OF TRANSFORMATION-->
 
 
-					<!-- TRANSFORMATION E COLI-->
-					<h2>Transformation of KJK01 with pKD4 plasmid</h2>
-					<p>KJK01 was transformed with the pKD4 plasmid, which is a blank plasmid containing only Kanamycin resistance. This strain would servethat would enable it to survive with sucrose as its sole carbon source. The cells were transformed via electroporation and transformed cells were streaked onto LB agar plates containing Kanamycin and Ampicillin.</p>
-					<br>
-					<p><u>Results:</u> After overnight incubation, many colonies were seen on the plates, indicating that transformation was successful. Glycerol stocks were made from these plates immediately.</p>
+							<!-- Growth curve assay for KJK01 and pCSCX-KJK01 -->
+							<h1>Growth curve assay for KJK01 and pCSCX-KJK01 </h1>
+							<hr><br><br><br>
+							<p>We aimed to grow KJK01 and pCSCX-KJK01 in LB and characterize their growth. Due to lack of time in the lab in accordance with COVID-19 restrictions in India, we could perform only one assay and hence could not calculate the growth rates.</p>
+							<h4>Expected Result:</h4> 
+							<p>We expect a sigmoid growth curve for both strains. pCSCX-KJK01 is expected to grow slower than KJK01 due to the metabolic burden of carrying an extra plasmid.</p>
+							<h4>Results:</h4>
+							<br>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<ul class="b">
+								<li style="padding-left: 1em;">Both strains grow much slower than WT MG1655, probably due to all the modifications made to their genome </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 grew slower than KJK01, as expected </li>
+								<li style="padding-left: 1em;">The OD<sub>600</sub> of the KJK01 strain increased rapidly to 3, above which our spectrophotometer did not show any reading, causing us to dilute our samples to 50% of the original concentration </li>
+								<ul class="c">
+									<li style="padding-left: 1em;">In a certain range, the relationship between OD and concentration is linear, which is why we can double the reading values obtained after dilution </li>
+									<li style="padding-left: 1em;">We decided to stop taking readings when the cultures reached an OD<sub>600</sub> of ~6, as our spectrophotometer stopped showing readings again</li>
+									<li style="padding-left: 1em;">The spectrophotometer in our lab does not give accurate readings above OD600 1, which is why readings from our experiment above that limit are not very reliable </li>
+								</ul>
+								<li style="padding-left: 1em;">We took 5 readings per sample, but the standard deviation was rather small. This lead to error bars smaller than the point size in our graphs, which is why they are not clearly visible, but are certainly present. </li>
+							</ul>
+							<!-- END OF GROWTH CURVE ASSAY -->
+
+
+							<!-- MIC Assay -->
+							<h1>MIC Assay</h1>
+							<hr><br><br><br>
+							<!-- END OF MIC ASSAY-->
+
+
+							<!-- Sucrose Assay in LB -->
+							<h1>Sucrose assay for KJK01 in LB</h1>
+							<hr><br><br><br>
+							<p>E.coli KJK01 wild type strain showed very promising results with respect to sucrose consumption. Over time, it was shown to actively take up almost all the sucrose from the media. However,  pCSCx-KJK01 transformed E.coli did not show similar results, due to an unknown error. Our team plans to rectify these errors in the future.</p>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+
+							<!-- END OF SUCROSE ASSAY IN LB-->
+						</div>
+						<!-------------------------------------- end of e coli -------------------------------------------->
 
 
 
+						<!--------------------------------------- start of cyano ---------------------------------------->
+						<div class="tab-pane fade" id="cyano-wet-res" role="tabpanel" aria-labelledby="cyano-wet-res-tab">
+							<br><br><br>
+							
+							<!-- GROWTH CURVE -->
+							<h2>Growth Curve</h2>
+							<p>We aimed to characterise the growth of our S. elongatus UTEX 2973 wild type and engineered strain. The population density of our culture is measured in terms of the optical density/absorbance of the culture measured at 730 nm (a wavelength at which there is no absorbance due to photosynthetic or other pigments). After setting up the culture, a 1 mL sample was taken every 3 hours and its absorbance was measured in a biophotometer. The experiment was carried out once without bicarbonate flashing and is currently being repeated with bicarbonate.</p>
+							<p>We carried out this experiment with two replicates of WT and two of the cscB-incorporated strain. The data were fit to a logistic growth curve, and K- and r-values were estimated.. Standard deviation was estimated from the difference between the mean of the two replicates and either value; a smaller source of error was the instrumental error, which was added in quadrature as a correction to the former estimate.</p>
+							<p>At OD<sub>730</sub> values above 0.6, we began seeing fluctuations in the second decimal digit of our biophotometer reading. As these were larger fluctuations, we began diluting the samples for measurements in the more precise range, and calculating the OD of the original culture from our measured value.</p>
+							<p>Results at 0.04% CO2 (zero bicarbonate) and low light (around 100 E):</p>
+							<br>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<!-- End of Growth Curve-->
 
+
+							<!-- Sucrose Assay -->
+							<h2> Sucrose Assay</h2>
+							<p>We used Megazyme’s colorimetric assay to estimate sucrose concentration. The assay kit involve lysing sucrose to produce glucose and fructose, oxidising the glucose to produce peroxide and quantifying the peroxide colorimetrically (which is used up to produce a quinoneimine fluorescent dye). We first prepared standard graphs of absorbance versus sucrose concentration, to identify the linear range. We then used the slope of this curve to estimate the sucrose concentration in our ambient-carbon cultures of S. elongatus UTEX 2973.</p>
+							<p>In accordance with theory, the wild type produced no sucrose. The cscB strain, however, produced sucrose over time.</p>
+							<br>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<!-- END OF SUCROSE ASSAY -->
+
+						</div>
+						<!-------------------------------------- end of cyano -------------------------------------------->
+
+
+
+						<!--------------------------------------- start of co culture ---------------------------------------->
+						<div class="tab-pane fade" id="coculture-wet-res" role="tabpanel" aria-labelledby="coculture-wet-res-tab">
+							<br><br><br>
+							
+							<!-- Growth curve assay for KJK01 and pCSCX-KJK01 in BG-11 + sucrose -->
+							<h2>Growth curve assay for KJK01 and pCSCX-KJK01 in BG-11 + sucrose</h2>
+							<p>We aimed to grow KJK01 and pCSCX-KJK01 in BG-11 + sucrose and characterize their growth. BG-11 does not have any carbon source [add ref] as it is meant for photosynthetic organisms. pCSCX is a plasmid containing the cscABK cluster that helps in the transport and metabolism of sucrose [ref]. In the mixture of BG-11 + sucrose, sucrose is the sole carbon source for E. coli. If the strain manages to grow in this mixture, it means that it has the genes necessary for sucrose consumption.</p>
+							<p>This experiment served as a proxy for our co-culture, as it indicated that our E. coli strains were able to subsist on plain sucrose. The next step would be to grow the strains in BG-11 + supernatant of the cyanobacterial culture in order to see how the additional compounds secreted by the cyanobacteria affect the growth of the E. coli, and finally moving on actually culturing the two organisms together.</p>
+							<p>We inoculated 3 cultures:</p>
+							<ul class="b">
+								<li style="padding-left: 1em;">KJK01 (negative control) </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 + antibiotics (uninduced) </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 + antibiotics + 0.1 mM IPTG (induced) </li>
+							</ul>
+							<br>
+
+
+							<p>The supernatants would simultaneously be used for sucrose consumption and NMR quantification assays as well, to obtain sucrose consumption rates and butanol production rates for the three cultures.</p>
+							<p><u>Expected Results:</u></p>
+							<ul class="b">
+								<li style="padding-left: 1em;">KJK01 (negative control) - This culture is expected to show negligible/no growth and no butanol production. </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 (uninduced) - This culture is expected to show fastest growth and low butanol production. </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 (induced with 0.1 mM IPTG) - This culture is expected to show slow growth and maximum butanol production. </li>
+							</ul>
+							<br>
+							<p><u>Results:</u></p>
+							<p>We repeated this experiment twice and obtained two growth curves for each of the three strains.</p>
+							<p>Growth Curve 1:</p>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<ul class="b">
+								<li style="padding-left: 1em;">KJK01 - This culture showed good growth, reaching OD600 0.3 in 24 hours </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 (uninduced) - This culture showed no growth in 24 hours </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 (induced with 0.1 mM IPTG) - This culture showed no growth in 24 hours </li>
+							</ul>
+							<br>
+							<p>This was a rather unexpected result and the complete opposite of what we thought would happen. We suspected that the first culture might have been contaminated, and the contaminants were able to survive on sucrose. We could have confirmed if the KJK01 was growing if we had submitted our supernatants for NMR analysis, but the slots were already full. </p>
+							<br>
+
+
+							<p>Growth Curve 2:</p>
+							<p>We repeated the same experiment as in growth curve 1, but took readings every two hours instead of one hour, as taking 6 samples, measuring their OD, centrifuging them and freezing the supernatants every hour was simply not practical. We made sure to UV the hood and clean it thoroughly with 70% ethanol in order to minimize chances of contaminating the wild type culture which did not have any antibiotics.</p>
+							<img src="assets/WetlabPhotos/MIC_4.jpeg">
+							<br><br>
+							<ul class="b">
+								<li style="padding-left: 1em;">KJK01 - This culture showed good growth, reaching OD<sub>600</sub> 0.17 in 40 hours </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 (uninduced) - This culture showed no growth in 40 hours </li>
+								<li style="padding-left: 1em;">pCSCX-KJK01 (induced with 0.1 mM IPTG) - This culture showed no growth in 40 hours </li>
+							</ul>
+							<br>
+							<p>The results were the same as the previous growth curve. We suspected contamination yet again, but maybe the WT KJK01 had genes that let it metabolize sucrose and the pCSCX plasmid was not as effective, although this was mere speculation. We could not say anything for sure as the culture had no antibiotics. There was also construction going on next to our lab, and the area near our hood remained dusty constantly despite our best attempts to clean it. Contamination seemed to be the most likely possibility. Our mentor told us that we did not have the right control for the above growth curves, hence we chose to redo it and not submit the samples for NMR analysis.</p>
+							<!-- END OF GROWTH CURVE IN BG11 + SUCROSE-->
+
+
+							<!-- TRANSFORMATION E COLI-->
+							<h2>Transformation of KJK01 with pKD4 plasmid</h2>
+							<p>KJK01 was transformed with the pKD4 plasmid, which is a blank plasmid containing only Kanamycin resistance. This strain would servethat would enable it to survive with sucrose as its sole carbon source. The cells were transformed via electroporation and transformed cells were streaked onto LB agar plates containing Kanamycin and Ampicillin.</p>
+							<br>
+							<p><u>Results:</u> After overnight incubation, many colonies were seen on the plates, indicating that transformation was successful. Glycerol stocks were made from these plates immediately.</p>
+
+						</div>
+						<!-------------------------------------- end of co culture -------------------------------------------->
+					</div>
 				</div>
 			</div>
         </div>
     </div>
 
-<!-- SPONSORS BAR -->
+
+
+	<!---------------------------------------------- SPONSORS BAR ------------------------------------------------------------>
 	<div class="footer">
 		<div class="footer-wrapper">
 			<!-- <div id="not-sponsors" class="footer-wrapper">	 -->
@@ -561,22 +633,13 @@
 			</div>	
 		</div>
 	</div>
-	<!-- END OF SPONSOR BAR--> 
+	<!------------------------------------------ END OF SPONSOR BAR ---------------------------------------------------------> 
 
-<!-- ACTUAL SCROLLING BAR-->
+
+
+	<!--------------------------------------- ACTUAL SCROLLING BAR ----------------------------------------------------->
 	<div class="header"></div>
     <div class="line" id="scrollIndicator"></div>
-
-
-    <!-- back to top button -->
-    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
-
-	
-	<!-- LINKING MAIN JS FILES-->
-    <script src="js/bootstrap-bundle.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/jquery.min.js"></script>
-
 
 	<!-- Gets the screenheight of each page for Scrollbar? -->
 	<script>
@@ -602,6 +665,54 @@
 	</script>
 
 
+    <!------------------------------------------ back to top button ------------------------------------------------------>
+    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
+
+	
+	<!---------------------------------------- LINKING MAIN JS FILES ----------------------------------------------------->
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+
+	
+
+
+	<!------------------------------------------ Displaying sidebar depending on the tab ------------------------------->
+	<script>
+		$(document).ready(function() {
+			$('#myTab').on('click', sidebar);
+
+			function sidebar(){
+				if($('#cyano-wet').hasClass('active')) {
+					$('#ecoli-wet-side').css({visibility: "hidden"});
+					$('#coculture-wet-side').css({visibility: "hidden"});
+					$('#cyano-wet-side').css({visibility: "visible"});
+					$('.sidenav').css({top: "9%"})
+					console.log('cyano')
+				}
+				else if($('#ecoli-wet').hasClass('active')) {
+					$('#cyano-wet-side').css({visibility: "hidden"});
+					$('#coculture-wet-side').css({visibility: "hidden"});
+					$('#ecoli-wet-side').css({visibility: "visible"});
+					$('.sidenav').css({top: "2.5%"})
+					console.log('ecoli')
+				}
+				else if($('#coculture-wet').hasClass('active')) {
+					$('#cyano-wet-side').css({visibility: "hidden"});
+					$('#ecoli-wet-side').css({visibility: "hidden"});
+					$('#coculture-wet-side').css({visibility: "visible"});
+					$('.sidenav').css({top: "18%"})
+					console.log('coculture')
+				}
+			}
+		});
+	</script>
+	<!------------------------------------------ End of display script ------------------------------------------>
+
+
+
+
 	<!-- SCRIPT FOR SCROLL AWARE SIDEBAR HIGHLIGHT -->
 	<!-- ------------------------------------------------------------------------------------------------------------- -->
 	<!-- MAKE SURE YOU CHANGE THE NUMBER OF DIVISIONS -->
@@ -609,104 +720,301 @@
 		
 		$(document).ready(function() {
 			$(window).scroll(function() {
-				var scroll_top = $(window).scrollTop();
-				var div_one_top = $("#1").offset().top;
-				var div_two_top = $("#2").offset().top;
-				var div_three_top = $("#3").offset().top;
-				var div_four_top = $("#4").offset().top;
-				var div_five_top = $("#5").offset().top;
-				var div_six_top = $("#6").offset().top;
-				var div_seven_top = $("#7").offset().top;
-	
-				if (scroll_top > div_one_top && scroll_top < div_two_top) {
-					//Division 1
-					if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').addClass('sidenav-active');
+
+				if($('#ecoli-wet').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#e1").offset().top;
+					var div_two_top = $("#e2").offset().top;
+					var div_three_top = $("#e3").offset().top;
+					var div_four_top = $("#e4").offset().top;
+					var div_five_top = $("#e5").offset().top;
+					var div_six_top = $("#e6").offset().top;
+					var div_seven_top = $("#e7").offset().top;
+					var div_eight_top = $("#e8").offset().top;
+					var div_nine_top = $("#e9").offset().top;
+					var div_ten_top = $("#e10").offset().top;
+		
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#e1"]').hasClass('sidenav-active')) {
+							$('a[href="#e1"]').addClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').removeClass('sidenav-active');
+						}
+		
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#e1"]').hasClass('sidenav-active')) {
+							$('a[href="#e1"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#e2"]').hasClass('sidenav-active')) {
+							$('a[href="#e2"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#e3"]').hasClass('sidenav-active')) {
+							$('a[href="#e3"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#e4"]').hasClass('sidenav-active')) {
+							$('a[href="#e4"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#e5"]').hasClass('sidenav-active')) {
+							$('a[href="#e5"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top && scroll_top < div_eight_top) {
+						// You are in div 7
+						if ($('a[href="#e6"]').hasClass('sidenav-active')) {
+							$('a[href="#e6"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').addClass('sidenav-active');
+						}
+
+						if ($('a[href="#e8"]').hasClass('sidenav-active')) {
+							$('a[href="#e8"]').removeClass('sidenav-active');
+						}
+					} else if (scroll_top > div_eight_top && scroll_top < div_nine_top) {
+						//Division 8
+						if ($('a[href="#e7"]').hasClass('sidenav-active')) {
+							$('a[href="#e7"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e8"]').hasClass('sidenav-active')) {
+							$('a[href="#e8"]').addClass('sidenav-active');
+						}
+
+						if ($('a[href="#e9"]').hasClass('sidenav-active')) {
+							$('a[href="#e9"]').removeClass('sidenav-active');
+						}
+					} else if (scroll_top > div_nine_top && scroll_top < div_ten_top) {
+						//Divison 9 
+						if ($('a[href="#e8"]').hasClass('sidenav-active')) {
+							$('a[href="#e8"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e9"]').hasClass('sidenav-active')) {
+							$('a[href="#e9"]').addClass('sidenav-active');
+						}
+
+						if ($('a[href="#e10"]').hasClass('sidenav-active')) {
+							$('a[href="#e10"]').removeClass('sidenav-active');
+						}
+					} else if (scroll_top > div_ten_top) {
+						if ($('a[href="#e9"]').hasClass('sidenav-active')) {
+							$('a[href="#e9"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e10"]').hasClass('sidenav-active')) {
+							$('a[href="#e10"]').addClass('sidenav-active');
+						}
 					}
-	
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-					// Division 2
-					if ($('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-					//Division 3
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-					// You are in div 4
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-					// You are in div 5
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-					// You are in div 6
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_seven_top) {
-					// You are in div 7
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').addClass('sidenav-active');
+				} 
+				else if ($('#cyano-wet').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#c1").offset().top;
+					var div_two_top = $("#c2").offset().top;
+					var div_three_top = $("#c3").offset().top;
+					var div_four_top = $("#c4").offset().top;
+					var div_five_top = $("#c5").offset().top;
+					var div_six_top = $("#c6").offset().top;
+					var div_seven_top = $("#c7").offset().top;
+		
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#c1"]').hasClass('sidenav-active')) {
+							$('a[href="#c1"]').addClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').removeClass('sidenav-active');
+						}
+		
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#c1"]').hasClass('sidenav-active')) {
+							$('a[href="#c1"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#c2"]').hasClass('sidenav-active')) {
+							$('a[href="#c2"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
+						// You are in div 4
+						if ($('a[href="#c3"]').hasClass('sidenav-active')) {
+							$('a[href="#c3"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
+						// You are in div 5
+						if ($('a[href="#c4"]').hasClass('sidenav-active')) {
+							$('a[href="#c4"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
+						// You are in div 6
+						if ($('a[href="#c5"]').hasClass('sidenav-active')) {
+							$('a[href="#c5"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#c7"]').hasClass('sidenav-active')) {
+							$('a[href="#c7"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_seven_top) {
+						// You are in div 7
+						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
+							$('a[href="#c6"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#c7"]').hasClass('sidenav-active')) {
+							$('a[href="#c7"]').addClass('sidenav-active');
+						}
 					}
 				}
+				else if ($('#coculture-wet').hasClass('active')) {
+					var scroll_top = $(window).scrollTop();
+					var div_one_top = $("#cc1").offset().top;
+					var div_two_top = $("#cc2").offset().top;
+					var div_three_top = $("#cc3").offset().top;
+					var div_four_top = $("#cc4").offset().top;
+		
+					if (scroll_top > div_one_top && scroll_top < div_two_top) {
+						//Division 1
+						if (!$('a[href="#cc1"]').hasClass('sidenav-active')) {
+							$('a[href="#cc1"]').addClass('sidenav-active');
+						}
+		
+						if ($('a[href="#cc2"]').hasClass('sidenav-active')) {
+							$('a[href="#cc2"]').removeClass('sidenav-active');
+						}
+		
+					} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
+						// Division 2
+						if ($('a[href="#cc1"]').hasClass('sidenav-active')) {
+							$('a[href="#cc1"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#cc3"]').hasClass('sidenav-active')) {
+							$('a[href="#cc3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#cc2"]').hasClass('sidenav-active')) {
+							$('a[href="#cc2"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+						//Division 3
+						if ($('a[href="#cc2"]').hasClass('sidenav-active')) {
+							$('a[href="#cc2"]').removeClass('sidenav-active');
+						}
+		
+						if ($('a[href="#cc4"]').hasClass('sidenav-active')) {
+							$('a[href="#cc4"]').removeClass('sidenav-active');
+						} 
+		
+						if (!$('a[href="#cc3"]').hasClass('sidenav-active')) {
+							$('a[href="#cc3"]').addClass('sidenav-active');
+						}
+					} else if (scroll_top > div_four_top) {
+						// You are in div 4
+						if ($('a[href="#cc3"]').hasClass('sidenav-active')) {
+							$('a[href="#cc3"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#cc4"]').hasClass('sidenav-active')) {
+							$('a[href="#cc4"]').addClass('sidenav-active');
+						} 
+					}
+				}	
 			});
 		});
 		
 	</script>	
+	<!-------------------------------------------- END OF SCROLL AWARE HIGHLIGHT --------------------------------------->
+
+
 
 	
 	<!-- Script for the slideshow, wherever needed -->
