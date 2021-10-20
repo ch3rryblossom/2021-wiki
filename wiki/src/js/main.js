@@ -52,11 +52,11 @@ document.getElementById('scrollIndicator');
 
 function moveScrollIndicator(e) {
   if($('#content-cyano').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.4;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 21.5;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else if($('#content-ecoli').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 16.45;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 21.5;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else if($('#content-coculture').hasClass('active')) {
@@ -64,7 +64,7 @@ function moveScrollIndicator(e) {
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else if($('#content-overview').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 34;
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 33.5;
     scrollIndicatorElt.style.height = percentage + '%';
   }
   else {

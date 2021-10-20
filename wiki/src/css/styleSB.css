@@ -306,13 +306,16 @@ html {
         } */
 
 .graph {
-	justify-content: center;
-	font-style: italic;
-	text-align: center;
+	justify-content: center !important;
+	font-style: italic !important;
+	text-align: center !important;
 }
-.graph p{
-	font-size: xx-small !important;
+#desc {
+	font-size: 1.5vmin !important;
+	font-style: italic !important;
+	padding-top: 1em;
 }
+
 
 /* .content end */
 
@@ -408,3 +411,7 @@ html {
 } */
 
 /* Other end */
+
+#more {
+	display: none;
+}

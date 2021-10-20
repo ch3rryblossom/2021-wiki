@@ -139,12 +139,15 @@
 
     <!-- CONTENT + SIDENAV SECTION -->
 
-<style>
-	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
-	color: white !important;
-	font-family: ProximaNova !important;
-}
-</style>
+	<!-- STYLING FOR FONTS -->
+	<style>
+		.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+		color: white !important;
+		font-family: ProximaNova !important;
+	}
+	</style>
+	<!-- END OF STYLING FOR FONTS -->
+
     <div class="second-div container-fluid">
         <div class="row">
 
@@ -170,7 +173,6 @@
 									<li class="nav-item"><a class="nav-link" href="#e8">Glycerol stocks of pCSCX-KJK01</a></li>
 									<li class="nav-item"><a class="nav-link" href="#e9">MIC Assay for KJK01</a></li>
 									<li class="nav-item"><a class="nav-link" href="#e10">Growth curve in LB</a></li>
-									<li class="nav-item"><a class="nav-link" href="#e11">References</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -189,6 +191,7 @@
 									<li class="nav-item"><a class="nav-link" href="#c5">Cyanobacteria growth curve under salt stress</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c6">Sucrose assay</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c7">Cyanobacteria growth curve under high carbon</a></li>
+									<li class="nav-item"><a class="nav-link" href="#c8">References</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -204,6 +207,7 @@
 									<li class="nav-item"><a class="nav-link" href="#cc2">Preparation of CoBG-11</a></li>
 									<li class="nav-item"><a class="nav-link" href="#cc3">Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose</a></li>
 									<li class="nav-item"><a class="nav-link" href="#cc4">Sucrose assay</a></li>
+									<li class="nav-item"><a class="nav-link" href="#cc5">References</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -268,15 +272,15 @@
 							
 							<!-- GLYCEROL STOCKS OF KJK01 -->
 							<br><br><br>
-							<h2 class="h2">Glycerol stocks of KJK01</h2>
+							<h2>Glycerol stocks of KJK01</h2>
 							<br><br>
-							<h3 class="h3"> Objective </h2>
+							<h3> Objective </h3>
 							<p>Preparation of glycerol stocks of the <i>E. coli</i> KJK01 strain.</p>
 							<br>
-							<h3 class="h3">Working Principle</h2>
+							<h3>Working Principle</h3>
 							<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4°C. Long term storage is best at temperatures of the range of -80°C. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures some percentage of glycerol is added to the media. Cells covered in glycerol are safe to be stored at such temperatures because glycerol is an anti-freezing agent.<sup><a href="#eref1">[1]</a></sup></p>
 							<br>
-							<h3 class="h3">Key Reagents/Apparatus</h2>
+							<h3>Key Reagents/Apparatus</h3>
 							<ul class="b">
 								<li style="padding-left: 1em;"> Autoclaved 1X LB</li>
 								<li style="padding-left: 1em;"> Autoclaved 50% glycerol</li>
@@ -291,7 +295,7 @@
 							<div class="graph">
 								<img src="assets/WetlabPhotos/Glycerol_stocks_3.jpeg" alt="Flash freezing the prepared KJK01 stocks" width=535>
 								<br>
-								<p><i>Flash freezing the prepared KJK01 stocks</i></p>
+								<p id="desc">Flash freezing the prepared KJK01 stocks</p>
 							</div>
 							<a id="e2"></a><br><hr width="50%"><br><br>
 							<!-- END OF GLYCEROL STOCKS OF KJK01-->
@@ -553,11 +557,7 @@
 								<span class="visually-hidden">Next</span>
 								</button>
 							</div>
-							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
-								<h3 id="slidetext"></h3>
-							</div>
 							<!-- END OF SLIDESHOW -->
-							<br><br><br>
 							<a id="e8"></a><br><hr width=50%><br><br>
 							<!--END OF KJK01 PCSCX -->
 
@@ -608,9 +608,6 @@
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="visually-hidden">Next</span>
 								</button>
-							</div>
-							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
-								<h3 id="slidetext"></h3>
 							</div>
 							
 							<a id="e9"></a><br><hr width="50%"><br><br>
@@ -714,20 +711,20 @@
 
 							<h3>Protocol</h3>
 							<p> Can be found <a href="https://www.protocols.io/view/growth-rate-determination-of-e-coli-bxa2pige">here</a></p>
-							<a id="e11"></a><br><a id="eref1"></a><br><a id="eref2"></a><br><a id="eref3"></a>
+							<br><a id="eref1"></a><br><a id="eref2"></a><br><a id="eref3"></a>
 							<!--END OF GROWTH CURVE -->
 
 
 							<!-- References -->
 							<hr>
-							<h3>References</h3>
+							<h3>Reference</h3>
 							<ol class="a">
-								<li style="padding-left: 1em;" id="eref4"> "https://www.addgene.org/protocols/create-glycerol-stock/"</li>
+								<li style="padding-left: 1em;" id="eref4"><a href="https://www.addgene.org/protocols/create-glycerol-stock/">https://www.addgene.org/protocols/create-glycerol-stock/</a></li>
 								<li style="padding-left: 1em;" id="eref5">Yazdani Paper</li>
 								<li style="padding-left: 1em;" id="eref6">Butanol Producing gene Likhith</li>
 								<li style="padding-left: 1em;" id="eref7">GPCR ashwin </li>
-								<li style="padding-left: 1em;" id="eref8">https://www.sciencedirect.com/topics/materials-science/nuclear-magnetic-resonance-spectroscopy</li>
-								<li style="padding-left: 1em;" id="eref9">https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells</li>
+								<li style="padding-left: 1em;" id="eref8"><a href="https://www.sciencedirect.com/topics/materials-science/nuclear-magnetic-resonance-spectroscopy">https://www.sciencedirect.com/topics/materials-science/nuclear-magnetic-resonance-spectroscopy</a></li>
+								<li style="padding-left: 1em;" id="eref9"><a href="https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells">https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells</a></li>
 								<li style="padding-left: 1em;" id="eref10">Transformation </li>
 								<li style="padding-left: 1em;">Transformation -> sole carbon source </li>
 								<li style="padding-left: 1em;"> MIC</li>
@@ -867,7 +864,10 @@
 							</ul>
 							<br>
 							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
+							<br>
+
 							<p>Growth curves for certain freshwater cyanobacterial species are carried out under salt stress to account for sucrose production in the particular strain. This is because sucrose is naturally produced as an osmoprotectant in these strains and an increase in Optical Density with time shows a linear relationship with sucrose concentration.</p>
+							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="a">
@@ -889,7 +889,7 @@
 
 
 							<!-- Sucrose assay -->
-							<h2> </h2>
+							<h2>Sucrose assay </h2>
 							<br><br>
 							<h3>Objective</h3>
 							<p> </p>
@@ -913,7 +913,7 @@
 
 
 							<!-- Cyanobacteria growth curve under high carbon -->
-							<h2> </h2>
+							<h2>Growth curve under high carbon </h2>
 							<br><br>
 							<h3>Objective</h3>
 							<p> </p>
@@ -931,9 +931,24 @@
 
 							<h3>Protocol</h3>
 							<p> Can be found <a href="">here</a></p>
-							<br><br><br>
+							<a id="c8"></a><br><br><br>
 							<!-- End of Cyanobacteria growth curve under high carbon -->
 
+
+							<!-- REFERENCES -->
+							<hr>
+							<h3>References</h3>
+							<ol class="a">
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+							</ol>
+							<!-- END OF REFERECNES -->
 						</div>
 						<!-------------------------------- END OF CYANOBACTERIA ------------------------------------------->
 
@@ -975,18 +990,24 @@
 							<h2>Preparation of CoBG-11 </h2>
 							<br><br>
 							<h3>Objective</h3>
-							<p>Preparation of CoBG-11 media for coculture experiments of cyanobacteria and E.coli </p>
+							<p>Preparation of CoBG-11 media for coculture experiments of cyanobacteria and <i>E. coli</i> </p>
 							<br>
 
 							<h3>Working principle</h3>
 							<p>CoBG-11 media is a mix of BG-11 with some salts whose concentrations have been optimized for <i> E. coli</i> growth by Zhang et al. </p>
+							<br>
+
 							<p>CoBG-11 has the following composition:</p>
+							
 							<ol class="a">
 								<li style="padding-left: 1em;">150 mM NaCl </li>
 								<li style="padding-left: 1em;">4 mM NH<sub>4</sub>Cl </li>
 								<li style="padding-left: 1em;">3 g/L 2-[[1,3-dihydroxy-2-(hydroxymethyl) propan-2-yl] amino] ethanesulfonic acid (TES</li>
-							</ul>
+							</ol>
+							<br>
 							<p> The pH value is adjusted with NaOH to 8.3.</p>
+							<br>
+
 							<p>Note that it is not advisable to use TESNa as a replacement for TES because, in the event that the pH of your solution is higher than 8.3, you will need to add HCl to reduce the pH. This, in turn, adds more chloride to the medium. However, while preparing CoBG-11 in bulk, only a small amount of HCl might be needed and it shall not affect the chloride concentration much.</p>
 							<br>
 
@@ -1003,7 +1024,7 @@
 							<p> Can be found <a href="">here</a></p>
 							<a id="cc3"></a><br><hr width=50%><br><br>
 							<!-- End of Preparation of CoBG-11 -->
-
+							
 
 
 							<!-- Growth curve of KJK01 and pCSCX-KJK01 in BG-11 + sucrose -->
@@ -1023,10 +1044,12 @@
 							</ul>
 							<br>
 							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
+							<br>
+							
 							<p> Here we carry out the growth curve in BG-11 + sucrose as a co-culture proxy. We want to check if the pCSCX plasmid allows the <i>E. coli</i> to survive when sucrose is the only carbon source available, as BG-11 does not contain any carbon source of its own. The concentration of sucrose used in the experiment is 250 mg/L, which is more than the maximum concentration secreted by the cyanobacteria in Zhang et al, 2020<sup>[1]</sup>. After two failed attempts, we carried out the experiment using CoBG-1<sup>[1]</sup> from the same paper. The medium contains salts that aid the growth of <i>E. coli</i>.</p>
 							<!-- Links need to be inserted in next <p>-->
 							<p> The supernatants of the sample taken for OD measurement were reserved for sucrose assay (insert link Jason Joby), to determine the rate of sucrose consumption, as well as NMR analysis (insert link Jason Joby), to determine the rate of butanol production. Thus, this assay serves three purposes.
-
+							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="a">
@@ -1050,18 +1073,20 @@
 
 
 							<!-- Sucrose assay -->
-							<h2><i>E. coli</i> and cyanobacteria Sucrose Assay </h2>
+							<h2><i>E. coli</i> and cyanobacteria sucrose assay </h2>
 							<br><br>
 							<h3>Objective</h3>
 							<p>Measuring</p>
 							<ul class="b">
-								<li style="padding-left: 1em;">The amount of sucrose secreted by engineered strains of S.elongatus </li>
-								<li style="padding-left: 1em;">The amount of sucrose consumed by engineered strains of E.coli </li>
+								<li style="padding-left: 1em;">The amount of sucrose secreted by engineered strains of <i>S.elongatus</i> </li>
+								<li style="padding-left: 1em;">The amount of sucrose consumed by engineered strains of <i>E. coli</i> </li>
 							</ul>
 							<br>
 
 							<h3>Working principle</h3>
 							<p>Free D-glucose in the sample extract is determined by conversion to a red coloured quinoneimine dye compound through the action of glucose oxidase (Fig 1) and peroxidase (Fig 2) at pH 7.4, and employing p-hydroxybenzoic acid and 4-aminoantipyrine. The D-glucose contents is estimated by measuring the absorbance of the dye at 510 nm.  </p>
+							<br>
+
 							<p>At pH 4.6, sucrose is hydrolysed by the enzyme β-fructosidase to D-glucose and D-fructose (Fig 3). The determination of D-glucose after inversion by β-fructosidase (total D-glucose) is carried out simultaneously according to the principle outlined above. The sucrose content is calculated from the difference of the D-glucose concentrations before and after enzymatic inversion.</p>
 							<br>
 
@@ -1084,9 +1109,20 @@
 
 							<h3>Protocol</h3>
 							<p> Can be found <a href="http://dx.doi.org/10.17504/protocols.io.by5xpy7n">here</a></p>
-							<br><br><br>
+							<a id="cc5"></a><br><br><br>
 							<!-- End of Sucrose assay -->
 
+
+							<!-- References -->
+							<hr>
+							<h3>References</h3>
+							<ol class="a">
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;"> </li>
+							</ol>
 
 						</div>
 						<!-------------------------------- END OF CO CULTURE ----------------------------------------------->
@@ -1245,7 +1281,6 @@
 					var div_eight_top = $("#e8").offset().top;
 					var div_nine_top = $("#e9").offset().top;
 					var div_ten_top = $("#e10").offset().top;
-					var div_eleven_top = $("#e11").offset().top;
 		
 					if (scroll_top > div_one_top && scroll_top < div_two_top) {
 						//Division 1
@@ -1361,7 +1396,7 @@
 						if ($('a[href="#e10"]').hasClass('sidenav-active')) {
 							$('a[href="#e10"]').removeClass('sidenav-active');
 						}
-					} else if (scroll_top > div_ten_top && scroll_top < div_eleven_top) {
+					} else if (scroll_top > div_ten_top) {
 						if ($('a[href="#e9"]').hasClass('sidenav-active')) {
 							$('a[href="#e9"]').removeClass('sidenav-active');
 						}
@@ -1369,19 +1404,7 @@
 						if (!$('a[href="#e10"]').hasClass('sidenav-active')) {
 							$('a[href="#e10"]').addClass('sidenav-active');
 						}
-
-						if ($('a[href="#e11"]').hasClass('sidenav-active')) {
-							$('a[href="#e11"]').removeClass('sidenav-active');
-						}
-					} else if (scroll_top > div_eleven_top){
-						if ($('a[href="#e10"]').hasClass('sidenav-active')) {
-							$('a[href="#e10"]').removeClass('sidenav-active');
-						}
-		
-						if (!$('a[href="#e11"]').hasClass('sidenav-active')) {
-							$('a[href="#e11"]').addClass('sidenav-active');
-						}
-					}
+					} 
 				} 
 				else if ($('#cyano-wet').hasClass('active')) {
 					var scroll_top = $(window).scrollTop();
@@ -1392,6 +1415,7 @@
 					var div_five_top = $("#c5").offset().top;
 					var div_six_top = $("#c6").offset().top;
 					var div_seven_top = $("#c7").offset().top;
+					var div_eight_top = $("#c8").offset().top;
 		
 					if (scroll_top > div_one_top && scroll_top < div_two_top) {
 						//Division 1
@@ -1468,7 +1492,7 @@
 						if (!$('a[href="#c6"]').hasClass('sidenav-active')) {
 							$('a[href="#c6"]').addClass('sidenav-active');
 						}
-					} else if (scroll_top > div_seven_top) {
+					} else if (scroll_top > div_seven_top && scroll_top <div_eight_top) {
 						// You are in div 7
 						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
 							$('a[href="#c6"]').removeClass('sidenav-active');
@@ -1476,6 +1500,18 @@
 		
 						if (!$('a[href="#c7"]').hasClass('sidenav-active')) {
 							$('a[href="#c7"]').addClass('sidenav-active');
+						}
+
+						if ($('a[href="#c8"]').hasClass('sidenav-active')) {
+							$('a[href="#c8"]').removeClass('sidenav-active');
+						}
+					} else if (scroll_top > div_eight_top){
+						if ($('a[href="#c7"]').hasClass('sidenav-active')) {
+							$('a[href="#c7"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#c8"]').hasClass('sidenav-active')) {
+							$('a[href="#c8"]').addClass('sidenav-active');
 						}
 					}
 				}
@@ -1485,6 +1521,7 @@
 					var div_two_top = $("#cc2").offset().top;
 					var div_three_top = $("#cc3").offset().top;
 					var div_four_top = $("#cc4").offset().top;
+					var div_five_top = $("#cc5").offset().top;
 		
 					if (scroll_top > div_one_top && scroll_top < div_two_top) {
 						//Division 1
@@ -1522,7 +1559,7 @@
 						if (!$('a[href="#cc3"]').hasClass('sidenav-active')) {
 							$('a[href="#cc3"]').addClass('sidenav-active');
 						}
-					} else if (scroll_top > div_four_top) {
+					} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
 						// You are in div 4
 						if ($('a[href="#cc3"]').hasClass('sidenav-active')) {
 							$('a[href="#cc3"]').removeClass('sidenav-active');
@@ -1530,6 +1567,20 @@
 		
 						if (!$('a[href="#cc4"]').hasClass('sidenav-active')) {
 							$('a[href="#cc4"]').addClass('sidenav-active');
+						} 
+
+						if ($('a[href="#cc5"]').hasClass('sidenav-active')) {
+							$('a[href="#cc5"]').removeClass('sidenav-active');
+						}
+
+					} else if (scroll_top > div_five_top) {
+						// You are in div 4
+						if ($('a[href="#cc4"]').hasClass('sidenav-active')) {
+							$('a[href="#cc4"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#cc5"]').hasClass('sidenav-active')) {
+							$('a[href="#cc5"]').addClass('sidenav-active');
 						} 
 					}
 				}	
@@ -1558,4 +1609,8 @@
 		});
 
 	</script>
+
+
+
+
 </body>
