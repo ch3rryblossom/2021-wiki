@@ -145,8 +145,8 @@
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#1">Planned pipeline of experiments</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Build 1</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Test 1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Cycle 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Cycle 3</a></li>
                             <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
                             <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
                             <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
@@ -233,47 +233,62 @@
     .tab .nav-tabs li a{ color: #fff; }
     .tab .tab-content h3{ font-size: 18px; }
 }
+table{
+	border-collapse:collapse;
+}
+td {
+            border-style:solid; 
+            border-width:1px; 
+            border-color:#fff; 
+            padding:10px;
+         }
     </style>
 
 
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Planned pipeline of experiments: production of sucrose and butanol</h1>
-                    <hr><br><br><br>
-
-                    <div class="container">
+                    <h1 id="1">Experiment 1</h1>
+                    <hr><br>
 			<div class="row">
 				<div class="tab" role="tabpanel">
 				    <!-- Nav tabs -->
 				    <ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#Design1" aria-controls="Design1" role="tab" data-toggle="tab">Design 1</a></li>
-					<li role="presentation"><a href="#Build1" aria-controls="Build1" role="tab" data-toggle="tab">Build 1</a></li>
-					<li role="presentation"><a href="#Test1" aria-controls="Test1" role="tab" data-toggle="tab">Test 1</a></li>
-					<li role="presentation"><a href="#Learn1" aria-controls="Learn1" role="tab" data-toggle="tab">Learn 1</a></li>
+					<li role="presentation" class="active"><a href="#Cycle1_A" aria-controls="Cycle1_A" role="tab" data-toggle="tab">Cycle 1</a></li>
+					<li role="presentation"><a href="#Cycle2_A" aria-controls="Cycle2_A" role="tab" data-toggle="tab">Cycle 2</a></li>
+					<li role="presentation"><a href="#Cycle3_A" aria-controls="Cycle3_A" role="tab" data-toggle="tab">Cycle 3</a></li>
+					<li role="presentation"><a href="#Cycle4_A" aria-controls="Cycle4_A" role="tab" data-toggle="tab">Cycle 4</a></li>
+					<li role="presentation"><a href="#Cycle5_A" aria-controls="Cycle5_A" role="tab" data-toggle="tab">Cycle 5</a></li>
 				    </ul>
 				    <!-- Tab panes -->
 				    <div class="tab-content tabs">
-					<div role="tabpanel" class="tab-pane fade in active" id="Design1">
-					    <h3>Design 1</h3>
+					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_A">
+					    <h3>Cycle 1</h3>
+						<table>
+							<tr><td data-cycle="design">Design</td><td></td></tr>
+							<tr><td data-cycle="build">Build</td><td></td></tr>
+							<tr><td data-cycle="test">Test</td><td></td></tr>
+							<tr><td data-cycle="learn">Learn</td><td></td></tr>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle2_A">
+					    <h3>Cycle 2</h3>
 					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
 					</div>
-					<div role="tabpanel" class="tab-pane fade" id="Build1">
-					    <h3>Build 1</h3>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle3_A">
+					    <h3>Cycle 3</h3>
 					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
 					</div>
-					<div role="tabpanel" class="tab-pane fade" id="Test1">
-					    <h3>Test 1</h3>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle4_A">
+					    <h3>Cycle 4</h3>
 					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
 					</div>
-					<div role="tabpanel" class="tab-pane fade" id="Learn1">
-					    <h3>Learn 1</h3>
-					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle5_A">
+						<h3>Cycle 5</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
 					</div>
 				    </div>
 				</div>
-			    
-			</>
-		    </div>
+		    
                         <br><br><br>
                         <p>
                             <ul class="a">
