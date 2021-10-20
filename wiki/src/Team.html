@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/SBcss/style.css">
    	<link rel="stylesheet" href="css/styleSB.css">
     	<link rel="stylesheet" href="css/DryLabPage.css">
+    	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<style>/* Reset CSS */
 
 		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
@@ -20,52 +21,7 @@
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
     </style>
-    <style>
-	    
-.container-card{
-    position: relative;
-    width: 225px;
-    height: 350px;
-    perspective:1000px;
-    -webkit-perspective: 1000px;
-    border-radius: 4px;
-}
-.teamcard {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 6px;
-    box-shadow: 0 6px 16px rgba(0,0,0,.15);
-    cursor: pointer;
-}
-.teamcard div{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 6px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-family: Verdana;
-    color: #262626;
-}
-.teamcard .back {
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
-}
-.container-card.t-active .teamcard{
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-}
-    </style>
+
 <body>
     
 
@@ -191,26 +147,426 @@
 	font-family: ProximaNova !important;
 }
 </style>
+<style>
+	.team-area{
+    padding: 60 px 0;
+}
+
+.section-heading{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 65px;
+    font-family: bignoodletitling;
+    letter-spacing: 5px;
+}
+
+.team-card{
+    border: none;
+    background: #fff;
+}
+
+.img-area{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.team-single:hover .side-two{
+    transform: rotateY(0deg);
+    border-radius: 5px;
+}
+
+.team-single:hover .side-one{
+    transform: rotateY(180deg);
+}
+
+.content-area{
+    transform: perspective(1000px);
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.side-one{
+    position: relative;
+    transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.side-two{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: rotateY(-180deg);
+}
+
+.side-one,
+.side-two{
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.side-one .card,
+.side-two .card{
+    min-height: 312px;
+}
+
+.side-two .card a{
+    font-size: 18px;
+    color: brown;
+}
+</style>
     <div class="second-div container-fluid">
                 <div class="team-content">
-                    <h1 id="1">Introduction</h1>
+                    <h1 id="1">Core Team</h1>
                     <hr><br><br><br>
-		<h3>Core Team</h3>
-		<br><br>
-<div onkeydown="keyFunction(event)">
+		    <section class="team-area">
+			<div class="container">
+			    <h3 class="selection-heading">Team Members</h3>
+			    <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				    <div class="team-single">
+					<div class="content-area">
+					    <div class="side-one">
+						<div class="team-card">
+						    <div class="card-body text-center">
+							<div class="img-area">
+							    <img src="https://listimg.pinclipart.com/picdir/s/25-259252_special-school-nurse-person-placeholder-image-png-clipart.png">
+							</div>
+							<h4>Member 1</h4>
+							<p>Designation</p>
+						    </div>
+						</div>
+					    </div>
+					    <div class="side-two">
+						<div class="team-card">
+						    <div class="card-body text-center mt-4">
+							<h4>Member</h4>
+							<p>elephants fly in the sky by usgin their ears we cannot see them because god does not allow us to see them</p>
+							<ul class="list-inline">
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-youtube"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-facebook"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-linkedin"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-instagram"></i>
+								</a>
+							    </li>
+							</ul>
+						    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				    <div class="team-single">
+					<div class="content-area">
+					    <div class="side-one">
+						<div class="team-card">
+						    <div class="card-body text-center">
+							<div class="img-area">
+							    <img src="https://listimg.pinclipart.com/picdir/s/25-259252_special-school-nurse-person-placeholder-image-png-clipart.png">
+							</div>
+							<h4>Member 2</h4>
+							<p>Designation</p>
+						    </div>
+						</div>
+					    </div>
+					    <div class="side-two">
+						<div class="team-card">
+						    <div class="card-body text-center mt-4">
+							<h4>Member</h4>
+							<p>elephants fly in the sky by usgin their ears we cannot see them because god does not allow us to see them</p>
+							<ul class="list-inline">
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-youtube"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-facebook"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-linkedin"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-instagram"></i>
+								</a>
+							    </li>
+							</ul>
+						    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				    <div class="team-single">
+					<div class="content-area">
+					    <div class="side-one">
+						<div class="team-card">
+						    <div class="card-body text-center">
+							<div class="img-area">
+							    <img src="https://listimg.pinclipart.com/picdir/s/25-259252_special-school-nurse-person-placeholder-image-png-clipart.png">
+							</div>
+							<h4>Member 3</h4>
+							<p>Designation</p>
+						    </div>
+						</div>
+					    </div>
+					    <div class="side-two">
+						<div class="team-card">
+						    <div class="card-body text-center mt-4">
+							<h4>Member</h4>
+							<p>elephants fly in the sky by usgin their ears we cannot see them because god does not allow us to see them</p>
+							<ul class="list-inline">
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-youtube"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-facebook"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-linkedin"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-instagram"></i>
+								</a>
+							    </li>
+							</ul>
+						    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				    <div class="team-single">
+					<div class="content-area">
+					    <div class="side-one">
+						<div class="team-card">
+						    <div class="card-body text-center">
+							<div class="img-area">
+							    <img src="https://listimg.pinclipart.com/picdir/s/25-259252_special-school-nurse-person-placeholder-image-png-clipart.png">
+							</div>
+							<h4>Member 4</h4>
+							<p>Designation</p>
+						    </div>
+						</div>
+					    </div>
+					    <div class="side-two">
+						<div class="team-card">
+						    <div class="card-body text-center mt-4">
+							<h4>Member</h4>
+							<p>elephants fly in the sky by usgin their ears we cannot see them because god does not allow us to see them</p>
+							<ul class="list-inline">
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-youtube"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-facebook"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-linkedin"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-instagram"></i>
+								</a>
+							    </li>
+							</ul>
+						    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				    <div class="team-single">
+					<div class="content-area">
+					    <div class="side-one">
+						<div class="team-card">
+						    <div class="card-body text-center">
+							<div class="img-area">
+							    <img src="https://listimg.pinclipart.com/picdir/s/25-259252_special-school-nurse-person-placeholder-image-png-clipart.png">
+							</div>
+							<h4>Member 5</h4>
+							<p>Designation</p>
+						    </div>
+						</div>
+					    </div>
+					    <div class="side-two">
+						<div class="team-card">
+						    <div class="card-body text-center mt-4">
+							<h4>Member</h4>
+							<p>elephants fly in the sky by usgin their ears we cannot see them because god does not allow us
+							    to see them</p>
+							<ul class="list-inline">
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-youtube"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-facebook"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-linkedin"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-instagram"></i>
+								</a>
+							    </li>
+							</ul>
+						    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				    <div class="team-single">
+					<div class="content-area">
+					    <div class="side-one">
+						<div class="team-card">
+						    <div class="card-body text-center">
+							<div class="img-area">
+							    <img src="https://listimg.pinclipart.com/picdir/s/25-259252_special-school-nurse-person-placeholder-image-png-clipart.png">
+							</div>
+							<h4>Member 6</h4>
+							<p>Designation</p>
+						    </div>
+						</div>
+					    </div>
+					    <div class="side-two">
+						<div class="team-card">
+						    <div class="card-body text-center mt-4">
+							<h4>Member</h4>
+							<p>elephants fly in the sky by usgin their ears we cannot see them because god does not allow us
+							    to see them</p>
+							<ul class="list-inline">
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-youtube"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-facebook"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-linkedin"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-instagram"></i>
+								</a>
+							    </li>
+							</ul>
+						    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+				    <div class="team-single">
+					<div class="content-area">
+					    <div class="side-one">
+						<div class="team-card">
+						    <div class="card-body text-center">
+							<div class="img-area">
+							    <img src="https://listimg.pinclipart.com/picdir/s/25-259252_special-school-nurse-person-placeholder-image-png-clipart.png">
+							</div>
+							    <h4>Member 7</h4>
+							    <p>Designation</p>
+						    </div>
+						</div>
+					    </div>
+					    <div class="side-two">
+						<div class="team-card">
+						    <div class="card-body text-center mt-4">
+							<h4>Member</h4>
+							<p>elephants fly in the sky by usgin their ears we cannot see them because god does not allow us
+							    to see them</p>
+							<ul class="list-inline">
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-youtube"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-facebook"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-linkedin"></i>
+								</a>
+							    </li>
+							    <li class="list-inline-item">
+								<a href="#" class="social-icon" target="_blank">
+								    <i class="fa fa-instagram"></i>
+								</a>
+							    </li>
+							</ul>
+						    </div>
+						</div>
+					    </div>
+					</div>
+				    </div>
+				</div>
+			    </div>
+			</div>
+		    </section>
 
-		<div class="container-card">
-	    
-		    <div class="teamcard">
-			<div class="front word1_front">TRUECODES</div>
-		    </div>
-	    
-		    <div class="teamcard">
-			<div class="back word1_back">CODEBLOGGER</div>
-		    </div>
-		</div>
-
-</div>
 
 
 
@@ -324,20 +680,6 @@
 	<script src="js/jquery.min.js"></script>
 
 <script>
-
-let box = document.querySelector(".container-card");
-        box.addEventListener("click", function () {
-            box.classList.toggle("t-active");
-        });
-
-        function keyFunction(e) {
-            if (e.keyCode == 38) {
-                box.classList.add("t-active");
-            };
-            if (e.keyCode == 40) {
-                box.classList.remove("t-active");
-            };
-        };
 </script>
 	<!-- Gets the screenheight of each page for Scrollbar? -->
 	<script>
