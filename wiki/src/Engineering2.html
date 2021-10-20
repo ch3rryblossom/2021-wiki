@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Engineering</title>
+	<link rel="stylesheet" href="css/igem-reset.css">
+	<link rel="stylesheet" href="css/SBcss/style.css">
+   	<link rel="stylesheet" href="css/styleSB.css">
+    	<link rel="stylesheet" href="css/DryLabPage.css">
+	<style>/* Reset CSS */
+
+		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+		#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+		body, html {background-color:#212529; width: 100%; height: 100%;}
+		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+
+    </style>
+  
+<body>
+    
+	<!-- NAVBAR SECTION -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+		<div class="container-fluid nav-container">
+		  <a class="navbar-brand" href="#">
+			<img src="assets/svgs/synbactory2.svg">
+		  </a>
+		  <div class="center-expand">
+		</div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Home</a>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Team
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Team.html">Members</a></li>
+			  <li><a class="dropdown-item" href="Attributions.html">Attributions</a></li>
+			  <li><a class="dropdown-item" href="Collaborations.html">Collaborations</a></li>
+			  <li><a class="dropdown-item" href="Partnership.html">Partnership</a></li>
+			  <li><a class="dropdown-item" href="Sponsors.html">Sponsors</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Project
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Description.html">Description</a></li>
+			  <li><a class="dropdown-item" href="Design.html">Design</a></li>
+			  <li><a class="dropdown-item" href="Notebook.html">Notebook</a></li>
+			  <li><a class="dropdown-item" href="Contribution.html">Contributions</a></li>
+			  <li><a class="dropdown-item" href="Engineering.html">Engineering Success</a></li>
+			  <li><a class="dropdown-item" href="Implementation.html">Future Implementation</a></li>
+			  <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Wet Lab
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Experiments.html">Experiments</a></li>
+			  <li><a class="dropdown-item" href="Constructs.html">Constructs</a></li>
+			  <li><a class="dropdown-item" href="Measurement.html">Measurement</a></li>
+			  <li><a class="dropdown-item" href="LabNotebook.html">Lab Notebook</a></li>
+			  <li><a class="dropdown-item" href="Results.html">Results</a></li>
+			  <li><a class="dropdown-item" href="FutureWork.html">Future Work</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Parts
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <!-- <li><a class="dropdown-item" href="#">Overview</a></li> -->
+			  <li><a class="dropdown-item" href="BasicParts.html">Basic</a></li>
+			  <li><a class="dropdown-item" href="CompositeParts.html">Composite</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Dry Lab
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
+			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
+			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Human Practices
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Human_Practices.html">iHP</a></li>
+			  <li><a class="dropdown-item" href="Inclusivity.html">Inclusivity</a></li>
+			  <li><a class="dropdown-item" href="Communication.html">Education</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="https://igem.org/2021_Judging_Form?id=3971">Judging Form</a>
+		      </li>
+		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
+		    </ul>
+		  </div>
+		</div>
+	</nav>
+
+    <!-- TITLE SECTION -->
+    
+    <div class="section-1">
+        <h1><br><br><br><br>Engineering</h1>
+    </div>
+        
+    <!-- WAVES SPACER -->
+
+    <div class="spacer layer1"></div>
+
+    <!-- CONTENT + SIDENAV SECTION -->
+
+<style>
+	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+	color: white !important;
+	font-family: ProximaNova !important;
+}
+</style>
+    <div class="second-div container-fluid">
+        <div class="row">
+            <!-- SIDENAV -->
+            <div class="col-lg-3 col-md-3">
+                <div class="sidenav">
+                    <nav>
+                        <ul id="sidenav-id">
+                            <li class="nav-item"><a class="nav-link" href="#1">Planned pipeline of experiments</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Build 1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Test 1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- CONTENT -->
+
+	  <style>
+	    a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.tab .nav-tabs{
+    background-color: transparent;
+    border: none;
+}
+.tab .nav-tabs li a{
+    color: #fff;
+    background: transparent;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 13px 15px 7px;
+    margin: 0 0 1px 0;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li:last-child a{ margin-right: 0; }
+.tab .nav-tabs li a:hover,
+.tab .nav-tabs li.active a{
+    background: transparent;
+    border: none;
+}
+.tab .nav-tabs li.active a{ color: #fff; }
+.tab .nav-tabs li a:before{
+    content: "";
+    background: #444;
+    height: 100%;
+    width: 100%;
+    transform: perspective(400px) rotateX(75deg);
+    transform-origin: bottom center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+/* .tab .nav-tabs li.active a:before,
+.tab .nav-tabs li a:hover:before{
+
+} */
+.tab .tab-content{
+    color: #fff;
+    background: #333;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 23px;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 20px -5px rgba(0,0,0,0.5);
+}
+.tab .tab-content h3{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+@media only screen and (max-width: 479px){
+    .tab .nav-tabs{
+        background-color: #333;
+        border-radius: 21px 21px 0 0;
+    }
+    .tab .nav-tabs li{ width: 100%; }
+    .tab .nav-tabs li a{ color: #fff; }
+    .tab .tab-content h3{ font-size: 18px; }
+}
+    </style>
+
+
+            <div class="col-lg-9 col-md-9">
+                <div class="content">
+                    <h1 id="1">Planned pipeline of experiments: production of sucrose and butanol</h1>
+                    <hr><br><br><br>
+
+                    <div class="container">
+			<div class="row">
+				<div class="tab" role="tabpanel">
+				    <!-- Nav tabs -->
+				    <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#Design1" aria-controls="Design1" role="tab" data-toggle="tab">Design 1</a></li>
+					<li role="presentation"><a href="#Build1" aria-controls="Build1" role="tab" data-toggle="tab">Build 1</a></li>
+					<li role="presentation"><a href="#Test1" aria-controls="Test1" role="tab" data-toggle="tab">Test 1</a></li>
+					<li role="presentation"><a href="#Learn1" aria-controls="Learn1" role="tab" data-toggle="tab">Learn 1</a></li>
+				    </ul>
+				    <!-- Tab panes -->
+				    <div class="tab-content tabs">
+					<div role="tabpanel" class="tab-pane fade in active" id="Design1">
+					    <h3>Design 1</h3>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Build1">
+					    <h3>Build 1</h3>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Test1">
+					    <h3>Test 1</h3>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Learn1">
+					    <h3>Learn 1</h3>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					</div>
+				    </div>
+				</div>
+			    
+			</>
+		    </div>
+                        <br><br><br>
+                        <p>
+                            <ul class="a">
+                                <li style="padding-left:1em;padding-top: 0.3em;">Purify DNA and PCR-verify presence of genes in all strains/plasmids.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Revive ordered bacteria from stocks. Streak new plates and prepare stocks.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Pellet down KJK01 and check the supernatant for butanol via NMR.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Make E. coli competent for transformation</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Transform E. coli with pCscX. </li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Take growth measurements of our E. coli over time.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Use MegaZyme’s sucrose assay kit to test for sucrose consumption by KJK01 (sample successive supernatants) over time.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Grow S. elongatus UTEX 2973 (from Pakrasi lab) and test for sucrose production.</li>
+                                <li style="padding-left:1em;padding-top: 0.3em;">Genomically integrate native promoters and carry out fluorescence measurement assays for promoter activity, under high and low light intensities, and high and low carbon dioxide concentrations.</li>
+                            </ul><br>
+                            Due to the second wave of the pandemic in India, our wet lab work was considerably delayed, effectively leaving us with a mere month and a half in the lab. We utilised our time working remotely to devise a thorough plan of experiments, incorporating a Design-Test-Build cycle:
+                        </p>
+</style>
+
+
+
+			</div>
+
+		</div>
+
+        </div>
+
+    </div>
+<!-- SPONSORS BAR -->
+	<div class="footer">
+		<div class="footer-wrapper">
+			<!-- <div id="not-sponsors" class="footer-wrapper">	 -->
+				<div id="Team", class="footer-wrapper">
+					<img class="teamlogo" src="assets/Logos/IISER-Pune-iGEM_logo.png" alt="iGEM IISER Pune Logo" width="170">
+				</div>
+				<div id="socials" class="vertical-stack">
+					<div><h3>Team IISER Pune India</h3></div>
+					<div id="logos" class ="footer-wrapper ">
+						<a href="https://www.instagram.com/igem_iiserp/"><img class="footer-links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="20"></a>
+						<a href="https://www.linkedin.com/in/igem-iiser-pune-2021/"><img class="footer-links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30"></a>
+						<a href="https://twitter.com/igem_iiserpune"><img class="footer-links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35"></a>
+						<a href="https://www.facebook.com/igemiiserpune"><img class="footer-links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25"></a>
+						<a href="https://www.youtube.com/channel/UCyo6NMLvM58sSh_tnxht36w"><img class="footer-links-socials" src="assets/Logos/Youtube_logo.png" alt="Youtube" width="35"></a>
+					</div>
+				</div>
+			<!-- </div> -->
+			<div id="sponsors" class="footer-wrapper">
+				<div id="main-sponsor", class="">
+					<a href="https://www.sailife.com/"><img class="footer-links" src="assets/Logos/Sai_logo.jpg" alt="Sai Life Sciences" width="280"></a>
+				</div>
+				<div class="vertical-stack">
+					<a href="https://sg.idtdna.com/pages"><img class="footer-links" src="assets/Logos/IDT_logo.png" alt="IDT" width="220"></a>
+					<a href="https://www.geneious.com/"><img class="footer-links" src="assets/Logos/Geneious_logo.png" alt="Geneious" width="220"></a>
+				</div>
+				<div class="vertical-stack">
+					<div id="horizontal stack">
+						<a href="https://www.notion.so/"><img class="footer-links" src="assets/Logos/Notion_logo.png" alt="Notion" width="70"></a>
+						<img src="assets/Logos/IISER Pune Logo.png" alt="IISER Pune" width="80" style="padding-left: 1em;">
+					</div>
+					<a href="https://www.zoho.com/"><img class="footer-links" src="assets/Logos/Zoho_logo.png" alt="Zoho" width="150"></a>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- END OF SPONSOR BAR-->
+
+    <div class="header"></div>
+    <div class="line" id="scrollIndicator"></div>
+
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 80;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+
+	</script>
+	<script>    
+        $(function(){
+            $('#sidenav-content a.tab-link').click(function(){
+                var target = $(this).attr('href');
+                $('#main-card-header a[href="' + target+ '"]').tab('show');
+                
+                $('html, body').animate({
+                    scrollTop: $('#scroll-placeholder').offset().top - 70
+                }, 200);
+            });
+        });
+	</script>
+    	<script>
+            $("ul.nav-tabs a").click(function (e) {
+      e.preventDefault();  
+        $(this).tab('show');
+    });
+    
+        </script>
+</body>
