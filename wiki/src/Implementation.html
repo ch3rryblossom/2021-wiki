@@ -139,100 +139,353 @@
 
     <!-- CONTENT + SIDENAV SECTION -->
 
-<style>
-	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
-	color: white !important;
-	font-family: ProximaNova !important;
-}
-</style>
+	<style>
+		.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+			color: white !important;
+			font-family: ProximaNova !important;
+		}
+	</style>
+
+	<style>
+		.sidenav {
+			height: auto;
+			width: auto;
+			padding-top: 150px;
+			padding-left: 5px;
+			padding-right: 10px;
+		
+			margin-top: 25%;
+			margin-bottom: 20px;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 11% ;
+		}
+	</style>
+
     <div class="second-div container-fluid">
         <div class="row">
+
             <!-- SIDENAV -->
             <div class="col-lg-3 col-md-3">
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
-                        </ul>
+                            <li class="nav-item"><a class="nav-link" href="#1">Bioreactor Design</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Bioreactor Operations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Butanol Extraction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Reusing Biomass</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Increasing the carbon uptake rate of S elongatus UTEX 2973</a></li>
+							<li class="nav-item"><a class="nav-link" href="#6">Increasing the butanol tolerance of E. coli KJK01</a></li>
+							<li class="nav-item"><a class="nav-link" href="#7">References</a></li>							
+						</ul>
                     </nav>
                 </div>
             </div>
+
+
+
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<br><br>
+		    		<p>Globally averaged surface temperatures have been rising at an alarmingly dangerous rate,  and we have reached a point where sustenance can be brought about only through reaching zero emission<sup><a href="#ref1">[1]</a></sup> The drastic changes in frequency and strength of rainfall, droughts, cyclones, etc. are the side effects of increasing global temperature.<sup><a href="#ref1">[1]</a></sup> The  prime culprit of such increase in temperature levels is carbon dioxide<sup><a href="#ref2">[2]</a></sup>.</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
-
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
-
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<p>Our team has invested over half a year in this project - designing experiments, ordering reagents and strains, organising an early return to the lab during the pandemic, modeling microbe behaviours, culturing our axenic cultures and quantifying their yields. The project is, however, useless to the world at large if we retire it here. Of paramount importance is a translational step - a practical implementation of our project.</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+					<p>Translating an idea from the lab into the real world is a mammoth task, one that needs careful consideration and deliberation. Our co-culture would function in a photobioreactor (PBR) if scaled up to an industrial process in a real-world setting.</p>
+					<a id="1"></a><br>
 
 
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<!-- bioreactor design -->
+					<h1>Bioreactor Design</h1>
+					<hr><br><br><br>
+					
+					<p>Bioreactor design requires a good understanding of crucial parameters and conditions required to maintain a stable co-culture. This becomes particularly tricky because S. elongatus is a photoautotrophic organism.</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<p>In the lab, we worked with flasks and beakers of small volumes and had to incubate them in a shaking incubator to maintain even temperatures throughout the culture and to ensure the homogenous mixing and availability of nutrients. Since the volumes were small, we could, for all practical purposes, ignore the temperature gradients that would exist in the containers. As volumes scale up, however, temperature gradients need to be taken into careful consideration, since temperature plays a crucial role in maintaining gas solubility levels, photosynthetic efficiencies, and the chemical equilibrium of species.<sup><a href="#ref3">[3]</a></sup>The same applies to pH, a crucial parameter involved in culture growth and sustenance.</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<p>In the small volumes in shaking incubators in a laboratory, every cell in an unaggregated culture is exposed to light almost evenly, an assumption that doesn’t hold true on scaling up. Photo-inhibition, light intensity gradients, light scattering<sup><a href="#ref4">[4]</a></sup> within the culture, dark zones, light zones, and light/dark (L/D) cycles all come into play. We have to ensure the following with regard to the light source in the bioreactor:</p>
+					<ol class="a">
+						<li style="padding-left: 1em;">There is a sufficient light intensity within the entire volume of the photobioreactor. </li>
+						<li style="padding-left: 1em;">The cells close to the light source are not exposed to excessive light, such that their growth is inhibited. </li>
+						<li style="padding-left: 1em;">The cells are given sufficient time in the dark. </li>
+						<li style="padding-left: 1em;">The light intensity gradient is not too significant, [currently a heavily researched area]. </li>
+						<li style="padding-left: 1em;">There are no dark zones within the entire volume of the bioreactor. </li>
+					</ol>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
 
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+					<p>Photoinhibition is a phenomenon where cells are exposed to excessive light such that their photosynthetic efficiency decreases and they are possibly permanently harmed.</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+
+					<p>Light intensity gradients are highly dependent on the geometry of the reactor and the cell culture density<sup><a href="#ref4">[4]</a></sup>. Based on the amount of light different layers of the reactor volume receive, we can divide the reactor volume into 3 regions - strong illumination zone (prone to photoinhibition upon prolonged residence), the zone where the light incident is the right amount needed for growth and the weak illumination zone (dark zone).</p>
+					<br>
+
+					<p>The spectral quality of light is also an important factor, and since sunlight covers a wide spectral range, it is safe to say sunlight could be a potentially promising light source to use in the photobioreactor. This would also offset the energy cost of artificial illumination bringing us closer to the goal of developing a carbon-neutral or carbon-negative system. This will require us to carry out a series of experiments where we simulate a day-night cycle in the incubator and test the viability of both an axenic S. elongatus culture and a co-culture; along with assays to determine the effect of the day-night cycle on sucrose and butanol production.  We will, however, need to take into consideration the potential ill effects that UV radiation may have on the culture.</p>
+					<br>
+
+					<p>To circumvent the aforementioned issues, we need to make sure that the reactor volume is thin and long so as to ensure a less significant intensity gradient. The cultures also need to be mixed at an appropriate rate. Mixing is particularly important as it moves the cells through the three zones of the reactor, ensuring that all cells go through L/D cycles, which has been shown to promote photosynthetic conversion<sup><a href="#ref5">[5]</a></sup><sup>,</sup><sup><a href="#ref6">[6]</a></sup>. We will however need to experiment with the appropriate rate of the L/D cycles since nonoptimal L/D cycle frequency has been shown to lead to hampered growth rates.<sup><a href="#ref7">[7]</a></sup><sup>,</sup><sup><a href="#ref8">[8]</a></sup><sup>,</sup><sup><a href="#ref9">[9]</a></sup><sup>,</sup><sup><a href="#ref10">[10]</a></sup></p>
+					<br>
+
+					<p>To determine an appropriate mixing speed, we need to take into account the availability of nutrients and CO2. Mixing in PBRs is achieved through CO2-enriched air bubbles and/or impellers11. We spoke to Dr. Anand Ghosalkar from Praj Industries Ltd. about sources of CO2 that we could consider for the PBR, and he suggested that we look into ethanol plants, which are known to produce the cleanest carbon dioxide. By using CO2 from such plants, we would eliminate the need to purify the CO2 repeatedly before injecting it into the culture medium. You can read more about our interview with him <a  href="">here</a>.</p>
+					<br>
+
+					<p>Dissolved oxygen (DO) in the medium is another parameter to consider as it has been shown to cause growth inhibition at high concentrations. <sup><a href="#ref12">[12]</a></sup><sup>,</sup><sup><a href="#ref13">[13]</a></sup> </p>
+					<br>
+
+					<p>Based on the modeling of our co-culture and on the inputs of Dr. Syed Shams Yazdani, we learned that butanol production is negatively impacted by aerobic conditions, and optimal butanol yields are achieved in microaerobic and anaerobic conditions. Our modeling showed that the oxygen evolved by S. elongatus during photosynthesis makes the culture medium sufficiently oxygenated such that butanol production is negatively impacted. We will thus need to monitor and remove oxygen from the medium for maximal butanol yields. However, if these results hold in a PBR at large volumes is something we will have to model and experiment with in the future.</p>
+					<br>
+
+					<p>You can read about our co-culture modeling results <a href="">here</a> and our interview with Dr. Syed Shams Yazdani <a href="">here</a>.</p>
+					<br>
+
+					<p>In order to maintain productive, stable co-cultures we thus need the PBR to have a highly illuminated surface area/volume ratio to capture solar radiation, easy temperature control, good performance in mixing and mass transfer, low shear stress on the cells, and low capital and operating cost.</p>
+					<br>
+
+					<p>Based on these considerations and our research, we zeroed in on a column-shaped photobioreactor made of a thin polypropylene film, which has also been successful in commercial applications.<sup><a href="#ref14">[14]</a></sup></p>
+					<a id="2"></a><br>
+					<!-- Bioreactor design end -->
+
+
+
+					<!-- Bioreactor operations -->
+					<h1>Bioreactor Operations</h1>
+					<hr><br><br><br>
+
+					<p>Optimizing operational aspects such as batch v/s continuous cultures, monitoring temperature, pH, dissolved oxygen, etc. are crucial to maximizing product yields. For the time being, we decided to base our further research on batch cultures - this choice may change based on our choice of butanol extraction method (see below). Such a set up would allow us to alternate between different sterile reactor containers and reduce the risk of contamination.</p>
+					<br>
+
+					<p>In order to ensure optimal culture conditions, we need to do two things - monitor the conditions and intervene to bring them to an optimum. For many of the relevant parameters - including temperature, pH and DO - we can use commercially available probes, for example ALS-PHT1 probe from algae lab systems<sup><a href="#ref15">[15]</a></sup>. Based on the unique needs of our co-culture setup we may choose to monitor additional parameters for which we will design customized probes.</p>
+					<br>
+
+					<p>We can use several strategies to control parameters based on feedback from monitoring. For instance, temperature can be controlled using a water bath, while CDC, pH and DO can be controlled at the mass exchanger inlet/outlet<sup><a href="#ref*">*</a></sup>. We will ascertain the required air composition and media composition based on real-time monitoring; we will have better estimates for these parameters once we build models to incorporate aeration and mixing variables.</p>
+					<br>
+
+					<p>An issue with using polypropylene film to build the PBR is that it loses its transparency by oxidation in air, and there exist more efficient PBR designs that make use of glass that doesn’t lose its transparency over time<sup><a href="#ref*">*</a></sup>. However, we chose to work with polypropylene solely because of its ease of use and cost of production and maintenance. However, once we include variables such as light intensity gradients, aeration, mixing speed, etc in our models we will get a clearer idea of how the bioreactor would operate and its efficiency under different design models and operating conditions.</p>
+					<br>
+
+					<p>Our modeling team has also plans to perform a Life Cycle Assessment<sup><a href="#ref16">[16]</a></sup> to ascertain the carbon footprint of the entire bioreactor setup. This will inform us of an additional constraint with regards to choosing a material for the bioreactor based on the carbon neutrality/negativity of the process.</p>
+					<a id="3"></a><br>
+					<!-- End of Bioreactor operations -->
+
+
+					<!-- Butanol Extraction -->
+					<h1>Butanol Extraction</h1>
+					<hr><br><br><br>
+
+					<p>During our research we came across many methods for extraction of butanol from the co-culture medium. Each of these methods have their own advantages and disadvantages; however, we are not presently able to evaluate which method is best suited to our project. This is because we lack crucial information such as the percentage of butanol in our medium, the physical setting and environment of our bioreactor, etc.</p>
+					<br>
+
+					<p>We also asked many of the experts we met who worked with biofuels and metabolic engineering for inputs on butanol extraction, but we got varied responses. Different experts asked us to look into different methods. Below is a table of some of the methods will looked into, their advantages and disadvantages:<sup><a href="#ref17">[17]</a></sup></p>
+					<br>
+
+					<!-- Start of Table -->
+					<div class="table">
+
+						<!-- Headers -->
+						<div class="table1-row table-header">
+							<div class="cell">
+								Method
+							</div>
+							<div class="cell">
+								Description
+							</div>
+							<div class="cell">
+								Advantages
+							</div>
+							<div class="cell">
+								Disadvantages
+							</div>
+						</div>
+						<!--End of headers -->
+
+						<!-- Other rows -->
+						<div class="table1-row">
+							<div class="cell" data-title="Method">
+								Pervaporation
+							</div>
+							<div class="cell" data-title="Description">
+								Partial vaporization through porous or non porous membrane
+							</div>
+							<div class="cell" data-title="Advantages">
+								High selectivity, low energy consumption, not harmful to the organisms, culture media ingredients are not removed from the broth.
+							</div>
+							<div class="cell" data-title="Disadvantages">
+								Expensive due to cost of the membrane, membrane fouling
+							</div>
+						</div>
+
+						<div class="table1-row">
+							<div class="cell" data-title="Method">
+								Adsorption
+							</div>
+							<div class="cell" data-title="Description">
+								Based on adherence of butanol to certain adsorbent materials
+							</div>
+							<div class="cell" data-title="Advantages">
+								Low energy cost, simple design, regenerability of used adsorbents in most cases
+							</div>
+							<div class="cell" data-title="Disadvantages">
+								Expensive due to cost of adsorbent, low efficiency, low selectivity, low adsorbent capacity
+							</div>
+						</div>
+
+						<div class="table1-row">
+							<div class="cell" data-title="Method">
+								Gas Stripping
+							</div>
+							<div class="cell" data-title="Description">
+								A particular gas (such as CO2) is bubbled through the culture and captures volatile components such as butanol
+							</div>
+							<div class="cell" data-title="Advantages">
+								Not harmful to the organisms, No fouling anywhere
+							</div>
+							<div class="cell" data-title="Disadvantages">
+								Low selectivity (will require further purification), requires high temperatures or vacuum
+							</div>
+						</div>
+
+						<div class="table1-row">
+							<div class="cell" data-title="Method">
+								Liquid- liquid Extraction/ Extractive Fermentation
+							</div>
+							<div class="cell" data-title="Description">
+								<i>In situ</i> extraction with the use of an external solvent such as dodecane
+							</div>
+							<div class="cell" data-title="Advantages">
+								High selectivity, high efficiency 
+							</div>
+							<div class="cell" data-title="Disadvantages">
+								External solvent could be toxic to the culture, emulsion formation
+							</div>
+						</div>
+
+						<div class="table1-row">
+							<div class="cell" data-title="Method">
+								Perstraction
+							</div>
+							<div class="cell" data-title="Description">
+								Adapted from Extractive Fermentation to use a membrane and overcome the problem of toxicity
+							</div>
+							<div class="cell" data-title="Advantages">
+								High selectivity, not as toxic as extractive fermentation
+							</div>
+							<div class="cell" data-title="Disadvantages">
+								High cost, risk of membrane fouling
+							</div>
+						</div>
+					</div>
+					<!-- End of table -->
+					<a id="4"></a><br>
+					<!-- End of Butanol Extraction-->
+
+
+					<!-- REUSING BIOMASS -->
+					<h1>Reusing Biomass</h1>
+					<hr><br><br><br>
+
+					<p>Experts in the petrochemical and chemical synthesis industry are one of our major stakeholders since we aim to develop a greener method of synthesis. During one such interaction with Dr. Santanu Dasgupta from Reliance Industries, on how to make our project more sustainable, he suggested we look into the possibility of re-using the biomass generated in the process, something that is often overlooked but highly appreciated in the industrial sector.</p>
+					<br>
+					<p>You can read more about our interview with him <a href="">here</a>.</p>
+					<br>
+
+					<p>He mentioned how biomass can be re-used as feed for livestock, fertilizers, or to produce energy, and based on his inputs we explored these possibilities during the course of our research.  However, we quickly learned that E. coli would not be a suitable feed for livestock based on our interaction with Dr. Reena Pandit. She mentioned that E.coli can only be used to a certain extent since it is a gut microbe. And she also pointed out the possible safety concerns given that E.coli may be pathogenic. Apart from that, she was skeptical about the nutritional benefit of using it as a feed as well.</p>
+					<br>
+					<p>You can read more about our interview with him <a href="">here</a>.</p>
+					<br>
+
+					<p>Dr. Anand Ghosalkar also suggested we look into strategies to immobilize the organisms in our co-culture to make it easier to separate the cyanobacterial biomass. However, he cautioned that inexpensive and effective ways of immobilization were difficult in a scaled-up bioreactor and that immobilization strategies had not been used on butanol-producing strains to date. We would need to factor in the immobilization of strains in our co-culture models, and how that would affect growth rates and product yields, in order to assess the feasibility and effectiveness of immobilization and do a cost-benefit analysis of the same.<sup><a href="#ref18">[18]</a></sup></p>
+					<br>
+
+					<p>S. elongatus UTEX 2973 has a much lower nitrogen-fixing efficiency than other known cyanobacterial strains such as Nostoc linckia, Anabaena variabilis, Aulosira fertilissima etc. These strains are much more efficient as biofertilizers and are widely being used in the industry, which potentially rules out the possibility of using UTEX 2973 as a biofertilizer.<sup><a href="#ref19">[19]</a></sup> There is also the issue of finding a local and inexpensive alternative usage for cyanobacterial biomass given that cyanobacteria is a relatively new chassis with respect to synthetic biology research in India.</p>
+					<a id="5"></a><br>
+					<!--  END OF REUSING BIOMASS -->
+
+
+
+					<!-- Increasing the carbon uptake rate of S elongatus UTEX 2973 -->
+					<h1>Increasing the carbon uptake rate of S elongatus UTEX 2973</h1>
+					<hr><br><br><br>
+
+					<p>During our meeting Dr Malathy V, we were advised to look into increasing the carbon uptake of our cyanobacteria as it would give our production process an edge over others if we can have a carbon negative process that sequesters carbon dioxide. Further, based on the co-culture modelling results from the drylab, we expect that increasing the carbon uptake rate would result in an increase in our butanol yield per gDW of co-culture as well. </p>
+					<br>
+				
+					<p>However there has not been much previous work on increasing carbon uptake in S elongatus UTEX 2973 as it is already a fast growing strain with a high photosynthetic efficiency and a carbon uptake rate double that of its close relative S elongatus PCC 7942 <sup><a href="#ref20">[20]</a></sup>. We instead looked into methods used in other cyanobacteria to increase carbon uptake that we could replicate in UTEX 2973. </p>
+					<br>
+
+					<p>The Calvin–Benson–Bassham(CBB) cycle is primarily responsible for carbon fixation in cyanobacteria.<sup><a href="#ref21">[21]</a></sup> RuBisCO, an important enzyme in the CBB cycle is known to be highly inefficient and one strategy to improve carbon uptake would be to improve the efficiency of the reaction catalyzed by RuBisCO in our strain of cyanobacteria, UTEX 297321. This can be done by :</p>
+					<ol class="a">
+						<li style="padding-left: 1em;">Re- engineering or directed evolution of the RuBisCO found in UTEX 2973</li>
+						<li style="padding-left: 1em;">Expressing a more efficient version of RubisCO from another cyanobacteria or other photosynthetic organisms such as plants</li>
+						<li style="padding-left: 1em;">Simply overexpressing or FLAG-tagging native RuBisCO in UTEX 2973<sup><a href="#ref22">[22]</a></sup></li>
+					</ol>
+					<br>
+
+					<p>Another promising method to increase carbon uptake is to overexpress inorganic carbon transporters. In Synechocystis sp. PCC 6803, native bicarbonate transporter BicA was overexpressed, leading to a doubling of the growth rate.<sup><a href="#ref23">[23]</a></sup> Cyanobacteria do have 4 other inorganic carbon transporters, some of which have higher CO2 affinity compared to BicA, however they are encoded by long operons of multiple genes, making it more challenging to clone.<sup><a href="#ref21">[21]</a></sup></p>
+					<br>
+
+					<p>To complement this, another method that worked in S. elongatus 7942 is to engineer the cyanobacteria to produce and secrete carbonic anhydrase from E. coli into the medium. Carbonic anhydrase would enhance the transformation of dissolved carbon dioxide in the medium to HCO3-, which increases its uptake.<sup><a href="#ref22">[22]</a></sup><sup>,</sup><sup><a href="#ref23">[23]</a></sup></p>
+					<br>
+
+					<p>Glyceraldehyde-3-phosphate dehydrogenase (GAPDH) is an enzyme involved in the process of 3-Phosphoglycerate (PGA) reduction as part of the CBB cycle. Another important step in the CBB cycle is Ribulose-1,5-bisphosphate (RuBP) regeneration. Though optimizing both these steps have shown importance for carbon assimilation in cyanobacteria, they affect it mainly in low light conditions or when the cyanobacteria are exposed to light/dark cycles.<sup><a href="#ref21">[21]</a></sup> As our co-culture will be growing in a bioreactor with continuous high light conditions, looking into these will not benefit us.</p>
+					<br>
+
+					<p>There are also studies that have explored engineering exogenous pathways to act as alternative carbon fixation cycles such as the reductive TCA cycle, or the reductive acetyl-CoA cycle or also exogenous pathways to alleviate the effects of the undesired photorespiration caused by RubisCO<sup><a href="#ref21">[21]</a></sup><sup>,</sup><sup><a href="#ref22">[22]</a></sup>. However, this is a challenging and unpredictable task and is still a nascent field. This definitely is not an option for us to look into.</p>
+					<a id="6"></a><br>
+					<!-- End of Increasing the carbon uptake rate of S elongatus UTEX 2973 -->
+					
+					
+					<!--Increasing the butanol tolerance of E. coli KJK01-->
+					<h1>Increasing the butanol tolerance of E. coli KJK01</h1>
+					<hr><br><br><br>
+
+					<p>On talking to Dr Anand Ghosalkarfrom Praj industries, our team learnt that enhancing butanol tolerance in E. coli would cause a significant impact on the current market and beat the current method of sustainable production. We, therefore, looked for possible over expressions and deletions that could cause increased butanol tolerance.</p>
+					<br>
+
+					<p>While going through research articles and papers we came across work done by Reyes et al., This study identified and experimentally verified 14 genes that decreased the inhibitory effect of n-butanol tolerance in E. coli. However, overexpression of entC, and feoA genes caused maximum impact by increasing butanol tolerance by 32.8&#1774.0% and 49.1&#1773.3%, respectively. </p>
+					<br>
+
+					<p>Additionally, the deletion of astE caused an increase in tolerance by 48.7±6.3%. Our Wet Lab team hopes to validate these results for our choice of strain and find the best suitable modifications.<sup><a href="#ref25">[25]</a></sup></p>
+					<br>
+
+					<p>We also found a paper by Boyarskiy et al<sup><a href="#ref26">[26]</a></sup> that designed an expression regulation system using a native E. coli stress promoter, P<sub>gntK</sub>, to provide negative feedback to regulate expression levels of a butanol efflux pump, AcrBv2. P<sub>gntK</sub>-driven AcrBv2 confers upon the E. coli increased tolerance to n-butanol and increased titers of n-butanol in production. The system is also responsive to stress from toxic overexpression of other membrane-associated proteins. Efflux pumps have the benefit of relieving product toxicity with minimal alteration to the host cell, while also providing a way to increase titers through removal of product inhibition and potentially aiding in product separation from biomass. This is something that we hope to look at as a part of our future work, as butanol tolerance is one of the limiting factors of our project while scaling up.</p>
+					<a id="7"></a><br><a id="ref*"></a><br><a id="ref1"></a><br><a id="ref2"></a><br><a id="ref3"></a>
+					<!-- End of Increasing the butanol tolerance of E. coli KJK01 -->
+
+
+					<!-- References -->
+					<hr>
+					<h3>References</h3>
+					<p style="padding-left: 1em;" id="ref4">* - Prime reference used throughout the article - Huang, Q., Jiang, F., Wang, L., & Yang, C. (2017). Design of photobioreactors for mass cultivation of photosynthetic organisms. Engineering, 3(3), 318-329.</p>
+					<ol class="a">
+						<li style="padding-left: 1em;" id="ref5">IPCC, 2018: Summary for Policymakers. In: Global warming of 1.5°C. An IPCC Special Report on the impacts of global warming of 1.5°C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty [V. Masson-Delmotte, P. Zhai, H. O. Pörtner, D. Roberts, J. Skea, P. R. Shukla, A. Pirani, W. Moufouma-Okia, C. Péan, R. Pidcock, S. Connors, J. B. R. Matthews, Y. Chen, X. Zhou, M. I. Gomis, E. Lonnoy, T. Maycock, M. Tignor, T. Waterfield (eds.)]. World Meteorological Organization, Geneva, Switzerland, 32 pp </li>
+						<li style="padding-left: 1em;" id="ref6">IPCC, 2021: Summary for Policymakers. In: Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [MassonDelmotte, V., P. Zhai, A. Pirani, S.L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (eds.)]. Cambridge University Press. In the Press. <a href="https://report.ipcc.ch/sr15/pdf/sr15_spm_final.pdf">https://report.ipcc.ch/sr15/pdf/sr15_spm_final.pdf</a></li>
+						<li style="padding-left: 1em;" id="ref7">Xing, Z., Zong, X., Pan, J., & Wang, L. (2013). On the engineering part of solar hydrogen production from water splitting: photoreactor design. Chemical Engineering Science, 104, 125-146. </li>
+						<li style="padding-left: 1em;" id="ref8">Quan, Y., Pehkonen, S. O., & Ray, M. B. (2004). Evaluation of three different lamp emission models using novel application of potassium ferrioxalate actinometry. Industrial & engineering chemistry research, 43(4), 948-955.</li>
+						<li style="padding-left: 1em;" id="ref9">Xue, S., Zhang, Q., Wu, X., Yan, C., & Cong, W. (2013). A novel photobioreactor structure using optical fibers as inner light source to fulfill flashing light effects of microalgae. Bioresource technology, 138, 141-147.</li>
+						<li style="padding-left: 1em;" id="ref10">Grobbelaar, J. U. (1991). The influence of light/dark cycles in mixed algal cultures on their productivity. Bioresource technology, 38(2-3), 189-194. </li>
+						<li style="padding-left: 1em;" id="ref11">Sforza, E., Simionato, D., Giacometti, G. M., Bertucco, A., & Morosinotto, T. (2012). Adjusted light and dark cycles can optimize photosynthetic efficiency in algae growing in photobioreactors. PloS one, 7(6), e38975. </li>
+						<li style="padding-left: 1em;" id="ref12">Vejrazka, C., Janssen, M., Streefland, M., & Wijffels, R. H. (2011). Photosynthetic efficiency of Chlamydomonas reinhardtii in flashing light. Biotechnology and bioengineering, 108(12), 2905-2913. </li>
+						<li style="padding-left: 1em;" id="ref13">Vejrazka, C., Streefland, M., Wijffels, R. H., & Janssen, M. (2015). The role of an electron pool in algal photosynthesis during sub-second light–dark cycling. Algal research, 12, 43-51. </li>
+						<li style="padding-left: 1em;" id="ref14">Vejrazka, C., Janssen, M., Streefland, M., & Wijffels, R. H. (2012). Photosynthetic efficiency of Chlamydomonas reinhardtii in attenuated, flashing light. Biotechnology and bioengineering, 109(10), 2567-2574. </li>
+						<li style="padding-left: 1em;" id="ref15">Wang, B., Lan, C. Q., & Horsman, M. (2012). Closed photobioreactors for production of microalgal biomasses. Biotechnology advances, 30(4), 904-912. </li>
+						<li style="padding-left: 1em;" id="ref16">Guo, X., Yao, L., & Huang, Q. (2015). Aeration and mass transfer optimization in a rectangular airlift loop photobioreactor for the production of microalgae. Bioresource technology, 190, 189-195. </li>
+						<li style="padding-left: 1em;" id="ref17">Junying, Z. H. U., Junfeng, R. O. N. G., & Baoning, Z. O. N. G. (2013). Factors in mass cultivation of microalgae for biodiesel. Chinese Journal of Catalysis, 34(1), 80-100. </li>
+						<li style="padding-left: 1em;" id="ref18">Choi, Sun Young; Sim, Sang Jun; Ko, Sung Cheon; Son, Jigyeong; Lee, Jeong Seop; Lee, Hyun Jeong; Chang, Won Seok; Woo, Han Min (2020). Scalable cultivation of engineered cyanobacteria for squalene production from industrial flue gas in a closed photobioreactor. Journal of Agricultural and Food Chemistry, (), acs.jafc.0c03133–. doi:10.1021/acs.jafc.0c03133 </li>
+						<li style="padding-left: 1em;" id="ref19"><a href="http://algaelabsystems.com/sensors/">http://algaelabsystems.com/sensors/</a></li>
+						<li style="padding-left: 1em;" id="ref20"><a href="https://sphera.com/glossary/what-is-a-life-cycle-assessment-lca/">https://sphera.com/glossary/what-is-a-life-cycle-assessment-lca/</a> </li>
+						<li style="padding-left: 1em;" id="ref21">Liu, F. (2014). N-Butanol Fermentation and Integrated Recovery Process: Adsorption, Gas Stripping and Pervaporation (Doctoral dissertation, The Ohio State University). Pg 53 </li>
+						<li style="padding-left: 1em;" id="ref22">Mahapatra, D. M., Chanakya, H. N., & Ramachandra, T. V. (2014). Bioremediation and lipid synthesis through mixotrophic algal consortia in municipal wastewater. Bioresource technology, 168, 142-150. </li>
+						<li style="padding-left: 1em;" id="ref23">Chittora, D., Meena, M., Barupal, T., Swapnil, P., & Sharma, K. (2020). Cyanobacteria as a source of biofertilizers for sustainable agriculture. Biochemistry and biophysics reports, 22, 100737. </li>
+						<li style="padding-left: 1em;" id="ref24">Mueller, T. J., Ungerer, J. L., Pakrasi, H. B., & Maranas, C. D. (2017). Identifying the metabolic differences of a fast-growth phenotype in Synechococcus UTEX 2973. Scientific reports, 7(1), 1-8. </li>
+						<li style="padding-left: 1em;" id="ref25">Liang, F., Lindberg, P., & Lindblad, P. (2018). Engineering photoautotrophic carbon fixation for enhanced growth and productivity. Sustainable Energy & Fuels, 2(12), 2583-2600.</li>
+						<li style="padding-left: 1em;" id="ref26">Zhang, A., Carroll, A. L., & Atsumi, S. (2017). Carbon recycling by cyanobacteria: improving CO2 fixation through chemical production. FEMS microbiology letters, 364(16).</li>
+						<li style="padding-left: 1em;" id="ref27">Kamennaya, N. A., Ahn, S., Park, H., Bartal, R., Sasaki, K. A., Holman, H. Y., & Jansson, C. (2015). Installing extra bicarbonate transporters in the cyanobacterium Synechocystis sp. PCC6803 enhances biomass production. Metabolic engineering, 29, 76-85.</li>
+						<li style="padding-left: 1em;">Chen, P. H., Liu, H. L., Chen, Y. J., Cheng, Y. H., Lin, W. L., Yeh, C. H., & Chang, C. H. (2012). Enhancing CO 2 bio-mitigation by genetic engineering of cyanobacteria. Energy & Environmental Science, 5(8), 8318-8327.</li>
+						<li style="padding-left: 1em;">Reyes, L. H., Almario, M. P., & Kao, K. C. (2011). Genomic library screens for genes involved in n-butanol tolerance in Escherichia coli. PloS one, 6(3), e17678. </li>
+						<li style="padding-left: 1em;">Sergey Boyarskiy, Stephanie Davis López, Niwen Kong, Danielle Tullman-Ercek,Transcriptional feedback regulation of efflux protein expression for increased tolerance to and production of n-butanol,Metabolic Engineering,Volume 33,2016,Pages 130-137,ISSN 1096-7176</li>
+						<li style="padding-left: 1em;">Oliver, J. W., & Atsumi, S. (2015). A carbon sink pathway increases carbon productivity in cyanobacteria. Metabolic engineering, 29, 106-112. </li>
+					</ol>
+					<br><br>
 				</div>
 			</div>
         </div>
