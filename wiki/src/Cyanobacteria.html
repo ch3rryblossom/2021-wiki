@@ -203,19 +203,19 @@
 
                     <!-- MODELLING CYANO FOR SUCROSE PRODUCTION -->
                     <h1>Modelling Cyanobacteria for optimum sucrose production</h1>
-                    <p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+                    <p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
                     <h2 class="h3"><strong>Assumptions:</strong></h2>
                     <ol class="a">
-                        <li style="padding-left:1em;">sps and spp genes are a part of the UTEX 2973 Genome even though they weren’t part of the model *insert spp and sps reaction equations* </li>
-                        <li style="padding-left:1em;">cscB exports are of constant efficiency </li>
+                        <li style="padding-left:1em;"><i>sps</i> and <i>spp</i> genes are a part of the UTEX 2973 Genome even though they weren’t part of the model </li>
+                        <li style="padding-left:1em;"><i>cscB</i> exports are of constant efficiency </li>
                         <li style="padding-left:1em;">FBA is a steady-state analysis therefore the growth phase cannot be simulated (check <a href="Coculture.html">co-culture </a>for more information on this) </li>
-                        <li style="padding-left:1em;">Coupling biomass and sucrose accumulation and restraining cscB export to less than 100% simulates salt stress </li>
+                        <li style="padding-left:1em;">Coupling biomass and sucrose accumulation and restraining <i>cscB</i> export to less than 100% simulates salt stress </li>
                     </ol>
                     <br>
                     <h2 class="h3"><strong>Results: </strong></h2>
                     <ul class="b">
-                        <li style="padding-left:1em;">Upon adding “SPP”, “SPS” and “cscB” and running FBA with an objective to maximise growth rate we obtained a maximum growth rate of <strong>0.3033 h-1</strong> and a sucrose production and transport flux of <strong>0</strong>. This value is very similar to the experimental growth rate of <strong>0.33 ± 0.05 h</strong> Abernathy et al.<a href="#ref2"><sup>2</sup></a> , which implies confidence in the model we’re using. </li>
-                        <li style="padding-left:1em;">For the following conditions upon performing MoMA for optimised sucrose production we obtained a growth rate of <strong>0.2012 h−1</strong>  and a sucrose output flux of <strong>0.3079 mmol/gDW/h</strong>. </li>
+                        <li style="padding-left:1em;">Upon adding “SPP”, “SPS” and “cscB” and running FBA with an objective to maximise growth rate we obtained a maximum growth rate of <strong>0.3033 h<sup>−1</sup></strong> and a sucrose production and transport flux of <strong>0</strong>. This value is very similar to the experimental growth rate of <strong>0.33 ± 0.05 h<sup>−1</sup></strong> Abernathy et al.<a href="#ref2"><sup>2</sup></a> , which implies confidence in the model we’re using. </li>
+                        <li style="padding-left:1em;">For the following conditions upon performing MoMA for optimised sucrose production we obtained a growth rate of <strong>0.2012 h<sup>−1</sup></strong>  and a sucrose output flux of <strong>0.3079 mmol/gDW/h</strong>. </li>
                         <ul class="d">
                             <li style="padding-left:1em;">Conditions:</li>
                                 <ul class="c">
