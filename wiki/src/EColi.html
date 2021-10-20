@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>E Coli</title>
+	<title><i>E. coli</i></title>
 	<link rel="stylesheet" href="css/igem-reset.css">
 	<link rel="stylesheet" href="css/SBcss/style.css">
    	<link rel="stylesheet" href="css/styleSB.css">
@@ -112,7 +112,7 @@
 			</a>
 			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
 			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
-			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="EColi.html"><i>E. coli</i></a></li>
 			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
 			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
 			</ul>
@@ -139,7 +139,7 @@
     <!-- TITLE SECTION -->
     
     <div class="section-1">
-        <h1><br><br><br><br>E Coli</h1>
+        <h1><br><br><br><br><i>E. coli</i></h1>
     </div>
         
     <!-- WAVES SPACER -->
@@ -163,7 +163,7 @@
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
                             <li class="nav-item"><a class="nav-link" href="#2">Model Construction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Modelling E coli for optimum Butanol production</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Modelling <i>E. coli</i> for optimum Butanol production</a></li>
 							<li class="nav-item"><a class="nav-link" href="#4">Results</a></li>
 							<li class="nav-item"><a class="nav-link" href="#5">OptKnock</a></li>
 							<li class="nav-item"><a class="nav-link" href="#6">FSEOF</a></li>
@@ -179,7 +179,7 @@
 					<!-- INTRODUCTION -->
 					<a id="1"></a>					
                     <h1>Introduction</h1>
-                    <p>The economic value of our co-culture heavily depends on butanol production by E. coli, making it important to model its growth and butanol production. We used Flux Balance Analysis (FBA) to study the growth dynamics and butanol production in E.coli. We also aimed to optimize the strain by identifying gene targets for overexpression and knockouts in order to improve butanol yields using OptKnock and FSEOF.</p>
+                    <p>The economic value of our co-culture depends heavily on butanol production by <i>E. coli</i>, making it important to model its growth and butanol production. We used Flux Balance Analysis (FBA) to study the growth dynamics and butanol production in <i>E.coli</i>. We also aimed to optimize the strain by identifying gene targets for overexpression and knockouts in order to improve butanol yields using OptKnock and FSEOF.</p>
 					<a id="2"></a>
 					<br>
 					<!-- END OF INTRODUCTION -->
@@ -189,9 +189,9 @@
 
 					<!-- MODEL CONSTRUCTION-->
                     <h1>Model Construction</h1>
-                    <p>We aimed to replicate the KJK01 butanol-producing strain in silico that we received from Dr. ‪Syed Shams Yazdani‬ at ICGEB, Delhi.</p>
-					<p>We used the iML1515 model from the BIGG database<a href="#ref1"><sup>1</sup></a> which is a metabolic flux model of E.coli MG1655 that contains 1516 genes. This model was the base strain that we further modified to replicate the KJK01 strain. All modifications were made using the COBRA Toolbox in MATLAB and all optimization problems were solved using the gurobi solver<a href="ref2"><sup>2</sup></a>.</p>
-                    <p>We first deleted the reactions corresponding to the following genes  that were deleted in the KJK01 strain<a href="#ref3"><sup>3</sup></a>, by setting the fluxes through those reactions to zero. The reactions corresponding to the genes in the model were taken from the EcoCyc database<a href="#ref4"><sup>4</sup></a>.</p>
+                    <p>We aimed to replicate <i>in silico</i> the KJK01 butanol-producing strain that we received from Dr. ‪Syed Shams Yazdani‬ at ICGEB, Delhi.</p>
+					<p>We used the iML1515 model from the BIGG database<a href="#ref1"><sup>1</sup></a> which is a metabolic flux model of <i>E.coli</i> MG1655 that contains 1516 genes. This model was the base strain that we further modified to replicate the KJK01 strain. All modifications were made using the COBRA Toolbox in MATLAB and all optimization problems were solved using the Gurobi solver<a href="ref2"><sup>2</sup></a>.</p>
+                    <p>We began by deleting the reactions corresponding to the following genes deleted in the KJK01 strain<a href="#ref3"><sup>3</sup></a>, - by setting the fluxes through those reactions to zero.</p>
 					<ul class="b">
 						<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=EG20173">pta</a> - codes for an enzyme that catalyses the conversion of acetyl-CoA to acetate. </li>
 						<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=EG10031">adhE</a> - codes for an enzyme that catalyses the conversion of acetyl-CoA to ethanol. </li>
@@ -199,7 +199,7 @@
 						<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=G592">ldhA</a> - codes for an enzyme that catalyses the conversion of pyruvate to lactate. </li>
 					</ul>
 					<p>These genes catalyze reactions that direct flux away from the butanol producing pathway and produce acetate,  ethanol, succinate and lactate respectively, which impact butanol yields. Thus their deletion will reroute flux back into the butanol producing pathway and increase yields.</p>
-					<p>We then added reactions catalyzed by the heterologous genes expressed in E.coli in order to construct a butanol-producing pathway in the KJK01 strain. We added the reactions using the MetaCyc<a href="#ref5"><sup>5</sup></a> database and the KEGG<a href="#ref6"><sup>6</sup></a><sup>,</sup><a href="#ref7"><sup>7</sup></a><sup>,</sup><a href="#ref8"><sup>8</sup></a> database.</p>
+					<p>We then added reactions catalyzed by the heterologous genes expressed in <i>E. coli</i> in order to construct a butanol-producing pathway in the KJK01 strain. We added the reactions using the MetaCyc<a href="#ref5"><sup>5</sup></a> database and the KEGG<a href="#ref6"><sup>6</sup></a><sup>,</sup><a href="#ref7"><sup>7</sup></a><sup>,</sup><a href="#ref8"><sup>8</sup></a> database.</p>
 					<p>These were reactions catalyzed by the following genes:</p>
 					<ul class="b">
 						<li style="padding-left: 1em;">From Clostridium acetobutylicum: </li>
@@ -208,16 +208,17 @@
 							<li style="padding-left: 1em;"><a href="https://metacyc.org/gene?orgid=META&id=CRTCLOS-MONOMER">crt</a> - codes for 3-hydroxy-butyryl-CoA dehydratase that converts (S)-3-hydroxybutanoyl-CoA to  crotonyl-CoA</li>
 							<li style="padding-left: 1em;"><a href="https://metacyc.org/gene?orgid=META&id=G-12174">adhE2</a> - codes for butyraldehyde/butanol dehydrogenase, which is a multifunctional enzyme with both alcohol dehydrogenase and acetaldehyde dehydrogenase activities.</li>
 						</ul>
+						<p>The reactions corresponding to the genes in the model were taken from the EcoCyc database<a href="#ref4"><sup>4</sup></a>.</p>
 						<li style="padding-left: 1em;">From Treponema denticola</li>
 						<ul class="c">
 							<li style="padding-left: 1em;"><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.3.1.38">ter</a> - codes for trans-enoyl-coenzyme A (CoA) reductase that converts acyl-CoA to trans-2,3-dehydroacyl-CoA</li>
 						</ul>
-						<li style="padding-left: 1em;">From E.coli</li>
+						<li style="padding-left: 1em;">From <i>E. coli</i></li>
 						<ul class="c">
 							<li style="padding-left: 1em;"><a href="https://www.ecocyc.org/gene?orgid=ECOLI&id=EG11672">atoB</a> - coding for acetyl-CoA acetyltransferase that converts acetyl-coA to acetoacetyl-coA.</li>
 						</ul>
 					</ul>
-					<p>We also added the reactions catalyzed by the cscA (invertase), cscB (sucrose permease), cscK (fructokinase) genes from E.coli W to allow the strain to be able to consume and metabolize sucrose<a>9</a>.</p>
+					<p>We also added the reactions catalyzed by the CscA (invertase), CscB (sucrose permease), CscK (fructokinase) genes from <i>E.coli</i> W to allow the strain to be able to consume and metabolize sucrose<a>9</a>.</p>
 					<p>However, we noticed that some of the heterologous gene reactions corresponding to the hbd, crt, cscK, and atoB genes already existed in the base iML1515 strain, and upon consultation with our advisors, we decided to consider the flux through those reactions as overexpressions of the corresponding genes.</p>
 					<a id="3"></a>
 					<br>
@@ -226,9 +227,9 @@
 
 
 					<!-- Modelling E Coli For Optimum Butanol -->
-					<h1>Modelling E coli for Optimum Butanol production</h1>
-					<p>After adding the relevant genes and reactions to our model, the next step was to enforce additional flux through the reactions corresponding to the genes hbd, crt, atoB and cscK. While these genes were added in KJK01, in a metabolic model, we do not add duplicate reactions but rather increase flux through the existing reaction. The issue here is that fluxes through individual reactions are usually not available in literature.</p>
-					<p>On suggestion from our PI, Indumathy, we used a computational way to create a model with suitable over expression levels. She suggested proceeding as follows:</p>
+					<h1>Modelling <i>E. coli</i> for Optimum Butanol production</h1>
+					<p>After adding the relevant genes and reactions to our model, the next step was to enforce additional flux through the reactions corresponding to the genes <i>hbd, crt, atoB</i> and <i>cscK</i>. While these genes were added in KJK01, in a metabolic model, we do not add duplicate reactions but rather increase flux through the existing reaction. The issue here is that fluxes through individual reactions are usually not available in literature.</p>
+					<p>On suggestion from our Ph.D mentor, Indumathi, we used a computational way to create a model with suitable over expression levels. She suggested proceeding as follows:</p>
 					<ol class="a">
 						<li style="padding-left: 1em;"> Add all the reactions necessary for butanol synthesis</li>
 						<li style="padding-left: 1em;">Make the appropriate deletions and set realistic bounds for our exchange reactions</li>
@@ -278,7 +279,7 @@
 
 							<div class="table1-row">
 								<div class="cell" data-title="Reaction in the model corresponding to the reaction of the inserted gene">
-									cscK
+									CSCK
 								</div>
 								<div class="cell" data-title="Base flux value">
 									20
@@ -323,7 +324,7 @@
 						<p style="padding-top: 15px;">Figure 1: A graph showing the overexpression of the genes and the growth and butanol production resulting from the overexpression. Note that we have plotted hbd as a representative of the hbd, crt_2 and atoB reactions since they all have the same fluxes through them. CRT 1 is not shown as it does not directly participate in butanol synthesis. The selected data point has been pointed out. The flux values are as follows; hbd - 14, crt_1 - 12, crt_2 - 14, atoB - 14, cscK - 20, biomass - 0.136 , butanol flux - 2.</p>
 					</div>
 					<br>
-					<p>Out of the 12,005 expected data points, only 133 showed viable growth. We observed that the fluxes through the reactions of the genes hbd, crt_2, and atoB were the same whenever growth was observed, which is to be expected given that these fractions follow one after the other in the metabolic pathway. We set a cutoff of 60% for the biomass reaction and selected the datapoint showing the highest butanol production. This lead to the following flux distribution for the reactions to be overexpressed:</p>
+					<p>Out of the 12,005 expected data points, only 133 showed viable growth. We observed that the fluxes through the reactions of the genes <i>hbd, crt-2</i>, and <i>atoB</i> were the same whenever growth was observed, which is to be expected given that these fractions follow one after the other in the metabolic pathway. We set a cutoff of 60% for the biomass reaction and selected the datapoint showing the highest butanol production. This lead to the following flux distribution for the reactions to be overexpressed:</p>
 					<!-- Table -->
 					<div class="table" style="padding-left: 5%;">
 						<!-- Headers -->
@@ -338,10 +339,10 @@
 								CRT 2
 							</div>
 							<div class="cell">
-								atoB
+								ATOB
 							</div>
 							<div class="cell">
-								cscK
+								CSCK
 							</div>
 						</div>
 						<!-- END OF HEADER -->
@@ -370,7 +371,7 @@
 					<br> <br>
 
 					<h2 class="h2">Flux Variability Analysis for Overexpression Targets</h2>
-					<p>We used flux variability analysis (FVA)<a href="#ref11"><sup>11</sup></a> to find the range of possible fluxes through the reactions of the crt_1, crt_2, atoB, cscK genes and the butanol exchange reaction.</p>
+					<p>We used flux variability analysis (FVA)<a href="#ref11"><sup>11</sup></a> to find the range of possible fluxes through the reactions of the <i>crt, atoB, cscK</i> genes and the butanol exchange reaction.</p>
 					<p>FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. The FVA for these reactions were performed in anaerobic conditions, when growth was set to 60% of its optimal value.</p>
 					<br>
 					<!-- Table -->
@@ -483,11 +484,11 @@
 						<li style="padding-left: 1em;"> Growth rate is higher under aerobic conditions for all sucrose uptake rates as compared to anaerobic conditions</li>
 					</ol>
 					<p><strong>Inferences</strong> </p>
-					<p style="padding-left: 12%;">Growth rate increases linearly with sucrose uptake rate as expected, since the carbon flux from sucrose metabolism will be directed to the biomass reaction, leading to an increase in growth rate. This confirms that the cscA, cscB, cscK reactions added to the model work in the metabolic network and the model can grow on sucrose as a carbon source.</p>
+					<p style="padding-left: 12%;">Growth rate increases linearly with sucrose uptake rate as expected, since the carbon flux from sucrose metabolism will be directed to the biomass reaction, leading to an increase in growth rate. This confirms that the CSCA, CSCB, CSCK reactions added to the model work in the metabolic network and the model <i>E. coli</i> can grow on sucrose as a carbon source.</p>
 					<br><br><br>
 
 					<h2 class="h3">Butanol Production vs Growth Rate</h2>
-					<p>The objective function was first set to maximize the growth rate of the model. Butanol production was then set as the objective function for different percentages of the optimal growth rate at a sucrose uptake rate of 10 mmol/gDW/h to obtain the theoretical maximum yield of butanol if E.coli were growing at X% of its optimal growth rate.</p>
+					<p>The objective function was first set to maximize the growth rate of the model. Butanol production was then set as the objective function for different percentages of the optimal growth rate at a sucrose uptake rate of 10 mmol/gDW/h to obtain the theoretical maximum yield of butanol if <i>E.coli</i> were growing at X% of its optimal growth rate.</p>
 					<div class="graph">
 						<img src="assets/Graphs/E coli graphs/maxbutvgrowth.jpg" alt="A graph showing the relation between butanol production and growth rate. Growth rate decreases linearly with increase in butanol production, for both aerobic and anaerobic systems. The line for aerobic system has a steeper decline than the anaerobic system" width=800>
 						<p>Figure 3: Relationship between maximum butanol production and growth rate.</p>
@@ -500,7 +501,7 @@
 						<li style="padding-left: 1em;"> Optimal growth rate (100% on the graph) leads to zero butanol production in both aerobic and anaerobic conditions</li>
 					</ol>
 					<p><strong>Inferences: </strong></p>
-					<p style="padding-left: 12%;"> If E.coli grows at its optimal growth rate, butanol production is zero as would be expected, since it is a secondary metabolite that takes carbon flux away from the growth and has no role in the physiology of the cell as it is a heterologous compound in the E.coli metabolic network</p>
+					<p style="padding-left: 12%;"> If <i>E. coli</i> grows at its optimal growth rate, butanol production is zero as would be expected, since it is a secondary metabolite that takes carbon flux away from the growth and has no role in the physiology of the cell as it is a heterologous compound in the <i>E. coli</i> metabolic network</p>
 					<p style="padding-left: 12%;">As the growth rate is decreased from its optimal value, the maximal theoretical yield of butanol increases implying that carbon flux is rerouted to the butanol producing pathway in the network.</p>
 					<p style="padding-left: 12%;"> This confirms that the butanol production pathway in the model is functional. Butanol production happens under anaerobic or microaerobic conditions<a href="#ref10"><sup>10</sup></a>. We wanted to thus test the effect of oxygenation on butanol production in the model, and as expected found that butanol production was significantly higher in anaerobic conditions as compared to aerobic conditions at all growth rates.</p>
 					<br><br><br>
@@ -517,7 +518,7 @@
 						<li style="padding-left: 1em;"> Maximum butanol production is higher for anaerobic conditions as compared to aerobic conditions at all sucrose uptake rates</li>
 					</ol>
 					<p><strong>Inferences</strong></p>
-					<p style="padding-left: 12%;">Increasing sucrose uptake rates lead to an increase in butanol production when butanol is the objective function. However we expect newly engineered strains that haven’t evolved for very long to optimize growth as an objective instead of butanol production. Thus there is a tradeoff between growth and butanol production, which we imitated by setting the growth rate of E.coli to 60% of the optimal growth rate and setting the objective function as butanol production. This shows that even at low growth rates, the extra flux from sucrose uptake can be used to increase butanol production over other metabolites in the model.</p>
+					<p style="padding-left: 12%;">Increasing sucrose uptake rates lead to an increase in butanol production when butanol is the objective function. However we expect newly engineered strains that haven’t evolved for very long to optimize growth as an objective instead of butanol production. Thus there is a tradeoff between growth and butanol production, which we imitated by setting the growth rate of <i>E.coli</i> to 60% of the optimal growth rate and setting the objective function as butanol production. This shows that even at low growth rates, the extra flux from sucrose uptake can be used to increase butanol production over other metabolites in the model.</p>
 					<br><br><br>
 
 					<h2 class="h3">Butanol Production vs Oxygen Uptake</h2>
@@ -566,7 +567,7 @@
 
 					<!-- OptKnock -->
 					<h1>OptKnock</h1>
-					<p>We ran OptKnock on our base model without the knockouts but with the overexpressions to identify the possible knockouts that could help increase butanol production. Our constructed model had 4 knockouts, so for OptKnock, we set the total number of knockouts to 5. Since the metabolic pathway for butanol production is linked to the TCA cycle in E. coli, we decided to look for knockouts in this cycle. Thus, we looked for knockouts in the glycolytic pathway plus the TCA cycle. We were hoping to find the same deletions as in our constructed model, plus some additional ones. We selected the top 5 knockouts. The results are summarized in the table below</p>
+					<p>We ran OptKnock on our base model without the knockouts but with the overexpressions to identify the possible knockouts that could help increase butanol production. Our constructed model had 4 knockouts, so for OptKnock, we set the total number of knockouts to 5. Since the metabolic pathway for butanol production is linked to the TCA cycle in <i>E. coli</i>, we decided to look for knockouts in this cycle. Thus, we looked for knockouts in the glycolytic pathway plus the TCA cycle. We were hoping to find the same deletions as in our constructed model, plus some additional ones. We selected the top 5 knockouts. The results are summarized in the table below</p>
 					<br>					
 					<!-- Table -->
 					<h1> Optknock Table </h1> 
