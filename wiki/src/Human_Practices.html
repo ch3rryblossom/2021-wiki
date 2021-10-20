@@ -20,10 +20,175 @@
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
     </style>
+    <style>
+	    .more{
+   display: none;
+}
+    </style>
+    <style>
+	.timeline {
+	  display: flex;
+	  margin: 0 auto;
+	  flex-wrap: wrap;
+	  flex-direction: column;
+	  max-width: 1000px;
+	  position: relative;
+	}
+	.timeline__content-title {
+	  font-weight: normal;
+	  font-size: 66px;
+	  margin: -10px 0 0 0;
+	  transition: 0.4s;
+	  padding: 0 10px;
+	  box-sizing: border-box;
+	  font-family: 'Oswald', sans-serif;
+	  color: #fff;
+	}
+	.timeline__content-desc {
+	  margin: 0;
+	  font-size: 15px;
+	  box-sizing: border-box;
+	  color: rgba(255, 255, 255, .7);
+	  font-family: 'Roboto Condensed', sans-serif;
+	  font-weight: normal;
+	  line-height: 25px;
+	}
+	.timeline:before {
+	  position: absolute;
+	  left: 50%;
+	  width: 2px;
+	  height: 100%;
+	  margin-left: -1px;
+	  content: "";
+	  background: rgba(255, 255, 255, .07);
+	}
+	@media only screen and (max-width: 767px) {
+	  .timeline:before {
+	    left: 40px;
+	  }
+	}
+	.timeline-item {
+	  padding: 40px 0;
+	  opacity: 1;
+	  filter: blur(0px);
+	  transition: 0.5s;
+	  box-sizing: border-box;
+	  width: calc(50% - 40px);
+	  display: flex;
+	  position: relative;
+	  transform: translateY(-80px);
+	}
+	.timeline-item:before {
+	  content: attr(data-text);
+	  letter-spacing: 3px;
+	  width: 100%;
+	  position: absolute;
+	  color: rgba(255, 255, 255, .5);
+	  font-size: 13px;
+	  font-family: 'Pathway Gothic One', sans-serif;
+	  border-left: 10px solid rgba(255, 255, 255, .5);
+	  top: 70%;
+	  margin-top: -5px;
+	  padding-left: 15px;
+	  opacity: 1;
+	  right: calc(-100% - 56px);
+	}
+	.timeline-item:nth-child(even) {
+	  align-self: flex-end;
+	}
+	.timeline-item:nth-child(even):before {
+	  right: auto;
+	  text-align: right;
+	  left: calc(-100% - 56px);
+	  padding-left: 0;
+	  border-left: none;
+	  border-right: 2px solid rgba(255, 255, 255, .5);
+	  padding-right: 15px;
+	}
+	.timeline-item--active {
+	  opacity: 1;
+	  transform: translateY(0);
+	  filter: blur(0px);
+	}
+	.timeline-item--active:before {
+	  top: 50%;
+	  transition: 0.3s all 0.2s;
+	  opacity: 1;
+	}
+	.timeline-item--active .timeline__content-title {
+	  margin: -50px 0 20px 0;
+	}
+	@media only screen and (max-width: 767px) {
+	  .timeline-item {
+	    align-self: baseline !important;
+	    width: 100%;
+	    padding: 0 30px 150px 80px;
+	  }
+	  .timeline-item:before {
+	    left: 10px !important;
+	    padding: 0 !important;
+	    top: 50px;
+	    text-align: center !important;
+	    width: 60px;
+	    border: none !important;
+	  }
+	  .timeline-item:last-child {
+	    padding-bottom: 40px;
+	  }
+	}
+	.timeline__img {
+	  max-width: 100%;
+	  box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+	}
+	.timeline-container {
+	  width: 100%;
+	  position: relative;
+	  padding: 80px 0;
+	  transition: 0.3s ease 0s;
+	  background-attachment: fixed;
+	  background-size: cover;
+	}
+	.timeline-container:before {
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	  content: "";
+	}
+	.timeline-header {
+	  width: 100%;
+	  text-align: center;
+	  margin-bottom: 80px;
+	  position: relative;
+	}
+	.timeline-header__title {
+	  color: #fff;
+	  font-size: 58px;
+	  font-family: 'Oswald', sans-serif;
+	  font-weight: normal;
+	  margin: 0;
+	}
+	.timeline-header__subtitle {
+	  color: rgba(255, 255, 255, .5);
+	  font-family: 'Pathway Gothic One', sans-serif;
+	  font-size: 16px;
+	  letter-spacing: 5px;
+	  margin: 10px 0 0 0;
+	  font-weight: normal;
+	}
+	.demo-footer {
+	  padding: 60px 0;
+	  text-align: center;
+	}
+	.demo-footer a {
+	  color: #999;
+	  display: inline-block;
+	  font-family: Cardo;
+	}
+	    </style>
 <body>
     
-
-	
 	<!-- NAVBAR SECTION -->
 
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
@@ -120,26 +285,25 @@
 		</div>
 	</nav>
 
-
-
     <!-- TITLE SECTION -->
     
     <div class="section-1">
         <h1><br><br><br><br>Human Practices</h1>
     </div>
         
-
-
     <!-- WAVES SPACER -->
 
     <div class="spacer layer1"></div>
-	<a id="top"></a>
-
-
 
     <!-- CONTENT + SIDENAV SECTION -->
-    <div style="background-color:#212529; display: flex; flex-direction: row; justify-content: center;"><img src="assets/HP/CONNECTIONS1.png" style="width:60vw"></div>
-    <br><div class="second-div container-fluid">
+
+<style>
+	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+	color: white !important;
+	font-family: ProximaNova !important;
+}
+</style>
+    <div class="second-div container-fluid">
         <div class="row">
             <!-- SIDENAV -->
             <div class="col-lg-3 col-md-3">
@@ -159,84 +323,592 @@
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-			<!-- <div id="container" style="height: 600px; margin:auto;
-			border: solid 3px #6e7491;
-			border-top-left-radius: 37px 140px;
-			border-top-right-radius: 23px 130px;
-			border-bottom-left-radius: 110px 19px;
-			border-bottom-right-radius: 120px 24px;"></div> -->
+
+			<div style="display: flex; flex-direction: row; justify-content: center;"><img src="assets/HP/CONNECTIONS1.png" style="width:60vw"></div>
                     <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+                    <hr><br><br>
 
-                    <figure>
+		    <p>No challenge possesses a greater threat to future generations than climate change. As every decade passes carbon dioxide emissions are rising at a staggering rate, affecting the quality of life of each individual on this planet. These emissions are a consequence of the burning of fossil fuels, which underpin the modern economy; they are thus frequently perceived as one of the costs of development. Such development, however, is a wolf in sheep&rsquo;s clothing - the impact of climate change would be particularly devastating in developing countries like India. We desperately need an alternative.</p>
+		    <p>The UN has proposed a bold new vision of <em>sustainable development</em> - an agenda to transform all nations of the world into peaceful, resilient and prosperous societies for all humans[1]. At the core of the agenda are the seventeen sustainable development goals, or SDGs, including the eradication of poverty and hunger, the assurance of good health and living, the guarantee of a clean environment, action against climate change, sustainable human settlements, and responsible consumption.&nbsp; We hope that our project may work in consonance with these goals and be a small step towards goals 7 (&ldquo;affordable and clean energy&rdquo;), 12 (&ldquo;Responsible Consumption and Production&rdquo;), and 13&nbsp; (&ldquo;climate action&rdquo;).</p>
+		    <p>How are we targeting these SDGs? A huge portion of carbon emissions is generated by the chemical and petrochemical industry - about 18% of direct industrial emissions!. Furthermore, effluents from petrochemical industries contain toxic products that accumulate in water bodies, causing great harm to aquatic and human life. A carbon-neutral route to produce these compounds would thus advance goals 12 and 13. In the case of products intended to be used as fuels - such as butanol - this would provide a form of clean energy as described in goal 7. The need for such an alternative gave birth to SynBactory&nbsp; - an application of synthetic biology and biomanufacturing to the greatest crisis of the age.[2]</p>
+		    <p>SynBactory was thus motivated by the need to find a fruitful solution to this pressing problem which is taking an immense toll on the environment. We consider this as our social and moral responsibility to contribute to solving this crisis, by using our knowledge of the emerging field of synthetic biology.</p>
+		    <p>Our most obvious choice of a sustainable solution was switching to biomass as a feedstock for chemical and petrochemical synthesis. However, ongoing through multiple research articles and studies, we realized that relying on food crops like corn and sugarcane for industrial-scale chemical synthesis is not a feasible alternative in a country like India, where 2.5 million people lose their lives every year due to starvation[3]. Moreover, plant cultivation is often resource-intensive, requiring a lot of land, water, and fertilizers, making sustainable production unfeasible and inaccessible to a large population.</p>
+		    <p>We came across photoautotrophic microbial biomass such as cyanobacteria as a promising solution for producing renewable feedstocks for chemical synthesis. However, due to the difficulty of genetic manipulation in such chasses, we decided to go for a co-culture with an industrially well-established organism, <em>Escherichia coli</em>.&nbsp; Ease of engineering in <em>E.coli</em> allows us to integrate any improvements we create in the existing manufacturing processes. Furthermore, implementing SynBactory would lead to a reduction in cost for some of these processes providing a feasible, accessible and modular sustainable production method.</p>
+		    <p>To improve our project further, we asked our stakeholders from academia and various industries for&nbsp; their advice on how to make our production process carbon negative or neutral. Dr Dwarak Ravikumar from the Center For Sustainable Systems at Michigan University advised our Dry Lab team to do a Life Cycle Assessment of our project; this would illustrate the carbon footprint and economic impact of our project in a real-world scenario and is a major step in our future plans. To take another step towards sustainability, Dr Santanu Dasgupta from Reliance Industries advised us to take a zero-waste approach and look into methods of biomass re-use. Our experts and mentors guided us throughout the process and helped us in re-shaping our idea in multiple ways. You can read more about it in our Integrated Human Practices section.</p>
+		    <p>The ongoing worsening of the climate crisis and the lack of knowledge amongst people makes public education and awareness around climate change all the more important and necessary.&nbsp;</p>
+		    <p>It is essential for the future residents of our planet to realise the threat climate change poses to lives and livelihoods. Thus reaching out to students was a primary focus of our Public Education and Engagement. We collaborated with various clubs at our institute to bring together young science enthusiasts and initiate discussions on climate change and the potential that synthetic biology holds to combat it.</p>
+		    <p>Aiming to reach as many people as possible we made our outreach initiatives diverse, accessible and inclusive throughout, tailoring the level and presentation of our content to different demographics to foster better engagement. We reached out to NGOs working with marginalized communities and students with special needs to create exclusive educational content and activities for them.</p>
 
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
-
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
-
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+		    <div class="timeline-container" id="timeline-1">
+			<div class="timeline-header">
+			  <h2 class="timeline-header__title">Our iHP Timeline</h2>
+			  <h3 class="timeline-header__subtitle">IISER Pune</h3>
+			</div>
+			<div class="timeline">
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Shireesh Srivastava</h3>
+						<p class="timeline__content-desc">Dr. Srivastava suggested we use Flux Balance Analysis, the core technique on which our entire modeling workflow is based. They also gave us insights into what parameters we should consider monitoring during the experimentation stage of our project. </p> <p><a href="#shir">Read More</a></p></div>
+					</div>
 				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Amrita Hazra</h3>
+						<p class="timeline__content-desc">Dr. Hazra pointed out to us that engineering the aerobic pathway for succinate production in <i>E. coli</i> may quickly become limiting for the co-culture. This motivated us to consider picking a different end product for our co-culture.</p> <p><a href="#amrit">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Shashi Kumar Rhode</h3>
+						<p class="timeline__content-desc">Dr. Rhode brought to our attention rather pressing issues we should take into consideration while picking our chassis. </p> <p><a href="#rhode">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Syed Shams Yazdani</h3>
+						<p class="timeline__content-desc">Their suggestions allowed us to look at end products we could produce from the anaerobic pathway. They also offered us their butanol-producing <i>E. coli</i> KJK01 strain. Their inputs lead to one of the most significant modifications to our project, which was to change our final compound from succinate to butanol. </p> <p><a href="#yazd">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Chhavi Mathur</h3>
+						<p class="timeline__content-desc">Dr. Mathur gave us some very valuable inputs on our survey questions and told us about the concept of having a ‘survey story’ in order to make it more concise. Based on their insights, we redesigned the survey to better suit our goals of making it informative and engaging.
+						</p> <p><a href="#mathur">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Annamma Odaneth</h3>
+						<p class="timeline__content-desc">Dr. Odaneth helped us gain insights into the butanol production pathway in <i>E. coli</i> and an analysis of the global butanol market.
+						</p> <p><a href="#oda">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Reena Pandit </h3>
+						<p class="timeline__content-desc">Dr. Pandit helped us decide between various directions our project could take. They cautioned us against encapsulating the cyanobacteria, advised us to model the effect of oxygen evolved by the cyanobacteria on <i>E. coli</i> and provided inputs on our future implementation.
+						</p> <p><a href="#reena">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Santanu Dasgupta </h3>
+						<p class="timeline__content-desc">Dr. Dasgupta helped us in understanding the aspects of our project we should focus on to make our project a well-rounded model for sustainable production.
+						</p> <p><a href="#das">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Richard Lobo, Dr. Ashok Dubey, and Dr. Malathy V</h3>
+						<p class="timeline__content-desc">They gave us pointers on making the project more cost and resource-effective and helped us gain clarity on what our project would look like when implemented in a scaled-up real-world setting. Dr. Ashok Dubey and Dr. Malathy V also gave us extremely useful experimental inputs to help troubleshoot our experiments and make them more efficient.
+						</p> <p><a href="#lobo">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Anand Ghosalkar </h3>
+						<p class="timeline__content-desc">Dr. Ghosalkar gave us valuable insights into the butanol production process in <i>E. coli</i>, the downstream processing of butanol as well as the global butanol market.</p> <p><a href="#ghosa">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Dwarak Ravikumar</h3>
+						<p class="timeline__content-desc">Dr. Ravikumar introduced us to Life Cycle Assessments (LCA), which we plan to use to model the carbon footprint of our project. They also gave us a few frameworks that run LCA as open-source software.</p> <p><a href="#dwa">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Ms. Manisha Kamal</h3>
+						<p class="timeline__content-desc">After the meeting with Ms. Kamal, we learned how to design and curate a teaching session module for visually impaired students by stimulating their senses of touch, smell, and hearing.
+						</p> <p><a href="#kamal">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Anil Zankar</h3>
+						<p class="timeline__content-desc">Dr.  Zankar helped us design the script for the silent film that we were developing as an outreach initiative for students with hearing disabilities. Based on their inputs, we improved our script for accessibility and effective communication.
+						</p> <p><a href="#zank">Read More</a></p></div>
+					</div>
+				</div>
+				<div class="timeline-item" data-text="">
+					<div class="timeline__content" style="display:flex; flex-direction: row; align-items: center;">
+						<div style="flex:1;"><img class="" width="100px" height="100px"
+							src="assets/pngs/avataaars.png" /></div><br><br><br>
+						<div style="flex:4;"><h3 class="timeline__content-title">Dr. Maziya Ibrahim</h3>
+						<p class="timeline__content-desc">Dr. Ibrahim gave us their inputs on our GitHub page on SteadyCom -- ‘SteadyCom Checklist’, and their opinions on the methods we used for the co-culture analysis.
+						</p> <p><a href="#ibra">Read More</a></p></div>
+					</div>
+				</div>
+			</div>
+			<br><br>
+		    		<!-- <p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+				    <div class="post">
+					<h1>Post title 1</h1>
+					Lorem ipsum dolor sit amet, ne sed idque quidam. Vim assum corpora an Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu
+					<span class="dots">...</span>
+					<span class="more">
+					      Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu, nam elit postea nusquam id.<br>
+					      insert pdf link here 
+					      insert pdf link here 
+					      <iframe src="assets/pdfs/..." height="500" width="500"></iframe><br>
+					</span>
+					<button class="read">read more</button>
+				     </div>
+				    
+					<br>
+                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
+		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+				    <p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
+				    <div class="post">
+					<h1>Post title 1</h1>
+					Lorem ipsum dolor sit amet, ne sed idque quidam. Vim assum corpora an Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu
+					<span class="dots">...</span>
+					<span class="more">
+					      Pro ut erat consetetur, vocent expetendis sit at. Posse populo no usu, nam elit postea nusquam id.
+					</span>
+					<button class="read">read more</button>
+				     </div>
+				
+				    <br> -->
+
+
+
+				     <style>
+					     h2 {
+						     text-decoration: underline;
+					     }
+				     </style>
+
+                    <h1 id="2">Meetings</h1>
+                    <hr><br>
+
+			<h2 id="shir">Dr. Shireesh Srivastava</h2><br>
+
+			<h3>Summary</h3>
+			<p>We met with Dr. Shireesh Srivatsava in the early stages of our project, when we were still researching possible methods to model our system. He suggested we use Flux Balance Analysis, the core technique on which our entire modeling workflow is based. He also gave us insights into what parameters we should consider monitoring during the experimentation stage of our project. </p>
+			<h3>Motivation behind meeting them</h3>
+			<p>We were still in the nascent stages of our research into the modeling techniques we might be able to use for our system, and culture conditions that we could take into account while modeling. We came across Flux Balance Analysis (FBA), however, we weren’t sure if that would be applicable to our project. We stumbled upon Dr. Shireesh’s research during our search for experts to meet with. His research interests, which were primarily metabolic engineering and biofuel production, overlapped significantly with our project objectives, and we decided to meet with him to get insights and feedback on our current methods, and what we should focus on moving forward in the project. </p>
+			<h3>Insights</h3>
+			<p>A major input that Dr. Srivatsava gave us was about the application of Flux Balance Analysis in our project, along with its derivatives. Based on his recommendation, we decided to use FBA to model the individual <i>S. elongatus</i> and <i>E. coli</i> strains, and dynamic FBA and SteadyCom to model the co-culture. <br><br>
+
+				<i>S. elongatus</i> does not have a verified Genome-Scale Metabolic Model. With Dr. Shireesh’s help we were able to receive the genome-scale metabolic model for <i>S. elongatus</i> UTEX 2973 from Dr. Costas Maranas, from Mueller et al., 2017. <br><br>
+				
+				We had to make some modifications to the model, which Dr. Srivatsava was kind enough to verify for us, with regards to its accuracy and usability. He asked us to check for duplicate reactions, make sure there are exchange fluxes that prohibit accumulations of metabolites, and facilitated the process of obtaining the latest model that Dr. Manaras’ lab was using. <br><br>
+				
+				
+				He also offered setup remote access for us, to the FBA framework that was used in his lab, and gave us contacts of his Ph.D. students who were immensely helpful in guiding us in the initial stages of our project. <br><br>
+				
+				He also suggested experiments we could conduct in order to measure crucial parameters that we could verify through modeling as well. He also gave us inputs on designing constructs and assays for the experimental side of our project.<br><br>
+				
+				He also cautioned us about the drawbacks of FBA, given that it was a steady-state model, as opposed to a dynamic model that might give us different results from what we observe in the lab since the cultures are not always in a steady state. 
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>We incorporated Dr. Shireesh’s insights into our FBA modeling, the results of which you can read about <a href="Model.html">here</a>. <br><br>
+
+				We also obtained our final genomic model for <i>S. elongatus</i> UTEX 2973 by using modifications he suggested to the model that we received from Dr. Costas Manaras’s lab.</p>
+			<h3>References</h3>
+			<p>
+				<ol>
+					<li style="padding-left:1em;padding-top: 0.3em;">Mueller, T. J., Ungerer, J. L., Pakrasi, H. B., & Maranas, C. D. (2017). Identifying the metabolic differences of a fast-growth phenotype in Synechococcus UTEX 2973. Scientific reports, 7(1), 1-8.</li>
+				</ol>
+			</p><br>
+			<h2 id="amrit">Dr. Amrita Hazra</h2><br>
+
+			<h3>Summary</h3>
+			<p>Dr. Amrita Hazra met with us when our project was still focused on producing succinate from <i>E. coli</i> in the co-culture. This meeting was crucial in many ways, and it was one of the first instances where we considered picking a different end product to produce from the <i>E. coli</i> strain.</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>The novelty of our project lies partly in the fact that the co-culture allows for a single-step, single-pot conversion of light and CO2 into industrially relevant compounds. We were seeking an expert who could guide us through the biology of co-cultures and their dynamics. Dr. Hazra, who is an Assistant Professor at our institute was the perfect person for this, given her experience and specialization in working with bacterial co-cultures, metabolic pathways, and nutrient exchange dynamics in co-cultures.</p>
+			<h3>Insights</h3>
+			<p>Dr. Hazra pointed to us that engineering the aerobic pathway for succinate production in <i>E. coli</i> may quickly become limiting for the co-culture since we would require an aeration setup which we would not be able to access in our lab. Furthermore, she reasoned that the succinate would accumulate in the medium and lower the pH. Since <i>S. elongatus</i> requires a pH of around 8 for optimal growth and for the activity of the cscB (sucrose permease transporter), this would require higher buffer concentrations, since the addition of bicarbonate ions as the CO2 source already contributes to lowering the pH.<br><br>
+
+				The succinate pathway also required 2 over-expressions and 4 gene knockouts, and Dr. Hazra warned us against modifying <i>E. coli</i> to such an extent since that would compete with the growth of the organism, and ultimately lower product yields and impact the stability of the co-culture.</p>
+			<h3>Incorporation into our project</h3>
+			<p>When we met Dr. Hazra, early on in April, India was in the midst of the devastating second wave of the COVID - 19 pandemic and we had no clarity on when we would be able to get access to the lab. Dr. Hazra pointed out that engineering <i>E. coli</i> to produce succinate would be extremely time-consuming considering that we might only get access to the lab for about a month or so, even with access to the Keio collection of single mutants of <i>E. coli</i> K12. In a team meeting after this meeting, we shortly shifted our end product to butanol, as Dr. Syed Shams Yazdani had generously agreed to send us a pre-engineered butanol producing strain of <i>E. coli</i>.</p>
+			<br>
+			<h2 id="rhode">Dr. Shashi Kumar Rhode</h2><br>
+
+			<h3>Summary</h3>
+			<p>Dr. Shashi Kumar Rhode told us to reconsider the heterotrophic chassis i.e <i>E. coli</i> for our project, recommending us to use yeast instead. </p>
+			<h3>Motivation behind meeting them</h3>
+			<p>We were in a very preliminary stage of our project and still wished to produce succinic acid in <i>E. coli</i>. We needed an expert in the field of metabolic engineering who could validate our project and give us an idea about the pros and cons of moving forward with it. We therefore decided to talk to Dr. Shashi Kumar Rhode from the International Centre for Genetic Engineering and Biotechnology (ICGEB), Delhi after being referred to him by Prof. Wangikar, from IIT Bombay. </p>
+			<h3>Insights</h3>
+			<p>Dr Rhode said that our project was a sound idea academically, but we might face problems while scaling it up because of the metabolic stress the succinate pathway might inflict on <i>E. coli</i>. We might not be able to meet commercial standards of succinate yield. He advised that we look at yeast as a chassis instead, as it often has higher end productivity in grams/litre/day than <i>E. coli</i> and is commonly used for industrial production. Additionally, yeast can naturally metabolise sucrose, while <i>E. coli</i> must be engineered to do the same. Yeast also has a more comparable doubling time to cyanobacteria than <i>E. coli</i>. </p>
+			<h3>Incorporation into our project</h3>
+			<p>At the time of this interview, we were inclined towards working with <i>E. coli</i> because it is easier to work with. Results from literature indicated that <i>E. coli</i> might benefit cyanobacteria growth in a co-culture by relieving oxidative stress by quenching reactive oxygen species.[1] Furthermore, we had also come reports of yeast being unable to survive in a co-culture with cyanobacteria in literature.[2]<br><br>
+
+				In another interview, Dr. Yazdani assured us that <i>E. coli</i> is a suitable heterotroph for a co-culture. Yeast only provides the added benefit that along with the metabolites it produces, its biomass is also useful in industry. <br><br>
+				
+				Later on, we discovered that Team Toulouse INSA UPS was designing a co-culture of cyanobacteria and yeast, and have since partnered with them. <br><br>
+				
+				We endeavour to co-culture cyanobacteria with multiple strains of <i>E. coli</i> and yeast under our entrepreneurial venture in order to make our project truly modular.</p>
+			<h3>References</h3>
+			<p>
+				<ol>
+					<li style="padding-left:1em;padding-top: 0.3em;">Zhang, L., Chen, L., Diao, J. et al. Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO2. Biotechnol Biofuels 13, 82 (2020). <a href="https://doi.org/10.1186/s13068-020-01720-0">https://doi.org/10.1186/s13068-020-01720-0</a></li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Hays, S.G., Yan, L.L.W., Silver, P.A. et al. Synthetic photosynthetic consortia define interactions leading to robustness and photoproduction. J Biol Eng 11, 4 (2017). <a href="https://doi.org/10.1186/s13036-017-0048-5 ">https://doi.org/10.1186/s13036-017-0048-5 </a></li>
+				</ol>
+			</p><br>
+			<h2 id="yazd">Dr. Syed Shams Yazdani</h2><br>
+
+			<h3>Summary</h3>
+			<p>We met with Dr. Yazdani when we were in the process of choosing an end product to produce from <i>E. coli</i> other than butanol. Based on Dr. Amrita Hazra’s inputs (whose interview you can read <a href="#amrit">here</a>) we began to reassess our decision to engineer <i>E. coli</i> to produce succinate. After multiple discussions with Dr. Yazdani, we finally decided to change the end product to be produced from <i>E. coli</i> to butanol.</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>Prof. Wangikar from IIT Bombay had recommended that we speak to Dr. Yazdani from ICGEB, New Delhi, considering their experience in biofuel production in <i>E. coli</i> from lignocellulosic waste. Dr. Yazdani’s research interests significantly overlapped with our project, and we anticipated that he might be able to help us choose between aerobic and anaerobic production processes, and narrow in on a final product. <br><br>
+
+				At that time we were planning to generate succinate through an aerobic production pathway, but Dr. Hazra had informed us that anaerobic fermentation methods generally produce greater metabolite yields. Dr. Hazra had also indicated that we might not have the time to perform all the modifications needed to produce succinate in <i>E. coli</i>. <br><br>
+				
+				Our team had previously met with Dr. Pramod Wangikar at IIT Bombay, as they were one of the few scientists in India who worked with cyanobacteria, who gave us Dr. Yazdani’s contact stating that the latter would be ideal to talk to given their work on biofuel production in <i>E. coli</i> using lignocellulosic biomass as feedstock. Their research interests significantly overlapped with our project and we chose to speak with them to gain possible insights into which compounds we could produce from E.coli, particularly using non-aerobic processes, based on the insights we had received from Dr. Amrita Hazra. Non-aerobic processes generally give higher metabolite yields as well since, during aerobic production, carbon flux is primarily directed toward the growth of <i>E. coli</i> as opposed to secondary metabolite production. <br><br>
+				</p>
+			<h3>Insights</h3>
+			<p>We initially reached out to Dr. Yazdani with a few questions via mail, and they were extremely helpful. They advised us to look into products like PHB or isoprenes which are produced slowly, in order to compensate for the difference in doubling times between <i>E. coli</i> and the cyanobacteria. <br><br>
+
+				They also suggested that our product must not interfere with cyanobacterial growth, hence an intracellular product like PHB or a gaseous product like isoprenes might be convenient. They warned us that contamination is a serious likelihood, since substantial titers may only be obtained from a long-lasting cultivation system of at least two weeks. <br><br>
+				
+				In our meeting with them, Dr. Yazdani confirmed that our system inherently cannot be anaerobic since cyanobacteria evolve oxygen. They also reiterated Dr. Hazra’s comments on how aerobic processes do result in lower metabolite yields as most carbon flux is primarily directed towards growth as opposed to secondary metabolite production, which is the case in anaerobic processes. <br><br>
+				
+				When we informed Dr. Yazdani about our plan to produce succinate aerobically, they said that we should keep in mind the redox balance (in terms of ATP, NADH, electrons, carbon) of the succinate producing pathway, as E.coli would favor the production of compounds that were redox balanced, which might affect succinate yields. <br><br>
+				
+				Outside of the binary of aerobic and anaerobic conditions, Dr. Yazdani enlightened us about the advantages of microaerobic conditions - where oxygen levels are below that of atmospheric levels. In such conditions, there is enough oxygen to enhance growth but not hinder the anaerobic pathways, which would be the most advantageous with respect to maximizing product titers. 
+				<br><br>
+				They suggested that we should look into how much oxygen <i>S. elongatus</i> would produce and whether that would create aerobic or microaerobic conditions. This meant that we could look at the anaerobic production of compounds if <i>S. elongatus</i> produces the right amount of oxygen to create microaerobic conditions. If <i>S. elongatus</i> produces excessive oxygen, we would have to look at ways of quenching the oxygen. <br><br>
+				
+				They also recommended that we have no more than 2 modifications for <i>S. elongatus</i> and 4 for <i>E. coli</i> given the timeline of the iGEM cycle and reduced access to the lab due to the devastating second wave of the COVID-19 pandemic in India. <br><br>
+				
+				Dr. Yazdani then informed us about the redox-balanced butanol-producing <i>E. coli</i> KJK01 strain made in their lab that produces equal amounts of butanol and ethanol, as well as significant amounts of pyruvate. Butanol is a compound of great commercial importance, serving as a drop-in fuel. They also offered to lend us the strain to use for our project. We are extremely grateful to them for providing us with the strain without which our project would not have been possible.<br><br>
+				
+				We also discussed the idea of bacterial encapsulation with them. They advised us against the strategy as we might lose out on the benefits that <i>E. coli</i> had on relieving the oxidative stress in <i>S. elongatus</i>. They advised us to try and match the doubling rates of the two organisms instead by playing with parameters like the temperature of the co-culture. <br><br>
+				
+				Lastly, we asked them for clarity about Dr. Shashi Kumar Rhode’s comment on using yeast over <i>E. coli</i> to increase our final yield. While accepting Dr. Rhode’s point as valid, he suggested that we could stick to <i>E. coli</i> for this project. The one added benefit yeast offered was that along with the metabolites it produced, its biomass was valuable to industry, and we could consider it for future work.  
+				<br><br>
+				Dr. Yazdani’s questions had more to do with our thought process behind picking this project idea and the co-culture concept. He asked us if the succinate pathway we had picked was redox balanced. He asked about the time we had in the lab before suggesting compounds we could try to produce, and based on his inputs we finally settled on butanol.
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>We used the butanol-producing KJK01 strain that he generously offered us. He also gave very valuable insights about various assays we could perform on the strain. We finally settled on butanol as the final product based on the pros and cons of the aerobic versus anaerobic production processes mentioned above, and also because we didn’t have time in the lab to engineer our <i>E. coli</i> from scratch, due to the devastating second wave of the pandemic that delayed our return to lab to mid-august, effectively leaving us with just two months of wet lab time.<br><br>
+
+				He was also always available by mail, answering all our questions regarding handling the strain as soon as he could. <br><br>
+				
+				His comments on microaerobic conditions being the most conducive conditions for maximal product titers matched our modeling results which showed that at aerobic conditions, butanol yield is predicted to be low, whereas, in completely anaerobic conditions, the growth rate of <i>E. coli</i> would be too low to sustain a steady state in the co-culture. However, we found that the oxygen produced by cyanobacteria is excess of what <i>E. coli</i> requires and facilitates aerobic conditions, which means oxygen needs to be extracted/leached out of the co-culture to increase yields. </p>
+			<br>
+			<h2 id="mathur">Dr. Chhavi Mathur</h2><br>
+
+			<h3>Summary</h3>
+			<p>We met with Dr. Chhavi Mathur, Program Manager at the Living Waters Museum to discuss the survey we had designed for high school students, in order to better understand their perceptions about climate change and synthetic biology. Dr. Mathur gave us some very valuable inputs on the survey questions and told us about the concept of having a ‘survey story’ in order to make it more concise. Based on her insights, we redesigned the survey to better suit our goals of making it informative and engaging.
+			</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>Before we met with Dr. Mathur, we had designed a preliminary survey with around 25 questions. However, we felt that the survey would be quite long and would make respondents lose interest, and we weren’t sure if the survey would be sufficient to achieve our goals. Given Dr. Mathur’s expertise in molecular biology, science communication and teaching, we felt their inputs would be highly valuable. We were also confused about the overall survey design and the structure of the questions, so as to not bias the respondents as they navigated the survey.</p>
+			<h3>Insights</h3>
+			<p>Dr. Mathur pointed to us the importance of understanding exactly what information we could infer from each question, and how we would make use of that information. This would help us keep the survey concise and informative. <br><br>
+
+				They also stressed the importance of having a ‘survey story’, or a logical flow to the questions so that the respondents are sufficiently engaged throughout, and are able to take back what they learned after completing the survey. Dr. Mathur also suggested that we look through the biology curriculum across high schools to better understand what concepts and terminology students would already be aware of.<br><br>
+				
+				She also had questions on our survey distribution and highlighted the possible constraints of conducting the survey online.
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>Based on inputs from Dr. Mathur, we redesigned the survey to incorporate a ‘survey story’ in the following structure:<br><br>
+
+				<b>Part 1</b> - Climate change, which would be about rising carbon dioxide levels, and what we can do about it.<br>
+				<b>Part 2</b> - Synthetic biology, Genetically Modified Organisms, and their usage.<br>
+				<b>Part 3</b> - Connecting the previous two parts with the specific example of our project SynBactory.<br><br>
+				
+				For each part, we jotted down the information we wanted to collect and then went through the school curriculum to understand what concepts and terminology we might need to introduce to the students, and then designed questions appropriately. Finally we structured the questions in a way such that terminology used in further questions could be introduced in previous ones. <br><br>
+				
+				We ran the restructured survey once again through Dr. Mathur to make sure that our ‘survey story’ was communicated and that the final survey would benefit both us and the respondents and we are very grateful to her for her valuable feedback.
+				</p>
+		
+			<br>
+			<h2 id="oda">Dr. Annamma Odaneth</h2><br>
+
+			<h3>Summary</h3>
+			<p>We spoke to Dr. Anamma Odaneth, Head of the Department of Biotechnology, ICT Mumbai, to gain insights into the butanol production pathway in <i>E. coli</i> and an analysis of the global butanol market.</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>Biofuel production in India is still a developing area of research with a limited number of researchers working on the subject, Dr. Anamma Odaneth being one of them. They work on biofuel production in both cyanobacteria and <i>E. coli</i> and were the ideal person to answer questions we had on butanol production in <i>E. coli</i>, butanol extraction methods, and butanol market analysis. </p>
+			<h3>Insights</h3>
+			<p>Dr. Odaneth explained that along with ensuring the sustainability of our idea, we also had to ensure that our attempt would be economically feasible and sufficiently facile to execute. <br><br>
+				They advised us to look at the co-culture as a single unit to estimate its economical viability - how much carbon dioxide does the co-culture consume? And consequently, how much butanol does it release? <br><br>
+				
+				Dr. Odaneth also advised us to conduct Minimum Inhibitory Concentration assays to find out how much butanol <i>E. coli</i> and <i>S. elongatus</i> can tolerate. Suspecting that the tolerance of both organisms to this compound to be low, Dr. Odaneth advised us to opt for a continuous extraction process, where butanol is continually extracted from the medium. One technique they asked us to look into was ‘pervaporation,’ a method of separating a liquid mixture by partial vaporization through a membrane.<br><br>
+				
+				Dr. Odaneth suggested it would be necessary to replenish the culture with fresh medium after the micronutrients get exhausted, as those would be the limiting factors for growth in both <i>S. elongatus</i> and <i>E. coli</i>, notwithstanding their respective carbon sources. <br><br>
+				
+				They also expressed concern at the difficulty of establishing a stable co-culture within the period of the iGEM cycle and advised us to first experiment with proxies for the co-culture: Grow <i>E. coli</i> in BG-11 + sucrose, then grow <i>E. coli</i> on the supernatant collected from the sucrose exporting strains of cyanobacteria. <br><br>
+				
+				She also suggested that we look into the carbon efficiency of our process to assess whether the process was truly carbon neutral or negative.<br><br>
+
+				Finally, having been the PI of the 2018 Ruia-Mumbai iGEM team, which had won the best human practises award, Dr. Odaneth had few suggestions for our human practices team:<br>
+
+				<ol type="a">
+					<li>Make your outreach initiatives as inclusive as you can.</li>
+					<li>First identify all possible stake-holders and then start writing to them.</li>
+					<li>Properly time your expert interactions and outreach activities throughout the iGEM cycle.</li>
+				</ol>
+
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>To validate the economic feasibility and ease of execution of our idea, our team aspires to do a Life Cycle Assessment of our project in the future. Our Dry Lab team took into account the proportion of  carbon dioxide consumed by the co-culture and the corresponding proportion of butanol released during their co-culture modeling as was suggested by Dr. Odanath.[5] The current values are however approximations and we need exact values of the parameters from wet lab. <br><br>
+
+				You can read more about our co-culture model <a href="Coculture.html">here</a>.<br><br>
+				
+				Based on Dr. Odaneth’s suggestion our wet lab team carried out a Minimum Inhibitory Concentration assay for <i>E. coli</i> to find out the amount of butanol our strain can tolerate.<br><br>
+				
+				You can read more about the assay <a href="Design.html">here</a>. We also aim to carry out a similar experiment for our cyanobacteria in the future.
+				<br><br>
+				Apart from this, we also looked into the methods for continuous extraction such as pervaporation[1] [2]. However, most of these methods are costly and appropriate parameters require a lot of intensive research, so we decided to work on extraction methods in the future, which you can read more about <a href="Implementation.html">here</a>.[3][4]<br><br>
+				
+				We also successfully carried out one of the co-culture proxy experiments suggested by Dr Odaneth by growing our <i>E. coli</i> in BG-11 and sucrose. You can read more about the experiment here.
+				</p>
+			<h3>References</h3>
+			<p>
+				<ol>
+					<li style="padding-left:1em;padding-top: 0.3em;">Azimi, H., Thibault, J., & Tezel, F. H. (2019). Separation of butanol using pervaporation: a review of mass transfer models. Journal of Fluid Flow, Heat and Mass Transfer (JFFHMT), 5(4), 53-82.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Gongping, L., Dan, H., Wang, W., Xiangli, F., & Wanqin, J. (2011). Pervaporation separation of butanol-water mixtures using polydimethylsiloxane/ceramic composite membrane. Chinese Journal of Chemical Engineering, 19(1), 40-44.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Chen, J., Razdan, N., Field, T., Liu, D. E., Wolski, P., Cao, X., ... & Radke, C. J. (2017). Recovery of dilute aqueous butanol by membrane vapor extraction with dodecane or mesitylene. Journal of Membrane Science, 528, 103-111.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Lindskog, E. K. (2018). The upstream process: principal modes of operation. In Biopharmaceutical processing (pp. 625-635). Elsevier.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Gottstein, W., Olivier, B. G., Bruggeman, F. J., & Teusink, B. (2016). Constraint-based stoichiometric modelling from single organisms to microbial communities. Journal of the Royal Society Interface, 13(124), 20160627.</li>
+				</ol>
+			</p><br>
+			<h2 id="reena">Dr. Reena Pandit</h2><br>
+
+			<h3>Summary</h3>
+			<p>Dr Reena Pandit (Associate professor at Institute of Chemical Technology, Mumbai) is an expert on biotechnology in cyanobacterial chasses and was very helpful when it came to the particulars of dealing with cyanobacteria. </p>
+			<h3>Motivation behind meeting them</h3>
+			<p>Finding an expert working on engineering in cyanobacteria was really crucial for us as we had no prior knowledge about the chassis and no one at our home institute works with cyanobacteria. We therefore contacted Dr. Anamma Odaneth from the Institute of Chemical Technology, Mumbai, who referred us to her colleague, Dr. Reena Pandit. Dr. Pandit’s works with algal biotechnology and is a part of the centre of energy biosciences at the department of biotechnology in ICT.</p>
+			<h3>Insights</h3>
+			<p>We were divided between encapsulating the <i>S. elongatus</i> cells in an alginate gel in the coculture (to divert carbon flux away from biomass into sucrose production) and growing a coculture in a homogeneous medium. The alginate encapsulation technique has been used effectively1 in a coculture of <i>S. elongatus</i> PCC 7942 cscB and Halomonas boliviensis, but Dr. Pandit cautioned against it, advising us that the cyanobacteria in the gel are unlikely to receive adequate light for their growth. The study we cite here[1] demonstrated via Transmission Electron Microscopy that the number of cells increased very slowly in the encapsulated scenario, and they used the amount of chlorophyll a (estimated via absorbance) to normalise the sucrose production. Dr Pandit warned us that this was not a good way of comparing the free-floating and encapsulated cultures, as the latter may produce higher amounts of chlorophyll a due to being light deprived, without an actual increase in photosynthesis rate.<br><br>
+
+				She was also interested in the dynamics of our coculture, and advised us to take into account in our modeling the impact of evolved O2 on the <i>E. coli</i>, as she feared the oxygen might prove toxic in excess.<br><br>
+				
+				Her advice on possible future implementations of our project was illuminating, but we are as yet a too early a stage to put it into practice. She recommended that we do experiments to examine the viability of our coculture under natural sunlight as our cyanobacteria are of a robust strain (growing well at 500 mol photons/m2/s)[2]. Further, the use of natural light would offset some costs, which is important as flue gases need to be cooled and purified to be used as a carbon dioxide source - an expensive process from start to finish. She also informed us that simple sewage water may not be nutritious enough for our cyanobacteria, implying a cost for the nutrients as well. Lastly, she recommended we look into membrane-based technologies for in situ concentration of carbon dioxide to feed our co-culture.</p>
+			<h3>Incorporation into our project</h3>
+			<p>On interaction with Dr. Pandit our team decided to rule out the possibility of encapsulating our cyanobacteria and focus on the possibility of doing it with E.coli. Keeping in mind Dr. Yazdani’s inputs regarding encapsulation in general- that it could interfere with the scavenging of reactive oxygen species by <i>E. coli</i> and thus impact the viability of our co-culture - we decided to avoid encapsulation altogether for the time being.<br><br>
+
+				While modelling the co-culture, our dry lab team found out that Dr Pandit’s concern about oxygen being toxic for e.coli was untrue. Our modeling revealed that the levels of  oxygen produced by our cyanobacteria are actually suitable for <i>E. coli</i> growth, with higher amounts leading to higher growth rates. </p>
+			<h3>References</h3>
+			<p>
+				<ol>
+					<li style="padding-left:1em;padding-top: 0.3em;">Taylor L. Weiss, Eric J. Young, Daniel C. Ducat, A synthetic, light-driven consortium of cyanobacteria and heterotrophic bacteria enables stable polyhydroxybutyrate production, Metabolic Engineering, Volume 44, 2017, Pages 236-245, SSN 1096-7176
+						<a href="https://doi.org/10.1016/j.ymben.2017.10.009">https://doi.org/10.1016/j.ymben.2017.10.009</a></li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Yu, J., Liberton, M., Cliften, P. et al. Synechococcus elongatus UTEX 2973, a fast growing cyanobacterial chassis for biosynthesis using light and CO2. Sci Rep 5, 8132 (2015) <a href="https://doi.org/10.1038/srep08132">https://doi.org/10.1038/srep08132</a></li>
+				</ol>
+			</p><br>
+			<h2 id="das"></h2>Dr. Santanu Dasgupta<br>
+
+			<h3>Summary</h3>
+			<p>We gained valuable insights based on our meeting with Dr. Santanu Dasgupta from Reliance Industries Ltd. We focused primarily on the future implementation of our project and what aspects of the project we should focus on to make our project a well-rounded model for sustainable production.</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>Dr. Santanu Dasgupta has over 30 years of experience in the biotechnology industry and is the Senior Vice President at Reliance Industries Ltd, heading the Research and Development division with a focus on biofuel production, nutrition, and biomaterials from a synthetic biology perspective. They were thus the ideal person to talk to from an industrial perspective for our project.</p>
+			<h3>Insights</h3>
+			<p>We weren’t sure about choosing constitutive versus inducible promoters for engineering the metabolic pathways of both our organisms and Dr. Dasgupta suggested we use inducible promoters for experiments as that would allow a great degree of tunability and control. However, at an industrial scale, the cost of inducers quickly becomes prohibitive and constitutive promoters would be preferred.<br><br>
+
+				Dr. Dasgupta also suggested we take a zero-waste approach to make our process more sustainable and advised us to look into remediation techniques for biomass and look into the possibilities of using biomass as feed for livestock, fertilizers, or as an energy source.<br><br>
+				
+				He also told us about the various considerations at different stages of scaling up our project, pre-pilot, pilot, and commercial scale.<br><br>
+				
+				We also discussed the pros and cons of using artificial versus natural light sources in the photobioreactor that we ultimately aim to build for the co-culture system.<br><br>
+				
+				Dr. Dasgupta pointed out that artificial light would work for small-scale experimental setups but it might not be the best choice from an economics and energy perspective. However, with natural light for open reactors, we would need to consider the risk of contamination as well.
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>We quickly learned that <i>E. coli</i> would not be a suitable feed for livestock based on our interaction with Dr. Reena Pandit. She mentioned that E.coli can only be used to a certain extent since it is a gut microbe. And she also pointed out the possible safety concerns given that E.coli may be pathogenic. Apart from that, she was skeptical about the nutritional benefit of using it as a feed as well.<br><br>
+
+				<i>S. elongatus</i> UTEX 2973 has a much lower nitrogen-fixing efficiency than other known cyanobacterial strains such as Nostoc linckia, Anabaena variabilis, Aulosira fertilissima etc. These strains are much more efficient as biofertilizers and are widely being used in the industry, which potentially rules out the possibility of using UTEX 2973 as a biofertilizer1. There is also the issue of finding a local and inexpensive alternative usage for cyanobacterial biomass given that cyanobacteria are a relatively new chassis with respect to synthetic biology research in India.<br><br>
+				
+				We would thus need to look into alternative sources of biomass remediation.<br><br>
+				
+				
+				Based on Dr. Santanu’s suggestion we decided to use artificial lights for our lab experiments and came up with possible ideas for our photobioreactor setup as a part of proposed implementation that you can read more about <a href="Implementation.html">here</a>.</p>
+			<h3>References</h3>
+			<p>
+				<ol>
+					<li style="padding-left:1em;padding-top: 0.3em;">Chittora, D., Meena, M., Barupal, T., Swapnil, P., & Sharma, K. (2020). Cyanobacteria as a source of biofertilizers for sustainable agriculture. Biochemistry and biophysics reports, 22, 100737.</li>
+				</ol>
+			</p><br>
+			<h2 id="lobo">Dr. Richard Lobo, Dr. Ashok Dubey, and Dr. Malathy V</h2><br>
+
+			<h3>Summary</h3>
+			<p>Dr. Richard Lobo, Dr. Ashok Dubey, and Dr. Malathy V gave us feedback on our project from an industry perspective. They gave us pointers on making the project more cost and resource-effective and helped us gain clarity on what our project would look like when implemented in a scaled-up real-world setting.<br><br>
+
+				Dr. Ashok Dubey and Dr. Malathy V also gave us extremely useful experimental inputs
+				to help troubleshoot our experiments and make them more efficient.
+				</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>Given their expertise in the industrial sector, all three of them were ideal to talk to about the proposed implementation and scaling up of our project. We had questions regarding the appeal of our project outside of an academic setting and wanted inputs on developing it with the end goal of translating it into the real world.</p>
+			<h3>Insights</h3>
+			<p>Dr. Dube pointed out the possibility that <i>E. coli</i> may not consume the sucrose secreted by <i>S. elongatus</i> when directly co-cultured, and may need to first be acclimated to a medium containing sucrose as a sole carbon source. <br><br>
+
+				Dr. Lobo and Dr. Dube strongly advised us to look into the purity standards of butanol and make sure that we minimize waste as much as possible since that would also make the process more cost-effective, as waste disposal would not be a significant issue. They also suggested that we should design the process such that even waste effluents should be valuable and suggested finding uses for cyanobacterial and <i>E. coli</i> biomass.<br><br>
+				
+				Dr. Malathy suggested looking into ways to increase the CO2 uptake efficiency of <i>S. elongatus</i> which would be particularly industrially appealing since greater carbon sequestration capabilities would give our process an edge over current production apart from maximizing butanol yields. Additionally, Dr. Malathy brought up the prospect of bacterial immobilization, arguing that it might help with ease of product extraction, and biomass recovery (to generate value from waste). She advised us not to opt for alginate gel-based encapsulation, as it must be imported and would be expensive. <br><br>
+				
+				
+				Dr. Dube also validated our project from a safety perspective and did not have concerns in that regard.
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>Based on Dr. Dube’s inputs, we first decided to acclimate <i>E. coli</i> to the sucrose concentration we expected there to be in the co-culture, using BG-11 media (the media that <i>S. elongatus</i> requires to grow). Once acclimated, we would transfer <i>E. coli</i> to the co-culture setup.<br><br>
+
+				Dr. Malathy’s inputs rekindled our interest in immobilizing/encapsulating our bacteria after we were advised against pursuing the same by Dr. Yazdani and Dr. Pandit. We began looking into the benefits of immobilization and possible techniques of carrying out the same. However, we are yet to find a cost-effective way of encapsulation and we will look into it as a part of our future work. <br><br>
+				
+				We also researched ways to increase the CO2 uptake efficiency of <i>S. elongatus</i> as a part of our proposed implementation, such as overexpressing native or non-native bicarbonate transporters. Our modeling results also predicted that increasing CO2 uptake rates would also increase butanol yields, making this a promising target to focus on. We also looked into ways of re-using the biomass that would result from our process.<br><br>
+				
+				You can read more about this on our proposed implementation page <a href="Implementation.html">here</a> and our co-culture modeling page <a href="Coculture.html">here</a>.</p>
+			<br>
+			<h2 id="ghosa">Dr. Anand Ghosalkar</h2><br>
+
+			<h3>Summary</h3>
+			<p>We greatly benefited from our interaction with Dr. Anand Ghosalkar, Associate Principal Technologist at Praj Industries Ltd. Dr. Ghosalkar works on second-generation Biofuels and Biorefinery chemicals and bioengineering downstream systems like <i>E. coli</i> and yeast. He gave us valuable insights into the butanol production process in <i>E. coli</i>, the downstream processing of butanol as well as the global butanol market.</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>In order to assess how promising a sustainable alternative our project would be for current butanol production methods, it was essential to meet with an expert working with the downstream processing of biofuels and who were familiar with the industrial production of these chemicals. We thus decided to meet with Dr. Anand Ghosalkar to gain their feedback on the validity of our project and how it compares to the current market production.</p>
+			<h3>Insights</h3>
+			<p>We started off by asking him about the current need for butanol production in industry, to which he said that n-butanol has a higher energy density when compared to ethanol and other biofuels, and Praj Industries Ltd. itself was looking into a strain of yeast that could produce the compound. He also pointed out that the most commonly used chassis for butanol production that he had come across in industry was <i>Clostridium</i>, and he hadn’t heard of using <i>E. coli</i> in a co-culture for the same. <i>Clostridium</i> has a butanol tolerance of up to 2-3%, and Dr. Ghosalkar said that increasing the tolerance of <i>E. coli</i> to butanol would be a significant way to beat any competition in the market. <br><br>
+
+				Another important consideration in the industrial production of chemicals is bioreactor design to most efficiently scale a bioprocess. Dr. Ghosalkar suggested we look at tubular bioreactors, as they are most commonly used with algae. Their capacity however is limited to 1000 cubic meters, while <i>E. coli</i> use much larger fermenters which might impact the scalability of our system. He suggested we contact Jule Biotech, a company that deals with the cultivation of cyanobacteria and microalgae in huge ponds. When asked about how we could extract butanol and ethanol from the medium (the <i>E. coli</i> KJK01 strain has been shown to produce equal amounts of both[1]), he suggested that we could use distillation, or extractive fermentation provided we have a biocompatible solvent for the same.<br><br>
+				
+				<i>E. coli</i> and <i>S. elongatus</i> have vastly different doubling times. In order to make sure they grow at comparable rates, we were considering immobilizing. Dr. Ghosalkar commented that the idea had been around for a rather long time but was yet to be utilized effectively and it would also pose a challenge to the scalability of our project. He also pointed out that immobilized systems have not been attempted for butanol production, which would be another challenge.<br><br>
+				
+				Another really important factor to consider when scaling up, is the source of CO2 for our cyanobacteria. Dr. Ghosalkar offered us a rather invaluable piece of advice for our proposed implementation and mentioned that ethanol plants are the cleanest source of CO2 we could find, and it would be a great idea to establish our plant in conjunction with an ethanol plant.
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>Dr Ghosalkar’s inputs were very important for the proposed implementation aspect of our project.<br><br>
+
+				Even though <i>Clostridium</i> is a commonly used chassis for butanol production, it is far less amenable to genetic manipulation than <i>E. coli</i>, making the production process more costly. However, as Dr Ghosalkar suggested, enhancing butanol tolerance in <i>E. coli</i> would make a significant impact on the current market.<br><br>
+				
+				Our team looked into methods of increasing butanol tolerance and came across literature on creating a tunable promoter system to control a butanol transporter in a way that ensures the maximal extraction of butanol possible without stressing the cell membrane[2]. We also found some over-expressions and knockouts we could do that could enhance butanol tolerance in <i>E. coli</i>[3]. We plan to experimentally test which of these methods would be most effective for increasing butanol tolerance.<br><br>
+				
+				As a part of our proposed implementation, we also wanted to look into a cheaper and more efficient method for immobilization as it would not only solve the issue related to the differences in doubling times of the two organisms and would also be useful in easily re-using the cyanobacterial biomass in our culture[4],[5],[6].<br><br>
+				
+				Based on Dr. Ghosalkar’s inputs about establishing our set-up in conjunction with an ethanol plant, we plan to perform a Life Cycle Assessment to assess the appropriate geographic locations for our setup.
+				</p>
+			<h3>References</h3>
+			<p>
+				<ol>
+					<li style="padding-left:1em;padding-top: 0.3em;">Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Chin, W. C., Lin, K. H., Liu, C. C., Tsuge, K., & Huang, C. C. (2017). Improved n-butanol production via co-expression of membrane-targeted tilapia metallothionein and the clostridial metabolic pathway in Escherichia coli. BMC biotechnology, 17(1), 1-14.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">He, X., Xue, T., Ma, Y., Zhang, J., Wang, Z., Hong, J., ... & Zhang, M. (2019). Identification of functional butanol-tolerant genes from Escherichia coli mutants derived from error-prone PCR-based whole-genome shuffling. Biotechnology for biofuels, 12(1), 1-14.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Yoshimoto, S., Ohara, Y., Nakatani, H., & Hori, K. (2017). Reversible bacterial immobilization based on the salt-dependent adhesion of the bacterial nanofiber protein AtaA. Microbial cell factories, 16(1), 1-11.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Suo, Z., Avci, R., Yang, X., & Pascual, D. W. (2008). Efficient immobilization and patterning of live bacterial cells. Langmuir, 24(8), 4161-4167.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Hyde, F. W., Hunt, G. R., & Errede, L. A. (1991). Immobilization of bacteria and Saccharomyces cerevisiae in poly (tetrafluoroethylene) membranes. Applied and environmental microbiology, 57(1), 219-222.</li>
+				</ol>
+			</p><br>
+			<h2 id="dwa">Dr. Dwarak Ravikumar</h2><br>
+
+			<h3>Summary</h3>
+			<p>We met with Dr. Dwarak Ravikumar towards the end of our dry lab phase when we were interested to learn more about analyzing the sustainability and environmental impact of our project. Dr. Ravikumar introduced us to Life Cycle Assessments (LCA), a strategy to analyze the complete environmental impact of a commercial product or service through its entire life cycle. </p>
+			<h3>Motivation behind meeting them</h3>
+			<p>We wanted our project to be carbon negative, or at least carbon neutral, but we were completely unaware as to how to go about modelling the carbon footprint of our system.. We were referred to Dr. Ravikumar, by a climate scientist at our institute, Dr. Joy Merwin Monteiro.<br><br>
+
+				Dr. Dwarak Ravikumar works in the Center For Sustainable Systems as a post-doctoral research fellow. They are currently investigating the environmental trade-offs in a circular economy and evaluating the feasibility of utilizing captured carbon to manufacture products in the chemical and construction sectors. </p>
+			<h3>Insights</h3>
+			<p>The main takeaway from our meeting was that an LCA is an absolute must for us to validate the sustainability and environmental impact of our project. However, Dr, Ravikumar warned us the such an analysis should be done in an extensive manner, which will be time-consuming. They introduced us to some easy-to-use software tools for LCA like openLCA, SimaPro, and GREET.<br><br>
+
+				Dr. Ravikumar encouraged us to definitely perform such an analysis at some point in the future, even if we cannot accommodate it within the iGEM cycle. They suggested we not only look into the carbon neutrality of our project but also into land and water use for a large-scale photobioreactor setup. They also advised us to prioritize the life cycle assessment of our production process over an economic analysis of the production process. <br><br>
+				
+				Dr. Ravikumar gave us an important suggestion: instead of using flue gas, which might contain toxic pollutants that might negatively affect the co-culture, we could opt to source our carbon dioxide from cleaner emissions, such as those from ethanol plants.  <br><br>
+				
+				Finally, they advised us to avoid certain organic solvents for our extraction process as they are often polluting and harmful to the environment
+				</p>
+			<h3>Questions they asked</h3>
+			<p>Dr. Ravikumar was curious about the land requirements of a potential scaled-up photobioreactor. If the photobioreactor is powered by sunlight, it would put a cap on the height of our setup. Thus, to obtain higher culture volumes, we would have to expand horizontally, demanding more land. However, the use of artificial light would allow us to use less land but would drive up energy and monetary costs. </p>
+			<h3>How we solved them/how did it help us?</h3>
+			<p>Dr. Ravikumar motivated us to think more critically about the light, land, and carbon dioxide requirements of a large-scale photobioreactor. Due to time constraints, we have not been able to conduct an LCA for our production process, but we are determined to pursue it as a part of our proposed implementation. It is our core value to ensure the sustainability of our manufacturing process, and an LCA is a crucial step in validating the same. <br><br>
+
+				Fortunately for us, many of the parameters we would need to look into for an LCA would also factor into a potential economic model, allowing us to develop them concurrently.
+				</p>
+			<h3>References</h3>
+			<p>
+				<ol>
+					<li style="padding-left:1em;padding-top: 0.3em;"><a href=""></a></li>
+				</ol>
+			</p><br>
+			<h2 id="kamal">Ms. Manisha Kamal</h2><br>
+
+			<h3>Summary</h3>
+			<p>We met with Ms. Manisha about the ‘Bhoomi’ Audio webinar that we organized for visually impaired students to teach them about climate change and its impacts, and synthetic biology and its applications. We learned how to design and curate a teaching session module for visually impaired students by stimulating their senses of touch, smell and hearing in this meeting.<br><br>
+
+				You can read more about the webinar <a href="Communication.html">here</a>.</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>To make our outreach initiatives more accessible, we organised an audio webinar on combating climate change using synthetic biology for visually impaired high school students. Since this webinar was meant for partially and completely blind students, planning an appropriate script was of utmost importance. We wanted to meet with someone having expertise in educating students with special needs who could guide us through the process of designing the webinar.</p>
+			<h3>Insights</h3>
+			<p>Ms. Manisha pointed out that since these students couldn’t use their visual senses to perceive information, we should design the webinar so as to speak to the students’ other senses. For example, if one wanted to explain the importance of trees, one could start by asking them how they feel standing under a tree in scorching heat and then ask how they'd feel if the trees vanished. She also advised us to add a fun, engaging element to our webinar such as a song or a poem. We also learned about special types of equipment that existed to teach molecular biology and genetics concepts to visually impaired students from her. She also gave us an idea of the prior knowledge the students may have based on their usage of the equipment, using which we could design our webinar script at an appropriate technical level.</p>
+			<h3>Incorporation into our project</h3>
+			<p>Based on Ms. Manisha's inputs, we made an hour-long session module for grades students of 8th to 12th. We ran the script through her, and incorporated her feedback to make our module as scientifically sound and accessible as possible.<br>
+				You can read more about the webinar <a href="Communication.html">here</a>.
+			</p>
+			<br>
+			<h2 id="zank">Dr. Anil Zankar</h2><br>
+
+			<h3>Summary</h3>
+			<p>Our meeting with Dr. Anil Zankar helped us design the script for the silent film that we were developing as an outreach initiative for students with hearing disabilities. We improved our script for accessibility and effective communication.</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>In order to make our outreach as inclusive and accessible as possible, one of our initiatives was to make a silent film for students with hearing disabilities, and we collaborated with our institute’s Drama Club for this production. While we had a script and some initial scenes, we needed expert advice on the comprehensibility of the script. We thus approached Dr. Anil Zankar, a visiting scholar at our institute. He is an alumnus of the Film and Television Institute of India (FTII), Pune, and a recipient of two national awards. Given his expertise in filmmaking and scriptwriting, we felt he would be the ideal person to scrutinize our script and help us fulfill the impact we intended the film to have.</p>
+			<h3>Insights</h3>
+			<p>Dr. Zankar gave us some interesting inputs on the format and the presentation of our script. A significant component of our script was puppetry, which we had planned to animate. He suggested that we should consider using shadow spots in place of puppets, given our time constraints. However, this would take away the color out of the film, something we couldn’t afford to lose given that we were already working with the constraints of no audio. <br><br>
+
+
+				Based on this, he then suggested we use stop motion animation, though it would require a more elaborate setup, which would be difficult to execute given that our team members were in different parts of the country due to the lockdown imposed as a result of the second wave of the COVID-19 pandemic in India. He also talked to us about some general concepts about camera placement, shooting methods, etc.<br><br>
+				
+				He also offered pointers on handling the logistics of filmmaking and shooting.
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>Based on Dr. Zankar’s inputs, we edited the script for concision and clarity. Based on all our aforementioned constraints, we decided to stick to an animation format for the film. Dr. Zankar’s suggestions on creating differences between the characters and creating a link between the animation and the real-life shots were also incorporated into the film.<br><br>
+
+				You can watch the film <a href="https://youtu.be/J7-ceCHUn_M">here</a>.</p>
+			<br>
+			<h2 id="ibra">Dr. Maziya Ibrahim</h2><br>
+
+			<h3>Summary</h3>
+			<p>We met with Dr. Maziya Ibrahim after finishing our co-culture modeling using the COBRA SteadyCom algorithm. We wanted to get their inputs on our GitHub page on SteadyCom -- ‘SteadyCom Checklist’, and their opinions on the methods we used for the co-culture analysis.<br><br>
+
+				The GitHub page on SteadyCom is a checklist that we created to help future users set up and troubleshoot their co-culture modeling using SteadyCom. 
+				</p>
+			<h3>Motivation behind meeting them</h3>
+			<p>As a postdoctoral fellow from IIT-Madras working closely with SteadyCom, we believed that Dr. Maziya’s inputs on our GitHub page on SteadyCom would be invaluable. SteadyCom, being a fairly recently developed algorithm, has little documentation available, making it immensely tedious to set up and troubleshoot errors. Lack of standardization in available Genome-Scale makes the process all the more time-consuming. <br><br>
+
+				We reached out to Dr. Maziya hoping that could tell us about other errors they faced in their experience with SteadyCom and how they attempted to troubleshoot it.<br><br>
+				
+				We also wanted Dr. Maziyia’s inputs on whether the assumptions we made in our modeling were biologically accurate. <br><br>
+				
+				We were particularly confused between two different objective functions to optimize for - butanol per gram dry weight of co-culture vs. butanol per gram dry weight of the co-culture multiplied by the growth rate of the co-culture.
+				</p>
+			<h3>Insights</h3>
+			<p>Dr. Maziya agreed that our GibtHub page on SteadyCom would be very useful to future users of SteaadyCom and encouraged us to pursue it. They also shared with us a similar document they had created for the colleagues in their lab to get tips and pointers on how to go about the whole process.<br><br>
+
+				Apart from that, they suggested we use butanol per gram dry weight of co-culture as our objective function, as the growth rate may not play an important role in the bioreactor setting.<br><br>
+				
+				Dr. Maziya also pointed to us that some of the errors we mentioned in the document could be solved by using an older version of the code used in a part of the SteadyCom procedure, and suggested we try it in our model.
+				</p>
+			<h3>Incorporation into our project</h3>
+			<p>After looking at Dr. Maziya’s code we concluded that it may not be applicable to general users since it was specific to a solver that wasn’t easily accessible and the version of code used was not compatible with the COBRA toolbox, which is more popular since it offers a lot more features for model manipulation and analysis. We got Dr. Maziya’s feedback on our document and continued to incorporate their inputs regarding the same.
+			</p>
+<br><br><br>
+                </div>
 			</div>
         </div>
     </div>
-
 
 
 	<!-- SPONSORS BAR -->
@@ -275,126 +947,57 @@
 			</div>	
 		</div>
 	</div>
+<!-- SPONSORS BAR -->
+	<div class="footer">
+		<div class="footer-wrapper">
+			<!-- <div id="not-sponsors" class="footer-wrapper">	 -->
+				<div id="Team", class="footer-wrapper">
+					<img class="teamlogo" src="assets/Logos/IISER-Pune-iGEM_logo.png" alt="iGEM IISER Pune Logo" width="170">
+				</div>
+				<div id="socials" class="vertical-stack">
+					<div><h3>Team IISER Pune India</h3></div>
+					<div id="logos" class ="footer-wrapper ">
+						<a href="https://www.instagram.com/igem_iiserp/"><img class="footer-links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="20"></a>
+						<a href="https://www.linkedin.com/in/igem-iiser-pune-2021/"><img class="footer-links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30"></a>
+						<a href="https://twitter.com/igem_iiserpune"><img class="footer-links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35"></a>
+						<a href="https://www.facebook.com/igemiiserpune"><img class="footer-links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25"></a>
+						<a href="https://www.youtube.com/channel/UCyo6NMLvM58sSh_tnxht36w"><img class="footer-links-socials" src="assets/Logos/Youtube_logo.png" alt="Youtube" width="35"></a>
+					</div>
+				</div>
+			<!-- </div> -->
+			<div id="sponsors" class="footer-wrapper">
+				<div id="main-sponsor", class="">
+					<a href="https://www.sailife.com/"><img class="footer-links" src="assets/Logos/Sai_logo.jpg" alt="Sai Life Sciences" width="280"></a>
+				</div>
+				<div class="vertical-stack">
+					<a href="https://sg.idtdna.com/pages"><img class="footer-links" src="assets/Logos/IDT_logo.png" alt="IDT" width="220"></a>
+					<a href="https://www.geneious.com/"><img class="footer-links" src="assets/Logos/Geneious_logo.png" alt="Geneious" width="220"></a>
+				</div>
+				<div class="vertical-stack">
+					<div id="horizontal stack">
+						<a href="https://www.notion.so/"><img class="footer-links" src="assets/Logos/Notion_logo.png" alt="Notion" width="70"></a>
+						<img src="assets/Logos/IISER Pune Logo.png" alt="IISER Pune" width="80" style="padding-left: 1em;">
+					</div>
+					<a href="https://www.zoho.com/"><img class="footer-links" src="assets/Logos/Zoho_logo.png" alt="Zoho" width="150"></a>
+				</div>
+			</div>	
+		</div>
+	</div>
 	<!-- END OF SPONSOR BAR-->
 
 
-<!-- ACTUAL SCROLLING BAR-->
-	<div class="header"></div>
+    <div class="header"></div>
     <div class="line" id="scrollIndicator"></div>
 
-
-    <!-- back to top button -->
-    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
-
-	
-	<!-- LINKING MAIN JS FILES-->
     <script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
-	<script src="js/anychart-core.min.js"></script>
-	<script src="js/anychart-data-adapter.min.js"></script>
-	<script src="js/anychart-graph.min.js"></script>
 
-	<script>
-		// create data
-	var data = {
-	  nodes: [
-	    {id: "Human Practices",
-		
-		},
-	    {id: "SDGs"},
-	    {id: "Stakeholders"},
-	    {id: "Experts"},
-	    {id: "Public Engagement"},
-	    {id: "Challenges"},
-	    {id: "Education"},
-	    {id: "Values"},
-	    {id: "Social"},
-	    {id: "Environmental"},
-	    {id: "Moral"},
-	    {id: "Scientific"},
-	    {id: "Communities"},
-	    {id: "Safety"},
-	    {id: "Impact"},
-	    {id: "Investigate"},
-	    {id: "Implement"}
-	  ],
-	  edges: [
-	    {from: "Human Practices", to: "SDGs"},
-	    {from: "Human Practices", to: "Stakeholders"},
-	    {from: "Human Practices", to: "Experts"},
-	    {from: "Human Practices", to: "Public Engagement"},
-	    {from: "Human Practices", to: "Challenges"},
-	    {from: "Human Practices", to: "Education"},
-	    {from: "Human Practices", to: "Values"},
-	    {from: "Human Practices", to: "Communities"},
-	    {from: "Human Practices", to: "Safety"},
-	    {from: "Human Practices", to: "Impact"},
-	    {from: "Human Practices", to: "Investigate"},
-	    {from: "Human Practices", to: "Investigate"},
-	    {from: "Human Practices", to: "Implement"},
-	    {from: "Values", to: "Social"},
-	    {from: "Values", to: "Environmental"},
-	    {from: "Values", to: "Moral"},
-	    {from: "Values", to: "Scientific"}
-	  ]
-	};
-	
-	// create a chart and set the data
-	var chart = anychart.graph(data);
-	
-	// set the container id
-	chart.container("container");
-	var credits = chart.credits();
-	credits.enabled(false);
-	 // access nodes
-	 var nodes = chart.nodes();
-
-// set the size of nodes
-nodes.normal().height(30);
-nodes.hovered().height(45);
-nodes.selected().height(45);
-
-// set the fill of nodes
-nodes.normal().fill("#28c79b");
-nodes.hovered().fill("white");
-nodes.selected().fill("#27668D");
-
-// set the stroke of nodes
-nodes.normal().stroke(null);
-nodes.hovered().stroke("#333333", 3);
-nodes.selected().stroke("#333333", 3);
-
-chart.nodes().labels().enabled(true);
-// configure the labels of nodes
-chart.nodes().labels().format("{%id}");
-chart.nodes().labels().fontSize(12);
-chart.nodes().labels().fontWeight(600);
-
-chart.edges().normal().stroke("#ffd73a");
-chart.edges().hovered().stroke("#FFFFFF");
-chart.edges().selected().stroke("#FFFFFF");
-
-chart.labels().fontColor("#FFFFFF");
-chart.labels().fontFamily("LemonMilk");
-
-chart.interactivity().scrollOnMouseWheel(false);
-chart.interactivity().zoomOnMouseWheel(false);
-	chart.background().fill("#2b2d31");
-	// initiate drawing the chart
-	chart.draw();
-	</script>
-
-
-	<!-- Gets the screenheight of each page for Scrollbar? -->
 	<script>
 		var screenheight = window.innerHeight,
 		    screenwidth = window.innerWidth;
 
 	</script>
-
-
-	<!-- Scrollbar stuff again, only @Namasi22 knows :) -->
 	<script>
 		var body = document.body,
     		html = document.documentElement;
@@ -402,136 +1005,79 @@ chart.interactivity().zoomOnMouseWheel(false);
 		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
                        		   html.clientHeight, html.scrollHeight, html.offsetHeight );
 	</script>
-
-
-	<!-- To make the button appear -->
-	<script>
-		var backtotopheight=pageheight/4.65
-	</script>
-
-
-	<!-- SCRIPT FOR SCROLL AWARE SIDEBAR HIGHLIGHT -->
-	<!-- ------------------------------------------------------------------------------------------------------------- -->
-	<!-- MAKE SURE YOU CHANGE THE NUMBER OF DIVISIONS -->
-	<script>
-		
-		$(document).ready(function() {
-			$(window).scroll(function() {
-				var scroll_top = $(window).scrollTop();
-				var div_one_top = $("#1").offset().top;
-				var div_two_top = $("#2").offset().top;
-				var div_three_top = $("#3").offset().top;
-				var div_four_top = $("#4").offset().top;
-				var div_five_top = $("#5").offset().top;
-				var div_six_top = $("#6").offset().top;
-				var div_seven_top = $("#7").offset().top;
-	
-				if (scroll_top > div_one_top && scroll_top < div_two_top) {
-					//Division 1
-					if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').addClass('sidenav-active');
-					}
-	
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-					// Division 2
-					if ($('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-					//Division 3
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-					// You are in div 4
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-					// You are in div 5
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-					// You are in div 6
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_seven_top) {
-					// You are in div 7
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').addClass('sidenav-active');
-					}
-				}
-			});
+	 <script>
+    
+		(function($) {
+	      $.fn.timeline = function() {
+		var selectors = {
+		  id: $(this),
+		  item: $(this).find(".timeline-item"),
+		  activeClass: "timeline-item--active",
+		  img: ".timeline__img"
+		};
+		selectors.item.eq(0).addClass(selectors.activeClass);
+		selectors.id.css(
+		  "background-image",
+		  "url(" +
+		    selectors.item
+		      .first()
+		      .find(selectors.img)
+		      .attr("src") +
+		    ")"
+		);
+		var itemLength = selectors.item.length;
+		$(window).scroll(function() {
+		  var max, min;
+		  var pos = $(this).scrollTop();
+		  selectors.item.each(function(i) {
+		    min = $(this).offset().top - 200;
+		    max = $(this).height() + $(this).offset().top;
+		    var that = $(this);
+		    if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+		      selectors.item.removeClass(selectors.activeClass);
+		      selectors.id.css(
+			"background-image",
+			"url(" +
+			  selectors.item
+			    .last()
+			    .find(selectors.img)
+			    .attr("src") +
+			  ")"
+		      );
+		      selectors.item.last().addClass(selectors.activeClass);
+		    } else if (pos <= max - 40 && pos >= min) {
+		      selectors.id.css(
+			"background-image",
+			"url(" +
+			  $(this)
+			    .find(selectors.img)
+			    .attr("src") +
+			  ")"
+		      );
+		      selectors.item.removeClass(selectors.activeClass);
+		      $(this).addClass(selectors.activeClass);
+		    }
+		  });
 		});
-		
-	</script>	
-
-	
-	<!-- Script for the slideshow, wherever needed -->
+	      };
+	    })(jQuery);
+	    
+	    $("#timeline-1").timeline();
+	    
+		</script>
+	<!-- read more read less javascript -->
 	<script>
-		var total = $('.item').length;
-		var actualtotal = 80;
-		var currentIndex = $('div.active').index() + 1;
-		$('#slidetext').html(currentIndex + '/'  + actualtotal);
-
-		// This triggers after each slide change
-		$('.carousel').on('slid.bs.carousel', function () {
-  			currentIndex = $('div.active').index() + 1;
- 
-  		// Now display this wherever you want
-  		var text = currentIndex + '/' + actualtotal;
-  			$('#slidetext').html(text);
+		$(document).ready(function(){
+		   $(".read").click(function(){
+			  $(this).prev().toggle();
+			  $(this).siblings('.dots').toggle();
+			  if($(this).text()=='read more'){
+			$(this).text('read less');
+			  }
+			  else{
+			$(this).text('read more');
+			  }
+		   });
 		});
-
-	</script>
+			</script>
 </body>
