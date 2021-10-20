@@ -19,6 +19,10 @@
 	src: url(../assets/fonts/Proxima-Nova.otf);
     }
 
+@font-face {
+	font-family: 'ProximaNovaBold';
+	src: url(.../assets/fonts/ProximaNovaBold);
+}
 /* iGEM Topbar Fixes */
 .navbar {
   margin-top: 16px;
@@ -291,6 +295,11 @@ html {
     font-size: 2.5vmin !important;
 }
 
+
+.content strong {
+	font-size: 3vmin !important;
+}
+
 .content{
     background-color: #2b2d31;
     margin-right: 10px;
@@ -323,7 +332,7 @@ html {
 /* Sponsor Bar */
 /* Footer bar */
 .footer {
-	width: 100%;
+	width: 100%; 
 	background-color: rgb(59, 59, 59);
 	border-top: solid 10px #49ccecb2;
 	display: block;
@@ -331,17 +340,17 @@ html {
 
 /* Region with logos */  
 .footer-wrapper {
-	height: fit-content;
-    background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-	justify-content: space-evenly;
-    padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-    box-sizing: border-box;
+	height: fit-content !important; 
+    background-color: #fff !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+	justify-content: space-evenly !important;
+    padding-left: 20px !important;
+	padding-right: 20px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+    box-sizing: border-box !important;
 }
 
 

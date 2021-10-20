@@ -67,6 +67,10 @@ function moveScrollIndicator(e) {
     var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 33.5;
     scrollIndicatorElt.style.height = percentage + '%';
   }
+  else if($('#sponsor-page').hasClass('active')) {
+    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
+    scrollIndicatorElt.style.height = percentage + '%';
+  }
   else {
     var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
     scrollIndicatorElt.style.height = percentage + '%';
