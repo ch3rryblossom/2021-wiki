@@ -20,125 +20,7 @@
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
     </style>
-    <style>
-	       .content a {
-
-margin: auto;
-
-text-decoration: none;
-color: #371d31;
-position: relative;
-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-z-index: 0;
-}
-.content a:after {
-content: '';
-height: 2px;
-position: absolute;
-bottom: 0;
-right: 0rem;
-left: 0rem;
-background-color: #d3251b;
-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-transform-origin: bottom center;
-z-index: -1;
-}
-	            /* Card Styling
-		    .card {
-            max-width: 1050px;
-            margin: auto;
-            min-height: 40em;
-        }
-
-        .card-header, .card-header .nav-tabs {
-            padding-bottom: 0!important;
-            padding-top: 10px;
-            padding-left: 0!important;
-        }
-
-        .card .nav-link {
-            padding-left: 30px;
-            padding-right: 30px;
-            font-weight: bold;
-            font-size: 1.1em;
-            border-bottom: 0;
-        }
-
-        .card p {
-            font-size: 1.25em;
-        }
-
-        .card {
-            border-color: #A2B2B2;
-        }
-
-        .card .nav-link {
-            color: #cc3333;
-        }
-
-        .card .nav-link.active {
-            color: #333;
-        }
-
-        .card .nav-link:hover, .card .nav-link::after {
-            border: 0;
-            border-bottom: 1px solid #d3251b;
-        }
-
-        .card .nav-link.active:hover, .card .nav-link.active::after {
-            color: #333;
-            background-color: #E2E2E2!important;
-            border: 0;
-        }
-
-        .card, .card .nav-link.active {
-            background-color: #E2E2E2;
-        }
-
-        .card-header {
-            background-color: #CCCCCC;
-        }
-
-        ol {
-            list-style: decimal;
-        }
-
-        ol ul {
-            list-style: disc;
-        }
-
-        .card a.exp-button {
-            color: #D3251B;
-            background-color: #E2E2E2;
-            border: 1px solid !important;
-            padding: 10px!important;
-        }
-
-        .card a.exp-button:hover, .card a.exp-button::after {
-            color: white;
-        } */
-        .tabbable{
-		    margin:5px;
-	    }
-	    .boxed{
-		border-color: #A2B2B2;
-		border-style: solid;
-		border-radius: 6px;
-	    }
-	    .tabbable .nav-tabs{
-		padding: 10px;
-		margin-left: 10px;
-		margin-right: 10px;
-		background-color:#A2B2B2;
-	    }
-	    .tabbable li{
-		    margin-left: 20px;
-	    }
-	    .tab-content p{
-		    margin-top: 15px;
-	    }
-
-    </style>
+  
 <body>
     
 	<!-- NAVBAR SECTION -->
@@ -262,427 +144,686 @@ z-index: -1;
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Planned pipeline of experiments</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Expt. 1 - “Choosing Optimal promoters”</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Expt 2 - “gDNA extraction and PCR”</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Expt 3 - “E. coli in CoBG11”</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Expt 4 - “Sucrose Assay”</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Expt 5 - “S. elongatus growth curves”</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">Co-culture modelling cycle</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#7">Building the SteadyCom model</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#8">Simulating Salt Stress</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#9">References</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <!-- CONTENT -->
+
+	  <style>
+	    a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.tab .nav-tabs{
+    background-color: transparent;
+    border: none;
+}
+.tab .nav-tabs li a{
+    color: #fff;
+    background: transparent;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 13px 15px 7px;
+    margin: 0 0 1px 0;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li:last-child a{ margin-right: 0; }
+.tab .nav-tabs li a:hover,
+.tab .nav-tabs li.active a{
+    background: transparent;
+    border: none;
+}
+.tab .nav-tabs li.active a{ color: #fff; }
+.tab .nav-tabs li a:before{
+    content: "";
+    background: #444;
+    height: 100%;
+    width: 100%;
+    transform: perspective(400px) rotateX(75deg);
+    transform-origin: bottom center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+/* .tab .nav-tabs li.active a:before,
+.tab .nav-tabs li a:hover:before{
+
+} */
+.tab .tab-content{
+    color: #fff;
+    background: #333;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 23px;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 20px -5px rgba(0,0,0,0.5);
+}
+.tab .tab-content h3{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+@media only screen and (max-width: 479px){
+    .tab .nav-tabs{
+        background-color: #333;
+        border-radius: 21px 21px 0 0;
+    }
+    .tab .nav-tabs li{ width: 100%; }
+    .tab .nav-tabs li a{ color: #fff; }
+    .tab .tab-content h3{ font-size: 18px; }
+}
+table{
+	border-collapse:collapse;
+}
+td {
+            border-style:solid; 
+            border-width:1px; 
+            border-color:#fff; 
+            padding:10px;
+	    text-align: center; 
+	    vertical-align: middle;
+         }
+td[data-cycle="design"]{
+	background-color: pink;
+	color: black;
+}
+td[data-cycle="build"]{
+	background-color: yellowgreen;
+}
+td[data-cycle="test"]{
+	background-color: blueviolet;
+}
+td[data-cycle="learn"]{
+	background-color: mediumpurple;
+}
+    </style>
+
+<!--
+<div class="row">
+	<div class="tab" role="tabpanel">
+	    
+	    <ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#Cycle1_A" aria-controls="Cycle1_A" role="tab" data-toggle="tab">Cycle 1</a></li>
+		<li role="presentation"><a href="#Cycle2_A" aria-controls="Cycle2_A" role="tab" data-toggle="tab">Cycle 2</a></li>
+		<li role="presentation"><a href="#Cycle3_A" aria-controls="Cycle3_A" role="tab" data-toggle="tab">Cycle 3</a></li>
+		<li role="presentation"><a href="#Cycle4_A" aria-controls="Cycle4_A" role="tab" data-toggle="tab">Cycle 4</a></li>
+		<li role="presentation"><a href="#Cycle5_A" aria-controls="Cycle5_A" role="tab" data-toggle="tab">Cycle 5</a></li>
+	    </ul>
+	    
+	    <div class="tab-content tabs">
+		<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_A">
+		    <h3>Cycle 1</h3>
+			<table>
+				<tr><td data-cycle="design">Design</td><td></td></tr>
+				<tr><td data-cycle="build">Build</td><td></td></tr>
+				<tr><td data-cycle="test">Test</td><td></td></tr>
+				<tr><td data-cycle="learn">Learn</td><td></td></tr>
+			</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle2_A">
+		    <h3>Cycle 2</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td></td></tr>
+			<tr><td data-cycle="build">Build</td><td></td></tr>
+			<tr><td data-cycle="test">Test</td><td></td></tr>
+			<tr><td data-cycle="learn">Learn</td><td></td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle3_A">
+		    <h3>Cycle 3</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td></td></tr>
+			<tr><td data-cycle="build">Build</td><td></td></tr>
+			<tr><td data-cycle="test">Test</td><td></td></tr>
+			<tr><td data-cycle="learn">Learn</td><td></td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle4_A">
+		    <h3>Cycle 4</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td></td></tr>
+			<tr><td data-cycle="build">Build</td><td></td></tr>
+			<tr><td data-cycle="test">Test</td><td></td></tr>
+			<tr><td data-cycle="learn">Learn</td><td></td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle5_A">
+			<h3>Cycle 5</h3>
+			<table>
+				<tr><td data-cycle="design">Design</td><td></td></tr>
+				<tr><td data-cycle="build">Build</td><td></td></tr>
+				<tr><td data-cycle="test">Test</td><td></td></tr>
+				<tr><td data-cycle="learn">Learn</td><td></td></tr>
+			</table>
+		</div>
+	    </div>
+	</div>
+
+-->
+
+
             <div class="col-lg-9 col-md-9">
-                <div class="content">
-                    <h1 id="1">Planned pipeline of experiments: production of sucrose and butanol</h1>
-                    <hr><br><br><br>
-		<!--    <div class="card">
-                        <div class="card-header">
-                            <ul class="nav nav-tabs card-header-tabs" id="main-card-header">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#d" data-toggle="tab" role="tab">Design</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#e" data-toggle="tab" role="tab">Experiments</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#a" data-toggle="tab" role="tab">Assay</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#l" data-toggle="tab" role="tab">Learn</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#i" data-toggle="tab" role="tab">Improve</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body">
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="d">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <ul class="nav nav-tabs card-header-tabs">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="#d-m" data-toggle="tab" role="tab">Modelling</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#d-b" data-toggle="tab" role="tab">Biobrick</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tab-content">
-                                                <div class="tab-pane fade show active" id="d-m">
-                                                    <!-- <h2>Modelling</h2>
-                            
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <ul class="nav nav-tabs card-header-tabs">
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link active" href="#d-m-d" data-toggle="tab" role="tab">Design</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-m-b" data-toggle="tab" role="tab">Build</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-m-t" data-toggle="tab" role="tab">Test</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-m-l" data-toggle="tab" role="tab">Learn</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-m-i" data-toggle="tab" role="tab">Improve</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <div class="tab-content">
-                                                                <div class="tab-pane fade show active" id="d-m-d">
-                                                                    <!-- <h3>Modelling - Design</h3>
-                            
-                                                                    <p>We realised that to design a suitable inhibitor, we would require a computational approach, in order to shortlist possible interactions we could target. We contacted Dr Madhusudhan MS of IISER Pune and he generously offered to help us, and along with Tejashree Kanitkar, a PhD student from his lab, we designed the basic layout of our dry lab and modelling experiments.</p>
+                <div class="content"><br><br>
+			<p>Due to the second wave of the pandemic in India, our wet lab work was considerably delayed, effectively leaving us with a mere month and a half in the lab. We utilised our time working remotely to devise a thorough plan of experiments, incorporating a Design-Build-Test cycle:</p>
+                    <h1 id="1">Experiment 1 - “Choosing Optimal promoters”</h1>
+                    <hr><br>
+		    
+			<div class="row"><!-- CYCLE A -->
+				<div class="tab" role="tabpanel">
+				    <!-- Nav tabs -->
+				    <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#Cycle1_A" aria-controls="Cycle1_A" role="tab" data-toggle="tab">Cycle 1</a></li>
+					<li role="presentation"><a href="#Cycle2_A" aria-controls="Cycle2_A" role="tab" data-toggle="tab">Cycle 2</a></li>
+				    </ul>
+				    <!-- Tab panes -->
+				    <div class="tab-content tabs">
+					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_A">
+					    <h3>Cycle 1</h3>
+						<table>
+							<tr><td data-cycle="design">Design</td><td>Design constructs via overlap PCR of various <em>native</em> promoters - <em>Pcpc560, PcscB m6, PpsbA2, PpsbA3</em> - upstream of fluorescent reporters. Compare their promoter strengths to that of strong constitutive promoter J23119 and the IPTG-inducible <em>lacUV5</em>.</td></tr>
+							<tr><td data-cycle="build">Build</td><td>Incorporate constructs via homology directed repair (HDR) into Neutral Site I of the genome using a CRISPR/Cas12a system</td></tr>
+							<tr><td data-cycle="test">Test</td><td>Vary light intensity and concentration of carbon dioxide and study fluorescence to characterize promoter activity (strength and response)</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>Select promoters with high activity and easily tunable response.</td></tr>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle2_A">
+					    <h3>Cycle 2</h3>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td>Design constructs with strong/tunable promoters from previous round, with <em>cscB</em>, <em>sps</em> and <em>spp</em></td></tr>
+						<tr><td data-cycle="build">Build</td><td>Incorporate <em>cscB</em> is incorporated into Neutral Site I, and&nbsp; <em>sps</em> and <em>spp</em> into Neutral Site III, <em>via </em>HDR using a CRISPR/Cas12a system</td></tr>
+						<tr><td data-cycle="test">Test</td><td>Collect supernatant samples over time to estimate sucrose production; use Dr Pakrasi lab’s strains as a positive control.</td></tr>
+					</table>
+					</div>
+				    </div>
+				</div>
+				</div>
+<br><br>
+<p>We were unfortunately unable to carry out most of these experiments in the little time remaining to us. We instead acquired sucrose-secreting strains of S. elongatus UTEX 2973 from the Pakrasi lab, to measure their sucrose production rates. We have also acquired everything we need for future experiments according to our original plan.</p>
+<br><br>
+			<h1 id="2">Experiment 2 - “gDNA extraction and PCR”</h1>
+			<hr><br>
+			<div class="row"><!-- CYCLE B -->
+				<div class="tab" role="tabpanel">
+				    
+				    <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#Cycle1_B" aria-controls="Cycle1_B" role="tab" data-toggle="tab">Cycle 1</a></li>
+					<li role="presentation"><a href="#Cycle2_B" aria-controls="Cycle2_B" role="tab" data-toggle="tab">Cycle 2</a></li>
+					<li role="presentation"><a href="#Cycle3_B" aria-controls="Cycle3_B" role="tab" data-toggle="tab">Cycle 3</a></li>
+					<li role="presentation"><a href="#Cycle4_B" aria-controls="Cycle4_B" role="tab" data-toggle="tab">Cycle 4</a></li>
+					<li role="presentation"><a href="#Cycle5_B" aria-controls="Cycle5_B" role="tab" data-toggle="tab">Cycle 5</a></li>
+				    </ul>
+				    
+				    <div class="tab-content tabs">
+					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_B">
+					    <h3>Cycle 1</h3>
+						<table>
+							<tr><td data-cycle="design">Design</td><td>To extract genomic DNA from<em> E. coli</em> KJK01 and verify the presence of <em>hbd-crt</em> genes by PCR</td></tr>
+							<tr><td data-cycle="build">Build</td><td>Extracted genomic DNA through phenol-chloroform method, conducted PCR to amplify <em>hbd-crt</em>, ran PCR product on an agarose gel</td></tr>
+							<tr><td data-cycle="test">Test</td><td>Imaged the gel and observed no bands</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>Possible inhibition of PCR due to excess concentration of dNTPs and gDNA in PCR mix - reduce concentration in subsequent attempt </td></tr>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle2_B">
+					    <h3>Cycle 2</h3>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td>PCR with reduced concentrations of dNTPs and gDNA and quality check for gDNA</td></tr>
+						<tr><td data-cycle="build">Build</td><td>The above was executed<br>PCR product and gDNA were run on an agarose gel</td></tr>
+						<tr><td data-cycle="test">Test</td><td>Imaged the gel - multiple bands in the well corresponding to gDNA, no bands corresponding to the PCR product appeared </td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>Suspected nuclease contamination in gDNA sample</td></tr>
+					</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle3_B">
+					    <h3>Cycle 3</h3>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td>Extract gDNA once again with modified protocol</td></tr>
+						<tr><td data-cycle="build">Build</td><td>gDNA extracted once again <br><br>
 
-                                                                    <p>Our modelling approach has the following steps:</p>
+							Proteinase K added first, followed by RNase A after the deactivation of the former<br><br>
+							
+							Final gDNA resuspension done in autoclaved ddH2O (MilliQ water) instead of Elution Buffer<br><br>
+							
+							gDNA run on agarose gel
+							</td></tr>
+						<tr><td data-cycle="test">Test</td><td>Single large band appeared above the highest band of the DNA ladder<br><br>
 
-                                                                    <ol>
-                                                                        <li>Extraction of available data from the Protein Data Bank<sup>[7]</sup> and further analysis and shortlisting of potential PDB IDs that could be used in our project</li>
-                                                                        <li>Identification of the interacting regions of the human protein and the parasite protein.</li>
-                                                                        <li>Computational mutagenesis of the interacting region</li>
-                                                                        <li>Scoring the mutants and doing some advanced studies for stability in silico</li>
-                                                                    </ol>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-m-b">
-                                                                    <!-- <h3>Modelling - Build</h3> 
-                            
-                                                                    <p>We started with extracting data from the Protein Data Bank using advanced search and a custom web-parser script based on python and found over 400 hits which we narrowed down to 47 interactions.<sup>[8]</sup> We did literature studies and shortlisted 5 interactions to work with. We performed computational saturation mutagenesis for the identified interacting region using a custom python script built on top of Chimera and obtained mutants.<sup>[8]</sup> The mutants were scored based on their interacting energy using FoldX.<sup>[9]</sup> We shortlisted 3 mutant interactions with most negative interaction energy for further studies.</p>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-m-t">
-                                                                    <!-- <h3>Modelling - Test</h3>
-                            
-                                                                    <p>We ran Molecular Dynamics simulations for these inhibitors to study their interaction in silico. We got access to the PARAM BRAHMA facility under the National Supercomputing Mission, Government of India at IISER Pune for our computational needs. We performed the simulations as described in the <a href="https://2020.igem.org/Team:IISER-Pune-India/Model">Modelling</a> page of our project and analysed the results.</p>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-m-l">
-                                                                    <!-- <h3>Modelling - Learn</h3> 
-                            
-                                                                    <p>We found that some inhibitors did not interact with the parasite protein as expected. One reason may have been the small size which leads to structural instabilities. From the iBEC<sup>[10]</sup> proposal feedback we also learnt that the PfEMP1 interaction which we had targeted so far is highly variable. We also faced problems in doing homology modelling of cyclic peptides.</p>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-m-i">
-                                                                    <!-- <h3>Modelling - Improve</h3> 
-                            
-                                                                    <p>From our results, we realised that we needed to search for more non-variable interactions of the plasmodium and the human proteins. We analysed how the distance between the centroids of the interacting proteins evolved over time during the MD simulations and the intermolecular hydrogen bonds between them. As for the homology modelling for cyclic peptides, we contacted Dr David Norman, College of Life Sciences, University of Dundee, for help and he generously provided us with tutorials to build a cyclic peptide using homology MODELLER.<sup>[11]</sup></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                            
-                                                </div>
-            
-                                                <div class="tab-pane fade" id="d-b">
-                                                    <!-- <h2>Biobrick</h2> 
-                            
-                                                    <div class="card">
-                                                        <div class="card-header">
-                                                            <ul class="nav nav-tabs card-header-tabs">
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link active" href="#d-b-d" data-toggle="tab" role="tab">Design</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-b-b" data-toggle="tab" role="tab">Build</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-b-t" data-toggle="tab" role="tab">Test</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-b-l" data-toggle="tab" role="tab">Learn</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="nav-link" href="#d-b-i" data-toggle="tab" role="tab">Improve</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="card-body">
-                                                            <div class="tab-content">
-                            
-                                                                <div class="tab-pane fade show active" id="d-b-d">
-                                                                    <!-- <h3>Biobrick - Design</h3> --
-                            
-                                                                    <p>We conceptualized cyclotides to contain inhibitory peptides in a suitable loop to competitively inhibit the host-parasite interactions of interest. After extensive literature review, we finalised on the cyclotide Kalata B1 which is 29 amino acids long with 6 loops divided by 3 cysteines as a knot. Based on <em>in-silico</em> modelling, we decided on the insert sequence for potential competitive inhibition (in loop 6) to graft in pET28-a(+) vector.</p>
-                            
-                                                                    <p>We also planned to insert host and parasite proteins into the same vector to express and study their interaction in vitro and the effect of the cyclotide inhibitor on their binding affinity. For tagging the parasite and host proteins we planned to use polyhistidine and Strep tags respectively. This differential tagging is to prevent the host protein from non-specifically interacting with the stationary phase (Ni-NTA) and yielding a false positive interaction with 6xHis-tagged parasite protein immobilized on the stationary phase.</p>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-b-b">
-                                                                    <!-- <h3>Biobrick - Build</h3> --
-                            
-                                                                    <p>We obtained the cyclotide Kalata B1 precursor (OAK1) and competitive inhibitor sequences from the modelling team. We built 1-3 composite biobricks depending on the potential inhibitors. Codon-optimised inhibitors were grafted into loop 6 of OAK1 and loop 3 was replaced with the Strep tag for purification. We also obtained wild type protein sequences from PDB to build basic Biobrick parts.</p>
-                            
-                                                                    <strong>Building the inhibitor construct:</strong> <br>
-                                                                    <p>The sequence of nucleotides from the start to the stop codon was removed and the cyclotide construct containing the inhibitory peptide was inserted into the plasmid. A similar procedure was followed for the host and parasite protein.</p>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-b-t">
-                                                                    <!-- <h3>Biobrick - Test</h3> -
-                            
-                                                                    <p>Our Biobricks were built on the Benchling platform. Further analysis was done on various softwares including Geneious Prime, Snapgene and Benchling to check for RFC 10 criteria and this was cross checked with our mentors. We tested our Biobricks for the ORFs. The initial codon optimisation was done using the GeneSmart tool of genscript and was tested again with codon optimisation tool in Benchling for better results.</p>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-b-l">
-                                                                    <!-- <h3>Biobrick - Learn</h3> --
-                            
-                                                                    <p>While building Biobricks we encountered various problems. We learned that Biobricks for the split Intein approach needed to be tested for at least 3 loops. Even though we grafted our inhibitors in loop 6, the problem of circularisation still persisted. Another issue that we came across after building the ORF was breaking at both ends of the insert sequence. This problem occurred due to the 7th general nucleotide(N) present at the end of the BSA restriction site i.e (GGTCTCN).</p>
-                                                                </div>
-                                                                <div class="tab-pane fade" id="d-b-i">
-                                                                    <!-- <h3>Biobrick - Improve</h3> --
-                            
-                                                                    <p>To solve the circularisation issue we took the circularisation construct (BBa_K1362000) and removed the RFP gene from it. We then grafted the Cyclotide KB 1 sequence into the construct which was subsequently grafted into pET 28-a(+). We made sure that ORFs were on a positive strand. The seventh nucleotide was removed from both strands to complete the ORF.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                            
-                                                </div>
-            
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="tab-pane fade" id="e">
-                                    <!-- <h2>Experiments</h2> -->
-            
-                                    <!-- <p>This is where we built the inhibitory proteins in the lab.</p> --
-            
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <ul class="nav nav-tabs card-header-tabs">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="#e-d" data-toggle="tab" role="tab">Design</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#e-b" data-toggle="tab" role="tab">Build</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#e-t" data-toggle="tab" role="tab">Test</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#e-l" data-toggle="tab" role="tab">Learn</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#e-i" data-toggle="tab" role="tab">Improve</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tab-content">
-                                                <div class="tab-pane fade show active" id="e-d">
-                                                    <!-- <h3>Experiments - Design</h3> --
-            
-                                                    <p>Designing the experiments was the complete second module of our project. During the synthesis of peptides in the lab we aimed to perform a wide variety of experiments from cell cultures, PCRs, gel electrophoresis, mass spectroscopy, and microscopy to accomplish cloning of the desired sequences, expression and purification of proteins. It would also involve a few experiments to validate the results such as SDS-PAGE.</p>
-            
-                                                    <p>For cloning we would use Gibson assembly techniques. Once cloning is successful, the next step is the expression of the cloned plasmid into the vector. Protein purification would be done by expressing Strep tag for the Host protein and 6Xhis tag for parasite proteins. The purified protein would then be run over SDS-PAGE to check for its purity.</p>
-                                                </div>
-                                                <div class="tab-pane fade" id="e-b">
-                                                    <!-- <h3>Experiments - Build</h3> --
-            
-                                                    <p>The required plasmid was obtained from the lab and the gene of interest was ordered from IDT with the primers designed using Gibson. Once all the sequences are received, follow the Gibson assembly steps detailed in the Experiments Section.</p>
-            
-                                                    <p>Protein gene overexpression would be done in E.coli BL21(DE3) strain using the T7 promoter system. The module 2 of experiments involves Purification by 6xHis tag and Strep tag. 6xHis tag purification is done by preparation of lysates after cytoplasmic expression of His-tag protein under native conditions followed by batch purification under native conditions. Purification of strep tag proteins is done by gravity flow columns.</p>
-            
-                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
-                                                </div>
-                                                <div class="tab-pane fade" id="e-t">
-                                                    <!-- <h3>Experiments - Test</h3> --
-            
-                                                    <p>Cloning would be tested by Single restriction digestion based on length and number of fragments in reaction and PCR amplification using gibson primers and sequencing of the cloned plasmids. The positive control should yield ampicillin resistant colonies when transformed into E.Coli. Transformed E.coli BL21 DE3 culture for incubation and purified protein would be run over SDS-PAGE analysis.</p>
-            
-                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
-            
-                                                </div>
-                                                <div class="tab-pane fade" id="e-l">
-                                                    <!-- <h3>Experiments - Learn</h3> --
-            
-                                                    <p>
-                                                        During planning of the experiment design we also came up with the problems we might face while performing the experiments. The protein might not get expressed, it might be degraded or there could be insoluble protein in the column.
-                                                    </p>
-                                                    <p>General difficulties one might encounter in purification are no, or weak binding of proteins to the strep tag column, contamination of proteins, protein precipitation during purification. We have also listed possible solutions for the above problems.</p>
-                                                </div>
-                                                <div class="tab-pane fade" id="e-i">
-                                                    <!-- <h3>Experiments - Improve</h3> --
-            
-                                                    <p>If we face any problems in Gibson cloning we have considered homologous cloning as an alternative which is very similar to Gibson. For the detailed troubleshooting of the individual sections refer to the respective experiments section on the project page.</p>
-            
-                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="a">
-                                    <!-- <h2>Assay</h2> --
-            
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <ul class="nav nav-tabs card-header-tabs">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="#a-b" data-toggle="tab" role="tab">Build</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#a-t" data-toggle="tab" role="tab">Test</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#a-l" data-toggle="tab" role="tab">Learn</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#a-i" data-toggle="tab" role="tab">Improve</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="tab-content">
-                                                <div class="tab-pane fade show active" id="a-b">
-                                                    <!-- <h3>Assay - Build</h3> --
-            
-                                                    <p>After designing the drug, another essential step in our project would be to test its efficiency in combating the disease. Assay building is a molecular biology procedure for testing or measuring a drug's activity in an organic sample. Various molecular biology experiments and assays can be performed to test, verify, and incorporate the computational predictions. The goal is to select a method that requires the least amount of manipulation and pretreatment of the samples to accommodate substances that intervene with the assay.</p>
-            
-                                                    <p>In our project, the main focus was to develop experiments for testing the interaction between inhibitory drugs and the binding epitomes of the plasmodium proteins.</p>
-            
-                                                    <p>The following assays were employed for testing competitive binding of the designer cyclotide:</p>
-            
-                                                    <ol>
-                                                        <li>
-                                                            <h5>Solid-phase protein interaction assay</h5>
-                                                            <p><em>In vitro</em>  by performing affinity chromatography on a Ni-NTA column with the parasite protein immobilized to it and flowing the host protein through it with and without the cyclotides. The difference between the amount of protein left in the supernatant as compared to what was added indicates the bound fraction. This method assesses specific protein-protein interactions at physiological conditions, utilizes relatively small amounts of protein, is free of protein modification, does not require specialized instrumentation and results in quantitative measurements.</p>
-                                                        </li>
-                                                        <li>
-                                                            <h5>In vivo in <em>Plasmodium falciparum</em> parasite cultures</h5>
-                                                            <ul>
-                                                                <li><strong>Half maximal inhibitory concentration (IC50) assay</strong> is commonly used to measure the potency of a drug in pharmacological research. IC50 is a measure of the potency of a substance in inhibiting any specific biological or biochemical function. This assay is fast, relatively inexpensive with no involvement of radioactive isotopes. Due to high affinity towards DNA ,the assay is very sensitive and IC50 values of known drugs obtained were comparable.</li>
-                                                                <li><strong>RBC invasion assay</strong> is a flow cytometry-based assay for measuring invasion of RBC by <em>P. falciparum</em> merozoites. Although comparatively expensive, the key advantage of flow cytometry is that a very large number of particles can be evaluated in a very short time.</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ol>
-            
-                                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
-                                                </div>
-                                                <div class="tab-pane fade" id="a-t">
-                                                    <!-- <h3>Assay - Test</h3> --
-            
-                                                    <h4>Assays Standardization</h4>
-                                                    <p>
-                                                        Standardization aims to ensure that assays of the same analyte in the same samples, done at different places or at different times or both, are readily comparable. Standardization is especially desirable because all external quality assessment surveys have shown that this type of method involves a much greater variability than traditional assays. In our project, we have three assays. The RBC invasion assay is a flow cytometry-based assay for which the general standardization protocol is available in <a href="https://2020.igem.org/Measurement/Protocols" target="_blank">IGEM’s standard measurement protocols</a>. We will contribute the standardization protocols for Solid-phase protein interaction assay and IC50 assay to the same as a part of our project.
-                                                    </p>
-                                                </div>
-                                                <div class="tab-pane fade" id="a-l">
-                                                    <!-- <h3>Assay - Learn</h3> --
-            
-                                                    <p>
-                                                        Assays can yield unexpected or failing results for a variety of reasons. Even simple assays include multiple steps where mistakes are likely to happen, which significantly increases the difficulty of finding the error sources.
-                                                    </p>
-                                                    <p>
-                                                        Some potential error sources could include: incorrect, contaminated or expired reagents, equipment error, technician error, and many more. Therefore, resolving the cause of unexpected results is often a time consuming and expensive task in laboratory research. After studying the protocols for each assay in detail, we found some possible errors listed below.
-                                                    </p>
-            
-                                                    <ol>
-                                                        <li>
-                                                            <strong>Solid-phase protein interaction assay</strong>
-                                                            <p>We need a particular concentration of proteins for proceeding to protocol 3 in this assay. But we might end up getting different concentration values for the bicinchoninic acid (BCA) assay.This has to be changed to the needed concentration for accurate results.</p>
-                                                        </li>
-                                                        <li>
-                                                            <strong>Half maximal inhibitory concentration (IC50) assay</strong>
-                                                            <p>Due to handling errors, we may get less growth in the zero drug well than in any well with some drug concentration. This might be due to the addition of more cells in a well or more dye in a well.Also,the solvent we use might contribute to the inhibition effect.Our results may contain some background noise which have to be deducted from readings for more accuracy.</p>
-                                                        </li>
-                                                        <li>
-                                                            <strong>RBC invasion assay</strong>
-                                                            <p>Treating infected erythrocytes with α-2-3,6,8– Vibrio cholera neuraminidase trypsin and chymotrypsin can give us unexpected results as these three chemicals can block invasion completely. Because of lack of standardization, there is a chance of FACS not giving promising results.Usage of sorbitol in synchronisation of ring stage in infected erythrocytes can affect reinvasion.</p>
-                                                        </li>
-                                                    </ol>
-            
-                                                </div>
-                                                <div class="tab-pane fade" id="a-i">
-                                                    <!-- <h3>Assay - Improve</h3> --
-            
-                                                    <p>One mode of decreasing assay failure is to ensure equipment errors are removed or at least minimised. This may be done by optimizing the equipment employed before running the assay. Analyzing the possible error sources that can hinder our assay process, we came up with some precautions and troubleshooting techniques that can be adapted to modify these assays.</p>
-            
-                                                    <ol>
-                                                        <li>
-                                                            <strong>Solid-phase protein interaction assay</strong>
-                                                            <p>Depending on what concentration we get in the BCA assay, we will      increase or decrease to attain the concentration we need.</p>
-                                                        </li>
-                                                        <li>
-                                                            <strong>Half maximal inhibitory concentration (IC50) assay</strong>
-                                                            <p>To avoid handling errors,this experiment is done in triplets and their average is taken. RPMI and DMSO control are done to check whether the drug solvent is responsible for any inhibition effect or not. DMSO is the drug solvent. If the fluorometer readings of DMSO control and RPMI control are similar then that means that the solvent is not contributing to the inhibition effect.A blank control with no parasites can be performed to deduct the background noise from all readings.To check if the proposed drug acts as an inhibitor we first select a broad drug concentration range and if the IC50 value is obtained then the experiment is performed again with a narrow drug concentration range to get a more accurate value.</p>
-                                                        </li>
-                                                        <li>
-                                                            <strong>RBC invasion assay</strong>
-                                                            <p>Treatment of ring stage infected O+ erythrocytes with a solution of α-2-3,6,8– Vibrio cholera neuraminidase, trypsin and chymotrypsin can be done using lower concentrations and the relative effectiveness of different peptide inhibitors can be studied.If FACs fail to give promising results, fluorometry based analysis can be performed using a spectrophotometer, which will be speedier as well. To avoid sorbitol treatment as much as possible, fresh parasite cultures can be revived to grow in a synchronized manner for the initial cycles.</p>
-                                                        </li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            
-                                </div>
-                                <div class="tab-pane fade" id="l">
-                                    <!-- <h2>Learn</h2> --
-                                    <p>We developed each inhibitor sequence after an intensive computational analysis of each interaction. Although, in the worst scenario, there might come a time when these inhibitors fail. We targeted crucial interactions between the host and parasite protein that would have the greatest possibility of successfully preventing entry and infection of the Plasmodium parasite.</p>
-                                </div>
-                                <div class="tab-pane fade" id="i">
-                                    <!-- <h2>Improve</h2> --
-                                    <p>Directed Evolution(DE), a method used in protein engineering that mimics natural selection, can be used as our last expedient if our inhibitors fail to provide results. DE generates random mutations in the gene of interest and can be used as an alternative to rationally designing modified proteins. Site-directed mutagenesis(SDM) is an invitro method used in DE for creating a specific mutation in a known sequence. In our project, we can use this method to select or screen for mutations with the desired property of inhibiting our studied interactions. The simplest and most broadly applicable SDM protocol is the QuickChange Site-Directed Mutagenesis System (QCM) developed by Stratagene, which we plan to use in our project.</p>
-            
-                                    <a class="btn btn-primary exp-button" role="button" href="https://2020.igem.org/Team:IISER-Pune-India/Experiments">Experiments Page</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="tabbable boxed parentTabs">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#set1">Tab 1</a>
-                            </li>
-                            <li><a href="#set2">Tab 2</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade active in" id="set1">
-                            <div class="tabbable">
-                                <ul class="nav nav-tabs">
-                                <li class="active"><a href="#sub11">Tab 1.1</a>
-                                </li>
-                                <li><a href="#sub12">Tab 1.2</a>
-                                </li>
-                                </ul>
-                                <div class="tab-content">
-                                <div class="tab-pane fade active in" id="sub11">
-                                    <p>Tab 1.1 content</p>
-                                </div>
-                                <div class="tab-pane fade" id="sub12">
-                                    <p>Tab 1.2 content</p>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, officia exercitationem earum maiores cumque dolores nobis corporis. Tenetur, voluptas voluptate exercitationem minima pariatur a harum amet eos accusantium fuga est.</p>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="tab-pane fade" id="set2">
-                            <div class="tabbable">
-                                <ul class="nav nav-tabs">
-                                <li class="active"><a href="#sub21">Tab 2.1</a>
-                                </li>
-                                <li><a href="#sub22">Tab 2.2</a>
-                                </li>
-                                </ul>
-                                <div class="tab-content">
-                                <div class="tab-pane fade active in" id="sub21">
-                                    <p>Tab 2.1 content</p>
-                                </div>
-                                <div class="tab-pane fade" id="sub22">
-                                    <p>Tab 2.2 content</p>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>   
-                        <br><br><br>
-                        <p>
+							Large bright bands present at the bottom of the ladder
+							</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>Presence of good quality gDNA verified<br><br>
+
+							Large bright band due to RNA contamination 
+							</td></tr>
+					</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle4_B">
+					    <h3>Cycle 4</h3>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td>PCR verification of <em>hbd-crt</em> from new gDNA extract </td></tr>
+						<tr><td data-cycle="build">Build</td><td>The above was executed along with a negative control that was devoid of the gDNA template <br><br>
+
+							PCR products were run on an agarose gel
+							</td></tr>
+						<tr><td data-cycle="test">Test</td><td>No bands corresponding to the genes of interest appeared</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>RNA contamination may have led to overestimation of gDNA concentration when measured by NanoDrop. <br><br>
+							PCR should be redone with undiluted template gDNA <br><br>
+
+							Add DMSO to PCR Mix to inhibit renaturation of denatured DNA
+						</td></tr>
+					</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle5_B">
+						<h3>Cycle 5</h3>
+						<table>
+							<tr><td data-cycle="design">Design</td><td>Gradient PCR with varying DMSO concentrations at various annealing temperatures </td></tr>
+							<tr><td data-cycle="build">Build</td><td>The above was executed along with a negative control devoid of the gDNA template</td></tr>
+							<tr><td data-cycle="test">Test</td><td>Band corresponding to genes of interest at 750 bp appeared</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td><em>hbd-crt</em> was amplified during PCR, its presence on the genome of <em>E. coli</em> KJK01 is verified</td></tr>
+						</table>
+					</div>
+				    </div>
+				</div>
+				</div>
+				<br><br>
+				<h1 id="3">Experiment 3 - “E. coli in CoBG11”</h1>
+			<hr><br>
+				<div class="row"><!-- CYCLE C -->
+					<div class="tab" role="tabpanel">
+					    
+					    <ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#Cycle1_C" aria-controls="Cycle1_C" role="tab" data-toggle="tab">Cycle 1</a></li>
+						<li role="presentation"><a href="#Cycle2_C" aria-controls="Cycle2_C" role="tab" data-toggle="tab">Cycle 2</a></li>
+						<li role="presentation"><a href="#Cycle3_C" aria-controls="Cycle3_C" role="tab" data-toggle="tab">Cycle 3</a></li>
+					</ul>
+					    
+					    <div class="tab-content tabs">
+						<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_C">
+						    <h3>Cycle 1</h3>
+							<table>
+								<tr><td data-cycle="design">Design</td><td>Inoculate KJK01 and pCSCX-KJK01 cultures in BG-11 + sucrose to check for growth, sucrose consumption and butanol production. Sucrose concentration used is 250 mg/L, higher than maximum sucrose concentration secreted by cyanobacteria in Zhang et al, 2020.</td></tr>
+								<tr><td data-cycle="build">Build</td><td>Inoculate 3 cultures<br>
+									
+									&bull;&nbsp;&nbsp;KJK01 (without antibiotics)<br>
+									&bull;&nbsp;&nbsp;pCSCX-KJK01 (uninduced + antibiotics)<br>
+									&bull;&nbsp;&nbsp;pCSCX-KJK01 (induced + antibiotics)
+									
+									<br>Take hourly OD readings, store supernatants at -20&deg;C and submit for sucrose assay and NMR analysis.</td></tr>
+								<tr><td data-cycle="test">Test</td><td>KJK01 showed growth, while both pCSCX-KJK01 strains did not. Maximum sucrose was consumed by KJK01.</td></tr>
+								<tr><td data-cycle="learn">Learn</td><td>Suspected contamination in the KJK01 culture. Repeat experiment carefully to minimize all possibilities of contamination.</td></tr>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="Cycle2_C">
+						    <h3>Cycle 2</h3>
+						    <table>
+							<tr><td data-cycle="design">Design</td><td>UV laminar hood for 20 minutes, and completely sanitize the insides with 70% ethanol before inoculation and each measurement. Repeat experiment in the same manner as above, taking care to minimize risk of contamination. </td></tr>
+							<tr><td data-cycle="build">Build</td><td>Inoculate 3 cultures<br>
+								
+								&bull;&nbsp;&nbsp;KJK01 (without antibiotics)<br>
+								&bull;&nbsp;&nbsp;pCSCX-KJK01 (uninduced + antibiotics)<br>
+								&bull;&nbsp;&nbsp;pCSCX-KJK01 (induced + antibiotics)
+								
+								<br>Take hourly OD readings, store supernatants at -20&deg;C and submit for sucrose assay and NMR analysis.</td></tr>
+							<tr><td data-cycle="test">Test</td><td>KJK01 showed growth, while both pCSCX-KJK01 strains did not. </td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>Suspect contamination in the KJK01 culture again, possibly due to lack of antibiotics. Were advised by mentors to use a different negative control. Decided to replace BG-11 with CoBG-11, as done by Zhang et al.</td></tr>
+						</table>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="Cycle3_C">
+						    <h3>Cycle 3</h3>
+						    <table>
+							<tr><td data-cycle="design">Design</td><td>Use KJK01 transformed with a blank Kan resistance plasmid (pKD4) as a negative control to show that sucrose consumption is solely due to pCSCX plasmid, and to minimize risk of contamination. Use CoBG-11, a medium containing BG-11 and salts that help E. coli grow better. Repeat experiment with same composition of pCSCX cultures.</td></tr>
+							<tr><td data-cycle="build">Build</td><td>Transformation failed, but due to lack of time could not repeat it and chose to inoculate all cultures without antibiotics in order to have a true negative control. <br><br>Inoculate 3 cultures in CoBG-11<br>
+								
+								&bull;&nbsp;&nbsp;KJK01 (without antibiotics)<br>
+								&bull;&nbsp;&nbsp;pCSCX-KJK01 (uninduced + antibiotics)<br>
+								&bull;&nbsp;&nbsp;pCSCX-KJK01 (induced + without antibiotics)
+								
+								<br>Take hourly OD readings, store supernatants at -20&deg;C and submit for sucrose assay and NMR analysis.</td></tr>
+							<tr><td data-cycle="test">Test</td><td>KJK01 and pCSCX-KJK01 (induced) showed growth, while pCSCX-KJK01 (uninduced) did not. 
+
+								<br><br>Cannot confirm if growth is of our strains or the contaminants due to lack of antibiotics in the medium. Samples have been submitted for sucrose assay and NMR analysis, however results have not arrived yet.
+								</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>Will perform site directed mutagenesis on pCSCX plasmid to render cscABK genes non-functional, and transform KJK01 with it. This will serve as a true negative control for the next assay.
+
+								<br><br>CoBG-11 will be used next time as well.
+								
+								<br><br>Cultures might not have grown due to low concentrations of sucrose having been added. Will repeat with higher concentrations of sucrose, look at <a href="Results.html">Results</a>.
+								</td></tr>
+						</table>
+						</div>
+					    </div>
+					</div>
+					</div>
+					<br><br>
+					<h1 id="4">Experiment 4 - “Sucrose Assay”</h1>
+					<hr><br><br>
+					<p>
+						For sucrose quantification, we used the Megazyme Sucrose/D-Glucose K-SUCGL kit. The kit uses the enzymes glucose oxidase, peroxidase and β-fructosidase (invertase). 
+						<br><br>Sucrose is hydrolyzed by invertase to D-glucose and D-fructose. 
+						<br><br>The D-glucose content is determined by conversion to a red-colored quinoneimine dye (by the action of glucose oxidase, peroxidase) and the D-glucose concentration is quantified via absorbance measurements at 510 nm.  To isolate the contribution of the glucose resulting from the hydrolysis of sucrose, we need to subtract the absorbance of an identical sample, untreated by invertase. This absorbance is a measurement of pre-existing free D-glucose in our supernatant. We denote this invertase-free solution as solution A. The solution with the invertase added is correspondingly denoted solution B. 
+						<br><br>For every sample, two absorbance measurements must be taken - one of the sample without beta-fructosidase, denoted as solution A, to measure the initial amount of free D-glucose present in the sample, and one of the sample with beta-fructosidase, denoted as solution B, to measure the final amount D-glucose in the sample (this includes any initial amounts of free D-glucose, and any sucrose that got converted to D-glucose by the action of beta-fructosidase). The difference in the absorbance between these two solutions gives the amount of sucrose in the sample.	
+						<br><br>The kit requires the sample to contain a sucrose concentration between 0.02 g/L and 0.5 g/L, for which it prescribes dilution instructions based on the estimated amount of sucrose and glucose in the sample.
+						<br><br>However, since we are dealing with bacterial culture supernatants containing unknown sucrose concentrations, we would not know how much to dilute it by. In this interest, we decided to plot a standard curve of absorbance vs sucrose concentration.
+						<br><br>The absorbance readings increase linearly with sucrose concentration over a range of concentrations, before plateauing out at some value. If a particular sample yields an absorbance in the plateau range, it needs to be diluted down into the linear range before it can be measured again.
+
+					</p>
+					<br><br>
+
+<div class="row"><!-- CYCLE D -->
+	<div class="tab" role="tabpanel">
+	    
+	    <ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#Cycle1_D" aria-controls="Cycle1_D" role="tab" data-toggle="tab">Cycle 1</a></li>
+		<li role="presentation"><a href="#Cycle2_D" aria-controls="Cycle2_D" role="tab" data-toggle="tab">Cycle 2</a></li>
+		<li role="presentation"><a href="#Cycle3_D" aria-controls="Cycle3_D" role="tab" data-toggle="tab">Cycle 3</a></li>
+	    </ul>
+	    
+	    <div class="tab-content tabs">
+		<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_D">
+		    <h3>Cycle 1</h3>
+			<table>
+				<tr><td data-cycle="design">Design</td><td>Verify if the Megazyme sucrose D-glucose colorimetric assay kit works with sucrose solutions of known concentration</td></tr>
+				<tr><td data-cycle="build">Build</td><td>Prepared sucrose solutions of known concentrations 0.1 g/L and 10 g/L <br><br>Used Megazyme’s kit protocol to verify the concentrations</td></tr>
+				<tr><td data-cycle="test">Test</td><td>Solution A gave negative absorbance readings compared to the distilled water blank for both samples instead of the expected absorbance of 0.
+
+					<br><br>Received large error in calculated concentration relative to the prepared concentrations.  
+					
+					<br><br>Since both samples were diluted to the same  concentration as per the kit’s protocol, they should have given the same absorbance reading for Solution B, which they failed to do so. 
+					</td></tr>
+				<tr><td data-cycle="learn">Learn</td><td>Don’t use just distilled water as a blank. Use distilled water + acetate buffer as blank for solution A, and distilled water + beta-fructosidase as blank for solution B. 
+
+					<br><br>Biospectrometer may be faulty, use 96 well plate reader. 
+					
+					<br><br>Prepare fresh samples of sucrose solutions.
+					</td></tr>
+			</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle2_D">
+		    <h3>Cycle 2</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td>Prepare a standard curve of sucrose concentration versus absorbance. Use the curve to estimate concentration of sucrose from unknown samples/bacterial culture supernatants. </td></tr>
+			<tr><td data-cycle="build">Build</td><td>Prepared fresh sucrose solutions of known concentrations: 0, 0.1, 2.5, 5, 7.5, 10, 15, 20 g/L
+
+				<br><br>Performed the enzymatic reactions as per the kit protocol and measured absorbance in a 96 well plate reader. 
+				
+				<br><br>Plotted absorbance of the samples against their known concentrations.
+				</td></tr>
+			<tr><td data-cycle="test">Test</td><td>Obtained no discernible trend. </td></tr>
+			<tr><td data-cycle="learn">Learn</td><td>Re-prepare sucrose samples with more precision and redo the standard curve. 
+
+				<br><br>Store sucrose solution samples in the refrigerator to prevent any contamination. 
+				</td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle3_D">
+		    <h3>Cycle 3</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td>Re-prepared fresh sucrose samples to  construct a standard curve. </td></tr>
+			<tr><td data-cycle="build">Build</td><td>Prepared fresh sucrose solutions of known concentrations: 0, 0.01, 0.05, 0.5, 1, 2.5, 5, 10, 20 g/L 
+
+				<br><br>Performed the enzymatic reactions as per the kit protocol and measured absorbance in a 96 well plate reader. 
+				</td></tr>
+			<tr><td data-cycle="test">Test</td><td>Plotted absorbance of the samples against their known concentrations. 
+
+				<br><br>Obtained a curve that follows a linear trend at concentrations in the range 0 to 2.5 g/L and then begins to plateau. 
+				
+				<br><br>The relative error between the calculated concentration of the samples and their known concentrations was fairly constant in the concentration range between 0.05 g/L and 1 g/L.
+				</td></tr>
+			<tr><td data-cycle="learn">Learn</td><td>The linear concentration range we obtained corresponds to the kit’s prescribed sucrose concentration range in which prior dilution is unnecessary.  
+
+				<br><br>Thus, we have determined the sucrose concentration range in which the concentration can be measured with minimal and constant error - 0.05 to 1 g/L
+				</td></tr>
+		</table>
+		</div>
+	    </div>
+	</div>
+</div>
+<br><br>
+<h1 id="5">Experiment 5 - “S. elongatus growth curves”</h1>
+<hr><br><br>
+
+<div class="row"><!-- CYCLE E -->
+	<div class="tab" role="tabpanel">
+	    
+	    <ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#Cycle1_E" aria-controls="Cycle1_E" role="tab" data-toggle="tab">Cycle 1</a></li>
+		<li role="presentation"><a href="#Cycle2_E" aria-controls="Cycle2_E" role="tab" data-toggle="tab">Cycle 2</a></li>
+		<li role="presentation"><a href="#Cycle3_E" aria-controls="Cycle3_E" role="tab" data-toggle="tab">Cycle 3</a></li>
+		<li role="presentation"><a href="#Cycle4_E" aria-controls="Cycle4_E" role="tab" data-toggle="tab">Cycle 4</a></li>
+		<li role="presentation"><a href="#Cycle5_E" aria-controls="Cycle5_E" role="tab" data-toggle="tab">Cycle 5</a></li>
+	    </ul>
+	    
+	    <div class="tab-content tabs">
+		<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_E">
+		    <h3>Cycle 1</h3>
+			<table>
+				<tr><td data-cycle="design">Design</td><td>Acclimate <em>S. elongatus </em>UTEX 2973-WT and UTEX 2973-<em>cscB</em> to 150 mM NaCl</td></tr>
+				<tr><td data-cycle="build">Build</td><td>Inoculate WT and cscB cultures in BG11 with 150 mM NaCl and grow overnight until the culture is lime green and reaches an OD greater than 0.8</td></tr>
+				<tr><td data-cycle="test">Test</td><td>Culture grows very slowly, does not grow healthy overnight</td></tr>
+				<tr><td data-cycle="learn">Learn</td><td>Cultures pause their growth under salt stress for an acclimatory period. </td></tr>
+			</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle2_E">
+		    <h3>Cycle 2</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td>Continue acclimation till maximum OD and inoculate new 100 mL cultures with 150 mM NaCl of OD in range 0.1 to 0.2</td></tr>
+			<tr><td data-cycle="build">Build</td><td>cscB reached an OD of 0.6, while WT crossed 0.8. The former was pelleted down and inoculated into a new culture, while the latter could be transferred directly without pelleting. Two replicates of each were maintained</td></tr>
+			<tr><td data-cycle="test">Test</td><td>The cscB cultures entered stasis and took a while to grow, while the WT cultures temporarily decreased in OD.</td></tr>
+			<tr><td data-cycle="learn">Learn</td><td>Maintain similar treatment for both cultures to have comparable initial ODs.</td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle3_E">
+		    <h3>Cycle 3</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td>Take measurements of OD and supernatant concentration of sucrose every three hours</td></tr>
+			<tr><td data-cycle="build">Build</td><td>2 1mL-aliquots were taken from each culture for each measurement. The absorbance at 730 nm was measured for one aliquot. The other one was centrifuged to separate and store the supernatant for sucrose assay use.</td></tr>
+			<tr><td data-cycle="test">Test</td><td>The growth rates were stunningly slow. Fitting the data to a logistic curve, we got doubling times of 27 and 36 hours in the exponential phase(given by T<sub>double</sub>=ln(2)/r). This is much slower than the minimum according to the literature (in the range of 1.5 hours).<br><br>
+				The  sucrose produced by the cscB strain was 0.13 g/L while the literature reports a yield of 5 g/L in the same time.
+			</td></tr>
+			<tr><td data-cycle="learn">Learn</td><td>We decided to optimise the growth conditions for the culture to high carbon (0.5-0.6% as opposed to 0.04% of ambient CO2) and high light (150 &mu;Em<sup>-2</sup>s<sup>-1</sup>).</td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle4_E">
+		    <h3>Cycle 4</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td>Prepare more BG-11 and then add bicarbonate to the medium</td></tr>
+			<tr><td data-cycle="build">Build</td><td>We made the medium and autoclaved it</td></tr>
+			<tr><td data-cycle="test">Test</td><td>The medium did not have a steady pH, crossing beyond 8.3 into 9+</td></tr>
+			<tr><td data-cycle="learn">Learn</td><td>We need to stabilise the pH with TES buffer ( as recommended by Dr Michelle Liberton). As the CoBG11 medium optimised for co-culture with E. coli by Zhang et al, 2020 includes the TES buffer, 150 mM of NaCl and some additional NH<sub>4</sub>Cl, we decided to use it for the OD curve.[1]</td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle5_E">
+			<h3>Cycle 5</h3>
+			<table>
+				<tr><td data-cycle="design">Design</td><td>We repeat the WT and cscB growth curves in CoBG11 with bicarbonate, controlling for the presence or absence of IPTG</td></tr>
+				<tr><td data-cycle="build">Build</td><td>Acclimated the two strains, then inoculated one WT culture in 100mL CoBG11, along with 4 cscB cultures, of which two were induced with IPTG</td></tr>
+				<tr><td data-cycle="test">Test</td><td>The cultures grew very strangely, growing greener and duller in unpredictable ways, perhaps because we have not optimised the frequency of bicarbonate flashing. However, the OD increased faster, reaching 1.8 in the case of one of the uninduced cscB cultures. At one point, the cells aggregated in the cscB cultures when they were removed from the incubator for a measurement, but the aggregates later disappeared.<br><br>
+					The sucrose assays for these were ongoing as of the wiki freeze.</td></tr>
+				<tr><td data-cycle="learn">Learn</td><td>We need to optimise the bicarbonate flashing frequency.</td></tr>
+			</table>
+		</div>
+	    </div>
+	</div>
+	</div>
+
+	<br><br><br>
+	<h1 id="6">Co-culture modelling cycle</h1>
+	<hr><br><br>
+
+	<div class="row"><!-- CYCLE F -->
+		<div class="tab" role="tabpanel">
+		    
+		    <ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#Cycle1_F" aria-controls="Cycle1_F" role="tab" data-toggle="tab">Cycle 1</a></li>
+		
+		    </ul>
+		    
+		    <div class="tab-content tabs">
+			<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_F">
+			    <h3>Cycle 1</h3>
+				<table>
+					<tr><td data-cycle="design">Design</td><td>The design includes two modeling techniques - dynamic and steady state models, within which similar parameters could be varied and their effects could be analyzed.</td></tr>
+					<tr><td data-cycle="build">Build</td><td>Steady state model - A joint model of the co-culture was built using the individual genome scale models of the cyanobacteria and the E. coli. *
+						<br>Dynamic model - built by adapting the dynamic model made by the Toulouse INSA-UPS team. 
+						</td></tr>
+					<tr><td data-cycle="test">Test</td><td>Varying parameters such as sucrose productivity of cyanobacteria, butanol productivity of E. coli, O2 level in the consortium and CO2 uptake, to see its effects on the butanol yield and the population dynamics of the organisms.</td></tr>
+					<tr><td data-cycle="learn">Learn</td><td>The two models, based on different assumptions, provide similar results on strategies to optimize butanol production by the co-culture.</td></tr>
+				</table>
+			</div>
+			
+		    </div>
+		</div>
+		</div>
+<br><br>
+		<h1 id="7">Building the SteadyCom model</h1>
+		<hr><br><br>
+		<div class="row"><!-- CYCLE G -->
+			<div class="tab" role="tabpanel">
+			    
+			    <ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#Cycle1_G" aria-controls="Cycle1_G" role="tab" data-toggle="tab">Cycle 1</a></li>
+				<li role="presentation"><a href="#Cycle2_G" aria-controls="Cycle2_G" role="tab" data-toggle="tab">Cycle 2</a></li>
+				<li role="presentation"><a href="#Cycle3_G" aria-controls="Cycle3_G" role="tab" data-toggle="tab">Cycle 3</a></li>
+				<li role="presentation"><a href="#Cycle4_G" aria-controls="Cycle4_G" role="tab" data-toggle="tab">Cycle 4</a></li>
+				<li role="presentation"><a href="#Cycle5_G" aria-controls="Cycle5_G" role="tab" data-toggle="tab">Cycle 5</a></li>
+			    </ul>
+			    
+			    <div class="tab-content tabs">
+				<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_G">
+				    <h3>Cycle 1</h3>
+					<table>
+						<tr><td data-cycle="design">Design</td><td>The steady state model was designed to be built using the SteadyCom algorithm. This requires making a joint model of certain specifications built from the individual genome scale models. </td></tr>
+						<tr><td data-cycle="build">Build</td><td>The joint model was built using CreateMultispeciesmodel.m function in the COBRA Toolbox from modified versions of iML1515 and iSyu683.</td></tr>
+						<tr><td data-cycle="test">Test</td><td>SteadyCom was run on the joint model. However, the results showed that the co-culture was infeasible.</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>To troubleshoot and understand the specific issue for this infeasibility, cultures of just E. coli and cyanobacteria were individually built with CreatMultispeciesmodel.m function and analysed with SteadyCom. 
+							<br>Results showed that the issue was in the cyanobacteria model due to lack of standardization of reaction names and the format of sink reactions. This prevented the CreateMultispeciesmodel.m function from identifying the reactions correctly.
+							</td></tr>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="Cycle2_G">
+				    <h3>Cycle 2</h3>
+				    <table>
+					<tr><td data-cycle="design">Design</td><td>Reaction names were changed in the genome scale model and were manually curated into the joint model by us.</td></tr>
+					<tr><td data-cycle="build">Build</td><td>SteadyCom was run using the new joint model.</td></tr>
+					<tr><td data-cycle="test">Test</td><td>SteadyCom showed a successful steady state growth of both organisms with the production of butanol.</td></tr>
+					<tr><td data-cycle="learn">Learn</td><td>Sink reactions in the individual species that take metabolites from the intracellular compartments are not recognized by the CreateMultispeciesModel function and hence not included in the joint model and have to be manually added. </td></tr>
+				</table>
+				</div>
+			    </div>
+			</div>
+			</div>
+<br><br>
+<h1 id="8">Simulating Salt Stress</h1>
+		<hr><br><br>
+			<div class="row"><!-- CYCLE H -->
+				<div class="tab" role="tabpanel">
+				    
+				    <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#Cycle1_H" aria-controls="Cycle1_H" role="tab" data-toggle="tab">Cycle 1</a></li>
+					<li role="presentation"><a href="#Cycle2_H" aria-controls="Cycle2_H" role="tab" data-toggle="tab">Cycle 2</a></li>
+					<li role="presentation"><a href="#Cycle3_H" aria-controls="Cycle3_H" role="tab" data-toggle="tab">Cycle 3</a></li>
+					<li role="presentation"><a href="#Cycle4_H" aria-controls="Cycle4_H" role="tab" data-toggle="tab">Cycle 4</a></li>
+					<li role="presentation"><a href="#Cycle5_H" aria-controls="Cycle5_H" role="tab" data-toggle="tab">Cycle 5</a></li>
+				    </ul>
+				    
+				    <div class="tab-content tabs">
+					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_H">
+					    <h3>Cycle 1</h3>
+						<table>
+							<tr><td data-cycle="design">Design</td><td>The design includes running FBA on a GSM model to obtain values that agree with either literature or our wet lab results. 
+								<br>Media composition determined from previous experimental data in literature.
+								</td></tr>
+							<tr><td data-cycle="build">Build</td><td>GSM model of cyanobacteria S. elongatus UTEX 2973 obtained  from Dr. Costas Manaras’ Lab (Pennsylvania)</td></tr>
+							<tr><td data-cycle="test">Test</td><td>Compare values of the simulation to literature values under similar media composition.
+								<br>Values obtained were slightly off from the values in (Abernathy et al)
+								</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>MoMA is required to traverse all possibilities and narrow down on more realistic values</td></tr>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle2_H">
+					    <h3>Cycle 2</h3>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td>Running MoMA on the GSM model for cyanobacteria </td></tr>
+						<tr><td data-cycle="build">Build</td><td>Organism (model) is put under 150mM salt stress for varying values of CO_2 uptake rates.
+							<br>Salt stress is simulated by coupling biomass and and sucrose accumulation (song et al)</td></tr>
+						<tr><td data-cycle="test">Test</td><td>Compare values for growth rate with Abernathy et al (2017) and Song et al (2016)</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>The model is good enough to produce results from literature increasing our confidence in the viability of the model.</td></tr>
+					</table>
+					</div>
+				    </div>
+				</div>
+				</div>
+				<br><br><br><h1 id="8">The Grand Cycle</h1><br><br>
+
+				<h3 style="text-decoration: underline;"><i>Notation:</i></h3>
+		    <p>In this write-up, we use the following shorthand terms:<br>
+			<ul>
+				<li>By <i>sucrose productivity</i> we denote the rate of sucrose production from S. elongatus in mmol gDW<sup>-1</sup> hr<sup>-1</sup>  </li>
+				<li>By <i>butanol productivity</i> we denote the rate of butanol production from E. coli KJK01and its transformants in mmol gDW<sup>-1</sup> hr<sup>-1</sup>.</li>
+			</ul>
+			</p>
+			<div class="row"><!-- CYCLE I -->
+				<div class="tab" role="tabpanel">
+				    
+				    <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#Cycle1_I" aria-controls="Cycle1_I" role="tab" data-toggle="tab">Cycle 1</a></li>
+					<li role="presentation"><a href="#Cycle2_I" aria-controls="Cycle2_I" role="tab" data-toggle="tab">Cycle 2</a></li>
+					<li role="presentation"><a href="#Cycle3_I" aria-controls="Cycle3_I" role="tab" data-toggle="tab">Cycle 3</a></li>
+				    </ul>
+				    
+				    <div class="tab-content tabs">
+					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_I">
+					    <h3>Cycle 1</h3>
+						<table>
+							<tr><td data-cycle="design">Design</td><td>Based on the shortlist of overexpression and deletion targets from our strain optimization modelling, we will design experiments to actually conduct these overexpression and deletions in S. elongatus and E. coli.</td></tr>
+							<tr><td data-cycle="build">Build</td><td>We will then execute these experiments and measure the sucrose and butanol productivity of all the modified strains</td></tr>
+							<tr><td data-cycle="test">Test</td><td>We will compare this with the original strains to see if the knockout/deletion has made a significant positive impact</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>Those modified strains which give the highest results of increased sucrose and butanol productivity will be selected to be used in the future</td></tr>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle2_I">
+					    <h3>Cycle 2</h3>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td>Our co-culture modelling predicted that increasing both butanol productivity of E. coli and Sucrose productivity of cyanobacteria will result in a better yield of butanol as a whole from the co culture. However this must be tested in the wet lab. We will design experiments to compare the butanol yield of the co culture with the optimized strains from the previous step to the butanol yield of a co culture of the base strains. </td></tr>
+						<tr><td data-cycle="build">Build</td><td>We will then execute these experiments and measure the butanol yield from both co cultures</td></tr>
+						<tr><td data-cycle="test">Test</td><td>We will compare the butanol yields and see if using the optimized strains with higher sucrose and butanol productivity gives a higher butanol yield in co culture.</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>Based on the results, we will know if the results of our co culture modelling holds and that if increasing sucrose and butanol productivity in fact does increase the co culture butanol yield</td></tr>
+					</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="Cycle3_I">
+					    <h3>Cycle 3</h3>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td>Our co culture modelling also predicted that extracting oxygen from the co culture would increase the butanol yield. These results must also be tested in the wetlab. We will design experiments to test the butanol yield from the co culture at different oxygen levels. </td></tr>
+						<tr><td data-cycle="build">Build</td><td>We will execute these experiments and measure the butanol yields at varying oxygen levels</td></tr>
+						<tr><td data-cycle="test">Test</td><td>We will identify the oxygen level at which butanol yield is maximum</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>Based on the above, we will know if the result from drylab that a microaerobic setting for E. coli will give us the highest butanol yield. </td></tr>
+					</table>
+					</div>
+				    </div>
+				</div>
+				</div>
+                        <!-- <p>
                             <ul class="a">
                                 <li style="padding-left:1em;padding-top: 0.3em;">Purify DNA and PCR-verify presence of genes in all strains/plasmids.</li>
                                 <li style="padding-left:1em;padding-top: 0.3em;">Revive ordered bacteria from stocks. Streak new plates and prepare stocks.</li>
@@ -695,244 +836,12 @@ z-index: -1;
                                 <li style="padding-left:1em;padding-top: 0.3em;">Genomically integrate native promoters and carry out fluorescence measurement assays for promoter activity, under high and low light intensities, and high and low carbon dioxide concentrations.</li>
                             </ul><br>
                             Due to the second wave of the pandemic in India, our wet lab work was considerably delayed, effectively leaving us with a mere month and a half in the lab. We utilised our time working remotely to devise a thorough plan of experiments, incorporating a Design-Test-Build cycle:
-                        </p>
+                        </p> -->
 
-<style>
-.engcycle{
-    display: flex;
-    flex-direction: column;
-}
-.engcy-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-        .engcy-title{
-            text-align: center;
-            width: 8rem;
-            padding: 1px 10px;
-            font-size: 1.5rem;
-            box-shadow: 5px 4px 1px #000000;
-                    }
-.engcy-content{
-        padding: 20px 20px;
-        margin: 0px 50px;
-        border-style: solid;
-        border-radius: 5px;
-        border-width: 3px;
-        background-color:beige;
-        color: black;
-        text-align: center;
-        box-shadow: 5px 4px #000000;
-}
-#engcy-design{
-    background: yellowgreen;
-    border-radius: 0.4em 0.4em 0px 0px;
-}
-#engcy-build{
-    background: yellow;
-    color: black;
-}
-#engcy-test{
-    background: orange;
-}
-</style>
-
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <div class="engcycle">
-                        <div class="engcy-header">
-                            <div class="engcy-title" id="engcy-design">
-                                Design
-                            </div>
-                        </div>
-                        <div class="engcy-content" style="border-color: yellowgreen;">
-                            Design constructs via overlap PCR of various native promoters upstream of fluorescent reporters
-                        </div>
-                        <div class="engcy-header">
-                            <div class="engcy-title" id="engcy-build">
-                                Build
-                            </div>
-                        </div>
-                        <div class="engcy-content" style="border-color: yellow;">
-                            Incorporate constructs via homology directed repair into Neutral Site I of the genome
-                        </div>
-                        <div class="engcy-header">
-                            <div class="engcy-title" id="engcy-test">
-                                Test
-                            </div>
-                        </div>
-                        <div class="engcy-content" style="border-color: orange;">
-                            Vary light intensity and concentration of carbon dioxide and study fluorescence to characterise promoter activity (strength and response)
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="engcycle">
-                        <div class="engcy-header">
-                            <div class="engcy-title" id="engcy-design">
-                                Design
-                            </div>
-                        </div>
-                        <div class="engcy-content" style="border-color: yellowgreen;">
-                            Constructs with strong/tunable promoters from previous round, with cscB and with sps and spp
-                        </div>
-                        <div class="engcy-header">
-                            <div class="engcy-title" id="engcy-build">
-                                Build
-                            </div>
-                        </div>
-                        <div class="engcy-content" style="border-color: yellow;">
-                            The former are incorporated via HDR into NSI; the latter into NSIII
-                        </div>
-                        <div class="engcy-header">
-                            <div class="engcy-title" id="engcy-test">
-                                Test
-                            </div>
-                        </div>
-                        <div class="engcy-content" style="border-color: orange;">
-                            Collect supernatant samples over time to estimate sucrose production; use Pakrasi lab’s strains as a reference
-                        </div>
-                    </div>
-
-
-
-                <p>We were unfortunately unable to carry out most of these experiments in the little time remaining to us. We instead acquired sucrose-secreting strains of <i>S. elongatus</i> UTEX 2973 from the Pakrasi lab, to measure their sucrose production rates. We have also acquired everything we need for future experiments according to our original plan.</p>
-          <style>
-              .cycle-container{
-                  display:flex;
-                  flex-direction: column;
-                  align-items:center;
-              }
-              .cycle {
-                min-width: 50rem;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content:center;
-              }
-              .cycle-left{
-                border-radius: 5% 0 0 5%;
-                font-size: 2rem;
-                flex:1;
-                text-align: center;
-                display:flex;
-                flex-direction:column;
-                justify-content:center;
-              }
-              .cycle-right{
-                flex:5;
-                text-align: center;
-                border-bottom: 1px solid;
-                border-top: 1px solid;
-                box-shadow: rgba(240, 46, 170, 0.4) 5px 0px, rgba(240, 46, 170, 0.3) 10px 1px, rgba(240, 46, 170, 0.2) 15px 2px, rgba(240, 46, 170, 0.1) 20px 3px, rgba(240, 46, 170, 0.05) 25px 4px;
-              }
-              .cycle-container svg {
-  height: 5rem;
-}
-              .cycle-container svg line {
-  stroke: #39dd91;
-  stroke-width: 3px;
-  stroke-linecap: round;
-  stroke-dasharray: 2px 20px;
-  animation: animateline 5s linear both infinite;
-}
-@-moz-keyframes animateline {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: -5rem;
-  }
-}
-@-webkit-keyframes animateline {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: -5rem;
-  }
-}
-@-o-keyframes animateline {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: -5rem;
-  }
-}
-@keyframes animateline {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: -5rem;
-  }
-}
-              
-              @media screen and (max-width: 800px) {
-  .cycle {
-    flex-direction: column;
-  }
-  .cycle-left{
-      border-radius: 5% 5% 0 0;
-  }
-}
-
-              #design {
-    background: linear-gradient(270deg, #476f65, #933708);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-          </style>          
-<div class="cycle-container">
-    <div class="cycle">
-        <div class="cycle-left" id="design"><div><i>Design</i></div></div>
-        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
-    </div>
-    <svg viewbox="0 0 10 100">
-        <line x1="5" x2="5" y1="0" y2="100"/>
-    </svg>
-    <div class="cycle">
-        <div class="cycle-left" id="design"><div><i>Build</i></div></div>
-        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
-    </div>
-    <svg viewbox="0 0 10 100">
-        <line x1="5" x2="5" y1="0" y2="100"/>
-    </svg>
-    <div class="cycle">
-        <div class="cycle-left" id="design"><div><i>Learn</i></div></div>
-        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
-    </div>
-    <svg viewbox="0 0 10 100">
-        <line x1="5" x2="5" y1="0" y2="100"/>
-    </svg>
-    <div class="cycle">
-        <div class="cycle-left" id="design"><div><i>Test</i></div></div>
-        <div class="cycle-right">Content<br>Content<br>Content<br>Content<br>Content<br>Content<br></div>
-    </div>
-</div>
-
-
+			<h1 id="9">References</h1><br>
+			<ol>
+				<li>Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO.</li>
+			</ol>
 			</div>
 
 		</div>
