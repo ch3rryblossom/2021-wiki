@@ -105,9 +105,9 @@
 			  Human Practices
 			</a>
 			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
-			  <li><a class="dropdown-item" href="Human_Practices.html">iHP</a></li>
-			  <li><a class="dropdown-item" href="Inclusivity.html">Inclusivity</a></li>
-			  <li><a class="dropdown-item" href="Communication.html">Education</a></li>
+			  <li><a class="dropdown-item" href="Human_Practices.html">Integrated Human Practices</a></li>
+			  <li><a class="dropdown-item" href="Inclusivity.html">Inclusivity and Accessibility</a></li>
+			  <li><a class="dropdown-item" href="Communication.html">Public Engagement and Education</a></li>
 			</ul>
 		      </li>
 		      <li class="nav-item">
@@ -144,9 +144,9 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Planned pipeline of experiments</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Cycle 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Cycle 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Expt. 1 - “Choosing Optimal promoters”</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Expt 2 - “gDNA extraction and PCR”</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Expt 3 - “E. coli in CoBG11”</a></li>
                             <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
                             <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
                             <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
@@ -246,6 +246,7 @@ td {
          }
 td[data-cycle="design"]{
 	background-color: pink;
+	color: black;
 }
 td[data-cycle="build"]{
 	background-color: yellowgreen;
@@ -258,11 +259,81 @@ td[data-cycle="learn"]{
 }
     </style>
 
+<!--
+<div class="row">
+	<div class="tab" role="tabpanel">
+	    
+	    <ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#Cycle1_A" aria-controls="Cycle1_A" role="tab" data-toggle="tab">Cycle 1</a></li>
+		<li role="presentation"><a href="#Cycle2_A" aria-controls="Cycle2_A" role="tab" data-toggle="tab">Cycle 2</a></li>
+		<li role="presentation"><a href="#Cycle3_A" aria-controls="Cycle3_A" role="tab" data-toggle="tab">Cycle 3</a></li>
+		<li role="presentation"><a href="#Cycle4_A" aria-controls="Cycle4_A" role="tab" data-toggle="tab">Cycle 4</a></li>
+		<li role="presentation"><a href="#Cycle5_A" aria-controls="Cycle5_A" role="tab" data-toggle="tab">Cycle 5</a></li>
+	    </ul>
+	    
+	    <div class="tab-content tabs">
+		<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_A">
+		    <h3>Cycle 1</h3>
+			<table>
+				<tr><td data-cycle="design">Design</td><td></td></tr>
+				<tr><td data-cycle="build">Build</td><td></td></tr>
+				<tr><td data-cycle="test">Test</td><td></td></tr>
+				<tr><td data-cycle="learn">Learn</td><td></td></tr>
+			</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle2_A">
+		    <h3>Cycle 2</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td></td></tr>
+			<tr><td data-cycle="build">Build</td><td></td></tr>
+			<tr><td data-cycle="test">Test</td><td></td></tr>
+			<tr><td data-cycle="learn">Learn</td><td></td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle3_A">
+		    <h3>Cycle 3</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td></td></tr>
+			<tr><td data-cycle="build">Build</td><td></td></tr>
+			<tr><td data-cycle="test">Test</td><td></td></tr>
+			<tr><td data-cycle="learn">Learn</td><td></td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle4_A">
+		    <h3>Cycle 4</h3>
+		    <table>
+			<tr><td data-cycle="design">Design</td><td></td></tr>
+			<tr><td data-cycle="build">Build</td><td></td></tr>
+			<tr><td data-cycle="test">Test</td><td></td></tr>
+			<tr><td data-cycle="learn">Learn</td><td></td></tr>
+		</table>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="Cycle5_A">
+			<h3>Cycle 5</h3>
+			<table>
+				<tr><td data-cycle="design">Design</td><td></td></tr>
+				<tr><td data-cycle="build">Build</td><td></td></tr>
+				<tr><td data-cycle="test">Test</td><td></td></tr>
+				<tr><td data-cycle="learn">Learn</td><td></td></tr>
+			</table>
+		</div>
+	    </div>
+	</div>
+
+-->
+
 
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Experiment 1</h1>
+                    <h1 id="1">Experiment 1 - “Choosing Optimal promoters”</h1>
                     <hr><br>
+		    <h3 style="text-decoration: underline;"><i>Notation:</i></h3>
+		    <p>In this write-up, we use the following shorthand terms:<br>
+			<ul>
+				<li>By <sup>sucrose productivity</sup> we denote the rate of sucrose production from S. elongatus in mmol gDW<sup>-1</sup> hr<sup>-1</sup>  </li>
+				<li>By <sup>butanol productivity</sup> we denote the rate of butanol production from E. coli KJK01and its transformants in mmol gDW<sup>-1</sup> hr<sup>-1</sup>.</li>
+			</ul>
+			</p>
 			<div class="row">
 				<div class="tab" role="tabpanel">
 				    <!-- Nav tabs -->
@@ -278,18 +349,18 @@ td[data-cycle="learn"]{
 					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_A">
 					    <h3>Cycle 1</h3>
 						<table>
-							<tr><td data-cycle="design">Design</td><td></td></tr>
-							<tr><td data-cycle="build">Build</td><td></td></tr>
-							<tr><td data-cycle="test">Test</td><td></td></tr>
-							<tr><td data-cycle="learn">Learn</td><td></td></tr>
+							<tr><td data-cycle="design">Design</td><td>Design constructs via overlap PCR of various <em>native</em> promoters - <em>Pcpc560, PcscB m6, PpsbA2, PpsbA3</em> - upstream of fluorescent reporters. Compare their promoter strengths to that of strong constitutive promoter J23119 and the IPTG-inducible <em>lacUV5</em>.</td></tr>
+							<tr><td data-cycle="build">Build</td><td>Incorporate constructs via homology directed repair (HDR) into Neutral Site I of the genome using a CRISPR/Cas12a system</td></tr>
+							<tr><td data-cycle="test">Test</td><td>Vary light intensity and concentration of carbon dioxide and study fluorescence to characterize promoter activity (strength and response)</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>Select promoters with high activity and easily tunable response.</td></tr>
 						</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle2_A">
 					    <h3>Cycle 2</h3>
 					    <table>
-						<tr><td data-cycle="design">Design</td><td></td></tr>
-						<tr><td data-cycle="build">Build</td><td></td></tr>
-						<tr><td data-cycle="test">Test</td><td></td></tr>
+						<tr><td data-cycle="design">Design</td><td>Design constructs with strong/tunable promoters from previous round, with <em>cscB</em>, <em>sps</em> and <em>spp</em></td></tr>
+						<tr><td data-cycle="build">Build</td><td>Incorporate <em>cscB</em> is incorporated into Neutral Site I, and&nbsp; <em>sps</em> and <em>spp</em> into Neutral Site III, <em>via </em>HDR using a CRISPR/Cas12a system</td></tr>
+						<tr><td data-cycle="test">Test</td><td>Collect supernatant samples over time to estimate sucrose production; use Dr Pakrasi lab’s strains as a positive control.</td></tr>
 						<tr><td data-cycle="learn">Learn</td><td></td></tr>
 					</table>
 					</div>
