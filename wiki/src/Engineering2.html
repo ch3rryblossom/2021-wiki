@@ -241,7 +241,21 @@ td {
             border-width:1px; 
             border-color:#fff; 
             padding:10px;
+	    text-align: center; 
+	    vertical-align: middle;
          }
+td[data-cycle="design"]{
+	background-color: pink;
+}
+td[data-cycle="build"]{
+	background-color: yellowgreen;
+}
+td[data-cycle="test"]{
+	background-color: blueviolet;
+}
+td[data-cycle="learn"]{
+	background-color: mediumpurple;
+}
     </style>
 
 
@@ -272,19 +286,39 @@ td {
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle2_A">
 					    <h3>Cycle 2</h3>
-					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td></td></tr>
+						<tr><td data-cycle="build">Build</td><td></td></tr>
+						<tr><td data-cycle="test">Test</td><td></td></tr>
+						<tr><td data-cycle="learn">Learn</td><td></td></tr>
+					</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle3_A">
 					    <h3>Cycle 3</h3>
-					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td></td></tr>
+						<tr><td data-cycle="build">Build</td><td></td></tr>
+						<tr><td data-cycle="test">Test</td><td></td></tr>
+						<tr><td data-cycle="learn">Learn</td><td></td></tr>
+					</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle4_A">
 					    <h3>Cycle 4</h3>
-					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+					    <table>
+						<tr><td data-cycle="design">Design</td><td></td></tr>
+						<tr><td data-cycle="build">Build</td><td></td></tr>
+						<tr><td data-cycle="test">Test</td><td></td></tr>
+						<tr><td data-cycle="learn">Learn</td><td></td></tr>
+					</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle5_A">
 						<h3>Cycle 5</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius.</p>
+						<table>
+							<tr><td data-cycle="design">Design</td><td></td></tr>
+							<tr><td data-cycle="build">Build</td><td></td></tr>
+							<tr><td data-cycle="test">Test</td><td></td></tr>
+							<tr><td data-cycle="learn">Learn</td><td></td></tr>
+						</table>
 					</div>
 				    </div>
 				</div>
