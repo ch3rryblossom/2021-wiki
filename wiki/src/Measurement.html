@@ -93,7 +93,7 @@
 			</a>
 			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
 			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
-			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="EColi.html"><i>E. coli</i></a></li>
 			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
 			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
 			</ul>
@@ -155,7 +155,7 @@
 			margin-bottom: 20px;
 			position: -webkit-sticky;
 			position: sticky;
-			top: 13% ;
+			top: 12% ;
 		}
 	</style>
 	
@@ -186,16 +186,16 @@
                     <h1>Overview</h1>
                     <hr><br><br><br>
 
-		    		<p>Good measurement is crucial for reproducible, reliable, and comparable science. Characterization and standardization of systems is important especially from the ‘Design - Build - Test - Learn’ paradigm of synthetic biology which allows for easier debugging and makes predictions from data more robust. Keeping this in mind, we designed and developed several assays that were relevant to our project.</p>
+					<p>Good measurement is crucial for reproducible, reliable, and comparable science. Characterization and standardization of systems is important especially from the ‘Design - Build - Test - Learn’ paradigm of synthetic biology which allows for easier debugging and makes predictions from data more robust. Keeping this in mind, we designed and developed several assays that were relevant to our project.</p>
 					<br>
 
-					<p>We aimed to create a stable, long-term co-culture of <i>Synechococcus elongatus</i> and <i>E. coli</i> for butanol production and this involved the measurement of crucial parameters on which the co-culture depended. One such parameter was growth. To create a stable co-culture the growth of the two organisms has to be similar, especially in our co-culture, where the <i>E. coli</i> might die out if they grow too quickly and cannot be supported through the sucrose production rates of <i>S.elongatus</i>. It is known that <i>E. coli</i> grows much faster than <i>S. elongatus</i>, which motivates various strategies to slow down the growth of <i>E. coli</i> such as by reducing the temperature of the co-culture to 30&#176 <sup><a href="#ref1">[1]</a></sup>. Thus measuring and monitoring the growth of both organisms is crucial for which we designed assays as listed below.</p>
+					<p>We aimed to create a stable, long-term co-culture of <i>Synechococcus elongatus</i> and <i>E. coli</i> for butanol production and this involved the measurement of crucial parameters on which the co-culture depended. One such parameter was growth. To create a stable co-culture the growth of the two organisms has to be similar, especially in our co-culture, where the <i>E. coli</i> might die out if they grow too quickly and cannot be supported through the sucrose production rates of <i>S. elongatus</i>. It is known that <i>E. coli</i> grows much faster than <i>S. elongatus</i>, which motivates various strategies to slow down the growth of <i>E. coli</i> such as by reducing the temperature of the co-culture to 30&#176C <sup><a href="#ref1">[1]</a></sup>. Thus measuring and monitoring the growth of both organisms is crucial for which we designed assays as listed below.</p>
 					<br>
 
-					<p>It is also known that butanol is toxic to <i>E. coli</i><sup><a href="#ref3">[3]</a></sup> and cyanobacteria<sup><a href="#ref4">[4]</a></sup> and only 1.0% butanol (v/v) can severely inhibit growth3. Thus the minimum inhibitory concentration (MIC) is a crucial parameter to consider in process and bioreactor design which we aimed to measure.</p>
+					<p>It is also known that butanol is toxic to <i>E. coli</i><sup><a href="#ref2">[2]</a></sup> and cyanobacteria<sup><a href="#ref3">[3]</a></sup> and only 1.0% butanol (v/v) can severely inhibit growth<sup><a href="#ref2">[2]</a></sup>. Thus the minimum inhibitory concentration (MIC) is a crucial parameter to consider in process and bioreactor design which we aimed to measure.</p>
 					<br>
 
-					<p>Quantification of the sucrose production by <i>S. elongatus</i> is an important measurement since it dictates the dynamics and the average growth of the co-culture which in turn is linked to the butanol production by <i>E. coli</i>. We also used a sucrose assay in order to determine the sucrose concentration in the supernatants of <i>S. elongatus</i> cultures at different stages of growth.</p>
+					<p>Quantification of the sucrose production by <i>S. elongatus</i> is an important measurement since it dictates the dynamics and the average growth of the co-culture which in turn is linked to the butanol production by <i>E. coli</i>. We used a colorimetric sucrose assay in order to determine the sucrose concentration in the supernatants of <i>S. elongatus</i> cultures at different stages of growth.</p>
 					<br>
 
 					<p>Quantification of butanol is also an important consideration since it informs us of the percentage of the theoretical yield the co-culture has achieved and allows for better process design to maximize yield. For butanol quantification, we used Nuclear Magnetic Resonance spectroscopy.</p>
@@ -209,39 +209,44 @@
 
 					<h3>Principle</h3>
 					<br>
-					<p>Measuring the Optical Density (OD) of a bacterial culture can be used to assess bacterial growth in the culture and by monitoring the rate of increase of the OD values we can identify different stages of growth such as lag, log, and stationary phase.</p>
+					<p>Measuring the Optical Density (OD) of a bacterial culture can be used to assess bacterial growth in the culture<sup><a href="#ref4">[4]</a></sup> and by monitoring the rate of increase of the OD values we can identify different stages of growth such as lag, log, and stationary phase.</p>
 					<br>
-					<p>The OD value represents how much light is scattered by the sample and the greater the cell density, the greater will be the OD value. However, the OD value is not an absolute unit of measurement since it depends on the spectrophotometer design, light intensity. Thus comparing measurements across instruments and experiments is not possible and a calibration protocol is necessary<sup><a href="#ref2">[2]</a></sup>.</p>
-                    <br><br>
+
+					<p>However, the OD value is not an absolute unit of measurement as it depends on the spectrophotometer design, light intensity, and other instrument-specific parameters. Thus comparing measurements across instruments and experiments is not possible and a calibration protocol is necessary.<sup><a href="#ref5">[5]</a></sup> </p>
+					<br><br>
             
-					<!-- CYANO -->
-					<h2>S. elongatus Growth Assay</h2>
+					<!-- E coli-->
+					<h2>E. coli Growth Assay</h2>
 					<br>
-					<p>Algal cultures such as those of cyanobacteria are usually assayed for growth by measuring absorbance at wavelengths greater than 700 nm - for our experiments, we used 750 nm. This is because it is relatively reliable and inexpensive and also avoids the absorption of light by cell pigments such as chlorophyll and carotenoids<sup><a href="#ref5">[5]</a></sup>. </p>
+					<p><i>E. coli</i> growth is usually assayed at an absorbance of 600nm, which is usually because the media it is grown in (Luria-Bertani or Terrific Broth) absorbs light in the 400 nm (yellow light) range and 600 nm ensures that there is no interfering absorbance from the media.<sup><a href="#ref6">[6]</a></sup></p>
 					<br>
 
 					<h3>Standardization</h3>
 					<br>
-
+					<p>We planned to standardize the <i>E. coli</i> OD measurements by calibrating them to the estimated cell count using a serial dilution of silica microspheres as described in Segura et al, 2012<sup><a href="#ref3">[3]</a></sup>, by using the 2019 iGEM Measurement Kit materials. However, as we were only able to access the lab for about a month and a half due to the hard-hitting second wave of the COVID-19 pandemic in India, we were not able to perform this experiment and plan to do so in the future.</p>
 					<h3>Protocol</h3>
 					<br>
-					<p>The protocol for this assay can be found <a href="https://dx.doi.org/10.17504/protocols.io.bw8pphvn">here</a>.</p>
+					<p>The protocol for this assay can be found <a href="https://dx.doi.org/10.17504/protocols.io.bxa2pige">here</a>.</p>
 					<br><br><br>	
 
 
 
-					<h2><i>E. coli</i> Growth Assay</h2>
-					<p><i>E. coli</i> growth is usually assayed at an absorbance of 600nm, which is usually because the media it is grown in (Luria-bertani or terrific broth) absorbs light in the 400 nm (yellow light) range and 600 nm ensures that there is no interfering absorbance from the media<sup><a href="#ref6">[6]</a></sup>.</p>
+					<h2><i>S. elongatus</i> Growth Assay</h2>
+					<br>
+					<p>Algal cultures such as those of cyanobacteria are usually assayed for growth by measuring absorbance at wavelengths greater than 700 nm - for our experiments, we used 730 nm. This is because it is relatively reliable and inexpensive; and also because the OD at these wavelengths is unaffected by the absorption of light by cell pigments such as chlorophyll and carotenoids.<sup><a href="#ref7">[7]</a></sup></p>
 					<br>
 
 					<h3>Standardization</h3>
 					<br>
-					<p>We planned to standardize the <i>E. coli</i> OD measurements by calibrating them to the estimated cell count using serial dilution of silica microspheres as described in <sup><a href="#ref6">[2]</a></sup>, by using the 2019 iGEM Measurement Kit materials. However, as we were only able to access the lab for about a month due to the second wave of the COVID-19 pandemic in India, we were not able to perform this experiment and plan to do so in the future.</p>
+					<p>As <i>S. elongatus</i> cells are not of the same size as <i>E. coli</i>, and as their OD is being measured at a different wavelength, we cannot use the silica microspheres from the 2019 iGEM Distribution Kit to calibrate their OD to cell count - alas! We turn instead to the classical method for counting colony-forming units (CFUs). The method is simple - prepare serial dilutions of a culture of a known initial OD. Use these to streak agar plates and count the number of colonies formed.<sup><a href="#ref8">[8]</a></sup> Each circular colony is derived from a single, viable cell of the original culture, and the number of colonies can thus be used to calculate an estimate of the number of cells in our initial culture.<sup><a href="#ref8">[8]</a></sup></p>
 					<br>
+					<p>Note that this estimate is of colony-forming units, i.e, those cells that are capable of dividing when plated in the culture. Any population might also contain stressed cells or other cells which are incapable of forming a colony when plated</p>
+					<br>
+
 
 					<h3>Protocol</h3>
 					<br>
-					<p>The protocol for this assay can be found <a href="https://dx.doi.org/10.17504/protocols.io.bxa2pige">here</a>.</p>
+					<p>The protocol for this assay can be found <a href="https://dx.doi.org/10.17504/protocols.io.bw8pphvn">here</a>.</p>
 					<a id="3"></a><br>
 					<!--------------------------------- END OF GROWTH ASSAYS ---------------------------------------------->
 				
@@ -251,10 +256,13 @@
 					<hr><br><br><br>
 
 					<h3>Principle</h3>
-					<p>Minimum inhibitory concentration (MIC) was assayed using the broth dilution method, for which the MIC is defined as “the lowest concentration (in mg l<sup>-1</sup>) of the antimicrobial agent that prevents visible growth of a microorganism under defined conditions<sup><a href="#ref7">[7]</a></sup>.</p>
+					<br>
+					<p>Minimum inhibitory concentration (MIC) was assayed using the broth dilution method, for which the MIC is defined as “the lowest concentration (in mg L<sub>-1</sub>) of the antimicrobial agent that prevents visible growth of a microorganism under defined conditions.”<sup><a href="#ref8">[8]</a></sup></p>
 					<br>
 
 					<h3>Standardization</h3>
+					<bR>
+					<p>Our MIC assay involves growing parallel cultures of a particular microorganism over a range of butanol concentrations. A negative control is maintained at a butanol concentration of zero. Growth of the microorganism at any concentration is normalized by that of the negative control, to obtain standardized measurements that can be used across labs and instruments. </p>
 					<br>
 
 					<h3>Protocol</h3>
@@ -268,7 +276,16 @@
 					<hr><br><br><br>
 
 					<h3>Principle</h3>
-					<p>For sucrose quantification, we used the Megazyme Sucrose/D-Glucose K-SUCGL kit. The kit uses the enzymes glucose oxidase, peroxidase and β-fructosidase (invertase). Sucrose is hydrolyzed by invertase to D-glucose and D-fructose. The D-glucose content is determined by conversion to a red-colored quinoneimine dye (whose concentration is quantified via absorbance measurements at 510 nm) by the action of glucose oxidase and peroxidase at pH 7.4 and employing p-hydroxybenzoic acid and 4-aminoantipyrine<sup><a href="#ref8">[8]</a></sup>. The reactions are illustrated below.</p>
+					<br>
+					<p>For sucrose quantification, we used the Megazyme Sucrose/D-Glucose K-SUCGL kit. The kit uses the enzymes glucose oxidase, peroxidase, and β-fructosidase (invertase). Sucrose is hydrolyzed by invertase to D-glucose and D-fructose.</p>
+					<br>
+
+					<p>The D-glucose content is then determined by conversion to a red-colored quinoneimine dye (whose concentration is quantified via absorbance measurements at 510 nm) by the action of glucose oxidase and peroxidase at pH 7.4 and employing p-hydroxybenzoic acid and 4-aminoantipyrine.<sup><a href="#ref9">[9]</a></sup> The reactions are illustrated below.</p>
+					<br>
+
+					<div class="graph">
+						<img src="assets/WetlabPhotos/Illustrations/Measurement_rxns.png">
+					</div>
 					<br>
 
 					<p>The absorbance readings increase linearly with sucrose concentration over a range of concentrations, before plateauing out at some value. If a particular sample yields an absorbance in the plateau range, it needs to be diluted down into the linear range before it can be measured again.</p>
@@ -276,20 +293,52 @@
 
 					<h3>Standardization</h3>
 					<br>
-					<p>If there is any free D-glucose present in the sample, prior to the enzymatic inversion of sucrose to D-glucose, it would result in an overestimation of the amount of sucrose present in the sample. Thus, for every sample, two absorbance measurements must be taken: i. without incubation with invertase - this provides us the initial concentration of D-glucose in the sample and ii. After incubation with invertase - this provides us with the final concentration of D-glucose in the sample.</p>
+					<p>If there is any free D-glucose present in the sample, prior to the enzymatic inversion of sucrose to D-glucose, one would overestimate the amount of sucrose present in the sample. Thus, for every sample, two absorbance measurements must be taken:</p>
 					<br>
+
+					<ol class="a">
+						<li style="padding-left: 1em;">Without incubation with invertase - this provides us the initial concentration of D-glucose in the sample</li>
+						<li style="padding-left: 1em;"> After incubation with invertase - this provides us with the final concentration of D-glucose in the sample.<sup><a href="#ref9">[9]</a></sup></li>
+					</ol>
+					<br>
+
 					<p>The sucrose concentration present in the sample corresponds directly to the difference in D-glucose concentrations before and after incubation with invertase.</p>
 					<br>
-					<p>The kit provides a 100 ug D-glucose standard solution whose absorbance allows one to calculate a ‘factor’ that relates absorbance with D-glucose concentration, and by extension, sucrose concentration. </p>
+
+					<p>The kit provides a 100 ug D-glucose standard solution whose absorbance allows one to calculate a factor, denoted by ‘\(F\)’, that relates absorbance with D-glucose concentration, and by extension, sucrose concentration.<sup><a href="#ref9">[9]</a></sup></p>
 					<br>
-					<p>A simple formula can then be used to estimate the concentration of sucrose from the difference in absorbances of the sample - before and after incubation with invertase - using the ‘factor’ calculated.</p>
+
+					<p>A simple formula can then be used to estimate the concentration of sucrose from the difference in absorbances of the sample - before and after incubation with invertase - using the value of \(F\) calculated.<sup><a href="#ref9">[9]</a></sup></p>
 					<br>
+
 					<p>Distilled water with the appropriate enzymes may be used as blanks for absorbance readings.</p>
 					<br>
-					<p>We also recommend constructing a standard curve of absorbance versus concentration (using sucrose solutions of known concentration) to identify accurately the limits of the linear range.</p>
+
+					<p>We also recommend constructing a standard curve of absorbance versus concentration (using sucrose solutions of known concentration) to identify accurately the limits of the linear range. The slope of the linear range can also be used to relate the absorbance of a sample to its corresponding sucrose concentration.</p>
 					<br>
+
 					<p>We created standard sucrose solutions of  0, 0.01, 0.05, 0.5, 1, 2.5, 5, and 10 g/L concentrations and measured their corresponding absorbance values to plot a standard curve.</p>
 					<br>
+
+					<div class="graph">
+						<img src="assets/Wetlab_Graphs/E_coli/Measurements/Sucrose_Assay_MichaelisFit.png" width=400>
+						<p id="desc">Absorbance vs sucrose concentration for prepared sucrose solutions of standard concentrations with a Hill function \((n=1)\) fit to the scatter. The linear region lies below the sucrose concentration of 2.5 g/L.  Equation: \(Y = 2.304{ X \over {1.675 + X}}\) , R<sup>2</sup>:0.9607</p>
+						<br> <br>
+					</div>
+
+					<p>We found that our scatter plot is well modeled by a Hill function having a Hill coefficient of \(1 : Y = m * {X /over {K + X}}\). At lower sucrose concentrations, the scatter plot is best modeled by an affine fit \((Y = mX + b)\); however, presumably due to fluctuations in our measurements, this yields a negative y-intercept, which we wished to avoid simply because absorbance of the sample must be zero if the sucrose concentration present is zero. Setting \(b = 0\), we opted for a linear fit \((Y = mX)\).</p>
+					<br>
+
+					<div class="graph">
+						<img src="assets/Wetlab_Graphs/E_coli/Measurements/SucroseAssay_AffineFit.png" width=400>
+						<p id="desc">Affine fit for linear region below 2.5 g/L. Equation: \(Y = 0.607X + 0.1015, R^2:0.904\)</p>
+						<br><br>
+					</div>
+
+					<div class="graph">
+						<img src="assets/Wetlab_Graphs/E_coli/Measurements/SucroseAssayLinearFit.png" width=400>
+						<p id="desc">Linear fit for linear region below 2.5 g/L, equation: \(Y = 0.6623X , R^2: 0.884\)</p>
+					</div>
 
 					<h3>Protocol</h3>
 					<br>
@@ -304,26 +353,42 @@
 
 					<h3>GC-MS for Butanol Detection and Quantification</h3>
 					<br>
-					<p>When we first started lab work, we were looking for an easy and accessible way to detect and quantify the butanol and ethanol<sup><a href="#ref9">[9]</a></sup> produced by our <i>E. coli</i> KJK01 culture. We thought of using HPLC, but we did not have a butanol column. We then thought of going with NMR, but we could only submit 5-6 samples at a time, and the results would take about a week to arrive. That is when Dr. Srinivas Hotha, Professor at the Chemistry Department of IISER Pune, offered to lend us his desktop, portable GC-MS device for us to use.</p>
+					<p>When we first started lab work, we were looking for an easy and accessible way to detect and quantify the butanol and ethanol<sup><a href="#ref10">[10]</a></sup> produced by our <i>E. coli</i> KJK01 culture. We thought of using HPLC, but we did not have a column suited for quantifying butanol. We then considered NMR, but discovered we could only submit 5-6 samples at a time to the institutional NMR facility, and they would take about a week to get back to us with the results. That is when Dr. Srinivas Hotha, Professor at the Chemistry Department of IISER Pune, offered to lend us his desktop, a portable GC-MS device for us to use.</p>
 					<br>
-					<p>It was very convenient for us as we could analyze an unlimited number of samples, and would not have to wait for the analysis results. The experiments we had planned for the co-culture portion of the project generated a very large number of samples, and this apparatus would reduce the time it took for us to analyze them. We could also keep it in our lab instead of constantly shuttling back and forth to the building with the NMR equipment.</p>
+
+					<p>It seemed very convenient for us as we could analyze an unlimited number of samples, and would not have a long waiting time for the results. The experiments we had planned for the co-culture portion of the project generated a very large number of samples, and this apparatus would have reduced the time it took for us to analyze them. We could also keep it in our lab instead of constantly shuttling back and forth to the building with the NMR equipment.</p>
 					<br>
-					<p>The problem with this method was that after testing the machine and seeing how it works, we realised that it can't support any aqueous solutions. Our supernatants are obviously aqueous and hence were incompatible with the machine. We decided to go with NMR spectroscopy for the detection and quantification of butanol and ethanol.</p>
+
+					<p>The problem with this method was that after testing the machine and seeing how it works, we realized that it can't support any aqueous solutions. Our supernatants are obviously aqueous and hence were incompatible with the machine. We were forced, therefore, to proceed with NMR spectroscopy for the detection and quantification of butanol and ethanol.</p>
+					<br>
+
+					<h3>NMR for Butanol Detection and Quantification</h3>
+					<br>
+					<h3>Principle<sup><a href="#ref11">[11]</a></sup></h3>
+					<br>
+
+					<p>Nuclear magnetic resonance (NMR) spectroscopy is a spectroscopic technique that observes local magnetic fields around atomic nuclei based on their absorption of electromagnetic radiation in the radio-frequency region of 4 to 900 MHz.</p>
+					<br>
+
+					<p>The principle behind NMR is that many nuclei have a spin and all nuclei are electrically charged. If an external magnetic field is applied, energy transfer is possible between the ground state and a higher energy level (generally a single energy gap). The energy transfer takes place at a wavelength that corresponds to appropriate radio frequencies and when the spin returns to its ground state, energy is emitted at the same frequency. The signal that matches this transfer is measured and processed in order to yield an NMR spectrum for the nucleus concerned. Fields are highly characteristic of individual compounds. NMR also provides detailed information about the structure, dynamics, reaction state, and chemical environment of molecules.</p>
 					<a id="6"></a><br><a id="ref1"></a><br><a id="ref2"></a><br><a id="ref3"></a><br><a id="ref4"></a>
 					<!------------------------------------------- END OF NMR -------------------------------------------->
 
 					<h3>References</h3>
 					<hr>
 					<ol class="a">
-						<li style="padding-left: 1em;" id="ref6">Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO 2. Biotechnology for biofuels, 13(1), 1-14.</li>
-						<li style="padding-left: 1em;" id="ref7">Beal, J., Farny, N. G., Haddock-Angelli, T., Selvarajah, V., Baldwin, G. S., Buckley-Taylor, R., ... & Workman, C. T. (2020). Robust estimation of bacterial cell count from optical density. Communications biology, 3(1), 1-29.</li>
+						<li style="padding-left: 1em;" id="ref6">Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium <i>Synechococcus elongatus</i> UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO 2. Biotechnology for biofuels, 13(1), 1-14.</li>
+						<li style="padding-left: 1em;" id="ref7">Segura, A., Molina, L., Fillet, S., Krell, T., Bernal, P., Muñoz-Rojas, J., & Ramos, J. L. (2012). Solvent tolerance in Gram-negative bacteria. Current opinion in biotechnology, 23(3), 415-421.</li>
 						<li style="padding-left: 1em;" id="ref8">Segura, A., Molina, L., Fillet, S., Krell, T., Bernal, P., Muñoz-Rojas, J., & Ramos, J. L. (2012). Solvent tolerance in Gram-negative bacteria. Current opinion in biotechnology, 23(3), 415-421.</li>
-						<li style="padding-left: 1em;" id="ref9">Segura, A., Molina, L., Fillet, S., Krell, T., Bernal, P., Muñoz-Rojas, J., & Ramos, J. L. (2012). Solvent tolerance in Gram-negative bacteria. Current opinion in biotechnology, 23(3), 415-421.</li>
+						<li style="padding-left: 1em;" id="ref9">Stevenson et al, 2016 -Stevenson, K., McVey, A. F., Clark, I. B., Swain, P. S., & Pilizota, T. (2016). General calibration of microbial growth in microplate readers. Scientific reports, 6(1), 1-7. <a href="https://doi.org/10.1038/srep38828">https://doi.org/10.1038/srep38828</a></li>
+						<li style="padding-left: 1em;" id="ref10">Beal, J., Farny, N. G., Haddock-Angelli, T., Selvarajah, V., Baldwin, G. S., Buckley-Taylor, R., ... & Workman, C. T. (2020). Robust estimation of bacterial cell count from optical density. Communications biology, 3(1), 1-29.</li>
+						<li style="padding-left: 1em;" id="ref11">Hassan, Hosni. (2016). Re: Why is 600nm wavelength recommended for optical density check of bacteria culture and is there any literature to back it?. Retrieved from: <a hre="https://www.researchgate.net/post/why_is_600nm_wavelength_recommended_for_optical_density_check_of_bacteria_culture_and_is_there_any_literature_to_back_it/57853145f7b67efa1504608b/citation/download">reasearch gate</a>.</li>
 						<li style="padding-left: 1em;">Chioccioli, M., Hankamer, B., & Ross, I. L. (2014). Flow cytometry pulse width data enables rapid and sensitive estimation of biomass dry weight in the microalgae Chlamydomonas reinhardtii and Chlorella vulgaris. PLoS One, 9(5), e97269.</li>
-						<li style="padding-left: 1em;">Hassan, Hosni. (2016). Re: Why is 600nm wavelength recommended for optical density check of bacteria culture and is there any literature to back it?. Retrieved from: <a hre="https://www.researchgate.net/post/why_is_600nm_wavelength_recommended_for_optical_density_check_of_bacteria_culture_and_is_there_any_literature_to_back_it/57853145f7b67efa1504608b/citation/download">reasearch gate</a>.</li>
+						<li style="padding-left: 1em;">Moniruzzaman, Md. (2018). Bacterial calibration curve using OD and CFU/ml. <a href="https://www.researchgate.net/publication/323018164_Bacterial_calibration_curve_using_OD_and_CFUml">https://www.researchgate.net/publication/323018164_Bacterial_calibration_curve_using_OD_and_CFUml</a></li>
 						<li style="padding-left: 1em;">Wiegand, I., Hilpert, K., & Hancock, R. E. (2008). Agar and broth dilution methods to determine the minimal inhibitory concentration (MIC) of antimicrobial substances. Nature protocols, 3(2), 163-175.</li>
 						<li style="padding-left: 1em;"><a href="https://www.megazyme.com/documents/Assay_Protocol/K-SUCGL_DATA.pdf">Megazyme Assay Protocol</a></li>
-						<li style="padding-left: 1em;">Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
+						<li style="padding-left: 1em;">Ali Samy Abdelaal, Kamran Jawed, Syed Shams Yazdani, CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium, Journal of Industrial Microbiology and Biotechnology, Volume 46, Issue 7, 1 July 2019, Pages 965–975, <a href="https://doi.org/10.1007/s10295-019-02180-8">https://doi.org/10.1007/s10295-019-02180-8"</a></li>
+						<li style="padding-left: 1em;"><a href="https://www.sciencedirect.com/topics/materials-science/nuclear-magnetic-resonance-spectroscopy">https://www.sciencedirect.com/topics/materials-science/nuclear-magnetic-resonance-spectroscopy</a></li>
 					</ol>
 					<br><br>
 				</div>
@@ -382,6 +447,7 @@
     <script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 	<!-- Gets the screenheight of each page for Scrollbar? -->
