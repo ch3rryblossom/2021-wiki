@@ -99,7 +99,7 @@
 
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
 		<div class="container-fluid nav-container">
-		  <a class="navbar-brand" href="#">
+		  <a class="navbar-brand" href="index.html">
 			<img src="assets/svgs/synbactory2.svg">
 		  </a>
 		  <div class="center-expand">
@@ -109,9 +109,6 @@
 		  </button>
 		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 		    <ul class="navbar-nav">
-		      <li class="nav-item">
-			<a class="nav-link active" aria-current="page" href="#">Home</a>
-		      </li>
 		      <li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 			  Team
@@ -131,7 +128,7 @@
 			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
 			  <li><a class="dropdown-item" href="Description.html">Description</a></li>
 			  <li><a class="dropdown-item" href="Design.html">Design</a></li>
-			  <li><a class="dropdown-item" href="Notebook.html">Notebook</a></li>
+			  <li><a class="dropdown-item" href="https://possible-trapezoid-297.notion.site/11e9906b405543a29361e38a50c81024?v=af10ed5ac15145e8a267a68ed8eb2005">Notebook</a></li>
 			  <li><a class="dropdown-item" href="Contribution.html">Contributions</a></li>
 			  <li><a class="dropdown-item" href="Engineering.html">Engineering Success</a></li>
 			  <li><a class="dropdown-item" href="Implementation.html">Future Implementation</a></li>
@@ -238,242 +235,127 @@
                     <h1 id="1">Overview</h1>
                     <hr><br>
 		    		<p>We designed two types of constructs: for genetic modification and for parts characterizations. 
-					In order to enable S.elongatus to export intracellular sucrose that it accumulates under salt stress, the cscB, sucrose permease transporter has to be heterologously expressed. We planned to do this through a genome modification using a CRISPR-Cas12a plasmid for which we designed constructs. We also planned to characterize the strength of various promoters in S.elongatus and their effects on sucrose export capacity. 
+					In order to enable S. elongatus to export intracellular sucrose that it accumulates under salt stress, the cscB, sucrose permease transporter has to be heterologously expressed. We planned to do this through a genome modification using a CRISPR-Cas12a plasmid for which we designed constructs. We also planned to characterize the strength of various promoters in S. elongatus and their effects on sucrose export capacity. 
 					<br><br>
-					We also planned to characterize the activity of the native bidirectional promoter of the csc operon in E.coli.
+					We also planned to characterize the activity of the native bidirectional promoter of the csc operon in E. coli.
 					<br><br>
 					All constructs and primers were made using Geneious Prime and Benchling. PCR primers were analyzed using the IDT Oligo Analyzer tool. 
 					</p>
 					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+                <h1 id="2"><em>S. elongatus</em> constructs</h1>
+                    <hr><br>
+<p>
+	The S. elongatus constructs were designed to be integrated into the genome using the pSL2680 plasmid[1]. This plasmid expresses cpf1 (also known as Cas12a) which is an RNA-guided endonuclease[2] under a lac promoter. It also has an endogenous Francisella novicida CRISPR array from a J23119 promoter[3]. The array has three repeat sequences with spacers between them, and the first repeat has been replaced by a lacZ site flanked by AarI restriction sites, which allows one to replace the lacZ with oligos that form the new targeting sequence of a crRNA in a CRISPR array. Cpf1 processes the array transcript into mature crRNA which can be used to target Cpf1 to a specific region in the genome based on the oligo sequence (which acts as the guide RNA or gRNA).
 
+<br><br>There are also restriction sites for KpnI and SalI downstream of the CRISPR array in which homologous repair templates can be inserted. Using this plasmid one can thus insert a sequence of interest in the genome using homology-directed repair. 
+</p>
+<div style="display: flex; flex-direction: row; justify-content: center;"><img style="max-width: 600px; background-color: white;" src="assets/Constructs/pslmap.png"></div>
+<p id="desc">Figure 1: Map of the pSL2680 plasmid adapted from: Cpf1 Is A Versatile Tool for CRISPR Genome Editing Across Diverse Species of Cyanobacteria. Ungerer J, Pakrasi HB. Sci Rep. 2016 Dec 21;6:39681. doi: 10.1038/srep39681. 10.1038/srep39681 PubMed 28000776
+</p>
+<br><p>For the purpose of our project, all constructs were designed to integrate into neutral sites of S. elongatus. Neutral sites are loci in the genome with unknown functions that can be disrupted without affecting cellular viability or causing any distinct phenotypes[4]. We constructed homology repair templates for inserting sequences into either Neutral Site I or Neutral Site III of the S.elongatus genome. The gRNA targets Cpf1 to a 20bp region in the Neutral Site of the genome, where Cpf1 makes a double-stranded break with a 5’ overhang. The homologous repair template flanked by ‘homology arms’ to the Neutral Site is then used by the cell for homology-directed repair, which integrates the homologous repair template into the genome. 
 
-                    <figure>
+	<br><br>For our project, we aimed to insert cscB (sucrose permease) into the genome, which is a symporter that transports sucrose and H+ across the membrane[5]. This will allow S.elongatus to export the sucrose it produces intracellularly in response to salt stress as an osmoprotectant[5]. 
+	
+	<br><br>In cyanobacterial cells, sucrose is synthesized from uridine diphosphate glucose (UDP-Glu) and fructose 6-phosphate (F6P) by sucrose-phosphate synthase (SPS) and sucrose-phosphate phosphatase (SPP) which has been shown to lead to a 2-fold enhancement in intracellular sucrose concentration in Synechocystis sp. PCC 6803[6] .
+	
+	
+	<br><br>We also aimed to overexpress sps and spp. Sps encodes sucrose phosphate synthase (SPS), an enzyme that catalyzes the rate-limiting conversion of uridine diphosphate glucose (UDP-Glu), and fructose 6-phosphate (F6P) into sucrose 6-phosphate (S6P)[6]. Spp catalyzes the final rate-limiting step in the sucrose-biosynthesis pathway[7].</p>
 
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
+	<div style="display: flex; flex-direction: row; justify-content: center;"><img style="max-width: 600px; background-color: white;" src="assets/Constructs/spspathway.png"></div> <br>
+	<p id="desc">Figure 2: Illustration showing the sucrose production pathway in S. elongatus UTEX 2973. Figure adapted from: Lin, P. C., Zhang, F., & Pakrasi, H. B. (2020). Enhanced production of sucrose in the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973. Scientific reports, 10(1), 1-8.</p>
 
-                    </figure>
+	<p><span style="color: white;">We also wanted to test the sucrose export capacity of cscB under promoters of different strengths for which we designed the composite part </span><a href="http://parts.igem.org/Part:BBa_K3971010" target="_blank" rel="noopener">BBa_K3971010</a><span style="color: white;">. Our advisor Virmal Jain suggested we test a range of promoters since the number of sucrose permease transporters inserted into the membrane might have an effect on the membrane integrity of the cell.&nbsp;</span></p>
+<p><span style="color: white;">The construct </span><a href="http://parts.igem.org/Part:BBa_K3971010" target="_blank" rel="noopener">BBa_K3971010</a><span style="color: white;"> was designed such that the promoter is flanked by two restriction enzyme sites for NdeI and BamHI, and can be excised out to be replaced by another promoter, thus saving a lot of time on cloning the entire construct into a vector.</span></p>
+<p><span style="color: white;">Similar constructs, </span><a href="http://parts.igem.org/Part:BBa_K3971028" target="_blank" rel="noopener">BBa_K3971028</a><span style="color: white;"> and </span><a href="http://parts.igem.org/Part:BBa_K3971030" target="_blank" rel="noopener">BBa_K3971030</a>were designed to integrate sps and spp into Neutral Site III respectively. The sucrose export capacity could be tested along with cscB in the same strain since both constructs target different Neutral Sites in the genome.</p>
+<p><span style="color: white;">The promoters we decided on were constitutive as our advisors Prem Pritam and Virmal Jain had suggested. They reasoned that that would be more carbon-conscious as compared to inducible promoters such as IPTG inducible promoters and would also make the process more inexpensive. Since </span><span style="color: white;"><em>S. elongatus</em></span><span style="color: white;"> grows more slowly than </span><span style="color: white;"><em>E. coli</em></span><span style="color: white;"> and produces viable sucrose titers for </span><span style="color: white;"><em>E.coli W </em></span><span style="color: white;">with the sucrose operon repressor removed, after about 48 hours</span><span style="color: white;">[8]</span><span style="color: white;"> having constitutive production would also ensure a steady sucrose supply for </span><span style="color: white;"><em>E. coli</em></span><span style="color: white;"> viability without the need for precise inductive control through inducible promoters.</span></p>
+<p><span style="color: white;">We aimed to test the following promoters upstream of the cscB, sps and spp genes and their effects on sucrose production capacity.</span></p>
+<p><span style="color: white;">We also wanted to characterize the strengths of these promoters in order to compare them, for which we designed </span><a href="http://parts.igem.org/Part:BBa_K3971009" target="_blank" rel="noopener">BBa_K3971009</a> which expresses SYFP2 (super yellow fluorescent protein - <a href="http://parts.igem.org/Part:BBa_K864100" target="_blank" rel="noopener">BBa_K864100</a>). This construct also had a NdeI and BamHI restriction site flanking the promoter for the aforementioned reasons.</p>
 
+TABLE <br>
 
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    <br>
-		    <div class="table">
-    
-			<div class="table1-row table-header">
-			  <div class="cell">
-			    Promoter
-			  </div>
-			  <div class="cell">
-			    Registry Part
-			  </div>
-			  <div class="cell">
-			    Description
-			  </div>
-			  <div class="cell">
-				Reference
-			  </div>
-			</div>
-			
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971000">BBa_K3971000</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    Regulatory
-			  </div>
-			  <div class="cell" data-title="Features">
-			    A strong constitutive cyanobacterial PcpcB-7942 mutant promoter.
-			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi
-			  </div>
-			</div>
-			
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971001">BBa_K3971001</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    Coding
-			  </div>
-			  <div class="cell" data-title="Features">
-				cscK - a D fructokinase from E.coli W derived from the csc sucrose metabolizing operon. 
-			</div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi
-			  </div>
-			</div>
+<p>However, since we only had about two months in the lab due to the second wave of the COVID-19 pandemic, we were not able to test out our constructs.</p>
 
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971002">BBa_K3971002</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    Coding
-			  </div>
-			  <div class="cell" data-title="Features">
-				cscA - Sucrose-6-phosphate hydrolase (Invertase) from E.coli W that converts sucrose into glucose and fructose.			</div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi
-			  </div>
-			</div>
+<div style="display: flex; flex-direction: row; justify-content: center;"><img style="max-width: 600px; background-color: white;" src="assets/Constructs/plasmidedit1.png"></div> <br>
+<div style="display: flex; flex-direction: row; justify-content: center;"><img style="max-width: 600px; background-color: white;" src="assets/Constructs/plasmidedit2.png"></div>
+<p id="desc">Figure 3: Illustration showing how the pSL2680 plasmid can be used to make edits in the genome by inserting a Homologous Repair Template into a Neutral Site. </p>
 
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971003">BBa_K3971003</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    DNA
-			  </div>
-			  <div class="cell" data-title="Features">
-				This is a gRNA target for the pSL2680 plasmid to allow for modifications in the Neutral Site 1 of Synechococcus elongatus UTEX 2973.			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi
-			  </div>
-			</div>
+<h1 id="3">gRNA and Homology Repair Template Design</h1>
+<hr><br>
+<p>
+	This design guide has been adapted from [1].
+</p>
+<h1 id="4">
+	Guide RNA Design
+</h1>
+<hr><br>
+<p>
+	The guide RNA or target sequence depends on where one wants to make an edit in the genome. Choose a 20nt sequence in the genomic region of interest that is preceded by a PAM site (either CTN or TTN - where N represents any nucleotide). The 20nt sequence is the gRNA that Cpf1 will use to target that locus in the genome. Since the gRNA is only 20nt in length, it can be synthesized using complimentary primers that have the target sequence.
+</p>
+<div style="display: flex; flex-direction: row; justify-content: center;"><img style="max-width: 600px; background-color: white;" src="assets/Constructs/pam.png"></div>
+<p id="desc">Figure 4: Illustration showing how to pick a gRNA target sequence for Cpf1.</p>
+<p>
+	The primers should have 5’ overhangs that are complimentary to the overhangs on the plasmid after AarI cleavage, which will allow the gRNA to be ligated into the plasmid. <br><br>
 
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971004">BBa_K3971004</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    Coding
-			  </div>
-			  <div class="cell" data-title="Features">
-				Sucrose-phosphate synthase gene that catalyzes the rate limiting step in sucrose biosynthesis in cyanobacteria.			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi, Likhith Chandragiri
-			  </div>
-			</div>
-			
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971005">BBa_K3971005</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    Coding
-			  </div>
-			  <div class="cell" data-title="Features">
-				Sucrose-Phosphate Phosphatase gene in Cyanobacteria which catalyzes the final step in sucrose biosynthesis.			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi, Likhith Chandragiri
-			  </div>
-			</div>
+Use the following 5’ overhangs:<br><br>
+Forward primer overhang – AGAT<br>
+Reverse primer overhang – AGAC<br>
 
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971006">BBa_K3971006</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    Regulatory
-			  </div>
-			  <div class="cell" data-title="Features">
-				Bidirectional promoter from E.coli W.			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi, Likhith Chandragiri
-			  </div>
-			</div>
+</p>
+<div style="display: flex; flex-direction: row; justify-content: center;"><img style="max-width: 600px; background-color: white;" src="assets/Constructs/targetingenome.png"></div>
+<p id="desc">Figure 5: Illustration showing primers with the required overhangs in order to ligate it into the plasmid.
+</p>
+<br>
+<b>Note:</b> The gRNA must be cloned into the plasmid <b>before</b> the homology repair template.</b>
+<h1 id="5">Homologous Repair Template Design</h1>
+<hr>
+<br><br>
+<p>
+	The homologous repair template can be used to make any modifications to the genome since the template will be used by the cell for homology-directed repair after cleavage by Cpf1 which will integrate the template into the genomic locus.<br><br>
 
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971007">BBa_K3971008</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    DNA
-			  </div>
-			  <div class="cell" data-title="Features">
-				It is a portion of the Neutral Site 1 of the Synechococcus elongatus UTEX 2973 genome.			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi
-			  </div>
-			</div>
+	The template can be constructed in many ways. We considered using Gibson Assembly as it was described in [1], however, since we had about two months to work in the lab due to the second wave of COVID-19 in India we were not able to receive and work with the NEB Gibson Assembly kit. <br><br>
+	
+	For Gibson Assembly of the Homologous Repair Template into the KpnI site of the plasmid, the template should have the following overhangs on the terminal left and right ends:<br><br>
+	Upstream overhang – CATTTTTTTGTCTAGCTTTAATGCGGTAGTT<span style="color: red;">GGTACC</span><br>
+	Downstream overhang - GCCCGGATTACAGATCCTCTAGAGTCGAC<span style="color: red;">GGTACC</span><br>
+	The red sequence is the KpnI restriction site sequence.<br><br>
+	
+	The ‘homology arms’ to the neutral sites were both at least 750bp as suggested by our advisors Prem Pritam and Virmal Jain and as described in [1].
+</p>
+<h1 id="6">Protocol</h1>
+<hr>
+<br><br>
+<p>
+	The protocol for cloning both the gRNA and the Homologous Repair Template into the pSL2680 plasmid can be found <a href="http://dx.doi.org/10.17504/protocols.io.bw9kph4w">here</a>. <br><br>
 
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971008">BBa_K3971008</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    DNA
-			  </div>
-			  <div class="cell" data-title="Features">
-				It is a portion of the Neutral Site 1 of the Synechococcus elongatus UTEX 2973 genome.			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi
-			  </div>
-			</div>
+	This protocol has been adapted from [1] and has been slightly modified based on inputs from our advisors Prem Pritam and Virmal Jain.
+	
+</p>
 
-			<div class="table1-row">
-			  <div class="cell" data-title="Promoter">
-			    <a href="http://parts.igem.org/Part:BBa_K3971011">BBa_K3971011</a>
-			  </div>
-			  <div class="cell" data-title="Registry Part">
-			    Coding
-			  </div>
-			  <div class="cell" data-title="Features">
-				cscB (sucrose permease) gene to allow S. elongatus to transport sucrose outside the cell.			  </div>
-			  <div class="cell" data-title="Reference">
-				Misaal Bedi
-			  </div>
-			</div>
+<h1 id="7"><em>E. coli</em> constructs</h1>
+<hr>
+<br><br>
+<p>
+	There is a native bidirectional promoter in the csc operon present in the pCSCX plasmid which was a gift from Claudia Vickers (Addgene plasmid # 63918 ; http://n2t.net/addgene:63918 ; RRID:Addgene_63918). 
+	<br><br>This plasmid consists of the cscA (invertase), cscK (d-fructokinase), and cscB (sucrose permease) genes that make E.coli capable of consuming and metabolizing sucrose. We aimed to characterize this promoter’s activity for which we created the composite part <a href="http://parts.igem.org/Part:BBa_K3971024">BBa_K3971024</a>.
+	<br>The promoter is flanked by yellow fluorescent and blue fluorescent (reversed) proteins on both sides. To characterize its strength in both directions a relative fluorescence measurement can be made of the two proteins. <br><br>
 
-			
-			
-			
-			
-		      </div>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
-
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+	<br><br>Based on the results of the promoter characterization, we aimed to compare other bidirectional promoters and test their effect on sucrose consumption and the growth rate of E.coli. However, due to the second wave of the COVID-19 pandemic in India, we only had two months in the lab and could not characterize this promoter and aim to do so in the future.
+</p>
+                    
+					<h1 id="8">References</h1>
+                    <hr><br><br>
+		    <ol>
+			    <li>pSL2680 was a gift from Himadri Pakrasi (Addgene plasmid # 85581 ; http://n2t.net/addgene:85581 ; RRID:Addgene_85581)</li>
+			    <li>Makarova, K. S., Wolf, Y. I., Alkhnbashi, O. S., Costa, F., Shah, S. A., Saunders, S. J., ... & Koonin, E. V. (2015). An updated evolutionary classification of CRISPR–Cas systems. Nature Reviews Microbiology, 13(11), 722-736.</li>
+			    <li>Cpf1 Is A Versatile Tool for CRISPR Genome Editing Across Diverse Species of Cyanobacteria. Ungerer J, Pakrasi HB. Sci Rep. 2016 Dec 21;6:39681. doi: 10.1038/srep39681. 10.1038/srep39681 PubMed 28000776</li>
+			    <li>Pinto, F., Pacheco, C. C., Oliveira, P., Montagud, A., Landels, A., Couto, N., ... & Tamagnini, P. (2015). Improving a Synechocystis-based photoautotrophic chassis through systematic genome mapping and validation of neutral sites. DNA Research, 22(6), 425-437.</li>
+			    <li>Ducat, D. C., Avelar-Rivas, J. A., Way, J. C., & Silver, P. A. (2012). Rerouting carbon flux to enhance photosynthetic productivity. Applied and environmental microbiology, 78(8), 2660-2668.</li>
+			    <li>Lin, P. C., Zhang, F., & Pakrasi, H. B. (2020). Enhanced production of sucrose in the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973. Scientific reports, 10(1), 1-8.</li>
+			    <li><a href="https://www.genome.jp/entry/3.1.3.24">https://www.genome.jp/entry/3.1.3.24</a></li>
+			    <li>Hays, S. G., Yan, L. L., Silver, P. A., & Ducat, D. C. (2017). Synthetic photosynthetic consortia define interactions leading to robustness and photoproduction. Journal of biological engineering, 11(1), 1-14.</li>
+			    <li>Sengupta, A., Madhu, S., & Wangikar, P. P. (2020). A Library of tunable, portable, and inducer-free promoters derived from cyanobacteria. ACS Synthetic Biology, 9(7), 1790-1801.</li>
+			    <li>Sengupta, A., Sunder, A. V., Sohoni, S. V., & Wangikar, P. P. (2019). Fine-tuning native promoters of Synechococcus elongatus PCC 7942 to develop a synthetic toolbox for heterologous protein expression. ACS synthetic biology, 8(5), 1219-1223.</li>
+		    </ol>
 				</div>
 			</div>
         </div>
