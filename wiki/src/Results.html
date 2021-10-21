@@ -249,7 +249,7 @@
 							<button class="nav-link active" id="ecoli-wet-res-tab" data-bs-toggle="tab" data-bs-target=".ecoli-wet" type="button" role="tab" aria-controls="ecoli-wet-res" aria-selected="true"><i>E. coli</i></button>
 						</li>
 						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="cyano-wet-res-tab" data-bs-toggle="tab" data-bs-target=".cyano-wet" type="button" role="tab" aria-controls="cyano-wet-res" aria-selected="false">Cyanobacteria</button>
+							<button class="nav-link" id="cyano-wet-res-tab" data-bs-toggle="tab" data-bs-target=".cyano-wet" type="button" role="tab" aria-controls="cyano-wet-res" aria-selected="false"><i>S. elongatus</i></button>
 						</li>
 						<li class="nav-item" role="presentation">
 							<button class="nav-link" id="coculture-wet-res-tab" data-bs-toggle="tab" data-bs-target=".coculture-wet"  type="button" role="tab" aria-controls="coculture-wet-res" aria-selected="false">Co-culture</button>
@@ -278,10 +278,10 @@
 
 							<h4>Result:</h4>
 							<ul class="b">
-								<li style="padding-left: 1em;">In the first genomic DNA extraction, we obtained fragmented DNA which showed up in multiple bands when we ran our gels with the PCR product.</li>
-								<li style="padding-left: 1em;">The second genomic DNA extraction yielded a single band above the DNA ladder along with a large bright band at the bottom of the ladder</li>
+								<li style="padding-left: 1em;">In the first genomic DNA extraction attempt, we obtained fragmented DNA which appeared as multiple bands when we loaded the gDNA on a gel.</li>
+								<li style="padding-left: 1em;">After the second genomic DNA extraction attempt, when we ran it on a gel, we obtained a single band above the DNA ladder along with a large bright band at the bottom of the ladder. We checked the concentration of the extracted genomic DNA using a NanoDrop and observed a concentration of 2.9 \( \mu \)g/mL./li>
 								<ul class="c">
-									<li style="padding-left: 1em;">The first band is the gDNA of KJK01 and the bright band is probably RNA contamination due to improper addition of RNase.</li>
+									<li style="padding-left: 1em;">The first band is the gDNA of KJK01 and the bright band at the bottom might be RNA contamination due to improper addition of RNase.</li>
 								</ul>
 							</ul>
 							<br>
@@ -302,8 +302,9 @@
 							<br>
 
 							<h4>Results:</h4> 
-							<p>The gel failed multiple times. We did not get any bands on the gel.</p>
 							<br>
+							<p><em style="font-style: normal; font-size: 120%;">PCR with gDNA extract 1:</em></p>
+							<p>When PCR was performed using the first gDNA extract as a template, we observed no bands on running the PCR product on a gel.</p>
 
 							<div class="graph">
 								<img src="assets/Wetlab_Graphs/E_coli/Gels/PCR_amp.png" width=400>
@@ -315,7 +316,7 @@
 							
 
 							<!-- TROUBLESHOOTING (READ MORE) -->
-							<h2> Troubleshooting</h2>
+							<h2> Troubleshooting for PCR with gDNA extract 1</h2>
 							<span id="dots">...</span>
 							<span id="more" >
 								<br>
@@ -328,6 +329,13 @@
 								<br>
 								<!-- END OF TROUBLE SHOOTING-->
 								<p>But we were unable to see the primer dimer bands at all in the test lanes.</p>
+								<br>
+								<p>Check quality of gDNA:</p>
+								<p>We ran the gDNA extract 1 on a gel to find that it had fragmented, and so we performed the extraction again with a modified protocol - we suspected that the elution buffer used to resuspend the gDNA in the first attempt was contaminated by nuclases and so we used autoclaved ddH2O (MilliQ) the second time around.</p>
+								<br>
+
+								<p>PCR with gDNA extract 2:</p>
+								<p>No bands appeared on imaging the PCR product. </p>
 							</span>
 							<button onclick="myFunction()" id="ReadMoreButton">read more</button>
 							<br><br>
@@ -336,10 +344,12 @@
 
 							<!-- GRADIENT PCR-->
 							<h2>Gradient PCR</h2><br>
-							<p>As none of our troubleshooting worked, we spoke to our PI, Prof Pucadyil, from whose lab we borrowed the Pfu polymerase used in the PCR reaction. He pointed out that we hadn’t used DMSO in any of the previous runs when the protocol especially called for it. We had been following the PCR protocol of another lab. He suggested that we perform a gradient PCR at different concentrations of DMSO and different temperatures.</p>
+							<p>As none of our troubleshooting worked, we spoke to our PI, Prof Pucadyil, from whose lab we borrowed the Pfu polymerase used in the PCR reaction. He pointed out that we hadn’t used DMSO in any of the previous runs when the protocol especially called for it. We had been following the PCR protocol of another lab. He suggested that we perform a gradient PCR at different concentrations of DMSO and different annealing temperatures.</p>
 							<br>
 
-							<p>We obtained 20 amplified products after the PCR</p>
+							<p>Our mentor, Trisha suggested that the potential RNA contamination seen in the second gDNA extraction attempt might have led to an overestimate in the NanoDrop’s estimation of the concentration of the gDNA. She advised us not to dilute the gDNA template before adding it to the PCR mix for gradient PCR. </p>
+							<br>
+							<p>We conducted 20 PCR reactions in parallel under the following conditions</p>
 							
 							<!-- Table 1 -->
 							<div class="table" style="padding-left: 5%;">
@@ -461,7 +471,7 @@
 							<br>
 							<ul>
 								<li style="padding-left: 1em;"> Bands found at ~750bp in the 5% and 10% DMSO bands</li>
-								<li style="padding-left: 1em;"> Gel 2 was left on for too long and ran out.</li>
+								<li style="padding-left: 1em;"> Gel 2 was left on for too long in the electrophoresis machine and ran out.</li>
 							</ul>
 							<br>
 							<div class="graph">
