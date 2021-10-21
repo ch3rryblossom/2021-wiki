@@ -1322,7 +1322,7 @@ label {
 	margin-bottom: 24px;
 }
 .feature-extended {
-	padding: 24px 0;
+	padding: 0;
 }
 .feature-extended-image {
 	position: relative;
@@ -1371,6 +1371,9 @@ label {
 		justify-content: flex-end;
 		padding: 64px 0;
 	}
+	.feature-extended p{
+		align-self: center;
+	}
 	.feature-extended .feature-extended-image {
 		width: 440px;
 		margin-right: 96px;
@@ -1397,8 +1400,8 @@ label {
 		flex-direction: column;
 		justify-content: center;
 		flex-shrink: 0;
-		width: 360px;
-		text-align: left;
+
+		text-align: center;
 	}
 }
 @media (min-width: 1025px) {
