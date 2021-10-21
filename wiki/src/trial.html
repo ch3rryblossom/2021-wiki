@@ -1,4 +1,492 @@
-<h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CoCulture</title>
+	<link rel="stylesheet" href="css/igem-reset.css">
+	<link rel="stylesheet" href="css/SBcss/style.css">
+   	<link rel="stylesheet" href="css/styleSB.css">
+    	<link rel="stylesheet" href="css/DryLabPage.css">
+	<style>/* Reset CSS */
+
+		#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+		#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+		body, html {background-color:#212529; width: 100%; height: 100%;}
+		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+
+    </style>
+    <style>
+
+.rangeImage{
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+.rangeImageRow2{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	flex-wrap: wrap;
+}
+.rangeOutput{
+	margin: auto;
+	text-align:center;
+}
+.range-slider{
+	margin: auto;
+	width: 15em;
+ text-align: center;
+}
+.myRange {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px !important;
+  width: 100%;
+  border-radius: 10em;
+  background-color: #27668D;
+  outline: none;
+  margin-bottom: 14px;
+}
+
+.myRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #28c79b;
+  cursor: pointer;
+  border: 1px solid #f4f4f4;
+}
+
+ol {
+    margin-left:40px;
+}
+
+
+
+.myRange::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #28c79b;
+  cursor: pointer;
+  border: 1px solid #f4f4f4;
+}
+    </style>
+     <style>
+	table{
+		table-layout: fixed;
+	}
+/* Dark Style */
+[data-table-theme*=dark] {
+  color: #ddd;
+  background: #333;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+[data-table-theme*=dark] thead th,
+[data-table-theme*=dark] tfoot th {
+  color: #aaa;
+  background: rgba(0255,255,255,.15);
+}
+[data-table-theme*=dark] caption {
+  padding:.5em;
+}
+[data-table-theme*=dark] th,
+[data-table-theme*=dark] td {
+  padding: .5em;
+  border: 1px solid grey;
+}
+.tdgreen {
+	background: #27668d;
+}
+.tdyellow {
+	background: #ffd73a;
+	color: black;
+}
+[data-table-theme*=dark] th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+    </style>
 <body>
-	<h1 id="2">Experiment 1 - “"Choosing Optimal promoters”</h1>
+    
+	<!-- NAVBAR SECTION -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+		<div class="container-fluid nav-container">
+		  <a class="navbar-brand" href="index.html">
+			<img src="assets/svgs/synbactory2.svg">
+		  </a>
+		  <div class="center-expand">
+		</div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Team
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Team.html">Members</a></li>
+			  <li><a class="dropdown-item" href="Attributions.html">Attributions</a></li>
+			  <li><a class="dropdown-item" href="Collaborations.html">Collaborations</a></li>
+			  <li><a class="dropdown-item" href="Partnership.html">Partnership</a></li>
+			  <li><a class="dropdown-item" href="Sponsors.html">Sponsors</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Project
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Description.html">Description</a></li>
+			  <li><a class="dropdown-item" href="Design.html">Design</a></li>
+			  <li><a class="dropdown-item" href="TeamNotebook/Team Notebook 11e9906b405543a29361e38a50c81024.html">Notebook</a></li>
+			  <li><a class="dropdown-item" href="Contribution.html">Contributions</a></li>
+			  <li><a class="dropdown-item" href="Engineering.html">Engineering Success</a></li>
+			  <li><a class="dropdown-item" href="Implementation.html">Future Implementation</a></li>
+			  <li><a class="dropdown-item" href="Safety.html">Safety</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Wet Lab
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Experiments.html">Experiments</a></li>
+			  <li><a class="dropdown-item" href="Constructs.html">Constructs</a></li>
+			  <li><a class="dropdown-item" href="Measurement.html">Measurement</a></li>
+			  <li><a class="dropdown-item" href="LabNotebook.html">Lab Notebook</a></li>
+			  <li><a class="dropdown-item" href="Results.html">Results</a></li>
+			  <li><a class="dropdown-item" href="FutureWork.html">Future Work</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Parts
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <!-- <li><a class="dropdown-item" href="#">Overview</a></li> -->
+			  <li><a class="dropdown-item" href="BasicParts.html">Basic</a></li>
+			  <li><a class="dropdown-item" href="CompositeParts.html">Composite</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="https://2021.igem.org/Team:IISER-Pune-India/Model">Model</a>
+		      </li>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Human Practices
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Human_Practices.html">Integrated Human Practices</a></li>
+			  <li><a class="dropdown-item" href="Inclusivity.html">Inclusivity and Accessibility</a></li>
+			  <li><a class="dropdown-item" href="Communication.html">Public Engagement and Education</a></li>
+			</ul>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="https://igem.org/2021_Judging_Form?id=3971">Judging Form</a>
+		      </li>
+		      <!-- <button type="button" class="rounded-pill btn-rounded">Settings</button> -->
+		    </ul>
+		  </div>
+		</div>
+	</nav>
+
+    <!-- TITLE SECTION -->
+    
+    <div class="section-1">
+        <h1><br><br><br><br>CoCulture</h1>
+    </div>
+        
+    <!-- WAVES SPACER -->
+
+    <div class="spacer layer1"></div>
+
+    <!-- CONTENT + SIDENAV SECTION -->
+
+<style>
+	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+	color: white !important;
+	font-family: ProximaNova !important;
+}
+</style>
+    <div class="second-div container-fluid">
+        <div class="row">
+            <!-- SIDENAV -->
+            <div class="col-lg-3 col-md-3">
+                <div class="sidenav">
+                    <nav>
+                        <ul id="sidenav-id">
+                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="col-lg-9 col-md-9">
+                <div class="content">
+                    
+		 <h3>
+			Varying Oxygen Levels to Test Aerobic vs Microaerobic vs Anaerobic
+		 </h3><br>
+		 <p><b>Hypothesis:</b><br>Decreasing oxygen levels will result in an increase of the butanol yield of the co-culture.</p>
+		 <p>As seen in the FVA results above, oxygen was one of the important metabolites being exchanged by the cyanobacteria and <i>E. coli</i>. It is to be noted that cyanobacteria are producing more oxygen than the <i>E. coli</i> need and the co-culture as a whole would have a positive production of oxygen (see <a href=#4>appendix</a> for more). This means that our simulations would be in an aerobic environment as far as the <i>E. coli</i> are concerned. However, based on discussions with experts and FBA results for <i>E. coli</i>, we realised that anaerobic or even microaerobic conditions might result in a higher butanol yield. Thus we decided to look at how lowering oxygen levels in the co-culture would affect butanol yield. We did this by setting decreasing bounds to how much oxygen the <i>E. coli</i> could take up per gDW.</p>
+		 <!-- SLIDER 5  -->
+		 <div class="rangeImage" id="rangeImage5"></div><br><br>
+		 <div class="range-slider">
+		     <input type="range" min="1" max="6" step="1" value="1" class="myRange" id="myRange5">
+		   </div>
+		 <div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">Butanol Productivity</div><br>   
+		 <br><h4>
+		 <b><div id="ImageDesc5"></div></h4></b><br><br>
+
+			</div>
+
+		</div>
+
+        </div>
+
+    </div>
+<!-- SPONSORS BAR -->
+	<div class="footer">
+		<div class="footer-wrapper">
+			<!-- <div id="not-sponsors" class="footer-wrapper">	 -->
+				<div id="Team", class="footer-wrapper">
+					<img class="teamlogo" src="assets/Logos/IISER-Pune-iGEM_logo.png" alt="iGEM IISER Pune Logo" width="170">
+				</div>
+				<div id="socials" class="vertical-stack">
+					<div><h3>Team IISER Pune India</h3></div>
+					<div id="logos" class ="footer-wrapper ">
+						<a href="https://www.instagram.com/igem_iiserp/"><img class="footer-links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="20"></a>
+						<a href="https://www.linkedin.com/in/igem-iiser-pune-2021/"><img class="footer-links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30"></a>
+						<a href="https://twitter.com/igem_iiserpune"><img class="footer-links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35"></a>
+						<a href="https://www.facebook.com/igemiiserpune"><img class="footer-links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25"></a>
+						<a href="https://www.youtube.com/channel/UCyo6NMLvM58sSh_tnxht36w"><img class="footer-links-socials" src="assets/Logos/Youtube_logo.png" alt="Youtube" width="35"></a>
+					</div>
+				</div>
+			<!-- </div> -->
+			<div id="sponsors" class="footer-wrapper">
+				<div id="main-sponsor", class="">
+					<a href="https://www.sailife.com/"><img class="footer-links" src="assets/Logos/Sai_logo.jpg" alt="Sai Life Sciences" width="280"></a>
+				</div>
+				<div class="vertical-stack">
+					<a href="https://sg.idtdna.com/pages"><img class="footer-links" src="assets/Logos/IDT_logo.png" alt="IDT" width="220"></a>
+					<a href="https://www.geneious.com/"><img class="footer-links" src="assets/Logos/Geneious_logo.png" alt="Geneious" width="220"></a>
+				</div>
+				<div class="vertical-stack">
+					<div id="horizontal stack">
+						<a href="https://www.notion.so/"><img class="footer-links" src="assets/Logos/Notion_logo.png" alt="Notion" width="70"></a>
+						<img src="assets/Logos/IISER Pune Logo.png" alt="IISER Pune" width="80" style="padding-left: 1em;">
+					</div>
+					<a href="https://www.zoho.com/"><img class="footer-links" src="assets/Logos/Zoho_logo.png" alt="Zoho" width="150"></a>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- END OF SPONSOR BAR-->
+
+    <div class="header"></div>
+    <div class="line" id="scrollIndicator"></div>
+
+    <script src="js/bootstrap-bundle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<!-- Script for the slideshow, wherever needed -->	
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 4;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+	</script>
+	<!-- slider 4 -->
+	<script>
+		var slider4 = document.getElementById("myRange4");
+		var output4 = document.getElementById("rangeValue4");
+		var slideimage4 = document.getElementById("rangeImage4");
+		var imageDesc4 = document.getElementById("ImageDesc4");
+		const imagearray4 = ['181','121','101','81','61','41','31','21','11','5'];
+		const descarray4 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+		const igemarraybut4 = ['https://2021.igem.org/wiki/images/9/97/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--101.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--11.png', 'https://2021.igem.org/wiki/images/3/35/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--121.png', 'https://2021.igem.org/wiki/images/6/6c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--181.png', 'https://2021.igem.org/wiki/images/d/d5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--21.png', 'https://2021.igem.org/wiki/images/1/12/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--31.png', 'https://2021.igem.org/wiki/images/3/32/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--41.png', 'https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--5.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--61.png', 'https://2021.igem.org/wiki/images/9/9f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--butanol--81.png'];
+		const igemarraycoc4 = ['https://2021.igem.org/wiki/images/2/2e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--101.png', 'https://2021.igem.org/wiki/images/c/c1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--11.png', 'https://2021.igem.org/wiki/images/b/bc/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--121.png', 'https://2021.igem.org/wiki/images/f/f1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--181.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--21.png', 'https://2021.igem.org/wiki/images/8/8d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--31.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--41.png', 'https://2021.igem.org/wiki/images/5/51/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--5.png', 'https://2021.igem.org/wiki/images/5/50/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--61.png', 'https://2021.igem.org/wiki/images/d/d1/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--culture--81.png'];
+		const igemarraysuc4 = ['https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--101.png', 'https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--11.png', 'https://2021.igem.org/wiki/images/4/4b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--121.png', 'https://2021.igem.org/wiki/images/f/f0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--181.png', 'https://2021.igem.org/wiki/images/9/94/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--21.png', 'https://2021.igem.org/wiki/images/9/91/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--31.png', 'https://2021.igem.org/wiki/images/1/13/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--41.png', 'https://2021.igem.org/wiki/images/6/6b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--5.png', 'https://2021.igem.org/wiki/images/8/81/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--61.png', 'https://2021.igem.org/wiki/images/7/7d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--co2--input_to_bioreactor--sucrose--81.png'];
+		const correctorder4 = ['4', '3', '1', '10', '9', '7', '6', '5', '2', '8'];
+		output4.innerHTML = slider4.value;
+		output4.innerHTML = '181';
+		imageDesc4.innerHTML = ''
+		  slideimage4.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="400px" height="400px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="400px" height="400px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+		slider4.oninput = function() {
+		  output4.innerHTML = imagearray4[this.value - 1] + '%';
+		  imageDesc4.innerHTML = igemarraycoc4[correctorder4[this.value-1]-1]
+		  slideimage4.innerHTML = '<div><img src="' + igemarraycoc4[correctorder4[this.value-1]-1] + '" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc4[correctorder4[this.value-1]-1] + '" width="400px" height="400px">' + '<img src="' + igemarraybut4[correctorder4[this.value-1]-1] + '" width="400px" height="400px"></div>' + 'img src="' + igemarraysuc4[correctorder4[this.value-1]-1] + '" width="400px" height="400px"';
+		}
+		</script>
+
+	<!-- slider 2 -->
+		<script>
+			var slider2 = document.getElementById("myRange2");
+		var output2 = document.getElementById("rangeValue2");
+		var slideimage2 = document.getElementById("rangeImage2");
+		var imageDesc2 = document.getElementById("ImageDesc2");
+		const imagearray2 = ['95','90','80','70','60','40','20','10'];
+		const descarray2 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+			const igemarraybut2 = ['https://2021.igem.org/wiki/images/7/78/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--10_.png', 'https://2021.igem.org/wiki/images/9/9e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--20_.png', 'https://2021.igem.org/wiki/images/2/2b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--40_.png', 'https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--60_.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--70_.png', 'https://2021.igem.org/wiki/images/a/a8/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--80_.png', 'https://2021.igem.org/wiki/images/8/82/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--90_.png', 'https://2021.igem.org/wiki/images/d/df/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--butanol--95_.png'];
+			const igemarraycoc2 = ['https://2021.igem.org/wiki/images/6/6f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--10_.png', 'https://2021.igem.org/wiki/images/c/c6/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--20_.png', 'https://2021.igem.org/wiki/images/0/07/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--40_.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--60_.png', 'https://2021.igem.org/wiki/images/6/63/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--70_.png', 'https://2021.igem.org/wiki/images/8/89/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--80_.png', 'https://2021.igem.org/wiki/images/7/72/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--90_.png', 'https://2021.igem.org/wiki/images/0/0a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--culture--95_.png'];
+			const igemarraysuc2 = ['https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--10_.png', 'https://2021.igem.org/wiki/images/5/57/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--20_.png', 'https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--40_.png', 'https://2021.igem.org/wiki/images/f/fc/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--60_.png', 'https://2021.igem.org/wiki/images/e/ef/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--70_.png', 'https://2021.igem.org/wiki/images/4/4d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--80_.png', 'https://2021.igem.org/wiki/images/e/e7/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--90_.png', 'https://2021.igem.org/wiki/images/1/1b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_sucrose_productivity--sucrose--95_.png'];
+			const correctorder2 = ['8', '7', '6', '5', '4', '3', '2', '1'];
+			output2.innerHTML = slider2.value;
+		output2.innerHTML = '95%';
+		imageDesc2.innerHTML = ''
+			  slideimage2.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="400px" height="400px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="400px" height="400px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+			slider2.oninput = function() {
+			  output2.innerHTML = imagearray2[this.value - 1] + '%';
+			  imageDesc2.innerHTML = igemarraycoc2[correctorder2[this.value-1]-1]
+			  slideimage2.innerHTML = '<div><img src="' + igemarraycoc2[correctorder2[this.value-1]-1] + '" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc2[correctorder2[this.value-1]-1] + '" width="400px" height="400px">' + '<img src="' + igemarraybut2[correctorder2[this.value-1]-1] + '" width="400px" height="400px"></div>' + 'img src="' + igemarraysuc2[correctorder2[this.value-1]-1] + '" width="400px" height="400px"';
+			}
+			</script>
+	<!-- slider 3 -->
+	<script>
+		var slider3 = document.getElementById("myRange3");
+	var output3 = document.getElementById("rangeValue3");
+	var slideimage3 = document.getElementById("rangeImage3");
+	var imageDesc3 = document.getElementById("ImageDesc3");
+	const imagearray3 = ['-4','-3','-2','-1.75','-1.25','-1.5','-1','-0.75','-0.5','-0.25','0'];
+	const descarray3 = ['me','me when','me when the','poopoo','peepee','6','7','8','0','0','0','0','0','0'];
+		const igemarraybut3 = ['https://2021.igem.org/wiki/images/f/f0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---0.25.png', 'https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---0.5.png', 'https://2021.igem.org/wiki/images/c/c3/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---0.75.png', 'https://2021.igem.org/wiki/images/1/15/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.25.png', 'https://2021.igem.org/wiki/images/8/84/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.5.png', 'https://2021.igem.org/wiki/images/c/c8/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.75.png', 'https://2021.igem.org/wiki/images/9/93/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---1.png', 'https://2021.igem.org/wiki/images/9/98/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---2.png', 'https://2021.igem.org/wiki/images/8/8b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---3.png', 'https://2021.igem.org/wiki/images/0/07/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol---4.png', 'https://2021.igem.org/wiki/images/4/4b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--butanol--0.png'];
+		const igemarraycoc3 = ['https://2021.igem.org/wiki/images/a/a7/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---0.25.png', 'https://2021.igem.org/wiki/images/0/06/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---0.5.png', 'https://2021.igem.org/wiki/images/8/87/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---0.75.png', 'https://2021.igem.org/wiki/images/8/82/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.25.png', 'https://2021.igem.org/wiki/images/a/a4/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.5.png', 'https://2021.igem.org/wiki/images/6/61/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.75.png', 'https://2021.igem.org/wiki/images/e/e9/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---1.png', 'https://2021.igem.org/wiki/images/c/c4/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---2.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---3.png', 'https://2021.igem.org/wiki/images/5/51/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture---4.png', 'https://2021.igem.org/wiki/images/5/50/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--culture--0.png'];
+		const igemarraysuc3 = ['https://2021.igem.org/wiki/images/c/cf/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---0.25.png', 'https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---0.5.png', 'https://2021.igem.org/wiki/images/0/0a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---0.75.png', 'https://2021.igem.org/wiki/images/7/7e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.25.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.5.png', 'https://2021.igem.org/wiki/images/a/a2/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.75.png', 'https://2021.igem.org/wiki/images/7/72/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---1.png', 'https://2021.igem.org/wiki/images/b/b0/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---2.png', 'https://2021.igem.org/wiki/images/4/49/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---3.png', 'https://2021.igem.org/wiki/images/8/82/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose---4.png', 'https://2021.igem.org/wiki/images/a/ac/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_o2_uptake--sucrose--0.png'];
+		const correctorder3 = ['10', '9', '8', '6', '5', '4', '7', '3', '2', '1', '11'];
+		output3.innerHTML = slider3.value;
+	output3.innerHTML = '-4';
+	imageDesc3.innerHTML = ''
+		  slideimage3.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="400px" height="400px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="400px" height="400px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+		slider3.oninput = function() {
+		  output3.innerHTML = imagearray3[this.value - 1] + '%';
+		  imageDesc3.innerHTML = igemarraycoc3[correctorder3[this.value-1]-1]
+		  slideimage3.innerHTML = '<div><img src="' + igemarraycoc3[correctorder3[this.value-1]-1] + '" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc3[correctorder3[this.value-1]-1] + '" width="400px" height="400px">' + '<img src="' + igemarraybut3[correctorder3[this.value-1]-1] + '" width="400px" height="400px"></div>' + 'img src="' + igemarraysuc3[correctorder3[this.value-1]-1] + '" width="400px" height="400px"';
+		}
+		</script>
+	<!-- slider 1 -->
+<script>
+	var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("rangeValue1");
+var slideimage1 = document.getElementById("rangeImage1");
+var imageDesc1 = document.getElementById("ImageDesc1");
+const imagearray1 = ['95','90','80','70','60','40','20','10'];
+const descarray1 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarraybut1 = ['https://2021.igem.org/wiki/images/5/5e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--10_.png', 'https://2021.igem.org/wiki/images/f/f7/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--20_.png', 'https://2021.igem.org/wiki/images/d/d3/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--40_.png', 'https://2021.igem.org/wiki/images/6/6a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--60_.png', 'https://2021.igem.org/wiki/images/1/1a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--70_.png', 'https://2021.igem.org/wiki/images/0/05/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--80_.png', 'https://2021.igem.org/wiki/images/0/0e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--90_.png', 'https://2021.igem.org/wiki/images/f/f5/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--butanol--95_.png'];
+	const igemarraycoc1 = ['https://2021.igem.org/wiki/images/3/30/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--10_.png', 'https://2021.igem.org/wiki/images/1/1a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--20_.png', 'https://2021.igem.org/wiki/images/d/d2/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--40_.png', 'https://2021.igem.org/wiki/images/2/21/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--60_.png', 'https://2021.igem.org/wiki/images/1/1d/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--70_.png', 'https://2021.igem.org/wiki/images/1/18/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--80_.png', 'https://2021.igem.org/wiki/images/9/9b/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--90_.png', 'https://2021.igem.org/wiki/images/5/54/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--culture--95_.png'];
+	const igemarraysuc1 = ['https://2021.igem.org/wiki/images/6/6a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--10_.png', 'https://2021.igem.org/wiki/images/8/8a/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--20_.png', 'https://2021.igem.org/wiki/images/1/1e/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--40_.png', 'https://2021.igem.org/wiki/images/7/79/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--60_.png', 'https://2021.igem.org/wiki/images/e/e9/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--70_.png', 'https://2021.igem.org/wiki/images/6/65/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--80_.png', 'https://2021.igem.org/wiki/images/b/bd/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--90_.png', 'https://2021.igem.org/wiki/images/8/8f/T--IISER-Pune-India--Graphs--Dynamic_Graphs--varying_butanol_productivity--sucrose--95_.png'];
+	const correctorder1 = ['8', '7', '6', '5', '4', '3', '2', '1'];
+	output1.innerHTML = slider1.value;
+output1.innerHTML = '95';
+imageDesc1.innerHTML = ''
+	  slideimage1.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="400px" height="400px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="400px" height="400px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
+	slider1.oninput = function() {
+	  output1.innerHTML = imagearray1[this.value - 1] + '%';
+	  imageDesc1.innerHTML = igemarraycoc1[correctorder1[this.value-1]-1]
+	  slideimage1.innerHTML = '<div><img src="' + igemarraycoc1[correctorder1[this.value-1]-1] + '" width="400px" height="400px"></div>' + '<div class="rangeImageRow2"><img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="400px" height="400px">' + '<img src="' + igemarraybut1[correctorder1[this.value-1]-1] + '" width="400px" height="400px"></div>' + 'img src="' + igemarraysuc1[correctorder1[this.value-1]-1] + '" width="400px" height="400px"';
+	}
+	</script>
+<!-- slider 5 -->
+<script>
+	var slider5 = document.getElementById("myRange5");
+var output5 = document.getElementById("rangeValue5");
+var slideimage5 = document.getElementById("rangeImage5");
+var imageDesc5 = document.getElementById("ImageDesc5");
+const imagearray5 = ['95','90','80','70','60','40','20','10'];
+const descarray5 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarray5 = ['https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png', 'https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_b8.png', 'https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_c4.png', 'https://2021.igem.org/wiki/images/5/55/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_d2.png', 'https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_e1.png', 'https://2021.igem.org/wiki/images/b/b7/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_f0.png'];
+	const correctorder5 = ['1', '2', '3', '4', '5', '6'];
+	output5.innerHTML = slider5.value;
+output5.innerHTML = '1';
+imageDesc5.innerHTML = ''
+	  slideimage5.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png" width="400px" height="400px"></div>';
+	slider5.oninput = function() {
+	  output5.innerHTML = imagearray5[this.value - 1] + '%';
+	  imageDesc5.innerHTML = igemarray5[this.value-1];
+	  slideimage5.innerHTML = '<div><img src="' + igemarray5[this.value-1] + '" width="400px" height="400px"></div>';
+	}
+	</script>
+<!-- slider 6 -->
+<script>
+	var slider6 = document.getElementById("myRange6");
+var output6 = document.getElementById("rangeValue6");
+var slideimage6 = document.getElementById("rangeImage6");
+var imageDesc6 = document.getElementById("ImageDesc6");
+const imagearray6 = ['95','90','80','70','60','40','20','10'];
+const descarray6 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
+	const igemarray6 = ['https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png', 'https://2021.igem.org/wiki/images/c/cb/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_b.png', 'https://2021.igem.org/wiki/images/6/62/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_c.png', 'https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_d.png', 'https://2021.igem.org/wiki/images/2/25/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_e.png', 'https://2021.igem.org/wiki/images/a/af/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_f.png'];
+	const correctorder6 = ['1', '2', '3', '4', '5', '6'];
+	output6.innerHTML = slider6.value;
+output6.innerHTML = '1';
+imageDesc6.innerHTML = ''
+	  slideimage6.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png" width="400px" height="400px"></div>';
+	slider6.oninput = function() {
+	  output6.innerHTML = imagearray6[this.value - 1] + '%';
+	  imageDesc6.innerHTML = igemarray6[this.value-1];
+	  slideimage6.innerHTML = '<div><img src="' + igemarray6[this.value-1] + '" width="400px" height="400px"></div>';
+	}
+	</script>
+	<script>
+		var screenheight = window.innerHeight,
+		    screenwidth = window.innerWidth;
+
+	</script>
+	<script>
+		var body = document.body,
+    		html = document.documentElement;
+
+		var pageheight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       		   html.clientHeight, html.scrollHeight, html.offsetHeight );
+	</script>
+	<script>
+		var backtotopheight=pageheight/4.65
+	</script>
+	<script>
+		var total = $('.item').length;
+		var actualtotal = 6;
+		var currentIndex = $('div.active').index() + 1;
+		$('#slidetext').html(currentIndex + '/'  + actualtotal);
+
+		// This triggers after each slide change
+		$('.carousel').on('slid.bs.carousel', function () {
+  			currentIndex = $('div.active').index() + 1;
+ 
+  		// Now display this wherever you want
+  		var text = currentIndex + '/' + actualtotal;
+  			$('#slidetext').html(text);
+		});
+
+	</script>
 </body>
+
+
