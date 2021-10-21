@@ -39,6 +39,27 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/0/08/T--IISER-Pune-India--Description--theglobalgoals_icons_color_goal_12.png
     md5: 6c39b883dbe7c96c86b81090a049de01
     upload_filename: T--IISER-Pune-India--Description--theglobalgoals_icons_color_goal_12.png
+  assets\Design\Cyanobacteria Sucrose Production Pathway_white.png:
+    link_URL: https://2021.igem.org/wiki/images/b/bf/T--IISER-Pune-India--Design--Cyanobacteria_Sucrose_Production_Pathway_white.png
+    md5: 477634b2c698ce0bcadfb90ab79db118
+    upload_filename: T--IISER-Pune-India--Design--Cyanobacteria Sucrose Production
+      Pathway_white.png
+  assets\Design\Sucrose utilization by Ecoli_white.png:
+    link_URL: https://2021.igem.org/wiki/images/7/7d/T--IISER-Pune-India--Design--Sucrose_utilization_by_Ecoli_white.png
+    md5: 02ea75667b93af98bb2afde151fa4fd8
+    upload_filename: T--IISER-Pune-India--Design--Sucrose utilization by Ecoli_white.png
+  assets\Design\butanol pathway.png:
+    link_URL: https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Design--butanol_pathway.png
+    md5: 245b54de3c76835583fb043d142dbcda
+    upload_filename: T--IISER-Pune-India--Design--butanol pathway.png
+  assets\Design\image4.png:
+    link_URL: https://2021.igem.org/wiki/images/2/28/T--IISER-Pune-India--Design--image4.png
+    md5: d59e2ca9f1865ab950ecb2f8d3d84784
+    upload_filename: T--IISER-Pune-India--Design--image4.png
+  assets\Design\pcscmap.jpg:
+    link_URL: https://2021.igem.org/wiki/images/5/58/T--IISER-Pune-India--Design--pcscmap.jpg
+    md5: 2f4bdcc1c4ab5ca8ad5f9c2975ff637b
+    upload_filename: T--IISER-Pune-India--Design--pcscmap.jpg
   assets\Graphs\3 Variables.jpg:
     link_URL: https://2021.igem.org/wiki/images/2/24/T--IISER-Pune-India--Graphs--3_Variables.jpg
     md5: 28bb4d02fe10fc1e85445e9eb62fd0de
@@ -1873,7 +1894,7 @@ css:
 html:
   Attributions.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Attributions
-    md5: a54602702a5a969bf60c1b9df3e57380
+    md5: 5e840738edc4798c4c244edd7cab9b99
   BasicParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/BasicParts
     md5: 99dc7d109bea216a7461f301189eac80
@@ -1903,7 +1924,7 @@ html:
     md5: 4955955d1635c5131a32707a4da4d888
   Design.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Design
-    md5: d588b9b92a9461303bcc77b09a468c78
+    md5: 5588ba6b24fa53e88833d5aa5449322f
   DryLabOverview.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/DryLabOverview
     md5: 60f39eaba9f4b68438572e9edb6120e6
@@ -1915,7 +1936,7 @@ html:
     md5: 7a0dee7a62e0e235543e1d6059d5663a
   Education.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Education
-    md5: 65498f008277954be3aab33c1c6af5b9
+    md5: e7f7c63b72eb1c5d0accd4cca8e242f6
   Engineering.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Engineering
     md5: c6da44523fa86bae224f42799f64b992
@@ -1924,13 +1945,13 @@ html:
     md5: f387cb933f7daa6a4f8a5098ccac1bb4
   Experiments.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Experiments
-    md5: c535f9c4993f45cbc19ea77509d0dd05
+    md5: 2334c8fc1ecb6b04e28c6a55f62b524c
   FutureWork.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/FutureWork
-    md5: 84642c01a1d9445ced5e00f1744b1e2b
+    md5: e482b4fee9c18de55a0a23252af72159
   Human_Practices.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Human_Practices
-    md5: aaeb4e438ce84c88df4a1c693106e9b7
+    md5: d1c2e60387507e01f631e0396f665964
   Implementation.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Implementation
     md5: 7bde11d5c71388794b792b12270bb63e
@@ -1939,7 +1960,7 @@ html:
     md5: a0f084404b2aa722fae4a0c82960c4e8
   LabNotebook.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/LabNotebook
-    md5: c0fd77591d6c7ebac6a3408baa08c6f9
+    md5: e471df9f146d7457c2c27f4b7c512017
   Measurement.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Measurement
     md5: e30cf1f70825b97d77cc518b89a22bb3
@@ -1954,7 +1975,7 @@ html:
     md5: 762d9a3ed592fdfe0b9f11a664acdb90
   Partnership.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Partnership
-    md5: c6be48b8b3b2f42daa4566f0f8058a7c
+    md5: da14026544d1758ccd69afa335b2ba5e
   Results.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Results
     md5: 68db00be4e347d371fa1e52f08c00184
@@ -3760,7 +3781,7 @@ js:
     md5: dc5e7f18c8d36ac1d3d4753a87c98d0a
   js\main.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/mainJS?action=raw&ctype=text/javascript
-    md5: 4e4729d52cc5bdf86d94c17941c14f2d
+    md5: e98c3e6f55fb9b8a48444d3363be4321
   js\scrollreveal.min.js:
     link_URL: https://2021.igem.org/Template:IISER-Pune-India/js/scrollreveal-minJS?action=raw&ctype=text/javascript
     md5: 9c650e3a1c128deeb82ccc4db4a31885
