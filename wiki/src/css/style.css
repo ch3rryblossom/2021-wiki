@@ -1296,7 +1296,7 @@ label {
 }
 .device-mockup {
 	position: relative;
-	width: 350px;
+	max-width: 350px;
 	height: auto;
 	margin: 0 auto;
 	z-index: 1;
@@ -1453,6 +1453,7 @@ main {
 		padding-bottom: 88px;
 	}
 }
+
 .site-footer {
 	position: relative;
 	background: #0b0d19;
@@ -1512,7 +1513,7 @@ main {
 .footer-social-links,
 .footer-copyright {
 	flex: none;
-	width: 100%;
+	max-width: 100%;
 	display: inline-flex;
 	justify-content: center;
 }

@@ -19,6 +19,7 @@
 		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
 
+		
     </style>
 <body>
     
@@ -138,10 +139,29 @@
 
 	<!-- STYLING FOR FONTS -->
 	<style>
-		.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
-		color: white !important;
-		font-family: ProximaNova !important;
-	}
+		.content h1, .content h2, .content h4, .content h5, .content h6{
+			color: white !important;
+			font-family: ProximaNova !important;
+		}
+
+		.content h3 {
+			color: #ffd73a !important;
+			font-family: ProximaNova !important;
+		}
+
+		.sidenav {
+			height: auto;
+			width: auto;
+			padding-top: 150px;
+			padding-left: 5px;
+			padding-right: 10px;
+		
+			margin-top: 25%;
+			margin-bottom: 20px;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 9.5% ;
+		}
 	</style>
 	<!-- END OF STYLING FOR FONTS -->
 
@@ -298,7 +318,7 @@
 							<p>Then came the devastating second wave of COVID-19, cutting our lab time down from seven months to two. We were incredibly fortunate, in that situation, to benefit from the help of Dr Himadri Pakrasi and Dr Shams Yazdani. Dr Pakrasi’s lab provided us with sucrose-secreting strains they had previously engineered - UTEX 2973-cscB, 2973-cscB-sps and 2973-cscB-sps-spp. <i>S. elongatus</i>’s freshwater strains naturally produce sucrose as an osmoprotectant, and the presence of cscB (coding for sucrose permease) leads to that sucrose being secreted into the growth medium<sup><a href="#oref1">[1]</a></sup>. The genes sps and spp upregulate the sucrose production pathway. This was a huge relief for us, as UTEX 2973 is not naturally transformable. Genes have to be introduced via triparental mating (a 9-day-long protocol involving conjugation) and incorporated into the genome via a homologous recombination strategy, such as CRISPR. Dr Yazdani’s lab lent us his <i>E. coli</i> KJK01 strain - an IPTG-inducible butanol-producing derivative of MG1655.<sup><a href="#oref2">[2]</a></sup> The genes controlling the butanol-producing pathway have been markerlessly integrated into the genome, making it easy to work with for the purposes of our co-culture.</p>
 							<br>
 
-							<p>Our immediate work in the lab, then, was to test out the strains we’d received and to set up a co-culture. We used NMR to assay for the presence of butanol in the LB medium of the KJK01. Following confirmation of butanol production, we made the KJK01 cells electrocompetent and transformed them with pCSCX - a plasmid containing genes for sucrose uptake and digestion.<sup><a href="#oref5">[5]</a></sup> pCSCX is marked with Kanamycin and Ampicillin, the former of which is also shared by UTEX-2973, making it useful for ensuring the purity of our co-culture. For the cyanobacteria, we used Megazyme’s kit for a colorimetric sucrose assay to establish a standard curve of fluorescence versus sucrose concentration, and used it to quantify the sucrose concentration in supernatant aliquots taken at regular intervals.<sup><a href="#oref3">[3]</a></sup> The same assay and standard curve were used to quantify sucrose consumption in KJK01 grown in Co-BG11 with sucrose. Co-BG11 is a variant of the standard BG11 medium for cyanobacteria, and is free of any other carbon source; this variant is optimised for co-cultures with <i>E. coli</i>.<sup><a href="#oref4">[4]</a></sup></p>
+							<p>Our immediate work in the lab, then, was to test out the strains we’d received and to set up a co-culture. We used NMR to assay for the presence of butanol in the LB medium of the KJK01. Following confirmation of butanol production, we made the KJK01 cells electrocompetent and transformed them with pCSCX - a plasmid containing genes for sucrose uptake and digestion.<sup><a href="#oref3">[3]</a></sup> pCSCX is marked with Kanamycin and Ampicillin, the former of which is also shared by UTEX-2973, making it useful for ensuring the purity of our co-culture. For the cyanobacteria, we used Megazyme’s kit for a colorimetric sucrose assay to establish a standard curve of fluorescence versus sucrose concentration, and used it to quantify the sucrose concentration in supernatant aliquots taken at regular intervals.<sup><a href="#oref4">[4]</a></sup> The same assay and standard curve were used to quantify sucrose consumption in KJK01 grown in Co-BG11 with sucrose. Co-BG11 is a variant of the standard BG11 medium for cyanobacteria, and is free of any other carbon source; this variant is optimised for co-cultures with <i>E. coli</i>.<sup><a href="#oref5">[5]</a></sup></p>
 							<br>
 
 							<p>Reviving cyanobacteria was a difficult task and involved setting up lights in our incubator, acquiring a lux meter and making many, many mistakes as it is a relatively new model organism. We maintained a record of everything we learn from our mentors at the Wangikar lab and are publishing it as a contribution to future teams working on cyanobacteria.</p>
@@ -313,9 +333,9 @@
 							<ol class="a">
 								<li style="padding-left: 1em;" id="oref4">Lin, P. C., Zhang, F., & Pakrasi, H. B. (2020). Enhanced production of sucrose in the fast-growing cyanobacterium <i>Synechococcus elongatus</i> UTEX 2973. Scientific reports, 10(1), 1-8.</li>
 								<li style="padding-left: 1em;" id="oref5">Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
+								<li style="padding-left: 1em;">Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001–1010. <a href="https://doi.org/10.1016/j.biotechadv.2011.08.019">https://doi.org/10.1016/j.biotechadv.2011.08.019</a></li>
 								<li style="padding-left: 1em"><a href="https://www.megazyme.com/sucrose-d-glucose-assay-kit">Megazyme's sucrose assay kit</a></li>
 								<li style="padding-left: 1em;">Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium <i>Synechococcus elongatus</i> UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO 2. Biotechnology for biofuels, 13(1), 1-14.</li>
-								<li style="padding-left: 1em;">Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001–1010. <a href="https://doi.org/10.1016/j.biotechadv.2011.08.019">https://doi.org/10.1016/j.biotechadv.2011.08.019</a></li>
 							</ol>
 							<br><br>
 						</div>
@@ -1288,7 +1308,7 @@
 
 
     <!------------------------------------------------- back to top button ------------------------------------------->
-    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
+    <a href="#top"><img src="assets/pngs/Back-to-top.png" id="myBtn" title="Go to top" width="100" height="100" class="footer-links"></a>
 
 	
 	<!------------------------------------------- LINKING MAIN JS FILES ----------------------------------------------->
