@@ -97,7 +97,7 @@
 			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 			  <li><a class="dropdown-item" href="Description.html">Description</a></li>
 			  <li><a class="dropdown-item" href="Design.html">Design</a></li>
-			  <li><a class="dropdown-item" href="https://possible-trapezoid-297.notion.site/11e9906b405543a29361e38a50c81024?v=af10ed5ac15145e8a267a68ed8eb2005">Notebook</a></li>
+			  <li><a class="dropdown-item" href="TeamNotebook/Team Notebook 11e9906b405543a29361e38a50c81024.html">Notebook</a></li>
 			  <li><a class="dropdown-item" href="Contribution.html">Contributions</a></li>
 			  <li><a class="dropdown-item" href="Engineering.html">Engineering Success</a></li>
 			  <li><a class="dropdown-item" href="Implementation.html">Future Implementation</a></li>
@@ -2492,6 +2492,8 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 							<div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">
 								Oxygen bound (Maximum allowed rate of oxygen uptake for <i>E. coli</i>)
 							</div>
+							<br><h4>
+								<b><div id="ImageDesc5"></div></h4></b><br><br>
 							<br>
 							<p>Move the slider to see how the butanol yield of the co culture varies at different levels of oxygen in terms of the bound on the Oxygen uptake given in mmol/gDW/hr.</p>
 							<br><br>
@@ -2538,12 +2540,14 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 
 
 							<div class="range-slider">
-								<input type="range" min="1" max="6" step="1" value="1" class="myRange"id="Dry">
+								<input type="range" min="1" max="6" step="1" value="1" class="myRange" id="myRange6">
 							</div>
 
 							<div class="rangeOutput" id="rangeValue6"></div><div class="rangeOutput">
 								Carbon Uptake Efficiency
 							</div>
+							<br><h4>
+								<b><div id="ImageDesc6"></div></h4></b><br><br>
 							<br><br>
 							<p>Move the slider to see how the butanol yield of the co-culture varies at different carbon uptake efficiency of <i>S. elongatus</i> given in mmol/gDW/hr.</p>
 							<br><br>
@@ -3402,7 +3406,7 @@ div.imageWrapper img{
 
 		slider5.oninput = function() {
 	  		output5.innerHTML = imagearray5[this.value - 1];
-	  		imageDesc5.innerHTML = igemarray5[this.value-1];
+	  		imageDesc5.innerHTML = '';
 	  		slideimage5.innerHTML = '<div><img src="' + igemarray5[this.value-1] + '" width="450px" height="450px"></div>';
 		}
 	</script>
@@ -3427,7 +3431,7 @@ div.imageWrapper img{
 		
 		slider6.oninput = function() {
 			output6.innerHTML = imagearray6[this.value - 1] + '%';
-			imageDesc6.innerHTML = igemarray6[this.value-1];
+			imageDesc6.innerHTML = '';
 			slideimage6.innerHTML = '<div><img src="' + igemarray6[this.value-1] + '" width="450px" height="450px"></div>';
 		}
 	</script>
