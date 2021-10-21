@@ -94,7 +94,7 @@
 			</a>
 			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
 			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
-			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="EColi.html"><i>E. coli</i></a></li>
 			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
 			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
 			</ul>
@@ -147,6 +147,9 @@
 		.content h3 {
 			color: #ffd73a !important;
 			font-family: ProximaNova !important;
+		}
+		#reference {
+			color: #fff !important;
 		}
 
 		.sidenav {
@@ -216,12 +219,11 @@
 							<nav>
 								<ul id="sidenav-id">
 									<li class="nav-item"><a class="nav-link" href="#c1">Preparation of BG-11</a></li>
-									<li class="nav-item"><a class="nav-link" href="#c2">Revival of cyanobacteria strains</a></li>
-									<li class="nav-item"><a class="nav-link" href="#c3">Making glycerol and DMSO stocks</a></li>
-									<li class="nav-item"><a class="nav-link" href="#c4">Making plates from DMSO stocks</a></li>
-									<li class="nav-item"><a class="nav-link" href="#c5">Cyanobacteria growth curve under salt stress</a></li>
+									<li class="nav-item"><a class="nav-link" href="#c2">Revival of <i>S. elongatus</i> strains from plates</a></li>
+									<li class="nav-item"><a class="nav-link" href="#c3">Making DMSO and Glycerol Stocks</a></li>
+									<li class="nav-item"><a class="nav-link" href="#c4">Revival of <i>S. elongatus</i> strains from glycerol or DMSO stocks</a></li>
+									<li class="nav-item"><a class="nav-link" href="#c5">Growth Curves of <i>S. elongatus</i> under salt stress</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c6">Sucrose assay</a></li>
-									<li class="nav-item"><a class="nav-link" href="#c7">Cyanobacteria growth curve under high carbon</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c8">References</a></li>
 								</ul>
 							</nav>
@@ -305,7 +307,6 @@
 						<div class="tab-pane fade show active overview-wet" id="overview-wet" role="tabpanel" aria-labelledby="overview-wet-tab">
 							<a id="o1"></a>
 							<br><br><br>
-							
 							<p>Our Wet Lab work was geared towards observing the production of our final product from a co-culture of <i>E. coli</i> and <i>S. elongatus</i> UTEX 2973. To that end, we broke it down into four steps:</p>
 							<ol class="a">
 								<li style="padding-left: 1em;">Engineering our cyanobacteria to secrete sucrose under salt stress;</li>
@@ -315,7 +316,7 @@
 							</ol>
 							<br>
 
-							<p>Then came the devastating second wave of COVID-19, cutting our lab time down from seven months to two. We were incredibly fortunate, in that situation, to benefit from the help of Dr Himadri Pakrasi and Dr Shams Yazdani. Dr Pakrasi’s lab provided us with sucrose-secreting strains they had previously engineered - UTEX 2973-cscB, 2973-cscB-sps and 2973-cscB-sps-spp. <i>S. elongatus</i>’s freshwater strains naturally produce sucrose as an osmoprotectant, and the presence of cscB (coding for sucrose permease) leads to that sucrose being secreted into the growth medium<sup><a href="#oref1">[1]</a></sup>. The genes sps and spp upregulate the sucrose production pathway. This was a huge relief for us, as UTEX 2973 is not naturally transformable. Genes have to be introduced via triparental mating (a 9-day-long protocol involving conjugation) and incorporated into the genome via a homologous recombination strategy, such as CRISPR. Dr Yazdani’s lab lent us his <i>E. coli</i> KJK01 strain - an IPTG-inducible butanol-producing derivative of MG1655.<sup><a href="#oref2">[2]</a></sup> The genes controlling the butanol-producing pathway have been markerlessly integrated into the genome, making it easy to work with for the purposes of our co-culture.</p>
+							<p>Then came the devastating second wave of COVID-19, cutting our lab time down from seven months to two. We were incredibly fortunate, in that situation, to benefit from the help of Dr Himadri Pakrasi and Dr Shams Yazdani. Dr Pakrasi’s lab provided us with sucrose-secreting strains they had previously engineered - UTEX 2973-<i>cscB</i>, 2973-cscB-<i>spp</i> and 2973-cscB-<i>spp</i>-<i>spp</i>. <i>S. elongatus</i>’s freshwater strains naturally produce sucrose as an osmoprotectant, and the presence of <i>cscB</i> (coding for sucrose permease) leads to that sucrose being secreted into the growth medium<sup><a href="#oref1">[1]</a></sup>. The genes <i>spp</i> and <i>spp</i> upregulate the sucrose production pathway. This was a huge relief for us, as UTEX 2973 is not naturally transformable. Genes have to be introduced via triparental mating (a 9-day-long protocol involving conjugation) and incorporated into the genome via a homologous recombination strategy, such as CRISPR. Dr Yazdani’s lab lent us his <i>E. coli</i> KJK01 strain - an IPTG-inducible butanol-producing derivative of MG1655.<sup><a href="#oref2">[2]</a></sup> The genes controlling the butanol-producing pathway have been markerlessly integrated into the genome, making it easy to work with for the purposes of our co-culture.</p>
 							<br>
 
 							<p>Our immediate work in the lab, then, was to test out the strains we’d received and to set up a co-culture. We used NMR to assay for the presence of butanol in the LB medium of the KJK01. Following confirmation of butanol production, we made the KJK01 cells electrocompetent and transformed them with pCSCX - a plasmid containing genes for sucrose uptake and digestion.<sup><a href="#oref3">[3]</a></sup> pCSCX is marked with Kanamycin and Ampicillin, the former of which is also shared by UTEX-2973, making it useful for ensuring the purity of our co-culture. For the cyanobacteria, we used Megazyme’s kit for a colorimetric sucrose assay to establish a standard curve of fluorescence versus sucrose concentration, and used it to quantify the sucrose concentration in supernatant aliquots taken at regular intervals.<sup><a href="#oref4">[4]</a></sup> The same assay and standard curve were used to quantify sucrose consumption in KJK01 grown in Co-BG11 with sucrose. Co-BG11 is a variant of the standard BG11 medium for cyanobacteria, and is free of any other carbon source; this variant is optimised for co-cultures with <i>E. coli</i>.<sup><a href="#oref5">[5]</a></sup></p>
@@ -325,17 +326,24 @@
 							<br>
 						
 							<p>We intend in future work to re-engineer the cyanobacteria to express the sucrose production pathway and the sucrose permease gene under strong native promoters, and to choose a promoter that responds well to high CO<sub>2</sub> conditions for our final application. This is principally on the advice of Dr Shireesh Srivastava, who has observed in the course of his work that native promoters often lead to higher and more consistent levels of expression with less detriment to the host. We further intend to find optimal conditions - light, carbon dioxide, reductants to remove oxygen evolved by cyanobacteria, temperature and so forth - allow for a stable and productive co-culture.</p>
+							<br>
+
+							<p>For our E. coli KJK01 strain, we plan to characterize the bidirectional promoter present in our pcscX plasmid. This will help us understand the flux through the csc gene products and their importance for our strain. We further plan to increase the butanol tolerance of our strain based on studies by Reyes et al.<sup><a href="#oref6">[6]</a></sup> and Boyarskiy et al.<sup><a href="#oref7">[7]</a></sup> For further information on this check out our <a href="#Implementation.html">proposed implementation</a>. We will also perform our growth curves with this modified strain. We also plan to incorporate our drylab results into our wetlab by knocking out and overexpressing the genes suggested by OptKnock and FSEOF respectively. We further plan to optimize our co culture using the results from our modified strains.</p>
+							
+							
 							<a id="o2"></a><br><a id="oref1"></a><br><a id="oref2"></a><br><a id="oref3"></a><br>
 
 
-							<h3>References</h3>
+							<h3 id="reference">References</h3>
 							<hr>
 							<ol class="a">
 								<li style="padding-left: 1em;" id="oref4">Lin, P. C., Zhang, F., & Pakrasi, H. B. (2020). Enhanced production of sucrose in the fast-growing cyanobacterium <i>Synechococcus elongatus</i> UTEX 2973. Scientific reports, 10(1), 1-8.</li>
 								<li style="padding-left: 1em;" id="oref5">Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
-								<li style="padding-left: 1em;">Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001–1010. <a href="https://doi.org/10.1016/j.biotechadv.2011.08.019">https://doi.org/10.1016/j.biotechadv.2011.08.019</a></li>
-								<li style="padding-left: 1em"><a href="https://www.megazyme.com/sucrose-d-glucose-assay-kit">Megazyme's sucrose assay kit</a></li>
+								<li style="padding-left: 1em;" id="oref6">Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001–1010. <a href="https://doi.org/10.1016/j.biotechadv.2011.08.019">https://doi.org/10.1016/j.biotechadv.2011.08.019</a></li>
+								<li style="padding-left: 1em;" id="oref7"><a href="https://www.megazyme.com/sucrose-d-glucose-assay-kit">Megazyme's sucrose assay kit</a></li>
 								<li style="padding-left: 1em;">Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium <i>Synechococcus elongatus</i> UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO 2. Biotechnology for biofuels, 13(1), 1-14.</li>
+								<li style="padding-left: 1em;">Reyes, L. H., Almario, M. P., & Kao, K. C. (2011). Genomic library screens for genes involved in n-butanol tolerance in Escherichia coli. PloS one, 6(3), e17678.</li>
+								<li style="padding-left: 1em;">Sergey Boyarskiy, Stephanie Davis López, Niwen Kong, Danielle Tullman-Ercek,Transcriptional feedback regulation of efflux protein expression for increased tolerance to and production of n-butanol,Metabolic Engineering,Volume 33,2016,Pages 130-137,ISSN 1096-7176</li>
 							</ol>
 							<br><br>
 						</div>
@@ -345,6 +353,8 @@
 						<!------------------------------------- START OF E COLI------------------------------------------>
 						<div class="tab-pane fade ecoli-wet" id="ecoli-wet" role="tabpanel" aria-labelledby="ecoli-wet-tab">
 							
+							<br><br><br>
+							<p>The experiments below are presented in the order in which we performed them.</p>
 							<!-- GLYCEROL STOCKS OF KJK01 -->
 							<br><br><br>
 							<h2>Glycerol stocks of KJK01</h2>
@@ -352,8 +362,8 @@
 							<h3> Objective </h3>
 							<p>To prepare glycerol stocks of the <i>E. coli</i> KJK01 strain.</p>
 							<br>
-							<h3>Working Principle</h3>
-							<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term storage at low temperatures such as 4&#176. Long term storage of bacteria is best at temperatures around -80&#176. However, agar plates and liquid cultures cannot be stored at such temperatures, as the water crystallizes in and around the bacterial cells, rupturing and killing them. Glycerol, an anti-freezing agent, is added to the media to store samples at such temperatures.<sup><a href="#eref1">[1]</a></sup></p>
+							<h3>Working Principle<sup><a href="#eref1">[1]</a></sup></h3>
+							<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term storage at low temperatures such as 4&#176. Long term storage of bacteria is best at temperatures around -80&#176. However, agar plates and liquid cultures cannot be stored at such temperatures, as the water crystallizes in and around the bacterial cells, rupturing and killing them. Glycerol, an anti-freezing agent, is added to the media to store samples at such temperatures.</p>
 							<br>
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="b">
@@ -463,9 +473,9 @@
 							<p>To perform a gradient PCR to find the best annealing temperature as well as the best amount of DMSO to add to obtain proper amplification of the gene of interest. </p>
 							<br>
 
-							<h3>Working principle<sup><a href="eref4">[4]</a></sup></h3>
+							<h3>Working principle<sup><a href="#eref4">[4]</a></sup></h3>
 							<p>Thermocyclers used for PCR reactions can maintain different tubes at different temperatures in the same run. This is exploited to vary the annealing temperature and observe which of the set temperatures is best suited for annealing and thus gives best amplification. This allows for a single PCR run to give us results for multiple annealing temperatures.</p>
-							<p>DMSO prevents the renaturation of single strands of DNA. Thus, it helps in amplification of the gene of interest.<sup><a href="eref4">[4]</a></sup> An optimum amount can be found by adding different amounts to tubes in gradient PCR.</p>
+							<p>DMSO prevents the renaturation of single strands of DNA. Thus, it helps in amplification of the gene of interest.<sup><a href="#eref4">[4]</a></sup> An optimum amount can be found by adding different amounts to tubes in gradient PCR.</p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
@@ -516,7 +526,7 @@
 								<li style="padding-left: 1em;">Inoculate 1&#176 culture of KJK01 in 10 mL 1X LB and leave it overnight in an incubator at 37&#176C and 180 rpm.</li>
 								<li style="padding-left: 1em;">The next morning, inoculate 2&#176 cultures of KJK01 in 1X LB and 1X TB and place in the incubator at 37&#176C and 180 rpm until it hits 0.6 OD<sub>600</sub>.</li>
 								<ul class="c">
-									<li style="padding-left: 1em;">We inoculated 6 2&#176 cultures (3 LB and 3 TB) to confirm if KJK01 grew better in LB or TB (The secondary culture was originally cultured in TB expecting better growth<a href="#eref2"><sup>[2]</sup></a>)</li>
+									<li style="padding-left: 1em;">We inoculated 6 2&#176 cultures (3 LB and 3 TB) to confirm if KJK01 grew better in LB or TB (The secondary culture was originally cultured in TB expecting better growth<a href="#eref3"><sup>[3]</sup></a>)</li>
 								</ul>
 								<li style="padding-left: 1em;"> At OD 0.6, induce cultures with appropriate concentrations of IPTG and leave it in the incubator overnight at 37&#176C and 180 rpm.</li>
 								<ul class="c">
@@ -550,7 +560,7 @@
 
 							<h3>Working principle</h3>
 							<p>To transform any cells, they need to be competent. Only competent cells can take up DNA. Competent cells can be chemically or electrically stimulated to open up the cell pores and take up DNA. The preparation of cells for chemical or electrical transformation differs in protocol, and the cells competent for the same are called chemically competent and electrocompetent cells, respectively.</p>
-							<p> Electrocompetent cells can be transformed using an electrical pulse. When electro-competent cells are pulsed, the pulse will rearrange the lipid bilayer to form a gap for the intake of the plasmid <sup><a href="#eref6">[6]</a></sup>.</p>
+							<p> Electrocompetent cells can be transformed using an electrical pulse. When electro-competent cells are pulsed, the pulse will rearrange the lipid bilayer to form a gap for the intake of the plasmid <sup><a href="#eref7">[7]</a></sup>.</p>
 							<p>The preparation of electrocompetent cells involves washing the grown cells serially using water and glycerol multiple times. These washes are important to remove all the salts surrounding the cells. The salts would otherwise cause sparking during the electrical pulse, damaging the apparatus and the cell wall. Competent cells are finally mixed in dilute glycerol solution, flash frozen and stored at -80&#176.</p>
 							<br>
 
@@ -581,7 +591,7 @@
 							<h3>Working principle <sup><a href="#eref7">[7]</a></sup></h3>
 							<p>Transformation via electroporation is a physical transformation method that uses an electrical pulse to create temporary pores in cell membranes through which substances like nucleic acids can pass into cells. Host cells and nucleic acids are suspended in a conductive solution, and an electrical circuit is closed around the mixture. An electrical pulse at an optimized voltage lasting a few microseconds to a millisecond is discharged through the cell suspension, which disturbs the phospholipid bilayer of the membrane and results in the formation of temporary pores. The electric potential across the cell membrane simultaneously rises to allow charged molecules like DNA to be driven across the membrane through the pores. This method can transform a large number of cells in a short period of time as it is easy and rapid. </p>
 							<br>
-							<p>The pCSCX gene contains cscABK genes from <i>E. coli</i> W that help in transport and metabolism of sucrose. <i>E. coli</i> strains that have been transformed with this plasmid have shown to be able to survive with sucrose as their sole carbon source<sup><a href="eref8">[8]</a></sup>. We hope to replicate these results.</p>
+							<p>The pCSCX gene contains <i>cscABK</i> genes from <i>E. coli</i> W that help in transport and metabolism of sucrose. <i>E. coli</i> strains that have been transformed with this plasmid have shown to be able to survive with sucrose as their sole carbon source<sup><a href="eref8">[8]</a></sup>. We hope to replicate these results.</p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
@@ -640,7 +650,7 @@
 							<h2 class="h2">Glycerol stocks of pCSCX-KJK01</h2>
 							<br><br>
 							<h3>Objective</h3>
-							<p>To prepare glycerol stocks of the <i>E. coli</i> KJK01 strain transformed with the cscABK gene containing pCSCX plasmid. </p>
+							<p>To prepare glycerol stocks of the <i>E. coli</i> KJK01 strain transformed with the <i>cscABK</i> gene containing pCSCX plasmid. </p>
 							<br>
 
 							<h3>Working principle</h3>
@@ -746,9 +756,7 @@
 								<span class="visually-hidden">Next</span>
 								</button>
 							</div>
-							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
-								<h3 id="slidetext"></h3>
-							</div>
+
 							<!-- END OF SLIDE SHOW -->
 
 							<a id="e10"></a><br><hr width="50%"><br><br>
@@ -773,6 +781,7 @@
 							</ul>
 							<br>
 							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
+							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="a">
@@ -792,22 +801,46 @@
 							<!-- SUCROSE ASSAY -->
 							<h2>Sucrose Assay</h2>
 							<br><br>
+
+							<h3>Objective</h3>
+							<p>To measure the consumption of sucrose by <i>E. coli</i> KJK01 and pCSCX-KJK01</p>
+							<br>
 							<p>Same as for <i>S. elongatus</i>, except we look for decrease in sucrose concentration as opposed to increase. Link to sucrose assay for <i>S. elongatus</i> can be found <a href="#c6">here</a>.</p>
+							<br>
+
+							<h3>Working Principle</h3>
+							<p>The sucrose assay is a colorimetric assay<sup><a href="#eref11">[11]</a></sup> to quantify sucrose concentration in cell supernatants. Supernatant samples from the cultures are taken at regular frequencies. A decreasing trend in the absorbance of successive samples after treatment is indicative of decreasing sucrose concentration, i.e, net sucrose consumption has been taking place.</p>
+							<br>
+
+							<ul class="b">
+								<li style="padding-left: 1em;">Distilled water </li>
+								<li style="padding-left: 1em;">D-Glucose standard solution (5 mL, 1.0 mg/mL) in 0.2% (w/v) benzoic acid </li>
+								<li style="padding-left: 1em;">GOPOD Reagent Enzymes. Glucose oxidase plus peroxidase and 4-aminoantipyrine. Freeze-dried powder </li>
+								<li style="padding-left: 1em;">GOPOD Reagent Buffer. p-hydroxybenzoic acid and sodium azide (0.095% w/v) </li>
+								<li style="padding-left: 1em;">β-Fructosidase (invertase) solution </li>
+								<li style="padding-left: 1em;">Acetate buffer</li>
+								<br>
+								<li style="padding-left: 1em;">96 well plate </li>
+								<li style="padding-left: 1em;">1 mL Eppendorf tubes </li>
+								<li style="padding-left: 1em;">Spectrophotometer set at 510 nm </li>
+								<li style="padding-left: 1em;">Vortex mixer </li>
+								<li style="padding-left: 1em;">Thermostated water bath </li>
+							</ul>
 							<br><a id="eref1"></a><br><a id="eref2"></a><br><a id="eref3"></a>
 
 
 							<!-- References -->
 							<hr>
-							<h3>Reference</h3>
+							<h3 id="reference">Reference</h3>
 							<ol class="a">
 								<li style="padding-left: 1em;" id="eref4"><a href="https://www.addgene.org/protocols/create-glycerol-stock/">https://www.addgene.org/protocols/create-glycerol-stock/</a></li>
-								<li style="padding-left: 1em;" id="eref5">Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
-								<li style="padding-left: 1em;" id="eref6">Butanol Producing gene Likhith</li>
+								<li style="padding-left: 1em;" id="eref5"> Surzycki, Stefan (2000). Basic Techniques in Molecular Biology || Preparation of Genomic DNA from Bacteria. , 10.1007/978-3-642-56968-5(Chapter 4), 79–100. doi:10.1007/978-3-642-56968-5_4 </li>
+								<li style="padding-left: 1em;" id="eref6">Abdelaal, A. S., Jawed, K., & Yazdani, S. S. (2019). CRISPR/Cas9-mediated engineering of Escherichia coli for n-butanol production from xylose in defined medium. Journal of Industrial Microbiology and Biotechnology, 46(7), 965-975.</li>
 								<li style="padding-left: 1em;" id="eref7">Gopalakrishnan, Guruprasad. (2012). Re: What exactly is the function of DMSO in PCR? . Retrieved from: <a href="https://www.researchgate.net/post/What_exactly_is_the_function_of_DMSO_in_PCR/500ad731e4f076bb14000011/citation/download">research gate</a></li>
 								<li style="padding-left: 1em;" id="eref8"><a href="https://www.sciencedirect.com/topics/materials-science/nuclear-magnetic-resonance-spectroscopy">https://www.sciencedirect.com/topics/materials-science/nuclear-magnetic-resonance-spectroscopy</a></li>
 								<li style="padding-left: 1em;" id="eref9"><a href="https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells">https://www.goldbio.com/articles/article/Introduction-to-Competent-Cells</a></li>
 								<li style="padding-left: 1em;" id="eref10"><a href="https://www.thermofisher.com/in/en/home/references/gibco-cell-culture-basics/transfection-basics/transfection-methods/electroporation.html">https://www.thermofisher.com/in/en/home/references/gibco-cell-culture-basics/transfection-basics/transfection-methods/electroporation.html</a> </li>
-								<li style="padding-left: 1em;">Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001–1010. <a href="https://doi.org/10.1016/j.biotechadv.2011.08.019">https://doi.org/10.1016/j.biotechadv.2011.08.019</a> </li>
+								<li style="padding-left: 1em;" id="eref11">Bruschi, M., Boyes, S. J., Sugiarto, H., Nielsen, L. K., & Vickers, C. E. (2012). A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Biotechnology advances, 30(5), 1001–1010. <a href="https://doi.org/10.1016/j.biotechadv.2011.08.019">https://doi.org/10.1016/j.biotechadv.2011.08.019</a> </li>
 								<li style="padding-left: 1em;"> Andrews J. M. (2001). Determination of minimum inhibitory concentrations. The Journal of antimicrobial chemotherapy, 48 Suppl 1, 5–16. <a href="https://doi.org/10.1093/jac/48.suppl_1.5">https://doi.org/10.1093/jac/48.suppl_1.5</a></li>
 								<li style="padding-left: 1em;">Microbial Growth. (2021, January 4). Oregon State University <a href="https://bio.libretexts.org/@go/page/10667"></a>https://bio.libretexts.org/@go/page/10667</a>.</li>
 							</ol>
@@ -820,6 +853,8 @@
 						<!-------------------------------- START OF CYANOBACTERIA --------------------------------------->
 						<div class="tab-pane fade cyano-wet" id="cyano-wet" role="tabpanel" aria-labelledby="cyano-wet-tab">
 							<br><br><br>
+							<p>The experiments below are presented in the order in which we performed them.</p>
+							<br><br>
 							<!-- Preparation of BG-11-->
 							<h2>Preparation of BG-11</h2>
 							<br><br>
@@ -855,21 +890,21 @@
 
 							<!-- Revival of cyanobacteria strains -->
 							<!-- to be edited - protocol not link-->
-							<h2>Revival of Cyanobacteria strains </h2>
+							<h2>Revival of <i>S. elongatus</i> strains from plates</h2>
 							<br><br>
 							<h3>Objective</h3>
-							<p>Reviving UTEX 2973 (wild type, cscB, cscB-sps, cscB-sps-spp) from the plates received from Prof. Himadri Pakrasi’s lab. </p>
+							<p>To revive UTEX 2973 (wild type, <i>cscB</i>, <i>cscB</i>-<i>spp</i>, <i>cscB</i>-sps-<i><i>spp</i></i>) from agar plates. </p>
 							<br>
 
 							<h3>Working principle</h3>
-							<p>Bacterial stocks can be streaked onto agar plates and stored at 4&#176C for regular use or for transporting samples. Plates should be wrapped with parafilm and stored upside down(such that the streaked part faces the bottom) to minimise contamination and condensation onto the culture.Individual colonies are then selected from the plates as and when required. </p>
+							<p>S. elongatus is often shipped in BG-11 agar plates patched with large amounts of cell culture. They can also be stored as cultures streaked on plates within a lab at 4oC. Cultures are revived by picking up the cells (a single colony or scraped biomass) and mixing them into liquid BG-11 medium and growing them in the incubator under low light conditions.</p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="a">
-								<li style="padding-left: 1em;">UTEX 2973 agar plates(Wild Type, cscB, cscB-sps,cscB-sps-spp) </li>
+								<li style="padding-left: 1em;">BG-11 medium </li>
 								<br>
-								<li style="padding-left: 1em;">50 mL flasks</li>
+								<li style="padding-left: 1em;">Antibiotic markers (Kanamycin and Gentamycin)</li>
 							</ul>
 							<br>
 
@@ -882,21 +917,22 @@
 
 							<!-- Making glycerol and DMSO stocks -->
 							<!-- to be edited - protocol not link -->
-							<h2>Making Glycerol and DMSO stocks </h2>
+							<h2>Making DMSO and Glycerol Stocks</h2>
 							<br><br>
 							<h3>Objective</h3>
-							<p>To prepare glycerol and DMSO stocks of the cyanobacteria UTEX 2973 wild type and <i>cscB</i> gene containing strain.</p>
+							<p>To prepare glycerol and DMSO stocks of the cyanobacteria UTEX 2973 wild type and strain containing the <i>cscB</i> gene.</p>
 							<br>
 
 							<h3>Working principle</h3>
-							<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term growth even at low temperatures such as 4&#176C. Long term storage is best at temperatures of the range of -80&#176C. But plates or liquid cultures are not amenable to freezing, because as the water crystallizes in and around the bacterial cells, it will rupture and kill the cells. So for storage at such temperatures, some percentage of glycerol/DMSO is added to the media. Cells covered in glycerol/DMSO are safe to be stored at such temperatures because glycerol and DMSO are anti-freezing agents. </p>
+							<p>Bacterial cultures in the form of agar plates or liquid cultures are not suitable for long term storage at low temperatures such as 4oC. Long-term storage of bacteria is best at temperatures around -80oC. However, agar plates and liquid cultures cannot be stored at such temperatures, as the water crystallizes in and around the bacterial cells, rupturing and killing them. Glycerol or DMSO (anti-freezing agents) is added to the media to store samples at such temperatures. </p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="a">
-								<li style="padding-left: 1em;">UTEX 2973 WT and cscB 100 mL cultures </li>
+								<li style="padding-left: 1em;">UTEX 2973 WT and <i>cscB</i> 100 mL cultures </li>
 								<li style="padding-left: 1em;">BG-11 Media (with micronutrients) </li>
 								<li style="padding-left: 1em;">7% DMSO </li>
+								<li style="padding-left: 1em;">25% glycerol</li>
 							</ul>
 							<br>
 
@@ -909,22 +945,20 @@
 
 							<!--Making plates from DMSO stocks-->
 							<!-- Protocol not link -->
-							<h2>Making plates from DMSO stocks </h2>
+							<h2>Revival of <i>S. elongatus</i> strains from glycerol or DMSO stocks</h2>
 							<br><br>
 							<h3>Objective</h3>
-							<p>To streak UTEX 2973 WT and cscB onto plates from the DMSO stocks </p>
+							<p>To revive liquid cultures from glycerol or DMSO stocks of <i>S. elongatus</i> strains. </p>
 							<br>
 
 							<h3>Working principle</h3>
-							<p>Bacterial cells are stored as stocks at -80&#176C as plates and liquid cultures are amenable to freezing, which would rupture and kill the cells. These stocks can then be revived at any time as per the requirement and the revived stocks can be used to make plates or liquid cultures.</p>
+							<p>Stocks are more permanent methods of storing bacteria than plates. These stocks can be recovered by pouring them into small volumes of BG-11 and growing under low light levels. As the culture grows, it can be passaged into higher volumes and appropriate antibiotics can be added.</p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="a">
-								<li style="padding-left: 1em;">BG-11 agar plates (BG-11 + Kanf for cscB) </li>
-								<li style="padding-left: 1em;">WT and cscB DMSO stocks </li>
-								<br>
-								<li style="padding-left: 1em;">1 mL micropipette tips </li>
+								<li style="padding-left: 1em;">BG-11 </li>
+								<li style="padding-left: 1em;">Kanamycin and Gentamycin </li>
 							</ul>
 							<br>
 
@@ -937,25 +971,30 @@
 
 							<!-- Cyanobacteria growth curve under salt stress -->
 							<!-- protocol not link -->
-							<h2>Cyanobacteria growth curve under salt stress </h2>
+							<h2>Growth Curves of <i>S. elongatus</i> under salt stress </h2>
 							<br><br>
 							<h3>Objective</h3>
 							<p>To perform growth curves of UTEX 2973 and to validate sucrose production with respect to the Optical Density at 600 nm. </p>
 							<br>
 
 							<h3>Working principle</h3>
-							<p>When bacteria are inoculated into a liquid medium and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the growth of cells over time. It shows four distinct phases of growth. </p>
-							<ul class="b">
-								<li style="padding-left: 1em;">Lag phase: Slow growth or lack of growth due to physiological adaptation of cells to culture conditions or dilution of exoenzymes due to initial low cell densities. </li>
-								<li style="padding-left: 1em;">Log or exponential phase: Optimal growth rates, during which cell numbers double at discrete time intervals known as the mean generation time. </li>
-								<li style="padding-left: 1em;">Stationary phase: Growth (cell division) and death of cells counterbalance each other resulting in no net increase in cell numbers. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents. </li>
-								<li style="padding-left: 1em;">Decline or death phase: Death rate exceeds growth rate resulting in a net loss of viable cells. </li>
-							</ul>
-							<br>
-							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
+							<p>When liquid media is inoculated with bacteria and the cell population is counted at intervals, it is possible to plot a typical bacterial growth curve that shows the increase in the number of cells over time. Such growth curves show four distinct phases of growth:<sup><a href="#cref1">[1]</a></sup></p>
 							<br>
 
-							<p>Growth curves for certain freshwater cyanobacterial species are carried out under salt stress to account for sucrose production in the particular strain. This is because sucrose is naturally produced as an osmoprotectant in these strains and an increase in Optical Density with time shows a linear relationship with sucrose concentration.</p>
+							<p>Lag phase: There is a slow growth or lack of growth due to the physiological adaptation of cells to culture conditions or the dilution of exoenzymes (due to initial low cell densities).
+								Log or exponential phase: Optimal growth rates are seen in this phase. Cell numbers double at discrete time intervals known as the mean generation time.
+								Stationary phase: During this phase, the growth (cell division) and death of cells occur at the same rate, resulting in the number of cells being constant. The reduced growth rate is usually due to a lack of nutrients and/or a buildup of toxic waste constituents.
+								Decline or death phase: Here, the death rate exceeds the growth rate, resulting in a net loss of viable cells.
+							</p>
+							<br>
+
+							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.<sup><a href="#cref2">[2]</a></sup></p>
+							<br>
+
+							<p>Growth curves for certain freshwater cyanobacterial species are carried out under salt stress to account for sucrose production in the particular strain. This is because sucrose is naturally produced intracellularly in these strains to balance the osmotic pressure of a saline environment.<sup><a HREF="#cref3">[3]</a></sup></p>
+							<br>
+
+							<p>This experiment was carried out in two iterations: one at 0.04% of carbon dioxide -  i.e, ambient carbon dioxide from the atmosphere - and the other with bicarbonate added to be equivalent to 0.6% of carbon dioxide. Find our results for these iterations <a href="#Results.html">here</a>.</p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
@@ -971,7 +1010,7 @@
 							<br>
 
 							<h3>Protocol</h3>
-							<p> Can be found <a href="">here</a></p>
+							<p> The protocols for this experiment are <a href="">here</a> (for the first iteration) and <a href="">here</a> (for the second iteration).</p>
 							<a id="c6"></a><br><hr width=50%><br><br>
 							<!-- End of Cyanobacteria growth curve under salt stress -->
 
@@ -982,61 +1021,45 @@
 							<h2>Sucrose assay </h2>
 							<br><br>
 							<h3>Objective</h3>
-							<p> </p>
+							<p>To measure the production of sucrose by <i>S. elongatus</i>  UTEX 2973 WT and cscB strains.</p>
 							<br>
 
 							<h3>Working principle</h3>
-							<p> </p>
+							<p>The sucrose assay is a colorimetric assay<sup><a href="#cref4">[4]</a></sup> to quantify sucrose concentration in cell supernatants. Supernatant samples from the cultures are taken at regular frequencies. An increasing trend in the absorbance of successive samples after treatment is indicative of increasing sucrose concentration, i.e, net sucrose production has been taking place. </p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
 							<ul class="a">
-								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;">Distilled water </li>
+								<li style="padding-left: 1em;">D-Glucose standard solution (5 mL, 1.0 mg/mL) in 0.2% (w/v) benzoic acid </li>
+								<li style="padding-left: 1em;">GOPOD Reagent Enzymes. Glucose oxidase plus peroxidase and 4-aminoantipyrine. Freeze-dried powder </li>
+								<li style="padding-left: 1em;">GOPOD Reagent Buffer. p-hydroxybenzoic acid and sodium azide (0.095% w/v) </li>
+								<li style="padding-left: 1em;">β-Fructosidase (invertase) solution </li>
+								<li style="padding-left: 1em;">Acetate buffer</li>
+								<br>
+								<li style="padding-left: 1em;">96 well plate </li>
+								<li style="padding-left: 1em;">1 mL Eppendorf tubes </li>
+								<li style="padding-left: 1em;">Spectrophotometer set at 510 nm </li>
+								<li style="padding-left: 1em;">Vortex mixer </li>
+								<li style="padding-left: 1em;">Thermostated water bath </li>
 							</ul>
 							<br>
 
 							<h3>Protocol</h3>
 							<p> Can be found <a href="">here</a></p>
-							<a id="c7"></a><br><hr width=50%><br><br>
+							<a id="c7"></a><br><a id="cref1"></a><br><a id="cref2"></a><br><a id="cref3"></a>
 							<!-- End of Sucrose assay -->
 
 
 
-							<!-- Cyanobacteria growth curve under high carbon -->
-							<h2>Growth curve under high carbon </h2>
-							<br><br>
-							<h3>Objective</h3>
-							<p> </p>
-							<br>
-
-							<h3>Working principle</h3>
-							<p> </p>
-							<br>
-
-							<h3>Key Reagents/Apparatus</h3>
-							<ul class="a">
-								<li style="padding-left: 1em;"> </li>
-							</ul>
-							<br>
-
-							<h3>Protocol</h3>
-							<p> Can be found <a href="">here</a></p>
-							<a id="c8"></a><br><br><br>
-							<!-- End of Cyanobacteria growth curve under high carbon -->
-
-
 							<!-- REFERENCES -->
 							<hr>
-							<h3>References</h3>
+							<h3 id="reference">References</h3>
 							<ol class="a">
-								<li style="padding-left: 1em;"> Ref 1 from preparation BG11</li>
-								<li style="padding-left: 1em;"> Ref 2 from preparation of bg11</li>
-								<li style="padding-left: 1em;"> </li>
-								<li style="padding-left: 1em;"> </li>
-								<li style="padding-left: 1em;"> </li>
-								<li style="padding-left: 1em;"> </li>
-								<li style="padding-left: 1em;"> </li>
-								<li style="padding-left: 1em;"> </li>
+								<li style="padding-left: 1em;" id="cref4">Microbial Growth. (2021, January 4). Oregon State University. <a href="https://bio.libretexts.org/@go/page/10667">https://bio.libretexts.org/@go/page/1066</a></li>
+								<li style="padding-left: 1em;"><a href="https://microbenotes.com/bacterial-growth-curve-protocol">https://microbenotes.com/bacterial-growth-curve-protocol</a></li>
+								<li style="padding-left: 1em;">Po-Cheng Lin, Fuzhong Zhang & Himadri B. Pakrasi; Enhanced production of sucrose in the fast-growing cyanobacterium <i>Synechococcus elongatus</i> UTEX 2973</li>
+								<li style="padding-left: 1em;"><a href="https://www.megazyme.com/documents/Assay_Protocol/K-SUCGL_DATA.pdf"> https://www.megazyme.com/documents/Assay_Protocol/K-SUCGL_DATA.pdf</a> </li>
 							</ol>
 							<!-- END OF REFERECNES -->
 						</div>
@@ -1047,6 +1070,8 @@
 						<!----------------------------------- START OF CO CULTURE ------------------------------------------>
 						<div class="tab-pane fade coculture-wet" id="coculture-wet" role="tabpanel" aria-labelledby="coculture-wet-tab">
 							<br><br><br>
+							<p>THe experiments below are presented in the order in which we performed them.</p>
+							<br><br>
 							<!-- Transformation of KJK01 with pKD4 -->
 							<!-- complete -->
 							<h2>Transformation of KJK01 with pKD4 </h2>
@@ -1143,7 +1168,7 @@
 							<p>This is one of the simplest methods used to analyze trends in growth because it uses a spectrophotometer to track changes in the optical density (OD) over time. In other words, as the number of cells in a sample increases, the transmission of light through the sample will decrease.</p>
 							<br>
 							
-							<p>Here we carry out the growth curve in BG-11 + sucrose as a co-culture proxy. This checks if the pCSCX plasmid allows the E. coli to survive when sucrose is the only carbon source available, as BG-11 does not contain any carbon source of its own. The concentration of sucrose used in the experiment is 250 mg/L, which is more than the maximum concentration secreted by the cyanobacteria in Zhang et al, 2020<sup><a href="#ccref3">[3]</a></sup>. After two failed attempts, we carried out the experiment using CoBG-1<sup><a href="#ccref3">[3]</a></sup> from the same paper. The medium contains salts that aid the growth of E. coli.</p>
+							<p>Here we carry out the growth curve in BG-11 + sucrose as a co-culture proxy. This checks if the pCSCX plasmid allows the <i>E. coli</i> to survive when sucrose is the only carbon source available, as BG-11 does not contain any carbon source of its own. The concentration of sucrose used in the experiment is 250 mg/L, which is more than the maximum concentration secreted by the cyanobacteria in Zhang et al, 2020<sup><a href="#ccref3">[3]</a></sup>. After two failed attempts, we carried out the experiment using CoBG-1<sup><a href="#ccref3">[3]</a></sup> from the same paper. The medium contains salts that aid the growth of <i>E. coli</i>.</p>
 							<!-- Links need to be inserted in next <p>-->
 
 							<p>The supernatants of the sample taken for OD measurement were reserved for <a href="#cc4">sucrose assay</a>, to determine the rate of sucrose consumption and for <a href="#e5">NMR analysis</a>  to determine the rate of butanol production. Thus, this assay serves three purposes.</p>
@@ -1175,18 +1200,14 @@
 							<h2><i>E. coli</i> and cyanobacteria sucrose assay </h2>
 							<br><br>
 							<h3>Objective</h3>
-							<p>To measure</p>
-							<ul class="b">
-								<li style="padding-left: 1em;">The amount of sucrose secreted by engineered strains of <i>S.elongatus</i> </li>
-								<li style="padding-left: 1em;">The amount of sucrose consumed by engineered strains of <i>E. coli</i> </li>
-							</ul>
+							<p>To measure the consumption of sucrose by <i>E. coli</i> KJK01 and pCSCX-KJK01 in BG-11.</p>
 							<br>
 
 							<h3>Working principle<sup><a href="#ccref4">[4]</a></sup></h3>
-							<p>Free D-glucose in the sample extract is determined by conversion to a red coloured quinoneimine dye compound through the action of glucose oxidase (Fig 1) and peroxidase (Fig 2) at pH 7.4, and employing p-hydroxybenzoic acid and 4-aminoantipyrine. The D-glucose contents is estimated by measuring the absorbance of the dye at 510 nm.  </p>
+							<p>Free D-glucose in the sample extract is determined by conversion to a red coloured quinoneimine dye compound through the action of glucose oxidase and peroxidase at pH 7.4, and employing p-hydroxybenzoic acid and 4-aminoantipyrine. The D-glucose content is estimated by measuring the absorbance of the dye at 510 nm.  </p>
 							<br>
 
-							<p>At pH 4.6, sucrose is hydrolysed by the enzyme β-fructosidase to D-glucose and D-fructose (Fig 3). The determination of D-glucose after inversion by β-fructosidase (total D-glucose) is carried out simultaneously according to the principle outlined above. The sucrose content is calculated from the difference of the D-glucose concentrations before and after enzymatic inversion.</p>
+							<p>At pH 4.6, sucrose is hydrolysed by the enzyme β-fructosidase to D-glucose and D-fructose. The determination of D-glucose after inversion by β-fructosidase (total D-glucose) is carried out simultaneously according to the principle outlined above. The sucrose content is calculated from the difference of the D-glucose concentrations before and after enzymatic inversion.</p>
 							<br>
 
 							<h3>Key Reagents/Apparatus</h3>
@@ -1214,13 +1235,12 @@
 
 							<!-- References -->
 							<hr>
-							<h3>References</h3>
+							<h3 id="reference">References</h3>
 							<ol class="a">
 								<li style="padding-left: 1em;"><a href="https://www.thermofisher.com/in/en/home/references/gibco-cell-culture-basics/transfection-basics/transfection-methods/electroporation.html">https://www.thermofisher.com/in/en/home/references/gibco-cell-culture-basics/transfection-basics/transfection-methods/electroporation.html</a> </li>
 								<li style="padding-left: 1em;">Datsenko, K. A., & Wanner, B. L. (2000). One-step inactivation of chromosomal genes in Escherichia coli K-12 using PCR products. Proceedings of the National Academy of Sciences of the United States of America, 97(12), 6640–6645. <a href="https://doi.org/10.1073/pnas.120163297"></a>https://doi.org/10.1073/pnas.120163297</li>
 								<li style="padding-left: 1em;">Zhang, L., Chen, L., Diao, J. et al. Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO2. Biotechnol Biofuels 13, 82 (2020). <a href="https://doi.org/10.1186/s13068-020-01720-0"></a>https://doi.org/10.1186/s13068-020-01720-0 </li>
 								<li style="padding-left: 1em;"><a href="https://www.megazyme.com/sucrose-d-glucose-assay-kit">https://www.megazyme.com/sucrose-d-glucose-assay-kit</a> </li>
-								<li style="padding-left: 1em;"> </li>
 							</ol>
 
 						</div>
@@ -1345,11 +1365,11 @@
 				contentpane.classList.add('active');
 
 				if ($('#ecoli-wet').hasClass('active')) {
-					heightpane.style.top = '-31%';
+					heightpane.style.top = '-29%';
 				} else if ($('#cyano-wet').hasClass('active')) {
-					heightpane.style.top = '-23%';
+					heightpane.style.top = '-21%';
 				} if ($('#coculture-wet').hasClass('active')) {
-					heightpane.style.top = '-15%';
+					heightpane.style.top = '-13%';
 				} 
 
 			})  
@@ -1380,7 +1400,7 @@
 					var div_eight_top = $("#e8").offset().top;
 					var div_nine_top = $("#e9").offset().top;
 					var div_ten_top = $("#e10").offset().top;
-					var div_eleven_top = $("e11").offset().top;
+					var div_eleven_top = $("#e11").offset().top;
 		
 					if (scroll_top > div_one_top && scroll_top < div_two_top) {
 						//Division 1
@@ -1508,7 +1528,15 @@
 						if ($('a[href="#e11"]').hasClass('sidenav-active')) {
 							$('a[href="#e11"]').removeClass('sidenav-active');
 						}
-					} 
+					} else if (scroll_top > div_eleven_top) {
+						if ($('a[href="#e10"]').hasClass('sidenav-active')) {
+							$('a[href="#e10"]').removeClass('sidenav-active');
+						}
+		
+						if (!$('a[href="#e11"]').hasClass('sidenav-active')) {
+							$('a[href="#e11"]').addClass('sidenav-active');
+						}
+					}
 				} 
 				else if ($('#cyano-wet').hasClass('active')) {
 					var scroll_top = $(window).scrollTop();
@@ -1519,7 +1547,6 @@
 					var div_five_top = $("#c5").offset().top;
 					var div_six_top = $("#c6").offset().top;
 					var div_seven_top = $("#c7").offset().top;
-					var div_eight_top = $("#c8").offset().top;
 		
 					if (scroll_top > div_one_top && scroll_top < div_two_top) {
 						//Division 1
@@ -1596,7 +1623,7 @@
 						if (!$('a[href="#c6"]').hasClass('sidenav-active')) {
 							$('a[href="#c6"]').addClass('sidenav-active');
 						}
-					} else if (scroll_top > div_seven_top && scroll_top <div_eight_top) {
+					} else if (scroll_top > div_seven_top) {
 						// You are in div 7
 						if ($('a[href="#c6"]').hasClass('sidenav-active')) {
 							$('a[href="#c6"]').removeClass('sidenav-active');
@@ -1604,18 +1631,6 @@
 		
 						if (!$('a[href="#c7"]').hasClass('sidenav-active')) {
 							$('a[href="#c7"]').addClass('sidenav-active');
-						}
-
-						if ($('a[href="#c8"]').hasClass('sidenav-active')) {
-							$('a[href="#c8"]').removeClass('sidenav-active');
-						}
-					} else if (scroll_top > div_eight_top){
-						if ($('a[href="#c7"]').hasClass('sidenav-active')) {
-							$('a[href="#c7"]').removeClass('sidenav-active');
-						}
-		
-						if (!$('a[href="#c8"]').hasClass('sidenav-active')) {
-							$('a[href="#c8"]').addClass('sidenav-active');
 						}
 					}
 				}

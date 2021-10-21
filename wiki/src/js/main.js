@@ -76,17 +76,20 @@ function moveScrollIndicator(e) {
     }
 
 
-
+    else if($('#overview-wet').hasClass('active')){
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
     else if($('#ecoli-wet').hasClass('active')) {
       var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 5;
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else if($('#cyano-wet').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 14;
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else if($('#coculture-wet').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 15;
       scrollIndicatorElt.style.height = percentage + '%';
     }
 
