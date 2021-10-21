@@ -141,15 +141,15 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Expt. 1 - "Choosing Optimal promoters"</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Expt 2 - "gDNA extraction and PCR"</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Expt 3 - "E. coli in CoBG11"</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Expt 4 - "Sucrose Assay"</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Expt 5 - "S. elongatus growth curves"</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">Co-culture modelling cycle</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Choosing Optimal promoters</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">gDNA extraction and PCR</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">E. coli in CoBG11</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">Sucrose Assay</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#5">S. elongatus growth curves</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#6">Co-culture modeling</a></li>
                             <li class="nav-item"><a class="nav-link" href="#7">Building the SteadyCom model</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#8">Simulating Salt Stress</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#9">References</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="#8">Simulating Salt Stress</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="#8">Computational - Experimental Integrated Engineering Cycle</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -326,7 +326,7 @@ td[data-cycle="learn"]{
             <div class="col-lg-9 col-md-9">
                 <div class="content"><br><br>
 			<p>Due to the second wave of the pandemic in India, our wet lab work was considerably delayed, effectively leaving us with a mere month and a half in the lab. We utilised our time working remotely to devise a thorough plan of experiments, incorporating a Design-Build-Test cycle:</p>
-                    <h1 id="1">Experiment 1 - "Choosing Optimal promoters"</h1>
+                    <h1 id="1">Choosing Optimal promoters</h1>
                     <hr><br>
 		    
 			<div class="row"><!-- CYCLE A -->
@@ -361,7 +361,7 @@ td[data-cycle="learn"]{
 <br><br>
 <p>We were unfortunately unable to carry out most of these experiments in the little time remaining to us. We instead acquired sucrose-secreting strains of S. elongatus UTEX 2973 from the Pakrasi lab, to measure their sucrose production rates. We have also acquired everything we need for future experiments according to our original plan.</p>
 <br><br>
-			<h1 id="2">Experiment 2 - "gDNA extraction and PCR"</h1>
+			<h1 id="2">gDNA extraction and PCR</h1>
 			<hr><br>
 			<div class="row"><!-- CYCLE B -->
 				<div class="tab" role="tabpanel">
@@ -378,41 +378,28 @@ td[data-cycle="learn"]{
 					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_B">
 					    <h3>Cycle 1</h3>
 						<table>
-							<tr><td data-cycle="design">Design</td><td>To extract genomic DNA from<em> E. coli</em> KJK01 and verify the presence of <em>hbd-crt</em> genes by PCR</td></tr>
-							<tr><td data-cycle="build">Build</td><td>Extracted genomic DNA through phenol-chloroform method, conducted PCR to amplify <em>hbd-crt</em>, ran PCR product on an agarose gel</td></tr>
-							<tr><td data-cycle="test">Test</td><td>Imaged the gel and observed no bands</td></tr>
-							<tr><td data-cycle="learn">Learn</td><td>Possible inhibition of PCR due to excess concentration of dNTPs and gDNA in PCR mix - reduce concentration in subsequent attempt </td></tr>
+							<tr><td data-cycle="design">Design</td><td>To extract genomic DNA (gDNA) from<em> E. coli</em> KJK01 and verify the presence of <em>hbd-crt</em> genes by PCR</td></tr>
+							<tr><td data-cycle="build">Build</td><td>Genomic DNA was extracted through the phenol-chloroform method, and PCR was performed to amplify the <em>hbd-crt</em> genes. The PCR product was then run on an agarose gel.</td></tr>
+							<tr><td data-cycle="test">Test</td><td>The gel was imaged and no bands were observed.</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>There may have been a possible inhibition of PCR due to the excess concentration of dNTPs and gDNA in the PCR mix. This could be potentially fixed by reducing the concentrations in the subsequent attempt.</td></tr>
 						</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle2_B">
 					    <h3>Cycle 2</h3>
 					    <table>
 						<tr><td data-cycle="design">Design</td><td>PCR with reduced concentrations of dNTPs and gDNA and quality check for gDNA</td></tr>
-						<tr><td data-cycle="build">Build</td><td>The above was executed<br>PCR product and gDNA were run on an agarose gel</td></tr>
-						<tr><td data-cycle="test">Test</td><td>Imaged the gel - multiple bands in the well corresponding to gDNA, no bands corresponding to the PCR product appeared </td></tr>
+						<tr><td data-cycle="build">Build</td><td>The PCR product and gDNA were run on an agarose gel./td></tr>
+						<tr><td data-cycle="test">Test</td><td>The gel was imaged and multiple bands were observed in the well corresponding to the gDNA and no bands corresponding to the PCR product were visible.</td></tr>
 						<tr><td data-cycle="learn">Learn</td><td>Suspected nuclease contamination in gDNA sample</td></tr>
 					</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle3_B">
 					    <h3>Cycle 3</h3>
 					    <table>
-						<tr><td data-cycle="design">Design</td><td>Extract gDNA once again with modified protocol</td></tr>
-						<tr><td data-cycle="build">Build</td><td>gDNA extracted once again <br><br>
-
-							Proteinase K added first, followed by RNase A after the deactivation of the former<br><br>
-							
-							Final gDNA resuspension done in autoclaved ddH2O (MilliQ water) instead of Elution Buffer<br><br>
-							
-							gDNA run on agarose gel
-							</td></tr>
-						<tr><td data-cycle="test">Test</td><td>Single large band appeared above the highest band of the DNA ladder<br><br>
-
-							Large bright bands present at the bottom of the ladder
-							</td></tr>
-						<tr><td data-cycle="learn">Learn</td><td>Presence of good quality gDNA verified<br><br>
-
-							Large bright band due to RNA contamination 
-							</td></tr>
+						<tr><td data-cycle="design">Design</td><td>Modify the protocol such that Proteinase K is added first, followed by RNase A, after Proteinase K deactivation. Instead of Elution Buffer, perform the final gDNA resuspension in autoclaved ddH2O (MilliQ water).</td></tr>
+						<tr><td data-cycle="build">Build</td><td>The gDNA was extracted with the modified protocol and run on an agarose gel.</td></tr>
+						<tr><td data-cycle="test">Test</td><td>A single large band appeared above the highest band of the DNA ladder and large bright bands were present at the bottom of the ladder.</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>Good quality gDNA is present, and the large bright band may be due to RNA contamination.</td></tr>
 					</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle4_B">
@@ -424,11 +411,7 @@ td[data-cycle="learn"]{
 							PCR products were run on an agarose gel
 							</td></tr>
 						<tr><td data-cycle="test">Test</td><td>No bands corresponding to the genes of interest appeared</td></tr>
-						<tr><td data-cycle="learn">Learn</td><td>RNA contamination may have led to overestimation of gDNA concentration when measured by NanoDrop. <br><br>
-							PCR should be redone with undiluted template gDNA <br><br>
-
-							Add DMSO to PCR Mix to inhibit renaturation of denatured DNA
-						</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>RNA contamination may have led to an overestimation of the gDNA concentration when measured by NanoDrop, therefore the PCR should be redone with undiluted template gDNA. DMSO should also be added to the PCR mix to inhibit renaturation of the denatured DNA.</td></tr>
 					</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle5_B">
@@ -444,7 +427,7 @@ td[data-cycle="learn"]{
 				</div>
 				</div>
 				<br><br>
-				<h1 id="3">Experiment 3 - "E. coli in CoBG11"</h1>
+				<h1 id="3"><i>E. coli</i> in CoBG11</h1>
 			<hr><br>
 				<div class="row"><!-- CYCLE C -->
 					<div class="tab" role="tabpanel">
@@ -474,7 +457,7 @@ td[data-cycle="learn"]{
 						<div role="tabpanel" class="tab-pane fade" id="Cycle2_C">
 						    <h3>Cycle 2</h3>
 						    <table>
-							<tr><td data-cycle="design">Design</td><td>UV laminar hood for 20 minutes, and completely sanitize the insides with 70% ethanol before inoculation and each measurement. Repeat experiment in the same manner as above, taking care to minimize risk of contamination. </td></tr>
+							<tr><td data-cycle="design">Design</td><td>UV the laminar hood for 20 minutes, and completely sanitize the insides with 70% ethanol before inoculation and taking each measurement. Repeat the experiment in the same manner as before, taking care to minimize risk of contamination.</td></tr>
 							<tr><td data-cycle="build">Build</td><td>Inoculate 3 cultures<br>
 								
 								&bull;&nbsp;&nbsp;KJK01 (without antibiotics)<br>
@@ -483,7 +466,7 @@ td[data-cycle="learn"]{
 								
 								<br>Take hourly OD readings, store supernatants at -20&deg;C and submit for sucrose assay and NMR analysis.</td></tr>
 							<tr><td data-cycle="test">Test</td><td>KJK01 showed growth, while both pCSCX-KJK01 strains did not. </td></tr>
-							<tr><td data-cycle="learn">Learn</td><td>Suspect contamination in the KJK01 culture again, possibly due to lack of antibiotics. Were advised by mentors to use a different negative control. Decided to replace BG-11 with CoBG-11, as done by Zhang et al.</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>Suspect contamination in the KJK01 culture again, possibly due to lack of antibiotics. Were advised by mentors to use a different negative control. Decided to replace BG-11 with CoBG-11, as done by Zhang et al, 2020</td></tr>
 						</table>
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="Cycle3_C">
@@ -512,11 +495,18 @@ td[data-cycle="learn"]{
 					    </div>
 					</div>
 					</div>
-					<br><br>
-					<h1 id="4">Experiment 4 - "Sucrose Assay"</h1>
+					<br>
+					<h3>References</h3>
+					<p>
+						<ol>
+							<li>Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO 2. Biotechnology for biofuels, 13(1), 1-14.</li>
+						</ol>
+					</p>
+					<br>
+					<h1 id="4">Sucrose Assay</h1>
 					<hr><br><br>
 					<p>
-						For sucrose quantification, we used the Megazyme Sucrose/D-Glucose K-SUCGL kit. The kit uses the enzymes glucose oxidase, peroxidase and fructosidase (invertase). 
+						For sucrose quantification, we used the Megazyme Sucrose/D-Glucose K-SUCGL kit[1]. The kit uses the enzymes glucose oxidase, peroxidase and fructosidase (invertase). 
 						<br><br>Sucrose is hydrolyzed by invertase to D-glucose and D-fructose. 
 						<br><br>The D-glucose content is determined by conversion to a red-colored quinoneimine dye (by the action of glucose oxidase, peroxidase) and the D-glucose concentration is quantified via absorbance measurements at 510 nm.  To isolate the contribution of the glucose resulting from the hydrolysis of sucrose, we need to subtract the absorbance of an identical sample, untreated by invertase. This absorbance is a measurement of pre-existing free D-glucose in our supernatant. We denote this invertase-free solution as solution A. The solution with the invertase added is correspondingly denoted solution B. 
 						<br><br>For every sample, two absorbance measurements must be taken - one of the sample without beta-fructosidase, denoted as solution A, to measure the initial amount of free D-glucose present in the sample, and one of the sample with beta-fructosidase, denoted as solution B, to measure the final amount D-glucose in the sample (this includes any initial amounts of free D-glucose, and any sucrose that got converted to D-glucose by the action of beta-fructosidase). The difference in the absorbance between these two solutions gives the amount of sucrose in the sample.	
@@ -544,15 +534,9 @@ td[data-cycle="learn"]{
 				<tr><td data-cycle="build">Build</td><td>Prepared sucrose solutions of known concentrations 0.1 g/L and 10 g/L <br><br>Used Megazyme’s kit protocol to verify the concentrations</td></tr>
 				<tr><td data-cycle="test">Test</td><td>Solution A gave negative absorbance readings compared to the distilled water blank for both samples instead of the expected absorbance of 0.
 
-					<br><br>Received large error in calculated concentration relative to the prepared concentrations.  
-					
-					<br><br>Since both samples were diluted to the same  concentration as per the kit’s protocol, they should have given the same absorbance reading for Solution B, which they failed to do so. 
+					<br><br>Received large error in calculated concentration relative to the prepared concentrations.
 					</td></tr>
-				<tr><td data-cycle="learn">Learn</td><td>Don’t use just distilled water as a blank. Use distilled water + acetate buffer as blank for solution A, and distilled water + beta-fructosidase as blank for solution B. 
-
-					<br><br>Biospectrometer may be faulty, use 96 well plate reader. 
-					
-					<br><br>Prepare fresh samples of sucrose solutions.
+				<tr><td data-cycle="learn">Learn</td><td>Since both samples were diluted to the same concentration as per the kit’s protocol, they should have given the same absorbance reading for Solution B, which they failed to do so. Instead of distilled water as a blank, use distilled water + acetate buffer as blank for solution A, and distilled water + beta-fructosidase as blank for solution B. The biospectrometer may be faulty, use a 96 well plate reader instead. Prepare fresh samples of sucrose solutions.
 					</td></tr>
 			</table>
 		</div>
@@ -596,8 +580,16 @@ td[data-cycle="learn"]{
 	    </div>
 	</div>
 </div>
-<br><br>
-<h1 id="5">Experiment 5 - "S. elongatus growth curves"</h1>
+<br>
+<br>
+					<h3>References</h3>
+					<p>
+						<ol>
+							<li><a href="https://www.megazyme.com/sucrose-d-glucose-assay-kit">https://www.megazyme.com/sucrose-d-glucose-assay-kit</a></li>
+						</ol>
+					</p>
+<br>
+<h1 id="5"><i>S. elongatus</i> growth curves</h1>
 <hr><br><br>
 
 <div class="row"><!-- CYCLE E -->
@@ -635,7 +627,7 @@ td[data-cycle="learn"]{
 		    <table>
 			<tr><td data-cycle="design">Design</td><td>Take measurements of OD and supernatant concentration of sucrose every three hours</td></tr>
 			<tr><td data-cycle="build">Build</td><td>2 1mL-aliquots were taken from each culture for each measurement. The absorbance at 730 nm was measured for one aliquot. The other one was centrifuged to separate and store the supernatant for sucrose assay use.</td></tr>
-			<tr><td data-cycle="test">Test</td><td>The growth rates were stunningly slow. Fitting the data to a logistic curve, we got doubling times of 27 and 36 hours in the exponential phase(given by T<sub>double</sub>=ln(2/r)). This is much slower than the minimum according to the literature (in the range of 1.5 hours).<br><br>
+			<tr><td data-cycle="test">Test</td><td>The growth rates were stunningly slow. Fitting the data to a logistic curve, we got doubling times of 27 and 36 hours in the exponential phase(given by T<sub>double</sub>=ln(2/r)). This is much slower than the minimum according to the literature in the range of 2 hours in BG11 medium at 41°C under continuous 500 μmoles photons·m<sup>-2</sup>·s<sup>-1</sup> white light with 3% CO<sub>2</sub>[1].<br><br>
 				The  sucrose produced by the cscB strain was 0.13 g/L while the literature reports a yield of 5 g/L in the same time.
 			</td></tr>
 			<tr><td data-cycle="learn">Learn</td><td>We decided to optimise the growth conditions for the culture to high carbon (0.5-0.6% as opposed to 0.04% of ambient CO2) and high light (150 &mu;Em<sup>-2</sup>s<sup>-1</sup>).</td></tr>
@@ -647,7 +639,7 @@ td[data-cycle="learn"]{
 			<tr><td data-cycle="design">Design</td><td>Prepare more BG-11 and then add bicarbonate to the medium</td></tr>
 			<tr><td data-cycle="build">Build</td><td>We made the medium and autoclaved it</td></tr>
 			<tr><td data-cycle="test">Test</td><td>The medium did not have a steady pH, crossing beyond 8.3 into 9+</td></tr>
-			<tr><td data-cycle="learn">Learn</td><td>We need to stabilise the pH with TES buffer ( as recommended by Dr Michelle Liberton). As the CoBG11 medium optimised for co-culture with E. coli by Zhang et al, 2020 includes the TES buffer, 150 mM of NaCl and some additional NH<sub>4</sub>Cl, we decided to use it for the OD curve.[1]</td></tr>
+			<tr><td data-cycle="learn">Learn</td><td>We need to stabilize the pH with TES buffer (as recommended by Dr. Michelle Liberton). As the CoBG11 medium optimized for co-culture with E. coli by Zhang et al, 2020[2] includes the TES buffer, 150 mM of NaCl, and some additional NH<sub>4</sub>Cl, we decided to use it for the OD curve.</td></tr>
 		</table>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="Cycle5_E">
@@ -664,8 +656,18 @@ td[data-cycle="learn"]{
 	</div>
 	</div>
 
-	<br><br><br>
-	<h1 id="6">Co-culture modelling cycle</h1>
+	<br>
+	
+	<h3>References</h3>
+					<p>
+						<ol>
+							<li>Yu, J., Liberton, M., Cliften, P. F., Head, R. D., Jacobs, J. M., Smith, R. D., ... & Pakrasi, H. B. (2015). Synechococcus elongatus UTEX 2973, a fast growing cyanobacterial chassis for biosynthesis using light and CO 2. Scientific reports, 5(1), 1-10. </li>
+							<li>Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO 2. Biotechnology for biofuels, 13(1), 1-14.</li>
+						</ol>
+					</p>
+	
+	<br><br>
+	<h1 id="6">Co-culture modeling</h1>
 	<hr><br><br>
 
 	<div class="row"><!-- CYCLE F -->
@@ -681,10 +683,9 @@ td[data-cycle="learn"]{
 			    <h3>Cycle 1</h3>
 				<table>
 					<tr><td data-cycle="design">Design</td><td>The design includes two modeling techniques - dynamic and steady state models, within which similar parameters could be varied and their effects could be analyzed.</td></tr>
-					<tr><td data-cycle="build">Build</td><td>Steady state model - A joint model of the co-culture was built using the individual genome scale models of the cyanobacteria and the E. coli. *
-						<br>Dynamic model - built by adapting the dynamic model made by the Toulouse INSA-UPS team. 
+					<tr><td data-cycle="build">Build</td><td>Steady state model - A joint model of the co-culture was built using the individual genome-scale models of <i>S. elongatus</i> and <i>E. coli</i>. <br>Dynamic model - built by adapting the dynamic model made by the Toulouse INSA-UPS team.
 						</td></tr>
-					<tr><td data-cycle="test">Test</td><td>Varying parameters such as sucrose productivity of cyanobacteria, butanol productivity of E. coli, O2 level in the consortium and CO2 uptake, to see its effects on the butanol yield and the population dynamics of the organisms.</td></tr>
+					<tr><td data-cycle="test">Test</td><td>Varying parameters such as sucrose productivity of <i>S. elongatus</i>, butanol productivity of <i>E. coli</i>, O2 level in the consortium and CO2 uptake, to see its effects on the butanol yield and the population dynamics of the organisms.</td></tr>
 					<tr><td data-cycle="learn">Learn</td><td>The two models, based on different assumptions, provide similar results on strategies to optimize butanol production by the co-culture.</td></tr>
 				</table>
 			</div>
@@ -701,9 +702,6 @@ td[data-cycle="learn"]{
 			    <ul class="nav nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#Cycle1_G" aria-controls="Cycle1_G" role="tab" data-toggle="tab">Cycle 1</a></li>
 				<li role="presentation"><a href="#Cycle2_G" aria-controls="Cycle2_G" role="tab" data-toggle="tab">Cycle 2</a></li>
-				<li role="presentation"><a href="#Cycle3_G" aria-controls="Cycle3_G" role="tab" data-toggle="tab">Cycle 3</a></li>
-				<li role="presentation"><a href="#Cycle4_G" aria-controls="Cycle4_G" role="tab" data-toggle="tab">Cycle 4</a></li>
-				<li role="presentation"><a href="#Cycle5_G" aria-controls="Cycle5_G" role="tab" data-toggle="tab">Cycle 5</a></li>
 			    </ul>
 			    
 			    <div class="tab-content tabs">
@@ -713,7 +711,7 @@ td[data-cycle="learn"]{
 						<tr><td data-cycle="design">Design</td><td>The steady state model was designed to be built using the SteadyCom algorithm. This requires making a joint model of certain specifications built from the individual genome scale models. </td></tr>
 						<tr><td data-cycle="build">Build</td><td>The joint model was built using CreateMultispeciesmodel.m function in the COBRA Toolbox from modified versions of iML1515 and iSyu683.</td></tr>
 						<tr><td data-cycle="test">Test</td><td>SteadyCom was run on the joint model. However, the results showed that the co-culture was infeasible.</td></tr>
-						<tr><td data-cycle="learn">Learn</td><td>To troubleshoot and understand the specific issue for this infeasibility, cultures of just E. coli and cyanobacteria were individually built with CreatMultispeciesmodel.m function and analysed with SteadyCom. 
+						<tr><td data-cycle="learn">Learn</td><td>To troubleshoot and understand the specific issue for this infeasibility, cultures of just <i>E. coli</i> and <i>S. elongatus</i> were individually built with CreatMultispeciesmodel.m function and analysed with SteadyCom. 
 							<br>Results showed that the issue was in the cyanobacteria model due to lack of standardization of reaction names and the format of sink reactions. This prevented the CreateMultispeciesmodel.m function from identifying the reactions correctly.
 							</td></tr>
 					</table>
@@ -731,9 +729,9 @@ td[data-cycle="learn"]{
 			</div>
 			</div>
 <br><br>
-<h1 id="8">Simulating Salt Stress</h1>
+<!-- <h1 id="8">Simulating Salt Stress</h1>
 		<hr><br><br>
-			<div class="row"><!-- CYCLE H -->
+			<div class="row"> 
 				<div class="tab" role="tabpanel">
 				    
 				    <ul class="nav nav-tabs" role="tablist">
@@ -770,11 +768,11 @@ td[data-cycle="learn"]{
 					</div>
 				    </div>
 				</div>
-				</div>
-				<br><br><br><h1 id="8">The Grand Cycle</h1><br><br>
+				</div> -->
+				<br><br><br><h1 id="8">Computational - Experimental Integrated Engineering Cycle</h1><br><br>
 
 				<h3 style="text-decoration: underline;"><i>Notation:</i></h3>
-		    <p>In this write-up, we use the following shorthand terms:<br>
+		    <p>We use the following shorthand terms:<br>
 			<ul>
 				<li>By <i>sucrose productivity</i> we denote the rate of sucrose production from S. elongatus in mmol gDW<sup>-1</sup> hr<sup>-1</sup>  </li>
 				<li>By <i>butanol productivity</i> we denote the rate of butanol production from E. coli KJK01 and its transformants in mmol gDW<sup>-1</sup> hr<sup>-1</sup>.</li>
@@ -793,28 +791,28 @@ td[data-cycle="learn"]{
 					<div role="tabpanel" class="tab-pane fade in show active" id="Cycle1_I">
 					    <h3>Cycle 1</h3>
 						<table>
-							<tr><td data-cycle="design">Design</td><td>Based on the shortlist of overexpression and deletion targets from our strain optimization modelling, we will design experiments to actually conduct these overexpression and deletions in S. elongatus and E. coli.</td></tr>
+							<tr><td data-cycle="design">Design</td><td>Based on the shortlisted overexpression and deletion targets from our strain optimization modeling, we will design experiments to actually perform these modifications in S. elongatus and E. coli.</td></tr>
 							<tr><td data-cycle="build">Build</td><td>We will then execute these experiments and measure the sucrose and butanol productivity of all the modified strains</td></tr>
-							<tr><td data-cycle="test">Test</td><td>We will compare this with the original strains to see if the knockout/deletion has made a significant positive impact</td></tr>
-							<tr><td data-cycle="learn">Learn</td><td>Those modified strains which give the highest results of increased sucrose and butanol productivity will be selected to be used in the future</td></tr>
+							<tr><td data-cycle="test">Test</td><td>We will compare this with the original strains to see if the modifications have made a significant difference to strain productivity.</td></tr>
+							<tr><td data-cycle="learn">Learn</td><td>The modified strains which give the maximal sucrose and butanol productivity will be selected to be used in the future for the co-culture.</td></tr>
 						</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle2_I">
 					    <h3>Cycle 2</h3>
 					    <table>
-						<tr><td data-cycle="design">Design</td><td>Our co-culture modelling predicted that increasing both butanol productivity of E. coli and Sucrose productivity of cyanobacteria will result in a better yield of butanol as a whole from the co culture. However this must be tested in the wet lab. We will design experiments to compare the butanol yield of the co culture with the optimized strains from the previous step to the butanol yield of a co culture of the base strains. </td></tr>
-						<tr><td data-cycle="build">Build</td><td>We will then execute these experiments and measure the butanol yield from both co cultures</td></tr>
-						<tr><td data-cycle="test">Test</td><td>We will compare the butanol yields and see if using the optimized strains with higher sucrose and butanol productivity gives a higher butanol yield in co culture.</td></tr>
-						<tr><td data-cycle="learn">Learn</td><td>Based on the results, we will know if the results of our co culture modelling holds and that if increasing sucrose and butanol productivity in fact does increase the co culture butanol yield</td></tr>
+						<tr><td data-cycle="design">Design</td><td>Our co-culture modeling predicted that increasing both the butanol productivity of E. coli and the sucrose productivity of S. elongatus will increase the total butanol yield from the co-culture. However, this must be experimentally tested. We will design experiments to compare the butanol yield of the co-culture made with the optimized strains from the previous iteration with the butanol yields of the co-culture made with the unoptimized strains.</td></tr>
+						<tr><td data-cycle="build">Build</td><td>We will execute these experiments and measure the butanol yield from both co-cultures.</td></tr>
+						<tr><td data-cycle="test">Test</td><td>We will compare the butanol yields and see if using the optimized strains with higher sucrose and butanol productivity gives a higher butanol yield in co-culture.</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>Based on the results, we will know if the results of our co-culture modeling are valid and whether increasing sucrose and butanol productivity in fact does increase the co-culture butanol yield</td></tr>
 					</table>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="Cycle3_I">
 					    <h3>Cycle 3</h3>
 					    <table>
-						<tr><td data-cycle="design">Design</td><td>Our co culture modelling also predicted that extracting oxygen from the co culture would increase the butanol yield. These results must also be tested in the wetlab. We will design experiments to test the butanol yield from the co culture at different oxygen levels. </td></tr>
-						<tr><td data-cycle="build">Build</td><td>We will execute these experiments and measure the butanol yields at varying oxygen levels</td></tr>
-						<tr><td data-cycle="test">Test</td><td>We will identify the oxygen level at which butanol yield is maximum</td></tr>
-						<tr><td data-cycle="learn">Learn</td><td>Based on the above, we will know if the result from drylab that a microaerobic setting for E. coli will give us the highest butanol yield. </td></tr>
+						<tr><td data-cycle="design">Design</td><td>Our co-culture modeling also predicted that extracting oxygen from the co-culture would increase butanol yield. These results must also be experimentally tested. We will design experiments to test the butanol yield from the co-culture at different oxygen levels.</td></tr>
+						<tr><td data-cycle="build">Build</td><td>We will execute these experiments and measure the butanol yields at varying oxygen levels.</td></tr>
+						<tr><td data-cycle="test">Test</td><td>We will identify the oxygen level at which butanol yield is maximal.</td></tr>
+						<tr><td data-cycle="learn">Learn</td><td>Based on the above, we will know if the result from our co-culture modeling that a microaerobic setting for E. coli will give us the highest butanol yield is valid. </td></tr>
 					</table>
 					</div>
 				    </div>
@@ -835,10 +833,6 @@ td[data-cycle="learn"]{
                             Due to the second wave of the pandemic in India, our wet lab work was considerably delayed, effectively leaving us with a mere month and a half in the lab. We utilised our time working remotely to devise a thorough plan of experiments, incorporating a Design-Test-Build cycle:
                         </p> -->
 
-			<h1 id="9">References</h1><br>
-			<ol>
-				<li>Zhang, L., Chen, L., Diao, J., Song, X., Shi, M., & Zhang, W. (2020). Construction and analysis of an artificial consortium based on the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973 to produce the platform chemical 3-hydroxypropionic acid from CO.</li>
-			</ol>
 			</div>
 
 		</div>
