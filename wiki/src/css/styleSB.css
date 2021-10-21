@@ -318,7 +318,35 @@ html {
 	justify-content: center !important;
 	font-style: italic !important;
 	text-align: center !important;
+
 }
+
+#graph-bottom-right-ecoli {
+	position: absolute;
+	margin-top: -220px;
+	margin-left: 600px;
+}
+
+#graph-bottom-left-ecoli {
+	position: absolute;
+	margin-top: -220px;
+	margin-left: 20px;
+	transform: scaleX(-1);
+}
+
+#graph-bottom-right-cyano {
+	position: absolute;
+	margin-top: -190px;
+	margin-left: 555px;
+}
+
+#graph-bottom-left-cyano {
+	position: absolute;
+	margin-top: -190px;
+	margin-left: 70px;
+	transform: scaleX(-1);
+}
+
 #desc {
 	font-size: 1.5vmin !important;
 	font-style: italic !important;

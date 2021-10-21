@@ -51,42 +51,63 @@ const scrollIndicatorElt =
 document.getElementById('scrollIndicator');
 
 function moveScrollIndicator(e) {
-  if($('#content-cyano').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 21.5;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else if($('#content-ecoli').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 21.5;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else if($('#content-coculture').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 12.6;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else if($('#content-overview').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 33.5;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else if($('#sponsor-page').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else if($('#ecoli-wet').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 5;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else if($('#cyano-wet').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else if($('#coculture-wet').hasClass('active')) {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
-  else {
-    var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
-    scrollIndicatorElt.style.height = percentage + '%';
-  }
+    if($('#content-cyano').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 21.5;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else if($('#content-ecoli').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 21.5;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else if($('#content-coculture').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 12.6;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else if($('#content-overview').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 33.5;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+
+
+
+    else if($('#sponsor-page').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+
+
+
+    else if($('#ecoli-wet').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 5;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else if($('#cyano-wet').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else if($('#coculture-wet').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 32;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+
+
+
+    else if($('#ecoli-wet-res').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 31;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else if($('#cyano-wet-res').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 69;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else if($('#coculture-wet-res').hasClass('active')) {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 47;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
+    else {
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 35;
+      scrollIndicatorElt.style.height = percentage + '%';
+    }
 };
 //////////// End scrollbar
 
