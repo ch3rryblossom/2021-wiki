@@ -2427,7 +2427,7 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 								<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph3.png" width="400px" height="400px"></div>
 							</div>
 							<br>
-
+							<p id="desc">Figure Desc: he above graphs show the results of SteadyCom runs at varying values of sucrose productivity of <i>S. elongatus</i></p>
 							<p><b>Observations:</b> <br>
 								As the sucrose productivity of cyanobacteria increases:
 								<ol class="a">
@@ -2449,6 +2449,7 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 								   The butanol productivity was increased by decreasing the percentage of the optimal specific growth rate the <i>E. coli</i> was constricted to grow at. <br>
 					   
 							   <div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph7.png" width="600px" height="600px"></div><br>
+							 <p id="desc">Figure Desc: The above graph shows how the butanol yield from the co culture varies with sucrose productivity at different values of butanol productivity (depicted by % of optimal growth of the <i>E. coli</i></p>  
 							   <p><b>Observations:</b> <br>
 								As butanol productivity of <i>E. coli</i> increases:
 								<ol class="a">
@@ -2488,16 +2489,20 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 							<div class="range-slider">
 								<input type="range" min="1" max="6" step="1" value="1" class="myRange" id="myRange5">
 							</div>
-							<div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">Butanol Productivity
+							<div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">
+								Oxygen bound (Maximum allowed rate of oxygen uptake for <i>E. coli</i>)
 							</div>
+							<br>
+							<p>Move the slider to see how the butanol yield of the co culture varies at different levels of oxygen in terms of the bound on the Oxygen uptake given in mmol/gDW/hr.</p>
 							<br><br>
-							
-							<h4>Image description:
-								<b><div id="ImageDesc5">
-								</div>
-							</h4></b><br><br>
 					
 							<div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph11.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph12.png" width="400px" height="400px"></div><br>
+							<p id="desc">Fig Description: Results of SteadyCom when <i>E. coli</i> is constrained to not take up any oxygen. The marker for current sucrose productivity shows that the <i>E. coli</i> does not grow in these conditions as its relative abundance is 0. 
+							</p>
+							<br>
+							<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph13.png" width="400px" height="400px"></div><br>
+							<br>
+							<p id="desc">Fig Description: The above graph shows how butanol yield of the co culture varies with oxygen levels at a sucrose productivity of 0.4mmol/gDW/hr</p>
 							<p><b>Observations: </b><br>
 								As the oxygen levels in the co culture environment is brought down:
 								<ol class="a">
@@ -2510,14 +2515,16 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 									<li style="padding-left:1em;padding-top: 0.3em;">For sucrose productivity in the range 0.3 - 0.5 mmol/hr/gDW, the butanol yields do not change much with a further decrease in oxygen levels.</li>
 								</ol>
 								</p>
-								<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph13.png" width="400px" height="400px"></div><br>
+								
 								<p><b>Conclusions:</b> <br>
 									Butanol yield does increase as the oxygen levels are brought down; however, at very low levels of oxygen, the <i>E. coli</i> are not able to sustain growth with the current predicted levels of sucrose productivity from the cyanobacteria. Furthermore, the butanol yield at low oxygen levels does not increase significantly unless sucrose productivity of the cyanobacteria is increased to a very high level. <br>
 					
 					We are thus in a position to corroborate one of the inputs given to us by Dr. Yazdani - viz., that good butanol yields are best achieved under microaerobic conditions, as the <i>E. coli</i> divert most of their carbon flux towards growth under aerobic conditions but grow too slowly under anaerobic conditions. We can use this to inform a practical implementation of our project, and would recommend experimenting  with oxygen quenchers to bring oxygen levels down into the appropriate range.<br>
 					
 					This is also supported by the fact that at very low oxygen levels, the <i>E. coli</i> cannot grow below 90% of its maximum growth rate. The only way for the <i>E. coli</i> to divert more flux towards butanol  would be to further lower its relative abundance to take up more sucrose per gram dry weight. </p>
-								<h3>Increasing CO<sub>2</sub> Uptake Rate of Cyanobacteria</h3><br>
+								
+					
+					<h3>Increasing CO<sub>2</sub> Uptake Rate of Cyanobacteria</h3><br>
 								<p><b>Hypothesis:</b><br> Increasing the CO<sub>2</sub> uptake efficiency of cyanobacteria will increase the butanol yield of the co-culture.</p>
 								<p>In a meeting with Dr. Malathy, Dr. Dube and Dr. Lobo, we were told to look into increasing the CO<sub>2</sub> uptake efficiency of the cyanobacteria to give our production process a competitive advantage over others. We decided to model the effect of this increase on the butanol yield as well. We expected that if CO<sub>2</sub> uptake efficiency increases, cyanobacteria biomass and sucrose would be produced at a higher rate, resulting in butanol being produced at a higher rate as well. This was done by increasing the maximum CO<sub>2</sub> allowed for the cyanobacteria to take in per hour.</p>
 								<br>
@@ -2531,19 +2538,15 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 
 
 							<div class="range-slider">
-								<input type="range" min="1" max="6" step="1" value="1" class="myRange"id="myRange6">
+								<input type="range" min="1" max="6" step="1" value="1" class="myRange"id="Dry">
 							</div>
 
 							<div class="rangeOutput" id="rangeValue6"></div><div class="rangeOutput">
-								Sucrose Productivity
+								Carbon Uptake Efficiency
 							</div>
 							<br><br>
-							
-							<h4>
-								Image description:
-								<b><div id="ImageDesc6">
-								</div>
-							</h4></b><br><br>
+							<p>Move the slider to see how the butanol yield of the co-culture varies at different carbon uptake efficiency of <i>S. elongatus</i> given in mmol/gDW/hr.</p>
+							<br><br>
 							
 							<p><b>Observations:</b>
 								<ol class="a">
@@ -2711,9 +2714,24 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
 							<h3 id="slidetext"></h3>
 							</div>
+							<p id="desc">Carousel Description: Results from SteadyCom at different values of sucrose productivity to illustrate the above explanation</p>
 							<h3>Allowing Oxygen into the Co-culture</h3><br>
 			<p>The two following graphs show net oxygen flux per gDW of the co culture in two different conditions. The first allows only exchange of oxygen between the two species but extra oxygen is not allowed from the environment. The second allows both exchange of oxygen as well as for the <i>E. coli</i> to take up more oxygen from the environment if it is required as well. As one can see, even though the <i>E. coli</i> is allowed to take up more oxygen, it does not require more than the cyanobacteria is producing to grow and produce butanol optimally. This is why the net flux of oxygen is positive in both cases.  </p>
-		    <br>
+			<style>
+				.imageWrapper{display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;}
+div.imageWrapper img{
+	margin-top:10px;
+	width: 500px;
+}
+			</style>
+			<div class="imageWrapper">
+				<img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph15.png">
+				<img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph16.png">
+				</div>			<br>
 						</div>
 						<!------------------------------------- END OF CO CULTURE TAB----------------------------------------->
 					</div>
@@ -3372,18 +3390,18 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 		var output5 = document.getElementById("rangeValue5");
 		var slideimage5 = document.getElementById("rangeImage5");
 		var imageDesc5 = document.getElementById("ImageDesc5");
-		const imagearray5 = ['95','90','80','70','60','40','20','10'];
+		const imagearray5 = ['Aerobic','8','4','2','1','0','20','10'];
 		const descarray5 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
 		const igemarray5 = ['https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png', 'https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_b8.png', 'https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_c4.png', 'https://2021.igem.org/wiki/images/5/55/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_d2.png', 'https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_e1.png', 'https://2021.igem.org/wiki/images/b/b7/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_f0.png'];
 		const correctorder5 = ['1', '2', '3', '4', '5', '6'];
 		output5.innerHTML = slider5.value;
-		output5.innerHTML = '1';
+		output5.innerHTML = 'Aerobic';
 		imageDesc5.innerHTML = ''
 	  	slideimage5.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png" width="450px" height="450px"></div>';
 	
 
 		slider5.oninput = function() {
-	  		output5.innerHTML = imagearray5[this.value - 1] + '%';
+	  		output5.innerHTML = imagearray5[this.value - 1];
 	  		imageDesc5.innerHTML = igemarray5[this.value-1];
 	  		slideimage5.innerHTML = '<div><img src="' + igemarray5[this.value-1] + '" width="450px" height="450px"></div>';
 		}
@@ -3397,12 +3415,12 @@ We’ve made use of FBA and MoMA to predict the growth rates and sucrose product
 		var output6 = document.getElementById("rangeValue6");
 		var slideimage6 = document.getElementById("rangeImage6");
 		var imageDesc6 = document.getElementById("ImageDesc6");
-		const imagearray6 = ['95','90','80','70','60','40','20','10'];
+		const imagearray6 = ['12.2','13.7','15.2','16.7','18.2','19.7','20','10'];
 		const descarray6 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
 		const igemarray6 = ['https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png', 'https://2021.igem.org/wiki/images/c/cb/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_b.png', 'https://2021.igem.org/wiki/images/6/62/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_c.png', 'https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_d.png', 'https://2021.igem.org/wiki/images/2/25/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_e.png', 'https://2021.igem.org/wiki/images/a/af/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_f.png'];
 		const correctorder6 = ['1', '2', '3', '4', '5', '6'];
 		output6.innerHTML = slider6.value;
-		output6.innerHTML = '1';
+		output6.innerHTML = '12.2';
 		imageDesc6.innerHTML = ''
 		slideimage6.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png" width="450px" height="450px"></div>';
 		
