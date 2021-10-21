@@ -150,11 +150,9 @@
                     <nav>
                         <ul id="sidenav-id">
                             <li class="nav-item"><a class="nav-link" href="#1">Cyanobacteria</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">E Coli</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Modelling</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#4">References</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -177,58 +175,29 @@
 
 
 
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
+                    <h1 id="2">E. coli - the heterotrophic module </h1>
+                    <hr><br><br>
+                    <p></p>
+<br>
+					<h1 id="3">Modelling</h1>
+                    <hr><br><br><p>Our modeling objective was primarily to optimize butanol production. This involved predicting individual growth rates and the production yields of our organisms, identifying key gene modification targets, and analyzing crucial co-culture parameters.&nbsp;</p>
+		    <p>To begin modeling, we needed to make adjustments to the available models of <em>E. coli</em> and <em>S. elongatus 2973</em>, to match the strains that we would be using in our co-culture. This involved adding reactions and knockouts that weren&rsquo;t already present in the base models. For <em>S. elongatus</em>, we additionally had to model salt stress, which is what is responsible for the production of sucrose, since sucrose is an osmoprotectant.&nbsp;</p>
+		    <p>To simulate the growth rates, sucrose, and butanol production in monocultures, we planned to use two constraint-based analysis techniques - Flux Balance Analysis (FBA) and Minimum of Metabolic Adjustments (MoMA). Knowing how the individual strains react to various environmental conditions would also serve to validate the results of our co-culture modeling.</p>
+		    <p>We then planned to analyze the co-culture to identify optimal parameter values for maximum butanol production. This would be done using two techniques - SteadyCom and dynamic modeling, which we performed in collaboration with Team Toulouse INSA-UPS.&nbsp;</p>
+		    <p>SteadyCom is used to analyze the steady-state behavior of co-cultures, microbiomes, and host-microbe interactions1. It provides results such as the biomass ratio of the constituent organisms at steady-state growth, and the fluxes of various reactions in the multi-species network. It would allow us to identify certain key metabolites that play an important role in the interaction between the organisms.&nbsp;</p>
+		    <p>Dynamic modeling shows the time evolution of concentrations of metabolites and abundances of the organisms in the co-culture in the bioreactor setup.&nbsp;</p>
+		    <p>We then identify key gene modifications in the individual organisms <em>E. coli</em> and <em>S. elongatus</em> that would allow us to achieve these optimal values. This would be done using OptKnock and Flux Scanning based on Enforced Objective Flux (FSEOF).</p>
+		    <p>FSEOF is used to identify metabolic reactions involved in sucrose and butanol production and correspondingly find the genes that regulate them. These genes can be overexpressed to increase sucrose production in <em>S. elongatus</em> and butanol production in <em>E. coli.</em></p>
+		    <p>OptKnock on the other hand is an algorithm that finds and suggests which set of reactions to remove from a metabolic network to obtain a mutant that will produce a particular target of interest at a higher rate than the wild-type strain.</p>
+		    <p>The final results obtained from all the analyses would provide us with crucial bioreactor parameters and gene modifications in the individual organisms <em>E. coli</em> and <em>S. elongatus</em> that would allow us to achieve optimal butanol production, and inform us of productive avenues to explore in the lab.</p>
 
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+<br>
+<h3 id="4">References</h3><br>
+<p>
+	<ol>
+		<li>Chan, S. H. J., Simons, M. N., & Maranas, C. D. (2017). SteadyCom: predicting microbial abundances while ensuring community stability. PLoS computational biology, 13(5), e1005539.</li>
+	</ol>
+</p>
 				</div>
 			</div>
         </div>

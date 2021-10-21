@@ -20,6 +20,46 @@
     </style>
 </head>
 
+<!--table ig-->
+
+<style>
+	table{
+		table-layout: fixed;
+	}
+/* Dark Style */
+[data-table-theme*=dark] {
+  color: #ddd;
+  background: #333;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+[data-table-theme*=dark] thead th,
+[data-table-theme*=dark] tfoot th {
+  color: #aaa;
+  background: rgba(0255,255,255,.15);
+}
+[data-table-theme*=dark] caption {
+  padding:.5em;
+}
+[data-table-theme*=dark] th,
+[data-table-theme*=dark] td {
+  padding: .5em;
+  border: 1px solid grey;
+}
+.tdgreen {
+	background: #27668d;
+}
+.tdyellow {
+	background: #ffd73a;
+	color: black;
+}
+[data-table-theme*=dark] th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+    </style>
+
 <!-- Superior styling KEKW-->
 
 <body>
@@ -180,7 +220,7 @@
 									<li class="nav-item"><a class="nav-link" href="#c1">Introduction</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c2">Modelling Cyanobacteria for Sucrose Production</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c3">Biomass vs CO<sub>2</sub></a></li>
-									<li class="nav-item"><a class="nav-link" href="#c4">Biomass vs Sucrose</a></li>
+									<li class="nav-item"><a class="nav-link" href="#suc">Sucrose vs Growth Rate</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c5">Sucrose Production</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c6">Identifying Over Expressions and Knockouts</a></li>
 									<li class="nav-item"><a class="nav-link" href="#c7">References</a></li>
@@ -197,7 +237,7 @@
 								<ul id="sidenav-id">
 									<li class="nav-item"><a class="nav-link" href="#e1">Introduction</a></li>
 									<li class="nav-item"><a class="nav-link" href="#e2">Model Construction</a></li>
-									<li class="nav-item"><a class="nav-link" href="#e3">Modelling <i>E. coli</i> for optimum Butanol production</a></li>
+									<li class="nav-item"><a class="nav-link" href="#e3">FVA for Overexpression Targets</a></li>
 									<li class="nav-item"><a class="nav-link" href="#e4">Results</a></li>
 									<li class="nav-item"><a class="nav-link" href="#e5">OptKnock</a></li>
 									<li class="nav-item"><a class="nav-link" href="#e6">FSEOF</a></li>
@@ -303,7 +343,7 @@
 							<p>To analyze interactions in the co-culture and detect optimal parameters we used SteadyCom and a Dynamic Model, based on FBA. The results of these can be found in the Co-Culture tabs.</p>
 							<br>
 
-							<p>We have used the COBRA package in MATLAB<sup><a href="oref1">[1]</a></sup> for almost all of our models. The core technique for all of the methods mentioned above is the constraint-based modelling technique, Flux Balance Analysis.</p>
+							<p>We have used the COBRA package in MATLAB<sup><a href="#oref1">[1]</a></sup> for almost all of our models. The core technique for all of the methods mentioned above is the constraint-based modelling technique, Flux Balance Analysis.</p>
 							<a id="o2"></a><br>
 
 
@@ -312,7 +352,7 @@
 							
 							<h1>Flux Balance Analysis</h1>
 							<hr><br><br><br>
-							<p>FBA is a steady-state analysis algorithm that is widely used in metabolic predictions and optimizations. FBA assumes the organism to be in a metabolically steady state i.e., there is no accumulation of metabolites within the organism. To perform FBA, a metabolic model of the organism is required.</p>
+							<p>FBA is a steady-state analysis algorithm that is widely used in metabolic predictions and optimizations. FBA assumes the organism to be in a metabolically steady state i.e., there is no accumulation of metabolites within the organism. To perform FBA, a metabolic model (GSM - Genome Scale Model) of the organism is required.</p>
 							<br>
 
 							<p>A metabolic model of an organism contains information on all (or most) reactions that take place within the organism, the metabolites involved, the genes present, the Gene-Reaction-Relation, and a calculated biomass production reaction (growth rate reaction) that gives the growth rate when analyzed.</p>
@@ -320,10 +360,10 @@
 							
 							<h4>The core elements of FBA are<sup><a href="#oref2">2</a></sup>:</h4>
 							<ol class="a">
-								<li style="padding-left:1em">S Matrix or the stoichiometric matrix - This is a matrix of the order (number of metabolites) * (number of reactions)</li>
-								<li style="padding-left:1em">The objective function or c - This is a column vector that holds the information to attain the aim of the analysis, for example biomass optimisation</li>								
-								<li style="padding-left:1em">Lower bounds and upper bounds - This is a set of values that help constrain the solution space</li>
-								<li style="padding-left:1em">Solution flux space - This is a set of fluxes that give the same objective function value</li>
+								<li style="padding-left:1em">S Matrix or the stoichiometric matrix describes all the reactions present in the GSM</li>
+								<li style="padding-left:1em">The objective function or 'c' - This is a column vector that holds the information to attain the aim of the analysis, for example biomass optimisation</li>								
+								<li style="padding-left:1em">Lower bounds and upper bounds of the fluxes of the reactions is a set of values that help constrain the solution space</li>
+								<li style="padding-left:1em">Solution flux space - This is a set of fluxes that the algorithm converges to when optimizing the objective function.</li>
 							</ol>
 							<p>In an organism, it is normal to have the same metabolites participating in multiple reactions, and therefore it is safe to assume the number of reactions will be more than the number of metabolites. This can be compared to a system of linear equations with more equations than variables. Without constraints the solution space is infinite, so we introduce constraints in the form of bounds.</p>
 							<br>
@@ -368,9 +408,9 @@
 
 
 							<!-- MoMA -->
-							<h1>Minimisation of Metabolic Adjustments</h1>
+							<h1>Minimisation of Metabolic Adjustments (MoMA)</h1>
 							<hr><br><br><br>
-							<p>MoMA is an extension of Flux Balance Analysis that imposes more constraints to make the model as close to reality as possible, albeit it isn’t the best at doing so. The logic of MoMA is very simple - minimise the euclidean distance (L2 norm) between the wild-type flux distribution and the flux distribution of the modified organism in the flux vector space<a href="#oref3"><sup>3</sup></a>.</p>
+							<p>MoMA is an extension of Flux Balance Analysis that imposes more constraints to make the model as close to reality as possible. The logic of MoMA is very simple - minimise the euclidean distance (L2 norm) between the wild-type flux distribution and the flux distribution of the modified organism in the flux vector space<a href="#oref3"><sup>3</sup></a>.</p>
 							<br>
 							<h4>The algorithm<sup><a href="#oref3">3</a></sup>:</h4>
 							<ol class="a">
@@ -439,7 +479,7 @@
 							<!-- STEADYCOM-->
 							<h1>SteadyCom</h1>
 							<hr><br><br><br>
-							<p>SteadyCom is an algorithm used to analyze the steady-state behaviour of co-cultures, microbiomes, and host-microbe interactions. Similar to FBA, SteadyCom assumes that there is no accumulation of metabolites and only looks at the fluxes of reactions. Apart from this, the crux of SteadyCom is the assumption that - at a steady-state (if a steady-state exists) the growth rates of all the organisms are the same so that one organism does not dominate and take over the entire population. Based on the constraints in the model, SteadyCom tries to maximize this community growth rate. It also provides results such as the biomass ratio of the constituent organisms at steady-state growth, and the fluxes of various reactions in the multi-species network. </p>
+							<p>SteadyCom<sup><a href="#oref4">[6]</a></sup> is an algorithm used to analyze the steady-state behaviour of co-cultures, microbiomes, and host-microbe interactions. Similar to FBA, SteadyCom assumes that there is no accumulation of metabolites and only looks at the fluxes of reactions. Apart from this, the crux of SteadyCom is the assumption that - at a steady-state (if a steady-state exists) the growth rates of all the organisms are the same so that one organism does not dominate and take over the entire population. Based on the constraints in the model, SteadyCom tries to maximize this community growth rate. It also provides results such as the biomass ratio of the constituent organisms at steady-state growth, and the fluxes of various reactions in the multi-species network. </p>
 							<br>
 							<h4>The Logic:</h4>
 							<ol class="a">
@@ -490,6 +530,7 @@
 								<li style="padding-left: 1em;"> 25 Segrè, D., Vitkup, D., & Church, G. M. (2002). Analysis of optimality in natural and perturbed metabolic networks. Proceedings of the National Academy of Sciences of the United States of America, 99(23), 15112–15117. <a href="https://doi.org/10.1073/pnas.232349399">https://doi.org/10.1073/pnas.232349399</a></li> 
 								<li style="padding-left: 1em;"> Choi, H. S., Lee, S. Y., Kim, T. Y., & Woo, H. M. (2010). In silico identification of gene amplification targets for improvement of lycopene production. Applied and environmental microbiology, 76(10), 3097–3105. <a href="https://doi.org/10.1128/AEM.00115-10">https://doi.org/10.1128/AEM.00115-10</a></li> 
 								<li style="padding-left: 1em;"> Burgard, A. P., Pharkya, P., & Maranas, C. D. (2003). Optknock: a bilevel programming framework for identifying gene knockout strategies for microbial strain optimization. Biotechnology and bioengineering, 84(6), 647–657. <a href="https://doi.org/10.1002/bit.10803">https://doi.org/10.1002/bit.10803</a></li> 
+								<li style="padding-left: 1em;">Chan, S. H. J., Simons, M. N., & Maranas, C. D. (2017). SteadyCom: predicting microbial abundances while ensuring community stability. PLoS computational biology, 13(5), e1005539.</li>
 							</ol>
 							<br><br>
 						</div>
@@ -503,48 +544,48 @@
 							<a id="c1"></a>
 							<h1>Introduction</h1>
 							<hr><br><br><br>
-							<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for <i>Synechococcus elongatus</i> UTEX 2973 from Mueller et al., 2017<sup><a href="#cref1">1</a></sup>.</p>
-							<br>
+							<p>Cyanobacteria is the green element of our project, both figuratively and literally. Modeling its behavior both in a monoculture and in the co-culture is of significance with regard to identifying productive avenues for further exploration. <br><br>
+
+We’ve made use of FBA and MoMA to predict the growth rates and sucrose production rates of <i>S. elongatus</i>, both with and without salt stress. Dr. Costas Maranas was generous enough to provide the Genome-scale metabolic model for <i>Synechococcus elongatus</i> UTEX 2973 which his lab uses - iSyu683<sup><a href="#cref1">[1]</a></sup>.<br></p>
 							<a id="c2"></a><br>
 							<!-- END OF INTRODUCTION-->
 		
 		
 		
 							<!-- MODELLING CYANO FOR SUCROSE PRODUCTION -->
-							<h1>Modelling Cyanobacteria for optimum sucrose production</h1>
+							<h1>Modelling Cyanobacteria for Optimum Sucrose Production</h1>
 							<hr><br><br><br>
-							<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
+							<p>Simulating salt stress was a major hurdle since it is difficult to account for the regulatory changes that would affect the sucrose production pathway. In consultation with our mentors, we came up with the following simplifying assumptions to simulate salt stress.</p>
 							<br>
 							<h4>Assumptions:</h4>
 							<ol class="a">
-								<li style="padding-left:1em;">sps and spp genes are a part of the UTEX 2973 Genome even though they weren’t part of the model *insert spp and sps reaction equations* </li>
-								<li style="padding-left:1em;">cscB exports are of constant efficiency </li>
-								<li style="padding-left:1em;">FBA is a steady-state analysis therefore the growth phase cannot be simulated (check <a href="Coculture.html">co-culture </a>for more information on this) </li>
-								<li style="padding-left:1em;">Coupling biomass and sucrose accumulation and restraining cscB export to less than 100% simulates salt stress </li>
+								<li style="padding-left:1em;">Intracellular sucrose levels remain constant to maintain tonicity corresponding to a particular salt concentration in the medium.  </li>
+								<li style="padding-left:1em;">The biomass reaction of the model does not take into account the intracellular sucrose that accumulates in response to salt stress. Since FBA does not allow the accumulation of any metabolites within the model, to account for this accumulated sucrose we need to create a sink reaction. The flux through this sink reaction corresponds to the accumulated sucrose. Following from assumption 1, this flux is a constant ratio of the flux through the biomass reaction. This couples the reactions by a constant, corresponding to the ratio of their fluxes. </li>
+								<li style="padding-left:1em;">Sucrose transport efficiency through the cscB transporter (referred to as cscB efficiency henceforth) remains constant. </li>
+								<li style="padding-left:1em;">This means that the flux through the cscB transporter reaction is a constant proportion of the flux through the sucrose sink reaction.  </li>
 							</ol>
 							<br>
+							<p>Apart from these assumptions, we had to make certain modifications to the model. The model did not include the reactions for the <i><b>sps</b></i> and <i><b>spp</b></i> genes and we had to add them manually, referred to as “<b>SPS</b>” and “<b>SPP</b>” respectively. We also added the reaction for the sucrose permease gene, referred to as “<b>cscB</b>”.</p>
 							<h4>Results: </h4>
 							<ul class="b">
-								<li style="padding-left:1em;">Upon adding “SPP”, “SPS” and “cscB” and running FBA with an objective to maximise growth rate we obtained a maximum growth rate of <strong>0.3033 h-1</strong> and a sucrose production and transport flux of <strong>0</strong>. This value is very similar to the experimental growth rate of <strong>0.33 ± 0.05 h</strong> Abernathy et al.<sup><a href="#oref2">2</a></sup> , which implies confidence in the model we’re using. </li>
-								<li style="padding-left:1em;">For the following conditions upon performing MoMA for optimised sucrose production we obtained a growth rate of <strong>0.2012 h−1</strong>  and a sucrose output flux of <strong>0.3079 mmol/gDW/h</strong>. </li>
-								<ul class="d">
-									<li style="padding-left:1em;">Conditions:</li>
+								<li style="padding-left:1em;">Upon adding “<b>SPP</b>”, “<b>SPS</b>”, and “<b>cscB</b>” and running FBA with an objective to maximize growth rate we obtained a maximum growth rate of <b>0.3033 h<sup>-1</sup></b> and a sucrose production and transport flux of <b>0</b>. This value is very similar to the experimental growth rate of <b>0.33 ± 0.05 h</b><sup><a href="#cref2">[2]</a></sup> , which gives us confidence in the model we’re using. </li>
+								<li style="padding-left:1em;">We obtained a growth rate of <b>0.2012 h<sup>−1</sup></b>  and a sucrose output flux of <b>0.3079 mmol/gDW/h</b> when we performed MoMA for the following parameters:</li>
 										<ul class="c">
-											<li style="padding-left:1em;">Salt stress of <strong>150mM</strong><sup><a href="#cref4">4</a></sup> simulated by coupling sucrose accumulation and biomass production </li>
-											<li style="padding-left:1em;">CO<sub>2</sub> uptake rate of <strong>-12.2 mmol/gDW/h</strong> <sup><a href="#cref2">2</a></sup> </li>
-											<li style="padding-left:1em;">cscB efficiency of <strong>90%</strong> <sup><a href="#cref3">3</a></sup> </li>
+											<li style="padding-left:1em;">For a salt concentration of 150mM in the medium, Song et al<sup><a href="#cref3">[3]</a></sup> report an internal sucrose concentration of 0.06 gram per gram dry weight (g/gDW) equivalent to 0.17 mmols per gram dry weight. Thus, to maintain a constant flux ratio of the biomass and sucrose sink reactions, the coupling constant must be 0.17.</li>
+											<li style="padding-left:1em;">We set a CO2 uptake rate of -12.2 mmol/gDW/h based on <a href="#cref2">ref. 2</a>. </li>
+											<li style="padding-left:1em;">We set a cscB efficiency of 90% based on <a href="#cref4">ref. 4</a>.</li>
 										</ul>
-								</ul>
+							
 							</ul>
 							<br>
-							<strong>Upon performing MoMA for a range of values of CO<sub>2</sub> uptakes and cscB efficiencies the following result was obtained:</strong>
+							We performed MoMA by varying CO2 uptake rates in the range: 10.2 mmol/gDW/hr to 14.2 mmol/gDW/hr, and varying cscB efficiency values in the range: 75% to 94%.
 							<a id="c3"></a>               
 							<br>
 							<!-- END OF MODELLING -->
 		
 
 							<!-- BIOMASS VS CO<sub>2</sub>-->
-							<h1> Biomass vs CO<sub>2</sub></h1>
+							<h1> Growth Rate vs CO<sub>2</sub></h1>
 							<hr><br><br><br>
 							<div class="graph">
 								<img src="assets/Graphs/Cyano Graphs/Basic/Biomass vs CO2.jpg" alt="Biomass vs CO_2 graph for different constant cscB efficiency values and a constant salt stress of 150mM. A linear pattern is observed" width=800>
@@ -555,35 +596,33 @@
 							<ol class="a">
 								<li style="padding-left:1em;">Biomass production rates decrease with decreasing CO<sub>2</sub> uptake rates for a constant cscB efficiency </li>
 								<li style="padding-left:1em;">Biomass increases for a decreasing cscB efficiency at a given CO<sub>2</sub> intake value. </li>
-								<li style="padding-left:1em;">The linear nature of the graph is due to the fact that FBA is generally a linear model and not a non-linear model. The assumption that cscB has a constant efficiency is also a contributing factor </li>
 							</ol>
 							<br>
 							<h4>Inference:</h4>
-							<p style="padding-left: 12%;"> Carbon flux through the biomass reaction decreases as the efficiency of cscB increases. Since the objective function is to maximise sucrose production we can safely say cscB acts as a sucrose sink and therefore increases flux through sucrose production reaction at higher efficiencies.</p>
-							<a id="c4"></a>
+							<p style="padding-left: 12%;"> An increase in CO2 uptake rate naturally results in a higher biomass production rate as more carbon is sequestered to be photosynthesized and converted to biomass as well as sucrose.<br>
+								Carbon flux through the biomass reaction decreases as the efficiency of cscB increases. Since the objective function is to maximize sucrose production we can infer that <b>cscB acts as a sucrose sink</b> and therefore increases flux through sucrose production reaction at higher efficiencies. </p>
 							<br>
 							<!-- END OF BIOMASS VS CO2-->
 		
-		
+							<a id="suc"></a>
 		
 							<!-- BIOMASS VS SUCROSE-->
-							<h1> Biomass vs Sucrose</h1>
+							<h1> Sucrose vs Growth Rate </h1>
 							<hr><br><br><br>
 							<br>
 							<div class="graph">
 								<img src="assets/Graphs/Cyano Graphs/Basic/Biomass vs Sucrose.jpg" alt="Biomass vs Sucrose graph for different CO_2 uptake rates. We observe a linear pattern yet again where sucrose production increases with decrease in growth rates" width=800>
-								<p id="desc" style="padding-top: 15px;">Fig 2: Relationship between sucrose production and growth rate under a varying CO<sub>2</sub> uptake rates for a salt concentration of 150mM</p>
+								<p id="desc" style="padding-top: 15px;">Fig 2: Relationship between sucrose production and growth rate under varying CO<sub>2</sub> uptake rates for a salt concentration of 150mM</p>
 							</div>
 							<br>
 							<h4>Observations:</h4>
 							<ol class="a">
-								<li style="padding-left:1em;">Sucrose production rates decrease with increasing biomass production rates </li>
-								<li style="padding-left:1em;">Both increase with increase in CO<sub>2</sub> uptake </li>
-								<li style="padding-left:1em;">The linear nature is again, due to the linear nature of FBA and the fact that both of them share the same carbon source i.e. CO<sub>2</sub> </li>
+								<li style="padding-left:1em;">Sucrose production rates decrease with increasing growth rates </li>
+								<li style="padding-left:1em;">Both sucrose production rates and growth rate increase with increase in CO<sub>2</sub> uptake rate </li>
 							</ol>
 							<br>
 							<h4>Inference: </h4>
-							<p style="padding-left: 12%;">Since the objective function is sucrose production and both biomass and sucrose share the same carbon source one can easily say they’ll be inversely proportional. Therefore, our aim is to direct carbon flux through both the reactions in a fixed ratio such that the organism lives comfortably and produces ample amounts of sucrose. </p>
+							<p style="padding-left: 12%;">Since sucrose production directs carbon flux away from growth, an increase in sucrose production naturally decreases the growth rate. Therefore, our aim is to direct carbon flux through both the reactions in a fixed ratio we optimize for sucrose production, but not at the cost of a viable growth rate.</p>
 							<a id="c5"></a>
 							<br>
 							<!-- END OF BIOMASS VS SUCROSE -->
@@ -591,15 +630,14 @@
 							<!-- SUCROSE PRODUCTION-->
 							<h1> Sucrose production</h1>
 							<hr><br><br><br>
-							<p>This is a graphical representation of all the results and relations we have obtained from our attempts till now. We have eliminated all the metabolic states that do not agree with our MoMA results. The colour bar shows the sucrose production fluxes.</p>
-							<p>Observations for this are similar to the previous ones. This just helps us identify the region of conditions that we should be trying to replicate in the lab. Clearly sucrose production is maximum in the region with high cscB efficiency and high CO<sub>2</sub> uptake rates.</p>
-							<br>
+							<p>This is a graphical representation of our combined results. We have eliminated all the metabolic states that do not agree with our MoMA results. The color bar shows the sucrose production fluxes in <i>mmol/gDW/h</i>.</p><br>
 							<div class="graph">
 								<img src="assets/Graphs/Cyano Graphs/Basic/3_Variables.jpg" alt="A graph respresting varaition of sucrose production with increase in growth rates, CO_2 Uptake rates and cscB efficieny values" width=800>
-								<p id="desc" style="padding-top: 15px;">Fig 9: A graph showing the production of sucrose for varying CO<sub>2</sub> uptake rates and cscB efficiencies <br> Note - the colour bar on the right shows the mmol/gDW/h values of sucrose</p>
+								<p id="desc" style="padding-top: 15px;">Fig 3: A graph showing the production of sucrose for varying CO<sub>2</sub> uptake rates and cscB efficiencies <br> Note - the colour bar on the right shows the mmol/gDW/h values of sucrose</p>
 							</div>
 							<br>
-							<p>As you can see from the graph sucrose production is maximum when there is a higher intake of carbon dioxide (source) and a higher cscB efficiency (sink). Ideally we would be trying to re-create the above mentioned conditions for enhanced production of sucrose whilst maintaining a significant fraction of maximum growth rates, but amplifying something that is already at 90% efficiency (cscB) is hard and to some extend unnecessary. Therefore we went a step ahead to find out other possible ways to increase sucrose production without losing much growth rates.</p>
+							<p>Sucrose production is maximum when there is a high CO2 uptake rate and a high cscB efficiency. For enhanced sucrose production, it would be best to engineer <i>S. elongatus</i> to function in these regimes, while still maintaining viable growth rates.<br>
+								However, improving cscB efficiency beyond its highest reported efficiency of around 90% might be difficult and may not have a substantial payoff. On the other hand, we have looked at methods to increase CO2 uptake rate as a part of our proposed implementation.</p>
 							<a id="c6"></a>
 							<br>
 							<!-- END OF MODELLING CYANO FOR SUCROSE PRODUCTION -->
@@ -615,37 +653,29 @@
 		
 							<!-- TARGETS FOR OVER EXPRESSION-->
 							<h2>Targets for Over-expression</h2><br>
-							<p>FSEOF is the go to algorithm to identify targets for amplification. Upon running FSEOF under the following conditions we obtained a few targets for over-expression.</p>
+							<p>Upon running FSEOF under the following conditions we obtained a few targets for over-expression. </p>
 							<br>
 		
-							<h4>Assumptions:</h4>
-							<ol class="a">
-								<li style="padding-left:1em;">Carbon Dioxide uptake rate is -12.2mmol/gDW/hr (Max value from literature) </li>
-								<li style="padding-left:1em;">We have neglected salt stress because we were getting insensible results because of it </li>
-							</ol>
-							<br>
 		
-							<h4>Sources of inaccuraies: </h4>
+							<h4>Problems to note: </h4>
 							<ol class="a">
-								<li style="padding-left:1em;"> The model is not complete </li>
-								<li style="padding-left:1em;"> The geens have no names</li>
-								<li style="padding-left:1em;"> Some reactions have no gene-protein-relations. Gene-protein-relations (GPRs) are rules that bind reactions in the organism to particular genes or combination of genes. For example, if reaction R1 requires both genes G1 and G2 then in the absence of either one of the genes the reaction seizes to work</li>
+								<li style="padding-left:1em;"> The model does not have all the reactions in the organism and thus certain targets corresponding to those reactions may not be identified. </li>
+								<li style="padding-left:1em;"> The genes have no names, making it difficult to correlate genes in the model with genes in the organism.</li>
+								<li style="padding-left:1em;"> Some reactions have no gene-protein relations. (Gene-protein-relations (GPRs) are rules that bind reactions in the organism to particular genes or a combination of genes. For example, if reaction R1 requires both genes G1 and G2 then in the absence of either one of the genes the reaction ceases to work.)</li>
 							</ol>
 							<br>
 		
 							<h4>Results:<h4>
 							<ol class="a"> 
-								<li style="padding-left: 1em;"> We have obtained a total of 80 reactions that can be overexpressed</li>
-								<li style="padding-left: 1em;"> We have obtained a total gene count of 87. This number is a bit misleading because if we were to over express all these 80 reactions we wouldn’t have to over express all the 87 genes because  some of the Gene-Protein-Relations do not require the entire set of genes that govern them</li>
-								<li style="padding-left: 1em;"> These 87 genes are responsible for a total of 555 reactions in the organism. Few of them are the same reaction but in different parts of the organism, for example if the cytoplasm and periplasm both contain a reaction X, the reaction X is counted twice</li>
-								<li style="padding-left: 1em;"> If we were to count X only once then we have 107 reactions  governed by these 87 genes but this is not of much importance because over expressing any gene will over express all its reactions whether it is in cytoplasm or periplasm</li>
-								<li style="padding-left: 1em;"> 25 out of the 80 target reactions have no gene-protein-relations so we cannot test these out in the lab</li>
-								<li style="padding-left: 1em;"> Although the sucrose production reaches the theoretical maximum, the biomass flux slowly dies as this happens therefore the higher is not always the better</li>
-								<li style="padding-left: 1em;"> Almost all of them follow linear behaviour</li>					
+								<li style="padding-left: 1em;"> We have obtained a total of 80 reactions corresponding to 87 genes that can potentially be overexpressed to increase sucrose production.</li>
+								<li style="padding-left: 1em;"> These 87 genes are responsible for a total of 555 reactions in the organism. Few of them are the same reaction but in different parts of the organism, for example, if the cytoplasm and periplasm both contain a reaction X, the reaction X is counted twice.</li>
+								<li style="padding-left: 1em;"> Accounting for this redundancy in counting the reactions, there are 107 unique reactions.</li>
+								<li style="padding-left: 1em;"> 25 out of the 80 target reactions have no gene-protein-relations so we cannot test these in the lab.</li>
+								<li style="padding-left: 1em;"> Although upon overexpression of these targets, sucrose production is maximized, growth rates decrease, which is a tradeoff we need to keep in mind as aforementioned.</li>					
 							</ol>
 							<br>
 						
-							<p>Given below are 4 graphs each with 5 reactions plotted against varying sucrose production fluxes. This is just to give a comparison of the various results we obtained. If you would like to download the entire set of interactive graphs representing these results <a>click here</a>. We also have graphs which depict the variations of biomass along with sucrose and these reactions (<a>click here</a>)</p>
+							<p>Given below are 4 graphs each with 5 reactions plotted against varying sucrose production fluxes. This is just to give a comparison of the various results we obtained. If you would like to download the entire set of interactive graphs representing these results <a href = 'assets/Graphs/Cyano Graphs/FSEOF/Interactive.zip' download>click here</a>. We also have graphs which depict the variations of growth rate along with sucrose and these reactions (<a href = 'assets/Graphs/Cyano Graphs/FSEOF/Interactive 3D.zip' download>click here</a>)</p>
 							<br>
 							<!-- Slideshow of graphs-->
 							<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -684,20 +714,11 @@
 							<br><br><br>
 							<!-- END OF SLIDESHOW -->
 							
-							<p>We searched through literature to find a way to represent the data we have collected, but we found no proven way to do so. Therefore this can utmost be considered as a qualitative analysis of potential targets for over expression as opposed to being a quantitative and conclusive result of targets for overexpression.</p>
-							<br>
-
-							<p><strong> These still need in-laboratory proof for us to confirm these over expression targets.</strong></p>
-							<br>
-
-							<p>Since we could not just leave the results as is, we ranked them in order of decreasing slope because we believe that the ones with higher slopes have a higher flux handling capacity i.e., they can hold more flux for the desired purpose. In terms of the analogy between FSEOF and traffic in a city, these are the roads that can take a good chunk of traffic away from other smaller roads and still not get jammed. </p>
-							<br>
-
-							<p> These targets of overexpression are in terms of reactions, but in wet lab we can not selectively overexpress reactions. What we can overexpress in the lab are genes. So naturally, we looked into how other reactions in the model get affected if and when we overexpress one of the above genes.
-								The table below shows how the genes responsible for the above reactions will affect other reactions in the organism. We have generated a <strong>reaction flux vs sucrose flux graph</strong> and a <strong>reaction vs sucrose vs biomass graph</strong> for each over expression target, all of which can be downloaded <a href="#">here</a>.
-							</p>
-							<p><strong>Note - the “fig x” in each row indicates which graph in the folder corresponds to the said reaction</strong></p>
-							<br>
+							<p><b>However, these over-expression targets require experimental validation.</b><br>
+								We have also ranked the results in order of decreasing slope because we believe that the ones with higher slopes have a higher flux handling capacity i.e., they can hold more flux for the desired purpose. In terms of the analogy between FSEOF and traffic in a city, these are the roads that can take a good chunk of traffic away from other smaller roads and still not get jammed. <br><br>
+								
+								These targets of overexpression are in terms of reactions, but in the lab, we can not selectively overexpress reactions, only genes. So naturally, we looked into how other reactions in the model get affected if and when we overexpress one of the above genes. The table below shows how the genes responsible for the above reactions will affect other reactions in the organism.
+								Note - the “fig x” in each row indicates which graph in the folder corresponds to the said reaction. <br><br></p>								
 				
 							<!-- Start of Table -->
 							<h1>Over-expression Table</h1>
@@ -1828,7 +1849,7 @@
 		
 							<!-- TARGETS FOR KNOCKOUTS-->
 							<h2>Targets for Knockouts</h2><br>
-							<P>We ran Optknock like we did for <i>E. coli</i>, but we were unable to obtain any sensible result. All our runs gave a <strong>0 growth rate</strong>. We believe the problem is with the model, as it is still incomplete and not verified, and therefore have concluded nothing further can be done to produce Knockout results.</P>
+							<P>We ran Optknock like we did for <i>E. coli</i>, but we were unable to obtain any significant results. All our runs gave a 0 growth rate. We believe the problem may be with the model, as it is incomplete.</P>
 							<a id="c7"></a>
 							<br><a id="cref1"></a><br><a id="cref2"></a><br><a id="cref3"></a><br><br>
 
@@ -1901,171 +1922,19 @@
 								</ul>
 							</ul>
 							<br>
-							<p>We also added the reactions catalyzed by the cscA (invertase), cscB (sucrose permease), cscK (fructokinase) genes from <i>E. coli</i> W to allow the strain to be able to consume and metabolize sucrose<a>9</a>.</p>
+							<p>We also added the reactions catalyzed by the cscA (invertase), cscB (sucrose permease), cscK (fructokinase) genes from <i>E. coli</i> W to allow the strain to be able to consume and metabolize sucrose<sup><a>9</a></sup>.</p>
 							<br>
 							
-							<p>However, we noticed that some of the heterologous gene reactions corresponding to the hbd, crt, cscK, and atoB genes already existed in the base iML1515 strain, and upon consultation with our advisors, we decided to consider the flux through those reactions as overexpressions of the corresponding genes.</p>
+							<p>However, we noticed that some of the heterologous gene reactions corresponding to the <i>hbd, crt, cscK</i>, and <i>atoB</i> genes already existed in the base iML1515 strain, we first decided to consider the flux through those reactions as overexpressions of the corresponding genes. However, after simulating these overexpressions and after further consultation with our mentors, we realized that this did not have any particular relevance in simulating IPTG induction of the butanol production pathway. We instead set butanol production as the objective function and constrained growth to a particular percentage of the optimal growth rate for a particular set of conditions, as a way to simulate IPTG induction.</p>
 							<a id="e3"></a>
-							<br>
+							<br><br><br>
 							<!-- end of model construction -->
 
 
-
-							<!-- Modelling <i>E. coli</i> For Optimum Butanol -->
-							<h1>Modelling <i>E. coli</i> for Optimum Butanol production</h1>
-							<hr><br><br><br>
-							<p>After adding the relevant genes and reactions to our model, the next step was to enforce additional flux through the reactions corresponding to the genes hbd, crt, atoB and cscK. While these genes were added in KJK01, in a metabolic model, we do not add duplicate reactions but rather increase flux through the existing reaction. The issue here is that fluxes through individual reactions are usually not available in literature.</p>
-							<br>
-							<p>On suggestion from our PI, Indumathy, we used a computational way to create a model with suitable over expression levels. She suggested proceeding as follows:</p>
-							<ol class="a">
-								<li style="padding-left: 1em;"> Add all the reactions necessary for butanol synthesis</li>
-								<li style="padding-left: 1em;">Make the appropriate deletions and set realistic bounds for our exchange reactions</li>
-								<li style="padding-left: 1em;">Optimize the model for growth and obtain the base value fluxes for all the reactions that were to be overexpressed <br> 
-									Some important fluxes are mentioned in the table below: <br><br>
-
-								<!-- Table -->
-								<div class="table">
-								<!-- Headers -->
-									<div class="table1-row table-header">
-										<div class="cell">
-											Reaction in the model corresponding to the reaction of the inserted gene
-										</div>
-										<div class="cell">
-											Base flux value
-										</div>
-									</div>
-									<!--End of headers -->
-
-									<!-- Other rows -->
-									<div class="table1-row">
-										<div class="cell" data-title="Reaction in the model corresponding to the reaction of the inserted gene">
-											HBD
-										</div>
-										<div class="cell" data-title="Base flux value">
-											12.0665
-										</div>
-									</div>
-
-									<div class="table1-row">
-										<div class="cell" data-title="Reaction in the model corresponding to the reaction of the inserted gene">
-											CRT 1
-										</div>
-										<div class="cell" data-title="Base flux value">
-											12.0665
-										</div>
-									</div>
-
-									<div class="table1-row">
-										<div class="cell" data-title="Reaction in the model corresponding to the reaction of the inserted gene">
-											CRT 2
-										</div>
-										<div class="cell" data-title="Base flux value">
-											12.0665
-										</div>
-									</div>
-
-									<div class="table1-row">
-										<div class="cell" data-title="Reaction in the model corresponding to the reaction of the inserted gene">
-											cscK
-										</div>
-										<div class="cell" data-title="Base flux value">
-											20
-										</div>
-									</div>
-
-									<div class="table1-row">
-										<div class="cell" data-title="Reaction in the model corresponding to the reaction of the inserted gene">
-											Biomass
-										</div>
-										<div class="cell" data-title="Base flux value">
-											0.2238
-										</div>
-									</div>
-
-									<div class="table1-row">
-										<div class="cell" data-title="Reaction in the model corresponding to the reaction of the inserted gene">
-											Butanol exchange
-										</div>
-										<div class="cell" data-title="Base flux value">
-											0
-										</div>
-									</div>
-								</div>
-								<!-- END OF TABLE -->
-								</li>
-								<br>
-								<li class="padding-left: 1em;">We then developed a nested loop designed as follows:</li>
-								<ul class="c">
-									<li style="padding-left: 1em;"> We force flux in the range 12 to 15 (with a step size of 0.5) through the hbd reaction</li>
-									<li style="padding-left: 1em;"> For each flux value of hbd we had a loop forcing flux in the same range through the reaction CRT1</li>
-									<li style="padding-left: 1em;"> For each flux value for CRT1 we had a loop forcing the same range of fluxes through the CRT 2 reaction</li>
-									<li style="padding-left: 1em;"> For each flux value of CRT2 reaction, we had a loop forcing flux in the range 20 to 24 (for a step size of 1) through the cscK gene reaction</li>
-								</ul>
-								<li style="padding-left: 1em;"> We then optimize the model with growth as the objective function for each set of flux values and check for growth and butanol production</li>
-							</ol>
-							<br>
-							<p>We thus generated a table (<a>Supplementary material [ecoli_ovrxps_fluxes_v2]</a>) of enforced flux distributions with their effects on growth and butanol production.</p>
-							<br>
-							<div class="graph">
-								<img src="assets/Graphs/E coli graphs/optimizing_model_for_butanol_2.png" alt=" A graph showing the overexpression of the genes and the growth and butanol production resulting from the overexpression" width=800>
-								<p id="desc" style="padding-top: 15px;">Figure 1: A graph showing the overexpression of the genes and the growth and butanol production resulting from the overexpression. Note that we have plotted hbd as a representative of the hbd, crt_2 and atoB reactions since they all have the same fluxes through them. CRT 1 is not shown as it does not directly participate in butanol synthesis. The selected data point has been pointed out. The flux values are as follows; hbd - 14, crt_1 - 12, crt_2 - 14, atoB - 14, cscK - 20, biomass - 0.136 , butanol flux - 2.</p>
-							</div>
-							<br>
-							<p>Out of the 12,005 expected data points, only 133 showed viable growth. We observed that the fluxes through the reactions of the genes hbd, crt_2, and atoB were the same whenever growth was observed, which is to be expected given that these fractions follow one after the other in the metabolic pathway. We set a cutoff of 60% for the biomass reaction and selected the datapoint showing the highest butanol production. This lead to the following flux distribution for the reactions to be overexpressed:</p>
-							<br>
-							<!-- Table -->
-							<div class="table" style="padding-left: 5%;">
-								<!-- Headers -->
-								<div class="table1-row table-header">
-									<div class="cell">
-										HBD
-									</div>
-									<div class="cell">
-										CRT 1
-									</div>
-									<div class="cell">
-										CRT 2
-									</div>
-									<div class="cell">
-										atoB
-									</div>
-									<div class="cell">
-										cscK
-									</div>
-								</div>
-								<!-- END OF HEADER -->
-								<div class="table1-row">
-									<div class="cell" data-title="HBD">
-										14
-									</div>
-									<div class="cell" data-title="CRT 1">
-										12
-									</div>
-									<div class="cell" data-title="CRT 2">
-										14
-									</div>
-									<div class="cell" data-title="atoB">
-										14
-									</div>
-									<div class="cell" data-title="cscK">
-										20
-									</div>
-								</div>
-							</div>
-							<br>
-							<!-- END OF TABLE -->
-							<p>At this value of overexpression we observed a growth of 0.136 and butanol production of 2.</p>
-							<br>
-
-							<p>The final model with the overexpression fluxes is available here <a>(Supplementary material)</a></p>
-							<br> <br><br>
-
 							<h2>Flux Variability Analysis for Overexpression Targets</h2><br>
-							<p>We used flux variability analysis (FVA)<sup><a href="#eref11">11</a></sup> to find the range of possible fluxes through the reactions of the crt_1, crt_2, atoB, cscK genes and the butanol exchange reaction.</p>
-							<br>
+							<p>We used flux variability analysis (FVA)<sup><a href="#eref1">11</a></sup> to find the range of possible fluxes through the reactions of the <i>crt, atoB, cscK</i> genes and the butanol exchange reaction at optimal production of butanol. <br><br>
 
-							<p>FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. The FVA for these reactions were performed in anaerobic conditions, when growth was set to 60% of its optimal value.</p>
-							<br>
+								FVA can be used to find the minimum and maximum fluxes for any reaction for a particular state of the metabolic network. The FVA for these reactions were performed in anaerobic conditions, when growth was set to 60% of its optimal value, with butanol production as the objective function.</p><br>
 							<!-- Table -->
 							<div class="table" style="padding-left: 5%;">
 								<!-- Headers -->
@@ -2156,7 +2025,7 @@
 							</div>
 							<!-- END OF TABLE -->
 							<br>
-							<p>Thus we can see what optimal overexpression fluxes are required to maximize butanol yields, even when growth is not optimal.</p>
+							<p>Thus we can see what optimal overexpression fluxes are required to maximize butanol yields at 60% of optimal growth rate.</p>
 							<a id="e4"></a>
 							<br>
 							<!-- END OF MODELLING FOR BUTANOL -->
@@ -2169,13 +2038,13 @@
 							<br>
 							<div class="graph">
 								<img src="assets/Graphs/E coli graphs/growthratevsucrose.jpg" alt="A graph representing the relation between varying sucrose uptaek values and growth rates. We obsereve a linear relation between the two, where growth rate increases with increase in sucrose uptake value for both aerobic and anaerobic scenario. The aerobic system has a steeper rise " width =800>
-								<p id="desc">Fig 12: Relationship between sucrose uptake and growth rate.</p>
+								<p id="desc">Fig 1: Relationship between sucrose uptake and growth rate.</p>
 							</div>
 							<br>
 
 							<h4> Observations: </h4>
 							<ol class="a">
-								<li style="padding-left: 1em;"> Growth rate increases linearly with sucrose uptake rate</li>
+								<li style="padding-left: 1em;"> Growth rate increases with increase in sucrose uptake rate</li>
 								<li style="padding-left: 1em;"> Growth rate is higher under aerobic conditions for all sucrose uptake rates as compared to anaerobic conditions</li>
 							</ol>
 							<br>
@@ -2188,20 +2057,20 @@
 							<p>The objective function was first set to maximize the growth rate of the model. Butanol production was then set as the objective function for different percentages of the optimal growth rate at a sucrose uptake rate of 10 mmol/gDW/h to obtain the theoretical maximum yield of butanol if <i>E. coli</i> were growing at X% of its optimal growth rate.</p>
 							<div class="graph">
 								<img src="assets/Graphs/E coli graphs/maxbutvgrowth.jpg" alt="A graph showing the relation between butanol production and growth rate. Growth rate decreases linearly with increase in butanol production, for both aerobic and anaerobic systems. The line for aerobic system has a steeper decline than the anaerobic system" width=800>
-								<p id="desc">Figure 3: Relationship between maximum butanol production and growth rate.</p>
+								<p id="desc">Figure 2: Relationship between maximum butanol production and growth rate.</p>
 							</div>
 							<br>
 
 							<h4>Observations: </h4>
 							<ol class="a">
-								<li style="padding-left: 1em;"> The maximal theoretical yield of butanol production decreases as growth rate increases</li>
-								<li style="padding-left: 1em;"> Maximal butanol production is much higher for anaerobic conditions as compared to aerobic conditions</li>
-								<li style="padding-left: 1em;"> Optimal growth rate (100% on the graph) leads to zero butanol production in both aerobic and anaerobic conditions</li>
+								<li style="padding-left: 1em;"> The maximal butanol yield decreases as the growth rate increases.</li>
+								<li style="padding-left: 1em;"> Maximal butanol production is much higher for anaerobic conditions as compared to aerobic conditions.</li>
+								<li style="padding-left: 1em;"> The optimal growth rate (100% on the graph) leads to zero butanol production in both aerobic and anaerobic conditions.</li>
 							</ol>
 							<br>
 
 							<h4>Inferences: </h4>
-							<p style="padding-left: 12%;"> If <i>E. coli</i> grows at its optimal growth rate, butanol production is zero as would be expected, since it is a secondary metabolite that takes carbon flux away from the growth and has no role in the physiology of the cell as it is a heterologous compound in the <i>E. coli</i> metabolic network</p>
+							<p style="padding-left: 12%;"> If <i>E.coli</i> grows at its optimal growth rate, butanol production is zero as would be expected, since it is a secondary metabolite that takes carbon flux away from the growth.</p>
 							<p style="padding-left: 12%;">As the growth rate is decreased from its optimal value, the maximal theoretical yield of butanol increases implying that carbon flux is rerouted to the butanol producing pathway in the network.</p>
 							<p style="padding-left: 12%;"> This confirms that the butanol production pathway in the model is functional. Butanol production happens under anaerobic or microaerobic conditions <sup><a href="#eref10">10</a></sup>. We wanted to thus test the effect of oxygenation on butanol production in the model, and as expected found that butanol production was significantly higher in anaerobic conditions as compared to aerobic conditions at all growth rates.</p>
 							<br><br><br>
@@ -2210,7 +2079,7 @@
 							<br>
 							<div class="graph">
 								<img src="assets/Graphs/E coli graphs/butanolvsucrose.jpg", alt="A grpah depicting the relation between the maximum butanol production given a sucrose uptaek rate. We observe a linear pattern with the max butanol production increasing with increase in sucrose uptake values for both aerobic and anaerobic systems. The anaerobic line has a steeper rise." width=800>
-								<p id="desc">Figure 4: Relationship between maximum butanol production and sucrose uptake when growth is 60% of its optimal value</p>
+								<p id="desc">Figure 3: Relationship between maximum butanol production and sucrose uptake when growth is 60% of its optimal value</p>
 							</div>
 							<br>
 
@@ -2222,16 +2091,16 @@
 							<br>
 
 							<h4>Inferences</h4>
-							<p style="padding-left: 12%;">Increasing sucrose uptake rates lead to an increase in butanol production when butanol is the objective function. However we expect newly engineered strains that haven’t evolved for very long to optimize growth as an objective instead of butanol production. Thus there is a tradeoff between growth and butanol production, which we imitated by setting the growth rate of <i>E. coli</i> to 60% of the optimal growth rate and setting the objective function as butanol production. This shows that even at low growth rates, the extra flux from sucrose uptake can be used to increase butanol production over other metabolites in the model.</p>
+							<p style="padding-left: 12%;">Increasing sucrose uptake rates lead to an increase in butanol production when butanol is the objective function. This implies that with changing sucrose concentrations, both growth rates and the sucrose production rate (per gram dry weight) will change accordingly.</p>
 							<br><br><br>
 
 							<h2>Butanol Production vs Oxygen Uptake</h2><br>
-							<p>Our co-culture modelling results indicated that butanol production in the co-culture is optimum i microaerobic conditions as compared to anaerobic conditions and we wanted to test whether that would hold true for a monoculture as well, by testing the maximum butanol production at varying oxygen uptake rates, when growth was set to 60% of the optimal value</p>
+							<p>Our co-culture modeling results indicated that butanol production in the co-culture is optimum at microaerobic conditions as compared to anaerobic conditions and we wanted to test whether that would hold true for a monoculture as well, by testing the maximum butanol production at varying oxygen uptake rates, when growth was set to 60% of the optimal value.</p>
 							<br>
 
 							<div class="graph">
 								<img src="assets/Graphs/E coli graphs/butanolvoxygen.jpg" alt="A graph depicting the relation between butanol production and oxygen uptaek rates. We observe a linear relation between the two, where as the oxygen uptaek value increases, the butanol production value decreases" width=800>
-								<p id="desc">Figure 5: Relationship between maximum butanol production and oxygen uptake when growth is 60% of its optimal value</p>
+								<p id="desc">Figure 4: Relationship between maximum butanol production and oxygen uptake when growth is 60% of its optimal value</p>
 							</div>
 							<br>
 
@@ -2242,11 +2111,11 @@
 							<br>
 
 							<h4>Inferences</h4>
-							<p style="padding-left: 12%;">In a mono-culture, there is a slight decrease in maximal butanol production in microaerobic as compared to anaerobic conditions</p>
+							<p style="padding-left: 12%;">In a monoculture, there is a slight decrease in maximal butanol production in microaerobic as compared to anaerobic conditions.</p>
 							<br><br><br>
 
 							<h2>Side Products</h2>
-							<p>Abdelaal el. al<sup><a href="#eref3">3</a></sup> observed pyruvate, ethanol and butyrate to be the major side products in the KJK01 butanol producing strain, which divert flux away from the butanol production pathway and reduce yields. Pyruvate was the major side product which indicated a redox imbalance, while ethanol was produced in equal quantities even after the deletion of the endogenous alcohol dehydrogenase gene (adhE).</p>
+							<p>Abdelaal el. al<sup><a href="#eref3">3</a></sup> observed pyruvate, ethanol, and butyrate to be the major side products in the KJK01 butanol producing strain, which divert flux away from the butanol production pathway and reduce yields. Pyruvate was the major side product that indicated a redox imbalance, while ethanol was produced in equal quantities even after the deletion of the endogenous alcohol dehydrogenase gene (<i>adhE</i>).</p>
 							<br>
 
 							<p>We wanted to estimate the maximal side product formation at different growth levels in anaerobic and aerobic conditions and see whether our results matched with those reported by Abdelaal el. al<sup><a href="#eref3">3</a></sup>.</p>
@@ -2272,14 +2141,14 @@
 
 							<h4>Observations: </h4>
 							<ol class="a">
-								<li style="padding-left: 1em;"> In anaerobic and aerobic conditions, pyruvate production is consistently higher than the other side products</li>
-								<li style="padding-left: 1em;"> Butyrate seems to be almost equally produced with butanol (particularly in aerobic conditions) whereas in both anaerobic and aerobic conditions, ethanol production is zero</li>
-								<li style="padding-left: 1em;"> Sucrose consumption in both anaerobic and aerobic conditions is quite similar</li>
+								<li style="padding-left: 1em;"> In anaerobic and aerobic conditions, maximal pyruvate production is consistently higher than the other side products. </li>
+								<li style="padding-left: 1em;"> Maximal butyrate production seems to be almost equal to maximal butanol (particularly in aerobic conditions) whereas in both anaerobic and aerobic conditions, ethanol production is zero.</li>
+								<li style="padding-left: 1em;"> Sucrose consumption in both anaerobic and aerobic conditions is quite similar.</li>
 							</ol>
 							<br>
 
 							<h4>Inferences</h4>
-							<p style="padding-left: 12%;">Consistent with the observations of Abdelaal el. al<sup><a href="#eref3">3</a></sup>, pyruvate was a major byproduct which indicates a redox imbalance in the network. Ethanol was zero, which is to be expected since there is only one gene (adhE) that produces ethanol from acetyl-coA, whose flux we set to zero to duplicate the KJK01 strain knockout of adhE. Given that the flux through pyruvate and butyrate production is equal or greater than that of butanol, these present alternate possible targets to increase butanol production</p>
+							<p style="padding-left: 12%;">Consistent with the observations of Abdelaal el. al<sup><a href="#eref3">3</a></sup>, pyruvate is a major possible byproduct. Ethanol was zero, which is to be expected since there is only one gene (<i>adhE</i>) that produces ethanol from acetyl-coA, whose flux we set to zero to duplicate the KJK01 strain knockout of <i>adhE</i>. In reality, there must be other pathways that produce ethanol that are not present in this genome-scale model. These side-products pose as possible targets of deletions to increase butanol production.</p>
 							<a id="e5"></a>
 							<br>
 							<!-- END OF RESULTS -->
@@ -2288,8 +2157,9 @@
 							<!-- OptKnock -->
 							<h1>OptKnock</h1>
 							<hr><br><br><br>
-							<p>We ran OptKnock on our base model without the knockouts but with the overexpressions to identify the possible knockouts that could help increase butanol production. Our constructed model had 4 knockouts, so for OptKnock, we set the total number of knockouts to 5. Since the metabolic pathway for butanol production is linked to the TCA cycle in <i>E. coli</i>, we decided to look for knockouts in this cycle. Thus, we looked for knockouts in the glycolytic pathway plus the TCA cycle. We were hoping to find the same deletions as in our constructed model, plus some additional ones. We selected the top 5 knockouts. The results are summarized in the table below</p>
-							<br>					
+							<p>We ran OptKnock on our base model without the knockouts in the KJK01 strain, to validate that the algorithm works, and actually results in knockout targets that are known to increase butanol production.<br><br>
+
+								For OptKnock, we limited the number of knockout combinations to a set of 5. Since the metabolic pathway for butanol production is linked to the TCA cycle, as well as the glycolytic pathway in <i>E. coli</i>, we decided to look for knockouts corresponding to these pathways. We were hoping to find the same deletions as in our constructed model, plus some additional ones. We selected the top 5 sets of knockouts. The results are summarized in the table below.<br>					
 							<!-- Table -->
 							<h1> Optknock Table </h1> 
 							<hr><br>
@@ -2406,7 +2276,7 @@
 							</div>
 							<!-- END OF TABLE -->
 							<br><br>
-							<p>We observed that all the deletions (except ‘ACLD19’) we made in our constructed model showed up in some or the other combination of the OptKnock results. We observed a growth rate of 0.17 and butanol production of 18.6 in our suggested deletions. Furthermore, D-lactate dehydrogenase (LDH_D) and Triose-phosphate isomerase (TPI) were suggested in all the top 5 OptKnock deletions. While the suggested reactions have been knocked out in our constructed model, TPI is a new deletion suggested by OptKnock. TPI catalyzes the conversion of Dihydroxyacetone phosphate (DHAP) to 3-Phosphoglyceraldehyde (PGAL). It isn’t clear how this helps in butanol production yet. Experimental validation might be needed.</p>
+							<p>We observed that all the deletions (except ‘ACLD19’) we made in our constructed model showed up in some or the other combination of the OptKnock results. We observed a growth rate of 0.17 and butanol production of 18.6 in our suggested deletions. Furthermore, D-lactate dehydrogenase (LDH_D) and Triose-phosphate isomerase (TPI) were suggested in all the top 5 OptKnock deletions. While the suggested reactions have been knocked out in our constructed model, TPI is a new deletion suggested by OptKnock. TPI catalyzes the conversion of Dihydroxyacetone phosphate (DHAP) to 3-Phosphoglyceraldehyde (PGAL). It isn’t clear how this helps in butanol production yet.</p>
 							<a id="e6"></a>
 							<br>
 							<!-- END OF OPTKNOCK -->
@@ -2414,7 +2284,7 @@
 							<!-- FSEOF -->
 							<h1>FSEOF</h1>
 							<hr><br><br><br>
-							<p>We ran FSEOF on our constructed model without the overexpressions to identify reactions whose fluxes increased with increase in the enforced flux through the butanol exchange reactions. The fluxes through a total of 65 reactions showed a strict increase with increase in enforced butanol flux. Some of the reactions showing large increase in flux include proton transfer, CO<sub>2</sub> exchange, etc. but also reactions of genes like pyruvate dehydrogenase, pyruvate kinase, Acyl-CoA dehydrogenase, 3-hydroxyacylCoA dehydratase, 3-hydroxyacylCoA dehydrogenase. Apart from the transport and exchange reactions of butanol, we did not observe any increase in flux in the reactions added by us. The full list of reactions is available </p>
+							<p>We ran FSEOF on our constructed model to identify reactions whose fluxes increased with an increase in the enforced flux through the butanol exchange reactions. The fluxes through a total of 65 reactions showed a strict increase with an increase in enforced butanol flux. Some of the reactions showing a large increase in flux include, proton transfer, CO<sub>2</sub> exchange but also reactions of genes like pyruvate dehydrogenase, pyruvate kinase, Acyl-CoA dehydrogenase, 3-hydroxyacylCoA dehydratase, 3-hydroxyacylCoA dehydrogenase. Apart from the transport and exchange reactions of butanol, we did not observe any increase in flux in the reactions added by us. The full list of reactions is available <a href='assets/Graphs/E coli graphs/ecoli_FSEOF_reaction_list.xlsx.zip' download>here</a>.</p>
 							<a id ="e7"></a>
 
 							<br><a id="eref1"></a><br><a id="eref2"></a><br><a id="eref3"></a><br>
@@ -2450,107 +2320,104 @@
 							<h1>Introduction</h1>
 							<hr><br><br><br>
 							
-							<p>The co-culture aspect makes this project unique and allows us to bring the properties of cyanobacteria and E. coli together to form the biomanufacturing unit. Although the organisms have been modelled individually, the co-culture brings forth new properties and interactions that may offer additional insights and alternative techniques to optimize the production process.</p>
-							<br>
+							<p>The co-culture aspect makes this project unique and allows us to bring the properties of cyanobacteria and<br> <i>E. coli</i> together to form the biomanufacturing unit. Although the organisms have been modelled individually, their behavior changes in the co-culture setup, affecting viability and productivity of the whole system. A model that takes into account interactions between the two species can thus offer additional insights and alternative techniques to optimize the production process. <br>
+
+								Two techniques have been used to model the co-culture - SteadyCom and Dynamic Modelling. SteadyCom assumes a community steady state that allows us to predict the stability of the co-culture and long-term interactions between the organisms. The dynamic modelling algorithm, developed by the INSA-UPS Toulouse iGEM Team, allows us to track the development of the co-culture over time. Together, these two models built on slightly different assumptions can offer a wide range of insights.
+								
 							
-							<p>Two techniques have been used to model the co-culture - SteadyCom and Dynamic Modelling. SteadyCom assumes a community steady state that allows us to predict the stability of the coo-culture and long-term interactions between the organisms. The dynamic modelling algorithm, developed by the INSA-UPS Toulouse iGEM Team, allows us to track the development of the co-culture over time. Together, these two models built on slightly different assumptions can offer a wide range of insights.</p>
+							</p>
 							<a id="cc2"></a><br>
 
 
 							<h1>SteadyCom</h1>
 							<hr><br><br><br>
 							
-							<h2>Building the Community Model of <i>S. elongatus</i> 2973 and <i>E. coli</i></h2><br>
-							<p>SteadyCom uses a joint community model which is made by putting together the GSM’s of the individual species in the community. The individual models used to build the community model of our co culture were the modified versions of iML1515 and the TUEX 2973 model that were built to match KJK01 and the sucrose producing cyanobacteria. All the steadycom simulations including the creation of the joint model was done using the COBRA toolbox on MATLAB. During the process of creating the joint model however, we found that due to lack of documentation on SteadyCom and standardisation of GSM models, we faced many issues. We eventually troubleshot our issues after experimenting with joint models of just <i>E. coli</i> and cyanobacteria and figuring out the intricacies of the joint model. This led to us deciding to create a checklist that we believe would greatly help future users of SteadyCom on COBRA navigate their way through creating joint community models and troubleshooting. You can read more about that on our contributions page here: <a href="Contribution.html">Contributions</a>.</p>
-							<br>
+							<h2>Building the Community Model of <i>S. elongatus</i> UTEX 2973 and <i>E. coli</i></h2><br>
+							<p>SteadyCom uses a joint community model which is made by putting together the genome-scale models (GSMs) of the individual species in the community. The individual models used to build the community model of our co-culture were the modified versions of iML1515 and iSyu683 that were modified to match KJK01 and the sucrose-producing cyanobacteria (<i>S. elongatus</i> UTEX 2973). All the SteadyCom simulations including the creation of the joint model were performed using the COBRA toolbox on MATLAB. During the process of creating the joint model however, we faced many issues due to lack of documentation on SteadyCom and standardisation of GSM models. <br> <br>
 
-							<p>Butanol is a secondary metabolite, so when just growth rate is optimized for in SteadyCom, butanol would not be produced as it would be taking away carbon flux from the growth pathways. In the actual co-culture, the induction by IPTG would force carbon flux through the butanol production pathway to produce butanol. To simulate this we set a lower bound for the butanol exchange reaction which would constrain the model to have flux through the butanol production pathway in <i>E. coli</i>. The particular value for the lower bound was obtained through FBA at different percentages of optimal growth rate. You can read about the exact method we used to set the lower bound here: <a href="#4">Appendix</a>. The higher the percentage of optimal growth, the lower the butanol productivity.</p>
+								To troubleshoot the difficulties we were facing, we built joint models analogous to the one we needed, but using two copies of a single species’ GSM. Working with such models gave us insights into the intricacies of joint models, and we were eventually able to resolve the issues we faced. This led to us deciding to create a checklist that we believe would greatly help future users of SteadyCom on COBRA navigate their way through creating joint community models and troubleshooting. You can read more about that on our contributions page here
+								: <a href="Contribution.html">Contributions</a>.</p>
 							<br>
-
-							<p>The carbon dioxide uptake rate of the cyanobacteria was set at -12.2mmol/gDW/hour. Salt stress was simulated by setting the sucrose produced by cyanobacteria as per the results of FBA at 90% cscB efficiency. The butanol production for <i>E. coli</i> was set at 60% of optimal growth. Oxygen exchange between the two species was allowed but excess oxygen was not provided to the culture.</p>
-							<br>
-
-							<h4>Results:</h4>
-							<ul class="b">
-								<li style="padding-left: 1em;">Maximum specific growth rate of the co-culture - 0.21 hr<sup>-1</sup> </li>
-								<li style="padding-left: 1em;">Ratio of <i>E. coli</i> biomass to cyanobacteria biomass - 0.17</li>
-								<li style="padding-left: 1em;">Butanol production per gdw of the co culture- 0.149 mmol/hr/gDW</li>
-								<li style="padding-left: 1em;">Co<sub>2</sub> uptake by the co culture - 9.1 mmol/hr/gDW</li>
-							</ul>
-							<br><br><br><br>
-
-							<h3>Identifying Key metabolites controlling interactions in the Co-culture</h3>
-							<br>
-							<p>We knew that sucrose secreted by the cyanobacteria would play an important role in the interaction between the two species of the co culture as there is no other carbon source available for the <i>E. coli</i>. Apart from sucrose, we ran SteadyCom FVA to identify other metabolites that could play crucial roles in the interactions of the consortium. SteadyCom FVA (Flux Variability Analysis) calculates the maximum and minimum values of flux through a set of reactions while upholding the optimal growth rate at steady state. By running FVA on the set of shuttle reactions of metabolites between the individual species and the community space, we identified those metabolites that are required to be taken up or given out by each species to maintain optimal community growth rate. </p> <br>
-							<br>
+							<p><b>IPTG induction:</b>
+								<br>
+						Butanol is a secondary metabolite, and is produced at the cost of growth, by diverting carbon flux. Optimizing for growth rate in SteadyCom would thus not lead to any butanol production from <i>E. coli</i>.<br> In the actual co-culture, the induction by IPTG would force carbon flux through the butanol production pathway. To simulate this we set a lower bound for the butanol exchange reaction which would constrain the model to have flux through the butanol production pathway in <i>E. coli</i>. The particular value for the lower bound was obtained through FBA at <b>different percentages of optimal growth rate</b>  - that is, the fraction of the maximum possible growth rate that is exhibited under specific conditions. You can read about the exact method we used to set the lower bound <a href=#cc5>here</a>. In essence, the higher the percentage of optimal growth, the lower the butanol productivity. <br> The carbon dioxide uptake rate of the cyanobacteria was set at -12.2mmol/gDW/hour. Salt stress was simulated by setting the sucrose produced by cyanobacteria as per the results of FBA at 90% <i>cscB</i> efficiency. The butanol production for <i>E. coli</i> was set at 60% of optimal growth. Oxygen exchange between the two species was allowed but no external oxygen was provided to the culture.
+					</p>
+						<p><b>Results:</b><br>Maximum specific growth rate of the co-culture - 0.21 hr<sup>-1</sup> <br>
+							Ratio of <i>E. coli</i> biomass to cyanobacteria biomass - 0.17 <br>
+							Butanol production per gdw of the co-culture- 0.149 mmol/hr/gDW <br>
+							CO<sub>2</sub> uptake by the co-culture - 9.1 mmol/hr/gDW</p><br>
+						<h3>Identifying Key Metabolites Controlling Interactions in the Co-culture</h3>
+						<br>
+						<p>We knew that sucrose secreted by the cyanobacteria would play an important role in the interaction between the two species of the co-culture as there is no other carbon source available for the <i>E. coli</i>. Apart from sucrose, we ran SteadyCom FVA to identify other metabolites that could play crucial roles in the interactions of the consortium. SteadyCom FVA (Flux Variability Analysis) calculates the maximum and minimum values of flux through a set of reactions while maintaining the optimal growth rate at steady state. By running FVA on the set of transport reactions of metabolites between the individual species and the community space, we identified those metabolites that are required to be taken up or given out by each species to maintain optimal community growth rate. <br> Below is a table showing the maximum and minimum allowed fluxes of the external metabolites into <i>E. coli</i> and <i>S. elongatus</i> at optimal community growth rate. Negative values denote a net uptake into the organism and positive values denote a net export.<br>
 							<div style="overflow-x:auto; overflow-y: auto; max-height: 400px;">
 								<table data-table-theme="dark zebra">
-									<thead><tr><th>Metabolite</th><th>Min Flux Through <i>E. coli</i></th><th>Max Flux Through <i>E. coli</i></th><th>Min Flux Through Cyanobacteria</th><th>Max Flux Through Cyanobacteria</th></tr>
-									</thead>
-									<tbody>
-										<tr><td>Carbon Dioxide</td><td>2.015443068</td><td>2.035662892</td><td>-16.26443278</td><td>-16.25798452</td></tr>
-										<tr><td>2-Oxoglutarate</td><td>0</td><td>0.002524686123</td><td>0</td><td>0.0003069649685</td></tr>
-										<tr><td>L-Glutamine</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-										<tr><td>Calcium</td><td>-0.0002535389119</td><td>-0.0002527589119</td><td>-0.0008734307167</td><td>-0.0008730069524</td></tr>
-										<tr><td>L-Alanine</td><td>0</td><td>0.00351260678</td><td>0</td><td>0</td></tr>
-										<tr><td>Copper</td><td>-0.00003453577675</td><td>-0.00003442960011</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
-										<tr><td>Zinc</td><td>-0.00001661027106</td><td>-0.00001655922939</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
-										<tr><td>L-Lysine</td><td>0</td><td>0.001346499266</td><td>0</td><td>0</td></tr>
-										<tr><td>Cobalt</td><td>-0.000001217611619</td><td>-0.00000121401975</td><td>-0.000629578617</td><td>-0.000629273163</td></tr>
-										<tr><td>L-Arginine</td><td>0</td><td>0.001392930275</td><td>0</td><td>0</td></tr>
-										<tr><td>Spermidine</td><td>0</td><td>0.0004583827288</td><td>0</td><td>0</td></tr>
-										<tr><td>D-Fructose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-										<tr><td>Pyruvate</td><td>0</td><td>0.004367024646</td><td>0</td><td>0.0005116099794</td></tr>
-										<tr><td>Acetate</td><td>0</td><td>0.00734454145</td><td>0</td><td>0.0007674099084</td></tr>
-										<tr><td>Potassium</td><td>-0.009508031033</td><td>-0.009478726281</td><td>-0.03275365187</td><td>-0.03273776072</td></tr>
-										<tr><td>L-Proline</td><td>0</td><td>0.001775603427</td><td>0</td><td>0</td></tr>
-										<tr><td>Citrate</td><td>0</td><td>0.002154398825</td><td>0</td><td>0.000255805484</td></tr>
-										<tr><td>L-Leucine</td><td>0</td><td>0.001405042712</td><td>0</td><td>0</td></tr>
-										<tr><td>Ferrous</td><td>-82.06087069</td><td>0.01653009055</td><td>-0.00144900646</td><td>-0.001448303442</td></tr>
-										<tr><td>Cyanate</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-										<tr><td>Manganese</td><td>-0.00003365910169</td><td>-0.00003355550589</td><td>-0.000586352314</td><td>-0.0005860678322</td></tr>
-										<tr><td>Hydrogen</td><td>0</td><td>0</td><td>0</td><td>0.02517654629</td></tr>
-										<tr><td>H+ (Proton)</td><td>-81.61311372</td><td>0.4666523263</td><td>0</td><td>0.067976675</td></tr>
-										<tr><td>Glycine</td><td>0</td><td>0.00619155825</td><td>0</td><td>0</td></tr>
-										<tr><td>Magnesium</td><td>-0.0004225644492</td><td>-0.0004212648532</td><td>-0.005271671263</td><td>-0.005269789665</td></tr>
-										<tr><td>Sulfate</td><td>-0.01566625436</td><td>-0.01222838389</td><td>-0.05225928733</td><td>-0.0514761878</td></tr>
-										<tr><td>L-Glutamate</td><td>0</td><td>0.002244165443</td><td>0</td><td>0.0003069581424</td></tr>
-										<tr><td>L-Histidine</td><td>0</td><td>0.00141117827</td><td>0</td><td>0</td></tr>
-										<tr><td>Sodium</td><td>0</td><td>0</td><td>-0.0007330855771</td><td>-0.0007327299045</td></tr>
-										<tr><td>D-Glucose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-										<tr><td>Molybdate</td><td>-0.0000003428730538</td><td>-0.00000033992553</td><td>-0.0005864103878</td><td>-0.0005861258779</td></tr>
-										<tr><td>Ammonium</td><td>-0.5348762349</td><td>-0.5244517244</td><td>0</td><td>0</td></tr>
-										<tr><td>Oxygen (O2)</td><td>-21.97422024</td><td>-1.452113566</td><td>21.9447781</td><td>21.97422024</td></tr>
-										<tr><td>Succinate</td><td>0</td><td>0.002992220591</td><td>0</td><td>0.0003837110398</td></tr>
-										<tr><td>L-Serine</td><td>0</td><td>0.00375767237</td><td>0</td><td>0</td></tr>
-										<tr><td>Nitrate</td><td>0</td><td>0</td><td>-2.449057669</td><td>-2.447438726</td></tr>
-										<tr><td>Nickel</td><td>-0.00001573345878</td><td>-0.00001568513517</td><td>0</td><td>0</td></tr>
-										<tr><td>Putrescine</td><td>0</td><td>0.001615799119</td><td>0</td><td>0</td></tr>
-										<tr><td>Sucrose</td><td>-0.4133693967</td><td>-0.4124306025</td><td>0.4131517121</td><td>0.4133693967</td></tr>
-										<tr><td>Urea </td><td>0</td><td>0.005212255223</td><td>0</td><td>0</td></tr>
-										<tr><td>Phosphate</td><td>-0.04850780168</td><td>-0.04684202939</td><td>-0.06041753101</td><td>-0.06036884354</td></tr>
-										<tr><td>Ferric</td><td>-0.0173100254</td><td>82.06008939</td><td>-0.001319437891</td><td>-0.001318797737</td></tr>
-										<tr><td>L-Malate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110398</td></tr>
-										<tr><td>Fumarate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110399</td></tr>
-										<tr><td>Water (H20)</td><td>2.651858043</td><td>43.69752008</td><td>-13.54056988</td><td>-13.50658154</td></tr>
-									</tbody>
-								</table>
-							</div>
+								<thead><tr><th>Metabolite</th><th>Min Flux Through E coli</th><th>Max Flux Through E coli</th><th>Min Flux Through Cyanobacteria</th><th>Max Flux Through Cyanobacteria</th></tr></thead><tbody>
+								<tr><td>Carbon Dioxide</td><td>2.015443068</td><td>2.035662892</td><td>-16.26443278</td><td>-16.25798452</td></tr>
+								<tr><td>2-Oxoglutarate</td><td>0</td><td>0.002524686123</td><td>0</td><td>0.0003069649685</td></tr>
+								<tr><td>L-Glutamine</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+								<tr><td>Calcium</td><td>-0.0002535389119</td><td>-0.0002527589119</td><td>-0.0008734307167</td><td>-0.0008730069524</td></tr>
+								<tr><td>L-Alanine</td><td>0</td><td>0.00351260678</td><td>0</td><td>0</td></tr>
+								<tr><td>Copper</td><td>-0.00003453577675</td><td>-0.00003442960011</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
+								<tr><td>Zinc</td><td>-0.00001661027106</td><td>-0.00001655922939</td><td>-0.0005822871444</td><td>-0.000582004635</td></tr>
+								<tr><td>L-Lysine</td><td>0</td><td>0.001346499266</td><td>0</td><td>0</td></tr>
+								<tr><td>Cobalt</td><td>-0.000001217611619</td><td>-0.00000121401975</td><td>-0.000629578617</td><td>-0.000629273163</td></tr>
+								<tr><td>L-Arginine</td><td>0</td><td>0.001392930275</td><td>0</td><td>0</td></tr>
+								<tr><td>Spermidine</td><td>0</td><td>0.0004583827288</td><td>0</td><td>0</td></tr>
+								<tr><td>D-Fructose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+								<tr><td>Pyruvate</td><td>0</td><td>0.004367024646</td><td>0</td><td>0.0005116099794</td></tr>
+								<tr><td>Acetate</td><td>0</td><td>0.00734454145</td><td>0</td><td>0.0007674099084</td></tr>
+								<tr><td>Potassium</td><td>-0.009508031033</td><td>-0.009478726281</td><td>-0.03275365187</td><td>-0.03273776072</td></tr>
+								<tr><td>L-Proline</td><td>0</td><td>0.001775603427</td><td>0</td><td>0</td></tr>
+								<tr><td>Citrate</td><td>0</td><td>0.002154398825</td><td>0</td><td>0.000255805484</td></tr>
+								<tr><td>L-Leucine</td><td>0</td><td>0.001405042712</td><td>0</td><td>0</td></tr>
+								<tr><td>Ferrous</td><td>-82.06087069</td><td>0.01653009055</td><td>-0.00144900646</td><td>-0.001448303442</td></tr>
+								<tr><td>Cyanate</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+								<tr><td>Manganese</td><td>-0.00003365910169</td><td>-0.00003355550589</td><td>-0.000586352314</td><td>-0.0005860678322</td></tr>
+								<tr><td>Hydrogen</td><td>0</td><td>0</td><td>0</td><td>0.02517654629</td></tr>
+								<tr><td>H+ (Proton)</td><td>-81.61311372</td><td>0.4666523263</td><td>0</td><td>0.067976675</td></tr>
+								<tr><td>Glycine</td><td>0</td><td>0.00619155825</td><td>0</td><td>0</td></tr>
+								<tr><td>Magnesium</td><td>-0.0004225644492</td><td>-0.0004212648532</td><td>-0.005271671263</td><td>-0.005269789665</td></tr>
+								<tr><td>Sulfate</td><td>-0.01566625436</td><td>-0.01222838389</td><td>-0.05225928733</td><td>-0.0514761878</td></tr>
+								<tr><td>L-Glutamate</td><td>0</td><td>0.002244165443</td><td>0</td><td>0.0003069581424</td></tr>
+								<tr><td>L-Histidine</td><td>0</td><td>0.00141117827</td><td>0</td><td>0</td></tr>
+								<tr><td>Sodium</td><td>0</td><td>0</td><td>-0.0007330855771</td><td>-0.0007327299045</td></tr>
+								<tr><td>D-Glucose</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+								<tr><td>Molybdate</td><td>-0.0000003428730538</td><td>-0.00000033992553</td><td>-0.0005864103878</td><td>-0.0005861258779</td></tr>
+								<tr><td>Ammonium</td><td>-0.5348762349</td><td>-0.5244517244</td><td>0</td><td>0</td></tr>
+								<tr><td>Oxygen (O2)</td><td>-21.97422024</td><td>-1.452113566</td><td>21.9447781</td><td>21.97422024</td></tr>
+								<tr><td>Succinate</td><td>0</td><td>0.002992220591</td><td>0</td><td>0.0003837110398</td></tr>
+								<tr><td>L-Serine</td><td>0</td><td>0.00375767237</td><td>0</td><td>0</td></tr>
+								<tr><td>Nitrate</td><td>0</td><td>0</td><td>-2.449057669</td><td>-2.447438726</td></tr>
+								<tr><td>Nickel</td><td>-0.00001573345878</td><td>-0.00001568513517</td><td>0</td><td>0</td></tr>
+								<tr><td>Putrescine</td><td>0</td><td>0.001615799119</td><td>0</td><td>0</td></tr>
+								<tr><td>Sucrose</td><td>-0.4133693967</td><td>-0.4124306025</td><td>0.4131517121</td><td>0.4133693967</td></tr>
+								<tr><td>Urea </td><td>0</td><td>0.005212255223</td><td>0</td><td>0</td></tr>
+								<tr><td>Phosphate</td><td>-0.04850780168</td><td>-0.04684202939</td><td>-0.06041753101</td><td>-0.06036884354</td></tr>
+								<tr><td>Ferric</td><td>-0.0173100254</td><td>82.06008939</td><td>-0.001319437891</td><td>-0.001318797737</td></tr>
+								<tr><td>L-Malate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110398</td></tr>
+								<tr><td>Fumarate</td><td>0</td><td>0.003231598238</td><td>0</td><td>0.0003837110399</td></tr>
+								<tr><td>Water (H20)</td><td>2.651858043</td><td>43.69752008</td><td>-13.54056988</td><td>-13.50658154</td></tr>
+					</tbody>
+					</table>
+					</div>
 							<br>
 
-							<h4>Results</h4>: 
-							<p>Apart from sucrose, two other metabolites that were required to be given out by one organism and taken in by the other to grow optimally were carbon dioxide and oxygen. Carbon dioxide is given out by <i>E. coli</i> and taken in by the cyanobacteria and is already an integral patt of the production process acting as the main carbon source for the entire process. Oxygen given out by the cyanobacteria could act as an important source for <i>E. coli</i>, who prefer aerobic conditions for growth. </p>
-							<p>Apart from these, there were other metabolites such as sulfate, magnesium, phosphate, etc that both bacteria require to be supplied in the medium. This would imply that a shortage of these nutrients could lead to competition between the two species and de-stability of the co culture. </p>
-							<br><br><br><br>
+							<p><b>Results:</b><br>Apart from sucrose, two other metabolites that must undergo exchange between the two organisms to grow optimally are carbon dioxide and oxygen. Carbon dioxide is given out by <i>E. coli</i> and taken in by the cyanobacteria and is already known to be an integral part of the production process,  as it acts as the main carbon source for the entire process. Cyanobacteria could act as an important source of oxygen for <i>E. coli</i>, who prefer aerobic conditions for growth.<br> 
 
-							<h3>Varying sucrose productivity of the cyanobacteria</h3>  
+								Apart from these, there were other metabolites such as sulfate, magnesium, phosphate, etc that both bacteria require to be supplied in the medium. This would imply that a shortage of these nutrients could lead to competition between the two species and destabilisation of the co-culture. </p>
+								<p><i>Note: <br>
+									<ol>
+										<li style="padding-left:1em;padding-top: 0.3em;">For the rest of this page:</li>
+										<li style="padding-left:1em;padding-top: 0.3em;">Sucrose productivity - Sucrose secreted per hour per gDW of S elongatus</li>
+										<li style="padding-left:1em;padding-top: 0.3em;">Butanol productivity - Butanol secreted per hour per gDW of E. coli</li>
+										<li style="padding-left:1em;padding-top: 0.3em;">Butanol yield of the co-culture - Butanol produced per hour per gDW of the co-culture</li></i></p>
+									</ol>
 							<br>
-
-							<h4>Hypothesis</h4> 
-							<p>Increasing sucrose productivity of cyanobacteria will result in the increase of butanol yield from the co culture.</p> 
-							<br>
-
-							<p>Currently according to the salt stress model, cyanobacteria is producing about 0.3 mmol of sucrose per hour per gDW. But we decided to vary the sucrose productivity of cyanobacteria and model its effects on the butanol yield of the co culture. This was done by changing the flux of sucrose given out by cyanobacteria per gDW.</p>
+						 <h3>Varying Sucrose Productivity of the Cyanobacteria</h3>  
+						 <br>
+						 <p><b>Hypothesis:</b><br> Increasing sucrose productivity of cyanobacteria will result in the increase of butanol yield from the co-culture.
+						 <br>
+						 <p>Currently, according to the <i>S. elongatus</i> model, cyanobacteria produce about 0.3 mmol/hr/gDW under salt stress. But we decided to vary the sucrose productivity of cyanobacteria and model its effects on the butanol yield of the co-culture. This was done by changing the flux of sucrose given out by cyanobacteria per gDW.
 							<br>
 
 							<br>
@@ -2560,48 +2427,45 @@
 								<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph3.png" width="400px" height="400px"></div>
 							</div>
 							<br>
-
-							<h4>Observations:</h4> 
-							<p>As the sucrose productivity of cyanobacteria increases:</p>
-							<ol class="a">
-								<li style="padding-left:1em;padding-top: 0.3em;">The max growth rate of the co culture comes down.</li>
-								<li style="padding-left:1em;padding-top: 0.3em;">The relative abundance of the cyanobacteria in the co culture goes down and that of the <i>E. coli</i> goes up.</li>
-								<li style="padding-left:1em;padding-top: 0.3em;">The butanol produced per gDW of the co culture initially increases but after an optimal value of sucrose, it comes down</li>
-							</ol>
-							<br>
-
-							<h4>Conclusions:</h4> 
-							<p>For current levels of oxygen and CO<sub>2</sub> uptake rates, there exists an optimum of sucrose productivity from cyanobacteria which gives a maximum butanol yield per gDW of the co culture. This is due to the fact that as sucrose productivity of the cyanobacteria increases, its relative abundance in the co culture also comes down. So for very high values of sucrose productivity (which is per gDW of the cyanobacteria), there is very little cyanobacteria in the culture and hence not a lot of sucrose for the <i>E. coli</i> to take up and produce butanol. A more detailed explanation of this result is given in the appendix. </p>
-							<br><br><br><br>
-
-							<h3>Varying butanol productivity/ % of optimal growth rate for <i>E. coli</i></h3><br>
-							
-							<h4>Hypothesis</h4>
-							<p>Increase in the butanol productivity of <i>E. coli</i> will result in an increase of the butanol yield of the co culture.</p>
-							<br>
-							
-							<p>Apart from the sucrose productivity of Cyanobacteria, the butanol productivity of <i>E. coli</i> is another important factor that will determine the amount of butanol produced by the co culture. As per how induction by IPTG is simulated in the model, a higher butanol productivity is correlated with the <i>E. coli</i> growing at a lower percentage of its optimal/maximum growth rate at the given conditions. In reality, increasing butanol productivity could be achieved by a higher IPTG concentration, or by increasing the efficiency of the butanol pathway. This would redirect carbon flux away from growth and towards producing butanol. </p>
-							<br>
-							
-							Insert Graphs 7,8,9
-							<br>
-							
-							<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph7.png" width="400px" height="400px"></div><br>
-							<h4>Observations:</h4>
-							<p>As butanol productivity of <i>E. coli</i> increases:</p>
-							<ol class="a">
-								<li style="padding-left:1em;padding-top: 0.3em;">The growth rate of the co-culture remains the same</li>
-								<li style="padding-left:1em;padding-top: 0.3em;">The butanol produced per gDW of the co culture increases</li>
-								<li style="padding-left:1em;padding-top: 0.3em;">The value of optimum sucrose productivity did not vary significantly at different levels of butanol productivity</li>
-							</ol>
-							<br>
-
-							<h4>Conclusions:</h4>
-							<p>The maximum specific growth rate of the co culture is primarily controlled by the cyanobacteria hence will majorly only depend on the CO<sub>2</sub> uptake rate and sucrose productivity. When butanol productivity of the <i>E. coli</i> was increased, its relative abundance in the co culture decreased. This means that since there was less <i>E. coli</i> in the co culture, it could take up more sucrose per gDW such that it produced more butanol while still growing at the growth rate of the cyanobacteria.</p>
-							<br>
-
-							<p>Increasing the butanol productivity of <i>E. coli</i> does increase the butanol productivity of the co culture. This is as each the <i>E. coli</i> are now diverting more flux into the butanol producing pathway and hence are converting a higher fraction of the sucrose given out by the cyanobacteria into butanol. However, this comes at the cost of decreasing relative abundance of <i>E. coli</i> in the co culture. While running steadycom, it was not possible for the <i>E. coli</i> to grow below around 50% of its optimal growth rate. From which we can infer that the butanol productivity cannot be arbitrarily increased as after a point the co culture would not be able to maintain a steady state. </p>
-							<br>
+							<p id="desc">Figure Desc: he above graphs show the results of SteadyCom runs at varying values of sucrose productivity of <i>S. elongatus</i></p>
+							<p><b>Observations:</b> <br>
+								As the sucrose productivity of cyanobacteria increases:
+								<ol class="a">
+								   <li style="padding-left:1em;padding-top: 0.3em;">The max growth rate of the co-culture comes down.</li>
+								   <li style="padding-left:1em;padding-top: 0.3em;">The relative abundance of the cyanobacteria in the co-culture goes down and that of the <i>E coli</i> goes up.</li>
+								   <li style="padding-left:1em;padding-top: 0.3em;">The butanol produced per gDW of the co-culture initially increases but decreases beyond an optimal value of sucrose productivity.
+								   </li>
+							   </ol>
+						   </p>
+							   <br>
+							   <p><b>Conclusion: </b><br> For current levels of oxygen and CO<sub>2</sub> uptake rates, there exists an optimum value of sucrose productivity from cyanobacteria which gives a maximum butanol yield per gDW of the co-culture. This is due to the fact that the sucrose productivity of the cyanobacteria is inversely correlated with its relative abundance in the co-culture. Thus, very high values of sucrose productivity (which is per gDW of the cyanobacteria) correspond to low cyanobacterial abundance in the culture and hence less sucrose for the <i>E. coli</i> to take up and produce butanol. A more detailed explanation of this result is given in the <a href=#cc5>appendix</a>.</p> <br>
+							   
+							   <h3>Varying butanol productivity of <i>E coli</i></h3>
+					   
+							   <p><b>Hypothesis:</b><br> Increase in the butanol productivity of <i>E. coli</i> will result in an increase of the butanol yield of the co-culture. <br></p>
+					   
+								   <p>Along with the sucrose productivity of cyanobacteria in our analysis is another important factor -  the butanol productivity of <i>E. coli</i>. As a consequence of how induction by IPTG is simulated in the model, a higher butanol productivity is correlated with the <i>E. coli</i> growing at a lower percentage of its optimal/maximum growth rate at the given conditions. In reality, increasing butanol productivity could be achieved by a higher IPTG concentration, or by increasing the efficiency of the butanol pathway. This would redirect carbon flux away from growth and towards producing butanol. <br>
+								   
+								   The butanol productivity was increased by decreasing the percentage of the optimal specific growth rate the <i>E. coli</i> was constricted to grow at. <br>
+					   
+							   <div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph7.png" width="600px" height="600px"></div><br>
+							 <p id="desc">Figure Desc: The above graph shows how the butanol yield from the co culture varies with sucrose productivity at different values of butanol productivity (depicted by % of optimal growth of the <i>E. coli</i></p>  
+							   <p><b>Observations:</b> <br>
+								As butanol productivity of <i>E. coli</i> increases:
+								<ol class="a">
+									<li style="padding-left:1em;padding-top: 0.3em;">The community growth rate of the co-culture remains the same for a particular value of sucrose productivity.</li>
+									<li style="padding-left:1em;padding-top: 0.3em;">The butanol produced per gDW of the co-culture increases.
+									</li>
+									<li style="padding-left:1em;padding-top: 0.3em;">The value of optimum sucrose productivity did not vary significantly at different levels of butanol productivity.</li>
+								</ol>
+								</p>
+							<p><b>Conclusions:</b><br>
+					
+								The maximum specific growth rate of the co-culture is primarily controlled by the cyanobacteria and will hence majorly depend on the CO<sub>2</sub> uptake rate and sucrose productivity. When butanol productivity of the <i>E. coli</i> was increased, its relative abundance in the co-culture decreased. This means that since there were fewer <i>E. coli</i> in the co-culture, they could take up more sucrose per gDW and produce more butanol while still matching the growth rate of the cyanobacteria. <br>
+					
+					Increasing the butanol productivity of <i>E. coli</i> does increase the butanol yield of the co- culture. This is as each of the <i>E. coli</i> are now diverting more flux into the butanol-producing pathway and hence are converting a higher fraction of the sucrose given out by the cyanobacteria into butanol. However, this comes at the cost of decreasing relative abundance of <i>E. coli</i> in the co- culture. While running SteadyCom, it was not possible for the <i>E. coli</i> to grow below around 50% of its optimal growth rate. From which we can infer that the butanol productivity cannot be arbitrarily increased as after a point the co-culture would not be able to maintain a steady state. <br></p>
+							<p>These points can be seen in the two graphs below: 
+							</p>
 							<div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;">
 								<img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph8.png" width="400px" height="400px">
 								<img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph9.png" width="400px" height="400px">
@@ -2609,14 +2473,12 @@
 							<br><br><br><br>
 					
 
-							<h3>Varying Oxygen levels to test aerobic vs micro aerobic vs anaerobic</h3>
-							<br>
-
-							<h4>Hypothesis</h4>
-							<p>Decreasing oxygen levels will result in an increase of the butanol yield of the co culture.</p>
-							<br>
-							<p>As seen in the FVA results above, oxygen was one of the important metabolites being exchanged by the cyanobacteria and <i>E. coli</i>. It is to be noted that cyanobacteria are producing more oxygen than the <i>E. coli</i> need and the co culture as a whole would have a positive production of oxygen (see appendix for more). This means that our simulations would be in an aerobic environment as far as the <i>E. coli</i> are concerned. However, based on discussions with experts and FBA results for <i>E. coli</i>, we realised that anaerobic or even microaerobic conditions might result in a higher butanol yield. Thus we decided to look at how lowering oxygen levels in the co culture would affect butanol yield. We did this by setting decreasing bounds to how much oxygen the <i>E. coli</i> could take up per gDW.</p>
-							<br><br>
+							<h3>
+								Varying Oxygen Levels to Test Aerobic vs Microaerobic vs Anaerobic
+							 </h3><br>
+							 <p><b>Hypothesis:</b><br>Decreasing oxygen levels will result in an increase of the butanol yield of the co-culture.</p>
+							 <p>As seen in the FVA results above, oxygen was one of the important metabolites being exchanged by the cyanobacteria and <i>E. coli</i>. It is to be noted that cyanobacteria are producing more oxygen than the <i>E. coli</i> need and the co-culture as a whole would have a positive production of oxygen (see <a href=#cc5>appendix</a> for more). This means that our simulations would be in an aerobic environment as far as the <i>E. coli</i> are concerned. However, based on discussions with experts and FBA results for <i>E. coli</i>, we realised that anaerobic or even microaerobic conditions might result in a higher butanol yield. Thus we decided to look at how lowering oxygen levels in the co-culture would affect butanol yield. We did this by setting decreasing bounds to how much oxygen the <i>E. coli</i> could take up per gDW.</p>
+							 
 							
 							<!-- SLIDER 5  -->
 							<div class="rangeImage" id="rangeImage5">
@@ -2627,54 +2489,45 @@
 							<div class="range-slider">
 								<input type="range" min="1" max="6" step="1" value="1" class="myRange" id="myRange5">
 							</div>
-							<div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">Butanol Productivity
+							<div class="rangeOutput" id="rangeValue5"></div><div class="rangeOutput">
+								Oxygen bound (Maximum allowed rate of oxygen uptake for <i>E. coli</i>)
 							</div>
+							<br>
+							<p>Move the slider to see how the butanol yield of the co culture varies at different levels of oxygen in terms of the bound on the Oxygen uptake given in mmol/gDW/hr.</p>
 							<br><br>
-							
-							<h4>Image description:
-								<b><div id="ImageDesc5">
-								</div>
-							</h4></b><br><br>
 					
 							<div style="margin: 10px; display:flex; flex-direction: row; flex-wrap: wrap; justify-content:space-around;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph11.png" width="400px" height="400px"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph12.png" width="400px" height="400px"></div><br>
-							<h4>Observations:</h4>
-							<p>As the oxygen levels in the co culture environment is brought down:</p>
+							<p id="desc">Fig Description: Results of SteadyCom when <i>E. coli</i> is constrained to not take up any oxygen. The marker for current sucrose productivity shows that the <i>E. coli</i> does not grow in these conditions as its relative abundance is 0. 
+							</p>
+							<br>
+							<div style="margin: 10px; display:flex; justify-content:center;"><img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph13.png" width="400px" height="400px"></div><br>
+							<br>
+							<p id="desc">Fig Description: The above graph shows how butanol yield of the co culture varies with oxygen levels at a sucrose productivity of 0.4mmol/gDW/hr</p>
+							<p><b>Observations: </b><br>
+								As the oxygen levels in the co culture environment is brought down:
 								<ol class="a">
-									<li style="padding-left:1em;padding-top: 0.3em;">The maximum possible butanol yield of the co culture goes up</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">The sucrose productivity value for which butanol yield of the co culture is maximum initially decreases then increases </li>
+									<li style="padding-left:1em;padding-top: 0.3em;">The maximum possible butanol yield of the co-culture increases.</li>
+									<li style="padding-left:1em;padding-top: 0.3em;">The sucrose productivity value for which butanol yield of the co-culture is maximumized increases. </li>
 								</ol>
-							<br>
-
-							<p>However at very low oxygen levels, close to anaerobic conditions:</p>
+								<p>However at very low oxygen levels, close to anaerobic conditions:</p>
 								<ol class="a">
-									<li style="padding-left:1em;padding-top: 0.3em;">The <i>E. coli</i> cannot grow at low sucrose productivity of the cyanobacteria, including the current productivity predicted by our salt stress</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">For sucrose productivity in the range 0.3 - 0.5 mmol/hr/gDW, the butanol yields do not change much with a further decrease in oxygen levels</li>
+									<li style="padding-left:1em;padding-top: 0.3em;">The <i>E. coli</i> cannot grow at low sucrose productivity of the cyanobacteria, including the current productivity predicted by the <i>S. elongatus</i> model at a salt stress of 150mM.</li>
+									<li style="padding-left:1em;padding-top: 0.3em;">For sucrose productivity in the range 0.3 - 0.5 mmol/hr/gDW, the butanol yields do not change much with a further decrease in oxygen levels.</li>
 								</ol>
-							<br>
-
-							<div style="margin: 10px; display:flex; justify-content:center;">
-								<img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph13.png" width="400px" height="400px">
-							</div><br>
-
-
-							<h4>Conclusions:</h4> 
-							<p>Butanol yield does increase as the oxygen levels are brought down, however at very low levels of oxygen, the <i>E. coli</i> is not able to sustain growth with the current levels of sucrose production from the cyanobacteria. Further, the butanol yield at low oxygen levels does not increase significantly unless sucrose productivity of the cyanobacteria is increased to a very large extent. </p>
-							<br>
-							<p>Thus we can say that using oxygen quenchers to bring the oxygen levels down is a good idea upto a certain extent. This suggests that a microaerobic condition would be best for the butanol yield. This matches what was told to us by Dr. Yazdani, who said that at aerobic conditions, the <i>E. coli</i> would divert most of its flux towards growth and hence butanol yield would be low, whereas at anaerobic conditions the <i>E. coli</i> would grow too slowly.</p>
-							<br>
-							<p>This is also supported by the fact that at very low oxygen levels, the <i>E. coli</i> cannot grow below 90% of its maximum growth rate. The only way for the <i>E. coli</i> to divert more flux towards butanol  would be to further lower its biomass to take up more sucrose.</p>
-							<br><br><br><br>
-
-
-							<h3>Increasing CO<sub>2</sub> uptake rate of cyanobacteria</h3>
-							<br>
-
-
-							<h4>Hypothesis</h4>
-							<p>Increasing the CO<sub>2</sub> uptake efficiency of cyanobacteria will increase the butanol yield of the co culture.</p>
-							<br>
-							<p>In a meeting with Dr Malathy, Dr. Dube and Dr. Lobo, we were told to look into increasing the CO<sub>2</sub> uptake efficiency of the cyanobacteria from a perspective of making our production process gaining advantage over others and interesting stakeholders. We decided to model the effect of this on the butanol yield as well. We expected that if CO<sub>2</sub> uptake efficiency increases, cyanobacteria biomass and sucrose would be produced at a higher rate, resulting in butanol being produced at a higher rate as well. This was done by increasing the max CO<sub>2</sub> allowed for the cyanobacteria to take in per hour.</p>
-							<br><br>
+								</p>
+								
+								<p><b>Conclusions:</b> <br>
+									Butanol yield does increase as the oxygen levels are brought down; however, at very low levels of oxygen, the <i>E. coli</i> are not able to sustain growth with the current predicted levels of sucrose productivity from the cyanobacteria. Furthermore, the butanol yield at low oxygen levels does not increase significantly unless sucrose productivity of the cyanobacteria is increased to a very high level. <br>
+					
+					We are thus in a position to corroborate one of the inputs given to us by Dr. Yazdani - viz., that good butanol yields are best achieved under microaerobic conditions, as the <i>E. coli</i> divert most of their carbon flux towards growth under aerobic conditions but grow too slowly under anaerobic conditions. We can use this to inform a practical implementation of our project, and would recommend experimenting  with oxygen quenchers to bring oxygen levels down into the appropriate range.<br>
+					
+					This is also supported by the fact that at very low oxygen levels, the <i>E. coli</i> cannot grow below 90% of its maximum growth rate. The only way for the <i>E. coli</i> to divert more flux towards butanol  would be to further lower its relative abundance to take up more sucrose per gram dry weight. </p>
+								
+					
+					<h3>Increasing CO<sub>2</sub> Uptake Rate of Cyanobacteria</h3><br>
+								<p><b>Hypothesis:</b><br> Increasing the CO<sub>2</sub> uptake efficiency of cyanobacteria will increase the butanol yield of the co-culture.</p>
+								<p>In a meeting with Dr. Malathy, Dr. Dube and Dr. Lobo, we were told to look into increasing the CO<sub>2</sub> uptake efficiency of the cyanobacteria to give our production process a competitive advantage over others. We decided to model the effect of this increase on the butanol yield as well. We expected that if CO<sub>2</sub> uptake efficiency increases, cyanobacteria biomass and sucrose would be produced at a higher rate, resulting in butanol being produced at a higher rate as well. This was done by increasing the maximum CO<sub>2</sub> allowed for the cyanobacteria to take in per hour.</p>
+								<br>
 
 
 
@@ -2685,41 +2538,33 @@
 
 
 							<div class="range-slider">
-								<input type="range" min="1" max="6" step="1" value="1" class="myRange"id="myRange6">
+								<input type="range" min="1" max="6" step="1" value="1" class="myRange"id="Dry">
 							</div>
 
 							<div class="rangeOutput" id="rangeValue6"></div><div class="rangeOutput">
-								Sucrose Productivity
+								Carbon Uptake Efficiency
 							</div>
 							<br><br>
-							
-							<h4>
-								Image description:
-								<b><div id="ImageDesc6">
-								</div>
-							</h4></b><br><br>
-							
-							<h4>Observations:</h4>
-								<ol class="a">
-									<li style="padding-left:1em;padding-top: 0.3em;">As the CO<sub>2</sub> uptake rate of the cyanobacteria is increased, the butanol yield of the co culture given in mmol/h/gDW increases</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">The co culture is stable at much higher rates of sucrose productivity of cyanobacteria</li>
-								</ol>
-							<br>
-
-							<h4>Conclusion: </h4>
-							<p>Increasing the CO<sub>2</sub> uptake efficiency of cyanobacteria will result not only in more CO<sub>2</sub> being captured by the co culture every hour, it will also increase the butanol being produced per hour by the co culture. This is as a higher CO<sub>2</sub> uptake rate would result in a higher sucrose productivity (as is also predicted from FBA and MOMA) which would naturally result in an increased butanol yield.</p>
-							<a id="cc3"></a><br>
-
-
-							<h1>Dynamic Modelling</h1>
-							<hr><br><br><br>
-
-							<h3>Varying sucrose productivity of the cyanobacteria</h3>
-							<br>
-							
-							<h4>Hypothesis</h4>
-							<p>As SteadyCom predicts there to be an optimum sucrose productivity which gives the maximum butanol yield, the dynamic model is expected to give similar results.<br><br>Observations: The dynamic simulation was performed at aerobic conditions for 60% butanol productivity of <i>E. coli</i>. Initially as sucrose productivity of cyanobacteria was increased, the total butanol yield also increased. However, when increasing sucrose productivity beyond 70%, the butanol yield starts decreasing.</p>
+							<p>Move the slider to see how the butanol yield of the co-culture varies at different carbon uptake efficiency of <i>S. elongatus</i> given in mmol/gDW/hr.</p>
 							<br><br>
+							
+							<p><b>Observations:</b>
+								<ol class="a">
+									<li style="padding-left:1em;padding-top: 0.3em;">As the CO<sub>2</sub> uptake rate of the cyanobacteria is increased, the butanol yield of the co-culture given in mmol/h/gDW increases.</li>
+									<li style="padding-left:1em;padding-top: 0.3em;">The co-culture is stable at much higher rates of sucrose productivity of cyanobacteria.</li>
+								</ol>
+							</p>
+							<p>
+								<b>Conclusion:</b> <br>
+								Increasing the CO<sub>2</sub> uptake efficiency of cyanobacteria will result not only in more CO<sub>2</sub> being captured by the co-culture every hour, it will also increase the butanol being produced per hour by the co-culture. This is because a higher CO<sub>2</sub> uptake rate would result in a higher sucrose productivity (as is also predicted from FBA and MOMA) which would naturally result in an increased butanol yield.  	</p>
+							<a id="cc3"></a>
+							<br>
+							<h1>Dynamic Modelling</h1><hr><br>
+							<h3>Varying Sucrose Productivity of the Cyanobacteria
+							</h3>
+							<br><p><b>Hypothesis:</b><br> Dynamic modeling will generate results that concur with SteadyCom’s core conclusion - that there is an optimum value sucrose productivity at which the butanol yield is maximised. <br>
+								<p><b>Observations:</b><br> The dynamic simulation was performed under aerobic conditions for 60% butanol productivity of <i><i>E. coli</i></i>. Initially, as sucrose productivity of cyanobacteria was increased, the total butanol yield also increased. However, when increasing sucrose productivity beyond 70%, the butanol yield starts decreasing. </p>	
+								
 							<!-- SLIDER 2 VARYING SUCROSE PROD -->
 							<div class="rangeImage" id="rangeImage2"></div><br><br>
 							
@@ -2730,26 +2575,18 @@
 							<div class="rangeOutput" id="rangeValue2"></div><div class="rangeOutput">Sucrose Productivity</div>  
 							<br><br>
 							
-							<h4>Image description:
+							<h4>
 								<b><div id="ImageDesc2">
 								</div>
 							</h4></b>
 							<br><br>
 								
-							<h4>Conclusion:</h4>
-							<p>This can be explained because the total amount of sucrose produced is both proportional to the biomass of cyanobacteria and the sucrose productivity of the cyanobacteria. But, increasing the sucrose productivity, diverts carbon flux away from growth. This causes the biomass of cyanobacteria to grow slower, but each individual is producing sucrose more efficiently. Since such a trade-off exists, the optimum sucrose yield ends up being around 70% sucrose productivity of cyanobacteria, which in turn gives maximum butanol yield.</p>
-							<br>
-
-
-							<h3>Varying butanol productivity of <i>E. coli</i></h3>
-							<br>
-
-							<h4>Hypothesis</h4>
-							<p>As butanol efficiency increases, total butanol yield will increase.</p>
-							<br><br>
-							<h4>Observation:</h4>
-							<p>The dynamic simulation was done at 60% sucrose productivity from cyanobacteria, at aerobic conditions. The simulations suggest that as butanol productivity increases, varying from 10% to 95%, the butanol yield keeps increasing.</p>
-							<br><br>
+							<b>Conclusion:</b><br>This can be explained because the total amount of sucrose produced is proportional to both the abundance of cyanobacteria and the sucrose productivity of the cyanobacteria, but increasing the sucrose productivity diverts carbon flux away from growth. This causes the biomass of cyanobacteria to grow slower, but each individual is producing sucrose more efficiently. Since such a trade-off exists, the optimum sucrose yield ends up being around 70% sucrose productivity of cyanobacteria, which in turn gives maximum butanol yield.</p>
+			<br>
+			<h3>Varying Butanol Productivity of <i>E. coli</i></h3><br>
+			<p><b>Hypothesis:</b><br> As butanol productivity of <i>E. coli</i> increases, total butanol yield will increase.<br><br>
+				<b>Observation: </b><br>The dynamic simulation was done at 60% sucrose productivity from cyanobacteria, at aerobic conditions. The simulations suggest that as butanol productivity of the <i>E. coli</i> increases, from 10% to 95%, the butanol yield of the co-culture keeps increasing.<br>
+				
 								<!-- SLIDER 1  -->
 								<div class="rangeImage" id="rangeImage1"></div><br><br>
 								<div class="range-slider">
@@ -2757,24 +2594,19 @@
 								</div>
 								<div class="rangeOutput" id="rangeValue1"></div><div class="rangeOutput">Butanol Productivity</div><br>   
 								<br>
-								<h4>Image description:
+								<h4>
 									<b><div id="ImageDesc1">
 									</div>
 								</h4></b><br><br>
 
-							<h4>Conclusion:</h4>
-							<p>Methods to increase butanol productivity will help increase butanol yield. However, it is not biologically realistic to reach 95% butanol yield as shown in the simulation. This would divert too much flux away from growth of the <i>E. coli</i>, which is not feasible in real life. </p>
-							<br><br><br><br>
-
-
-							<h3>Varying Oxygen levels to test aerobic vs micro aerobic vs anaerobic</h3>
-							<br>
-							<h4>Hypothesis</h4>
-							<p>SteadyCom suggests that micro aerobic conditions are ideal for butanol productivity. The results are expected to match in the dynamic model as well.</p>
-							<br>
-							<h4>Observation:</h4>
-							<p>The simulations were run at 60% productivity of sucrose and butanol aerobically. The oxygen uptake flux of <i>E. coli</i> was already well below the oxygen produced by the cyanobacteria. This is because at the sucrose flux available to the <i>E. coli</i>, high oxygen consumption was not required for optimal growth and productivity. <br>However, as we decrease the oxygen uptake of <i>E. coli</i>, we notice that initially butanol productivity increases. This could be explained by the fact that <i>E. coli</i> starts switching some of its flux to a different anaerobic pathway, where growth rate is low. This in turn implies that there is more carbon flux available to produce butanol efficiently. <br>This trend does not sustain as oxygen uptake is further decreased. This could be explained because as oxygen uptake is decreased, the growth rate of the <i>E. coli</i> goes down significantly which brings down the total butanol yield.</p>
-							<br><br>
+								<b>Conclusion: </b><br>Methods to increase butanol productivity will help increase butanol yield. However, it is not biologically realistic to reach 95% butanol productivity as shown in the simulation. This would divert too much flux away from growth of the <i>E. coli</i>, which is not feasible in real life. 
+							</p>
+							<h3>Varying Oxygen Levels to Test Aerobic vs Microaerobic vs Anaerobic</h3><br>
+							<p><b>Hypothesis: </b><br>SteadyCom suggests that micro aerobic conditions are ideal for butanol productivity. Dynamic modeling is supposed to generate concurrent results.				<br><br>
+								<b>Observation:</b><br> The simulations were run at 60% productivity of sucrose and butanol aerobically. The oxygen uptake flux of <i>E. coli</i> was already well below the oxygen produced by the cyanobacteria. This is because at the sucrose flux available to the <i>E. coli</i>, high oxygen consumption was not required for optimal growth and productivity. <br>
+								However, as we decrease the oxygen uptake of <i>E. coli</i>, we notice that butanol productivity initially increases. This could be explained by the fact that <i>E. coli</i> starts diverting some of its carbon  flux into a different anaerobic pathway, which results in a lower growth rate. This in turn implies that there is more carbon flux available to produce butanol efficiently. <br>
+								This trend is not sustained as oxygen uptake is further decreased. This could be explained as follows: as oxygen uptake is decreased, the growth rate of the <i>E. coli</i> goes down significantly and brings down the total butanol yield.
+								<br><br>
 								<!-- SLIDER 3 -->
 								<div class="rangeImage" id="rangeImage3"></div><br><br>
 								<div class="range-slider">
@@ -2782,23 +2614,16 @@
 								</div>
 								<div class="rangeOutput" id="rangeValue3"></div><div class="rangeOutput">Oxygen Uptake Rate</div><br>   
 								<br>
-								<h4>Image description:
+								<h4>
 									<b><div id="ImageDesc3"></div>
 								</h4></b>
 								<br><br>
-							<h4>Conclusion:</h4>
-							<p>Micro aerobic conditions are the most efficient for butanol production in the given co-culture setting.</p>
-							<br><br><br><br>
-
-
-							<h3>Effect of CO<sub>2</sub> </h3>
-							<br>
-							<h4>Hypothesis </h4>
-							<p>As CO<sub>2</sub> input increases in the bioreactor, the productivity of the entire consortium as a system is improved. Increasing the productivity of CO<sub>2</sub> sequestration by cyanobacteria should have similar effects.</p>
-							<br>
-							<h4>Observation:</h4>
-							<p>As CO<sub>2</sub> input is increased, the butanol yield, as well as the growth rates of both the organisms increase.<br>Similar effects are observed as CO<sub>2</sub> uptake rate is increased in the cyanobacteria.</p>
-							<br><br>
+								<b>Conclusion:</b><br> Microaerobic conditions are the most efficient for butanol production in the given co-culture setting. </p>
+								<h3>Effect of CO<sub>2</sub> </h3><br>
+								<p><b>Hypothesis:</b><br> As CO<sub>2</sub> input increases in the bioreactor, the productivity of the entire consortium as a system is improved. Increasing the productivity of CO<sub>2</sub> sequestration by cyanobacteria should have similar effects.<br><br>
+									<b>Observation:</b><br>As CO<sub>2</sub> input is increased, the butanol yield, as well as the growth rates of both the organisms increase.<br>
+									Similar effects are observed as CO<sub>2</sub> uptake rate is increased in the cyanobacteria.<br><br>
+									
 								<!-- SLIDER 4 -->
 								<div class="rangeImage" id="rangeImage4"></div><br><br>
 								<div class="range-slider">
@@ -2806,52 +2631,45 @@
 								</div>
 								<div class="rangeOutput" id="rangeValue4"></div><div class="rangeOutput">CO<sub>2</sub> Uptake Rate</div><br>   
 								<br>
-								<h4>Image description:
+								<h4>
 									<b><div id="ImageDesc4"></div>
 								</h4></b>
 							<br><br>
 
-							<h4>Conclusion:</h4>
-							<p>Increasing CO<sub>2</sub> uptake can be done in two ways - increasing the flow of input CO<sub>2</sub> into the bioreactor and increasing efficiency of the cyanobacteria to take up available CO<sub>2</sub>. They are both good at increasing the yield of butanol.</p>
-							<a id="cc4"></a><br>
-
-
-							<h1>Summary of results Co-culture</h1>
-							<hr><br><br><br>
-							<p>Although the two models begin with slightly different assumptions, the analysis of the co-culture arrives at similar conclusions. This boosts confidence in the accuracy of the results.</p>
-								<ol class="a">
-									<li style="padding-left:1em;padding-top: 0.3em;">There exists an optimum sucrose productivity of the cyanobacteria for which the butanol yield of the co-culture is maximized.</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">Increasing the butanol productivity of the <i>E. coli</i> will increase the butanol yield of the co-culture.</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">The oxygen produced by cyanobacteria is in excess of the oxygen required by the <i>E. coli</i> in the co-culture.</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">Removing the oxygen produced by the cyanobacteria to provide micro-aerobic conditions for the <i>E. coli</i> to grow increases the butanol yield of the co-culture.</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">Optimizing the CO<sub>2</sub> uptake by the cyanobacteria increases the butanol yield of the co-culture. </li>
-								</ol>
-							<a id="cc5"></a><br>
-
-
-							<h1>Appendix</h1>
-							<hr><br><br><br>
-							<h3>Simulating IPTG Induction for the production of Butanol</h3>
-							<br>
-							<p> Similar to how it was done in FBA, IPTG was induced by setting a bound for <i>E. coli</i> to grow at a certain percentage of its optimal growth rate and diverting flux through the butanol production pathway. However due to the nature of the SteadCom algorithm, this is not as simple to do as in FBA. One cannot optimize for butanol within steadycom as the objective function is set to be the community growth rate, and further the sucrose intake by <i>E. coli</i>, on which the optimal growth rate depends, varies. The method we used to overcome the problem was the following:</p>
-								<ol class="a">
-									<li style="padding-left:1em;padding-top: 0.3em;">SteadyCom is run on the joint model while simulating salt stress but not IPTG. The butanol production in this case is usually 0 as growth is being optimized</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">Sucrose intake by the <i>E. coli</i> per gDW from the SteadyCom result is used as the lower bound for an FBA with the <i>E. coli</i> model</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">Growth rate is set to a percent of optimal at this level of sucrose intake and butanol is optimized for using FBA</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">Butanol flux gotten from FBA in this manner is set as a lower bound in the joint model and SteadyCom is run once again</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">This would lead to the production of butanol even though community growth rate is still being optimized for</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">The true percent of optimal growth rate the <i>E. coli</i> is growing at can be found by comparing the results from the final SteadyCom run to FBA</li>
-									<li style="padding-left:1em;padding-top: 0.3em;">This can be done at different percentages of optimal growth (relating inversely to butanol productivity) as well as different levels of sucrose productivity, oxygen, etc.</li>
-								</ol>
-							<br><br><br><br>
-
-
-							<h3>Detailed explanation for optimal sucrose productivity</h3>
-							<br>
-							<p>For high values of sucrose productivity, the max specific growth rate values of the co culture are low. This is as the cyanobacteria cannot grow fast while producing high amounts of sucrose per gDW. In turn, due to the steady state conditions, the <i>E. coli</i> is also constrained to grow at a low growth rate. (In reality, if the <i>E. coli</i> do grow at a higher growth rate, they will quickly deplete the sucrose in the medium.) To maintain this condition, the relative abundance of the <i>E. coli</i> in the co culture must be higher such that per gDW of <i>E. coli</i>, there is not much sucrose available and the <i>E. coli</i> is constrained to grow at a lower growth rate. <br>
-								This makes sense biologically as well. Initially the <i>E. coli</i> will grow fast and deplete the sucrose until it has to slow its growth rate down, but this results in it having a high abundance at steady state.<br><br>
-								As sucrose productivity increases the actual butanol produced per gDW of <i>E. coli</i> is decreasing, but its relative biomass in the co culture is increasing. These two competing effects lead to an optimum of sucrose productivity for the butanol productivity per gDW of the co culture. <br><br>
-							</p>
+							<b>Conclusion:</b><br>  Increasing CO<sub>2</sub> uptake can be done in two ways - increasing the flow of input CO<sub>2</sub> into the bioreactor and increasing efficiency of the cyanobacteria to take up available CO<sub>2</sub>. They are both good at increasing the yield of butanol.				<br></p>
+							<a id="cc4"></a><br><Br><br>	
+							<h3>Summary of results Co-culture</h3><br>
+			<p>Although the two models begin with slightly different assumptions, the analysis of the co-culture arrives at similar conclusions. This boosts confidence in the accuracy of the results. 
+				<ol class="a">
+					<li style="padding-left:1em;padding-top: 0.3em;">There exists an optimum sucrose productivity of the cyanobacteria for which the butanol yield of the co-culture is maximized.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Increasing the butanol productivity of the <i>E. coli</i> will increase the butanol yield of the co-culture.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">The oxygen produced by cyanobacteria is in excess of the oxygen required by the <i>E. coli</i> in the co-culture.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Removing the oxygen produced by the cyanobacteria to provide micro-aerobic conditions for the <i>E. coli</i> to grow increases the butanol yield of the co-culture.</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Increasing the CO<sub>2</sub> uptake efficiency of the cyanobacteria increases the butanol yield of the co-culture.</li>
+				</ol>
+			</p>
+			<a id="cc5"></a>
+			<h1>Appendix</h1><hr><br>
+			<h3>Simulating IPTG Induction for the Production of Butanol</h3><br>
+			<p>
+				Similar to how it was done in FBA, IPTG was induced by setting a bound for <i>E. coli</i> to grow at a certain percentage of its optimal growth rate and diverting flux through the butanol production pathway. However due to the nature of the SteadyCom algorithm, this is not as simple to do as in FBA. One cannot optimize for butanol within SteadyCom as the objective function is set to be the community growth rate, and further the sucrose intake by <i>E. coli</i>, on which the optimal growth rate depends, varies. The method we used to overcome the problem was the following:
+				<ol class="a">
+					<li style="padding-left:1em;padding-top: 0.3em;">SteadyCom is run on the joint model while simulating salt stress but not IPTG. The butanol production in this case is usually 0 as growth is being optimized</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Sucrose intake by the <i>E. coli</i> per gDW from the SteadyCom result is used as the lower bound for an FBA with the <i>E. coli</i> model	</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Growth rate is set to a certain percent of optimal at this level of sucrose intake and butanol is optimized for using FBA
+					</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">Butanol flux gotten from FBA in this manner is set as a lower bound in the joint model and SteadyCom is run once again</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">This would lead to the production of butanol even though community growth rate is still being optimized for</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">The true percent of optimal growth rate the <i>E. coli</i> is growing at can be found by comparing the results from the final SteadyCom run to FBA once again</li>
+					<li style="padding-left:1em;padding-top: 0.3em;">This can be done at different percentages of optimal growth (relating inversely to butanol productivity) as well as different levels of sucrose productivity, oxygen, etc</li>
+				</ol>
+			</p>
+			<h3>Detailed Explanation for Optimal Sucrose Productivity</h3><br>
+			<p>For high values of sucrose productivity, the maximum specific growth rate values of the co-culture are low. This is as the cyanobacteria cannot grow fast while producing high amounts of sucrose per gDW. In turn, due to the steady state conditions, the <i>E. coli</i> is also constrained to grow at a low growth rate. (In reality, if the <i>E. coli</i> do grow at a higher growth rate, they will quickly deplete the sucrose in the medium.) To maintain this condition, the relative abundance of the <i>E. coli</i> in the co culture must be high, so that per gDW of <i>E. coli</i>, there is not much sucrose available and the <i>E. coli</i> is constrained to grow at a lower growth rate. <br>
+				This makes sense biologically as well. Initially the <i>E. coli</i> will grow fast and deplete the sucrose until it has to slow its growth rate down, but this results in it having a high abundance at steady state.<br>
+				 
+				As sucrose productivity increases the actual butanol produced per gDW of <i>E. coli</i> is decreasing, but its relative biomass in the co culture is increasing. These two competing effects lead to an optimum of sucrose productivity for the butanol productivity per gDW of the co culture.</p>
+			
 
 
 							<!-- Slideshow of graphs-->
@@ -2866,22 +2684,22 @@
 								</div>
 								<div style= "margin-bottom:50px; display:flex; flex-direction:row; align-items: center;" class="carousel-inner">
 									<div class="carousel-item active graph"> 
-										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph1.png" alt="" width=800>
+										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph1.png" alt="" width=500>
 									</div>
 									<div class="carousel-item graph">
-										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph2.png" alt="" width=800>
+										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph2.png" alt="" width=500>
 									</div>
 									<div class="carousel-item graph">
-										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph3.png" alt="" width=800>
+										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph3.png" alt="" width=500>
 									</div>
 									<div class="carousel-item graph">
-										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph4.png" alt="" width=800>
+										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph4.png" alt="" width=500>
 									</div>
 									<div class="carousel-item graph">
-										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph5.png" alt="" width=800>
+										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph5.png" alt="" width=500>
 									</div>
 									<div class="carousel-item graph">
-										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph6.png" alt="" width=800>
+										<img src="assets/graphs/SteadyCom Graphs/Steadycomgraph6.png" alt="" width=500>
 									</div>
 								</div>
 								<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaption" data-bs-slide="prev">
@@ -2896,9 +2714,24 @@
 							<div style="margin-top: 20px;display:flex; flex-direction:row; justify-content: center;">
 							<h3 id="slidetext"></h3>
 							</div>
-							<h3>Allowing Oxygen into the Co culture</h3><br>
-							<p>The two following graphs show net oxygen flux per gDW of the co culture in two different conditions. The first allows only exchange of oxygen between the two species but extra oxygen is not allowed from the environment. The second allows both exchange of oxygen as well as for the <i>E. coli</i> to take up more oxygen from the environment if it requires as well. </p>
-							<br>
+							<p id="desc">Carousel Description: Results from SteadyCom at different values of sucrose productivity to illustrate the above explanation</p>
+							<h3>Allowing Oxygen into the Co-culture</h3><br>
+			<p>The two following graphs show net oxygen flux per gDW of the co culture in two different conditions. The first allows only exchange of oxygen between the two species but extra oxygen is not allowed from the environment. The second allows both exchange of oxygen as well as for the <i>E. coli</i> to take up more oxygen from the environment if it is required as well. As one can see, even though the <i>E. coli</i> is allowed to take up more oxygen, it does not require more than the cyanobacteria is producing to grow and produce butanol optimally. This is why the net flux of oxygen is positive in both cases.  </p>
+			<style>
+				.imageWrapper{display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;}
+div.imageWrapper img{
+	margin-top:10px;
+	width: 500px;
+}
+			</style>
+			<div class="imageWrapper">
+				<img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph15.png">
+				<img src="assets/Graphs/SteadyCom Graphs/Steadycomgraph16.png">
+				</div>			<br>
 						</div>
 						<!------------------------------------- END OF CO CULTURE TAB----------------------------------------->
 					</div>
@@ -3460,7 +3293,7 @@
 		const correctorder1 = ['8', '7', '6', '5', '4', '3', '2', '1'];
 		output1.innerHTML = slider1.value;
 		output1.innerHTML = '95';
-		imageDesc1.innerHTML = 'me'
+		imageDesc1.innerHTML = ''
 	  	slideimage1.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
 		
 		
@@ -3487,7 +3320,7 @@
 		const correctorder2 = ['8', '7', '6', '5', '4', '3', '2', '1'];
 		output2.innerHTML = slider2.value;
 		output2.innerHTML = '95%';
-		imageDesc2.innerHTML = 'me'
+		imageDesc2.innerHTML = ''
 		slideimage2.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
 		
 		slider2.oninput = function() {
@@ -3513,7 +3346,7 @@
 		const correctorder3 = ['10', '9', '8', '6', '5', '4', '7', '3', '2', '1', '11'];
 		output3.innerHTML = slider3.value;
 		output3.innerHTML = '-4';
-		imageDesc3.innerHTML = 'me'
+		imageDesc3.innerHTML = ''
 		slideimage3.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
 		
 		
@@ -3540,7 +3373,7 @@
 		const correctorder4 = ['4', '3', '1', '10', '9', '7', '6', '5', '2', '8'];
 		output4.innerHTML = slider4.value;
 		output4.innerHTML = '181';
-		imageDesc4.innerHTML = 'me'
+		imageDesc4.innerHTML = ''
 		slideimage4.innerHTML = '<div><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/culture/181.png" width="450px" height="450px"></div>' + '<div class="rangeImageRow2"><img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png" width="450px" height="450px">' + '<img src="assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/butanol/181.png" width="450px" height="450px"></div>' + '"assets/Graphs/Dynamic%20Graphs/co2/input%20to%20bioreactor/sucrose/181.png"';
 		slider4.oninput = function() {
 		output4.innerHTML = imagearray4[this.value - 1] + '%';
@@ -3557,18 +3390,18 @@
 		var output5 = document.getElementById("rangeValue5");
 		var slideimage5 = document.getElementById("rangeImage5");
 		var imageDesc5 = document.getElementById("ImageDesc5");
-		const imagearray5 = ['95','90','80','70','60','40','20','10'];
+		const imagearray5 = ['Aerobic','8','4','2','1','0','20','10'];
 		const descarray5 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
 		const igemarray5 = ['https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png', 'https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_b8.png', 'https://2021.igem.org/wiki/images/7/7c/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_c4.png', 'https://2021.igem.org/wiki/images/5/55/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_d2.png', 'https://2021.igem.org/wiki/images/7/7b/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_e1.png', 'https://2021.igem.org/wiki/images/b/b7/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_f0.png'];
 		const correctorder5 = ['1', '2', '3', '4', '5', '6'];
 		output5.innerHTML = slider5.value;
-		output5.innerHTML = '1';
-		imageDesc5.innerHTML = 'me'
+		output5.innerHTML = 'Aerobic';
+		imageDesc5.innerHTML = ''
 	  	slideimage5.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/5/5a/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph10_aaerobic.png" width="450px" height="450px"></div>';
 	
 
 		slider5.oninput = function() {
-	  		output5.innerHTML = imagearray5[this.value - 1] + '%';
+	  		output5.innerHTML = imagearray5[this.value - 1];
 	  		imageDesc5.innerHTML = igemarray5[this.value-1];
 	  		slideimage5.innerHTML = '<div><img src="' + igemarray5[this.value-1] + '" width="450px" height="450px"></div>';
 		}
@@ -3582,13 +3415,13 @@
 		var output6 = document.getElementById("rangeValue6");
 		var slideimage6 = document.getElementById("rangeImage6");
 		var imageDesc6 = document.getElementById("ImageDesc6");
-		const imagearray6 = ['95','90','80','70','60','40','20','10'];
+		const imagearray6 = ['12.2','13.7','15.2','16.7','18.2','19.7','20','10'];
 		const descarray6 = ['me','me when','me when the','poopoo','peepee','6','7','8'];
 		const igemarray6 = ['https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png', 'https://2021.igem.org/wiki/images/c/cb/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_b.png', 'https://2021.igem.org/wiki/images/6/62/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_c.png', 'https://2021.igem.org/wiki/images/a/a3/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_d.png', 'https://2021.igem.org/wiki/images/2/25/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_e.png', 'https://2021.igem.org/wiki/images/a/af/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_f.png'];
 		const correctorder6 = ['1', '2', '3', '4', '5', '6'];
 		output6.innerHTML = slider6.value;
-		output6.innerHTML = '1';
-		imageDesc6.innerHTML = 'me'
+		output6.innerHTML = '12.2';
+		imageDesc6.innerHTML = ''
 		slideimage6.innerHTML = '<div><img src="https://2021.igem.org/wiki/images/4/46/T--IISER-Pune-India--Graphs--SteadyCom_Graphs--Steadycomgraph14_a.png" width="450px" height="450px"></div>';
 		
 		
