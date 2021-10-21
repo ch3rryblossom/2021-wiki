@@ -136,12 +136,7 @@
 
     <!-- CONTENT + SIDENAV SECTION -->
 
-<style>
-	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
-	color: white !important;
-	font-family: ProximaNova !important;
-}
-</style>
+ 
     <div class="second-div container-fluid">
         <div class="row">
             <!-- SIDENAV -->
@@ -149,9 +144,9 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1">Setting up for SteadyCom</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2">Cyanobacteria - Tips and Tricks</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">Literature to existing parts</a></li>
                             <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
                             <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
                             <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
@@ -162,39 +157,27 @@
             <!-- CONTENT -->
             <div class="col-lg-9 col-md-9">
                 <div class="content">
-                    <h1 id="1">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
+		    <h1 id="1">Setting up for SteadyCom
+		</h1><hr><br>
+		<h3>"A checklist to help build a multi-species model and troubleshoot SteadyCom on COBRA Toolbox"</h3><br>
+		    <p>SteadyCom is an algorithm used to analyze steady-state metabolic behaviors of co-cultures, microbiomes, and host-microbe interactions. We used SteadyCom to analyze our co-culture of <em>S. elongatus</em> and <em>E coli</em> and to predict how variation in certain parameters would affect its steady-state behavior.&nbsp;</p>
+<p>The COBRA toolbox on MATLAB contains a &lsquo;SteadyCom.m&rsquo; function that runs the SteadyCom algorithm taking in a joint community metabolic model as an input. This community model is built from pre-curated Genome-Scale Metabolic models (GSM) for each of the individual species in the consortium.</p>
+<p>The COBRA toolbox does have functions to construct community models from individual GSMs; however, we faced several problems during this process which required considerable troubleshooting. The issue lies in the fact that there is an absence of standardization in the construction of GSMs for individual species. On top of this, there is very sparse documentation on the SteadyCom function, and the functions needed to construct a joint community model.&nbsp;</p>
+<p>In fact, we spent at least 2 months troubleshootingthe process of building the community model and obtaining initial results using SteadyCom. Most of the issues we faced were due to minor differences in the standards used in the individual GSMs and those required by SteadyCom. Though these are issues that are not very difficult to fix once they have been identified, they were quite difficult to diagnose due to the lack of adequate documentation.</p>
+<p>In light of all of this, we resolved to create a checklist for future SteadyCom users based on the insights we have gained over the past few months. This checklist document contains information on how to ensure that individual GSMs have the specific standards required to build a joint model, the steps involved in building and testing a joint model, and troubleshooting techniques that have worked for us while using SteadyCom. This document would also give readers additional insights into how community models are organized and how to tackle other issues that they might come across.&nbsp;</p>
+<p>We spoke to Dr. Maziya Ibrahim, a Postdoctoral Fellow at the Indian Institute of Technology, Madras who is currently working with SteadyCom to model the production of industrially relevant metabolites such as Lactic Acid by microbial communities. She went through our checklist and gave us her feedback on the usefulness of this document as a regular user of the algorithm, and inputs on what else we could incorporate into it.&nbsp;</p>
+<p>You can read more about the meeting with Dr. Maziya Ibrahim <a href="Human_Practices.html">here</a>.</p>
+<p>We believe that with the help of this checklist, future users would be able to build their models and obtain results from SteadyCom in a more efficient and hassle-free manner, without having to spend so much time figuring out all the intricacies of the algorithm by themselves.</p>
+<p>The document can be found on our GitHub page <a href="https://github.com/iGEM-IISERP/Dry-Lab-2021">here</a>.</p>
 
-
-                    <figure>
-
-                       <!-- <img class="img-fluid"  src="https://2020.igem.org/wiki/images/7/7c/T--IISER-Pune-India--model1.png"> -->
-
-                    </figure>
-
-
-                    <h1 id="2">Section 2</h1>
+		    <h1 id="2">Cyanobacteria - Tips and Tricks for future teams</h1>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
                     <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
-
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
+		    <p><em>Synechococcus elongatus</em> is an up-and-coming phototrophic chassis, which differs significantly from <em>E. coli</em> in terms of the protocols for its upkeep. We were fortunate to have Ph.D. mentors who have worked on this chassis and have benefited from the support provided by them and other researchers working in the area.&nbsp;</p>
+		    <p>There is a body of knowledge that is passed down orally from mentor to student in the cyanobacterial research community that is often undocumented in the literature and cannot be accessed by anyone wishing to start off working with these niche model organisms. For information on reviving cyanobacterial strains, practical knowledge on gradual passaging of the cultures, ways to handle aggregation of cells, and a quick guide to setting up a phototrophic culture without a photo-incubator or a CO<sub>2</sub> pump - our written guide, <em>Cyanobacteria - Tips and Tricks</em> is an invaluable resource.</p>
+                    
+			<h1 id="3">Literature to existing parts</h1>
+			<hr><br><br>
 
 					<h1 id="4">Introduction</h1>
                     <hr><br><br><br>
