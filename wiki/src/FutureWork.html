@@ -57,7 +57,7 @@
 			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
 			  <li><a class="dropdown-item" href="Description.html">Description</a></li>
 			  <li><a class="dropdown-item" href="Design.html">Design</a></li>
-			  <li><a class="dropdown-item" href="TeamNotebook/Team Notebook 11e9906b405543a29361e38a50c81024.html">Notebook</a></li>
+			  <li><a class="dropdown-item" href="https://possible-trapezoid-297.notion.site/11e9906b405543a29361e38a50c81024?v=af10ed5ac15145e8a267a68ed8eb2005">Notebook</a></li>
 			  <li><a class="dropdown-item" href="Contribution.html">Contributions</a></li>
 			  <li><a class="dropdown-item" href="Engineering.html">Engineering Success</a></li>
 			  <li><a class="dropdown-item" href="Implementation.html">Future Implementation</a></li>
@@ -87,8 +87,16 @@
 			  <li><a class="dropdown-item" href="CompositeParts.html">Composite</a></li>
 			</ul>
 		      </li>
-		      <li class="nav-item">
-			<a class="nav-link" href="https://2021.igem.org/Team:IISER-Pune-India/Model">Model</a>
+		      <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Dry Lab
+			</a>
+			<ul class="dropdown-menu fade-down" aria-labelledby="navbarDropdown">
+			  <li><a class="dropdown-item" href="Model.html">Overview</a></li>
+			  <li><a class="dropdown-item" href="EColi.html">E Coli</a></li>
+			  <li><a class="dropdown-item" href="Cyanobacteria.html">Cyanobacteria</a></li>
+			  <li><a class="dropdown-item" href="Coculture.html">Coculture</a></li>
+			</ul>
 		      </li>
 		      <li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -135,6 +143,21 @@
 		}
 	</style>
 
+<style>
+.sidenav {
+	height: auto;
+	width: auto;
+	padding-top: 150px;
+	padding-left: 5px;
+	padding-right: 10px;
+  
+	margin-top: 25%;
+	margin-bottom: 20px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 21.5% ;
+}
+</style>
 
     <div class="second-div container-fluid">
         <div class="row">
@@ -143,12 +166,9 @@
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
-                            <li class="nav-item"><a class="nav-link" href="#1">Introduction</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#2">Section 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#3">Section 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#4">Section 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#5">Section 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#6">References</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#1"><i>E. coli</i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#2"><i>S. Elongatus</i></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#3">References</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -160,48 +180,91 @@
             <div class="col-lg-9 col-md-9">
                 <div class="content">
                     <h1 id="1"><i>E Coli</i></h1>
-                    <hr><br><br>
-		 <h3>Bidirectional Promoter Characterization</h3>   
-		    <br>
-		<p>We plan to characterize the native bidirectional promoter of the csc operon which we submitted as the part <a href="">BBa_K3971006</a>. Since the cscK and cscB genes are transcribed from the opposite strand to cscA, a bidirectional promoter jointly regulates both sets of genes in the operon. We will characterize the activity of the promoter using fluorescent reporters (a yellow and blue fluorescent protein) which flank the promoter and their relative fluorescence will inform us about the strength of transcription in both directions. The characterization cassette for the promoter has been submitted as the composite part _.<br> Characterization of this promoter will allow us to experiment with other promoters based on the results and potentially increase sucrose consumption and consequently increase growth rate and butanol yields.</p>	
-		    <br>
-                    <h3>Genetic engineering based on modeling results</h3><br>
-		    		<p>Our dry lab team used OptKnock and flux scanning based on enforced objective flux (FSEOF) in order to identify potential candidate genes and reactions to target in order to increase sucrose and butanol yields. In the future, we aim to perform these modifications in the lab and hope to optimize the co-culture and final yields to make the process industrially viable.</p>
+                    <hr><br><br><br>
+
+		 			<h3>Bidirectional Promoter Characterization</h3>   
+		    		<br>
+
+					<p>We plan to characterize the native bidirectional promoter of the <i>csc</i> operon which we submitted as part <a href="http://parts.igem.org/Part:BBa_K3971006">BBa_K3971006</a>. We also created a composite part to characterize the activity of this promoter <a href="http://parts.igem.org/Part:BBa_K3971024">BBa_K3971024</a>. Since the <i>cscK</i> and <i>cscB</i> genes are transcribed in the direction opposite to <i>cscA</i>, a bidirectional promoter jointly regulates both sets of genes in the operon<sup><a href="#ref1">[1]</a></sup>.</p>	
+		    		<br>
+
+					<p>We will characterize the activity of the promoter using fluorescent reporters (a yellow and blue fluorescent protein) which flank the promoter and their relative fluorescence will inform us about the strength of transcription in both directions. The characterization cassette for the promoter has been submitted as the composite part <a href="http://parts.igem.org/Part:BBa_K3971024">BBa_K3971024</a>. Characterization of this promoter will allow us to compare its strength and activity with other known promoters, in order to help us choose an ideal promoter for optimal sucrose consumption and consequent butanol yields.</p>	
+					<br>
+
+					<h3>Genetic engineering based on modeling results</h3><br>
+		    		<p>Our dry lab team used OptKnock and Flux Scanning based on Enforced Objective Flux (FSEOF) in order to identify potential candidate genes and reactions to target in order to increase sucrose and butanol yields. In the future, we aim to perform these modifications in the lab and hope to optimize the co-culture and final yields to make the process industrially viable.</p>
                     <br>
-		    <h3>Increasing butanol tolerance</h3>
-		    <p></p>
+		    		
+					<h3>Increasing butanol tolerance</h3>
+		    		<p>After talking to <a href="#Human_Practices.html">Dr. Anand Ghosalkar from Praj industries</a>, our team learned that enhancing butanol tolerance in E. coli would cause a significant impact on the current market and potentially surpass the current methods of sustainable production. We, therefore, looked for possible over expressions and deletions that could cause increased butanol tolerance. We came across certain genes that were capable of this<sup><a href="#ref2">[2]</a></sup>. We also came across a butanol efflux pump<sup><a href="#ref3">[3]</a></sup> in E. coli that was shown to increase the host’s tolerance to butanol. Read more about this on our <a href="#Implementation.html">proposed implementation</a> page.</p>
+					<a id="2"></a><br>
 
 
-                    <h1 id="2"><i>
-			S. elongatus
-			</i></h1>
-                    <hr>
-		    <br>
-		    <h3>Characterising native promoters</h3>
-		    <h3>I) Construct assembly</h3><br>
-                    <p>We have shortlisted the native promoters - PcpcB-m6, PpsbA2 and PpsbA3 along with the well-characterised J23119 promoter (from the iGEM kit) and the lacUV5 promoter used by Dr Pakrasi’s lab as standard reference promoters.<br><br>
-			We intend to incorporate a promoter into a cassette upstream of the fluorescent reporter sYFP2 and a terminator. This cassette is itself flanked by two sequences NS1A and NS1B (reference construct __) which are homologous to the first genomic neutral site of <i>Synechococcus elongatus</i> UTEX 2973, intended for homology-directed repair. We will prepare this composite part via extension and overlap PCR using primers we have designed. This part will be integrated into the pSL2680 plasmid. Note that the promoter will be flanked by restriction sites, allowing us to excise and replace it with other promoters without repeating the complicated assembly step.<br><br>
-			On the other side of the plasmid is the gene <i>Cpf</i>1 coding for the Cas12a enzyme. Downstream on the gene are various spacers, and a <i>lacZ</i> cassette, flanked by <i>Aar</i>1 restriction sites. We will synthesise a short stretch of DNA (via overlap PCR of two oligos) to bind to a protospacer in NS1 of the genome. This sequence will be introduced into the plasmid in place of the <i>lacZ</i> cassette, and will allow for a CRISPR-Cas12a-mediated targeted break of the genomic DNA. The homology arms NS1A and B will then allow for HDR of the genome to include our composite part.<br><br>
-			A very similar principle applies to the overexpression of native sps and spp genes (previous work has expressed sps and spp genes from <i>Synechocystis</i> PCC 6803 in <i>Synechococcus elongatus</i> UTEX 2973). These genes will be incorporated into the ____ plasmid, which already contains homology arms for neutral site 3 of the <i>S. elongatus</i> genome. 
-		</p>
-		<h3>II) Triparental Mating</h3><br>
-		<p>   The UTEX 2973 strain is unfortunately not naturally transformable, posing a challenge to genetic engineering work. To characterise the promoters and <i>sps</i> and <i>spp</i>, we will need to introduce the plasmids via conjugation from <i>E. coli</i> DH5&#945;. The plasmids of interest - pSL2680 and _____ - will be transformed into this strain, which will then undergo <b>Kanamycin screening</b> and <b>blue-white screening</b> to select for <i>transformants</i> with <i>lacZ</i> replaced.<br><br> 
-			For biosecurity reasons, DH5&#945; is typically not capable of forming a conjugation pilus. It thus needs to acquire an F-plasmid from a helper strain (for this purpose, we will use <i>E. coli</i> HB101). This will carry not only the F-plasmid, but also other helper and mobiliser plasmids (pRL443  and pRL623) needed for safe conjugative transfer of pSL2680 and ___ (our plasmids of interest) into UTEX 2973.
-		</p>
-                    <br>
-		    <h3>III) Fluorescence-based characterisation</h3><br>
-		    		<p>We will grow the cyanobacteria at different light intensities (100-1500 microeinsteins) and different carbon dioxide concentrations (0.04%-5%). Under each such pair of conditions, we will characterise the promoter activity by measuring the fluorescence of sYFP.  We will also simulate a day-night cycle,  in accordance with the cyanobacteria’s natural circadian rhythm, to see if it impacts the sustainability and stability of (i) the axenic culture and its sucrose production and (ii) the co-culture and its butanol production. This is of particular interest in the case of PpsbAII and PpsbAIII, which are promoters associated with the circadian rhythm. We will select a promoter yielding optimum performance and use it to express <i>cscB</i> in UTEX 2973.</p>
-				    <br>
-		<h3>Sucrose Assay</h3><br>
-		<p> We will use Megazyme’s sucrose assay kit to quantify the concentration of sucrose in supernatant samples of our axenic cultures and our co-culture. By taking serial measurements using this colorimeteric assay, we can estimate the increase in sucrose production with time in a cyanobacterial culture (UTEX 2793-<i>cscB</i>).<br><br>
-			The same procedure can be repeated to assay for sucrose consumption in an E. coli culture, in which sucrose is initially added to a culture of <i>E. coli</i> without any other carbon source, and serial measurements of sucrose in the supernatant are taken.<br><br>
-			This experiment is performed with small volumes of each supernatant in a 96-well plate and its reader. This is necessary as the controls and standards associated are also numerous. (If you do the experiment in triplicate, you will have 6 samples for each reading - i.e, 2x3 including the controls).
-		</p>  
-		<h3>Characterising O2 evolution by cyanobacteria using redox indicators </h3><br>
-		<p>Since anaerobic conditions are vital for maximizing butanol yields, we also aim to monitor oxygen levels in the culture to ensure that the cultures are as close to anaerobic as possible, given the oxygen evolution by cyanobacteria which might make the culture microaerobic. To do this we plan to either use The Oxoid Anaerobic Indicator by ThermoFischer Scientific. It consists of a redox indicator solution in a laminated foil envelope that turns white from red under anaerobic conditions. We initially considered other redox indicators such as resazurin, however based on inputs from our mentors we chose the Oxoid indicator, given that resazurin was unlikely to work under microaerobic conditions and required highly anaerobic conditions.<br>
-			The results of this experiment will also inform us of the need to use oxygen scavengers such as ascorbic acid in order to main near anaerobic conditions in the culture. 
-			</p>              
-                    <br>
+					<h1><i>S. elongatus</i></h1>
+					<hr><br><br><br>
+
+					<h2>Characterizing nativ promoters</h2>
+					<br><br>
+					
+					<h3>Constuct assembly</h3>
+					<br>
+					<p>We have shortlisted the native cyanobacterial promoters - <i>Pcpc560<sup><a href="#ref4">[4]</a></sup>, PcpcB-m6<sup><a href="#ref5">[5]</a></sup>, PpsbA2<sup><a href="#ref6">[6]</a></sup>, and PpsbA3</i><sup><a href="#ref5">[5]</a></sup><sup>,</sup><sup><a href="#ref6">[6]</a></sup> to characterize in our novel chassis S. elongatus UTEX 2973 against some other commonly used bacterial promoters - J23119 (from the iGEM kit) and <i>lacUV5</i> (present in the sucrose-exporting strains of S. elongatus UTEX 2973 that we received)<sup><a href="#ref7">[7]</a></sup>.</p>
+					<br>
+
+					<p>We intend to incorporate a promoter into a cassette upstream of the fluorescent reporter <i>sYFP2</i> and a terminator. This cassette is itself flanked by two sequences NS1A and NS1B (<a href="http://parts.igem.org/Part:BBa_K39710009">BBa_K3971009</a>) which are homologous to the first genomic neutral site (NS1) of Synechococcus elongatus UTEX 2973, intended for homology-directed repair. We will prepare this composite part via extension and overlap PCR using the primers we have designed. This part will be integrated into the <sup><a href="#ref8">[8]</a></sup>pSL26808 plasmid. Note that the promoter is flanked by restriction sites, allowing us to excise and replace it with other promoters without repeating the complicated assembly step.</p>
+					<br>
+
+					<p>On the other side of the plasmid is the gene <i>cpf1</i> coding for the Cas12a enzyme. Downstream on the gene are various spacers, and a <i>lacZ</i> cassette, flanked by <i>Aar1</i> restriction sites. We will synthesize a short stretch of DNA (via overlap PCR of two oligos) to bind to a protospacer in NS1 of the genome. This sequence will be introduced into the plasmid in place of the <i>lacZ</i> cassette and will allow for a CRISPR-Cas12a-mediated targeted break of the genomic DNA. The homology arms NS1A and B will then allow for homology-directed repair of the genome to include our composite part.</p>
+					<br>
+
+					<p>A very similar principle applies to the overexpression of native <i>sps</i> and <i>spp</i> genes (previous work has expressed <i>sps</i> and <i>spp</i> genes from <i>Synechocystis</i> PCC 6803 in Synechococcus elongatus UTEX 2973). These genes will be incorporated into the pSL26808<sup><a href="#ref8">[8]</a></sup> plasmid, with homology arms for neutral site 3 of the S. elongatus genome, taken from the pSL30057<sup><a href="#ref7">[7]</a></sup>.</p>
+					<br><br>
+
+					<h3>Triparental Mating</h3>
+					<br>
+					<p>The UTEX 2973 strain is unfortunately not naturally transformable<sup><a href="#ref9">[9]</a></sup>, posing a challenge to genetic engineering work. To characterize the promoters and <i>sps</i> and <i>spp</i>, we will need to introduce the plasmids via conjugation from E. coli DH5\( \alpha \). The plasmid of interest - pSL2680 - will be transformed into this strain, which will then undergo Kanamycin screening and blue-white screening to select for transformants with <i>lacZ</i> replaced.</p>
+					<br>
+
+					<p>For biosecurity reasons, DH5\( \alpha \) is typically not capable of forming a conjugation pilus. It thus needs to acquire an F-plasmid from a helper strain (for this purpose, we will use E. coli HB101). This will carry not only the F-plasmid but also other helper and mobilizer plasmids (pRL443  and pRL623)<sup><a href="#ref10">[10]</a></sup> needed for safe conjugative transfer of pSL2680 (our plasmids of interest) into UTEX 2973<sup><a href="#ref11">[11]</a></sup>.</p>
+					<br><br>
+
+					<h3>Fluorescence-based characterization</h3>
+					<br>
+					<p>We will grow S. elongatus at different light intensities (100-1500 \( \mu \)mol photons/m<sup>2</sup>/s) and different carbon dioxide concentrations (0.04%-5%). Under each such pair of conditions, we will characterize the promoter activity by measuring the fluorescence of <i>sYFP2</i>.  We will also simulate a day-night cycle, in accordance with S. elongatus’s natural circadian rhythm, to see if it impacts the sustainability and stability of (i) the axenic culture and its sucrose production and (ii) the co-culture and its butanol production. This is of particular interest in the case of <i>PpsbA24</i><sup><a href="#href4">[4]</a></sup> and <i>PpsbA34</i><sup><a href="#href4">[4]</a></sup>, which are promoters associated with the circadian rhythm. We will select a promoter yielding optimum performance and use it to express cscB in UTEX 2973.</p>
+					<br><br><br>
+
+					<h2>Characterizing O<sub>2</sub> evolution by cyanobacteria using redox indicators</h2>
+					<br>
+					<p>Since anaerobic conditions are vital for maximizing butanol yields, we also aim to monitor oxygen levels in the culture to ensure that the cultures are as close to anaerobic as possible, given the oxygen evolution by cyanobacteria which might make the culture microaerobic. To do this we plan to either use The Oxoid Anaerobic Indicator by Thermo Fisher Scientific<sup><a . href="#ref12">[12]</a></sup>. It consists of a redox indicator solution in a laminated foil envelope that turns white from red under anaerobic conditions. We initially considered other redox indicators such as resazurin, however, based on inputs from our mentors we chose the Oxoid indicator, given that resazurin was unlikely to work under microaerobic conditions and required highly anaerobic conditions.</p>
+					<br>
+
+					<p>The results of this experiment will also inform us of the need to use oxygen scavengers such as ascorbic acid in order to maintain near anaerobic conditions in the culture<sup><a href="#ref13">[13]</a></sup>.</p>
+					<a id="3"></a><br><a id="ref1"></a><br<a id="ref2"></a><br><a id="ref3"></a><br><a id="ref4"></a>
+
+
+					<hr>
+					<h3 id="reference">References</h3>
+					<br>
+
+					<ol class="a">
+						<li style="padding-left: 1em;" id="ref5">A transferable sucrose utilization approach for non-sucrose-utilizing Escherichia coli strains. Bruschi M, Boyes SJ, Sugiarto H, Nielsen LK, Vickers CE. Biotechnol Adv. 2012 Sep-Oct;30(5):1001-10. doi: 10.1016/j.biotechadv.2011.08.019. Epub 2011 Sep 1. 10.1016/j.biotechadv.2011.08.019 PubMed 21907272</li>
+						<li style="padding-left: 1em;" id="ref6">Reyes, L. H., Almario, M. P., & Kao, K. C. (2011). Genomic library screens for genes involved in n-butanol tolerance in Escherichia coli. PloS one, 6(3), e17678.</li>
+						<li style="padding-left: 1em;" id="ref7">Sergey Boyarskiy, Stephanie Davis López, Niwen Kong, Danielle Tullman-Ercek,Transcriptional feedback regulation of efflux protein expression for increased tolerance to and production of n-butanol,Metabolic Engineering,Volume 33,2016,Pages 130-137,ISSN 1096-7176</li>
+						<li style="padding-left: 1em;" id="ref8">Zhou, J., Zhang, H., Meng, H., Zhu, Y., Bao, G., Zhang, Y., ... & Ma, Y. (2014). Discovery of a super-strong promoter enables efficient production of heterologous proteins in cyanobacteria. Scientific reports, 4(1), 1-6.</li>
+						<li style="padding-left: 1em;" id="ref9">Sengupta, S., Jaiswal, D., Sengupta, A., Shah, S., Gadagkar, S., & Wangikar, P. P. (2020). Metabolic engineering of a fast-growing cyanobacterium Synechococcus elongatus PCC 11801 for photoautotrophic production of succinic acid. Biotechnology for biofuels, 13, 1-18.</li>
+						<li style="padding-left: 1em;" id="ref10">Li, S., Sun, T., Xu, C., Chen, L., & Zhang, W. (2018). Development and optimization of genetic toolboxes for a fast-growing cyanobacterium Synechococcus elongatus UTEX 2973. Metabolic engineering, 48, 163-174.</li>
+						<li style="padding-left: 1em;" id="ref11">Lin, P. C., Zhang, F., & Pakrasi, H. B. (2020). Enhanced production of sucrose in the fast-growing cyanobacterium Synechococcus elongatus UTEX 2973. Scientific reports, 10(1), 1-8.</li>
+						<li style="padding-left: 1em;" id="ref12">Ungerer, J., & Pakrasi, H. B. (2016). Cpf1 is a versatile tool for CRISPR genome editing across diverse species of cyanobacteria. Scientific reports, 6(1), 1-9.</li>
+						<li style="padding-left: 1em;" id="ref13">Yu, J., Liberton, M., Cliften, P. et al. Synechococcus elongatus UTEX 2973, a fast growing cyanobacterial chassis for biosynthesis using light and CO2. Sci Rep 5, 8132 (2015). <a href="https://doi.org/10.1038/srep08132">https://doi.org/10.1038/srep08132</a></li>
+						<li style="padding-left: 1em;">Elhai, J., Vepritskiy, A., Muro-Pastor, A. M., Flores, E., & Wolk, C. P. (1997). Reduction of conjugal transfer efficiency by three restriction activities of Anabaena sp. strain PCC 7120. Journal of bacteriology, 179(6), 1998-2005.</li>
+						<li style="padding-left: 1em;"><a href="https://www.jove.com/t/60451/genetic-modification-cyanobacteria-conjugation-using-cyanogate">https://www.jove.com/t/60451/genetic-modification-cyanobacteria-conjugation-using-cyanogate</a></li>
+						<li style="padding-left: 1em;"><a href="http://www.oxoid.com/uk/blue/prod_detail/prod_detail">http://www.oxoid.com/uk/blue/prod_detail/prod_detail</a></li>
+						<li style="padding-left: 1em;">Wagner, A. O., Markt, R., Mutschlechner, M., Lackner, N., Prem, E. M., Praeg, N., & Illmer, P. (2019). Medium preparation for the cultivation of microorganisms under strictly anaerobic/anoxic conditions. Journal of visualized experiments: JoVE, (150).</li>
+					</ol>
+
+
+
+                
 				</div>
 			</div>
         </div>
@@ -258,6 +321,7 @@
     <script src="js/bootstrap-bundle.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script src="https://2020.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 	<!-- Gets the screenheight of each page for Scrollbar? -->
@@ -295,10 +359,7 @@
 				var div_one_top = $("#1").offset().top;
 				var div_two_top = $("#2").offset().top;
 				var div_three_top = $("#3").offset().top;
-				var div_four_top = $("#4").offset().top;
-				var div_five_top = $("#5").offset().top;
-				var div_six_top = $("#6").offset().top;
-				var div_seven_top = $("#7").offset().top;
+
 	
 				if (scroll_top > div_one_top && scroll_top < div_two_top) {
 					//Division 1
@@ -323,67 +384,16 @@
 					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
 						$('a[href="#2"]').addClass('sidenav-active');
 					}
-				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
+				} else if (scroll_top > div_three_top) {
 					//Division 3
 					if ($('a[href="#2"]').hasClass('sidenav-active')) {
 						$('a[href="#2"]').removeClass('sidenav-active');
 					}
 	
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					} 
-	
 					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
 						$('a[href="#3"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-					// You are in div 4
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
 					} 
 	
-					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-					// You are in div 5
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-					// You are in div 6
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_seven_top) {
-					// You are in div 7
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').addClass('sidenav-active');
-					}
 				}
 			});
 		});
