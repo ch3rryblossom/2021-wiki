@@ -1039,6 +1039,10 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/e/eb/T--IISER-Pune-India--Logos--linkedin_logo.png
     md5: 07f346967c54232d1442589927c8f7dd
     upload_filename: T--IISER-Pune-India--Logos--linkedin_logo.png
+  assets\Outreach\Marathi_activity.pdf:
+    link_URL: https://2021.igem.org/wiki/images/c/c6/T--IISER-Pune-India--Outreach--Marathi_activity.pdf
+    md5: aafc4efed6558c7d8dbffc54707ff551
+    upload_filename: T--IISER-Pune-India--Outreach--Marathi_activity.pdf
   assets\Outreach\Section 10 - Pawan\Screenshot (31).png:
     link_URL: https://2021.igem.org/wiki/images/d/dd/T--IISER-Pune-India--Outreach--Section_10_-_Pawan--Screenshot_%2831%29.png
     md5: 749fcda7dda633f1c4e65f6bf2ddf3c2
@@ -1445,6 +1449,10 @@ assets:
     link_URL: https://2021.igem.org/wiki/images/5/5d/T--IISER-Pune-India--collabs--Screenshot_26.png
     md5: 3956660d88d1389e79f693b33095000b
     upload_filename: T--IISER-Pune-India--collabs--Screenshot_26.png
+  assets\collabs\TeamGuelph.pdf:
+    link_URL: https://2021.igem.org/wiki/images/4/4b/T--IISER-Pune-India--collabs--TeamGuelph.pdf
+    md5: 5a40ff389c9eb9fcfaafd7939f0c5e45
+    upload_filename: T--IISER-Pune-India--collabs--TeamGuelph.pdf
   assets\collabs\Toulouse-pune-wetlab-img1.jpeg:
     link_URL: https://2021.igem.org/wiki/images/5/5b/T--IISER-Pune-India--collabs--Toulouse-pune-wetlab-img1.jpeg
     md5: c54b6ad861f7c9cf458cf722090bbc1e
@@ -1591,7 +1599,7 @@ css:
 html:
   Attributions.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Attributions
-    md5: 33c191887587463901fee8d052edf548
+    md5: ee4a2bb675deea3cb98916db39a7bdf9
   BasicParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/BasicParts
     md5: 57d42d79656cfb362a93ecccf365656f
@@ -1600,10 +1608,10 @@ html:
     md5: a2b05551e5f7ad6f83bdf310186e4041
   Collaborations.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Collaborations
-    md5: 6bf1cfbce57203f5afebbd8f6fb48213
+    md5: b66806af4e6710590c70c4693f073c87
   Communication.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Communication
-    md5: 6360a91cb83a4a9eb560eb2b96c9c182
+    md5: da75d6b5a6d42115817b4148eb22917a
   CompositeParts.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/CompositeParts
     md5: 32ba0cad0e66a2b84393cf4b3b850841
@@ -1654,7 +1662,7 @@ html:
     md5: 5a2348355f12d907b575e64402de33a6
   Inclusivity.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/Inclusivity
-    md5: 0224d0ebf1469415ec1031c60b1534af
+    md5: d41bbb8d809f29abbbc138840e400f5c
   LabNotebook.html:
     link_URL: https://2021.igem.org/Team:IISER-Pune-India/LabNotebook
     md5: e9e16d299642a96eefa9d9ec41536347
