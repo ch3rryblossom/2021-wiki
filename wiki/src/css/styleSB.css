@@ -455,3 +455,82 @@ html {
 #more {
 	display: none;
 }
+
+
+
+/* HOME PAGE */
+
+@keyframes fade {
+	0% {opacity: 0;}
+	100% {opacity: 100%;}
+}
+#text-block{
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 5s linear;
+
+}
+
+
+.counter::after {
+  font: 800 40px system-ui;
+  content: counter(18);
+  animation: counter 5s linear infinite alternate;
+  counter-reset: count 0;
+}
+
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count 1;
+  }
+  20% {
+    counter-increment: count 2;
+  }
+  30% {
+    counter-increment: count 3;
+  }
+  40% {
+    counter-increment: count 4;
+  }
+  50% {
+    counter-increment: count 5;
+  }
+  60% {
+    counter-increment: count 6;
+  }
+  70% {
+    counter-increment: count 7;
+  }
+  80% {
+    counter-increment: count 8;
+  }
+  90% {
+    counter-increment: count 9;
+  }
+  100% {
+    counter-increment: count 10;
+  }
+}
+
+
+@keyframes moving{
+	from {left: -50%}
+	to{left: 0%}
+}
+
+@-webkit-keyframes moving {
+    from {left:-50%}
+    to {left:0%}
+}
+
+#page-header::after{
+	animation: moving 2s infinite;
+	-webkit-animation: moving 2s ; 
+	position: relative;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
