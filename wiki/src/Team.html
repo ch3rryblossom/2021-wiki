@@ -136,29 +136,53 @@
 }
 </style>
 <style>
-	[style*="--aspect-ratio"] > :first-child {
-  width: 100%;
-}
-[style*="--aspect-ratio"] > img {  
-  height: auto;
-} 
-@supports (--custom:property) {
-  [style*="--aspect-ratio"] {
-    position: relative;
-  }
-  [style*="--aspect-ratio"]::before {
-    content: "";
-    display: block;
-    padding-bottom: calc(100% / (var(--aspect-ratio)));
-  }  
-  [style*="--aspect-ratio"] > :first-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-  }  
-}
-</style>
+	    
+	.container-card{
+	    position: relative;
+	    width: 225px;
+	    height: 350px;
+	    perspective:1000px;
+	    -webkit-perspective: 1000px;
+	    border-radius: 4px;
+	}
+	.teamcard {
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    -webkit-transform-style: preserve-3d;
+	    transform-style: preserve-3d;
+	    transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	    transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	    border-radius: 6px;
+	    box-shadow: 0 6px 16px rgba(0,0,0,.15);
+	    cursor: pointer;
+	}
+	.teamcard div{
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    backface-visibility: hidden;
+	    -webkit-backface-visibility: hidden;
+	    border-radius: 6px;
+	    background: #fff;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    font-size: 18px;
+	    font-family: Verdana;
+	    color: #262626;
+	}
+	.teamcard .back {
+	  -webkit-transform: rotateX(180deg);
+		  transform: rotateX(180deg);
+	}
+	.container-card.t-active .teamcard{
+	    -webkit-transform: rotateX(180deg);
+	    transform: rotateX(180deg);
+	}
+	    </style>
+
+
     <div class="second-div container-fluid">
                 <div class="team-content">
                     <h1 id="1">Core Team</h1>
@@ -174,7 +198,42 @@
 		      </div> -->
 
 
+		      <br><br>
+		      <div onkeydown="keyFunction(event)">
+		      
+			      <div class="container-card">
+			  
+				  <div class="teamcard">
+				      <div class="front word1_front">TRUECODES</div>
+				  </div>
+			  
+				  <div class="teamcard">
+				      <div class="back word1_back">CODEBLOGGER</div>
+				  </div>
+			      </div>
+		      
+		      </div>
 
+		      
+
+
+
+		      <script>
+
+			let box = document.querySelector(".container-card");
+				box.addEventListener("click", function () {
+				    box.classList.toggle("t-active");
+				});
+			
+				function keyFunction(e) {
+				    if (e.keyCode == 38) {
+					box.classList.add("t-active");
+				    };
+				    if (e.keyCode == 40) {
+					box.classList.remove("t-active");
+				    };
+				};
+			</script>
 
 
 
