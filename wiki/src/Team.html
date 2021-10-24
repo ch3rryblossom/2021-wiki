@@ -18,6 +18,8 @@
 		body, html {background-color:#212529; width: 100%; height: 100%;}
 		#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
 		#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+		.team-content p{font-size: 2.5vmin;}
+
 
     </style>
 
@@ -129,168 +131,426 @@
 
     <!-- CONTENT SECTION -->
 
-<style>
-	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
-	color: white !important;
-	font-family: ProximaNova !important;
-}
-</style>
-<style>
-	    
-	.container-card{
-	    position: relative;
-	    width: 225px;
-	    height: 350px;
-	    perspective:1000px;
-	    -webkit-perspective: 1000px;
-	    border-radius: 4px;
-	}
-	.teamcard {
-	    width: 100%;
-	    height: 100%;
-	    position: absolute;
-	    -webkit-transform-style: preserve-3d;
-	    transform-style: preserve-3d;
-	    transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	    transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	    border-radius: 6px;
-	    box-shadow: 0 6px 16px rgba(0,0,0,.15);
-	    cursor: pointer;
-	}
-	.teamcard div{
-	    position: absolute;
-	    width: 100%;
-	    height: 100%;
-	    backface-visibility: hidden;
-	    -webkit-backface-visibility: hidden;
-	    border-radius: 6px;
-	    background: #fff;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    font-size: 18px;
-	    font-family: Verdana;
-	    color: #262626;
-	}
-	.teamcard .back {
-	  -webkit-transform: rotateX(180deg);
-		  transform: rotateX(180deg);
-	}
-	.container-card.t-active .teamcard{
-	    -webkit-transform: rotateX(180deg);
-	    transform: rotateX(180deg);
-	}
-	    </style>
+	<style>
+		.team-content h1, .team-content h2, .team-content h3, .team-content h4, .team-content h5, .team-content h6 .team-content p{
+			color: white !important;
+			font-family: ProximaNova !important;
+		}
+		.team-content h1{
+			font-size: 2.5rem !important;
+		}
+	</style>
+
+
+	<style>
+		/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+		.flip-card {
+			background-color: transparent;
+			width: 23vw;
+			height: 23vw;
+			border: 1px solid #212529;
+			padding: 0.5vw;
+			perspective: 1000px; /* Remove this if you don't want the 3D effect */
+		}
+
+		/* This container is needed to position the front and back side */
+		.flip-card-inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			transition: transform 0.8s;
+			transform-style: preserve-3d;
+		}
+
+		/* Do an horizontal flip when you move the mouse over the flip box container */
+		.flip-card:hover .flip-card-inner {
+			transform: rotateY(180deg);
+		}
+
+		/* Position the front and back side */
+		.flip-card-front, .flip-card-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-backface-visibility: hidden; /* Safari */
+			backface-visibility: hidden;
+		}
+
+		/* Style the front side (fallback if image is missing) */
+		.flip-card-front {
+			background-color: #bbb;
+			color: black;
+		}
+
+		/* Style the back side */
+		.flip-card-back {
+			background-color: #ffd73a;
+			color: white;
+			transform: rotateY(180deg);
+		}
+	</style>
+
+	<style>
+		.socials {
+			height: fit-content !important; 
+			background-color: #ffd73a !important;
+			display: flex !important;
+			flex-wrap: wrap !important;
+			align-items: center !important;
+			justify-content:  space-evenly !important;
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
+			box-sizing: border-box !important;
+			margin-left: 2vw;
+			margin-right: 2vw;
+		}
+
+		.links-socials {
+			transition: transform 0.6s;
+		}
+
+		.links-socials:hover {
+			transform: scale(1.5);
+		}
+	</style>
 
 
     <div class="second-div container-fluid">
-                <div class="team-content">
-                    <h1 id="1">Core Team</h1>
-                    <hr><br><br><br>
-		    <!-- <div style="--aspect-ratio: 16/9;">
-			<iframe 
-			  src="team/team1.html"
-			  width="1600"
-			  height="900"
-			  frameborder="0"
-			>
-			</iframe>
-		      </div> -->
+        <div class="team-content">
+            <h1 id="1">Core Team</h1>
+            <hr><br><br><br>
+			<div style="display: grid; grid-template-columns: auto auto auto auto; margin-right: 2vw;">
+				
+				<!-- Card 1 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Sanjana Vasanth</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/_sanjanavasanth_/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+							<a href="https://www.linkedin.com/in/sanjana-vasanth/"><img class="links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30vw"></a>
+							<a href="hhttps://www.facebook.com/sanjana.vasanth.5/"><img class="links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
 
 
-		      <br><br>
-		      <div onkeydown="keyFunction(event)">
-		      
-			      <div class="container-card">
-			  
-				  <div class="teamcard">
-				      <div class="front word1_front">TRUECODES</div>
-				  </div>
-			  
-				  <div class="teamcard">
-				      <div class="back word1_back">CODEBLOGGER</div>
-				  </div>
-			      </div>
-		      
-		      </div>
-
-		      
-
+				<!-- Card 2 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Misaal.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Misaal Bedi</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.linkedin.com/in/misaalbedi/"><img class="links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30vw"></a>
+							<a href="https://twitter.com/misaal_bedi"><img class="links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
 
 
-		      <script>
+				<!-- Card 3 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Zz.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Soorya Narayan</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/zooorya_bb/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
 
-			let box = document.querySelector(".container-card");
-				box.addEventListener("click", function () {
-				    box.classList.toggle("t-active");
-				});
+
+				<!-- Card 4 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Jagun.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Jason Joby</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/jason.joby/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+							<a href="https://www.linkedin.com/in/jason-joby/"><img class="links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 5 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Arsh.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Arsh Shaikh</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/arshshaikh0817/?hl=en"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 6 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Bomis.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Namasivayam Gomathi Shankar</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/Kho_kho_nut/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 7 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Akash.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Akash Dutta</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/igem_iiserp/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+							<a href="https://www.linkedin.com/in/igem-iiser-pune-2021/"><img class="links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30vw"></a>
+							<a href="https://twitter.com/igem_iiserpune"><img class="links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35vw"></a>
+							<a href="https://www.facebook.com/igemiiserpune"><img class="links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 8 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Oreo.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Arya Narnapatti</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/aryanarnapatti/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 9 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Ashli.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Ashli Jain</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/ashli.jain/?hl=en"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+							<a href="https://www.linkedin.com/in/ashli-jain-6b75511b8/"><img class="links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30vw"></a>
+							<a href="https://twitter.com/ashlijain?lang=en"><img class="links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 10 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Ashwin.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Ashwin</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/igem_iiserp/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+							<a href="https://www.linkedin.com/in/igem-iiser-pune-2021/"><img class="links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30vw"></a>
+							<a href="https://twitter.com/igem_iiserpune"><img class="links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35vw"></a>
+							<a href="https://www.facebook.com/igemiiserpune"><img class="links-socials" src="assets/Logos/Facebook_logo.png" alt="Facebook" width="25vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 11 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Vd.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Vidisha Hate</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/vidisha.hate/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>	
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<!-- Card 12 -->
+				<div class="flip-card">
+					<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="assets/TeamPhotos/Likhith.jpeg" alt="Avatar">
+					</div>
+					<div class="flip-card-back">
+						<h1 style="padding-top: 4vw;">Likhith</h1>
+						 
+						<div id="logos" class ="socials">
+							<a href="https://www.instagram.com/likhith19/"><img class="links-socials" src="assets/Logos/Instagram_logo.jpg" alt="Instagram" width="25vw"></a>
+							<a href="https://www.linkedin.com/in/likhith-chandragiri-5a67b9191/"><img class="links-socials" src="assets/Logos/linkedin_logo.png" alt="Linkedin" width="30vw"></a>
+							<a href="https://twitter.com/Likhith__C"><img class="links-socials" src="assets/Logos/Twitter_logo.png" alt="Twitter" width="35vw"></a>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<a id="2"></a><br><bR><bR><br>
+
+
+				<h1>PI and Faculty Mentors</h1>
+				<hr><br><br><br>
+				<div style="display: flex; flex-direction: row; margin-left: 2vw; margin-right: 2vw; justify-content: space-around;">
+					
+					<!-- Thomas -->
+					<div style="text-align: center;">
+						<img src="assets/TeamPhotos/Thomas.jpeg" alt="Avatar" style="width: 27vw;">
+						<h1 >Thomas Pucadyil</h1>
+						<h2><i>PI</i></i><h2>
+					</div>
+	
+	
+	
+					<!-- RICHA -->
+					<div style="text-align: center;">
+						<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 27vw;">
+						<h1 >Sanjana Vasanth</h1>
+						<h2><i>Faculty Mentor</i></i><h2>
+					</div>
+	
+	
+					<!-- NISHAD -->
+					<div style="text-align: center;">
+						<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 27vw;">
+						<h1 >Sanjana Vasanth</h1>
+						<h2><i>Faculty Mentor</i></i><h2>
+					</div>
+	
+	
+	
+				</div>
+			<a id="3"></a><br><br><br><br>
+
+
+			<h1>PI and Faculty Mentors</h1>
+			<hr><br><br><br>
+			<div style="display: flex; flex-direction: row; margin-left: 2vw; margin-right: 2vw; justify-content: space-around;">
+				
+				<!-- Thomas -->
+				<div style="padding: 1vw; text-align: center;">
+					<img src="assets/TeamPhotos/Thomas.jpeg" alt="Avatar" style="width: 23vw; padding-bottom: 1vw;">
+					<h1 >Thomas Pucadyil</h1>
+					<h2><i>PI</i><h2>
+				</div>
+
+
+
+				<!-- RICHA -->
+				<div style="padding: 1vw; text-align: center;">
+					<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 23vw; padding-bottom: 1vw;">
+					<h1 >Sanjana Vasanth</h1>
+					<h2><i>Faculty Mentor</i><h2>
+				</div>
+
+
+				<!-- RICHA -->
+				<div style="padding: 1vw; text-align: center;">
+					<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 23vw; padding-bottom: 1vw;">
+					<h1 >Sanjana Vasanth</h1>
+					<h2><i>Faculty Mentor</i><h2>
+				</div>
+
+
+				<!-- RICHA -->
+				<div style="padding: 1vw; text-align: center;">
+					<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 23vw; padding-bottom: 1vw;">
+					<h1 >Sanjana Vasanth</h1>
+					<h2><i>Faculty Mentor</i><h2>
+				</div>
+
+			</div>
+
+			<div style="display: flex; flex-direction: row; margin-left: 2vw; margin-right: 2vw; justify-content: space-around;">
+				<!-- RICHA -->
+				<div style="padding: 1vw; text-align: center;">
+					<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 23vw; padding-bottom: 1vw;">
+					<h1 >Sanjana Vasanth</h1>
+					<h2><i>Faculty Mentor</i><h2>
+				</div>
+
+
+				<!-- RICHA -->
+				<div style="padding: 1vw; text-align: center;">
+					<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 23vw; padding-bottom: 1vw;">
+					<h1 >Sanjana Vasanth</h1>
+					<h2><i>Faculty Mentor</i><h2>
+				</div>
+
+
+				<!-- NISHAD -->
+				<div style="padding: 1vw; text-align: center;">
+					<img src="assets/TeamPhotos/Tiger.jpeg" alt="Avatar" style="width: 23vw; padding-bottom: 1vw;">
+					<h1 >Sanjana Vasanth</h1>
+					<h2><i>Faculty Mentor</i><h2>
+				</div>
+
+
+
+			</div>
 			
-				function keyFunction(e) {
-				    if (e.keyCode == 38) {
-					box.classList.add("t-active");
-				    };
-				    if (e.keyCode == 40) {
-					box.classList.remove("t-active");
-				    };
-				};
-			</script>
 
 
 
-                    <h1 id="2">Section 2</h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, iure quaerat ipsam placeat magni voluptatum illo vero totam ut culpa, quisquam, tenetur porro ducimus magnam delectus quidem dolor consequuntur aliquid!</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quae magni dicta quod ipsum porro ab, dolorem reiciendis excepturi dolore ad vitae commodi ullam repellat laboriosam sed, blanditiis delectus natus?</p>
-                    <br>
-		    		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quia officia fuga earum id alias maiores aspernatur sunt eveniet placeat suscipit perspiciatis corporis, itaque aliquid ipsum sit illum, voluptate pariatur doloribus voluptatum vitae laboriosam! Aperiam incidunt ut officia nostrum reprehenderit repellat obcaecati quos quia distinctio nisi quo, nemo culpa maiores pariatur illo sit facilis animi architecto ab! Quidem minus similique temporibus maiores repudiandae vero obcaecati consectetur aspernatur, beatae magnam. Ducimus illo fugit adipisci nesciunt, unde qui, quam facilis beatae a, ad possimus molestias ea recusandae similique voluptatem consequatur quas exercitationem. Molestiae corrupti voluptate quos itaque blanditiis sapiente sint deleniti debitis.</p>
-                
-
-					<h1 id="3">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
 
 
-					<h1 id="4">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="5">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="6">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
-
-
-					<h1 id="7">Introduction</h1>
-                    <hr><br><br><br>
-		    		<p>Cyanobacteria is the green element, both figuratively and literally, of our project. Modelling its behaviour both in a pure culture and in the co culture matters a lot to the direction we put our attention to. We’ve used FBA and MoMA to predict the growth rates and sucrose production rates of cyanobacteria, both with and without salt stress. Dr.Costas Maranas was generous enough to provide the Genome scale metabolic model for Synechococcus elongatus UTEX 2973 from Mueller et al., 2017.</p>
-					<br>
-                    <h3>Modelling Cyanobacteria for optimum sucrose production</h3><br>
-		    		<p>The first hurdle we encountered while modelling cyanobacteria was simulating salt stress. Literature says simulating something like salt stress alters a lot of reactions in the organism and not all of them are straight forward or even known, so we had to make a few assumptions to make the model work.</p>
-                    <br>
 		</div>
-        </div>
+    </div>
 
 <!-- SPONSORS BAR -->
 	<div class="footer">
@@ -336,7 +596,7 @@
 
 
     <!-- back to top button -->
-    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
+    <a href="#top"><img src="assets/pngs/Back-to-top.png" id="myBtn" title="Go to top" width="120" height="120"></a>
 
 	
 	<!-- LINKING MAIN JS FILES-->
@@ -344,8 +604,6 @@
 	<script src="js/main.js"></script>
 	<script src="js/jquery.min.js"></script>
 
-<script>
-</script>
 	<!-- Gets the screenheight of each page for Scrollbar? -->
 	<script>
 		var screenheight = window.innerHeight,
@@ -368,130 +626,5 @@
 	<script>
 		var backtotopheight=pageheight/4.65
 	</script>
-
-
-	<!-- SCRIPT FOR SCROLL AWARE SIDEBAR HIGHLIGHT -->
-	<!-- ------------------------------------------------------------------------------------------------------------- -->
-	<!-- MAKE SURE YOU CHANGE THE NUMBER OF DIVISIONS -->
-	<script>
-		
-		$(document).ready(function() {
-			$(window).scroll(function() {
-				var scroll_top = $(window).scrollTop();
-				var div_one_top = $("#1").offset().top;
-				var div_two_top = $("#2").offset().top;
-				var div_three_top = $("#3").offset().top;
-				var div_four_top = $("#4").offset().top;
-				var div_five_top = $("#5").offset().top;
-				var div_six_top = $("#6").offset().top;
-				var div_seven_top = $("#7").offset().top;
 	
-				if (scroll_top > div_one_top && scroll_top < div_two_top) {
-					//Division 1
-					if (!$('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').addClass('sidenav-active');
-					}
-	
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
-					// Division 2
-					if ($('a[href="#1"]').hasClass('sidenav-active')) {
-						$('a[href="#1"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_three_top && scroll_top < div_four_top) {
-					//Division 3
-					if ($('a[href="#2"]').hasClass('sidenav-active')) {
-						$('a[href="#2"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_four_top && scroll_top < div_five_top) {
-					// You are in div 4
-					if ($('a[href="#3"]').hasClass('sidenav-active')) {
-						$('a[href="#3"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_five_top && scroll_top < div_six_top) {
-					// You are in div 5
-					if ($('a[href="#4"]').hasClass('sidenav-active')) {
-						$('a[href="#4"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_six_top && scroll_top < div_seven_top) {
-					// You are in div 6
-					if ($('a[href="#5"]').hasClass('sidenav-active')) {
-						$('a[href="#5"]').removeClass('sidenav-active');
-					}
-	
-					if ($('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').removeClass('sidenav-active');
-					} 
-	
-					if (!$('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').addClass('sidenav-active');
-					}
-				} else if (scroll_top > div_seven_top) {
-					// You are in div 7
-					if ($('a[href="#6"]').hasClass('sidenav-active')) {
-						$('a[href="#6"]').removeClass('sidenav-active');
-					}
-	
-					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
-						$('a[href="#7"]').addClass('sidenav-active');
-					}
-				}
-			});
-		});
-		
-	</script>	
-
-	
-	<!-- Script for the slideshow, wherever needed -->
-	<script>
-		var total = $('.item').length;
-		var actualtotal = 80;
-		var currentIndex = $('div.active').index() + 1;
-		$('#slidetext').html(currentIndex + '/'  + actualtotal);
-
-		// This triggers after each slide change
-		$('.carousel').on('slid.bs.carousel', function () {
-  			currentIndex = $('div.active').index() + 1;
- 
-  		// Now display this wherever you want
-  		var text = currentIndex + '/' + actualtotal;
-  			$('#slidetext').html(text);
-		});
-
-	</script>
 </body>
