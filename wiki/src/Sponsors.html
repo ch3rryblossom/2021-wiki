@@ -129,7 +129,7 @@
     <!-- CONTENT + SIDENAV SECTION -->
 
 	<style>
-		.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+ 		.content h2, .content h3, .content h4, .content h5, .content h6{
 			color: white !important;
 			font-family: ProximaNova !important;
 		}
@@ -176,8 +176,8 @@
                 <div class="content active" id="sponsor-page">
                     
 					<a id="1"></a>
-					<h1>Sai Life Sciences</h1>
-					<hr><br><br><br>
+					<h1 style="color: #ffd73a;">Sai Life Sciences</h1>
+					<hr><br>
 
 					<p>Given the devastating second wave of the COVID-19 pandemic in India and the ramifications of the pandemic, we faced countless challenges in procuring funds to support our project. This was when Sai Life Sciences came to our rescue! They believed in us and our project, and we wouldn’t have come this far if it weren’t for their support.</p>
 					<br>
@@ -189,21 +189,21 @@
 					<a id="2"></a><br>
 
 
-					<h1>Family Office of Mr Kris Gopalakrishnan</h1>
-					<hr><br><br><br>
+					<h1 style="color: #ffd73a;">Family Office of Mr Kris Gopalakrishnan</h1>
+					<hr><br>
 
 					<p>Kris Gopalakrishnan is widely recognized as a global business and technology thought leader for his role in growing the IT services industry worldwide. He co-founded Infosys, where he served as the chief executive officer and managing director from 2007 to 2011, and as vice-chairman from 2011 to 2014.</p>
 					<br>
 					
 					<p>Following his retirement from Infosys, Kris has been very active in promoting the Indian startup ecosystem and supporting research. We are exceedingly fortunate for Kris’s generosity and faith in our project.</p>
-					<br>
+					<a id="3"></a><br>
 
 
-					<h1>Other Sponsors</h1>
-					<hr><br><br><br>
-					<p>We are extremely grateful to our other sponsors: <em style="font-size: 120%; font-style: normal;"></em>ZOHO</em>, <em style="font-size: 120%; font-style: normal;">geneious</em> and <em style="font-size: 120%; font-style: normal;">IDT</em> for their benevolent contributions and generous support.</p>
+					<h1 style="color: #ffd73a;">Other Sponsors</h1>
+					<hr><br>
+					<p>We are extremely grateful to our other sponsors: <strong style="color: #ffd73a;">ZOHO</strong>, <strong style="color: #ffd73a;">geneious</strong> and <strong style="color: #ffd73a;">IDT</strong> for their benevolent contributions and generous support.</p>
 					<bR>
-					<p>We would also like to thank our documentation sponsor <em style="font-size: 120%; font-style: normal;">Notion</em>.</p>
+					<p>We would also like to thank our documentation sponsor <strong style="color: #ffd73a;">Notion</strong>.</p>
 					<br><br>
 				</div>
 			</div>
@@ -255,7 +255,7 @@
 
 
     <!-- back to top button -->
-    <a href="#top"><img src="assets/svgs/arrow-up-square-fill.svg" id="myBtn" title="Go to top" width="30" height="30"></a>
+    <a href="#top"><img src="assets/pngs/Back-to-top.png" id="myBtn" title="Go to top" width="100vmin"></a>
 
 	
 	<!-- LINKING MAIN JS FILES-->
@@ -295,9 +295,10 @@
 		
 		$(document).ready(function() {
 			$(window).scroll(function() {
-				var scroll_top = $(window).scrollTop();
+				var scroll_top = $(window).scrollTop() + $(window).innerHeight()/2;
 				var div_one_top = $("#1").offset().top;
 				var div_two_top = $("#2").offset().top;
+				var div_three_top = $("#3").offset().top;
 
 	
 				if (scroll_top > div_one_top && scroll_top < div_two_top) {
@@ -310,7 +311,7 @@
 						$('a[href="#2"]').removeClass('sidenav-active');
 					}
 	
-				} else if (scroll_top > div_two_top) {
+				} else if (scroll_top > div_two_top && scroll_top < div_three_top) {
 					// Division 2
 					if ($('a[href="#1"]').hasClass('sidenav-active')) {
 						$('a[href="#1"]').removeClass('sidenav-active');
@@ -319,7 +320,20 @@
 					if (!$('a[href="#2"]').hasClass('sidenav-active')) {
 						$('a[href="#2"]').addClass('sidenav-active');
 					}
-				} 
+
+					if ($('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').removeClass('sidenav-active');
+					}
+				} else if (scroll_top > div_three_top) {
+					// Division 2
+					if ($('a[href="#2"]').hasClass('sidenav-active')) {
+						$('a[href="#2"]').removeClass('sidenav-active');
+					}
+	
+					if (!$('a[href="#3"]').hasClass('sidenav-active')) {
+						$('a[href="#3"]').addClass('sidenav-active');
+					}
+				}
 			});
 		});
 		
