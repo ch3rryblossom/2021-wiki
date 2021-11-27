@@ -81,30 +81,30 @@ function moveScrollIndicator(e) {
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else if($('#ecoli-wet').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 5;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 5.7;
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else if($('#cyano-wet').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 14;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 13.3;
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else if($('#coculture-wet').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 15;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 14.3;
       scrollIndicatorElt.style.height = percentage + '%';
     }
 
 
 
     else if($('#ecoli-wet-res').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 31;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 30.07;
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else if($('#cyano-wet-res').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 69;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 69.05;
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else if($('#coculture-wet-res').hasClass('active')) {
-      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 47;
+      var percentage = ($(window).scrollTop()/ (pageheight - screenheight))* 49;
       scrollIndicatorElt.style.height = percentage + '%';
     }
     else {

@@ -132,6 +132,21 @@
         <div class="row">
             <!-- SIDENAV -->
             <div class="col-lg-3 col-md-3">
+			<style>
+				.sidenav {
+					height: auto;
+					width: auto;
+					padding-top: 150px;
+					padding-left: 5px;
+					padding-right: 10px;
+				
+					margin-top: 25%;
+					margin-bottom: 20px;
+					position: -webkit-sticky;
+					position: sticky;
+					top: 7% ;
+				}
+			</style>
                 <div class="sidenav">
                     <nav>
                         <ul id="sidenav-id">
@@ -387,6 +402,8 @@
 				var div_six_top = $("#6").offset().top;
 				var div_seven_top = $("#7").offset().top;
 				var div_eight_top = $("#8").offset().top;
+				var div_nine_top = $("#9").offset().top;
+				var div_ten_top = $("#10").offset().top;
 	
 				if (scroll_top > div_one_top && scroll_top < div_two_top) {
 					//Division 1
@@ -464,7 +481,7 @@
 						$('a[href="#6"]').addClass('sidenav-active');
 					}
 				} else if (scroll_top > div_seven_top && scroll_top < div_eight_top) {
-					// You are in div 6
+					// You are in div 7
 					if ($('a[href="#6"]').hasClass('sidenav-active')) {
 						$('a[href="#6"]').removeClass('sidenav-active');
 					}
@@ -476,14 +493,40 @@
 					if (!$('a[href="#7"]').hasClass('sidenav-active')) {
 						$('a[href="#7"]').addClass('sidenav-active');
 					}
-				} else if (scroll_top > div_eight_top) {
-					// You are in div 7
+				} else if (scroll_top > div_eight_top && scroll_top < div_nine_top) {
+					// You are in div 8
 					if ($('a[href="#7"]').hasClass('sidenav-active')) {
 						$('a[href="#7"]').removeClass('sidenav-active');
 					}
 	
 					if (!$('a[href="#8"]').hasClass('sidenav-active')) {
 						$('a[href="#8"]').addClass('sidenav-active');
+					}
+
+					if ($('a[href="#9"]').hasClass('sidenav-active')) {
+						$('a[href="#9"]').removeClass('sidenav-active');
+					} 
+				} else if (scroll_top > div_nine_top && scroll_top < div_ten_top) {
+					// You are in div 9
+					if ($('a[href="#8"]').hasClass('sidenav-active')) {
+						$('a[href="#8"]').removeClass('sidenav-active');
+					}
+	
+					if (!$('a[href="#9"]').hasClass('sidenav-active')) {
+						$('a[href="#9"]').addClass('sidenav-active');
+					}
+
+					if ($('a[href="#10"]').hasClass('sidenav-active')) {
+						$('a[href="#10"]').removeClass('sidenav-active');
+					} 
+				} else if (scroll_top > div_ten_top) {
+					// You are in div 10
+					if ($('a[href="#9"]').hasClass('sidenav-active')) {
+						$('a[href="#9"]').removeClass('sidenav-active');
+					}
+	
+					if (!$('a[href="#10"]').hasClass('sidenav-active')) {
+						$('a[href="#10"]').addClass('sidenav-active');
 					}
 				}
 			});
