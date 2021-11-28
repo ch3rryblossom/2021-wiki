@@ -361,7 +361,7 @@ html {
 /* Sponsor Bar */
 /* Footer bar */
 .footer {
-	width: 100%; 
+	width: 100vw; 
 	background-color: rgb(59, 59, 59);
 	border-top: solid 10px #49ccecb2;
 	display: block;
@@ -374,17 +374,17 @@ html {
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
-	justify-content: space-evenly !important;
-    padding-left: 20px !important;
-	padding-right: 20px !important;
-	padding-top: 10px !important;
-	padding-bottom: 10px !important;
+	justify-content: center !important;
+    padding-left: 1vw !important;
+	padding-right: 1vw !important;
+	padding-top: 0.5vw !important;
+	padding-bottom: 0.5vw!important;
     box-sizing: border-box !important;
 }
 
 
 .teamlogo {
-	padding-right: 20px;
+	padding-right: 2vw;
 	border-right: solid 2px #000
 }
 
